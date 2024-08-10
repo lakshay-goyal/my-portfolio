@@ -5,6 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="style.css" />
+    <style>
+      .carousel-item {
+        left: 100%;
+        transition: all 0.3s ease-out;
+      }
+
+      .carousel-item.active {
+        left: 0;
+      }
+    </style>
   </head>
   <body class="font-mono">
     <!-- navigation bar -->
@@ -54,9 +64,9 @@
     <!-- main Home Page -->
     <section>
       <div
-        class="h-screen bg-gradient-to-r from-purple-500 to-pink-500 place-content-center"
+        class="h-screen bg-gradient-to-r from-purple-500 to-pink-500 flex place-content-center place-items-center text-8xl font-semibold"
       >
-        Home
+        Portfolio
       </div>
     </section>
 
@@ -69,15 +79,23 @@
         </h2>
       </div>
       <div class="bg-white flex mx-36 my-7">
-        <p class="">
-          My name is Lakshay Goyal. I'm a BCA student at K.R. Mangalam
-          University with a focus on web and app development and a solid
-          background in data analytics. With my DevOps experience, I can build
-          streamlined APIs and make it easier for different apps to communicate
-          with one another, resulting in reliable and effective solutions. I am
-          dedicated to lifelong learning and innovation and am passionate about
-          using technology to solve practical challenges.
-        </p>
+        <div class="flex flex-col space-y-9">
+          <p>
+            My name is Lakshay Goyal. I'm a BCA student at K.R. Mangalam
+            University with a focus on web and app development and a solid
+            background in data analytics. With my DevOps experience, I can build
+            streamlined APIs and make it easier for different apps to
+            communicate with one another, resulting in reliable and effective
+            solutions. I am dedicated to lifelong learning and innovation and am
+            passionate about using technology to solve practical challenges.
+          </p>
+          <a
+            class="border px-5 py-3 border-black rounded w-1/4 bg-indigo-500 text-white font-bold text-lg hover:bg-indigo-600 active:bg-indigo-700"
+            href="./pdf/Lakshay.pdf"
+            target="_blank"
+            >Resume...</a
+          >
+        </div>
         <img
           class="rounded-lg object-contain w-1/4"
           src="./img/Lakshay.png"
@@ -86,18 +104,18 @@
       </div>
     </section>
 
-    <hr />
-
     <!-- Skills -->
-    <section id="Skills" class="my-11">
+    <section id="Skills" class="my-11 py-11 bg-gray-300">
       <div class="flex justify-center text-3xl font-semibold">
-        <h2>
+        <h2 class="text-black">
           My Skills
           <div class="bg-black h-1 w-auto rounded my-1"></div>
         </h2>
       </div>
       <div class="flex justify-evenly my-16">
-        <div class="border rounded border-black w-1/5 p-3 text-center">
+        <div
+          class="border rounded border-black w-1/5 p-3 text-center bg-white"
+        >
           <h2>Web development</h2>
           <div class="bg-black h-1 w-auto rounded my-1"></div>
           <img src="./img/tree.jpg" alt="Web" />
@@ -106,19 +124,25 @@
             Django, API Development
           </p>
         </div>
-        <div class="border rounded border-black w-1/5 p-3 text-center">
+        <div
+          class="border rounded border-black w-1/5 p-3 text-center bg-white"
+        >
           <h2>DevOps</h2>
           <div class="bg-black h-1 w-auto rounded my-1"></div>
           <img src="./img/tree.jpg" alt="Web" />
           <p>Linux, Git-Github, GitLab, Docker, Kubernetes, AWS</p>
         </div>
-        <div class="border rounded border-black w-1/5 p-3 text-center">
+        <div
+          class="border rounded border-black w-1/5 p-3 text-center bg-white"
+        >
           <h2>App development</h2>
           <div class="bg-black h-1 w-auto rounded my-1"></div>
           <img src="./img/tree.jpg" alt="Web" />
           <p>Java, Kotlin, JetPack Compose, API Connectivity</p>
         </div>
-        <div class="border rounded border-black w-1/5 p-3 text-center">
+        <div
+          class="border rounded border-black w-1/5 p-3 text-center bg-white"
+        >
           <h2>Data Analytics</h2>
           <div class="bg-black h-1 w-auto rounded my-1"></div>
           <img src="./img/tree.jpg" alt="Web" />
@@ -132,35 +156,282 @@
 
     <!-- Projects -->
     <section id="Project" class="my-11">
-        <div class="flex justify-center text-3xl font-semibold">
-          <h2>
-            My Projects
-            <div class="bg-black h-1 w-auto rounded my-1"></div>
-          </h2>
-        </div>
-        <div class="flex justify-evenly my-16">
-          <div class="border rounded border-black w-1/4 p-3 text-center">
-            <h2>DevOps</h2>
-            <div class="bg-black h-1 w-auto rounded my-1"></div>
-            <img src="./img/tree.jpg" alt="Web" />
-            <p>Linux, Git-Github, GitLab, Docker, Kubernetes, AWS</p>
-          </div>
-          <div class="border rounded border-black w-1/4 p-3 text-center">
-            <h2>App development</h2>
-            <div class="bg-black h-1 w-auto rounded my-1"></div>
-            <img src="./img/tree.jpg" alt="Web" />
-            <p>Java, Kotlin, JetPack Compose, API Connectivity</p>
-          </div>
-          <div class="border rounded border-black w-1/4 p-3 text-center">
-            <h2>Data Analytics</h2>
-            <div class="bg-black h-1 w-auto rounded my-1"></div>
-            <img src="./img/tree.jpg" alt="Web" />
-            <p>
-              Python, R, Numpy, Pandas, Matplotlib, Seaborn, Plotly, Streamlit,
-              Beautiful soup
-            </p>
+      <div class="flex justify-center text-3xl font-semibold">
+        <h2>
+          My Projects
+          <div class="bg-black h-1 w-auto rounded my-1"></div>
+        </h2>
+      </div>
+      <div class="flex flex-wrap justify-evenly my-16">
+        <div
+          class="border mx-2 my-3 rounded border-black w-1/4 p-3 text-center"
+        >
+          <h2>DevOps</h2>
+          <div class="bg-black h-1 w-auto rounded my-1"></div>
+          <img src="./img/tree.jpg" alt="Web" />
+          <div>
+            <p>Language Translator Headphone</p>
+            <button
+              class="border border-black rounded p-2 bg-indigo-500 font-semibold text-white hover:bg-indigo-600 active:bg-indigo-700"
+            >
+              Source Code
+            </button>
+            <button
+              class="border border-black rounded p-2 bg-indigo-500 font-semibold text-white px-4 hover:bg-indigo-600 active:bg-indigo-700"
+            >
+              Live...
+            </button>
           </div>
         </div>
-      </section>
-  </body>
+        <div
+          class="border mx-2 my-3 rounded border-black w-1/4 p-3 text-center"
+        >
+          <h2>DevOps</h2>
+          <div class="bg-black h-1 w-auto rounded my-1"></div>
+          <img src="./img/tree.jpg" alt="Web" />
+          <div>
+            <p>Language Translator Headphone</p>
+            <button
+              class="border border-black rounded p-2 bg-indigo-500 font-semibold text-white hover:bg-indigo-600 active:bg-indigo-700"
+            >
+              Source Code
+            </button>
+            <button
+              class="border border-black rounded p-2 bg-indigo-500 font-semibold text-white px-4 hover:bg-indigo-600 active:bg-indigo-700"
+            >
+              Live...
+            </button>
+          </div>
+        </div>
+        <div
+          class="border mx-2 my-3 rounded border-black w-1/4 p-3 text-center"
+        >
+          <h2>DevOps</h2>
+          <div class="bg-black h-1 w-auto rounded my-1"></div>
+          <img src="./img/tree.jpg" alt="Web" />
+          <div>
+            <p>Language Translator Headphone</p>
+            <button
+              class="border border-black rounded p-2 bg-indigo-500 font-semibold text-white hover:bg-indigo-600 active:bg-indigo-700"
+            >
+              Source Code
+            </button>
+            <button
+              class="border border-black rounded p-2 bg-indigo-500 font-semibold text-white px-4 hover:bg-indigo-600 active:bg-indigo-700"
+            >
+              Live...
+            </button>
+          </div>
+        </div>
+        <div
+          class="border mx-2 my-3 rounded border-black w-1/4 p-3 text-center"
+        >
+          <h2>DevOps</h2>
+          <div class="bg-black h-1 w-auto rounded my-1"></div>
+          <img src="./img/tree.jpg" alt="Web" />
+          <div>
+            <p>Language Translator Headphone</p>
+            <button
+              class="border border-black rounded p-2 bg-indigo-500 font-semibold text-white hover:bg-indigo-600 active:bg-indigo-700"
+            >
+              Source Code
+            </button>
+            <button
+              class="border border-black rounded p-2 bg-indigo-500 font-semibold text-white px-4 hover:bg-indigo-600 active:bg-indigo-700"
+            >
+              Live...
+            </button>
+          </div>
+        </div>
+        <div
+          class="border mx-2 my-3 rounded border-black w-1/4 p-3 text-center"
+        >
+          <h2>DevOps</h2>
+          <div class="bg-black h-1 w-auto rounded my-1"></div>
+          <img src="./img/tree.jpg" alt="Web" />
+          <div>
+            <p>Language Translator Headphone</p>
+            <button
+              class="border border-black rounded p-2 bg-indigo-500 font-semibold text-white hover:bg-indigo-600 active:bg-indigo-700"
+            >
+              Source Code
+            </button>
+            <button
+              class="border border-black rounded p-2 bg-indigo-500 font-semibold text-white px-4 hover:bg-indigo-600 active:bg-indigo-700"
+            >
+              Live...
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Achievements -->
+    <section id="Achievements" class="py-11 bg-gray-300">
+      <div class="flex justify-center text-3xl font-semibold">
+        <h2 class="text-black">
+          Achievements
+          <div class="bg-black h-1 w-auto rounded my-1"></div>
+        </h2>
+      </div>
+         <div class="flex justify-center items-center  bg-gray-300">
+            <!-- Parent container with defined size -->
+            <div class="w-full h-screen flex justify-center items-center">
+               <!-- Carousel using fractional width and height -->
+               <div class="relative w-8/12 h-full overflow-hidden bg-gray-300 carousel">
+                  <div class="absolute inset-0 w-full h-full carousel-item">
+                     <img class="w-full h-full object-contain"
+                        src="./img/tree.jpg"
+                        alt="MERN Full Stack Development">
+                        <div
+                        class="absolute inset-x-[15%] bottom-5 hidden py-5 text-center text-white md:block">
+                        <h5 class="text-xl">First slide label</h5>
+                        <p>
+                          Some representative placeholder content for the first slide.
+                        </p>
+                      </div>
+                  </div>
+                  <div class="absolute inset-0 w-full h-full carousel-item">
+                     <img class="w-full h-full object-contain"
+                        src="./img/tree.jpg"
+                        alt="DSA to Development Coding Guide">
+                        <div
+        class="absolute inset-x-[15%] bottom-5 hidden py-5 text-center text-white md:block">
+        <h5 class="text-xl">First slide label</h5>
+        <p>
+          Some representative placeholder content for the first slide.
+        </p>
+      </div>
+                  </div>
+                  <!-- <div class="absolute inset-0 w-full h-full carousel-item">
+                     <img class="w-full h-full object-contain"
+                        src="./img/tree.jpg"
+                        alt="Geeks Classes Live"> -->
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </section>
+
+    <hr />
+    <!-- Collabrorative Tools -->
+    <section class="my-16">
+      <div class="flex justify-center text-3xl font-semibold">
+        <h2>
+          Collabrorative Tools
+          <div class="bg-black h-1 w-auto rounded my-1"></div>
+        </h2>
+      </div>
+      <div
+        class="flex flex-wrap justify-center border border-black rounded place-items-center w-auto gap-x-11 gap-y-11 m-11 p-11"
+      >
+        <div>
+          <img class="w-16" src="./img/linkedIn.png" alt="1" />
+          <p>LinkedIn</p>
+        </div>
+        <div>
+          <img class="w-16" src="./img/linkedIn.png" alt="1" />
+          <p>LinkedIn</p>
+        </div>
+        <div>
+          <img class="w-16" src="./img/linkedIn.png" alt="1" />
+          <p>LinkedIn</p>
+        </div>
+
+        <div>
+          <img class="w-16" src="./img/linkedIn.png" alt="1" />
+          <p>LinkedIn</p>
+        </div>
+        <div>
+          <img class="w-16" src="./img/linkedIn.png" alt="1" />
+          <p>LinkedIn</p>
+        </div>
+        <div>
+          <img class="w-16" src="./img/linkedIn.png" alt="1" />
+          <p>LinkedIn</p>
+        </div>
+        <div>
+          <img class="w-16" src="./img/linkedIn.png" alt="1" />
+          <p>LinkedIn</p>
+        </div>
+        <div>
+          <img class="w-16" src="./img/linkedIn.png" alt="1" />
+          <p>LinkedIn</p>
+        </div>
+        <div>
+          <img class="w-16" src="./img/linkedIn.png" alt="1" />
+          <p>LinkedIn</p>
+        </div>
+        <div>
+          <img class="w-16" src="./img/linkedIn.png" alt="1" />
+          <p>LinkedIn</p>
+        </div>
+        <div>
+          <img class="w-16" src="./img/linkedIn.png" alt="1" />
+          <p>LinkedIn</p>
+        </div>
+        <div>
+          <img class="w-16" src="./img/linkedIn.png" alt="1" />
+          <p>LinkedIn</p>
+        </div>
+        <div>
+          <img class="w-16" src="./img/linkedIn.png" alt="1" />
+          <p>LinkedIn</p>
+        </div>
+        <div>
+          <img class="w-16" src="./img/linkedIn.png" alt="1" />
+          <p>LinkedIn</p>
+        </div>
+        <div>
+          <img class="w-16" src="./img/linkedIn.png" alt="1" />
+          <p>LinkedIn</p>
+        </div>
+        <div>
+          <img class="w-16" src="./img/linkedIn.png" alt="1" />
+          <p>LinkedIn</p>
+        </div>
+        <div>
+          <img class="w-16" src="./img/linkedIn.png" alt="1" />
+          <p>LinkedIn</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer  -->
+    <footer class="static" id="Contact">
+      <div
+        class="flex bg-footerColor text-white justify-between h-48 relative bottom-0 w-full"
+      >
+        <div class="flex items-center px-5 gap-x-7">
+          <img
+            class="w-24 rounded-full"
+            src="./img/Lakshay.png"
+            alt="lakshay-goyal"
+          />
+          <h4>Lakshay Goyal</h4>
+        </div>
+        <div class="flex flex-col space-y-9 my-9">
+          <div>
+            <h6 class="font-semibold">Mobile No.</h6>
+            <a class="text-white no-underline" href="tel:+91">8595236591</a>
+          </div>
+          <div>
+            <h6 class="font-semibold">Email-id:</h6>
+            <a
+              class="text-white no-underline"
+              href="mailto:lakshaygoyal201@gmail.com"
+              >lakshaygoyal201@gmail.com</a
+            >
+          </div>
+        </div>
+        <div class="my-5 mx-11">
+          <h6 class="font-semibold">Address:</h6>
+          <p>702-Amathyst, <br />BDI, Sunshine City, <br />Bhiwadi,Rajasthan</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="index.js"></script>
+  </div>
 </html>
