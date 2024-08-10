@@ -1,24 +1,31 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="style.css" />
   </head>
-  <body>
+  <body class="font-mono">
     <!-- navigation bar -->
     <nav class="bg-gray-800 py-4">
       <div class="flex justify-center items-center static...">
-        <img class="rounded-full absolute left-5" src="./img/Lakshay.png" alt="my-img" width="50px" height="50px">
+        <img
+          class="rounded-full absolute left-5"
+          src="./img/Lakshay.png"
+          alt="my-img"
+          width="50px"
+          height="50px"
+        />
         <ul class="flex mx-56 text-white space-x-8">
           <li><a href="#Home">Home</a></li>
           <li><a href="#About">About Me</a></li>
+          <li><a href="#Skills">Skills</a></li>
           <li><a href="#Project">Project</a></li>
           <li><a href="#Achievements">Achievements</a></li>
           <li><a href="#Contact">Contact Me</a></li>
         </ul>
-        <div class="flex space-x-5 absolute right-3 ">
+        <div class="flex space-x-5 absolute right-3">
           <a href="#"
             ><img
               src="./img/twitter.png"
@@ -44,6 +51,116 @@
       </div>
     </nav>
 
+    <!-- main Home Page -->
+    <section>
+      <div
+        class="h-screen bg-gradient-to-r from-purple-500 to-pink-500 place-content-center"
+      >
+        Home
+      </div>
+    </section>
 
+    <!-- About Me Section -->
+    <section id="About" class="my-16">
+      <div class="flex justify-center text-3xl font-semibold">
+        <h2>
+          About Me
+          <div class="bg-black h-1 w-auto rounded my-1"></div>
+        </h2>
+      </div>
+      <div class="bg-white flex mx-36 my-7">
+        <p class="">
+          My name is Lakshay Goyal. I'm a BCA student at K.R. Mangalam
+          University with a focus on web and app development and a solid
+          background in data analytics. With my DevOps experience, I can build
+          streamlined APIs and make it easier for different apps to communicate
+          with one another, resulting in reliable and effective solutions. I am
+          dedicated to lifelong learning and innovation and am passionate about
+          using technology to solve practical challenges.
+        </p>
+        <img
+          class="rounded-lg object-contain w-1/4"
+          src="./img/Lakshay.png"
+          alt="Lakshay"
+        />
+      </div>
+    </section>
+
+    <hr />
+
+    <!-- Skills -->
+    <section id="Skills" class="my-11">
+      <div class="flex justify-center text-3xl font-semibold">
+        <h2>
+          My Skills
+          <div class="bg-black h-1 w-auto rounded my-1"></div>
+        </h2>
+      </div>
+      <div class="flex justify-evenly my-16">
+        <div class="border rounded border-black w-1/5 p-3 text-center">
+          <h2>Web development</h2>
+          <div class="bg-black h-1 w-auto rounded my-1"></div>
+          <img src="./img/tree.jpg" alt="Web" />
+          <p>
+            HTML, CSS, JavaScript, ReactJS, NextJS, NodeJS, MongoDB, Flask,
+            Django, API Development
+          </p>
+        </div>
+        <div class="border rounded border-black w-1/5 p-3 text-center">
+          <h2>DevOps</h2>
+          <div class="bg-black h-1 w-auto rounded my-1"></div>
+          <img src="./img/tree.jpg" alt="Web" />
+          <p>Linux, Git-Github, GitLab, Docker, Kubernetes, AWS</p>
+        </div>
+        <div class="border rounded border-black w-1/5 p-3 text-center">
+          <h2>App development</h2>
+          <div class="bg-black h-1 w-auto rounded my-1"></div>
+          <img src="./img/tree.jpg" alt="Web" />
+          <p>Java, Kotlin, JetPack Compose, API Connectivity</p>
+        </div>
+        <div class="border rounded border-black w-1/5 p-3 text-center">
+          <h2>Data Analytics</h2>
+          <div class="bg-black h-1 w-auto rounded my-1"></div>
+          <img src="./img/tree.jpg" alt="Web" />
+          <p>
+            Python, R, Numpy, Pandas, Matplotlib, Seaborn, Plotly, Streamlit,
+            Beautiful soup
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="Project" class="my-11">
+        <div class="flex justify-center text-3xl font-semibold">
+          <h2>
+            My Projects
+            <div class="bg-black h-1 w-auto rounded my-1"></div>
+          </h2>
+        </div>
+        <div class="flex justify-evenly my-16">
+          <div class="border rounded border-black w-1/4 p-3 text-center">
+            <h2>DevOps</h2>
+            <div class="bg-black h-1 w-auto rounded my-1"></div>
+            <img src="./img/tree.jpg" alt="Web" />
+            <p>Linux, Git-Github, GitLab, Docker, Kubernetes, AWS</p>
+          </div>
+          <div class="border rounded border-black w-1/4 p-3 text-center">
+            <h2>App development</h2>
+            <div class="bg-black h-1 w-auto rounded my-1"></div>
+            <img src="./img/tree.jpg" alt="Web" />
+            <p>Java, Kotlin, JetPack Compose, API Connectivity</p>
+          </div>
+          <div class="border rounded border-black w-1/4 p-3 text-center">
+            <h2>Data Analytics</h2>
+            <div class="bg-black h-1 w-auto rounded my-1"></div>
+            <img src="./img/tree.jpg" alt="Web" />
+            <p>
+              Python, R, Numpy, Pandas, Matplotlib, Seaborn, Plotly, Streamlit,
+              Beautiful soup
+            </p>
+          </div>
+        </div>
+      </section>
   </body>
 </html>
