@@ -2,7 +2,7 @@
     "name": "my-portfolio",
     "version": "1.0.0",
     "scripts": {
-      "build": "npx tailwindcss -i ./src/input.css -o ./dist/style.css --watch"
+      "build": "npx tailwindcss -i ./src/input.css -o ./dist/style.css"
     },
     "devDependencies": {
       "tailwindcss": "^3.x.x",
