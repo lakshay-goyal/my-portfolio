@@ -1,12 +1,15 @@
 /** @type {import('tailwindcss').Config} */
-module.exports = {
-    content: ["./dist/index.html"],
-    theme: {
-      extend: {
+export default {
+  content: [
+    "./index.html",
+    "./src/**/*.{js,ts,jsx,tsx}",
+  ],
+  theme: {
+    extend: {
         colors: {
           footerColor: '#101927',
         },
       },
-    },
-    plugins: [],
-  }
+  },
+  plugins: [],
+}

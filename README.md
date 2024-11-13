@@ -1,5 +1,8 @@
-# Portfolio
-This is my portfolio website, where I showcase all of my abilities, projects, and accomplishments to date.
+# React + Vite
 
-### Click Here For Live View:
-[Click Me](https://lakshay-portfolio-pi.vercel.app/)
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+
+Currently, two official plugins are available:
+
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
