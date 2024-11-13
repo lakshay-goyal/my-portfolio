@@ -13,6 +13,7 @@ import TicTacToeImg from "../assets/img/Project/TicTacToe.png";
 import WeatherAppImg from "../assets/img/Project/WeatherApp.png";
 import RestaurantBookingSystemImg from "../assets/img/Project/RestaurantBookingSystem.png";
 import OmegaBytesImg from "../assets/img/Project/OmegaBytes.png";
+import LanguageTranslatorApplicationImg from "../assets/img/Project/LanguageTranslatorApplication.jpg";
 
 // import videos
 import DiscordCloneVideo from "../assets/video/DiscordClone.mp4";
@@ -159,7 +160,7 @@ const ProjectPage = () => {
         id: 1,
         title: "LanguageTranslator",
         description: "Mobile task management application",
-        image: myPortfolioImg,
+        image: LanguageTranslatorApplicationImg,
         technologies: ["React Native", "Firebase"],
         githubLink: "https://github.com/lakshay-goyal/LanguageTranslator",
         liveLink: "https://github.com/lakshay-goyal/LanguageTranslator",
@@ -223,7 +224,7 @@ const ProjectPage = () => {
               <img
                 src={project.image}
                 alt={project.title}
-                className="w-full h-48 object-cover cursor-pointer"
+                className="w-full h-48 object-contain cursor-pointer"
                 onClick={() => setSelectedVideo(project.videoLink)}
               />
             )}
