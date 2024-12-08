@@ -9,7 +9,7 @@ function ContactUs() {
           <div class="flex flex-col items-center space-y-4 lg:flex-row lg:space-x-24">
             <div class="flex flex-col items-center text-xl font-semibold">
               <img
-                class="w-24 h-24 rounded-full m-4"
+                class="w-24 h-24 rounded-full m-4 object-cover"
                 src={Lakshay}
                 alt="Lakshay Goyal"
               />

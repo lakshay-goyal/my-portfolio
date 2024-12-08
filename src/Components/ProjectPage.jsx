@@ -54,7 +54,7 @@ const ProjectPage = () => {
         image: OmegaBytesImg,
         technologies: ["React", "Tailwind CSS", "Python"],
         githubLink: "https://github.com/lakshay-goyal/Omega-Bytes",
-        liveLink: "https://github.com/lakshay-goyal/Omega-Bytes",
+        liveLink: "",
         videoLink: OmegaBytesVideo
       },
       {
@@ -128,7 +128,7 @@ const ProjectPage = () => {
           "This project involves creating a WeatherApp website that provides real-time weather updates based on the user’s location or a selected city. ",
         image: WeatherAppImg,
         technologies: ["HTML", "CSS", "JS"],
-        githubLink: "https://github.com/lakshay-goyal/DiscordClone",
+        githubLink: "https://github.com/lakshay-goyal/WeatherApp/",
         liveLink: "https://lakshay-goyal.github.io/WeatherApp/",
         videoLink:WeatherAppVideo
       },
@@ -150,7 +150,7 @@ const ProjectPage = () => {
         image: RestaurantBookingSystemImg,
         technologies: ["NextJS", "Shadcn"],
         githubLink: "https://github.com/lakshay-goyal/RestaurantBookingSystem",
-        liveLink: "https://github.com/lakshay-goyal/RestaurantBookingSystem",
+        liveLink: "",
         videoLink: RestaurantBookingSystemVideo
       },
       // Add more web projects
@@ -163,7 +163,7 @@ const ProjectPage = () => {
         image: LanguageTranslatorApplicationImg,
         technologies: ["React Native", "Firebase"],
         githubLink: "https://github.com/lakshay-goyal/LanguageTranslator",
-        liveLink: "https://github.com/lakshay-goyal/LanguageTranslator",
+        liveLink: "",
       },
       // Add more app projects
     ],
@@ -250,14 +250,16 @@ const ProjectPage = () => {
                 >
                   GitHub →
                 </a>
-                <a
+                {project.liveLink==""?
+                  <p></p>:
+                  <a
                   href={project.liveLink}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-indigo-600 hover:text-indigo-800"
                 >
                   Live Demo →
-                </a>
+                </a>}
               </div>
             </div>
           </div>

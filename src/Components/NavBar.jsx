@@ -5,7 +5,7 @@ function NavBar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const navLinks = [
-    { href: "https://lakshay-portfolio-pi.vercel.app/", label: "Home" },
+    { href: "#Home", label: "Home" },
     { href: "#About", label: "About Me" },
     { href: "#Skills", label: "Skills" },
     { href: "#Project", label: "Project" },
@@ -38,7 +38,7 @@ function NavBar() {
           {/* Logo */}
           <div className="flex-shrink-0">
             <img
-              className="h-12 w-12 rounded-full ring-2 ring-blue-500 hover:ring-blue-400 transition-all duration-300"
+              className="h-12 w-12 object-contain rounded-full ring-2 ring-blue-500 hover:ring-blue-400 transition-all duration-300"
               src={Lakshay}
               alt="Lakshay"
             />
