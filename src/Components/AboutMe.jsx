@@ -2,7 +2,6 @@ import React, { useState, useRef, useEffect } from 'react';
 import { X, Play, Pause, Volume2, VolumeX, Maximize2 } from 'lucide-react';
 import Lakshay from '../assets/img/Lakshay.png';
 import Resume from '../assets/pdf/Resume.pdf';
-import VideoResume from '../assets/img/VideoResume.mp4';
 
 function AboutMe() {
   const [isVideoModalOpen, setIsVideoModalOpen] = useState(false);
@@ -153,7 +152,7 @@ function AboutMe() {
             <div className="absolute inset-0 flex items-center justify-center">
               <video 
                 ref={videoRef}
-                src={VideoResume} 
+                src="https://res.cloudinary.com/dkiktv5ur/video/upload/v1734678640/rnkx37gdlzx4hgvt07dx.mp4" 
                 onTimeUpdate={handleTimeUpdate}
                 onLoadedMetadata={() => {
                   if (videoRef.current) {

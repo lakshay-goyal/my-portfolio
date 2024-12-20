@@ -2,33 +2,8 @@ import React, { useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 
 // import images
-import myPortfolioImg from "../assets/img/Project/myPortfolio.png";
-import DiscordCloneImg from "../assets/img/Project/DiscordClone.png";
-import ImageGalleryImg from "../assets/img/Project/ImageGallery.png";
-import ModernChairImg from "../assets/img/Project/ModernChair.png";
-import ParallaxEffectImg from "../assets/img/Project/Parallax_Effect.png";
-import PasswordGeneratorImg from "../assets/img/Project/PasswordGenerator.png";
-import RazorpayCloneImg from "../assets/img/Project/RazorpayClone.png";
-import TicTacToeImg from "../assets/img/Project/TicTacToe.png";
-import WeatherAppImg from "../assets/img/Project/WeatherApp.png";
-import RestaurantBookingSystemImg from "../assets/img/Project/RestaurantBookingSystem.png";
-import OmegaBytesImg from "../assets/img/Project/OmegaBytes.png";
-import LanguageTranslatorApplicationImg from "../assets/img/Project/LanguageTranslatorApplication.jpg";
+import LanguageTranslatorApplicationImg from "../assets/img/LanguageTranslatorApplication.jpg";
 
-// import videos
-import DiscordCloneVideo from "../assets/video/DiscordClone.mp4";
-import ImageGalleryVideo from "../assets/video/ImageGallery.mp4";
-import ModernChairVideo from "../assets/video/ModernChair.mp4";
-import ParallaxEffectVideo from "../assets/video/ParallaxEffect.mp4";
-import PasswordGeneratorVideo from "../assets/video/PasswordGenerator.mp4";
-import RazorpayCloneVideo from "../assets/video/RazorpayClone.mp4";
-import TicTacToeVideo from "../assets/video/TicTacToe.mp4";
-import WeatherAppVideo from "../assets/video/WeatherApp.mp4";
-import RestaurantBookingSystemVideo from "../assets/video/RestaurantBookingSystem.mp4";
-import myPortfolioVideo from "../assets/video/myPortfolio.mp4";
-import OmegaBytesVideo from "../assets/video/OmegaBytes.mp4";
-
-// ProjectPage Component for Filtered Views
 const ProjectPage = () => {
   const { category } = useParams();
   const navigate = useNavigate();
@@ -36,124 +11,188 @@ const ProjectPage = () => {
 
   const allProjects = {
     web: [
-      {
-        id: 1,
-        title: "Portfolio Website",
-        description: "Personal portfolio built with React",
-        image: myPortfolioImg,
-        technologies: ["React", "Tailwind CSS"],
-        githubLink: "https://github.com/lakshay-goyal/my-portfolio",
-        liveLink: "https://lakshay-portfolio-pi.vercel.app/",
-        videoLink: myPortfolioVideo,
-      },
-      {
-        id: 2,
-        title: "Omega-Bytes",
-        description:
-          "The AI-powered calculator app simplifies math with smart.",
-        image: OmegaBytesImg,
-        technologies: ["React", "Tailwind CSS", "Python"],
-        githubLink: "https://github.com/lakshay-goyal/Omega-Bytes",
-        liveLink: "",
-        videoLink: OmegaBytesVideo
-      },
-      {
-        id: 3,
-        title: "Parallax Effect",
-        description: "Dynamic parallax effect website for a restaurant. ",
-        image: ParallaxEffectImg,
-        technologies: ["HTML", "CSS"],
-        githubLink: "https://github.com/lakshay-goyal/Parallax_Effect",
-        liveLink: "https://lakshay-goyal.github.io/Parallax_Effect/",
-        videoLink: ParallaxEffectVideo
-      },
-      {
-        id: 4,
-        title: "Image Gallery",
-        description: "creating an image gallery website designed.",
-        image: ImageGalleryImg,
-        technologies: ["HTML", "CSS"],
-        githubLink: "https://github.com/lakshay-goyal/ImageGallery",
-        liveLink: "https://lakshay-goyal.github.io/ImageGallery/",
-        videoLink: ImageGalleryVideo
-      },
-      {
-        id: 5,
-        title: "Modern Chair",
-        description:
-          "The ModernChair website is a platform designed to showcase Chair Products.",
-        image: ModernChairImg,
-        technologies: ["HTML", "CSS"],
-        githubLink: "https://github.com/lakshay-goyal/ModernChair",
-        liveLink: "https://lakshay-goyal.github.io/ModernChair/",
-        videoLink: ModernChairVideo
-      },
-      {
-        id: 6,
-        title: "Razorpay Clone",
-        description:
-          "This project involves building the homepage UI for a Razorpay clone website.",
-        image: RazorpayCloneImg,
-        technologies: ["HTML", "Tailwind CSS"],
-        githubLink: "https://github.com/lakshay-goyal/RazorpayClone",
-        liveLink: "https://lakshay-goyal.github.io/RazorpayClone/",
-        videoLink:RazorpayCloneVideo
-      },
-      {
-        id: 7,
-        title: "Discord Clone",
-        description:
-          "This project focuses on building the homepage UI for a Discord clone website.",
-        image: DiscordCloneImg,
-        technologies: ["HTML", "Tailwind CSS"],
-        githubLink: "https://github.com/lakshay-goyal/DiscordClone",
-        liveLink: "https://lakshay-goyal.github.io/DiscordClone/",
-        videoLink: DiscordCloneVideo,
-      },
-      {
-        id: 8,
-        title: "Password Generator",
-        description:
-          "This project is a fully functional password generator website designed to create secure and random passwords for users.",
-        image: PasswordGeneratorImg,
-        technologies: ["HTML", "CSS", "JS"],
-        githubLink: "https://github.com/lakshay-goyal/PasswordGenerator",
-        liveLink: "https://lakshay-goyal.github.io/PasswordGenerator/",
-        videoLink:PasswordGeneratorVideo
-      },
-      {
-        id: 9,
-        title: "Weather App",
-        description:
-          "This project involves creating a WeatherApp website that provides real-time weather updates based on the user’s location or a selected city. ",
-        image: WeatherAppImg,
-        technologies: ["HTML", "CSS", "JS"],
-        githubLink: "https://github.com/lakshay-goyal/WeatherApp/",
-        liveLink: "https://lakshay-goyal.github.io/WeatherApp/",
-        videoLink:WeatherAppVideo
-      },
-      {
-        id: 7,
-        title: "Tic Tac Toe",
-        description:
-          "This project involves creating a fully functional TicTacToe game website.",
-        image: TicTacToeImg,
-        technologies: ["HTML", "CSS", "JS"],
-        githubLink: "https://github.com/lakshay-goyal/TicTacToe",
-        liveLink: "https://lakshay-goyal.github.io/TicTacToe/",
-        videoLink:TicTacToeVideo
-      },
-      {
-        id: 7,
-        title: "Restaurant Booking System",
-        description: "This project focuses on building the homepage UI for a Discord clone website.",
-        image: RestaurantBookingSystemImg,
-        technologies: ["NextJS", "Shadcn"],
-        githubLink: "https://github.com/lakshay-goyal/RestaurantBookingSystem",
-        liveLink: "",
-        videoLink: RestaurantBookingSystemVideo
-      },
-      // Add more web projects
+        {
+          id: 1,
+          title: "Portfolio Website",
+          description: "Personal portfolio built with React",
+          image: "https://res.cloudinary.com/dkiktv5ur/image/upload/v1734670441/ekftfhtrsbueajzfquwn.png",
+          technologies: ["React", "Tailwind CSS"],
+          githubLink: "https://github.com/lakshay-goyal/my-portfolio",
+          liveLink: "https://lakshay-portfolio-pi.vercel.app/",
+          videoLink: "https://res.cloudinary.com/dkiktv5ur/video/upload/v1734677822/myPortfolioVideo_zj1kgy.webm",
+        },
+        {
+          id: 2,
+          title: "Restaurant Booking System",
+          description: "Allows users to book restaurant seats in advance with GPS-based notifications.",
+          image: "https://res.cloudinary.com/dkiktv5ur/image/upload/v1734674355/RestaurantBookingSystemImg_dsmcs4.png",
+          technologies: ["NextJS", "Flask", "MySQL"],
+          githubLink: "https://github.com/lakshay-goyal/RestaurantBookingSystem",
+          liveLink: "",
+          videoLink: "https://res.cloudinary.com/dkiktv5ur/video/upload/v1734674987/ncft1tboixr9a8nrqcnp.webm",
+        },
+        {
+          id: 3,
+          title: "Resume Generator",
+          description: "A tool to create professional resumes effortlessly.",
+          image: "https://res.cloudinary.com/dkiktv5ur/image/upload/v1734670439/fb46cirgmckzjlkbyl2i.png",
+          technologies: ["React"],
+          githubLink: "https://github.com/lakshay-goyal/resume-generator",
+          liveLink: "https://resume-generator-vert.vercel.app/",
+          videoLink: "https://res.cloudinary.com/dkiktv5ur/video/upload/v1734677818/ResumeGeneratorVideo_hpzhqo.webm",
+        },
+        {
+          id: 4,
+          title: "DSA Problem Tracker",
+          description: "Tracks and organizes DSA problems for efficient preparation.",
+          image: "https://res.cloudinary.com/dkiktv5ur/image/upload/v1734670439/hyvcsz14h1qzb8sr1bun.png",
+          technologies: ["React"],
+          githubLink: "https://github.com/lakshay-goyal/DSAProblemTracker",
+          liveLink: "https://dsa-problem-tracker.vercel.app/",
+          videoLink: "https://res.cloudinary.com/dkiktv5ur/video/upload/v1734677805/DSAProblemTrackerVideo_kkfdbc.webm",
+        },
+        {
+          id: 5,
+          title: "Testimonials",
+          description: "A collection of user testimonials displayed in a beautiful layout.",
+          image: "https://res.cloudinary.com/dkiktv5ur/image/upload/v1734673902/TestimonialImg_vfedwh.png",
+          technologies: ["React"],
+          githubLink: "https://github.com/lakshay-goyal/Testimonials",
+          liveLink: "https://testimonials-umber.vercel.app/",
+          videoLink: "https://res.cloudinary.com/dkiktv5ur/video/upload/v1734677815/TestimonialVideo_thuvqw.webm",
+        },
+        {
+          id: 6,
+          title: "Blogs App",
+          description: "A full-stack blog application to manage and post blogs.",
+          image: "https://res.cloudinary.com/dkiktv5ur/image/upload/v1734674095/BlogAppImg_zwi6gm.png",
+          technologies: ["React"],
+          githubLink: "https://github.com/lakshay-goyal/BlogWebsite",
+          liveLink: "https://blog-website-six-kohl.vercel.app/",
+          videoLink: "https://res.cloudinary.com/dkiktv5ur/video/upload/v1734677805/BlogAppVideo_ukrpf6.webm",
+        },
+        {
+          id: 7,
+          title: "Todo App",
+          description: "A basic to-do list app with CRUD functionality.",
+          image: "https://res.cloudinary.com/dkiktv5ur/image/upload/v1734670440/jgdgwkbtetgcer71tayx.png",
+          technologies: ["React", "NodeJS", "MongoDB"],
+          githubLink: "https://github.com/lakshay-goyal/TodoApp",
+          liveLink: "https://todoapp-1-g66a.onrender.com/",
+          videoLink: "https://res.cloudinary.com/dkiktv5ur/video/upload/v1734677816/TodoAppVideo_tg5was.webm",
+        },
+        {
+          id: 8,
+          title: "Shopping Cart",
+          description: "An e-commerce shopping cart demo.",
+          image: "https://res.cloudinary.com/dkiktv5ur/image/upload/v1734670438/nrpjodcprlgioxdvnozn.png",
+          technologies: ["React"],
+          githubLink: "https://github.com/lakshay-goyal/ShoppingCart",
+          liveLink: "https://shopping-cart-chi-blush.vercel.app/",
+          videoLink: "https://res.cloudinary.com/dkiktv5ur/video/upload/v1734678295/ShoppingCartVideo_fwcsys.webm",
+        },
+        {
+          id: 10,
+          title: "Random GIF Generator",
+          description: "Generates random GIFs using an API.",
+          image: "https://res.cloudinary.com/dkiktv5ur/image/upload/v1734670438/abgnyqragf33oiunkuou.png",
+          technologies: ["React"],
+          githubLink: "https://github.com/lakshay-goyal/RandomGIF",
+          liveLink: "https://random-gif-psi-seven.vercel.app/",
+          videoLink: "https://res.cloudinary.com/dkiktv5ur/video/upload/v1734677813/RandomGifVideo_lzmtym.webm",
+        },
+        {
+          id: 11,
+          title: "React Form Demo",
+          description: "A demonstration of React forms and validation.",
+          image: "https://res.cloudinary.com/dkiktv5ur/image/upload/v1734670440/gwjcgbkh50qnxpmy83pa.png",
+          technologies: ["React"],
+          githubLink: "https://github.com/lakshay-goyal/ReactForm",
+          liveLink: "https://react-form-delta-teal.vercel.app/",
+          videoLink: "https://res.cloudinary.com/dkiktv5ur/video/upload/v1734677813/ReactFormVideo_bs89td.webm",
+        },
+        {
+          id: 14,
+          title: "TicTacToe Game",
+          description: "Classic TicTacToe game implemented with JavaScript.",
+          image: "https://res.cloudinary.com/dkiktv5ur/image/upload/v1734670440/bfvhzc4uvvi2dmdgratr.png",
+          technologies: ["HTML", "CSS", "JavaScript"],
+          githubLink: "https://github.com/lakshay-goyal/TicTacToe",
+          liveLink: "https://lakshay-goyal.github.io/TicTacToe/",
+          videoLink: "https://res.cloudinary.com/dkiktv5ur/video/upload/v1734677815/TicTacToeVideo_deceao.webm",
+        },
+        {
+          id: 15,
+          title: "Weather App",
+          description: "A weather forecast application built with JavaScript.",
+          image: "https://res.cloudinary.com/dkiktv5ur/image/upload/v1734670447/zy53iwxxo99v6bzul7aw.png",
+          technologies: ["HTML", "CSS", "JavaScript"],
+          githubLink: "https://github.com/lakshay-goyal/WeatherApp",
+          liveLink: "https://lakshay-goyal.github.io/WeatherApp/",
+          videoLink: "https://res.cloudinary.com/dkiktv5ur/video/upload/v1734677817/WeatherAppVideo_cadrkt.webm",
+        },
+        {
+          id: 16,
+          title: "Password Generator",
+          description: "Generates secure random passwords.",
+          image: "https://res.cloudinary.com/dkiktv5ur/image/upload/v1734670438/jmsmho0wlyi2tbznqxzc.png",
+          technologies: ["HTML", "CSS", "JavaScript"],
+          githubLink: "https://github.com/lakshay-goyal/PasswordGenerator",
+          liveLink: "https://lakshay-goyal.github.io/PasswordGenerator/",
+          videoLink: "https://res.cloudinary.com/dkiktv5ur/video/upload/v1734677807/PasswordGeneratorVideo_n5icgr.webm",
+        },
+        {
+          id: 17,
+          title: "Discord Clone",
+          description: "A clone of Discord's interface and basic features.",
+          image: "https://res.cloudinary.com/dkiktv5ur/image/upload/v1734670436/goxc2ejcvrcfmcmjcujt.png",
+          technologies: ["HTML", "Tailwind CSS"],
+          githubLink: "https://github.com/lakshay-goyal/DiscordClone",
+          liveLink: "https://lakshay-goyal.github.io/DiscordClone/",
+          videoLink: "https://res.cloudinary.com/dkiktv5ur/video/upload/v1734677806/DiscordCloneVideo_x5ur1a.webm",
+        },
+        {
+          id: 18,
+          title: "Razorpay Clone",
+          description: "A clone of the Razorpay payment interface.",
+          image: "https://res.cloudinary.com/dkiktv5ur/image/upload/v1734670437/q6nzwzrbw8xqbxldq4iw.png",
+          technologies: ["HTML", "Tailwind CSS"],
+          githubLink: "https://github.com/lakshay-goyal/RazorpayClone",
+          liveLink: "https://razorpay-clone-gray-two.vercel.app/",
+          videoLink: "https://res.cloudinary.com/dkiktv5ur/video/upload/v1734677823/RazorpayCloneVideo_syfdeb.webm",
+        },
+        {
+          id: 19,
+          title: "Modern Chair",
+          description: "A modern chair e-commerce website.",
+          image: "https://res.cloudinary.com/dkiktv5ur/image/upload/v1734670435/j30hna62fa7zqzheshfy.png",
+          technologies: ["HTML", "CSS"],
+          githubLink: "https://github.com/lakshay-goyal/ModernChair",
+          liveLink: "https://lakshay-goyal.github.io/ModernChair/",
+          videoLink: "https://res.cloudinary.com/dkiktv5ur/video/upload/v1734677809/ModernChairVideo_hnervt.webm",
+        },
+        {
+          id: 20,
+          title: "Image Gallery",
+          description: "A responsive image gallery application.",
+          image: "https://res.cloudinary.com/dkiktv5ur/image/upload/v1734670437/gmood0s89fqprxxwmxjf.png",
+          technologies: ["HTML", "CSS"],
+          githubLink: "https://github.com/lakshay-goyal/ImageGallery",
+          liveLink: "https://lakshay-goyal.github.io/ImageGallery/",
+          videoLink: "https://res.cloudinary.com/dkiktv5ur/video/upload/v1734677808/ImageGalleryVideo_qiu8zf.webm",
+        },
+        {
+          id: 21,
+          title: "Parallax Website",
+          description: "A website showcasing parallax scrolling effects.",
+          image: "https://res.cloudinary.com/dkiktv5ur/image/upload/v1734670445/zsvhvk9y0pjcmh1q7acd.png",
+          technologies: ["HTML", "CSS"],
+          githubLink: "https://github.com/lakshay-goyal/Parallax_Effect",
+          liveLink: "https://lakshay-goyal.github.io/Parallax_Effect/",
+          videoLink: "https://res.cloudinary.com/dkiktv5ur/video/upload/v1734677815/ParallaxEffectVideo_bt6vni.webm",
+        },      
+
+
     ],
     app: [
       {
@@ -164,6 +203,7 @@ const ProjectPage = () => {
         technologies: ["React Native", "Firebase"],
         githubLink: "https://github.com/lakshay-goyal/LanguageTranslator",
         liveLink: "",
+        videoLink: "https://res.cloudinary.com/dkiktv5ur/video/upload/v1734678623/mzbbpuilsl9yxmsapomd.mp4",
       },
       // Add more app projects
     ],
