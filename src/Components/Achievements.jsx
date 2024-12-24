@@ -111,28 +111,28 @@ function Achievements() {
                 title: "Statistics using Python",
                 organization: "Samatrix Consulting Pvt Ltd",
                 image:
-                  "https://verify.netcredential.com/api/credential/roy8Qrvcja?view=image",
+                  "https://res.cloudinary.com/dkiktv5ur/image/upload/v1735062219/Statistics_using_Python_spwy3d.jpg",
                 href: "https://verify.netcredential.com/roy8Qrvcja",
               },
               {
                 title: "R Programming For Data Science",
                 organization: "Samatrix Consulting Pvt Ltd",
                 image:
-                  "https://verify.netcredential.com/api/credential/roy8QnCxbD?view=image",
+                  "https://res.cloudinary.com/dkiktv5ur/image/upload/v1735062219/R_Programming_For_Data_Science_jo4y8b.jpg",
                 href: "https://verify.netcredential.com/roy8QnCxbD",
               },
               {
                 title: "Data Analysis Using Python",
                 organization: "Samatrix Consulting Pvt Ltd",
                 image:
-                  "https://verify.netcredential.com/api/credential/roy8N2dFPL?view=image",
+                  "https://res.cloudinary.com/dkiktv5ur/image/upload/v1735062219/Data_Analysis_Using_Python_qlp2mf.jpg",
                 href: "https://verify.netcredential.com/roy8N2dFPL",
               },
               {
                 title: "FoundationTo AI & Data Science",
                 organization: "Samatrix Consulting Pvt Ltd",
                 image:
-                  "https://verify.netcredential.com/api/credential/roy84P0ZDT?view=image",
+                  "https://res.cloudinary.com/dkiktv5ur/image/upload/v1735062219/FoundationTo_AI_Data_Science_fvntkm.jpg",
                 href: "https://verify.netcredential.com/roy84P0ZDT",
               },
 
