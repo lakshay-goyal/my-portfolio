@@ -191,7 +191,25 @@ const ProjectPage = () => {
           liveLink: "https://lakshay-goyal.github.io/Parallax_Effect/",
           videoLink: "https://res.cloudinary.com/dkiktv5ur/video/upload/v1734677815/ParallaxEffectVideo_bt6vni.webm",
         },      
-
+        {
+          id: 22,
+          title: "VS Code Clone",
+          description: "Create a UI clone of the Visual Studio Code (VSCode) Homepage.",
+          image: "https://res.cloudinary.com/dkiktv5ur/image/upload/v1735223903/VSCode_Clone_hdcgzm.png",
+          technologies: ["HTML", "CSS"],
+          githubLink: "https://github.com/lakshay-goyal/VSCode_Clone",
+          liveLink: "https://lakshay-goyal.github.io/VSCode_Clone/",
+          videoLink: "https://res.cloudinary.com/dkiktv5ur/video/upload/v1735223806/VSCode_Clone_d0mzaa.webm",
+        }, {
+          id: 23,
+          title: "Zerodha Clone",
+          description: "Create a UI clone of the Zerodha Website Homepage.",
+          image: "https://res.cloudinary.com/dkiktv5ur/image/upload/v1735223903/Zerodha_Clone_nejlj8.png",
+          technologies: ["HTML", "CSS"],
+          githubLink: "https://github.com/lakshay-goyal/Zerodha_Clone",
+          liveLink: "https://lakshay-goyal.github.io/Zerodha_Clone/",
+          videoLink: "https://res.cloudinary.com/dkiktv5ur/video/upload/v1735223797/Zerodha_Clone_umqxsh.webm",
+        }, 
 
     ],
     app: [
