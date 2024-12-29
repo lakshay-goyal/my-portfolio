@@ -165,11 +165,11 @@ const ProjectPage = () => {
           id: 19,
           title: "Modern Chair",
           description: "A modern chair e-commerce website.",
-          image: "https://res.cloudinary.com/dkiktv5ur/image/upload/v1734670435/j30hna62fa7zqzheshfy.png",
+          image: "https://res.cloudinary.com/dkiktv5ur/image/upload/v1735485895/ModernChair_kewiau.png",
           technologies: ["HTML", "CSS"],
           githubLink: "https://github.com/lakshay-goyal/ModernChair",
           liveLink: "https://lakshay-goyal.github.io/ModernChair/",
-          videoLink: "https://res.cloudinary.com/dkiktv5ur/video/upload/v1734677809/ModernChairVideo_hnervt.webm",
+          videoLink: "https://res.cloudinary.com/dkiktv5ur/video/upload/v1735485955/ModernChairVideo_f1xkve.webm",
         },
         {
           id: 20,
