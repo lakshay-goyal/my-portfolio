@@ -9,6 +9,9 @@ export default {
         colors: {
           footerColor: '#101927',
         },
+        animation: {
+          blob: "blob 7s infinite",
+        },
       },
   },
   plugins: [],
