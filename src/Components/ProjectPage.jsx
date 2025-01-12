@@ -112,6 +112,16 @@ const ProjectPage = () => {
           videoLink: "https://res.cloudinary.com/dkiktv5ur/video/upload/v1734677813/ReactFormVideo_bs89td.webm",
         },
         {
+          id: 13,
+          title: "Todo",
+          description: "A Simple Todo Application for maintain all Tasks",
+          image: "https://res.cloudinary.com/dkiktv5ur/image/upload/v1736707316/TodoImg_iwohqx.png",
+          technologies: ["HTML", "CSS", "JavaScript"],
+          githubLink: "https://github.com/lakshay-goyal/Todo",
+          liveLink: "https://lakshay-goyal.github.io/Todo/",
+          videoLink: "https://res.cloudinary.com/dkiktv5ur/video/upload/v1736707377/TodoVideo_v3gl2s.webm",
+        },
+        {
           id: 14,
           title: "TicTacToe Game",
           description: "Classic TicTacToe game implemented with JavaScript.",
