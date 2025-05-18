@@ -1,7 +1,95 @@
-import React from "react";
+import React, { useEffect, useRef, useState } from "react";
 import poster_making from "../assets/img/poster_making.jpeg";
+import position_2nd from "../assets/img/2nd_positions.jpeg";
+import { motion, AnimatePresence } from "framer-motion";
+import { IconArrowLeft, IconArrowRight } from "@tabler/icons-react";
+
+// Add CSS modules
+import "./Achievements.css";
 
 function Achievements() {
+  const certificatesRef = useRef(null);
+  const scrollInterval = useRef(null);
+  const [activeAward, setActiveAward] = useState(0);
+
+  const awards = [
+    {
+      image: poster_making,
+      title: "3rd Position in Poster Making",
+      description: "Achieved 3rd place in a poster making competition at K.R.Mangalam University",
+    },
+    {
+      image: position_2nd,
+      title: "2nd Position",
+      description: "Achieved 2nd position in a competition",
+    },
+  ];
+
+  const handleNext = () => {
+    setActiveAward((prev) => (prev + 1) % awards.length);
+  };
+
+  const handlePrev = () => {
+    setActiveAward((prev) => (prev - 1 + awards.length) % awards.length);
+  };
+
+  useEffect(() => {
+    const interval = setInterval(handleNext, 5000);
+    return () => clearInterval(interval);
+  }, []);
+
+  const randomRotateY = () => {
+    return Math.floor(Math.random() * 21) - 10;
+  };
+
+  // Certificates auto-scroll effect
+  useEffect(() => {
+    const startAutoScroll = () => {
+      scrollInterval.current = setInterval(() => {
+        if (certificatesRef.current) {
+          certificatesRef.current.scrollLeft += 1;
+          if (
+            certificatesRef.current.scrollLeft >=
+            certificatesRef.current.scrollWidth - certificatesRef.current.clientWidth
+          ) {
+            certificatesRef.current.scrollLeft = 0;
+          }
+        }
+      }, 20);
+    };
+
+    startAutoScroll();
+
+    return () => {
+      if (scrollInterval.current) {
+        clearInterval(scrollInterval.current);
+      }
+    };
+  }, []);
+
+  const handleMouseEnter = () => {
+    if (scrollInterval.current) {
+      clearInterval(scrollInterval.current);
+    }
+  };
+
+  const handleMouseLeave = () => {
+    const startAutoScroll = () => {
+      scrollInterval.current = setInterval(() => {
+        if (certificatesRef.current) {
+          certificatesRef.current.scrollLeft += 1;
+          if (
+            certificatesRef.current.scrollLeft >=
+            certificatesRef.current.scrollWidth - certificatesRef.current.clientWidth
+          ) {
+            certificatesRef.current.scrollLeft = 0;
+          }
+        }
+      }, 20);
+    };
+    startAutoScroll();
+  };
+
   return (
     <div className="min-h-screen bg-gradient-to-b from-gray-50 to-gray-100">
       <section id="Achievements" className="py-16 px-4 max-w-7xl mx-auto">
@@ -44,23 +132,93 @@ function Achievements() {
 
         <div className="mb-16">
           <h4 className="text-xl font-semibold text-blue-600 mb-6">Awards</h4>
-          <div className="relative rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
-            <div
-              className="h-80 bg-contain bg-center relative"
-              style={{
-                backgroundImage: `url(${poster_making})`,
-              }}
-            >
-              <div className="absolute inset-0 bg-black bg-opacity-50 transition-opacity duration-300 hover:bg-opacity-40">
-                <div className="absolute inset-0 flex flex-col justify-center items-center p-6 text-white">
-                  <h5 className="text-2xl font-bold mb-3">
-                    3rd Position in Poster Making
-                  </h5>
-                  <p className="text-center text-lg">
-                    Achieved 3rd place in a poster making competition at
-                    K.R.Mangalam University
-                  </p>
-                </div>
+          <div className="relative grid grid-cols-1 gap-8 md:gap-20 md:grid-cols-2">
+            <div className="relative h-[400px] w-full">
+              <AnimatePresence mode="wait">
+                {awards.map((award, index) => (
+                  <motion.div
+                    key={index}
+                    initial={{
+                      opacity: 0,
+                      scale: 0.9,
+                      rotate: randomRotateY(),
+                    }}
+                    animate={{
+                      opacity: index === activeAward ? 1 : 0,
+                      scale: index === activeAward ? 1 : 0.95,
+                      rotate: index === activeAward ? 0 : randomRotateY(),
+                    }}
+                    exit={{
+                      opacity: 0,
+                      scale: 0.9,
+                      rotate: randomRotateY(),
+                    }}
+                    transition={{
+                      duration: 0.4,
+                      ease: "easeInOut",
+                    }}
+                    className="absolute inset-0"
+                  >
+                    <div
+                      className="h-full w-full rounded-3xl bg-cover bg-center"
+                      style={{
+                        backgroundImage: `url(${award.image})`,
+                      }}
+                    >
+                      <div className="absolute inset-0 bg-black bg-opacity-50 transition-opacity duration-300 hover:bg-opacity-40 rounded-3xl">
+                        <div className="absolute inset-0 flex flex-col justify-center items-center p-6 text-white">
+                          <h5 className="text-2xl font-bold mb-3">{award.title}</h5>
+                          <p className="text-center text-lg">{award.description}</p>
+                        </div>
+                      </div>
+                    </div>
+                  </motion.div>
+                ))}
+              </AnimatePresence>
+            </div>
+            <div className="flex flex-col justify-between py-4">
+              <motion.div
+                key={activeAward}
+                initial={{ y: 20, opacity: 0 }}
+                animate={{ y: 0, opacity: 1 }}
+                exit={{ y: -20, opacity: 0 }}
+                transition={{ duration: 0.2, ease: "easeInOut" }}
+                className="h-full flex flex-col justify-center"
+              >
+                <h3 className="text-2xl font-bold text-gray-800 mb-4">
+                  {awards[activeAward].title}
+                </h3>
+                <motion.p className="text-lg text-gray-600">
+                  {awards[activeAward].description.split(" ").map((word, index) => (
+                    <motion.span
+                      key={index}
+                      initial={{ filter: "blur(10px)", opacity: 0, y: 5 }}
+                      animate={{ filter: "blur(0px)", opacity: 1, y: 0 }}
+                      transition={{
+                        duration: 0.2,
+                        ease: "easeInOut",
+                        delay: 0.02 * index,
+                      }}
+                      className="inline-block"
+                    >
+                      {word}&nbsp;
+                    </motion.span>
+                  ))}
+                </motion.p>
+              </motion.div>
+              <div className="flex gap-4 mt-8">
+                <button
+                  onClick={handlePrev}
+                  className="group/button flex h-10 w-10 items-center justify-center rounded-full bg-gray-100 hover:bg-blue-600 transition-colors duration-300"
+                >
+                  <IconArrowLeft className="h-6 w-6 text-gray-800 group-hover/button:text-white transition-transform duration-300 group-hover/button:rotate-12" />
+                </button>
+                <button
+                  onClick={handleNext}
+                  className="group/button flex h-10 w-10 items-center justify-center rounded-full bg-gray-100 hover:bg-blue-600 transition-colors duration-300"
+                >
+                  <IconArrowRight className="h-6 w-6 text-gray-800 group-hover/button:text-white transition-transform duration-300 group-hover/button:-rotate-12" />
+                </button>
               </div>
             </div>
           </div>
@@ -70,7 +228,13 @@ function Achievements() {
           <h4 className="text-xl font-semibold text-blue-600 mb-6">
             Certificates
           </h4>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div
+            ref={certificatesRef}
+            onMouseEnter={handleMouseEnter}
+            onMouseLeave={handleMouseLeave}
+            className="flex overflow-x-auto gap-8 pb-4 scrollbar-hide"
+            style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
+          >
             {[
               {
                 title: "Introduction to Python",
@@ -167,7 +331,7 @@ function Achievements() {
             ].map((certificate, index) => (
               <div
                 key={index}
-                className="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1"
+                className="flex-none w-80 bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1"
               >
                 <div className="p-6">
                   <h2 className="font-bold text-lg text-gray-800 mb-2">
@@ -184,7 +348,7 @@ function Achievements() {
                       className="w-full h-full object-contain rounded-lg"
                     />
                   </div>
-                  {certificate.href == "" ? (
+                  {certificate.href === "" ? (
                     <p></p>
                   ) : (
                     <a
