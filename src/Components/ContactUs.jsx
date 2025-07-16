@@ -58,15 +58,6 @@ function ContactUs() {
           <div class="flex flex-col items-center lg:flex-row lg:space-x-24 mt-8 lg:mt-0">
             <div class="flex flex-col space-y-5 lg:items-center">
               <div class="flex flex-col items-center space-y-2">
-                <h6 class="font-semibold text-center">Mobile No:</h6>
-                <a
-                  class="text-white no-underline text-center"
-                  href="tel:+918595236591"
-                >
-                  +91 85952 36591
-                </a>
-              </div>
-              <div class="flex flex-col items-center space-y-2">
                 <h6 class="font-semibold text-center">Email-id:</h6>
                 <a
                   class="text-white no-underline text-center"

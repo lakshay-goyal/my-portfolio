@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import NavBar from "../Components/NavBar";
+import Loading from '../Components/Loading';
 
 const papers = [
   {
@@ -20,6 +21,12 @@ const groupedPapers = papers.reduce((acc, paper) => {
 }, {});
 
 function PaperShelfPage() {
+  const [loading, setLoading] = useState(true);
+  useEffect(() => {
+    const timer = setTimeout(() => setLoading(false), 600); // Simulate loading
+    return () => clearTimeout(timer);
+  }, []);
+  if (loading) return <Loading />;
   return (
     <div className="min-h-screen bg-gray-50">
       <NavBar />

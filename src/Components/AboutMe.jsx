@@ -101,10 +101,10 @@ function AboutMe() {
         <div className="flex flex-col-reverse bg-white shadow-lg rounded-lg overflow-hidden md:flex-row items-center">
           <div className="p-6 md:w-2/3 space-y-6">
             <p className="text-gray-700 leading-relaxed text-justify">
-              I'm Lakshay Goyal, a K.R. Mangalam University BCA student passionate about innovation and technology. 
-              My expertise lies in web and app development, leveraging DevOps techniques and APIs to create seamless 
-              user experiences. I thrive on challenging problems and am driven by a continuous learning mindset.
-            </p>
+            I'm Lakshay Goyal, a graduate of K.R. Mangalam University with a BCA degree, and a passionate software engineer focused on innovation and emerging technologies. My expertise spans web and app development, with a strong foundation in DevOps practices and API integration to deliver seamless, scalable user experiences.
+<br /><br />
+Currently, I'm expanding my skill set by learning and building real-world projects in Blockchain and Artificial Intelligence, staying at the forefront of tech advancements. I thrive on solving challenging problems and am driven by a relentless curiosity and a continuous learning mindset.
+</p>
             
             <div className="flex flex-col sm:flex-row gap-4">
               <a
@@ -116,12 +116,12 @@ function AboutMe() {
                 Written Resume
               </a>
               
-              <button
+              {/* <button
                 onClick={openVideoModal}
                 className="px-4 py-2 border border-indigo-500 text-indigo-500 rounded-md hover:bg-indigo-50 flex items-center justify-center gap-2"
               >
                 <Play size={20} /> Video Resume
-              </button>
+              </button> */}
             </div>
           </div>
           

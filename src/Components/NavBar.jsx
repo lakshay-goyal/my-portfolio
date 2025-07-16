@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Lakshay from '../assets/img/Lakshay.png';
+import Logo from '../../public/logo.png';
 
 function NavBar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -38,7 +38,7 @@ function NavBar() {
           <div className="flex-shrink-0">
             <img
               className="h-12 w-12 object-contain rounded-full ring-2 ring-blue-500 hover:ring-blue-400 transition-all duration-300"
-              src={Lakshay}
+              src={Logo}
               alt="Lakshay"
             />
           </div>

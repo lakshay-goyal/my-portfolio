@@ -1,5 +1,6 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import NavBar from "../Components/NavBar";
+import Loading from '../Components/Loading';
 
 // Enhanced book data structure
 const books = [
@@ -132,6 +133,14 @@ function BookDetailsModal({ book, onClose }) {
 
 function BookshelfPage() {
   const [selectedBook, setSelectedBook] = useState(null);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => setLoading(false), 600); // Simulate loading
+    return () => clearTimeout(timer);
+  }, []);
+
+  if (loading) return <Loading />;
 
   const openBookDetails = (book) => {
     setSelectedBook(book);

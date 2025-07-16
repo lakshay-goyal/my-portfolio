@@ -9,6 +9,7 @@ import BlogPage from './Pages/BlogPage'
 import BlogDetailsPage from './Pages/BlogDetailsPage'
 import BookshelfPage from './Pages/BookshelfPage'
 import PaperShelfPage from './Pages/PaperShelfPage'
+import NotFoundPage from './Pages/NotFoundPage';
 
 const router = createBrowserRouter([
   {
@@ -39,6 +40,10 @@ const router = createBrowserRouter([
     path: "/papershelf",
     element: <PaperShelfPage />
   },
+  {
+    path: '*',
+    element: <NotFoundPage />
+  }
 ]);
 
 function App() {

@@ -3,6 +3,7 @@ import { useParams, useNavigate } from 'react-router-dom';
 import Markdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import NavBar from '../Components/NavBar';
+import Loading from '../Components/Loading';
 
 function extractFrontmatter(markdown) {
   // Simple YAML frontmatter extractor
@@ -52,7 +53,7 @@ function BlogDetailsPage() {
       });
   }, [slug]);
 
-  if (loading) return <div className="text-center py-16">Loading...</div>;
+  if (loading) return <Loading />;
   if (error) return <div className="text-center py-16 text-red-500">{error}</div>;
 
   // Use cover image from frontmatter or fallback
