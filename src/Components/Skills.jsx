@@ -44,22 +44,22 @@ function Skills() {
     {
       title: "Web Development",
       image: "https://png.pngtree.com/png-vector/20190611/ourmid/pngtree-web-development-illustration-modern-can-be-used-for-landing-pages-web-png-image_1496210.jpg",
-      skills: "HTML, CSS, JavaScript, ReactJS, NextJS, NodeJS, MongoDB, Flask, Django, API Development"
-    },
-    {
-      title: "DevOps",
-      image: "https://img.freepik.com/free-vector/flat-design-devops-illustration_52683-84086.jpg",
-      skills: "Linux, Git-Github, GitLab, Docker"
+      skills: "MERN Stack, NextJS, RemixJS, TurboRepo, Postgresdb(Prisma), API Development"
     },
     {
       title: "App Development",
       image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSlpuble9yMdpMhK_Cp6x1VzT84SPiRD65SdQ&s",
-      skills: "Java, React-Native, Kotlin, API Connectivity"
+      skills: "React-Native, API Connectivity"
     },
     {
-      title: "Data Analytics",
+      title: "AI",
+      image: "https://img.freepik.com/free-vector/flat-design-devops-illustration_52683-84086.jpg",
+      skills: "Python, FastAPI, Machine Learning, Deep Learning, NLP, Computer Vision, AI Applications, GenAi, AI Agents"
+    },
+    {
+      title: "Blockchain",
       image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSlrtLDX5LwIhuIPaUsUjHMpG_bwHMPn23C_w&s",
-      skills: "Python, R, Numpy, Pandas, Matplotlib, Seaborn, Beautiful soup, Selenium"
+      skills: "Fundamentals, Solana, Ethereum"
     }
   ];
 
@@ -91,29 +91,6 @@ function Skills() {
           ))}
         </div>
 
-        <div className="mt-20 grid grid-cols-2 md:grid-cols-4 gap-8">
-          {skillsData.map((skill, index) => (
-            <div key={index} className="text-center">
-              <div className="inline-flex items-center justify-center p-4 bg-white rounded-full shadow-lg mb-4">
-                <svg 
-                  className="w-8 h-8 text-blue-600" 
-                  fill="none" 
-                  viewBox="0 0 24 24" 
-                  stroke="currentColor"
-                >
-                  <path 
-                    strokeLinecap="round" 
-                    strokeLinejoin="round" 
-                    strokeWidth={2} 
-                    d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" 
-                  />
-                </svg>
-              </div>
-              <div className="text-lg font-semibold text-gray-700">{skill.title}</div>
-              <div className="text-sm text-gray-500">Expert Level</div>
-            </div>
-          ))}
-        </div>
       </div>
     </section>
   );
