@@ -1,5 +1,6 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
+import Loading from './Loading';
 
 // import images
 import LanguageTranslatorApplicationImg from "../assets/img/LanguageTranslatorApplication.jpg";
@@ -8,6 +9,12 @@ const ProjectPage = () => {
   const { category } = useParams();
   const navigate = useNavigate();
   const [selectedVideo, setSelectedVideo] = useState(null);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => setLoading(false), 600);
+    return () => clearTimeout(timer);
+  }, [category]);
 
   const allProjects = {
     web: [
@@ -250,6 +257,8 @@ const ProjectPage = () => {
   };
 
   const projects = allProjects[category] || [];
+
+  if (loading) return <Loading />;
 
   return (
     <div className="container mx-auto px-4 py-8">

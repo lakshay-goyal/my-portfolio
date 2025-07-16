@@ -10,6 +10,7 @@ import BlogDetailsPage from './Pages/BlogDetailsPage'
 import BookshelfPage from './Pages/BookshelfPage'
 import PaperShelfPage from './Pages/PaperShelfPage'
 import NotFoundPage from './Pages/NotFoundPage';
+import NavBar from "./Components/NavBar";
 
 const router = createBrowserRouter([
   {
@@ -18,7 +19,7 @@ const router = createBrowserRouter([
   },
   {
     path: "/projects",
-    element: <Projects />
+    element: <><NavBar/><Projects /></>
   },
   {
     path: "/projects/:category",

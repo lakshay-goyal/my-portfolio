@@ -8,8 +8,9 @@ import Achievements from "../Components/Achievements";
 import CollaborativeTool from "../Components/CollaborativeTool";
 import ContactUs from "../Components/ContactUs";
 import Loading from '../Components/Loading';
-// import MajorProjects from "../Components/MajorProjects";
-// import Experience from "../Components/Experience";
+import MajorProjects from "../Components/MajorProjects";
+import MiniProjects from '../Components/MiniProjects';
+import Experience from "../Components/Experience";
 
 function HomePage() {
   const [loading, setLoading] = useState(true);
@@ -23,10 +24,10 @@ function HomePage() {
       <NavBar />
       <HeroSection />
       <AboutMe />
-      {/* <Experience /> */}
-      {/* <MajorProjects /> */}
+      <Experience />
+      <MajorProjects />
       <Skills />
-      <Projects />
+      <MiniProjects />
       <Achievements />
       <CollaborativeTool />
       <ContactUs />

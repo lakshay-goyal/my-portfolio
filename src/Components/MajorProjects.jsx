@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { FiGithub, FiExternalLink } from 'react-icons/fi';
+import Loading from './Loading';
 
 const majorProjects = [
   {
@@ -14,6 +15,12 @@ const majorProjects = [
 ];
 
 function MajorProjects() {
+  const [loading, setLoading] = useState(true);
+  useEffect(() => {
+    const timer = setTimeout(() => setLoading(false), 600);
+    return () => clearTimeout(timer);
+  }, []);
+  if (loading) return <Loading />;
   return (
     <section className="py-20 bg-[#fafafa] relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-5 relative z-10">
