@@ -51,7 +51,7 @@ const collaborativeToolsData = [
   },
 ];
 
-const CollaborativeTools = () => {
+const CollaborativeTool = () => {
   return (
     <section className="m-16">
       <div className="flex justify-center text-3xl font-semibold mb-8">
@@ -73,4 +73,4 @@ const CollaborativeTools = () => {
   );
 };
 
-export default CollaborativeTools
+export default CollaborativeTool

@@ -5,12 +5,11 @@ function NavBar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const navLinks = [
-    { href: "#Home", label: "Home" },
-    { href: "#About", label: "About Me" },
-    { href: "#Skills", label: "Skills" },
-    { href: "#Project", label: "Project" },
-    { href: "#Achievements", label: "Achievements" },
-    { href: "#Contact", label: "Contact Me" },
+    { href: "/", label: "Home" },
+    { href: "/projects", label: "Project" },
+    { href: "/blog", label: "Blog" },
+    { href: "/bookshelf", label: "Bookshelf" }, // Added Bookshelf tab
+    { href: "/papershelf", label: "PaperShelf" }, // Added PaperShelf tab
   ];
 
   const socialLinks = [

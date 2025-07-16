@@ -5,6 +5,10 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import Projects from './Components/Projects'
+import BlogPage from './Pages/BlogPage'
+import BlogDetailsPage from './Pages/BlogDetailsPage'
+import BookshelfPage from './Pages/BookshelfPage'
+import PaperShelfPage from './Pages/PaperShelfPage'
 
 const router = createBrowserRouter([
   {
@@ -18,6 +22,22 @@ const router = createBrowserRouter([
   {
     path: "/projects/:category",
     element: <ProjectPage />
+  },
+  {
+    path: "/blog",
+    element: <BlogPage />
+  },
+  {
+    path: "/blog/:slug",
+    element: <BlogDetailsPage />
+  },
+  {
+    path: "/bookshelf",
+    element: <BookshelfPage />
+  },
+  {
+    path: "/papershelf",
+    element: <PaperShelfPage />
   },
 ]);
 
