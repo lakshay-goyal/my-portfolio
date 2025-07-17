@@ -1,32 +1,24 @@
 import React, { useState, useEffect } from "react";
 import NavBar from "../Components/NavBar";
 import Loading from '../Components/Loading';
-
-const papers = [
-  {
-    title: "Attention Is All You Need",
-    authors: "Ashish Vaswani et al.",
-    publication: "NeurIPS",
-    year: 2017,
-    link: "https://arxiv.org/abs/1706.03762",
-    description: "Introduced the Transformer architecture, revolutionizing NLP and deep learning.",
-    category: "AI/ML",
-  },
-];
-
-const groupedPapers = papers.reduce((acc, paper) => {
-  if (!acc[paper.category]) acc[paper.category] = [];
-  acc[paper.category].push(paper);
-  return acc;
-}, {});
+import usePapersStore from '../store/zustand/usePapersStore';
 
 function PaperShelfPage() {
+  const papers = usePapersStore((state) => state.papers);
   const [loading, setLoading] = useState(true);
   useEffect(() => {
     const timer = setTimeout(() => setLoading(false), 600); // Simulate loading
     return () => clearTimeout(timer);
   }, []);
   if (loading) return <Loading />;
+
+  // Group papers by category
+  const groupedPapers = papers.reduce((acc, paper) => {
+    if (!acc[paper.category]) acc[paper.category] = [];
+    acc[paper.category].push(paper);
+    return acc;
+  }, {});
+
   return (
     <div className="min-h-screen bg-gray-50">
       <NavBar />

@@ -1,0 +1,22 @@
+[
+  {
+    "title": "Web Development",
+    "image": "https://png.pngtree.com/png-vector/20190611/ourmid/pngtree-web-development-illustration-modern-can-be-used-for-landing-pages-web-png-image_1496210.jpg",
+    "skills": "MERN Stack, NextJS, RemixJS, TurboRepo, Postgresdb(Prisma), API Development"
+  },
+  {
+    "title": "App Development",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSlpuble9yMdpMhK_Cp6x1VzT84SPiRD65SdQ&s",
+    "skills": "React-Native, API Connectivity"
+  },
+  {
+    "title": "AI",
+    "image": "https://img.freepik.com/free-vector/flat-design-devops-illustration_52683-84086.jpg",
+    "skills": "Python, FastAPI, Machine Learning, Deep Learning, NLP, Computer Vision, AI Applications, GenAi, AI Agents"
+  },
+  {
+    "title": "Blockchain",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSlrtLDX5LwIhuIPaUsUjHMpG_bwHMPn23C_w&s",
+    "skills": "Fundamentals, Solana, Ethereum"
+  }
+] 

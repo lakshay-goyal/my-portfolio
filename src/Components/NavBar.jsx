@@ -8,8 +8,8 @@ function NavBar() {
     { href: "/", label: "Home" },
     { href: "/projects", label: "Project" },
     { href: "/blog", label: "Blog" },
-    { href: "/bookshelf", label: "Bookshelf" }, // Added Bookshelf tab
-    { href: "/papershelf", label: "PaperShelf" }, // Added PaperShelf tab
+    { href: "/bookshelf", label: "Bookshelf" },
+    { href: "/papershelf", label: "PaperShelf" }
   ];
 
   const socialLinks = [

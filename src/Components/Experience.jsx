@@ -1,47 +1,11 @@
 import React, { useRef, useEffect } from 'react';
+import useExperiencesStore from '../store/zustand/useExperiencesStore';
 
-const experiences = [
-  {
-    company: 'Tech Innovators Inc.',
-    logo: 'https://img.icons8.com/color/48/000000/company.png',
-    role: 'Senior Software Engineer',
-    period: 'Jul 2022 - Present',
-    location: 'Gurgaon, India',
-    highlights: [
-      'Led a team of 5 engineers to deliver a scalable SaaS platform.',
-      'Architected and implemented microservices for high-traffic workloads.',
-      'Mentored junior developers and conducted code reviews.',
-    ],
-    color: 'from-blue-300 via-blue-100 to-blue-50',
-    dot: 'bg-blue-400',
-    glow: 'shadow-blue-200',
-    pin: 'bg-blue-400',
-    blob: 'fill-blue-100',
-  },
-  {
-    company: 'NextGen Solutions',
-    logo: 'https://img.icons8.com/color/48/000000/company.png',
-    role: 'Software Engineer',
-    period: 'Jan 2020 - Jun 2022',
-    location: 'Remote',
-    highlights: [
-      'Developed and maintained core modules for a fintech product.',
-      'Collaborated with cross-functional teams for product launches.',
-      'Optimized legacy codebase, improving performance by 30%.',
-    ],
-    color: 'from-teal-300 via-teal-100 to-teal-50',
-    dot: 'bg-teal-400',
-    glow: 'shadow-teal-200',
-    pin: 'bg-teal-400',
-    blob: 'fill-teal-100',
-  },
-  // Add more experiences as needed
-];
-
-const pathHeight = 600 + (experiences.length - 1) * 320;
+const pathHeight = 600 + (useExperiencesStore.getState().experiences.length - 1) * 320;
 
 const Experience = () => {
   const pathRef = useRef(null);
+  const experiences = useExperiencesStore((state) => state.experiences);
 
   // Animate SVG path drawing on scroll
   useEffect(() => {

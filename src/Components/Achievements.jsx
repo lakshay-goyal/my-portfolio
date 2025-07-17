@@ -6,24 +6,19 @@ import { IconArrowLeft, IconArrowRight } from "@tabler/icons-react";
 
 // Add CSS modules
 import "./Achievements.css";
+import useCertificatesStore from '../store/zustand/useCertificatesStore';
+import useAwardsStore from '../store/zustand/useAwardsStore';
+
+const imageMap = {
+  "poster_making.jpeg": poster_making,
+  "2nd_positions.jpeg": position_2nd,
+};
 
 function Achievements() {
   const certificatesRef = useRef(null);
   const scrollInterval = useRef(null);
   const [activeAward, setActiveAward] = useState(0);
-
-  const awards = [
-    {
-      image: poster_making,
-      title: "3rd Position in Poster Making",
-      description: "Achieved 3rd place in a poster making competition at K.R.Mangalam University",
-    },
-    {
-      image: position_2nd,
-      title: "2nd Position",
-      description: "Achieved 2nd position in a competition",
-    },
-  ];
+  const awards = useAwardsStore((state) => state.awards);
 
   const handleNext = () => {
     setActiveAward((prev) => (prev + 1) % awards.length);
@@ -89,6 +84,8 @@ function Achievements() {
     };
     startAutoScroll();
   };
+
+  const certificates = useCertificatesStore((state) => state.certificates);
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-gray-50 to-gray-100">
@@ -162,7 +159,7 @@ function Achievements() {
                     <div
                       className="h-full w-full rounded-3xl bg-cover bg-center"
                       style={{
-                        backgroundImage: `url(${award.image})`,
+                        backgroundImage: `url(${imageMap[award.image]})`,
                       }}
                     >
                       <div className="absolute inset-0 bg-black bg-opacity-50 transition-opacity duration-300 hover:bg-opacity-40 rounded-3xl">
@@ -235,100 +232,7 @@ function Achievements() {
             className="flex overflow-x-auto gap-8 pb-4 scrollbar-hide"
             style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
           >
-            {[
-              {
-                title: "Introduction to Python",
-                organization: "IBM",
-                image:
-                  "https://res.cloudinary.com/dkiktv5ur/image/upload/v1735051659/IBM_Certicate_1_v4g6bg.png",
-                href: "https://courses.ibmcep.cognitiveclass.ai/certificates/db92b6c486734aebb77f393dc81e6677",
-              },
-              {
-                title: "Python 101 for Data Science",
-                organization: "IBM",
-                image:
-                  "https://res.cloudinary.com/dkiktv5ur/image/upload/v1735051659/IBM_Certicate_2_pwysnq.png",
-                href: "https://courses.yl-ptech.skillsnetwork.site/certificates/a684249dd3d74b3baaf4b8a92d84d163",
-              },
-              {
-                title: "Data Visualization with Python",
-                organization: "IBM",
-                image:
-                  "https://res.cloudinary.com/dkiktv5ur/image/upload/v1735051659/IBM_Certicate_3_ep2llo.png",
-                href: "https://courses.yl-ptech.skillsnetwork.site/certificates/bb81af532a4e4c20a892887e477c4623",
-              },
-              {
-                title: "Data Analysis with Python",
-                organization: "IBM",
-                image:
-                  "https://res.cloudinary.com/dkiktv5ur/image/upload/v1735051659/IBM_Certicate_4_xkbtqs.png",
-                href: "https://courses.yl-ptech.skillsnetwork.site/certificates/81ed0de5f4f440f09814a2bdc3bb9e4d",
-              },
-              {
-                title: "Big Data Engineer",
-                organization: "IBM",
-                image:
-                  "https://res.cloudinary.com/dkiktv5ur/image/upload/v1735051659/IBM_Certicate_5_d4nscm.png",
-                href: "https://courses.ibmcep.cognitiveclass.ai/certificates/d1e4961722a141a09031d9a287c0ac07",
-              },
-              {
-                title: "Statistics using Python",
-                organization: "Samatrix Consulting Pvt Ltd",
-                image:
-                  "https://res.cloudinary.com/dkiktv5ur/image/upload/v1735062219/Statistics_using_Python_spwy3d.jpg",
-                href: "https://verify.netcredential.com/roy8Qrvcja",
-              },
-              {
-                title: "R Programming For Data Science",
-                organization: "Samatrix Consulting Pvt Ltd",
-                image:
-                  "https://res.cloudinary.com/dkiktv5ur/image/upload/v1735062219/R_Programming_For_Data_Science_jo4y8b.jpg",
-                href: "https://verify.netcredential.com/roy8QnCxbD",
-              },
-              {
-                title: "Data Analysis Using Python",
-                organization: "Samatrix Consulting Pvt Ltd",
-                image:
-                  "https://res.cloudinary.com/dkiktv5ur/image/upload/v1735062219/Data_Analysis_Using_Python_qlp2mf.jpg",
-                href: "https://verify.netcredential.com/roy8N2dFPL",
-              },
-              {
-                title: "FoundationTo AI & Data Science",
-                organization: "Samatrix Consulting Pvt Ltd",
-                image:
-                  "https://res.cloudinary.com/dkiktv5ur/image/upload/v1735062219/FoundationTo_AI_Data_Science_fvntkm.jpg",
-                href: "https://verify.netcredential.com/roy84P0ZDT",
-              },
-
-              {
-                title: "Programming using Java",
-                organization: "Infosys Springboard",
-                image:
-                  "https://res.cloudinary.com/dkiktv5ur/image/upload/v1735054087/Programming_using_Java_kq0jek.png",
-                href: "",
-              },
-              {
-                title: "Object Oriented Programming using Python",
-                organization: "Infosys Springboard",
-                image:
-                  "https://res.cloudinary.com/dkiktv5ur/image/upload/v1735054087/Object_Oriented_Programming_using_Python_u7wp7k.png",
-                href: "",
-              },
-              {
-                title: "Data Structures and Algorithms using Python - PART1",
-                organization: "Infosys Springboard",
-                image:
-                  "https://res.cloudinary.com/dkiktv5ur/image/upload/v1735054087/Data_Structures_and_Algorithms_using_Python_-_Part_1_dffssa.png",
-                href: "",
-              },
-              {
-                title: "Data Structures and Algorithms using Python - PART2",
-                organization: "Infosys Springboard",
-                image:
-                  "https://res.cloudinary.com/dkiktv5ur/image/upload/v1735054087/Data_Structures_and_Algorithms_using_Python_-_Part_2_zxolib.png",
-                href: "",
-              },
-            ].map((certificate, index) => (
+            {certificates.map((certificate, index) => (
               <div
                 key={index}
                 className="flex-none w-80 bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1"

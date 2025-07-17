@@ -1,0 +1,16 @@
+[
+  {
+    "id": "1",
+    "title": "Atomic Habits",
+    "author": "James Clear",
+    "cover": "https://images-na.ssl-images-amazon.com/images/I/91bYsX41DVL.jpg",
+    "description": "A practical guide to building good habits and breaking bad ones, with actionable strategies for lasting change.",
+    "category": "Business",
+    "amazonLink": "https://www.amazon.com/Atomic-Habits-Proven-Build-Break/dp/0735211299",
+    "keyPoints": [
+      "Habits are the compound interest of self-improvement",
+      "The 1% Rule: Small changes make a big difference over time",
+      "Four Laws of Behavior Change: Make it obvious, attractive, easy, and satisfying"
+    ]
+  }
+] 

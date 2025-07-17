@@ -1,31 +1,7 @@
 import React, { useState, useEffect } from "react";
 import NavBar from "../Components/NavBar";
 import Loading from '../Components/Loading';
-
-// Enhanced book data structure
-const books = [
-  {
-    id: "1",
-    title: "Atomic Habits",
-    author: "James Clear",
-    cover: "https://images-na.ssl-images-amazon.com/images/I/91bYsX41DVL.jpg",
-    description: "A practical guide to building good habits and breaking bad ones, with actionable strategies for lasting change.",
-    category: "Business",
-    amazonLink: "https://www.amazon.com/Atomic-Habits-Proven-Build-Break/dp/0735211299",
-    keyPoints: [
-      "Habits are the compound interest of self-improvement",
-      "The 1% Rule: Small changes make a big difference over time",
-      "Four Laws of Behavior Change: Make it obvious, attractive, easy, and satisfying",
-    ],
-  },
-];
-
-// Group books by category
-const groupedBooks = books.reduce((acc, book) => {
-  if (!acc[book.category]) acc[book.category] = [];
-  acc[book.category].push(book);
-  return acc;
-}, {});
+import useBooksStore from '../store/zustand/useBooksStore';
 
 function BookDetailsModal({ book, onClose }) {
   return (
@@ -132,6 +108,7 @@ function BookDetailsModal({ book, onClose }) {
 }
 
 function BookshelfPage() {
+  const books = useBooksStore((state) => state.books);
   const [selectedBook, setSelectedBook] = useState(null);
   const [loading, setLoading] = useState(true);
 
@@ -149,6 +126,13 @@ function BookshelfPage() {
   const closeBookDetails = () => {
     setSelectedBook(null);
   };
+
+  // Group books by category
+  const groupedBooks = books.reduce((acc, book) => {
+    if (!acc[book.category]) acc[book.category] = [];
+    acc[book.category].push(book);
+    return acc;
+  }, {});
 
   return (
     <div className="min-h-screen bg-gray-50">

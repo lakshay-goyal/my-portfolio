@@ -1,20 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { FiGithub, FiExternalLink } from 'react-icons/fi';
 import Loading from './Loading';
-
-const majorProjects = [
-  {
-    title: 'Portfolio Website',
-    description: 'A personal portfolio built with React and Tailwind CSS, showcasing my work, skills, and blog.',
-    tech: ['React', 'Tailwind CSS', 'Vite'],
-    image: 'https://res.cloudinary.com/dkiktv5ur/image/upload/v1734670441/ekftfhtrsbueajzfquwn.png',
-    github: 'https://github.com/lakshay-goyal/my-portfolio',
-    live: 'https://lakshay-portfolio-pi.vercel.app/',
-  },
-  // ... other projects remain the same
-];
+import useMajorProjectsStore from '../store/zustand/useMajorProjectsStore';
 
 function MajorProjects() {
+  const majorProjects = useMajorProjectsStore((state) => state.majorProjects);
   const [loading, setLoading] = useState(true);
   useEffect(() => {
     const timer = setTimeout(() => setLoading(false), 600);

@@ -1,0 +1,11 @@
+[
+  {
+    "title": "Attention Is All You Need",
+    "authors": "Ashish Vaswani et al.",
+    "publication": "NeurIPS",
+    "year": 2017,
+    "link": "https://arxiv.org/abs/1706.03762",
+    "description": "Introduced the Transformer architecture, revolutionizing NLP and deep learning.",
+    "category": "AI/ML"
+  }
+] 

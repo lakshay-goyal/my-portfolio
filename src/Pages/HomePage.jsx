@@ -3,13 +3,12 @@ import NavBar from "../Components/NavBar";
 import HeroSection from "../Components/HeroSection";
 import AboutMe from "../Components/AboutMe";
 import Skills from "../Components/Skills";
-import Projects from "../Components/Projects";
 import Achievements from "../Components/Achievements";
 import CollaborativeTool from "../Components/CollaborativeTool";
 import ContactUs from "../Components/ContactUs";
 import Loading from '../Components/Loading';
 import MajorProjects from "../Components/MajorProjects";
-import MiniProjects from '../Components/MiniProjects';
+import ProjectCategory from '../Components/ProjectCategory';
 import Experience from "../Components/Experience";
 
 function HomePage() {
@@ -27,7 +26,7 @@ function HomePage() {
       <Experience />
       <MajorProjects />
       <Skills />
-      <MiniProjects />
+      <ProjectCategory />
       <Achievements />
       <CollaborativeTool />
       <ContactUs />
