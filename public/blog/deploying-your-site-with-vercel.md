@@ -1,6 +1,6 @@
 ---
 title: Deploying Your Site with Vercel
-date: June 3, 2023
+date: July 1, 2023
 image: https://images.unsplash.com/photo-1621839673705-6617adf9e890?q=80&w=1032&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D
 ---
 

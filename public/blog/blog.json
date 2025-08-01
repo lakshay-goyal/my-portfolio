@@ -1,9 +1,9 @@
 {
     "HTML": [
       {
-        "title": "Hello World",
-        "link": "/blog/Hello",
-        "date": "June 3, 20233"
+        "title": "Deploying Your Site with Vercel (Dummy Blog)",
+        "link": "/blog/deploying-your-site-with-vercel",
+        "date": "July 1, 2023"
       }
     ]
   } 

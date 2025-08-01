@@ -1,16 +1,16 @@
 [
   {
     "id": "1",
-    "title": "Atomic Habits",
-    "author": "James Clear",
-    "cover": "https://images-na.ssl-images-amazon.com/images/I/91bYsX41DVL.jpg",
-    "description": "A practical guide to building good habits and breaking bad ones, with actionable strategies for lasting change.",
-    "category": "Business",
-    "amazonLink": "https://www.amazon.com/Atomic-Habits-Proven-Build-Break/dp/0735211299",
+    "title": "Freedom from the Known",
+    "author": "J Krishnamurti",
+    "cover": "https://m.media-amazon.com/images/I/71tAHjMNWUL._SL1169_.jpg",
+    "description": "A profound exploration of the nature of thought and the self.",
+    "category": "Phylosohy",
+    "amazonLink": "https://www.amazon.in/Freedom-Known-J-Krishnamurti-ebook/dp/B003NX6Y6A?ref_=ast_author_mpb",
     "keyPoints": [
-      "Habits are the compound interest of self-improvement",
-      "The 1% Rule: Small changes make a big difference over time",
-      "Four Laws of Behavior Change: Make it obvious, attractive, easy, and satisfying"
+      "Understanding the limitations of thought",
+      "The nature of self and identity",
+      "Breaking free from conditioning"
     ]
   }
 ] 

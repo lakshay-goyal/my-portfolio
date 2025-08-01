@@ -6,5 +6,165 @@
     "image": "https://res.cloudinary.com/dkiktv5ur/image/upload/v1734670441/ekftfhtrsbueajzfquwn.png",
     "github": "https://github.com/lakshay-goyal/my-portfolio",
     "live": "https://lakshay-portfolio-pi.vercel.app/"
+  },
+  {
+    "title": "Restaurant Booking System",
+    "description": "Allows users to book restaurant seats in advance with GPS-based notifications.",
+    "tech": ["NextJS", "Flask", "MySQL"],
+    "image": "https://res.cloudinary.com/dkiktv5ur/image/upload/v1734674355/RestaurantBookingSystemImg_dsmcs4.png",
+    "github": "https://github.com/lakshay-goyal/RestaurantBookingSystem",
+    "live": ""
+  },
+  {
+    "title": "Resume Generator",
+    "description": "A tool to create professional resumes effortlessly.",
+    "tech": ["React"],
+    "image": "https://res.cloudinary.com/dkiktv5ur/image/upload/v1734670439/fb46cirgmckzjlkbyl2i.png",
+    "github": "https://github.com/lakshay-goyal/resume-generator",
+    "live": "https://resume-generator-vert.vercel.app/"
+  },
+  {
+    "title": "DSA Problem Tracker",
+    "description": "Tracks and organizes DSA problems for efficient preparation.",
+    "tech": ["React"],
+    "image": "https://res.cloudinary.com/dkiktv5ur/image/upload/v1734670439/hyvcsz14h1qzb8sr1bun.png",
+    "github": "https://github.com/lakshay-goyal/DSAProblemTracker",
+    "live": "https://dsa-problem-tracker.vercel.app/"
+  },
+  {
+    "title": "Testimonials",
+    "description": "A collection of user testimonials displayed in a beautiful layout.",
+    "tech": ["React"],
+    "image": "https://res.cloudinary.com/dkiktv5ur/image/upload/v1734673902/TestimonialImg_vfedwh.png",
+    "github": "https://github.com/lakshay-goyal/Testimonials",
+    "live": "https://testimonials-umber.vercel.app/"
+  },
+  {
+    "title": "Blogs App",
+    "description": "A full-stack blog application to manage and post blogs.",
+    "tech": ["React"],
+    "image": "https://res.cloudinary.com/dkiktv5ur/image/upload/v1734674095/BlogAppImg_zwi6gm.png",
+    "github": "https://github.com/lakshay-goyal/BlogWebsite",
+    "live": "https://blog-website-six-kohl.vercel.app/"
+  },
+  {
+    "title": "Todo App",
+    "description": "A basic to-do list app with CRUD functionality.",
+    "tech": ["React", "NodeJS", "MongoDB"],
+    "image": "https://res.cloudinary.com/dkiktv5ur/image/upload/v1734670440/jgdgwkbtetgcer71tayx.png",
+    "github": "https://github.com/lakshay-goyal/TodoApp",
+    "live": "https://todoapp-1-g66a.onrender.com/"
+  },
+  {
+    "title": "Shopping Cart",
+    "description": "An e-commerce shopping cart demo.",
+    "tech": ["React"],
+    "image": "https://res.cloudinary.com/dkiktv5ur/image/upload/v1734670438/nrpjodcprlgioxdvnozn.png",
+    "github": "https://github.com/lakshay-goyal/ShoppingCart",
+    "live": "https://shopping-cart-chi-blush.vercel.app/"
+  },
+  {
+    "title": "Random GIF Generator",
+    "description": "Generates random GIFs using an API.",
+    "tech": ["React"],
+    "image": "https://res.cloudinary.com/dkiktv5ur/image/upload/v1734670438/abgnyqragf33oiunkuou.png",
+    "github": "https://github.com/lakshay-goyal/RandomGIF",
+    "live": "https://random-gif-psi-seven.vercel.app/"
+  },
+  {
+    "title": "React Form Demo",
+    "description": "A demonstration of React forms and validation.",
+    "tech": ["React"],
+    "image": "https://res.cloudinary.com/dkiktv5ur/image/upload/v1734670440/gwjcgbkh50qnxpmy83pa.png",
+    "github": "https://github.com/lakshay-goyal/ReactForm",
+    "live": "https://react-form-delta-teal.vercel.app/"
+  },
+  {
+    "title": "Todo",
+    "description": "A Simple Todo Application for maintain all Tasks",
+    "tech": ["HTML", "CSS", "JavaScript"],
+    "image": "https://res.cloudinary.com/dkiktv5ur/image/upload/v1736707316/TodoImg_iwohqx.png",
+    "github": "https://github.com/lakshay-goyal/Todo",
+    "live": "https://lakshay-goyal.github.io/Todo/"
+  },
+  {
+    "title": "TicTacToe Game",
+    "description": "Classic TicTacToe game implemented with JavaScript.",
+    "tech": ["HTML", "CSS", "JavaScript"],
+    "image": "https://res.cloudinary.com/dkiktv5ur/image/upload/v1734670440/bfvhzc4uvvi2dmdgratr.png",
+    "github": "https://github.com/lakshay-goyal/TicTacToe",
+    "live": "https://lakshay-goyal.github.io/TicTacToe/"
+  },
+  {
+    "title": "Weather App",
+    "description": "A weather forecast application built with JavaScript.",
+    "tech": ["HTML", "CSS", "JavaScript"],
+    "image": "https://res.cloudinary.com/dkiktv5ur/image/upload/v1734670447/zy53iwxxo99v6bzul7aw.png",
+    "github": "https://github.com/lakshay-goyal/WeatherApp",
+    "live": "https://lakshay-goyal.github.io/WeatherApp/"
+  },
+  {
+    "title": "Password Generator",
+    "description": "Generates secure random passwords.",
+    "tech": ["HTML", "CSS", "JavaScript"],
+    "image": "https://res.cloudinary.com/dkiktv5ur/image/upload/v1734670438/jmsmho0wlyi2tbznqxzc.png",
+    "github": "https://github.com/lakshay-goyal/PasswordGenerator",
+    "live": "https://lakshay-goyal.github.io/PasswordGenerator/"
+  },
+  {
+    "title": "Discord Clone",
+    "description": "A clone of Discord's interface and basic features.",
+    "tech": ["HTML", "Tailwind CSS"],
+    "image": "https://res.cloudinary.com/dkiktv5ur/image/upload/v1734670436/goxc2ejcvrcfmcmjcujt.png",
+    "github": "https://github.com/lakshay-goyal/DiscordClone",
+    "live": "https://lakshay-goyal.github.io/DiscordClone/"
+  },
+  {
+    "title": "Razorpay Clone",
+    "description": "A clone of the Razorpay payment interface.",
+    "tech": ["HTML", "Tailwind CSS"],
+    "image": "https://res.cloudinary.com/dkiktv5ur/image/upload/v1734670437/q6nzwzrbw8xqbxldq4iw.png",
+    "github": "https://github.com/lakshay-goyal/RazorpayClone",
+    "live": "https://razorpay-clone-gray-two.vercel.app/"
+  },
+  {
+    "title": "Modern Chair",
+    "description": "A modern chair e-commerce website.",
+    "tech": ["HTML", "CSS"],
+    "image": "https://res.cloudinary.com/dkiktv5ur/image/upload/v1735485895/ModernChair_kewiau.png",
+    "github": "https://github.com/lakshay-goyal/ModernChair",
+    "live": "https://lakshay-goyal.github.io/ModernChair/"
+  },
+  {
+    "title": "image Gallery",
+    "description": "A responsive image gallery application.",
+    "tech": ["HTML", "CSS"],
+    "image": "https://res.cloudinary.com/dkiktv5ur/image/upload/v1734670437/gmood0s89fqprxxwmxjf.png",
+    "github": "https://github.com/lakshay-goyal/imageGallery",
+    "live": "https://lakshay-goyal.github.io/imageGallery/"
+  },
+  {
+    "title": "Parallax Website",
+    "description": "A website showcasing parallax scrolling effects.",
+    "tech": ["HTML", "CSS"],
+    "image": "https://res.cloudinary.com/dkiktv5ur/image/upload/v1734670445/zsvhvk9y0pjcmh1q7acd.png",
+    "github": "https://github.com/lakshay-goyal/Parallax_Effect",
+    "live": "https://lakshay-goyal.github.io/Parallax_Effect/"
+  },
+  {
+    "title": "VS Code Clone",
+    "description": "Create a UI clone of the Visual Studio Code (VSCode) Homepage.",
+    "tech": ["HTML", "CSS"],
+    "image": "https://res.cloudinary.com/dkiktv5ur/image/upload/v1735223903/VSCode_Clone_hdcgzm.png",
+    "github": "https://github.com/lakshay-goyal/VSCode_Clone",
+    "live": "https://lakshay-goyal.github.io/VSCode_Clone/"
+  },
+  {
+    "title": "Zerodha Clone",
+    "description": "Create a UI clone of the Zerodha Website Homepage.",
+    "tech": ["HTML", "CSS"],
+    "image": "https://res.cloudinary.com/dkiktv5ur/image/upload/v1735223903/Zerodha_Clone_nejlj8.png",
+    "github": "https://github.com/lakshay-goyal/Zerodha_Clone",
+    "live": "https://lakshay-goyal.github.io/Zerodha_Clone/"
   }
-] 
+]
