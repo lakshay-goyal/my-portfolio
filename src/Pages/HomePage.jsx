@@ -23,8 +23,8 @@ function HomePage() {
       <NavBar />
       <HeroSection />
       <AboutMe />
-      <Experience />
-      <MajorProjects />
+      {/* <Experience /> */}
+      {/* <MajorProjects /> */}
       <Skills />
       <ProjectCategory />
       <Achievements />
