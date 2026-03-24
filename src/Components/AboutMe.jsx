@@ -88,7 +88,6 @@ function AboutMe() {
 
   return (
     <>
-      {/* Previous sections remain the same */}
       <section id="About" className="my-16 px-4 sm:px-8 md:px-16">
         <div className="flex justify-center text-3xl font-semibold mb-8">
           <h2 className="relative">
@@ -104,7 +103,7 @@ function AboutMe() {
 <br /><br />
 Currently, I'm expanding my skill set by learning and building real-world projects in Blockchain and Artificial Intelligence, staying at the forefront of tech advancements. I thrive on solving challenging problems and am driven by a relentless curiosity and a continuous learning mindset.
 </p>
-            
+          </div>
           
           <div className="md:w-1/3 p-4">
             <img
