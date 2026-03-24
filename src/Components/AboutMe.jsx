@@ -1,7 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { X, Play, Pause, Volume2, VolumeX, Maximize2 } from 'lucide-react';
 import Lakshay from '../assets/img/Lakshay.png';
-import Resume from '../assets/pdf/Resume.pdf';
 
 function AboutMe() {
   const [isVideoModalOpen, setIsVideoModalOpen] = useState(false);
@@ -106,24 +105,6 @@ function AboutMe() {
 Currently, I'm expanding my skill set by learning and building real-world projects in Blockchain and Artificial Intelligence, staying at the forefront of tech advancements. I thrive on solving challenging problems and am driven by a relentless curiosity and a continuous learning mindset.
 </p>
             
-            <div className="flex flex-col sm:flex-row gap-4">
-              <a
-                href={Resume}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="px-4 py-2 bg-indigo-500 text-white rounded-md hover:bg-indigo-600 transition-colors text-center"
-              >
-                Written Resume
-              </a>
-              
-              {/* <button
-                onClick={openVideoModal}
-                className="px-4 py-2 border border-indigo-500 text-indigo-500 rounded-md hover:bg-indigo-50 flex items-center justify-center gap-2"
-              >
-                <Play size={20} /> Video Resume
-              </button> */}
-            </div>
-          </div>
           
           <div className="md:w-1/3 p-4">
             <img
