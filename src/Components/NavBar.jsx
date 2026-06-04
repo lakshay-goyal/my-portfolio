@@ -1,5 +1,6 @@
-import { useEffect, useMemo, useState } from "react";
+import { useMemo, useState } from "react";
 import { BookOpen, Github, Home, Layers3, Moon, Newspaper, PackageOpen, Sun } from "lucide-react";
+import useTheme from "./useTheme";
 
 const navLinks = [
   { href: "/", label: "Home", Icon: Home },
@@ -10,13 +11,9 @@ const navLinks = [
 ];
 
 function NavBar() {
-  const [isLight, setIsLight] = useState(false);
+  const { isLight, isTransitioning, toggleTheme } = useTheme();
   const [hoveredIndex, setHoveredIndex] = useState(null);
   const pathname = typeof window === "undefined" ? "/" : window.location.pathname;
-
-  useEffect(() => {
-    document.documentElement.classList.toggle("portfolio-light", isLight);
-  }, [isLight]);
 
   const activePath = useMemo(() => {
     if (pathname.startsWith("/projects")) return "/projects";
@@ -39,10 +36,10 @@ function NavBar() {
         label: isLight ? "Dark mode" : "Light mode",
         Icon: isLight ? Moon : Sun,
         type: "button",
-        onClick: () => setIsLight((value) => !value),
+        onClick: (event) => toggleTheme(event.currentTarget),
       },
     ],
-    [isLight]
+    [isLight, toggleTheme]
   );
 
   const getDockStyle = (index) => {
@@ -99,7 +96,14 @@ function NavBar() {
 
     if (type === "button") {
       return (
-        <button key={label} type="button" onClick={onClick} {...sharedProps}>
+        <button
+          key={label}
+          type="button"
+          onClick={onClick}
+          disabled={isTransitioning}
+          aria-pressed={isLight}
+          {...sharedProps}
+        >
           {content}
         </button>
       );

@@ -1,6 +1,7 @@
 import { lazy, Suspense } from "react";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Loading from "./Components/Loading";
+import { ThemeProvider } from "./Components/ThemeContext";
 
 const HomePage = lazy(() => import("./Pages/HomePage"));
 const ProjectPage = lazy(() => import("./Components/ProjectPage"));
@@ -49,7 +50,11 @@ const router = createBrowserRouter([
 ]);
 
 function App() {
-  return <RouterProvider router={router} />;
+  return (
+    <ThemeProvider>
+      <RouterProvider router={router} />
+    </ThemeProvider>
+  );
 }
 
 export default App;

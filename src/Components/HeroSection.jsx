@@ -11,11 +11,9 @@ import {
   Linkedin,
   Mail,
   MapPin,
-  Moon,
   Newspaper,
   PackageOpen,
   Sparkles,
-  Sun,
   Terminal,
 } from "lucide-react";
 import Lakshay from "../assets/img/Lakshay.png";
@@ -84,12 +82,7 @@ const subtitles = [
 function HeroSection() {
   const [subtitleIndex, setSubtitleIndex] = useState(0);
   const [copied, setCopied] = useState(false);
-  const [isLight, setIsLight] = useState(false);
   const [time, setTime] = useState("");
-
-  useEffect(() => {
-    document.documentElement.classList.toggle("portfolio-light", isLight);
-  }, [isLight]);
 
   useEffect(() => {
     const updateTime = () => {
@@ -155,14 +148,6 @@ function HeroSection() {
           >
             <Github size={15} />
           </a>
-          <button
-            type="button"
-            onClick={() => setIsLight((value) => !value)}
-            className="grid h-8 w-8 place-items-center rounded-md border border-white/15 bg-white/[0.04] text-zinc-400 transition-all duration-200 hover:-translate-y-0.5 hover:border-white/35 hover:text-white"
-            aria-label="Toggle contrast mode"
-          >
-            {isLight ? <Moon size={15} /> : <Sun size={15} />}
-          </button>
         </header>
 
         <div className="relative h-[190px] overflow-hidden border-b border-white/10 sm:h-[242px]">

@@ -2,16 +2,48 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --portfolio-page: #070707;
+  --portfolio-panel: #08090b;
+  --portfolio-panel-strong: #0b0c10;
+  --portfolio-panel-hover: #101318;
+  --portfolio-text: #f4f4f5;
+  --portfolio-heading: #ffffff;
+  --portfolio-muted: #a1a1aa;
+  --portfolio-faint: #52525b;
+  --portfolio-border: rgba(255, 255, 255, 0.1);
+  --portfolio-border-strong: rgba(255, 255, 255, 0.16);
+  --portfolio-soft-fill: rgba(255, 255, 255, 0.04);
+  --portfolio-grid: rgba(255, 255, 255, 0.055);
+  --portfolio-stripe: rgba(255, 255, 255, 0.13);
+}
+
+.portfolio-light {
+  --portfolio-page: #f5f1e8;
+  --portfolio-panel: #fffaf0;
+  --portfolio-panel-strong: #fdf6e8;
+  --portfolio-panel-hover: #f3ead9;
+  --portfolio-text: #18181b;
+  --portfolio-heading: #09090b;
+  --portfolio-muted: #52525b;
+  --portfolio-faint: #71717a;
+  --portfolio-border: rgba(39, 39, 42, 0.14);
+  --portfolio-border-strong: rgba(39, 39, 42, 0.22);
+  --portfolio-soft-fill: rgba(24, 24, 27, 0.045);
+  --portfolio-grid: rgba(24, 24, 27, 0.075);
+  --portfolio-stripe: rgba(24, 24, 27, 0.12);
+}
+
 html {
   scroll-behavior: smooth;
-  background: #08090b;
+  background: var(--portfolio-page);
 }
 
 body {
   margin: 0;
   min-width: 320px;
-  background: #08090b;
-  color: #f4f4f5;
+  background: var(--portfolio-page);
+  color: var(--portfolio-text);
   text-rendering: geometricPrecision;
 }
 
@@ -39,13 +71,148 @@ input:focus-visible {
   outline: 2px solid #6ee7b7;
 }
 
-.portfolio-light body {
-  background: #f4f4f0;
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation: none;
+  mix-blend-mode: normal;
 }
 
-.portfolio-light .bg-\[\#08090b\],
-.portfolio-light .bg-\[\#0b0c10\] {
+html[data-theme-transition="to-light"]::view-transition-old(root),
+html[data-theme-transition="to-dark"]::view-transition-new(root) {
+  z-index: 1;
+}
+
+html[data-theme-transition="to-light"]::view-transition-new(root),
+html[data-theme-transition="to-dark"]::view-transition-old(root) {
+  z-index: 2;
+}
+
+.portfolio-light [class~="bg-[#070707]"],
+.portfolio-light [class~="bg-[#08090b]"],
+.portfolio-light [class~="bg-[#0b0c10]"] {
+  background-color: var(--portfolio-panel);
+}
+
+.portfolio-light [class~="bg-[#070707]/88"],
+.portfolio-light [class~="bg-[#070707]/80"],
+.portfolio-light [class~="bg-[#070707]/90"],
+.portfolio-light [class~="bg-[#08090b]/95"],
+.portfolio-light [class~="bg-[#08090b]/95"] {
+  background-color: rgba(255, 250, 240, 0.92);
+}
+
+.portfolio-light [class~="bg-[#0b0c10]"],
+.portfolio-light [class~="bg-[#0b0c10]/95"] {
+  background-color: var(--portfolio-panel-strong);
+}
+
+.portfolio-light [class~="hover:bg-[#101010]"]:hover,
+.portfolio-light [class~="hover:bg-[#101318]"]:hover {
+  background-color: var(--portfolio-panel-hover);
+}
+
+.portfolio-light [class~="text-white"],
+.portfolio-light [class~="text-zinc-100"],
+.portfolio-light [class~="text-zinc-200"] {
+  color: var(--portfolio-heading);
+}
+
+.portfolio-light [class~="text-zinc-300"],
+.portfolio-light [class~="text-zinc-400"] {
+  color: var(--portfolio-muted);
+}
+
+.portfolio-light [class~="text-zinc-500"],
+.portfolio-light [class~="text-zinc-600"],
+.portfolio-light [class~="text-zinc-700"] {
+  color: var(--portfolio-faint);
+}
+
+.portfolio-light nav [class~="bg-zinc-950"][class~="text-white"],
+.portfolio-light nav [class~="bg-zinc-950"] [class~="text-white"],
+.portfolio-light nav [class~="bg-zinc-950"] {
+  color: #ffffff;
+}
+
+.portfolio-light [class~="border-white/10"],
+.portfolio-light [class~="border-white/15"],
+.portfolio-light [class~="border-white/20"] {
+  border-color: var(--portfolio-border);
+}
+
+.portfolio-light [class~="hover:border-white/25"]:hover,
+.portfolio-light [class~="hover:border-white/35"]:hover {
+  border-color: var(--portfolio-border-strong);
+}
+
+.portfolio-light [class~="bg-white/10"],
+.portfolio-light [class~="bg-white/[0.025]"],
+.portfolio-light [class~="bg-white/[0.035]"],
+.portfolio-light [class~="bg-white/[0.04]"] {
+  background-color: var(--portfolio-soft-fill);
+}
+
+.portfolio-light [class~="hover:bg-white/[0.04]"]:hover,
+.portfolio-light [class~="hover:bg-zinc-950/[0.08]"]:hover {
+  background-color: rgba(24, 24, 27, 0.08);
+}
+
+.portfolio-light a[class~="bg-white"],
+.portfolio-light button[class~="bg-white"] {
   background-color: #111111;
+  color: #ffffff;
+}
+
+.portfolio-light a[class~="hover:bg-zinc-200"]:hover,
+.portfolio-light button[class~="hover:bg-zinc-200"]:hover {
+  background-color: #27272a;
+}
+
+.portfolio-light [class*="bg-[linear-gradient"] {
+  background-image:
+    linear-gradient(var(--portfolio-grid) 1px, transparent 1px),
+    linear-gradient(90deg, var(--portfolio-grid) 1px, transparent 1px);
+}
+
+.portfolio-light [class*="bg-[repeating-linear-gradient"] {
+  background-image: repeating-linear-gradient(135deg, var(--portfolio-stripe) 0, var(--portfolio-stripe) 1px, transparent 1px, transparent 7px);
+}
+
+.portfolio-light [class~="shadow-black/40"],
+.portfolio-light [class~="shadow-black/30"] {
+  --tw-shadow-color: rgba(39, 39, 42, 0.18);
+  --tw-shadow: var(--tw-shadow-colored);
+}
+
+.portfolio-light [class~="bg-black/80"] {
+  background-color: rgba(24, 24, 27, 0.45);
+}
+
+.portfolio-light [class~="bg-black/70"] {
+  background-color: rgba(255, 250, 240, 0.86);
+}
+
+.portfolio-light .prose-invert {
+  --tw-prose-body: #3f3f46;
+  --tw-prose-headings: #09090b;
+  --tw-prose-lead: #52525b;
+  --tw-prose-links: #09090b;
+  --tw-prose-bold: #18181b;
+  --tw-prose-counters: #71717a;
+  --tw-prose-bullets: #a1a1aa;
+  --tw-prose-hr: rgba(39, 39, 42, 0.16);
+  --tw-prose-quotes: #18181b;
+  --tw-prose-quote-borders: rgba(39, 39, 42, 0.22);
+  --tw-prose-captions: #71717a;
+  --tw-prose-code: #18181b;
+  --tw-prose-pre-code: #e4e4e7;
+  --tw-prose-pre-bg: #18181b;
+  --tw-prose-th-borders: rgba(39, 39, 42, 0.22);
+  --tw-prose-td-borders: rgba(39, 39, 42, 0.14);
+}
+
+.portfolio-light .drop-shadow-\[4px_4px_0_rgba\(0\,0\,0\,0\.55\)\] {
+  --tw-drop-shadow: drop-shadow(3px 3px 0 rgba(255, 255, 255, 0.55));
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -56,5 +223,10 @@ input:focus-visible {
     animation-iteration-count: 1 !important;
     scroll-behavior: auto !important;
     transition-duration: 0.01ms !important;
+  }
+
+  ::view-transition-old(root),
+  ::view-transition-new(root) {
+    animation: none !important;
   }
 }
