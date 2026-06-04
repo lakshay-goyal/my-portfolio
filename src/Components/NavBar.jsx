@@ -1,13 +1,11 @@
 import { useMemo, useState } from "react";
-import { BookOpen, Github, Home, Layers3, Moon, Newspaper, PackageOpen, Sun } from "lucide-react";
+import { BookOpen, Github, Home, Moon, PackageOpen, Sun } from "lucide-react";
 import useTheme from "./useTheme";
 
 const navLinks = [
   { href: "/", label: "Home", Icon: Home },
   { href: "/projects", label: "Projects", Icon: PackageOpen },
-  { href: "/blog", label: "Blog", Icon: Newspaper },
   { href: "/bookshelf", label: "Books", Icon: BookOpen },
-  { href: "/papershelf", label: "Papers", Icon: Layers3 },
 ];
 
 function NavBar() {
@@ -17,9 +15,7 @@ function NavBar() {
 
   const activePath = useMemo(() => {
     if (pathname.startsWith("/projects")) return "/projects";
-    if (pathname.startsWith("/blog")) return "/blog";
     if (pathname.startsWith("/bookshelf")) return "/bookshelf";
-    if (pathname.startsWith("/papershelf")) return "/papershelf";
     return "/";
   }, [pathname]);
 

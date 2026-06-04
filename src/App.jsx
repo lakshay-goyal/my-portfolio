@@ -9,7 +9,6 @@ const Projects = lazy(() => import("./Components/Projects"));
 const BlogPage = lazy(() => import("./Pages/BlogPage"));
 const BlogDetailsPage = lazy(() => import("./Pages/BlogDetailsPage"));
 const BookshelfPage = lazy(() => import("./Pages/BookshelfPage"));
-const PaperShelfPage = lazy(() => import("./Pages/PaperShelfPage"));
 const NotFoundPage = lazy(() => import("./Pages/NotFoundPage"));
 
 const withSuspense = (element) => <Suspense fallback={<Loading />}>{element}</Suspense>;
@@ -38,10 +37,6 @@ const router = createBrowserRouter([
   {
     path: "/bookshelf",
     element: withSuspense(<BookshelfPage />)
-  },
-  {
-    path: "/papershelf",
-    element: withSuspense(<PaperShelfPage />)
   },
   {
     path: '*',

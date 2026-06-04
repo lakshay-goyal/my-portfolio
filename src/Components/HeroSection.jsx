@@ -11,10 +11,10 @@ import {
   Linkedin,
   Mail,
   MapPin,
-  Newspaper,
   PackageOpen,
   Sparkles,
   Terminal,
+  Twitter,
 } from "lucide-react";
 import Lakshay from "../assets/img/Lakshay.png";
 import Banner from "../assets/img/developer-pixel-banner.jpg";
@@ -23,7 +23,7 @@ const email = "lakshaygoyal201@gmail.com";
 
 const profileFacts = [
   {
-    value: "Founding Engineer @Fozo",
+    value: "Founding Engineer @ FOZO",
     Icon: Code2,
   },
   {
@@ -39,13 +39,19 @@ const profileFacts = [
   },
   {
     label: "site",
-    value: "lakshay-portfolio-pi.vercel.app",
-    href: "https://lakshay-portfolio-pi.vercel.app/",
+    value: "lakshagoyal.in",
+    href: "https://lakshagoyal.in",
     Icon: Globe2,
   },
 ];
 
 const socialLinks = [
+  {
+    label: "Projects",
+    handle: "Mobile / Web / AI",
+    href: "/projects",
+    Icon: PackageOpen,
+  },
   {
     label: "GitHub",
     handle: "@lakshay-goyal",
@@ -53,22 +59,16 @@ const socialLinks = [
     Icon: Github,
   },
   {
+    label: "X",
+    handle: "@lakshayg2004",
+    href: "https://x.com/lakshayg2004",
+    Icon: Twitter,
+  },
+  {
     label: "LinkedIn",
     handle: "lakshay-goyal",
     href: "https://www.linkedin.com/in/lakshay-goyal-9778a6246/",
     Icon: Linkedin,
-  },
-  {
-    label: "Projects",
-    handle: "web / app / ai",
-    href: "/projects",
-    Icon: PackageOpen,
-  },
-  {
-    label: "Blog",
-    handle: "notes & writing",
-    href: "/blog",
-    Icon: Newspaper,
   },
 ];
 
@@ -128,13 +128,6 @@ function HeroSection() {
         className="relative mx-auto w-full max-w-[768px] border-x border-white/10 bg-[#070707]/88 shadow-2xl shadow-black/40 backdrop-blur"
       >
         <header className="flex h-14 items-center justify-end gap-2 border-y border-white/10 px-3">
-          <a
-            href="/projects"
-            className="grid h-8 w-8 place-items-center rounded-md border border-white/15 bg-white/[0.04] text-zinc-400 transition-all duration-200 hover:-translate-y-0.5 hover:border-white/35 hover:text-white"
-            aria-label="View projects"
-          >
-            <PackageOpen size={15} />
-          </a>
           <button
             type="button"
             onClick={copyEmail}
@@ -144,6 +137,15 @@ function HeroSection() {
             {copied ? "copied" : "copy email"}
           </button>
           <a
+            href="https://www.linkedin.com/in/lakshay-goyal-9778a6246/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="grid h-8 w-8 place-items-center rounded-md border border-white/15 bg-white/[0.04] text-zinc-400 transition-all duration-200 hover:-translate-y-0.5 hover:border-white/35 hover:text-white"
+            aria-label="LinkedIn"
+          >
+            <Linkedin size={15} />
+          </a>
+          <a
             href="https://github.com/lakshay-goyal"
             target="_blank"
             rel="noopener noreferrer"
@@ -152,14 +154,23 @@ function HeroSection() {
           >
             <Github size={15} />
           </a>
+          <a
+            href="https://x.com/lakshayg2004"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="grid h-8 w-8 place-items-center rounded-md border border-white/15 bg-white/[0.04] text-zinc-400 transition-all duration-200 hover:-translate-y-0.5 hover:border-white/35 hover:text-white"
+            aria-label="X"
+          >
+            <Twitter size={15} />
+          </a>
         </header>
 
         <div className="relative h-[190px] overflow-hidden border-b border-white/10 sm:h-[242px]">
           <img src={Banner} alt="" className="h-full w-full object-cover opacity-85 grayscale" />
           <div className="absolute inset-0 bg-gradient-to-t from-[#070707] via-transparent to-black/25" />
           <div className="absolute inset-0 flex items-center justify-center px-4">
-            <h1 className="font-mono text-4xl font-black tracking-[-0.04em] text-white drop-shadow-[4px_4px_0_rgba(0,0,0,0.55)] sm:text-6xl">
-              Dev Profile
+            <h1 className="font-mono text-3xl font-black tracking-[-0.04em] text-white drop-shadow-[4px_4px_0_rgba(0,0,0,0.55)] sm:text-5xl">
+              lakshagoyal.in
             </h1>
           </div>
         </div>
@@ -174,7 +185,7 @@ function HeroSection() {
           </div>
           <div className="grid content-end">
             <div className="border-b border-white/10 px-5 py-4">
-              <p className="font-mono text-xs text-zinc-700">I build systems that scale.</p>
+              <p className="font-mono text-xs text-emerald-300">Building mobile products with clean software.</p>
               <div className="mt-2 flex flex-wrap items-center gap-2">
                 <h2 className="text-3xl font-bold tracking-[-0.03em] text-white">Lakshay Goyal</h2>
                 <span className="grid h-5 w-5 place-items-center rounded-full bg-sky-400 text-[10px] font-black text-black">
@@ -229,7 +240,7 @@ function HeroSection() {
             </span>
             <span>
               <span className="block font-mono text-[11px] uppercase tracking-[0.16em] text-zinc-700">Skills</span>
-              <span className="block text-sm font-semibold text-zinc-100">Software Developer and AI Engineer</span>
+              <span className="block text-sm font-semibold text-zinc-100">Software Development + AI Engineering</span>
             </span>
           </div>
           <div className="flex min-w-0 items-center gap-3 rounded-md px-2 py-2">
@@ -238,7 +249,7 @@ function HeroSection() {
             </span>
             <span>
               <span className="block font-mono text-[11px] uppercase tracking-[0.16em] text-zinc-700">main stack</span>
-              <span className="block text-sm font-semibold text-zinc-100">MERN, NextJS, FastAPI</span>
+              <span className="block text-sm font-semibold text-zinc-100">React Native, Expo, MERN</span>
             </span>
           </div>
         </section>
@@ -269,10 +280,11 @@ function HeroSection() {
         <section className="border-b border-white/10 px-4 py-5 sm:px-5">
           <h3 className="text-2xl font-bold tracking-[-0.03em] text-white">About</h3>
           <p className="mt-4 max-w-2xl font-mono text-sm leading-7 text-zinc-300">
-            I write precise interfaces, connect APIs cleanly, and learn by shipping
-            practical software.
+            I am a React Native mobile developer using Expo, currently working as a
+            Founding Engineer at FOZO in Bangalore. I focus on shipping practical
+            mobile and software products with clear engineering decisions.
           </p>
-          <p className="mt-3 font-mono text-xs text-zinc-600">React / NextJS / Node / FastAPI / AI</p>
+          <p className="mt-3 font-mono text-xs text-zinc-600">React Native / Expo / MERN / DevOps</p>
         </section>
       </motion.section>
     </main>
