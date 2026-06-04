@@ -1,5 +1,5 @@
 import { useMemo, useState } from "react";
-import { BookOpen, Github, Home, Moon, PackageOpen, Sun, UserRound } from "lucide-react";
+import { BookOpen, Github, Home, Linkedin, Moon, PackageOpen, Sun, Twitter, UserRound } from "lucide-react";
 import useTheme from "./useTheme";
 
 const navLinks = [
@@ -17,6 +17,7 @@ function NavBar() {
   const activePath = useMemo(() => {
     if (pathname.startsWith("/projects")) return "/projects";
     if (pathname.startsWith("/bookshelf")) return "/bookshelf";
+    if (pathname.startsWith("/about")) return "/about";
     return "/";
   }, [pathname]);
 
@@ -27,6 +28,18 @@ function NavBar() {
         href: "https://github.com/lakshay-goyal",
         label: "GitHub",
         Icon: Github,
+        type: "external",
+      },
+      {
+        href: "https://www.linkedin.com/in/lakshay-goyal-9778a6246/",
+        label: "LinkedIn",
+        Icon: Linkedin,
+        type: "external",
+      },
+      {
+        href: "https://x.com/lakshayg2004",
+        label: "X",
+        Icon: Twitter,
         type: "external",
       },
       {
