@@ -23,13 +23,12 @@ const email = "lakshaygoyal201@gmail.com";
 
 const profileFacts = [
   {
-    label: "role",
-    value: "Software Developer",
+    value: "Founding Engineer @Fozo",
     Icon: Code2,
   },
   {
     label: "location",
-    value: "Rajasthan, India",
+    value: "Bangalore, India",
     Icon: MapPin,
   },
   {
@@ -75,36 +74,41 @@ const socialLinks = [
 
 const subtitles = [
   "Learning stacks by building",
-  "React, APIs, AI experiments",
-  "Shipping clean product interfaces",
+  "Brainstorm before building.",
+  "Build for users, not engineers.",
 ];
 
 function HeroSection() {
   const [subtitleIndex, setSubtitleIndex] = useState(0);
+  const [streamedSubtitle, setStreamedSubtitle] = useState("");
+  const [isDeletingSubtitle, setIsDeletingSubtitle] = useState(false);
   const [copied, setCopied] = useState(false);
-  const [time, setTime] = useState("");
 
   useEffect(() => {
-    const updateTime = () => {
-      setTime(
-        new Date().toLocaleTimeString("en-IN", {
-          hour: "2-digit",
-          minute: "2-digit",
-          hour12: false,
-        })
-      );
-    };
-    updateTime();
-    const timer = window.setInterval(updateTime, 30000);
-    return () => window.clearInterval(timer);
-  }, []);
+    const currentSubtitle = subtitles[subtitleIndex];
 
-  useEffect(() => {
-    const timer = window.setInterval(() => {
-      setSubtitleIndex((current) => (current + 1) % subtitles.length);
-    }, 2400);
-    return () => window.clearInterval(timer);
-  }, []);
+    if (!isDeletingSubtitle && streamedSubtitle.length === currentSubtitle.length) {
+      const holdTimer = window.setTimeout(() => setIsDeletingSubtitle(true), 1100);
+      return () => window.clearTimeout(holdTimer);
+    }
+
+    if (isDeletingSubtitle && streamedSubtitle.length === 0) {
+      const nextTimer = window.setTimeout(() => {
+        setSubtitleIndex((current) => (current + 1) % subtitles.length);
+        setIsDeletingSubtitle(false);
+      }, 220);
+      return () => window.clearTimeout(nextTimer);
+    }
+
+    const timer = window.setTimeout(() => {
+      setStreamedSubtitle((current) => {
+        if (isDeletingSubtitle) return current.slice(0, -1);
+        return currentSubtitle.slice(0, current.length + 1);
+      });
+    }, isDeletingSubtitle ? 34 : 52);
+
+    return () => window.clearTimeout(timer);
+  }, [isDeletingSubtitle, streamedSubtitle, subtitleIndex]);
 
   const copyEmail = async () => {
     await navigator.clipboard.writeText(email);
@@ -180,7 +184,7 @@ function HeroSection() {
               </div>
             </div>
             <div className="min-h-11 px-5 py-3 font-mono text-base text-zinc-300">
-              {subtitles[subtitleIndex]}
+              {streamedSubtitle}
               <span className="ml-1 inline-block h-5 w-2 translate-y-1 animate-pulse bg-zinc-300" />
             </div>
           </div>
@@ -190,13 +194,14 @@ function HeroSection() {
 
         <section className="grid gap-y-1 border-b border-white/10 px-4 py-5 sm:grid-cols-2 sm:gap-x-14 sm:px-5">
           {profileFacts.map(({ label, value, href, Icon }) => {
+            const factKey = label || value;
             const content = (
               <>
                 <span className="grid h-8 w-8 shrink-0 place-items-center rounded-md border border-white/15 bg-white/[0.04] text-zinc-500">
                   <Icon size={15} />
                 </span>
                 <span className="min-w-0">
-                  <span className="block font-mono text-[11px] uppercase tracking-[0.16em] text-zinc-700">{label}</span>
+                  {label && <span className="block font-mono text-[11px] uppercase tracking-[0.16em] text-zinc-700">{label}</span>}
                   <span className="block truncate text-sm font-semibold text-zinc-100">{value}</span>
                 </span>
               </>
@@ -204,7 +209,7 @@ function HeroSection() {
 
             return href ? (
               <a
-                key={label}
+                key={factKey}
                 href={href}
                 target={href.startsWith("http") ? "_blank" : undefined}
                 rel={href.startsWith("http") ? "noopener noreferrer" : undefined}
@@ -213,7 +218,7 @@ function HeroSection() {
                 {content}
               </a>
             ) : (
-              <div key={label} className="flex min-w-0 items-center gap-3 rounded-md px-2 py-2">
+              <div key={factKey} className="flex min-w-0 items-center gap-3 rounded-md px-2 py-2">
                 {content}
               </div>
             );
@@ -223,8 +228,8 @@ function HeroSection() {
               <Terminal size={15} />
             </span>
             <span>
-              <span className="block font-mono text-[11px] uppercase tracking-[0.16em] text-zinc-700">local time</span>
-              <span className="block text-sm font-semibold text-zinc-100">{time || "--:--"}</span>
+              <span className="block font-mono text-[11px] uppercase tracking-[0.16em] text-zinc-700">Skills</span>
+              <span className="block text-sm font-semibold text-zinc-100">Software Developer and AI Engineer</span>
             </span>
           </div>
           <div className="flex min-w-0 items-center gap-3 rounded-md px-2 py-2">
