@@ -178,17 +178,25 @@ function HeroSection() {
 
         <section className="grid border-b border-white/10 sm:grid-cols-[176px_1fr]">
           <div className="relative flex items-center justify-center border-b border-white/10 p-4 sm:border-b-0 sm:border-r">
-            <img
-              src={Lakshay}
-              alt="Lakshay Goyal"
-              className="-mt-14 h-36 w-36 rounded-full border-4 border-[#070707] object-cover shadow-[0_0_0_1px_rgba(255,255,255,0.18)] sm:-mt-16"
-            />
+            <a
+              href="/about"
+              aria-label="Open Lakshay Goyal's about page"
+              className="-mt-14 rounded-full transition-transform duration-200 hover:-translate-y-1 focus-visible:outline focus-visible:outline-2 focus-visible:outline-emerald-300 sm:-mt-16"
+            >
+              <img
+                src={Lakshay}
+                alt="Lakshay Goyal"
+                className="h-36 w-36 rounded-full border-4 border-[#070707] object-cover shadow-[0_0_0_1px_rgba(255,255,255,0.18)]"
+              />
+            </a>
           </div>
           <div className="grid content-end">
             <div className="border-b border-white/10 px-5 py-4">
               <p className="font-mono text-xs text-emerald-300">Building mobile products with clean software.</p>
               <div className="mt-2 flex flex-wrap items-center gap-2">
-                <h2 className="text-3xl font-bold tracking-[-0.03em] text-white">Lakshay Goyal</h2>
+                <a href="/about" className="group inline-flex items-center gap-2 rounded-md focus-visible:outline focus-visible:outline-2 focus-visible:outline-emerald-300">
+                  <h2 className="text-3xl font-bold tracking-[-0.03em] text-white transition-colors group-hover:text-emerald-100">Lakshay Goyal</h2>
+                </a>
                 <span className="grid h-5 w-5 place-items-center rounded-full bg-sky-400 text-[10px] font-black text-black">
                   <Check size={13} />
                 </span>

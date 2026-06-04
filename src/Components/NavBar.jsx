@@ -1,9 +1,10 @@
 import { useMemo, useState } from "react";
-import { BookOpen, Github, Home, Moon, PackageOpen, Sun } from "lucide-react";
+import { BookOpen, Github, Home, Moon, PackageOpen, Sun, UserRound } from "lucide-react";
 import useTheme from "./useTheme";
 
 const navLinks = [
   { href: "/", label: "Home", Icon: Home },
+  { href: "/about", label: "About", Icon: UserRound },
   { href: "/projects", label: "Projects", Icon: PackageOpen },
   { href: "/bookshelf", label: "Books", Icon: BookOpen },
 ];

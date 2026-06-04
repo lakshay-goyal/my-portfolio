@@ -4,6 +4,7 @@ import Loading from "./Components/Loading";
 import { ThemeProvider } from "./Components/ThemeContext";
 
 const HomePage = lazy(() => import("./Pages/HomePage"));
+const AboutPage = lazy(() => import("./Pages/AboutPage"));
 const ProjectPage = lazy(() => import("./Components/ProjectPage"));
 const Projects = lazy(() => import("./Components/Projects"));
 const BlogPage = lazy(() => import("./Pages/BlogPage"));
@@ -17,6 +18,10 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: withSuspense(<HomePage />)
+  },
+  {
+    path: "/about",
+    element: withSuspense(<AboutPage />)
   },
   {
     path: "/projects",
