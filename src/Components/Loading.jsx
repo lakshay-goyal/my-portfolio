@@ -1,10 +1,8 @@
-import React from 'react';
-
 function Loading() {
   return (
-    <div className="flex flex-col items-center justify-center min-h-[40vh] w-full">
-      <div className="animate-spin rounded-full h-12 w-12 border-t-4 border-b-4 border-indigo-500 mb-4"></div>
-      <span className="text-indigo-700 text-lg font-semibold tracking-wide">Loading...</span>
+    <div className="flex min-h-screen w-full flex-col items-center justify-center bg-[#070707]">
+      <div className="mb-4 h-10 w-10 animate-spin rounded-full border-2 border-white/10 border-t-zinc-200" />
+      <span className="font-mono text-sm tracking-wide text-zinc-500">Loading...</span>
     </div>
   );
 }

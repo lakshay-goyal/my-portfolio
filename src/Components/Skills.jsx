@@ -1,76 +1,80 @@
-import React from 'react';
-import useSkillsStore from '../store/zustand/useSkillsStore';
+import { motion } from "framer-motion";
+import { Brain, Code2, Database, Layers3, Smartphone, Workflow } from "lucide-react";
+import useSkillsStore from "../store/zustand/useSkillsStore";
 
-const SkillCard = ({ title, image, skills }) => (
-  <div className="transform hover:-translate-y-2 transition-all duration-300">
-    <div className="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl p-6">
-      <div className="relative">
-        <div className="aspect-square overflow-hidden rounded-lg mb-6">
-          <img
-            src={image}
-            alt={title}
-            className="w-full h-full object-cover transform hover:scale-105 transition-transform duration-300"
-          />
-        </div>
-        <div className="absolute top-3 right-3">
-          <span className="bg-blue-600 text-white text-xs font-medium px-3 py-1 rounded-full">
-            {title}
-          </span>
-        </div>
-      </div>
-      
-      <div>
-        <h3 className="text-xl font-bold text-gray-800 mb-2">
-          {title}
-          <div className="h-1 w-16 bg-blue-600 rounded-full mt-2 transform origin-left hover:scale-x-150 transition-transform duration-300"></div>
-        </h3>
-        
-        <div className="flex flex-wrap gap-2 mt-4">
-          {skills.split(', ').map((skill, index) => (
-            <span
-              key={index}
-              className="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm font-medium hover:bg-blue-100 hover:text-blue-600 transition-colors duration-200"
-            >
-              {skill}
-            </span>
-          ))}
-        </div>
-      </div>
-    </div>
-  </div>
-);
+const iconMap = {
+  "Web Development": Code2,
+  "App Development": Smartphone,
+  AI: Brain,
+  Blockchain: Workflow,
+};
+
+const supportingSkills = [
+  { label: "API Development", Icon: Layers3 },
+  { label: "Postgres + Prisma", Icon: Database },
+  { label: "FastAPI + Python", Icon: Code2 },
+];
 
 function Skills() {
   const skillsData = useSkillsStore((state) => state.skills);
 
   return (
-    <section className="py-20 bg-gradient-to-b from-gray-50 to-gray-100" id='Skills'>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">
-            My Skills
-          </h2>
-          <div className="relative">
-            <div className="absolute left-1/2 transform -translate-x-1/2">
-              <div className="h-1 w-24 bg-blue-600 rounded-full"></div>
-            </div>
+    <section id="Skills" className="border-b border-white/10 bg-[#08090b] px-4 py-20 sm:px-6">
+      <div className="mx-auto max-w-6xl">
+        <div className="mb-10 grid gap-6 lg:grid-cols-[0.8fr_1.2fr] lg:items-end">
+          <div>
+            <p className="font-mono text-xs uppercase tracking-[0.24em] text-emerald-300">Stack map</p>
+            <h2 className="mt-4 text-3xl font-semibold tracking-tight text-white sm:text-4xl">
+              Tools grouped by how I build.
+            </h2>
           </div>
-          <p className="mt-8 text-xl text-gray-600">
-            Expertise across various technologies and frameworks
-          </p>
+          <div className="grid gap-px overflow-hidden rounded-lg border border-white/10 bg-white/10 sm:grid-cols-3">
+            {supportingSkills.map(({ label, Icon }) => (
+              <div key={label} className="flex items-center gap-3 bg-[#0b0c10] p-4 text-sm text-zinc-400">
+                <span className="grid h-9 w-9 shrink-0 place-items-center rounded-md border border-white/10 bg-white/[0.04] text-emerald-200">
+                  <Icon size={17} />
+                </span>
+                {label}
+              </div>
+            ))}
+          </div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {skillsData.map((skill, index) => (
-            <SkillCard
-              key={index}
-              title={skill.title}
-              image={skill.image}
-              skills={skill.skills}
-            />
-          ))}
-        </div>
+        <div className="grid gap-px overflow-hidden rounded-lg border border-white/10 bg-white/10 md:grid-cols-2 xl:grid-cols-4">
+          {skillsData.map((skill, index) => {
+            const Icon = iconMap[skill.title] || Code2;
+            const items = skill.skills.split(", ");
 
+            return (
+              <motion.div
+                key={skill.title}
+                initial={{ opacity: 0, y: 18 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-120px" }}
+                transition={{ duration: 0.42, delay: index * 0.06 }}
+                className="group bg-[#0b0c10] p-5 transition-colors duration-300 hover:bg-[#101318]"
+              >
+                <div className="mb-6 flex items-center justify-between">
+                  <div className="grid h-11 w-11 place-items-center rounded-md border border-white/10 bg-white/[0.04] text-emerald-200 transition-transform duration-300 group-hover:-translate-y-1">
+                    <Icon size={20} />
+                  </div>
+                  <span className="font-mono text-xs text-zinc-600">0{index + 1}</span>
+                </div>
+                <h3 className="text-lg font-semibold text-white">{skill.title}</h3>
+                <div className="mt-5 flex flex-wrap gap-2">
+                  {items.map((item) => (
+                    <span
+                      key={item}
+                      className="rounded border border-white/10 bg-white/[0.035] px-2.5 py-1.5 font-mono text-[11px] text-zinc-400 transition-colors duration-200 group-hover:border-white/15"
+                    >
+                      {item}
+                    </span>
+                  ))}
+                </div>
+              </motion.div>
+            );
+          })}
+        </div>
       </div>
     </section>
   );

@@ -1,84 +1,99 @@
-import React from "react";
-import Lakshay from '../assets/img/Lakshay.png'
+import { useState } from "react";
+import { CheckCircle2, Copy, Github, Linkedin, Mail, MapPin } from "lucide-react";
+import Lakshay from "../assets/img/Lakshay.png";
+
+const email = "lakshaygoyal201@gmail.com";
 
 function ContactUs() {
+  const [copied, setCopied] = useState(false);
+
+  const copyEmail = async () => {
+    await navigator.clipboard.writeText(email);
+    setCopied(true);
+    window.setTimeout(() => setCopied(false), 1400);
+  };
+
   return (
-    <div>
-      <footer className="bg-footerColor text-white" id="Contact">
-        <div className="flex flex-col justify-around h-full w-full py-8 px-4 lg:flex-row">
-          <div className="flex flex-col items-center space-y-4 lg:flex-row lg:space-x-24">
-            <div className="flex flex-col items-center text-xl font-semibold">
-              <img
-                className="w-24 h-24 rounded-full m-4 object-cover"
-                src={Lakshay}
-                alt="Lakshay Goyal"
-              />
-              <h4>Lakshay Goyal</h4>
-            </div>
-            <div className="flex flex-col items-center lg:items-start">
-              <h6 className="font-semibold">Social Media</h6>
-              <div className="flex space-x-5 mt-2">
+    <footer id="Contact" className="bg-[#08090b] px-4 py-16 text-white sm:px-6">
+      <div className="mx-auto max-w-6xl">
+        <div className="overflow-hidden rounded-lg border border-white/10 bg-white/10">
+          <div className="grid gap-px bg-white/10 lg:grid-cols-[1.2fr_0.8fr]">
+            <div className="bg-[#0b0c10] p-6 sm:p-8">
+              <p className="font-mono text-xs uppercase tracking-[0.24em] text-emerald-300">Contact</p>
+              <h2 className="mt-4 max-w-2xl text-3xl font-semibold tracking-tight text-white sm:text-4xl">
+                Have a role, project, or collaboration in mind?
+              </h2>
+              <p className="mt-5 max-w-xl text-lg leading-8 text-zinc-400">
+                Send me the context and I will respond with the clearest next step.
+              </p>
+
+              <div className="mt-8 flex flex-col gap-3 sm:flex-row">
                 <a
-                  href="https://www.instagram.com/lakshaygoyal529/"
-                  target="_blank"
+                  href={`mailto:${email}`}
+                  className="inline-flex h-12 items-center justify-center gap-2 rounded-md bg-white px-5 text-sm font-semibold text-zinc-950 transition-colors hover:bg-emerald-200"
                 >
-                  <img
-                    src="https://img.freepik.com/free-vector/instagram-logo_1199-122.jpg"
-                    alt="Instagram"
-                    className="w-10 h-10"
-                  />
+                  <Mail size={17} />
+                  Email me
                 </a>
-                <a href="https://x.com/lakshayg2004" target="_blank">
-                  <img
-                    src="https://static.dezeen.com/uploads/2023/07/x-logo-twitter-elon-musk_dezeen_2364_col_0.jpg"
-                    alt="Twitter"
-                    className="w-10 h-10"
-                  />
+                <button
+                  type="button"
+                  onClick={copyEmail}
+                  className="inline-flex h-12 items-center justify-center gap-2 rounded-md border border-white/10 bg-white/[0.04] px-5 text-sm font-semibold text-white transition-all duration-200 hover:border-emerald-300/40"
+                >
+                  {copied ? <CheckCircle2 size={17} /> : <Copy size={17} />}
+                  {copied ? "Copied" : "Copy email"}
+                </button>
+              </div>
+            </div>
+
+            <div className="bg-[#0b0c10] p-6 sm:p-8">
+              <div className="flex items-center gap-4">
+                <img src={Lakshay} alt="Lakshay Goyal" className="h-16 w-16 rounded-lg border border-white/10 object-cover grayscale" />
+                <div>
+                  <h3 className="text-xl font-semibold text-white">Lakshay Goyal</h3>
+                  <p className="mt-1 text-sm text-zinc-500">Software Developer</p>
+                </div>
+              </div>
+
+              <div className="mt-7 space-y-3 text-sm text-zinc-400">
+                <a href={`mailto:${email}`} className="flex items-center gap-3 transition-colors hover:text-white">
+                  <Mail size={16} className="text-emerald-300" />
+                  {email}
+                </a>
+                <p className="flex items-center gap-3">
+                  <MapPin size={16} className="text-emerald-300" />
+                  Rajasthan, India
+                </p>
+              </div>
+
+              <div className="mt-7 flex gap-2">
+                <a
+                  href="https://github.com/lakshay-goyal"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="GitHub"
+                  className="grid h-10 w-10 place-items-center rounded-md border border-white/10 bg-white/[0.04] text-zinc-300 transition-colors hover:border-white/25 hover:text-white"
+                >
+                  <Github size={18} />
                 </a>
                 <a
                   href="https://www.linkedin.com/in/lakshay-goyal-9778a6246/"
                   target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="LinkedIn"
+                  className="grid h-10 w-10 place-items-center rounded-md border border-white/10 bg-white/[0.04] text-zinc-300 transition-colors hover:border-white/25 hover:text-white"
                 >
-                  <img
-                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/LinkedIn_logo_initials.png/480px-LinkedIn_logo_initials.png"
-                    alt="LinkedIn"
-                    className="w-10 h-10"
-                  />
-                </a>
-                <a href="https://github.com/lakshay-goyal" target="_blank">
-                  <img
-                    src="https://i.pinimg.com/originals/b5/1b/78/b51b78ecc9e5711274931774e433b5e6.png"
-                    alt="Github"
-                    className="w-10 h-10"
-                  />
+                  <Linkedin size={18} />
                 </a>
               </div>
-            </div>
-          </div>
-          <div className="flex flex-col items-center lg:flex-row lg:space-x-24 mt-8 lg:mt-0">
-            <div className="flex flex-col space-y-5 lg:items-center">
-              <div className="flex flex-col items-center space-y-2">
-                <h6 className="font-semibold text-center">Email-id:</h6>
-                <a
-                  className="text-white no-underline text-center"
-                  href="mailto:lakshaygoyal201@gmail.com"
-                >
-                  lakshaygoyal201@gmail.com
-                </a>
-              </div>
-            </div>
-            <div className="flex flex-col items-center lg:items-start mt-4 lg:mt-0 text-center lg:text-left">
-              <h6 className="font-semibold">Address:</h6>
-              <p>
-                702-Amethyst, <br />
-                BDI, Sunshine City, <br />
-                Bhiwadi, Rajasthan
-              </p>
             </div>
           </div>
         </div>
-      </footer>
-    </div>
+        <p className="mt-8 text-center font-mono text-xs text-zinc-600">
+          Built with React, Tailwind CSS, Framer Motion and Vite.
+        </p>
+      </div>
+    </footer>
   );
 }
 

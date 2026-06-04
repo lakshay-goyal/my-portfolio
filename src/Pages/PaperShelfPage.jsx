@@ -1,18 +1,20 @@
-import React, { useState, useEffect } from "react";
-import NavBar from "../Components/NavBar";
-import Loading from '../Components/Loading';
-import usePapersStore from '../store/zustand/usePapersStore';
+import { useEffect, useState } from "react";
+import { ArrowUpRight, FileText } from "lucide-react";
+import Loading from "../Components/Loading";
+import RouteShell from "../Components/RouteShell";
+import usePapersStore from "../store/zustand/usePapersStore";
 
 function PaperShelfPage() {
   const papers = usePapersStore((state) => state.papers);
   const [loading, setLoading] = useState(true);
+
   useEffect(() => {
-    const timer = setTimeout(() => setLoading(false), 600); // Simulate loading
+    const timer = setTimeout(() => setLoading(false), 450);
     return () => clearTimeout(timer);
   }, []);
+
   if (loading) return <Loading />;
 
-  // Group papers by category
   const groupedPapers = papers.reduce((acc, paper) => {
     if (!acc[paper.category]) acc[paper.category] = [];
     acc[paper.category].push(paper);
@@ -20,38 +22,52 @@ function PaperShelfPage() {
   }, {});
 
   return (
-    <div className="min-h-screen bg-gray-50">
-      <NavBar />
-      <div className="max-w-4xl mx-auto py-16 px-4 sm:px-6">
-        <h1 className="text-4xl font-bold text-center mb-10 text-indigo-800">PaperShelf</h1>
-        <div className="space-y-12">
-          {Object.entries(groupedPapers).map(([category, papers]) => (
-            <div key={category}>
-              <h2 className="text-2xl font-semibold mb-4 text-indigo-700">{category}</h2>
-              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
-                {papers.map((paper, idx) => (
-                  <div
-                    key={idx}
-                    className="bg-white rounded-lg shadow-md p-6 flex flex-col hover:shadow-lg transition-shadow"
-                  >
-                    <h3 className="text-lg font-semibold mb-2 text-gray-900">
-                      <a href={paper.link} target="_blank" rel="noopener noreferrer" className="hover:underline text-indigo-700">
-                        {paper.title}
-                      </a>
-                    </h3>
-                    <p className="text-gray-600 mb-1 text-sm italic">{paper.authors}</p>
-                    <p className="text-gray-500 mb-1 text-xs">{paper.publication} &bull; {paper.year}</p>
-                    <p className="text-gray-700 text-xs mb-2">{paper.description}</p>
-                    <a href={paper.link} target="_blank" rel="noopener noreferrer" className="text-indigo-500 text-xs hover:underline mt-auto">Read Paper</a>
-                  </div>
-                ))}
-              </div>
+    <RouteShell
+      eyebrow="research shelf"
+      title="PaperShelf"
+      description="Papers and technical references I keep coming back to."
+    >
+      <div className="space-y-5">
+        {Object.entries(groupedPapers).map(([category, categoryPapers]) => (
+          <section key={category} className="overflow-hidden border border-white/10 bg-white/10">
+            <div className="flex items-center justify-between bg-[#08090b]/95 px-4 py-3">
+              <h2 className="font-mono text-xs uppercase tracking-[0.22em] text-zinc-500">{category}</h2>
+              <span className="rounded border border-white/10 px-2 py-1 font-mono text-[11px] text-zinc-600">
+                {categoryPapers.length} papers
+              </span>
             </div>
-          ))}
-        </div>
+            <div className="grid gap-px bg-white/10">
+              {categoryPapers.map((paper) => (
+                <a
+                  key={paper.link}
+                  href={paper.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group flex flex-col gap-4 bg-[#08090b]/95 p-4 transition-colors hover:bg-[#101010] sm:flex-row"
+                >
+                  <span className="grid h-11 w-11 place-items-center rounded-md border border-white/10 bg-white/[0.035] text-zinc-500">
+                    <FileText size={19} />
+                  </span>
+                  <span>
+                    <span className="block text-lg font-bold text-white">{paper.title}</span>
+                    <span className="mt-1 block text-sm italic text-zinc-500">{paper.authors}</span>
+                    <span className="mt-1 block font-mono text-xs text-zinc-600">
+                      {paper.publication} / {paper.year}
+                    </span>
+                    <span className="mt-3 block text-sm leading-6 text-zinc-400">{paper.description}</span>
+                  </span>
+                  <span className="inline-flex items-center gap-2 self-center text-sm font-semibold text-zinc-500 transition-colors group-hover:text-white">
+                    Read
+                    <ArrowUpRight size={15} />
+                  </span>
+                </a>
+              ))}
+            </div>
+          </section>
+        ))}
       </div>
-    </div>
+    </RouteShell>
   );
 }
 
-export default PaperShelfPage; 
+export default PaperShelfPage;

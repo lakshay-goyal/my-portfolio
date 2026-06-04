@@ -1,7 +1,7 @@
 import { create } from 'zustand';
 import collaborativeToolsData from '../data/collaborativeTools.json';
 
-const useCollaborativeToolsStore = create((set) => ({
+const useCollaborativeToolsStore = create(() => ({
   collaborativeTools: collaborativeToolsData,
 }));
 

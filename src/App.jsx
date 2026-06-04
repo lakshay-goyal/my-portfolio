@@ -1,49 +1,50 @@
-import HomePage from "./Pages/HomePage";
-import ProjectPage from "./Components/ProjectPage";
-import {
-  createBrowserRouter,
-  RouterProvider,
-} from "react-router-dom";
-import Projects from './Components/Projects'
-import BlogPage from './Pages/BlogPage'
-import BlogDetailsPage from './Pages/BlogDetailsPage'
-import BookshelfPage from './Pages/BookshelfPage'
-import PaperShelfPage from './Pages/PaperShelfPage'
-import NotFoundPage from './Pages/NotFoundPage';
-import NavBar from "./Components/NavBar";
+import { lazy, Suspense } from "react";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import Loading from "./Components/Loading";
+
+const HomePage = lazy(() => import("./Pages/HomePage"));
+const ProjectPage = lazy(() => import("./Components/ProjectPage"));
+const Projects = lazy(() => import("./Components/Projects"));
+const BlogPage = lazy(() => import("./Pages/BlogPage"));
+const BlogDetailsPage = lazy(() => import("./Pages/BlogDetailsPage"));
+const BookshelfPage = lazy(() => import("./Pages/BookshelfPage"));
+const PaperShelfPage = lazy(() => import("./Pages/PaperShelfPage"));
+const NotFoundPage = lazy(() => import("./Pages/NotFoundPage"));
+
+const withSuspense = (element) => <Suspense fallback={<Loading />}>{element}</Suspense>;
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <HomePage />
+    element: withSuspense(<HomePage />)
   },
   {
     path: "/projects",
-    element: <><NavBar/><Projects /></>
+    element: withSuspense(<Projects />)
   },
   {
     path: "/projects/:category",
-    element: <ProjectPage />
+    element: withSuspense(<ProjectPage />)
   },
   {
     path: "/blog",
-    element: <BlogPage />
+    element: withSuspense(<BlogPage />)
   },
   {
     path: "/blog/:slug",
-    element: <BlogDetailsPage />
+    element: withSuspense(<BlogDetailsPage />)
   },
   {
     path: "/bookshelf",
-    element: <BookshelfPage />
+    element: withSuspense(<BookshelfPage />)
   },
   {
     path: "/papershelf",
-    element: <PaperShelfPage />
+    element: withSuspense(<PaperShelfPage />)
   },
   {
     path: '*',
-    element: <NotFoundPage />
+    element: withSuspense(<NotFoundPage />)
   }
 ]);
 

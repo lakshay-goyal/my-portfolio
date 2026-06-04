@@ -1,4 +1,4 @@
-import React, { useRef, useEffect } from 'react';
+import { useRef, useEffect } from 'react';
 import useExperiencesStore from '../store/zustand/useExperiencesStore';
 
 const pathHeight = 600 + (useExperiencesStore.getState().experiences.length - 1) * 320;

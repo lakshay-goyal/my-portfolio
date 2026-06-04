@@ -1,7 +1,7 @@
 import { create } from 'zustand';
 import experiencesData from '../data/experiences.json';
 
-const useExperiencesStore = create((set) => ({
+const useExperiencesStore = create(() => ({
   experiences: experiencesData,
 }));
 

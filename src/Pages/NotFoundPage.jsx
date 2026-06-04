@@ -1,23 +1,27 @@
-import React from 'react';
 import { useNavigate } from 'react-router-dom';
+import { ArrowLeft, SearchX } from 'lucide-react';
 
 function NotFoundPage() {
   const navigate = useNavigate();
+
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-br from-gray-50 to-indigo-100 px-4">
-      <div className="flex flex-col items-center">
-        <svg className="w-32 h-32 text-indigo-400 mb-6" fill="none" stroke="currentColor" viewBox="0 0 48 48">
-          <circle cx="24" cy="24" r="22" strokeWidth="4" className="text-indigo-200" />
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="3" d="M16 20c0-2.21 3.582-4 8-4s8 1.79 8 4m-8 8v.01" />
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="3" d="M20 32h8" />
-        </svg>
-        <h1 className="text-4xl font-extrabold text-gray-800 mb-2">404 - Not Found</h1>
-        <p className="text-lg text-gray-600 mb-8 text-center max-w-md">Sorry, the page you are looking for does not exist or has been moved.</p>
+    <div className="relative isolate flex min-h-screen items-center justify-center overflow-hidden bg-[#070707] px-4 text-zinc-100">
+      <div className="pointer-events-none absolute inset-0 -z-10 bg-[linear-gradient(rgba(255,255,255,0.055)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.055)_1px,transparent_1px)] bg-[size:64px_64px]" />
+      <div className="w-full max-w-xl border border-white/10 bg-[#070707]/90 p-8 text-center backdrop-blur">
+        <div className="mx-auto grid h-14 w-14 place-items-center rounded-md border border-white/10 bg-white/[0.035] text-zinc-500">
+          <SearchX size={24} />
+        </div>
+        <p className="mt-6 font-mono text-xs uppercase tracking-[0.24em] text-zinc-600">404</p>
+        <h1 className="mt-3 text-4xl font-black tracking-[-0.04em] text-white">Page not found</h1>
+        <p className="mx-auto mt-4 max-w-md font-mono text-sm leading-7 text-zinc-400">
+          The route does not exist or was moved.
+        </p>
         <button
           onClick={() => navigate('/')}
-          className="px-6 py-3 bg-indigo-600 text-white rounded-lg font-medium hover:bg-indigo-700 transition-colors shadow-md hover:shadow-lg"
+          className="mt-7 inline-flex items-center gap-2 rounded-md bg-white px-4 py-3 text-sm font-bold text-zinc-950 transition-colors hover:bg-zinc-200"
         >
-          Go to Homepage
+          <ArrowLeft size={15} />
+          Go home
         </button>
       </div>
     </div>

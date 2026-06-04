@@ -1,7 +1,7 @@
 import { create } from 'zustand';
 import papersData from '../data/papers.json';
 
-const usePapersStore = create((set) => ({
+const usePapersStore = create(() => ({
   papers: papersData,
 }));
 

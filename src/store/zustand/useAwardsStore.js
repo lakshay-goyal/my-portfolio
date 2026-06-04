@@ -1,7 +1,7 @@
 import { create } from 'zustand';
 import awardsData from '../data/awards.json';
 
-const useAwardsStore = create((set) => ({
+const useAwardsStore = create(() => ({
   awards: awardsData,
 }));
 

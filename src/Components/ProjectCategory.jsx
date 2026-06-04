@@ -1,105 +1,83 @@
-import React from 'react';
-import { useNavigate } from 'react-router-dom';
-import { Code, Smartphone, Brain, Shield } from 'lucide-react';
+import { useNavigate } from "react-router-dom";
+import { motion } from "framer-motion";
+import { ArrowRight, Brain, Code, Shield, Smartphone } from "lucide-react";
 
-const ProjectCategory = () => {
+const categories = [
+  {
+    title: "Web Based Projects",
+    description: "React, NextJS, full-stack apps, dashboards, and interactive product surfaces.",
+    icon: Code,
+    category: "web",
+    count: "21 builds",
+  },
+  {
+    title: "Mobile App Projects",
+    description: "React Native projects with API connectivity and app-oriented flows.",
+    icon: Smartphone,
+    category: "app",
+    count: "01 build",
+  },
+  {
+    title: "Artificial Intelligence Projects",
+    description: "Python, FastAPI, ML, NLP, computer vision, GenAI, and agent experiments.",
+    icon: Brain,
+    category: "ai",
+    count: "01 build",
+  },
+  {
+    title: "Blockchain Projects",
+    description: "Fundamentals and experiments across Solana, Ethereum, and decentralized apps.",
+    icon: Shield,
+    category: "blockchain",
+    count: "01 build",
+  },
+];
+
+function ProjectCategory() {
   const navigate = useNavigate();
 
-  const categories = [
-    {
-      id: 1,
-      title: 'Web Based Projects',
-      description: 'Dynamic web applications and responsive websites',
-      icon: Code,
-      category: 'web',
-      gradient: 'from-blue-500 to-purple-600'
-    },
-    {
-      id: 2,
-      title: 'Mobile App Projects',
-      description: 'Cross-platform and native mobile applications',
-      icon: Smartphone,
-      category: 'app',
-      gradient: 'from-green-400 to-teal-500'
-    },
-    {
-      id: 3,
-      title: 'Artificial Intelligence Projects',
-      description: 'AI and data-driven intelligent solutions',
-      icon: Brain,
-      category: 'ai',
-      gradient: 'from-red-500 to-orange-500'
-    },
-    {
-      id: 4,
-      title: 'Blockchain Projects',
-      description: 'Decentralized apps and smart contract solutions',
-      icon: Shield,
-      category: 'blockchain',
-      gradient: 'from-yellow-400 to-yellow-600'
-    }
-  ];
-
-  const handleProjectClick = (category) => {
-    navigate(`/projects/${category}`);
-  };
-
   return (
-    <section id="Project" className="py-16 bg-gray-50">
-      <div className="container mx-auto px-4">
-        <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold text-gray-800 relative inline-block">
-            My Projects
-            <span className="absolute bottom-[-10px] left-0 w-full h-1 bg-indigo-500"></span>
+    <section className="border-b border-white/10 bg-[#0b0c10] px-4 py-20 sm:px-6">
+      <div className="mx-auto max-w-6xl">
+        <div className="mb-10 max-w-3xl">
+          <p className="font-mono text-xs uppercase tracking-[0.24em] text-emerald-300">Build lanes</p>
+          <h2 className="mt-4 text-3xl font-semibold tracking-tight text-white sm:text-4xl">
+            Browse work by engineering direction.
           </h2>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
-          {categories.map((project) => {
-            const IconComponent = project.icon;
-            return (
-              <div 
-                key={project.id}
-                className={`bg-gradient-to-br ${project.gradient} rounded-2xl shadow-lg transform transition-all duration-300 hover:scale-105 hover:shadow-2xl`}
-              >
-                <div className="p-6 text-white flex flex-col h-full">
-                  <div className="flex items-center mb-4">
-                    <div className="bg-white bg-opacity-20 p-3 rounded-full mr-4">
-                      <IconComponent size={36} />
-                    </div>
-                    <h3 className="text-xl font-semibold">{project.title}</h3>
-                  </div>
-                  
-                  <p className="mb-6 text-white text-opacity-80 flex-1">
-                    {project.description}
-                  </p>
-                  
-                  <button
-                    onClick={() => handleProjectClick(project.category)}
-                    className="w-full bg-white text-gray-800 font-bold py-3 rounded-lg hover:bg-gray-100 transition-colors duration-300 flex items-center justify-center mt-auto"
-                  >
-                    View Projects
-                    <svg 
-                      xmlns="http://www.w3.org/2000/svg" 
-                      className="h-5 w-5 ml-2" 
-                      viewBox="0 0 20 20" 
-                      fill="currentColor"
-                    >
-                      <path 
-                        fillRule="evenodd" 
-                        d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" 
-                        clipRule="evenodd" 
-                      />
-                    </svg>
-                  </button>
-                </div>
+        <div className="grid gap-px overflow-hidden rounded-lg border border-white/10 bg-white/10 md:grid-cols-2">
+          {categories.map(({ title, description, icon: Icon, category, count }, index) => (
+            <motion.button
+              key={category}
+              type="button"
+              onClick={() => navigate(`/projects/${category}`)}
+              initial={{ opacity: 0, y: 18 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-120px" }}
+              transition={{ duration: 0.42, delay: index * 0.06 }}
+              className="group min-h-56 bg-[#08090b] p-6 text-left transition-colors duration-300 hover:bg-[#101318]"
+            >
+              <div className="flex items-start justify-between gap-4">
+                <span className="grid h-12 w-12 place-items-center rounded-md border border-white/10 bg-white/[0.04] text-emerald-200 transition-transform duration-300 group-hover:-translate-y-1">
+                  <Icon size={21} />
+                </span>
+                <span className="rounded border border-white/10 px-2 py-1 font-mono text-[11px] text-zinc-500">
+                  {count}
+                </span>
               </div>
-            );
-          })}
+              <h3 className="mt-8 text-xl font-semibold text-white">{title}</h3>
+              <p className="mt-3 max-w-xl text-sm leading-6 text-zinc-500">{description}</p>
+              <span className="mt-7 inline-flex items-center gap-2 text-sm font-semibold text-zinc-300">
+                Open collection
+                <ArrowRight size={16} className="transition-transform duration-200 group-hover:translate-x-1" />
+              </span>
+            </motion.button>
+          ))}
         </div>
       </div>
     </section>
   );
-};
+}
 
-export default ProjectCategory; 
+export default ProjectCategory;

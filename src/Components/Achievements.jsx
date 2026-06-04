@@ -1,278 +1,174 @@
-import React, { useEffect, useRef, useState } from "react";
-import poster_making from "../assets/img/poster_making.jpeg";
-import position_2nd from "../assets/img/2nd_positions.jpeg";
-import { motion, AnimatePresence } from "framer-motion";
-import { IconArrowLeft, IconArrowRight } from "@tabler/icons-react";
-
-// Add CSS modules
-import "./Achievements.css";
-import useCertificatesStore from '../store/zustand/useCertificatesStore';
-import useAwardsStore from '../store/zustand/useAwardsStore';
+import { useEffect, useRef, useState } from "react";
+import { motion } from "framer-motion";
+import { ArrowLeft, ArrowRight, ExternalLink, FileText, Trophy } from "lucide-react";
+import posterMaking from "../assets/img/poster_making.jpeg";
+import positionSecond from "../assets/img/2nd_positions.jpeg";
+import useAwardsStore from "../store/zustand/useAwardsStore";
+import useCertificatesStore from "../store/zustand/useCertificatesStore";
 
 const imageMap = {
-  "poster_making.jpeg": poster_making,
-  "2nd_positions.jpeg": position_2nd,
+  "poster_making.jpeg": posterMaking,
+  "2nd_positions.jpeg": positionSecond,
 };
 
 function Achievements() {
-  const certificatesRef = useRef(null);
-  const scrollInterval = useRef(null);
   const [activeAward, setActiveAward] = useState(0);
+  const certificatesRef = useRef(null);
   const awards = useAwardsStore((state) => state.awards);
-
-  const handleNext = () => {
-    setActiveAward((prev) => (prev + 1) % awards.length);
-  };
-
-  const handlePrev = () => {
-    setActiveAward((prev) => (prev - 1 + awards.length) % awards.length);
-  };
-
-  useEffect(() => {
-    const interval = setInterval(handleNext, 5000);
-    return () => clearInterval(interval);
-  }, []);
-
-  const randomRotateY = () => {
-    return Math.floor(Math.random() * 21) - 10;
-  };
-
-  // Certificates auto-scroll effect
-  useEffect(() => {
-    const startAutoScroll = () => {
-      scrollInterval.current = setInterval(() => {
-        if (certificatesRef.current) {
-          certificatesRef.current.scrollLeft += 1;
-          if (
-            certificatesRef.current.scrollLeft >=
-            certificatesRef.current.scrollWidth - certificatesRef.current.clientWidth
-          ) {
-            certificatesRef.current.scrollLeft = 0;
-          }
-        }
-      }, 20);
-    };
-
-    startAutoScroll();
-
-    return () => {
-      if (scrollInterval.current) {
-        clearInterval(scrollInterval.current);
-      }
-    };
-  }, []);
-
-  const handleMouseEnter = () => {
-    if (scrollInterval.current) {
-      clearInterval(scrollInterval.current);
-    }
-  };
-
-  const handleMouseLeave = () => {
-    const startAutoScroll = () => {
-      scrollInterval.current = setInterval(() => {
-        if (certificatesRef.current) {
-          certificatesRef.current.scrollLeft += 1;
-          if (
-            certificatesRef.current.scrollLeft >=
-            certificatesRef.current.scrollWidth - certificatesRef.current.clientWidth
-          ) {
-            certificatesRef.current.scrollLeft = 0;
-          }
-        }
-      }, 20);
-    };
-    startAutoScroll();
-  };
-
   const certificates = useCertificatesStore((state) => state.certificates);
 
-  return (
-    <div className="min-h-screen bg-gradient-to-b from-gray-50 to-gray-100">
-      <section id="Achievements" className="py-16 px-4 max-w-7xl mx-auto">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-gray-800 relative inline-block">
-            Achievements
-            <div className="absolute bottom-0 left-0 right-0 h-1 bg-blue-600 transform scale-x-0 transition-transform duration-300 hover:scale-x-100"></div>
-          </h2>
-        </div>
+  useEffect(() => {
+    const timer = window.setInterval(() => {
+      setActiveAward((current) => (current + 1) % awards.length);
+    }, 4500);
+    return () => window.clearInterval(timer);
+  }, [awards.length]);
 
-        <div className="mb-16 bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 p-6">
+  const active = awards[activeAward];
+
+  const moveAward = (direction) => {
+    setActiveAward((current) => (current + direction + awards.length) % awards.length);
+  };
+
+  const scrollCertificates = (direction) => {
+    certificatesRef.current?.scrollBy({ left: direction * 340, behavior: "smooth" });
+  };
+
+  return (
+    <section id="Achievements" className="border-b border-white/10 bg-[#08090b] px-4 py-20 sm:px-6">
+      <div className="mx-auto max-w-6xl">
+        <div className="mb-10 flex flex-col justify-between gap-5 md:flex-row md:items-end">
+          <div>
+            <p className="font-mono text-xs uppercase tracking-[0.24em] text-emerald-300">Proof points</p>
+            <h2 className="mt-4 text-3xl font-semibold tracking-tight text-white sm:text-4xl">
+              Recognition, papers, and credentials.
+            </h2>
+          </div>
           <a
             href="https://www.researchgate.net/publication/374505664_Design_of_Language_Translator_Headphone_The_Future_of_Sustainable_Communication"
             target="_blank"
-            className="block group"
             rel="noopener noreferrer"
+            className="group inline-flex items-center gap-2 self-start rounded-md border border-white/10 bg-white/[0.04] px-4 py-3 text-sm font-semibold text-white transition-all duration-200 hover:-translate-y-0.5 hover:border-emerald-300/40"
           >
-            <h4 className="text-xl font-semibold text-blue-600 mb-2 flex items-center">
-              Research Paper
-              <svg
-                className="w-5 h-5 ml-2 opacity-0 group-hover:opacity-100 transition-opacity duration-200"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
-                />
-              </svg>
-            </h4>
-            <p className="text-gray-600 group-hover:text-blue-600 transition-colors duration-200">
-              Design of Language Translator Headphone: The Future of Sustainable
-              Communication
-            </p>
+            <FileText size={16} />
+            Research paper
+            <ExternalLink size={15} className="transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
           </a>
         </div>
 
-        <div className="mb-16">
-          <h4 className="text-xl font-semibold text-blue-600 mb-6">Awards</h4>
-          <div className="relative grid grid-cols-1 gap-8 md:gap-20 md:grid-cols-2">
-            <div className="relative h-[400px] w-full">
-              <AnimatePresence mode="wait">
-                {awards.map((award, index) => (
-                  <motion.div
-                    key={index}
-                    initial={{
-                      opacity: 0,
-                      scale: 0.9,
-                      rotate: randomRotateY(),
-                    }}
-                    animate={{
-                      opacity: index === activeAward ? 1 : 0,
-                      scale: index === activeAward ? 1 : 0.95,
-                      rotate: index === activeAward ? 0 : randomRotateY(),
-                    }}
-                    exit={{
-                      opacity: 0,
-                      scale: 0.9,
-                      rotate: randomRotateY(),
-                    }}
-                    transition={{
-                      duration: 0.4,
-                      ease: "easeInOut",
-                    }}
-                    className="absolute inset-0"
-                  >
-                    <div
-                      className="h-full w-full rounded-3xl bg-cover bg-center"
-                      style={{
-                        backgroundImage: `url(${imageMap[award.image]})`,
-                      }}
-                    >
-                      <div className="absolute inset-0 bg-black bg-opacity-50 transition-opacity duration-300 hover:bg-opacity-40 rounded-3xl">
-                        <div className="absolute inset-0 flex flex-col justify-center items-center p-6 text-white">
-                          <h5 className="text-2xl font-bold mb-3">{award.title}</h5>
-                          <p className="text-center text-lg">{award.description}</p>
-                        </div>
-                      </div>
-                    </div>
-                  </motion.div>
-                ))}
-              </AnimatePresence>
+        <div className="grid gap-px overflow-hidden rounded-lg border border-white/10 bg-white/10 lg:grid-cols-[0.85fr_1.15fr]">
+          <div className="relative min-h-[360px] overflow-hidden bg-[#0b0c10]">
+            {active && (
+              <motion.img
+                key={active.image}
+                src={imageMap[active.image]}
+                alt={active.title}
+                initial={{ opacity: 0, scale: 1.03 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.45 }}
+                className="h-full min-h-[360px] w-full object-cover grayscale"
+              />
+            )}
+            <div className="absolute inset-0 bg-gradient-to-t from-black via-black/35 to-transparent" />
+            <div className="absolute bottom-5 left-5 right-5">
+              <span className="inline-flex items-center gap-2 rounded border border-white/10 bg-black/50 px-2.5 py-1.5 font-mono text-xs text-emerald-200">
+                <Trophy size={14} />
+                award {activeAward + 1}/{awards.length}
+              </span>
             </div>
-            <div className="flex flex-col justify-between py-4">
-              <motion.div
-                key={activeAward}
-                initial={{ y: 20, opacity: 0 }}
-                animate={{ y: 0, opacity: 1 }}
-                exit={{ y: -20, opacity: 0 }}
-                transition={{ duration: 0.2, ease: "easeInOut" }}
-                className="h-full flex flex-col justify-center"
+          </div>
+
+          <div className="flex flex-col justify-between bg-[#0b0c10] p-6">
+            <motion.div
+              key={active?.title}
+              initial={{ opacity: 0, y: 12 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.35 }}
+            >
+              <h3 className="text-2xl font-semibold text-white">{active?.title}</h3>
+              <p className="mt-4 max-w-xl text-lg leading-8 text-zinc-400">{active?.description}</p>
+            </motion.div>
+            <div className="mt-8 flex gap-2">
+              <button
+                type="button"
+                onClick={() => moveAward(-1)}
+                className="grid h-10 w-10 place-items-center rounded-md border border-white/10 bg-white/[0.04] text-zinc-300 transition-colors hover:border-white/25 hover:text-white"
+                aria-label="Previous award"
               >
-                <h3 className="text-2xl font-bold text-gray-800 mb-4">
-                  {awards[activeAward].title}
-                </h3>
-                <motion.p className="text-lg text-gray-600">
-                  {awards[activeAward].description.split(" ").map((word, index) => (
-                    <motion.span
-                      key={index}
-                      initial={{ filter: "blur(10px)", opacity: 0, y: 5 }}
-                      animate={{ filter: "blur(0px)", opacity: 1, y: 0 }}
-                      transition={{
-                        duration: 0.2,
-                        ease: "easeInOut",
-                        delay: 0.02 * index,
-                      }}
-                      className="inline-block"
-                    >
-                      {word}&nbsp;
-                    </motion.span>
-                  ))}
-                </motion.p>
-              </motion.div>
-              <div className="flex gap-4 mt-8">
-                <button
-                  onClick={handlePrev}
-                  className="group/button flex h-10 w-10 items-center justify-center rounded-full bg-gray-100 hover:bg-blue-600 transition-colors duration-300"
-                >
-                  <IconArrowLeft className="h-6 w-6 text-gray-800 group-hover/button:text-white transition-transform duration-300 group-hover/button:rotate-12" />
-                </button>
-                <button
-                  onClick={handleNext}
-                  className="group/button flex h-10 w-10 items-center justify-center rounded-full bg-gray-100 hover:bg-blue-600 transition-colors duration-300"
-                >
-                  <IconArrowRight className="h-6 w-6 text-gray-800 group-hover/button:text-white transition-transform duration-300 group-hover/button:-rotate-12" />
-                </button>
-              </div>
+                <ArrowLeft size={17} />
+              </button>
+              <button
+                type="button"
+                onClick={() => moveAward(1)}
+                className="grid h-10 w-10 place-items-center rounded-md border border-white/10 bg-white/[0.04] text-zinc-300 transition-colors hover:border-white/25 hover:text-white"
+                aria-label="Next award"
+              >
+                <ArrowRight size={17} />
+              </button>
             </div>
           </div>
         </div>
 
-        <div>
-          <h4 className="text-xl font-semibold text-blue-600 mb-6">
-            Certificates
-          </h4>
+        <div className="mt-12">
+          <div className="mb-5 flex items-center justify-between gap-4">
+            <h3 className="text-xl font-semibold text-white">Certificates</h3>
+            <div className="flex gap-2">
+              <button
+                type="button"
+                onClick={() => scrollCertificates(-1)}
+                className="grid h-9 w-9 place-items-center rounded-md border border-white/10 bg-white/[0.04] text-zinc-300 hover:text-white"
+                aria-label="Scroll certificates left"
+              >
+                <ArrowLeft size={16} />
+              </button>
+              <button
+                type="button"
+                onClick={() => scrollCertificates(1)}
+                className="grid h-9 w-9 place-items-center rounded-md border border-white/10 bg-white/[0.04] text-zinc-300 hover:text-white"
+                aria-label="Scroll certificates right"
+              >
+                <ArrowRight size={16} />
+              </button>
+            </div>
+          </div>
+
           <div
             ref={certificatesRef}
-            onMouseEnter={handleMouseEnter}
-            onMouseLeave={handleMouseLeave}
-            className="flex overflow-x-auto gap-8 pb-4 scrollbar-hide"
-            style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
+            className="flex snap-x gap-px overflow-x-auto rounded-lg border border-white/10 bg-white/10"
+            style={{ scrollbarWidth: "none" }}
           >
-            {certificates.map((certificate, index) => (
-              <div
-                key={index}
-                className="flex-none w-80 bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1"
+            {certificates.map((certificate) => (
+              <article
+                key={certificate.title}
+                className="min-w-[290px] snap-start bg-[#0b0c10] p-4 sm:min-w-[340px]"
               >
-                <div className="p-6">
-                  <h2 className="font-bold text-lg text-gray-800 mb-2">
-                    {certificate.title}
-                    <div className="h-1 w-16 bg-blue-600 mt-2 rounded-full"></div>
-                  </h2>
-                  <p className="text-sm text-gray-600 mb-4">
-                    Issued by: {certificate.organization}
-                  </p>
-                  <div className="relative aspect-video mb-4">
-                    <img
-                      src={certificate.image}
-                      alt={certificate.title}
-                      className="w-full h-full object-contain rounded-lg"
-                    />
-                  </div>
-                  {certificate.href === "" ? (
-                    <p></p>
-                  ) : (
-                    <a
-                      href={certificate.href}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-block w-full"
-                    >
-                      <button className="w-full py-2 px-4 bg-gray-100 hover:bg-blue-600 text-gray-800 hover:text-white rounded-lg transition-colors duration-300 font-medium">
-                        View Credential
-                      </button>
-                    </a>
-                  )}
+                <div className="aspect-video overflow-hidden rounded-md border border-white/10 bg-white/[0.03]">
+                  <img
+                    src={certificate.image}
+                    alt={certificate.title}
+                    loading="lazy"
+                    className="h-full w-full object-contain p-3"
+                  />
                 </div>
-              </div>
+                <h4 className="mt-4 line-clamp-2 text-base font-semibold text-white">{certificate.title}</h4>
+                <p className="mt-2 text-sm text-zinc-500">Issued by: {certificate.organization}</p>
+                {certificate.href && (
+                  <a
+                    href={certificate.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-emerald-200 transition-colors hover:text-white"
+                  >
+                    View credential
+                    <ExternalLink size={14} />
+                  </a>
+                )}
+              </article>
             ))}
           </div>
         </div>
-      </section>
-    </div>
+      </div>
+    </section>
   );
 }
 

@@ -1,25 +1,26 @@
-import React, { useState, useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
-import { Code, Smartphone, Brain, Shield } from 'lucide-react';
+import { useState, useEffect } from 'react';
 import MajorProjects from './MajorProjects';
 import Loading from './Loading';
-
-const iconMap = { Code, Smartphone, Brain, Shield };
+import RouteShell from './RouteShell';
 
 const Projects = () => {
   const [loading, setLoading] = useState(true);
-  const navigate = useNavigate();
+
   useEffect(() => {
     const timer = setTimeout(() => setLoading(false), 600);
     return () => clearTimeout(timer);
   }, []);
+
   if (loading) return <Loading />;
-
-  const handleProjectClick = (category) => {
-    navigate(`/projects/${category}`);
-  };
-
-  return <MajorProjects />;
+  return (
+    <RouteShell
+      eyebrow="project index"
+      title="Projects"
+      description="A compact index of shipped experiments, UI builds, full-stack apps, and learning projects."
+    >
+      <MajorProjects />
+    </RouteShell>
+  );
 };
 
 export default Projects;

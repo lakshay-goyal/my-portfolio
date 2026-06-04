@@ -3,24 +3,58 @@
 @tailwind utilities;
 
 html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
+  background: #08090b;
 }
 
-@keyframes blob {
-  0%, 100% { transform: translate(0, 0) scale(1); }
-  25% { transform: translate(20px, -20px) scale(1.1); }
-  50% { transform: translate(-20px, 20px) scale(0.9); }
-  75% { transform: translate(20px, 20px) scale(1.05); }
+body {
+  margin: 0;
+  min-width: 320px;
+  background: #08090b;
+  color: #f4f4f5;
+  text-rendering: geometricPrecision;
 }
 
-.animate-blob {
-  animation: blob 7s infinite;
+body::selection {
+  background: #a7f3d0;
+  color: #09090b;
 }
 
-.animation-delay-2000 {
-  animation-delay: 2s;
+* {
+  box-sizing: border-box;
 }
 
-.animation-delay-4000 {
-  animation-delay: 4s;
+a {
+  text-decoration: none;
+}
+
+button,
+a {
+  outline-offset: 4px;
+}
+
+button:focus-visible,
+a:focus-visible,
+input:focus-visible {
+  outline: 2px solid #6ee7b7;
+}
+
+.portfolio-light body {
+  background: #f4f4f0;
+}
+
+.portfolio-light .bg-\[\#08090b\],
+.portfolio-light .bg-\[\#0b0c10\] {
+  background-color: #111111;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
 }
