@@ -288,14 +288,14 @@ function HeroSection() {
 
         <section className="border-b border-white/10">
           <header className="stack-header-line relative flex h-[60px] items-center overflow-hidden border-b border-white/10 px-4">
-            <h3 className="relative z-10 text-[30px] font-bold tracking-[-0.04em] text-white sm:text-[32px]">About me a bit...</h3>
+            <h3 className="relative z-10 text-[30px] font-bold tracking-[-0.04em] text-white sm:text-[32px]">About me</h3>
           </header>
-          <p className="mt-4 max-w-2xl font-mono text-sm leading-7 text-zinc-300 px-4 sm:px-5">
-            I am a React Native mobile developer using Expo, currently working as a
-            Founding Engineer at FOZO in Bangalore. I focus on shipping practical
-            mobile and software products with clear engineering decisions.
+          <p className="mt-4 max-w-2xl px-4 pb-5 font-mono text-sm leading-7 text-zinc-300 sm:px-5">
+            Hi, I&apos;m Lakshay. I work as a Founding Engineer at FOZO in
+            Bangalore. I like building practical products, understanding the
+            problem before jumping into code, and learning from the small details
+            that show up when people actually use something.
           </p>
-          <p className="mt-3 font-mono text-xs text-zinc-600 p-4 sm:px-5">React Native / Expo / MERN / DevOps</p>
         </section>
 
         <StackSection />
