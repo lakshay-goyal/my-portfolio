@@ -18,6 +18,7 @@ import {
 } from "lucide-react";
 import Lakshay from "../assets/img/Lakshay.png";
 import Banner from "../assets/img/developer-pixel-banner.jpg";
+import StackSection from "./home/StackSection";
 
 const email = "lakshaygoyal201@gmail.com";
 
@@ -39,8 +40,8 @@ const profileFacts = [
   },
   {
     label: "site",
-    value: "lakshagoyal.in",
-    href: "https://lakshagoyal.in",
+    value: "lakshaygoyal.in",
+    href: "https://lakshaygoyal.in",
     Icon: Globe2,
   },
 ];
@@ -170,7 +171,7 @@ function HeroSection() {
           <div className="absolute inset-0 bg-gradient-to-t from-[#070707] via-transparent to-black/25" />
           <div className="absolute inset-0 flex items-center justify-center px-4">
             <h1 className="font-mono text-3xl font-black tracking-[-0.04em] text-white drop-shadow-[4px_4px_0_rgba(0,0,0,0.55)] sm:text-5xl">
-              lakshagoyal.in
+              lakshaygoyal.in
             </h1>
           </div>
         </div>
@@ -277,15 +278,19 @@ function HeroSection() {
           ))}
         </section>
 
-        <section className="border-b border-white/10 px-4 py-5 sm:px-5">
-          <h3 className="text-2xl font-bold tracking-[-0.03em] text-white">About</h3>
-          <p className="mt-4 max-w-2xl font-mono text-sm leading-7 text-zinc-300">
+        <section className="border-b border-white/10">
+          <header className="stack-header-line relative flex h-[60px] items-center overflow-hidden border-b border-white/10 px-4">
+            <h3 className="relative z-10 text-[30px] font-bold tracking-[-0.04em] text-white sm:text-[32px]">About me a bit...</h3>
+          </header>
+          <p className="mt-4 max-w-2xl font-mono text-sm leading-7 text-zinc-300 px-4 sm:px-5">
             I am a React Native mobile developer using Expo, currently working as a
             Founding Engineer at FOZO in Bangalore. I focus on shipping practical
             mobile and software products with clear engineering decisions.
           </p>
-          <p className="mt-3 font-mono text-xs text-zinc-600">React Native / Expo / MERN / DevOps</p>
+          <p className="mt-3 font-mono text-xs text-zinc-600 p-4 sm:px-5">React Native / Expo / MERN / DevOps</p>
         </section>
+
+        <StackSection />
       </motion.section>
     </main>
   );
