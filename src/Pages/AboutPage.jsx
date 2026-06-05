@@ -3,11 +3,9 @@ import { motion } from "framer-motion";
 import {
   ArrowLeft,
   BrainCircuit,
-  Compass,
   Github,
   GraduationCap,
   Layers3,
-  Rocket,
   Sparkles,
 } from "lucide-react";
 import Loading from "../Components/Loading";
@@ -15,6 +13,10 @@ import NavBar from "../Components/NavBar";
 import Lakshay from "../assets/img/Lakshay.png";
 import Banner from "../assets/img/developer-pixel-banner.jpg";
 import TranslatorApp from "../assets/img/LanguageTranslatorApplication.jpg";
+import College from "../assets/img/College.png";
+import Super30 from "../assets/img/Super30.png";
+import Super30Celebration from "../assets/img/Super30-Celebration.png";
+import Bangalore from "../assets/img/Bangalore.png";
 
 const storyBeats = [
   {
@@ -22,7 +24,7 @@ const storyBeats = [
     title: "I started by turning scattered curiosity into a clear learning track.",
     body:
       "First and Second year of college gave me room to choose a direction seriously. I wanted a stack where I could learn by building, measure progress through projects, and keep improving the parts that users actually touch.",
-    image: Banner,
+    image: College,
     imageAlt: "Pixel developer workspace banner",
   },
   {
@@ -42,38 +44,24 @@ const storyBeats = [
   },
   {
     kicker: "Super30",
-    title: "Super30 raised the pace and changed the standard.",
+    title: "Super30 made the learning curve faster and more serious.",
     body:
-      "Getting into Super30 by @kirat_tw put me around people who were serious about building. The room moved fast, so I used that pace as a benchmark and started pushing my projects beyond basic tutorial work.",
-    Icon: GraduationCap,
+      "Getting into Super30 by @kirat_tw put me around people who were serious about building and learning in public. The pace pushed me to pick up new things quickly, ask better questions, and move my projects beyond basic tutorial work.",
+    image: Super30,
   },
   {
-    kicker: "Build phase",
-    title: "The next step was making projects feel less generic and more product-like.",
+    kicker: "Learning phase",
+    title: "The journey became less about one stack and more about engineering depth.",
     body:
-      "I started caring about the parts many beginner projects skip: smoother interfaces, cleaner flows, stronger backend decisions, deployment, and whether the product actually felt good to use. That is where the fun began.",
-    Icon: Rocket,
-  },
-  {
-    kicker: "Level up",
-    title: "MERN opened the door, then everything else started stacking up.",
-    body:
-      "DevOps, AI engineering, system design, real-time systems, and production thinking started becoming part of the same story. It still feels a little magical how much changes when you keep shipping and keep asking why things work.",
-    Icon: Layers3,
-  },
-  {
-    kicker: "Depth",
-    title: "The growth became less about one stack and more about engineering depth.",
-    body:
-      "I started connecting frontend polish with backend structure, DevOps basics, AI workflows, and system design. The goal was not just to make things run, but to understand why they scale, fail, and recover.",
-    Icon: Compass,
+      "During Super30, I started learning the parts many beginner projects skip: cleaner UI flows, stronger backend decisions, deployment, DevOps basics, AI engineering, real-time systems, and system design. Shipping more made me understand why things scale, fail, and recover.",
+    image: Super30Celebration,
   },
   {
     kicker: "Now",
-    title: "FOZO is where that learning now meets real product constraints.",
+    title: "Moving from Delhi to Bangalore brought that learning into real product work.",
     body:
-      "At @getfozo, working with @sumitalk_s, I get to apply that growth in production: cleaner screens, practical engineering choices, and software that has to work for real users, not just demos.",
-    image: Lakshay,
+      "I travelled from Delhi to Bangalore to learn more, explore new opportunities, and put myself closer to serious product work. At @getfozo, working with @sumitalk_s, I get to apply that growth in production: cleaner screens, practical engineering choices, and software that has to work for real users, not just demos.",
+    image: Bangalore,
     imageAlt: "Lakshay Goyal",
   },
 ];
@@ -83,12 +71,12 @@ const tools = ["MERN", "React Native", "Expo", "DevOps", "AI Engineering", "Syst
 function StoryVisual({ beat, index }) {
   if (beat.image) {
     return (
-      <div className={`overflow-hidden rounded-lg border border-white/10 bg-white/[0.035] shadow-2xl shadow-black/30 ${index === storyBeats.length - 1 ? "max-h-[360px]" : ""}`}>
+      <div className={`group overflow-hidden rounded-lg border border-white/10 bg-white/[0.035] shadow-2xl shadow-black/30 ${index === storyBeats.length - 1 ? "max-h-[360px]" : ""}`}>
         <img
           src={beat.image}
           alt={beat.imageAlt}
           loading={index === 0 ? "eager" : "lazy"}
-          className={`h-full min-h-[230px] w-full object-cover grayscale ${beat.image === Lakshay ? "object-[center_22%]" : ""}`}
+          className={`h-full min-h-[230px] w-full object-cover grayscale transition duration-500 ease-out group-hover:scale-105 group-hover:grayscale-0 ${beat.image === Lakshay ? "object-[center_22%]" : ""}`}
         />
       </div>
     );
@@ -182,7 +170,7 @@ function AboutPage() {
               <img
                 src={Lakshay}
                 alt="Lakshay Goyal"
-                className="-mt-10 h-36 w-36 rounded-full border-4 border-[#070707] object-cover object-[center_22%] shadow-[0_0_0_1px_rgba(255,255,255,0.18)] sm:-mt-12"
+                className="-mt-10 h-36 w-36 rounded-full border-4 border-[#070707] object-cover object-[center_22%] shadow-[0_0_0_1px_rgba(255,255,255,0.18)] transition duration-500 ease-out hover:scale-105 sm:-mt-12"
               />
             </div>
             <div className="grid content-center px-5 pb-24 pt-6 sm:py-6">
