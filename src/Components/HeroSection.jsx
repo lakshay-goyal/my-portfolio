@@ -19,6 +19,7 @@ import {
 import Lakshay from "../assets/img/Lakshay.png";
 import Banner from "../assets/img/developer-pixel-banner.jpg";
 import StackSection from "./home/StackSection";
+import MajorProjects from "./MajorProjects";
 
 const email = "lakshaygoyal201@gmail.com";
 
@@ -341,6 +342,15 @@ function HeroSection() {
         </section>
 
         <StackSection />
+
+        <section id="Projects">
+          <header className="stack-header-line relative flex h-[60px] items-center overflow-hidden border-b border-white/10 px-4">
+            <h3 className="relative z-10 text-[30px] font-bold tracking-[-0.04em] text-white sm:text-[32px]">
+              Projects
+            </h3>
+          </header>
+          <MajorProjects />
+        </section>
       </motion.section>
     </main>
   );
