@@ -221,6 +221,16 @@
       "githubLink": "https://github.com/lakshay-goyal/LanguageTranslator",
       "liveLink": "",
       "videoLink": "https://res.cloudinary.com/dkiktv5ur/video/upload/v1734678623/mzbbpuilsl9yxmsapomd.mp4"
+    },
+    {
+      "id": 2,
+      "title": "Exness - Mobile Application",
+      "description": "A CFD trading application demo for cryptocurrency built with React Native and Expo.",
+      "image": "https://res.cloudinary.com/dkiktv5ur/image/upload/v1734670441/ekftfhtrsbueajzfquwn.png",
+      "technologies": ["React Native", "Tailwind CSS", "Expo"],
+      "githubLink": "https://github.com/lakshay-goyal/Exness",
+      "liveLink": "https://exness.lakshaygoyal.in/",
+      "videoLink": "/video/Exness.mp4"
     }
   ],
   "ai": [

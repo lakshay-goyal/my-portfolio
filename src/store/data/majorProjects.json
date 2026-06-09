@@ -1,34 +1,38 @@
 [
   {
     "title": "Unlovable - Application Builder.",
-    "description": "A personal portfolio built with React and Tailwind CSS, showcasing my work, skills, and blog.",
-    "tech": ["React", "Tailwind CSS", "Vite"],
-    "image": "https://res.cloudinary.com/dkiktv5ur/image/upload/v1734670441/ekftfhtrsbueajzfquwn.png",
+    "description": "Built an application builder, where anyone can able to generate an web application using a prompt and creativity.",
+    "tech": ["Turborepo", "Expo", "E2B sandbox", "Redis", "Websocket", "PostgreSQL", "Langchain", "Langgraph", "RAG"],
+    "image": "https://www.lakshaygoyal.in/assets/Lakshay-CPTOL77p.png",
     "github": "https://github.com/lakshay-goyal/Unlovable",
-    "live": "https://unlovable.lakshaygoyal.in/"
+    "live": "https://unlovable.lakshaygoyal.in/",
+    "videoLink": ""
   },
   {
     "title": "Unlovable - Mobile Application.",
-    "description": "A personal portfolio built with React and Tailwind CSS, showcasing my work, skills, and blog.",
-    "tech": ["React Native", "Tailwind CSS", "Vite"],
-    "image": "https://res.cloudinary.com/dkiktv5ur/image/upload/v1734670441/ekftfhtrsbueajzfquwn.png",
+    "description": "Built an Mobile application builder, where anyone can able to generate an mobile application using a prompt and creativity.",
+    "tech": ["React Native", "Expo", "Nativewind", "EAS"],
+    "image": "https://www.lakshaygoyal.in/assets/Lakshay-CPTOL77p.png",
     "github": "https://github.com/lakshay-goyal/Unlovable",
-    "live": "https://unlovable.lakshaygoyal.in/"
+    "live": "https://unlovable.lakshaygoyal.in/",
+    "videoLink": ""
   },
   {
     "title": "Exness - CFD Application.",
     "description": "A CFD application for trade on crypto currencies.",
-    "tech": ["React", "Tailwind CSS", "Vite"],
-    "image": "https://res.cloudinary.com/dkiktv5ur/image/upload/v1734670441/ekftfhtrsbueajzfquwn.png",
+    "tech": ["Turborepo", "Redis", "Pub-Sub", "TimescaleDB", "Websocket", "PostgreSQL"],
+    "image": "/Image/ExnessWeb.png",
     "github": "https://github.com/lakshay-goyal/Exness",
-    "live": "https://exness.lakshaygoyal.in/"
+    "live": "https://exness.lakshaygoyal.in/",
+    "videoLink": "/video/ExnessWeb.mp4"
   },
   {
     "title": "Exness - Mobile Application.",
-    "description": "A personal portfolio built with React and Tailwind CSS, showcasing my work, skills, and blog.",
-    "tech": ["React Native", "Tailwind CSS", "Vite"],
-    "image": "https://res.cloudinary.com/dkiktv5ur/image/upload/v1734670441/ekftfhtrsbueajzfquwn.png",
+    "description": "A CFD Mobile application for trade on crypto currencies.",
+    "tech": ["React Native", "Expo", "Nativewind", "EAS"],
+    "image": "/Image/ExnessMobile.png",
     "github": "https://github.com/lakshay-goyal/Exness",
-    "live": "https://exness.lakshaygoyal.in/"
+    "live": "https://exness.lakshaygoyal.in/",
+    "videoLink": "/video/ExnessMobile.mp4"
   }
 ]
