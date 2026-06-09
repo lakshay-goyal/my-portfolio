@@ -21,57 +21,64 @@ import Bangalore from "../assets/img/Bangalore.png";
 const storyBeats = [
   {
     kicker: "Starting point / Jan 2022 - 2023",
-    title: "I started by turning scattered curiosity into a clear learning track.",
-    body:
-      "First and Second year of college gave me room to choose a direction seriously. I wanted a stack where I could learn by building, measure progress through projects, and keep improving the parts that users actually touch.",
+    title:
+      "I started by turning scattered curiosity into a clear learning track.",
+    body: "First and Second year of college gave me room to choose a direction seriously. I wanted a stack where I could learn by building, measure progress through projects, and keep improving the parts that users actually touch.",
     image: College,
     imageAlt: "Pixel developer workspace banner",
   },
   {
     kicker: "AI foundations",
     title: "I spent serious time with core ML, DL, and the math behind it.",
-    body:
-      "Coming from a commerce background without maths, I had to build the foundation deliberately. I spent most of that phase learning ML and DL concepts, then going back to mathematics from first principles so the models felt understandable instead of magical.",
-    Icon: BrainCircuit,
-  },
-  {
-    kicker: "Mar / Apr 2025",
-    title: "MERN became the stack that turned learning into output.",
-    body:
-      "I switched to MongoDB, Express, React, and Node during my final year. The first one or two projects were honestly generic, but they taught the real basics: auth, APIs, UI state, deployment, and how products behave outside tutorials.",
+    body: "Coming from a commerce background without maths, I had to build the foundation deliberately. I spent most of that phase learning ML and DL concepts, then going back to mathematics from first principles so the models felt understandable instead of magical. And on that journey, Build an language translator Mobile app using local NLP Model in my 1st year of college.",
     image: TranslatorApp,
     imageAlt: "Mobile app project screenshot",
   },
   {
+    kicker: "Mar / Apr 2025",
+    title: "MERN became the stack that turned learning into output.",
+    body: "I switched to MongoDB, Express, React, and Node during my final year. The first one or two projects were honestly generic, but they taught the real basics: auth, APIs, UI state, deployment, and how products behave outside tutorials.",
+
+    Icon: BrainCircuit,
+  },
+  {
     kicker: "Super30",
     title: "Super30 made the learning curve faster and more serious.",
-    body:
-      "Getting into Super30 by @kirat_tw put me around people who were serious about building and learning in public. The pace pushed me to pick up new things quickly, ask better questions, and move my projects beyond basic tutorial work.",
+    body: "Getting into Super30 by @kirat_tw put me around people who were serious about building and learning in public. The pace pushed me to pick up new things quickly, ask better questions, and move my projects beyond basic tutorial work.",
     image: Super30,
   },
   {
     kicker: "Learning phase",
-    title: "The journey became less about one stack and more about engineering depth.",
-    body:
-      "During Super30, I started learning the parts many beginner projects skip: cleaner UI flows, stronger backend decisions, deployment, DevOps basics, AI engineering, real-time systems, and system design. Shipping more made me understand why things scale, fail, and recover.",
+    title:
+      "The journey became less about one stack and more about engineering depth.",
+    body: "During Super30, I started learning the parts many beginner projects skip: cleaner UI flows, stronger backend decisions, deployment, DevOps basics, AI engineering, real-time systems, and system design. Shipping more made me understand why things scale, fail, and recover.",
     image: Super30Celebration,
   },
   {
     kicker: "Now",
-    title: "Moving from Delhi to Bangalore brought that learning into real product work.",
-    body:
-      "I travelled from Delhi to Bangalore to learn more, explore new opportunities, and put myself closer to serious product work. At @getfozo, working with @sumitalk_s, I get to apply that growth in production: cleaner screens, practical engineering choices, and software that has to work for real users, not just demos.",
+    title:
+      "Moving from Delhi to Bangalore brought that learning into real product work.",
+    body: "I travelled from Delhi to Bangalore to learn more, explore new opportunities, and put myself closer to serious product work. At @getfozo, working with @sumitalk_s, I get to apply that growth in production: cleaner screens, practical engineering choices, and software that has to work for real users, not just demos.",
     image: Bangalore,
     imageAlt: "Lakshay Goyal",
   },
 ];
 
-const tools = ["MERN", "React Native", "Expo", "DevOps", "AI Engineering", "System Design"];
+const tools = [
+  "MERN",
+  "React Native",
+  "Expo",
+  "DevOps",
+  "AI Engineering",
+  "System Design",
+];
 
 function StoryVisual({ beat, index }) {
   if (beat.image) {
     return (
-      <div className={`group overflow-hidden rounded-lg border border-white/10 bg-white/[0.035] shadow-2xl shadow-black/30 ${index === storyBeats.length - 1 ? "max-h-[360px]" : ""}`}>
+      <div
+        className={`group overflow-hidden rounded-lg border border-white/10 bg-white/[0.035] shadow-2xl shadow-black/30 ${index === storyBeats.length - 1 ? "max-h-[360px]" : ""}`}
+      >
         <img
           src={beat.image}
           alt={beat.imageAlt}
@@ -100,9 +107,15 @@ function StoryBeat({ beat, index }) {
   return (
     <section className="grid gap-7 border-b border-white/10 px-5 py-12 sm:px-7 md:grid-cols-[0.95fr_1.05fr] md:items-center">
       <div className={`${visualFirst ? "md:order-2" : ""}`}>
-        <p className="font-mono text-[11px] uppercase tracking-[0.22em] text-zinc-600">{beat.kicker}</p>
-        <h2 className="mt-4 text-2xl font-bold tracking-[-0.03em] text-white sm:text-3xl">{beat.title}</h2>
-        <p className="mt-5 font-mono text-sm leading-7 text-zinc-400">{beat.body}</p>
+        <p className="font-mono text-[11px] uppercase tracking-[0.22em] text-zinc-600">
+          {beat.kicker}
+        </p>
+        <h2 className="mt-4 text-2xl font-bold tracking-[-0.03em] text-white sm:text-3xl">
+          {beat.title}
+        </h2>
+        <p className="mt-5 font-mono text-sm leading-7 text-zinc-400">
+          {beat.body}
+        </p>
       </div>
       <StoryVisual beat={beat} index={index} />
     </section>
@@ -174,13 +187,20 @@ function AboutPage() {
               />
             </div>
             <div className="grid content-center px-5 pb-24 pt-6 sm:py-6">
-              <p className="text-base font-bold text-white">Hi, I am Lakshay.</p>
+              <p className="text-base font-bold text-white">
+                Hi, I am Lakshay.
+              </p>
               <p className="mt-3 font-mono text-sm leading-7 text-zinc-400">
-                A developer from India building real products at FOZO. I like interfaces that feel polished, systems that stay understandable, and projects that survive beyond the demo.
+                A developer from India building real products at FOZO. I like
+                interfaces that feel polished, systems that stay understandable,
+                and projects that survive beyond the demo.
               </p>
               <div className="mt-5 flex flex-wrap gap-2">
                 {tools.map((tool) => (
-                  <span key={tool} className="rounded-md border border-white/10 bg-white/[0.035] px-3 py-2 font-mono text-xs text-zinc-300">
+                  <span
+                    key={tool}
+                    className="rounded-md border border-white/10 bg-white/[0.035] px-3 py-2 font-mono text-xs text-zinc-300"
+                  >
                     {tool}
                   </span>
                 ))}
@@ -202,10 +222,16 @@ function AboutPage() {
 
           <section className="px-5 py-12 sm:px-7">
             <div className="max-w-xl">
-              <p className="font-mono text-[11px] uppercase tracking-[0.22em] text-zinc-600">where it leaves me</p>
-              <h2 className="mt-4 text-3xl font-bold tracking-[-0.04em] text-white">Still learning. Still shipping.</h2>
+              <p className="font-mono text-[11px] uppercase tracking-[0.22em] text-zinc-600">
+                where it leaves me
+              </p>
+              <h2 className="mt-4 text-3xl font-bold tracking-[-0.04em] text-white">
+                Still learning. Still shipping.
+              </h2>
               <p className="mt-5 font-mono text-sm leading-7 text-zinc-400">
-                I am not trying to make the journey sound perfectly planned. It was exploration, course correction, fast learning, and a lot of rebuilding. That is also what made the work better.
+                I am not trying to make the journey sound perfectly planned. It
+                was exploration, course correction, fast learning, and a lot of
+                rebuilding. That is also what made the work better.
               </p>
             </div>
           </section>

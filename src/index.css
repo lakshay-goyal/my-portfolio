@@ -67,10 +67,23 @@ a {
     #070707;
 }
 
+.portfolio-light .stack-surface {
+  background:
+    radial-gradient(circle at 15% 20%, rgba(34, 211, 238, 0.06), transparent 26%),
+    radial-gradient(circle at 85% 65%, rgba(16, 185, 129, 0.05), transparent 24%),
+    var(--portfolio-panel);
+}
+
 .stack-header-line {
   background:
     linear-gradient(90deg, rgba(255, 255, 255, 0.035), transparent 48%),
     #070707;
+}
+
+.portfolio-light .stack-header-line {
+  background:
+    linear-gradient(90deg, rgba(24, 24, 27, 0.025), transparent 48%),
+    var(--portfolio-panel);
 }
 
 .stack-header-line::after {
@@ -80,6 +93,10 @@ a {
   opacity: 0.28;
   pointer-events: none;
   position: absolute;
+}
+
+.portfolio-light .stack-header-line::after {
+  background: repeating-linear-gradient(135deg, rgba(24, 24, 27, 0.07) 0, rgba(24, 24, 27, 0.07) 1px, transparent 1px, transparent 8px);
 }
 
 button,

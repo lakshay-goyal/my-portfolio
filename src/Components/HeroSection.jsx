@@ -4,7 +4,7 @@ import {
   ArrowUpRight,
   Check,
   Code2,
-  Copy,
+  FileText,
   Github,
   Globe2,
   Layers3,
@@ -83,13 +83,18 @@ function HeroSection() {
   const [subtitleIndex, setSubtitleIndex] = useState(0);
   const [streamedSubtitle, setStreamedSubtitle] = useState("");
   const [isDeletingSubtitle, setIsDeletingSubtitle] = useState(false);
-  const [copied, setCopied] = useState(false);
 
   useEffect(() => {
     const currentSubtitle = subtitles[subtitleIndex];
 
-    if (!isDeletingSubtitle && streamedSubtitle.length === currentSubtitle.length) {
-      const holdTimer = window.setTimeout(() => setIsDeletingSubtitle(true), 1100);
+    if (
+      !isDeletingSubtitle &&
+      streamedSubtitle.length === currentSubtitle.length
+    ) {
+      const holdTimer = window.setTimeout(
+        () => setIsDeletingSubtitle(true),
+        1100,
+      );
       return () => window.clearTimeout(holdTimer);
     }
 
@@ -101,21 +106,18 @@ function HeroSection() {
       return () => window.clearTimeout(nextTimer);
     }
 
-    const timer = window.setTimeout(() => {
-      setStreamedSubtitle((current) => {
-        if (isDeletingSubtitle) return current.slice(0, -1);
-        return currentSubtitle.slice(0, current.length + 1);
-      });
-    }, isDeletingSubtitle ? 34 : 52);
+    const timer = window.setTimeout(
+      () => {
+        setStreamedSubtitle((current) => {
+          if (isDeletingSubtitle) return current.slice(0, -1);
+          return currentSubtitle.slice(0, current.length + 1);
+        });
+      },
+      isDeletingSubtitle ? 34 : 52,
+    );
 
     return () => window.clearTimeout(timer);
   }, [isDeletingSubtitle, streamedSubtitle, subtitleIndex]);
-
-  const copyEmail = async () => {
-    await navigator.clipboard.writeText(email);
-    setCopied(true);
-    window.setTimeout(() => setCopied(false), 1400);
-  };
 
   return (
     <main className="relative isolate min-h-screen overflow-hidden bg-[#070707] px-3 pb-28 pt-5 sm:px-6 sm:pb-32 sm:pt-8">
@@ -129,22 +131,14 @@ function HeroSection() {
         className="relative mx-auto w-full max-w-[768px] border-x border-white/10 bg-[#070707]/88 shadow-2xl shadow-black/40 backdrop-blur"
       >
         <header className="flex h-14 items-center justify-end gap-2 border-y border-white/10 px-3">
-          <button
-            type="button"
-            onClick={copyEmail}
-            className="inline-flex h-8 items-center gap-2 rounded-md border border-white/15 bg-white/[0.04] px-3 font-mono text-xs text-zinc-400 transition-all duration-200 hover:-translate-y-0.5 hover:border-white/35 hover:text-white"
-          >
-            {copied ? <Check size={14} /> : <Copy size={14} />}
-            {copied ? "copied" : "copy email"}
-          </button>
           <a
-            href="https://www.linkedin.com/in/lakshay-goyal-9778a6246/"
+            href="/Lakshay_Resume.pdf"
             target="_blank"
             rel="noopener noreferrer"
-            className="grid h-8 w-8 place-items-center rounded-md border border-white/15 bg-white/[0.04] text-zinc-400 transition-all duration-200 hover:-translate-y-0.5 hover:border-white/35 hover:text-white"
-            aria-label="LinkedIn"
+            className="inline-flex h-8 items-center gap-2 rounded-md border border-white/15 bg-white/[0.04] px-3 font-mono text-xs text-zinc-400 transition-all duration-200 hover:-translate-y-0.5 hover:border-white/35 hover:text-white"
           >
-            <Linkedin size={15} />
+            <FileText size={14} />
+            Resume
           </a>
           <a
             href="https://github.com/lakshay-goyal"
@@ -164,10 +158,23 @@ function HeroSection() {
           >
             <Twitter size={15} />
           </a>
+          <a
+            href="https://www.linkedin.com/in/lakshay-goyal-9778a6246/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="grid h-8 w-8 place-items-center rounded-md border border-white/15 bg-white/[0.04] text-zinc-400 transition-all duration-200 hover:-translate-y-0.5 hover:border-white/35 hover:text-white"
+            aria-label="LinkedIn"
+          >
+            <Linkedin size={15} />
+          </a>
         </header>
 
         <div className="relative h-[190px] overflow-hidden border-b border-white/10 sm:h-[242px]">
-          <img src={Banner} alt="" className="h-full w-full object-cover opacity-85 grayscale" />
+          <img
+            src={Banner}
+            alt=""
+            className="h-full w-full object-cover opacity-85 grayscale"
+          />
           <div className="absolute inset-0 bg-gradient-to-t from-[#070707] via-transparent to-black/25" />
           <div className="absolute inset-0 flex items-center justify-center px-4">
             <h1 className="font-mono text-3xl font-black tracking-[-0.04em] text-white drop-shadow-[4px_4px_0_rgba(0,0,0,0.55)] sm:text-5xl">
@@ -192,10 +199,17 @@ function HeroSection() {
           </div>
           <div className="grid content-end">
             <div className="border-b border-white/10 px-5 py-4">
-              <p className="font-mono text-xs text-emerald-300">Building mobile products with clean software.</p>
+              <p className="font-mono text-xs text-emerald-300">
+                Building mobile products with clean software.
+              </p>
               <div className="mt-2 flex flex-wrap items-center gap-2">
-                <a href="/about" className="group inline-flex items-center gap-2 rounded-md focus-visible:outline focus-visible:outline-2 focus-visible:outline-emerald-300">
-                  <h2 className="text-3xl font-bold tracking-[-0.03em] text-white transition-colors group-hover:text-emerald-100">Lakshay Goyal</h2>
+                <a
+                  href="/about"
+                  className="group inline-flex items-center gap-2 rounded-md focus-visible:outline focus-visible:outline-2 focus-visible:outline-emerald-300"
+                >
+                  <h2 className="text-3xl font-bold tracking-[-0.03em] text-white transition-colors group-hover:text-emerald-100">
+                    Lakshay Goyal
+                  </h2>
                 </a>
                 <span className="grid h-5 w-5 place-items-center rounded-full bg-sky-400 text-[10px] font-black text-black">
                   <Check size={13} />
@@ -221,8 +235,14 @@ function HeroSection() {
                   <Icon size={15} />
                 </span>
                 <span className="min-w-0">
-                  {label && <span className="block font-mono text-[11px] uppercase tracking-[0.16em] text-zinc-700">{label}</span>}
-                  <span className="block truncate text-sm font-semibold text-zinc-100">{value}</span>
+                  {label && (
+                    <span className="block font-mono text-[11px] uppercase tracking-[0.16em] text-zinc-700">
+                      {label}
+                    </span>
+                  )}
+                  <span className="block truncate text-sm font-semibold text-zinc-100">
+                    {value}
+                  </span>
                 </span>
               </>
             );
@@ -232,13 +252,18 @@ function HeroSection() {
                 key={factKey}
                 href={href}
                 target={href.startsWith("http") ? "_blank" : undefined}
-                rel={href.startsWith("http") ? "noopener noreferrer" : undefined}
+                rel={
+                  href.startsWith("http") ? "noopener noreferrer" : undefined
+                }
                 className="group flex min-w-0 items-center gap-3 rounded-md px-2 py-2 transition-colors hover:bg-white/[0.04]"
               >
                 {content}
               </a>
             ) : (
-              <div key={factKey} className="flex min-w-0 items-center gap-3 rounded-md px-2 py-2">
+              <div
+                key={factKey}
+                className="flex min-w-0 items-center gap-3 rounded-md px-2 py-2"
+              >
                 {content}
               </div>
             );
@@ -248,8 +273,12 @@ function HeroSection() {
               <Terminal size={15} />
             </span>
             <span>
-              <span className="block font-mono text-[11px] uppercase tracking-[0.16em] text-zinc-700">Skills</span>
-              <span className="block text-sm font-semibold text-zinc-100">Software Development + AI Engineering</span>
+              <span className="block font-mono text-[11px] uppercase tracking-[0.16em] text-zinc-700">
+                Skills
+              </span>
+              <span className="block text-sm font-semibold text-zinc-100">
+                Software Development + AI Engineering
+              </span>
             </span>
           </div>
           <div className="flex min-w-0 items-center gap-3 rounded-md px-2 py-2">
@@ -257,8 +286,12 @@ function HeroSection() {
               <Layers3 size={15} />
             </span>
             <span>
-              <span className="block font-mono text-[11px] uppercase tracking-[0.16em] text-zinc-700">main stack</span>
-              <span className="block text-sm font-semibold text-zinc-100">React Native, Expo, MERN</span>
+              <span className="block font-mono text-[11px] uppercase tracking-[0.16em] text-zinc-700">
+                main stack
+              </span>
+              <span className="block text-sm font-semibold text-zinc-100">
+                React Native, Expo, MERN
+              </span>
             </span>
           </div>
         </section>
@@ -278,23 +311,32 @@ function HeroSection() {
                 <Icon size={21} />
               </span>
               <span className="min-w-0 flex-1">
-                <span className="block text-base font-bold text-white">{label}</span>
-                <span className="block truncate font-mono text-xs text-zinc-500">{handle}</span>
+                <span className="block text-base font-bold text-white">
+                  {label}
+                </span>
+                <span className="block truncate font-mono text-xs text-zinc-500">
+                  {handle}
+                </span>
               </span>
-              <ArrowUpRight size={15} className="text-zinc-600 transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 group-hover:text-white" />
+              <ArrowUpRight
+                size={15}
+                className="text-zinc-600 transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 group-hover:text-white"
+              />
             </a>
           ))}
         </section>
 
         <section className="border-b border-white/10">
           <header className="stack-header-line relative flex h-[60px] items-center overflow-hidden border-b border-white/10 px-4">
-            <h3 className="relative z-10 text-[30px] font-bold tracking-[-0.04em] text-white sm:text-[32px]">About me</h3>
+            <h3 className="relative z-10 text-[30px] font-bold tracking-[-0.04em] text-white sm:text-[32px]">
+              About me
+            </h3>
           </header>
           <p className="mt-4 max-w-2xl px-4 pb-5 font-mono text-sm leading-7 text-zinc-300 sm:px-5">
             Hi, I&apos;m Lakshay. I work as a Founding Engineer at FOZO in
             Bangalore. I like building practical products, understanding the
-            problem before jumping into code, and learning from the small details
-            that show up when people actually use something.
+            problem before jumping into code, and learning from the small
+            details that show up when people actually use something.
           </p>
         </section>
 

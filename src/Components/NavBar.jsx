@@ -1,5 +1,5 @@
 import { useMemo, useState } from "react";
-import { BookOpen, Github, Home, Linkedin, Moon, PackageOpen, Sun, Twitter, UserRound } from "lucide-react";
+import { BookOpen, Github, Home, Linkedin, Moon, PackageOpen, Sun, Twitter, UserRound, FileText } from "lucide-react";
 import useTheme from "./useTheme";
 
 const navLinks = [
@@ -40,6 +40,12 @@ function NavBar() {
         href: "https://x.com/lakshayg2004",
         label: "X",
         Icon: Twitter,
+        type: "external",
+      },
+      {
+        href: "/Lakshay_Resume.pdf",
+        label: "Resume",
+        Icon: FileText,
         type: "external",
       },
       {
