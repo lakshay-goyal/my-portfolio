@@ -12,3 +12,8 @@ output "website_url" {
   description = "The website URL for the deployed portfolio"
   value       = "https://${aws_cloudfront_distribution.cdn.domain_name}"
 }
+
+output "cloudfront_distribution_id" {
+  description = "The ID of the CloudFront distribution"
+  value       = aws_cloudfront_distribution.cdn.id
+}

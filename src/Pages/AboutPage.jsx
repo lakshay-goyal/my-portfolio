@@ -4,14 +4,12 @@ import {
   ArrowLeft,
   BrainCircuit,
   Github,
-  GraduationCap,
-  Layers3,
   Sparkles,
 } from "lucide-react";
 import Loading from "../Components/Loading";
 import NavBar from "../Components/NavBar";
 import Lakshay from "../assets/img/Lakshay.png";
-import Banner from "../assets/img/developer-pixel-banner.jpg";
+
 import TranslatorApp from "../assets/img/LanguageTranslatorApplication.jpg";
 import College from "../assets/img/College.png";
 import Super30 from "../assets/img/Super30.png";
