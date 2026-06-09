@@ -22,3 +22,13 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+.env
+
+# Agent directories
+.agents/
+
+# Terraform
+.terraform/
+*.tfstate
+*.tfstate.*
+*.tfstate.lock.info
