@@ -58,3 +58,35 @@ jobs:
           echo "Invalidating CloudFront Distribution ID: $DIST_ID"
           aws cloudfront create-invalidation --distribution-id "$DIST_ID" --paths "/*"
         working-directory: terraform
+
+      - name: Sync Hostinger DNS to CloudFront (domain auto-connect)
+        if: ${{ secrets.HOSTINGER_API_TOKEN != '' }}
+        env:
+          HOSTINGER_API_TOKEN: ${{ secrets.HOSTINGER_API_TOKEN }}
+          DOMAIN: lakshaygoyal.in
+        run: |
+          CDN_DOMAIN=$(terraform output -raw cloudfront_domain_name)
+          echo "Pointing $DOMAIN at $CDN_DOMAIN"
+
+          # Upsert apex ALIAS and www CNAME. overwrite=true only replaces records
+          # matching the same name AND type, so other records (subdomains, ACM
+          # validation CNAMEs) are left untouched.
+          curl -sf -X PUT "https://developers.hostinger.com/api/dns/v1/zones/$DOMAIN" \
+            -H "Authorization: Bearer $HOSTINGER_API_TOKEN" \
+            -H "Content-Type: application/json" \
+            -d "{
+              \"overwrite\": true,
+              \"zone\": [
+                {\"name\": \"@\",   \"type\": \"ALIAS\", \"ttl\": 300, \"records\": [{\"content\": \"$CDN_DOMAIN.\"}]},
+                {\"name\": \"www\", \"type\": \"CNAME\", \"ttl\": 300, \"records\": [{\"content\": \"$CDN_DOMAIN.\"}]}
+              ]
+            }"
+
+          # Remove any stale apex A record that would shadow the ALIAS.
+          curl -sf -X DELETE "https://developers.hostinger.com/api/dns/v1/zones/$DOMAIN" \
+            -H "Authorization: Bearer $HOSTINGER_API_TOKEN" \
+            -H "Content-Type: application/json" \
+            -d '{"filters":[{"name":"@","type":"A"}]}' || true
+
+          echo "DNS sync complete"
+        working-directory: terraform

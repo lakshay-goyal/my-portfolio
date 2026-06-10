@@ -26,6 +26,7 @@ const email = "lakshaygoyal201@gmail.com";
 const profileFacts = [
   {
     value: "Founding Engineer @ FOZO",
+    href: "https://getfozo.in",
     Icon: Code2,
   },
   {

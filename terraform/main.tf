@@ -63,6 +63,32 @@ data "aws_iam_policy_document" "s3_policy" {
 
 
 # ----------------------------------------------------
+# 2. ACM Certificate for Custom Domain (must live in us-east-1 for CloudFront)
+# ----------------------------------------------------
+resource "aws_acm_certificate" "cert" {
+  provider                  = aws.us-east-1
+  domain_name               = var.domain_name
+  subject_alternative_names = ["www.${var.domain_name}"]
+  validation_method         = "DNS"
+
+  lifecycle {
+    create_before_destroy = true
+  }
+}
+
+# Waits until the certificate is ISSUED. DNS validation CNAME records are
+# managed in Hostinger (the domain registrar), not in Route53, so they must
+# exist in the Hostinger DNS zone before this resource can complete.
+resource "aws_acm_certificate_validation" "cert" {
+  provider        = aws.us-east-1
+  certificate_arn = aws_acm_certificate.cert.arn
+
+  timeouts {
+    create = "30m"
+  }
+}
+
+# ----------------------------------------------------
 # 3. CloudFront CDN
 # ----------------------------------------------------
 resource "aws_cloudfront_origin_access_control" "oac" {
@@ -83,6 +109,8 @@ resource "aws_cloudfront_distribution" "cdn" {
   enabled             = true
   is_ipv6_enabled     = true
   default_root_object = "index.html"
+
+  aliases = [var.domain_name, "www.${var.domain_name}"]
 
   default_cache_behavior {
     allowed_methods  = ["GET", "HEAD", "OPTIONS"]
@@ -128,7 +156,9 @@ resource "aws_cloudfront_distribution" "cdn" {
   }
 
   viewer_certificate {
-    cloudfront_default_certificate = true
+    acm_certificate_arn      = aws_acm_certificate_validation.cert.certificate_arn
+    ssl_support_method       = "sni-only"
+    minimum_protocol_version = "TLSv1.2_2021"
   }
 }
 
