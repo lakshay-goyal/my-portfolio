@@ -102,15 +102,17 @@ function ProjectCard({ project, index, onVideoClick }) {
               Preview
             </button>
           )}
-          <a
-            href={project.githubLink}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex flex-1 items-center justify-center gap-2 rounded-md border border-white/10 px-3 py-2 text-xs text-zinc-300 transition-colors hover:border-white/25 hover:text-white"
-          >
-            <Github size={14} />
-            Source
-          </a>
+          {project.githubLink && (
+            <a
+              href={project.githubLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex flex-1 items-center justify-center gap-2 rounded-md border border-white/10 px-3 py-2 text-xs text-zinc-300 transition-colors hover:border-white/25 hover:text-white"
+            >
+              <Github size={14} />
+              Source
+            </a>
+          )}
           {project.liveLink && (
             <a
               href={project.liveLink}

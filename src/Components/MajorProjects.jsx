@@ -76,15 +76,17 @@ function MajorProjectCard({ project, index, onVideoClick }) {
 
         {/* Action Buttons */}
         <div className="mt-5 flex gap-2">
-          <a
-            href={project.github}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex flex-1 items-center justify-center gap-2 rounded-md border border-white/10 px-3 py-2 text-xs text-zinc-300 transition-colors hover:border-white/25 hover:text-white"
-          >
-            <Github size={14} />
-            Source
-          </a>
+          {project.github && (
+            <a
+              href={project.github}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex flex-1 items-center justify-center gap-2 rounded-md border border-white/10 px-3 py-2 text-xs text-zinc-300 transition-colors hover:border-white/25 hover:text-white"
+            >
+              <Github size={14} />
+              Source
+            </a>
+          )}
           {project.live && (
             <a
               href={project.live}

@@ -29,18 +29,21 @@ function NavBar() {
         label: "GitHub",
         Icon: Github,
         type: "external",
+        social: true,
       },
       {
         href: "https://www.linkedin.com/in/lakshay-goyal-9778a6246/",
         label: "LinkedIn",
         Icon: Linkedin,
         type: "external",
+        social: true,
       },
       {
         href: "https://x.com/lakshayg2004",
         label: "X",
         Icon: Twitter,
         type: "external",
+        social: true,
       },
       {
         href: "/Lakshay_Resume.pdf",
@@ -80,9 +83,9 @@ function NavBar() {
   const groupGap = hoveredIndex === null ? "0.25rem" : "0.44rem";
 
   const renderDockItem = (item, index) => {
-    const { href, label, Icon, type, onClick } = item;
+    const { href, label, Icon, type, onClick, social } = item;
     const isActive = type === "route" && activePath === href;
-    const sharedClassName = `relative grid h-10 w-10 place-items-center rounded-full transition-[transform,background-color,color,box-shadow] duration-200 ease-out will-change-transform sm:h-11 sm:w-11 ${
+    const sharedClassName = `relative ${social ? "hidden sm:grid" : "grid"} h-10 w-10 place-items-center rounded-full transition-[transform,background-color,color,box-shadow] duration-200 ease-out will-change-transform sm:h-11 sm:w-11 ${
       isActive
         ? "bg-zinc-950 text-white shadow-[0_10px_24px_rgba(0,0,0,0.22)]"
         : "text-zinc-950 hover:bg-zinc-950/[0.08]"
