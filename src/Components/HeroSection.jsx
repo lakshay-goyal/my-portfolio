@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import {
   ArrowUpRight,
+  CalendarClock,
   Check,
   Code2,
   FileText,
@@ -19,6 +20,7 @@ import {
 import Lakshay from "../assets/img/Lakshay.png";
 import Banner from "../assets/img/developer-pixel-banner.jpg";
 import StackSection from "./home/StackSection";
+import ExperienceSection from "./home/ExperienceSection";
 import MajorProjects from "./MajorProjects";
 
 const email = "lakshaygoyal201@gmail.com";
@@ -133,6 +135,15 @@ function HeroSection() {
         className="relative mx-auto w-full max-w-[768px] border-x border-white/10 bg-[#070707]/88 shadow-2xl shadow-black/40 backdrop-blur"
       >
         <header className="flex h-14 items-center justify-end gap-2 border-y border-white/10 px-3">
+          <a
+            href="https://cal.com/lakshay-goyal/30min?overlayCalendar=true"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex h-8 items-center gap-2 rounded-md border border-emerald-300/40 bg-emerald-300/[0.08] px-3 font-mono text-xs text-emerald-300 transition-all duration-200 hover:-translate-y-0.5 hover:border-emerald-300/70 hover:text-emerald-200"
+          >
+            <CalendarClock size={14} />
+            Book a call
+          </a>
           <a
             href="/Lakshay_Resume.pdf"
             target="_blank"
@@ -341,6 +352,8 @@ function HeroSection() {
             details that show up when people actually use something.
           </p>
         </section>
+
+        <ExperienceSection />
 
         <StackSection />
 

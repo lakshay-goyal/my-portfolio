@@ -1,36 +1,28 @@
 [
   {
-    "company": "Tech Innovators Inc.",
-    "logo": "https://img.icons8.com/color/48/000000/company.png",
-    "role": "Senior Software Engineer",
-    "period": "Jul 2022 - Present",
-    "location": "Gurgaon, India",
+    "company": "FOZO",
+    "url": "https://getfozo.in",
+    "role": "Founding Engineer",
+    "period": "Dec 2025 — Present",
+    "location": "Bangalore, India",
+    "summary": "Owning development and operations end to end for a surplus food delivery platform — from architecture decisions to production deployment.",
     "highlights": [
-      "Led a team of 5 engineers to deliver a scalable SaaS platform.",
-      "Architected and implemented microservices for high-traffic workloads.",
-      "Mentored junior developers and conducted code reviews."
+      "Built the entire mobile application from scratch using React Native and Expo, covering everything from architecture decisions to production deployment.",
+      "Develop and maintain the admin dashboard and backend services with Next.js and Node.js, handling both customer-facing and internal tooling end to end.",
+      "Architected the system for scalability from day one, supporting up to 1,000 concurrent users with low-latency performance.",
+      "Set up and manage the full AWS infrastructure — deployment pipelines, monitoring via New Relic and Mixpanel, and production operations without a dedicated DevOps team.",
+      "Built and own the CI/CD automation pipeline, enabling seamless automated deployments and end-to-end testing across environments.",
+      "Drive UI/UX decisions with a user-first approach, contributing to higher engagement and retention as the product grows."
     ],
-    "color": "from-blue-300 via-blue-100 to-blue-50",
-    "dot": "bg-blue-400",
-    "glow": "shadow-blue-200",
-    "pin": "bg-blue-400",
-    "blob": "fill-blue-100"
-  },
-  {
-    "company": "NextGen Solutions",
-    "logo": "https://img.icons8.com/color/48/000000/company.png",
-    "role": "Software Engineer",
-    "period": "Jan 2020 - Jun 2022",
-    "location": "Remote",
-    "highlights": [
-      "Developed and maintained core modules for a fintech product.",
-      "Collaborated with cross-functional teams for product launches.",
-      "Optimized legacy codebase, improving performance by 30%."
-    ],
-    "color": "from-teal-300 via-teal-100 to-teal-50",
-    "dot": "bg-teal-400",
-    "glow": "shadow-teal-200",
-    "pin": "bg-teal-400",
-    "blob": "fill-teal-100"
+    "stack": [
+      "React Native",
+      "Expo",
+      "Next.js",
+      "Node.js",
+      "AWS",
+      "CI/CD",
+      "New Relic",
+      "Mixpanel"
+    ]
   }
-] 
+]
