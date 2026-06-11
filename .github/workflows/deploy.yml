@@ -60,11 +60,15 @@ jobs:
         working-directory: terraform
 
       - name: Sync Hostinger DNS to CloudFront (domain auto-connect)
-        if: ${{ secrets.HOSTINGER_API_TOKEN != '' }}
         env:
           HOSTINGER_API_TOKEN: ${{ secrets.HOSTINGER_API_TOKEN }}
           DOMAIN: lakshaygoyal.in
         run: |
+          if [ -z "${HOSTINGER_API_TOKEN}" ]; then
+            echo "HOSTINGER_API_TOKEN not configured, skipping DNS sync"
+            exit 0
+          fi
+
           CDN_DOMAIN=$(terraform output -raw cloudfront_domain_name)
           echo "Pointing $DOMAIN at $CDN_DOMAIN"
 
