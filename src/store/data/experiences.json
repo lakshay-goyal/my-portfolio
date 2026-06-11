@@ -5,6 +5,36 @@
     "role": "Founding Engineer",
     "period": "Dec 2025 — Present",
     "location": "Bangalore, India",
+    "cursorLogo": "/FOZO/logo.png",
+    "showcase": {
+      "screens": [
+        {
+          "src": "/FOZO/Fozo1.png",
+          "title": "Onboarding",
+          "caption": "Swipeable onboarding and phone auth entry"
+        },
+        {
+          "src": "/FOZO/Fozo2.png",
+          "title": "Grocery Home",
+          "caption": "Category tabs, flash sale, and product discovery"
+        },
+        {
+          "src": "/FOZO/Fozo3.png",
+          "title": "Food Discovery",
+          "caption": "Promotions, cuisine filters, and cart preview"
+        },
+        {
+          "src": "/FOZO/Fozo4.png",
+          "title": "Restaurant Detail",
+          "caption": "Surprise bag listing with ratings and pricing"
+        },
+        {
+          "src": "/FOZO/Fozo5.png",
+          "title": "Checkout",
+          "caption": "Cart, delivery details, upsells, and payment"
+        }
+      ]
+    },
     "summary": "Owning development and operations end to end for a surplus food delivery platform — from architecture decisions to production deployment.",
     "highlights": [
       "Built the entire mobile application from scratch using React Native and Expo, covering everything from architecture decisions to production deployment.",
