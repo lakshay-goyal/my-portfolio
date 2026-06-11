@@ -3,16 +3,16 @@
     "title": "Unlovable - Application Builder.",
     "description": "Built an application builder, where anyone can able to generate an web application using a prompt and creativity.",
     "tech": ["Turborepo", "Expo", "E2B sandbox", "Redis", "Websocket", "PostgreSQL", "Langchain", "Langgraph", "RAG"],
-    "image": "https://www.lakshaygoyal.in/assets/Lakshay-CPTOL77p.png",
+    "image": "/Image/UnlovableWeb.png",
     "github": "https://github.com/lakshay-goyal/Unlovable",
     "live": "https://unlovable.lakshaygoyal.in/",
-    "videoLink": ""
+    "videoLink": "/video/UnlovableWeb.mp4"
   },
   {
     "title": "Unlovable - Mobile Application.",
     "description": "Built an Mobile application builder, where anyone can able to generate an mobile application using a prompt and creativity.",
     "tech": ["React Native", "Expo", "Nativewind", "EAS"],
-    "image": "https://www.lakshaygoyal.in/assets/Lakshay-CPTOL77p.png",
+    "image": "/Image/UnlovableMobile.png",
     "github": "https://github.com/lakshay-goyal/Unlovable",
     "live": "",
     "videoLink": ""
