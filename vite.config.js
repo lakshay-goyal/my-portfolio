@@ -9,12 +9,4 @@ export default defineConfig({
       '@': '/src',
     },
   },
-  optimizeDeps: {
-    include: ['framer-motion', '@tabler/icons-react'],
-  },
-  build: {
-    commonjsOptions: {
-      include: [/node_modules/],
-    },
-  },
 })

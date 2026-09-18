@@ -20,7 +20,7 @@ There's a longer tail of smaller projects on the site too — clones, tools, exp
 
 The portfolio is a React SPA, but the deployment is where it gets opinionated.
 
-**Frontend:** React 18 + Vite, Tailwind CSS, Framer Motion for the fancy bits, Zustand for state, React Router for client-side routing. All content (projects, experience, skills, books) lives in plain JSON under `src/store/data/` — no CMS, no database, just files. Boring on purpose.
+**Frontend:** React 18 + Vite with a single-page, minimal design — plain CSS, Inter type, no UI frameworks. All content (projects, experience, skills, books) lives in plain JSON under `src/store/data/` — no CMS, no database, just files. Boring on purpose.
 
 **Infrastructure:** fully defined in Terraform under `terraform/`. The whole thing:
 
