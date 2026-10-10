@@ -24,10 +24,11 @@ function ContactIcon({ name }) {
 
 export default function ContactRail() {
   return (
-    <aside className="contact-rail" aria-label="Contact links">
-      <div className="contact-icons">
+    <aside className="fixed right-[clamp(16px,1.5vw,28px)] top-1/2 z-10 max-h-[calc(100dvh-32px)] w-12 -translate-y-1/2 overflow-y-auto max-[1150px]:sticky max-[1150px]:top-12 max-[1150px]:col-start-2 max-[1150px]:max-h-none max-[1150px]:overflow-visible max-[1150px]:translate-y-0 max-[640px]:static max-[640px]:col-start-1 max-[640px]:w-auto max-[640px]:justify-self-start max-[640px]:border-t max-[640px]:border-zinc-200 max-[640px]:pt-6" aria-label="Contact links">
+      <div className="flex flex-col items-center gap-3 max-[640px]:flex-row max-[640px]:flex-wrap max-[640px]:justify-start">
         {contacts.map((contact) => (
-          <a
+            <a
+              className="grid h-11 w-11 place-items-center rounded border border-zinc-200 text-zinc-600 transition-[color,background,border-color,transform] duration-200 hover:-translate-x-1 hover:border-zinc-200 hover:bg-zinc-50 hover:text-zinc-900"
             href={contact.href}
             key={contact.label}
             aria-label={contact.label}

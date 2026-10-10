@@ -19,5 +19,5 @@ export default function ScrollReveal({ children, className = "" }) {
     return () => observer.disconnect();
   }, []);
 
-  return <div ref={element} className={`scroll-reveal ${visible ? "is-visible" : ""} ${className}`}>{children}</div>;
+  return <div ref={element} className={`translate-y-[18px] opacity-0 transition-[opacity,transform] duration-[650ms] ease-[cubic-bezier(.2,.7,.2,1)] motion-reduce:translate-y-0 motion-reduce:opacity-100 motion-reduce:transition-none ${visible ? "translate-y-0 opacity-100" : ""} ${className}`}>{children}</div>;
 }
