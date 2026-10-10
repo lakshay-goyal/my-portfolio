@@ -1,58 +1,18 @@
 [
+    {
+    "company": "Testsigma",
+    "url": "https://testsigma.com/",
+    "role": "Software Engineer",
+    "period": "Dec 2025 — June 2026",
+    "location": "Bangalore, India",
+    "summary": "Building things that make test automation a little less painful. Mostly jumping between backend, frontend, and infra, figuring things out along the way."
+  },
   {
     "company": "FOZO",
     "url": "https://getfozo.in",
     "role": "Founding Engineer",
-    "period": "Dec 2025 — Present",
+    "period": "Dec 2025 — June 2026",
     "location": "Bangalore, India",
-    "cursorLogo": "/FOZO/logo.png",
-    "showcase": {
-      "screens": [
-        {
-          "src": "/FOZO/Fozo1.png",
-          "title": "Onboarding",
-          "caption": "Swipeable onboarding and phone auth entry"
-        },
-        {
-          "src": "/FOZO/Fozo2.png",
-          "title": "Grocery Home",
-          "caption": "Category tabs, flash sale, and product discovery"
-        },
-        {
-          "src": "/FOZO/Fozo3.png",
-          "title": "Food Discovery",
-          "caption": "Promotions, cuisine filters, and cart preview"
-        },
-        {
-          "src": "/FOZO/Fozo4.png",
-          "title": "Restaurant Detail",
-          "caption": "Surprise bag listing with ratings and pricing"
-        },
-        {
-          "src": "/FOZO/Fozo5.png",
-          "title": "Checkout",
-          "caption": "Cart, delivery details, upsells, and payment"
-        }
-      ]
-    },
-    "summary": "Owning development and operations end to end for a surplus food delivery platform — from architecture decisions to production deployment.",
-    "highlights": [
-      "Built the entire mobile application from scratch using React Native and Expo, covering everything from architecture decisions to production deployment.",
-      "Develop and maintain the admin dashboard and backend services with Next.js and Node.js, handling both customer-facing and internal tooling end to end.",
-      "Architected the system for scalability from day one, supporting up to 1,000 concurrent users with low-latency performance.",
-      "Set up and manage the full AWS infrastructure — deployment pipelines, monitoring via New Relic and Mixpanel, and production operations without a dedicated DevOps team.",
-      "Built and own the CI/CD automation pipeline, enabling seamless automated deployments and end-to-end testing across environments.",
-      "Drive UI/UX decisions with a user-first approach, contributing to higher engagement and retention as the product grows."
-    ],
-    "stack": [
-      "React Native",
-      "Expo",
-      "Next.js",
-      "Node.js",
-      "AWS",
-      "CI/CD",
-      "New Relic",
-      "Mixpanel"
-    ]
+    "summary": "Built a food delivery platform from scratch, handling everything from architecture and mobile apps to servers, deployments, and all the chaos in between."
   }
 ]

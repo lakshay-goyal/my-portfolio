@@ -146,17 +146,16 @@ function App() {
     <main className="portfolio">
       <header className="site-header">
         <h1>Lakshay Goyal</h1>
-        <p>Founding Engineer</p>
+        <p>Software Engineer</p>
       </header>
 
       <section className="section about-section" aria-labelledby="about-heading">
         <h2 id="about-heading" className="section-title">About</h2>
-        <p className="about-copy">
-          I’m Lakshay, a Founding Engineer at FOZO in Bangalore. I build practical
-          mobile and web products, from thoughtful interfaces to the systems that
-          bring them to life.
-        </p>
-        <TextLink className="work-link" href="#work">See my work</TextLink>
+        <div className="about-copy">
+          <p>
+            Just a curious builder with a bad habit of going down every damn rabbit hole, building random shit, and figuring out life beyond code.
+          </p>
+        </div>
       </section>
 
       <Experience />

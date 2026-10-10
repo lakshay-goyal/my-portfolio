@@ -61,9 +61,11 @@ a { color: inherit; }
   margin: 0 0 24px;
   color: var(--zinc-600);
   font-size: 18px;
-  line-height: 1.625;
+  line-height: 1.7;
   font-weight: 400;
 }
+.about-copy p { margin: 0; }
+.about-copy p + p { margin-top: 20px; }
 
 /* ---------- Links ---------- */
 .text-link {
