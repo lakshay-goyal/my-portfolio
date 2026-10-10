@@ -117,7 +117,7 @@ const skillIcons = {
       <path d="m8 6-6 6 6 6" />
     </>
   ),
-  "App Development": (
+  "Mobile Development": (
     <>
       <rect width="14" height="20" x="5" y="2" rx="2" ry="2" />
       <path d="M12 18h.01" />
@@ -146,14 +146,14 @@ function MoreAbout() {
   return (
     <section className="mt-20 max-[640px]:mt-12" aria-labelledby="more-heading">
       <h2 id="more-heading" className="mb-8 text-base font-medium leading-6 text-zinc-900">Skills</h2>
-      <div >
+      <div>
         {skills.map((item) => (
-          <div className="grid grid-cols-[170px_minmax(0,1fr)] items-start gap-x-4 py-2 text-base leading-6 text-zinc-500 hover:[&_.skill-label]:text-zinc-600 hover:[&_.skill-detail]:text-zinc-900 max-[640px]:grid-cols-1 max-[640px]:gap-y-1" key={item.title}>
-            <span className="flex items-center gap-2.5 font-mono text-zinc-400 transition-colors">
+          <div className="grid grid-cols-[190px_minmax(0,1fr)] items-start gap-x-4 py-3 text-base leading-6 text-zinc-500 hover:[&_.skill-label]:text-zinc-600 hover:[&_.skill-detail]:text-zinc-900 max-[640px]:grid-cols-1 max-[640px]:gap-y-1.5" key={item.title}>
+            <span className="skill-label flex items-center gap-2 font-mono text-sm leading-6 text-zinc-400 transition-colors">
               <SkillIcon title={item.title} />
               {item.title}
             </span>
-            <span className="transition-colors">{item.skills.split(",").map((skill) => skill.trim()).join(" · ")}</span>
+            <span className="skill-detail transition-colors">{item.skills.split(",").map((skill) => skill.trim()).join(" · ")}</span>
           </div>
         ))}
       </div>
