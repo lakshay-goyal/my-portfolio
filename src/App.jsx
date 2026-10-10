@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import { flushSync } from "react-dom";
+import { createPortal, flushSync } from "react-dom";
 import experiences from "./store/data/experiences.json";
 import majorProjects from "./store/data/majorProjects.json";
 import allProjects from "./store/data/allProjects.json";
@@ -211,19 +211,22 @@ function FeaturedWork() {
       )}
 
       {activeProject && (
-        <div
-          className="fixed inset-0 z-50 grid place-items-center bg-zinc-950/85 p-4 backdrop-blur-sm"
-          role="presentation"
-          onMouseDown={(event) => { if (event.target === event.currentTarget) setActiveProject(null); }}
-        >
-          <section className="relative w-full max-w-5xl" role="dialog" aria-modal="true" aria-label={`${activeProject.title} demo`}>
-            <div className="mb-3 flex items-center justify-between gap-4 text-white">
-              <h3 className="m-0 text-base font-medium">{activeProject.title}</h3>
-              <button type="button" className="grid h-10 w-10 shrink-0 place-items-center rounded-full border border-white/25 bg-white/10 text-2xl leading-none text-white transition hover:bg-white/20" onClick={() => setActiveProject(null)} aria-label="Close video">×</button>
-            </div>
-            <video key={activeProject.videoLink} className="max-h-[78vh] w-full rounded-lg bg-black" src={activeProject.videoLink} poster={activeProject.image} controls autoPlay muted playsInline />
-          </section>
-        </div>
+        createPortal(
+          <div
+            className="fixed inset-0 z-[100] grid place-items-center overflow-y-auto bg-zinc-950/85 p-4 backdrop-blur-sm"
+            role="presentation"
+            onMouseDown={(event) => { if (event.target === event.currentTarget) setActiveProject(null); }}
+          >
+            <section className="w-fit max-w-full" role="dialog" aria-modal="true" aria-label={`${activeProject.title} demo`}>
+              <div className="mb-3 flex items-center justify-between gap-4 text-white">
+                <h3 className="m-0 text-base font-medium">{activeProject.title}</h3>
+                <button type="button" autoFocus className="grid h-10 w-10 shrink-0 place-items-center rounded-full border border-white/25 bg-white/10 text-2xl leading-none text-white transition hover:bg-white/20" onClick={() => setActiveProject(null)} aria-label="Close video">×</button>
+              </div>
+              <video key={activeProject.videoLink} className="mx-auto block h-auto w-auto max-h-[calc(100dvh-8rem)] max-w-[calc(100vw-2rem)] rounded-lg bg-black object-contain" src={activeProject.videoLink} poster={activeProject.image} controls autoPlay muted playsInline />
+            </section>
+          </div>,
+          document.body,
+        )
       )}
     </section>
   );
