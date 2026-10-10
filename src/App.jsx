@@ -1,4 +1,5 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
+import { flushSync } from "react-dom";
 import experiences from "./store/data/experiences.json";
 import majorProjects from "./store/data/majorProjects.json";
 import allProjects from "./store/data/allProjects.json";
@@ -13,6 +14,80 @@ function ArrowIcon() {
     <svg className="align-[-3px]" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
       <path d="M12 10V4m0 0H6m6 0l-7.833 7.833" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
     </svg>
+  );
+}
+
+function ThemeToggle() {
+  const [isDarkMode, setIsDarkMode] = useState(() => window.localStorage.getItem("portfolio-theme") === "dark");
+  const ref = useRef(null);
+
+  useEffect(() => {
+    document.documentElement.classList.toggle("dark", isDarkMode);
+    window.localStorage.setItem("portfolio-theme", isDarkMode ? "dark" : "light");
+  }, [isDarkMode]);
+
+  const toggleDarkMode = async () => {
+    const nextIsDarkMode = !isDarkMode;
+    const startViewTransition = document.startViewTransition;
+
+    if (
+      !ref.current ||
+      !startViewTransition ||
+      window.matchMedia("(prefers-reduced-motion: reduce)").matches
+    ) {
+      setIsDarkMode(nextIsDarkMode);
+      return;
+    }
+
+    const transition = document.startViewTransition(() => {
+      flushSync(() => {
+        document.documentElement.classList.toggle("dark", nextIsDarkMode);
+        setIsDarkMode(nextIsDarkMode);
+      });
+    });
+
+    await transition.ready;
+
+    const { top, left, width, height } = ref.current.getBoundingClientRect();
+    const x = left + width / 2;
+    const y = top + height / 2;
+    const right = window.innerWidth - left;
+    const bottom = window.innerHeight - top;
+    const maxRadius = Math.hypot(Math.max(left, right), Math.max(top, bottom));
+
+    document.documentElement.animate(
+      {
+        clipPath: [`circle(0px at ${x}px ${y}px)`, `circle(${maxRadius}px at ${x}px ${y}px)`],
+      },
+      {
+        duration: 500,
+        easing: "ease-in-out",
+        pseudoElement: "::view-transition-new(root)",
+      },
+    );
+  };
+
+  return (
+    <button
+      ref={ref}
+      type="button"
+      className="fixed right-0 top-4 z-20 grid h-11 w-11 place-items-center rounded-l-md border border-zinc-200 bg-white text-zinc-600 transition-colors hover:bg-zinc-50 hover:text-zinc-900"
+      aria-label={isDarkMode ? "Switch to light mode" : "Switch to dark mode"}
+      aria-pressed={isDarkMode}
+      title={isDarkMode ? "Switch to light mode" : "Switch to dark mode"}
+      onClick={toggleDarkMode}
+    >
+      {isDarkMode ? (
+        <svg className="transition-transform duration-300" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+          <path d="M20.1 15.4A8.5 8.5 0 0 1 8.6 3.9 8.5 8.5 0 1 0 20.1 15.4Z" />
+        </svg>
+      ) : (
+        <svg className="transition-transform duration-300" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+          <circle cx="12" cy="12" r="4" />
+          <path d="M12 2v2m0 16v2M4.93 4.93l1.42 1.42m11.3 11.3 1.42 1.42M2 12h2m16 0h2M4.93 19.07l1.42-1.42m11.3-11.3 1.42-1.42" />
+        </svg>
+      )}
+    </button>
   );
 }
 
@@ -342,6 +417,7 @@ function App() {
 
   return (
     <main className="mx-auto grid w-full grid-cols-[minmax(152px,1fr)_minmax(0,672px)_minmax(64px,1fr)] gap-8 px-[clamp(24px,3vw,64px)] py-24 max-[1150px]:grid-cols-[minmax(0,672px)_48px] max-[1150px]:justify-center max-[1150px]:gap-6 max-[1150px]:px-6 max-[1150px]:py-12 max-[640px]:grid-cols-[minmax(0,1fr)] max-[640px]:gap-12">
+      <ThemeToggle />
       <PageRail path={path} />
       <div className="col-start-2 min-w-0 max-[1150px]:col-start-1">
         <header >

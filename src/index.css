@@ -31,3 +31,64 @@
     }
   }
 }
+
+@layer utilities {
+  .dark {
+    color-scheme: dark;
+  }
+
+  .dark body,
+  .dark .bg-white {
+    background-color: #09090b !important;
+  }
+
+  .dark .bg-zinc-50 {
+    background-color: #18181b !important;
+  }
+
+  .dark .text-zinc-900 {
+    color: #f4f4f5 !important;
+  }
+
+  .dark .text-zinc-600 {
+    color: #d4d4d8 !important;
+  }
+
+  .dark .text-zinc-500 {
+    color: #a1a1aa !important;
+  }
+
+  .dark .text-zinc-400 {
+    color: #71717a !important;
+  }
+
+  .dark .text-black\/30 {
+    color: rgb(255 255 255 / 35%) !important;
+  }
+
+  .dark .text-black\/80 {
+    color: rgb(255 255 255 / 80%) !important;
+  }
+
+  .dark .border-zinc-200 {
+    border-color: #27272a !important;
+  }
+
+  .dark .decoration-zinc-200 {
+    text-decoration-color: #3f3f46 !important;
+  }
+
+  .dark .decoration-zinc-300 {
+    text-decoration-color: #3f3f46 !important;
+  }
+
+  .dark .decoration-zinc-500 {
+    text-decoration-color: #71717a !important;
+  }
+}
+
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation: none;
+  mix-blend-mode: normal;
+}
