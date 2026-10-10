@@ -1,20 +1,12 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import experiences from "./store/data/experiences.json";
 import majorProjects from "./store/data/majorProjects.json";
 import allProjects from "./store/data/allProjects.json";
 import skills from "./store/data/skills.json";
 import books from "./store/data/books.json";
-
-const email = "lakshaygoyal201@gmail.com";
-
-const contactLinks = [
-  { label: "Email", href: `mailto:${email}` },
-  { label: "GitHub", href: "https://github.com/lakshay-goyal" },
-  { label: "LinkedIn", href: "https://www.linkedin.com/in/lakshay-goyal-9778a6246/" },
-  { label: "X", href: "https://x.com/lakshayg2004" },
-  { label: "Resume", href: "/Lakshay_Resume.pdf" },
-  { label: "Book a call", href: "https://cal.com/lakshay-goyal/30min?overlayCalendar=true" },
-];
+import PageRail from "./components/PageRail.jsx";
+import ContactRail from "./components/ContactRail.jsx";
+import ScrollReveal from "./components/ScrollReveal.jsx";
 
 function ArrowIcon() {
   return (
@@ -135,41 +127,187 @@ function MoreAbout() {
       </div>
       <div className="reading-line">
         <span>On my bookshelf</span>
-        <span>{books.map((book) => book.title).join(" · ")}</span>
+        <a href="/bookshelf" className="text-link">See what I’m reading <ArrowIcon /></a>
       </div>
     </section>
   );
 }
 
+function HomePage() {
+  return (
+    <>
+      <ScrollReveal>
+        <section className="section about-section" aria-labelledby="about-heading">
+          <h2 id="about-heading" className="section-title">About</h2>
+          <div className="about-copy">
+            <p>
+              Just a curious builder with a bad habit of going down every damn rabbit hole, building random shit, and figuring out life beyond code.
+            </p>
+          </div>
+        </section>
+      </ScrollReveal>
+
+      <ScrollReveal><Experience /></ScrollReveal>
+      <ScrollReveal><FeaturedWork /></ScrollReveal>
+      <ScrollReveal><MoreAbout /></ScrollReveal>
+    </>
+  );
+}
+
+const story = [
+  ["2022–2023", "Finding a direction", "I started learning by building projects in college. Coming from a commerce background, I worked through the maths behind machine learning and deep learning, then built a language translator app with a local NLP model."],
+  ["2025", "Building for the web", "I moved into the MERN stack and learned how authentication, APIs, interfaces, and deployment come together in real products."],
+  ["Super30", "Going deeper", "Being part of Super30 pushed me to ship more and learn about backend design, DevOps, AI engineering, real-time systems, and system design."],
+  ["Now", "Working on products", "I moved from Delhi to Bangalore, helped build FOZO from the ground up, and now work on test automation at Testsigma. I care about polished interfaces, understandable systems, and work that lasts beyond a demo."],
+];
+
+function PageHeading({ eyebrow, title, description }) {
+  return (
+    <ScrollReveal>
+      <header className="page-heading">
+        <p className="page-eyebrow">{eyebrow}</p>
+        <h2>{title}</h2>
+        <p>{description}</p>
+      </header>
+    </ScrollReveal>
+  );
+}
+
+function AboutPage() {
+  return (
+    <div className="inner-page">
+      <PageHeading eyebrow="About me" title="I turn curiosity into shipped software." description="A little more about the path that brought me here." />
+      <div className="story-list">
+        {story.map(([period, title, copy]) => (
+          <ScrollReveal key={period}>
+            <section className="story-row">
+              <span className="timeline-date">{period}</span>
+              <div><h3>{title}</h3><p>{copy}</p></div>
+            </section>
+          </ScrollReveal>
+        ))}
+      </div>
+      <ScrollReveal>
+        <section className="section" aria-labelledby="about-skills-heading">
+          <h2 id="about-skills-heading" className="section-title">What I work with</h2>
+          <div className="simple-list">
+            {skills.map((item) => (
+              <div className="simple-row" key={item.title}>
+                <span className="simple-label">{item.title}</span>
+                <span className="simple-detail">{item.skills}</span>
+              </div>
+            ))}
+          </div>
+        </section>
+      </ScrollReveal>
+    </div>
+  );
+}
+
+function BookshelfPage() {
+  return (
+    <div className="inner-page">
+      <PageHeading eyebrow="Bookshelf" title="Ideas I keep close." description="A small collection of books I’ve read and the ideas I took from them." />
+      <div className="book-list">
+        {books.map((book) => (
+          <ScrollReveal key={book.id}>
+            <article className="book-row">
+              <img src={book.cover} alt={`Cover of ${book.title}`} loading="lazy" />
+              <div>
+                <p className="page-eyebrow">{book.category === "Phylosohy" ? "Philosophy" : book.category}</p>
+                <h3>{book.title}</h3>
+                <p className="book-author">by {book.author}</p>
+                <p>{book.description}</p>
+                <ul>{book.keyPoints.map((point) => <li key={point}>{point}</li>)}</ul>
+                <TextLink href={book.amazonLink}>View book</TextLink>
+              </div>
+            </article>
+          </ScrollReveal>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+function BlogsPage() {
+  const [posts, setPosts] = useState(null);
+  const [error, setError] = useState(false);
+
+  useEffect(() => {
+    fetch("/blog/blog.json")
+      .then((response) => { if (!response.ok) throw new Error("Could not load posts"); return response.json(); })
+      .then((data) => setPosts(Object.entries(data).flatMap(([category, items]) => items.map((item) => ({ ...item, category })))))
+      .catch(() => setError(true));
+  }, []);
+
+  return (
+    <div className="inner-page">
+      <PageHeading eyebrow="Writing" title="Blogs" description="Notes from building, deploying, and learning software." />
+      {error && <p className="state-message">Could not load the posts right now.</p>}
+      {!error && !posts && <p className="state-message">Loading posts…</p>}
+      {posts?.length === 0 && <p className="state-message">No posts yet.</p>}
+      <div className="post-list">
+        {posts?.map((post) => (
+          <ScrollReveal key={post.link}>
+            <article className="post-row">
+              <div><p className="page-eyebrow">{post.category} · {post.date}</p><h3><TextLink href={post.link}>{post.title}</TextLink></h3></div>
+            </article>
+          </ScrollReveal>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+function BlogPostPage({ slug }) {
+  const [content, setContent] = useState(null);
+  const [error, setError] = useState(false);
+
+  useEffect(() => {
+    fetch(`/blog/${encodeURIComponent(slug)}.md`)
+      .then((response) => { if (!response.ok) throw new Error("Post not found"); return response.text(); })
+      .then(setContent)
+      .catch(() => setError(true));
+  }, [slug]);
+
+  const body = content?.replace(/^---\s*\n[\s\S]*?\n---\s*\n/, "").trim();
+  const blocks = body?.split(/\n\s*\n/);
+
+  return (
+    <div className="inner-page blog-post">
+      <a className="back-link" href="/blog">← All blogs</a>
+      {error && <p className="state-message">This post could not be found.</p>}
+      {!error && !content && <p className="state-message">Loading post…</p>}
+      {blocks?.map((block, index) => {
+        if (block.startsWith("# ")) return <h2 key={index}>{block.slice(2)}</h2>;
+        if (block.startsWith("## ")) return <h3 key={index}>{block.slice(3)}</h3>;
+        if (/^\d+\. /m.test(block)) return <ol key={index}>{block.split("\n").map((line) => <li key={line}>{line.replace(/^\d+\. /, "")}</li>)}</ol>;
+        return <p key={index}>{block}</p>;
+      })}
+    </div>
+  );
+}
+
 function App() {
+  const path = window.location.pathname.replace(/\/$/, "") || "/";
+  const page = path === "/" ? <HomePage />
+    : path === "/about" ? <AboutPage />
+    : path === "/bookshelf" ? <BookshelfPage />
+    : path === "/blog" ? <BlogsPage />
+    : path.startsWith("/blog/") ? <BlogPostPage slug={path.slice(6)} />
+    : <div className="inner-page"><PageHeading eyebrow="404" title="Page not found" description="There’s nothing at this address." /><a className="back-link" href="/">← Back home</a></div>;
+
   return (
     <main className="portfolio">
-      <header className="site-header">
-        <h1>Lakshay Goyal</h1>
-        <p>Software Engineer</p>
-      </header>
-
-      <section className="section about-section" aria-labelledby="about-heading">
-        <h2 id="about-heading" className="section-title">About</h2>
-        <div className="about-copy">
-          <p>
-            Just a curious builder with a bad habit of going down every damn rabbit hole, building random shit, and figuring out life beyond code.
-          </p>
-        </div>
-      </section>
-
-      <Experience />
-      <FeaturedWork />
-      <MoreAbout />
-
-      <footer className="section contact-section" aria-labelledby="contact-heading">
-        <h2 id="contact-heading" className="section-title">Contact</h2>
-        <div className="contact-links">
-          {contactLinks.map((link) => (
-            <TextLink href={link.href} key={link.label}>{link.label}</TextLink>
-          ))}
-        </div>
-      </footer>
+      <PageRail path={path} />
+      <div className="main-column">
+        <header className="site-header">
+          <a className="site-name" href="/">Lakshay Goyal</a>
+          <p>Software Engineer</p>
+        </header>
+        {page}
+      </div>
+      <ContactRail />
     </main>
   );
 }
