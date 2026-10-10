@@ -157,10 +157,6 @@ function MoreAbout() {
           </div>
         ))}
       </div>
-      <div className="reading-line">
-        <span>On my bookshelf</span>
-        <a href="/bookshelf" className="text-link">See what I’m reading <ArrowIcon /></a>
-      </div>
     </section>
   );
 }
@@ -219,19 +215,6 @@ function AboutPage() {
           </ScrollReveal>
         ))}
       </div>
-      <ScrollReveal>
-        <section className="section" aria-labelledby="about-skills-heading">
-          <h2 id="about-skills-heading" className="section-title">What I work with</h2>
-          <div className="simple-list">
-            {skills.map((item) => (
-              <div className="simple-row" key={item.title}>
-                <span className="simple-label">{item.title}</span>
-                <span className="simple-detail">{item.skills}</span>
-              </div>
-            ))}
-          </div>
-        </section>
-      </ScrollReveal>
     </div>
   );
 }

@@ -8,7 +8,6 @@ const pages = [
 export default function PageRail({ path }) {
   return (
     <nav className="page-rail" aria-label="Pages">
-      <p className="rail-heading">Explore</p>
       <div className="page-rail-body">
         <div className="page-rail-links">
           {pages.map((page) => (
