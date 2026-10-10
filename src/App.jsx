@@ -2,7 +2,6 @@ import { useEffect, useRef, useState } from "react";
 import { createPortal, flushSync } from "react-dom";
 import experiences from "./store/data/experiences.json";
 import majorProjects from "./store/data/majorProjects.json";
-import allProjects from "./store/data/allProjects.json";
 import skills from "./store/data/skills.json";
 import books from "./store/data/books.json";
 import PageRail from "./components/PageRail.jsx";
@@ -130,9 +129,7 @@ function Experience() {
 }
 
 function FeaturedWork() {
-  const [archiveOpen, setArchiveOpen] = useState(false);
   const [activeProject, setActiveProject] = useState(null);
-  const archive = Object.entries(allProjects).filter(([, projects]) => projects.length);
 
   useEffect(() => {
     if (!activeProject) return undefined;
@@ -179,36 +176,6 @@ function FeaturedWork() {
           </article>
         ))}
       </div>
-
-      <div className="mt-8">
-        <button
-          type="button"
-          className="group inline cursor-pointer border-0 bg-transparent p-0 text-base font-medium leading-6 text-zinc-900 underline decoration-zinc-300 underline-offset-2 transition-colors hover:decoration-zinc-500 [&_svg]:ml-0.5 [&_svg]:inline-block [&_svg]:text-black/30 [&_svg]:transition-[color,transform] [&_svg]:duration-200 group-hover:[&_svg]:text-black/80 aria-expanded:[&_svg]:rotate-90"
-          aria-expanded={archiveOpen}
-          aria-controls="project-archive"
-          onClick={() => setArchiveOpen((open) => !open)}
-        >
-          {archiveOpen ? "Hide project archive" : "View project archive"} <ArrowIcon />
-        </button>
-      </div>
-
-      {archiveOpen && (
-        <div id="project-archive" className="mt-8 border-t border-zinc-200">
-          {archive.map(([category, projects]) => (
-            <div className="pt-5 pb-2" key={category}>
-              <h3 className="m-0 mb-2 font-mono text-sm font-normal leading-5 capitalize text-zinc-400">{category === "app" ? "Mobile apps" : category === "ai" ? "AI" : category === "web" ? "Web" : "Blockchain"}</h3>
-              {projects.map((project) => (
-                <div className="flex items-baseline justify-between gap-5 py-1.5 text-base leading-6 text-zinc-600" key={`${category}-${project.id}`}>
-                  <span>{project.title}</span>
-                  <TextLink className="shrink-0 font-normal text-zinc-500" href={project.liveLink || project.githubLink}>
-                    {project.liveLink ? "View project" : "Source code"}
-                  </TextLink>
-                </div>
-              ))}
-            </div>
-          ))}
-        </div>
-      )}
 
       {activeProject && (
         createPortal(
