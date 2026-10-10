@@ -131,28 +131,56 @@ function Experience() {
 
 function FeaturedWork() {
   const [archiveOpen, setArchiveOpen] = useState(false);
+  const [activeProject, setActiveProject] = useState(null);
   const archive = Object.entries(allProjects).filter(([, projects]) => projects.length);
+
+  useEffect(() => {
+    if (!activeProject) return undefined;
+
+    const handleKeyDown = (event) => {
+      if (event.key === "Escape") setActiveProject(null);
+    };
+
+    document.addEventListener("keydown", handleKeyDown);
+    document.body.style.overflow = "hidden";
+    return () => {
+      document.removeEventListener("keydown", handleKeyDown);
+      document.body.style.overflow = "";
+    };
+  }, [activeProject]);
 
   return (
     <section id="work" className="mt-20 scroll-mt-8 max-[640px]:mt-12" aria-labelledby="work-heading">
       <h2 id="work-heading" className="mb-8 text-base font-medium leading-6 text-zinc-900">Selected Work</h2>
-      <div >
+      <div className="grid grid-cols-2 gap-5 max-[640px]:grid-cols-1">
         {majorProjects.map((project, index) => (
-          <article className="mb-8 grid grid-cols-[180px_minmax(0,1fr)] items-baseline gap-x-4 last:mb-0 max-[640px]:grid-cols-1 max-[640px]:gap-y-4" key={project.title}>
-            <p className="m-0 font-mono text-base font-normal leading-6 text-zinc-400">{String(index + 1).padStart(2, "0")}</p>
-            <div className="min-w-0">
-              <p className="m-0 text-lg font-normal leading-7 text-zinc-600 [&_a]:text-inherit">
-                <TextLink href={project.live || project.github}>{project.title}</TextLink>
-              </p>
-              <p className="mt-1 mb-0 text-base font-normal leading-6 text-zinc-500">{project.description}</p>
-              <p className="mt-1 mb-0 font-mono text-sm leading-5 text-zinc-400">{project.tech.slice(0, 4).join(" · ")}</p>
-              {project.live && <TextLink className="mt-1 inline-block font-normal text-zinc-500" href={project.github}>Source code</TextLink>}
+          <article className="min-w-0 overflow-hidden rounded-lg border border-zinc-200 bg-white" key={project.title}>
+            <button
+              type="button"
+              className="group relative block aspect-[1.55] w-full cursor-pointer overflow-hidden border-0 bg-zinc-100 p-0 text-left"
+              onClick={() => setActiveProject(project)}
+              aria-label={`Play ${project.title} demo`}
+            >
+              <img className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-[1.025]" src={project.image} alt={`${project.title} interface screenshot`} loading="lazy" />
+              <span className="absolute inset-0 grid place-items-center bg-zinc-950/0 transition-colors group-hover:bg-zinc-950/20">
+                <span className="grid h-12 w-12 translate-y-1 place-items-center rounded-full bg-white/95 text-zinc-900 opacity-0 shadow-lg transition duration-200 group-hover:translate-y-0 group-hover:opacity-100" aria-hidden="true">
+                  <svg width="18" height="18" viewBox="0 0 18 18" fill="currentColor"><path d="M6 3.9c0-.6.65-.96 1.15-.63l7.1 4.6a1.35 1.35 0 0 1 0 2.26l-7.1 4.6A.75.75 0 0 1 6 14.1V3.9Z" /></svg>
+                </span>
+              </span>
+              <span className="absolute bottom-3 right-3 rounded-full bg-zinc-950/75 px-2.5 py-1 font-mono text-xs text-white">Play demo</span>
+            </button>
+            <div className="p-4">
+              <p className="mb-1 font-mono text-xs leading-5 text-zinc-400">{String(index + 1).padStart(2, "0")}</p>
+              <h3 className="m-0 text-base font-medium leading-6 text-zinc-700"><TextLink href={project.live || project.github}>{project.title}</TextLink></h3>
+              <p className="mt-2 mb-0 text-sm leading-6 text-zinc-500">{project.description}</p>
+              <p className="mt-2 mb-0 font-mono text-xs leading-5 text-zinc-400">{project.tech.slice(0, 4).join(" · ")}</p>
+              {project.live && <TextLink className="mt-2 inline-block text-sm font-normal text-zinc-500" href={project.github}>Source code</TextLink>}
             </div>
           </article>
         ))}
       </div>
 
-      <div className="mt-8 ml-[196px] max-[640px]:ml-0">
+      <div className="mt-8">
         <button
           type="button"
           className="group inline cursor-pointer border-0 bg-transparent p-0 text-base font-medium leading-6 text-zinc-900 underline decoration-zinc-300 underline-offset-2 transition-colors hover:decoration-zinc-500 [&_svg]:ml-0.5 [&_svg]:inline-block [&_svg]:text-black/30 [&_svg]:transition-[color,transform] [&_svg]:duration-200 group-hover:[&_svg]:text-black/80 aria-expanded:[&_svg]:rotate-90"
@@ -165,7 +193,7 @@ function FeaturedWork() {
       </div>
 
       {archiveOpen && (
-        <div id="project-archive" className="mt-8 ml-[196px] border-t border-zinc-200 max-[640px]:ml-0">
+        <div id="project-archive" className="mt-8 border-t border-zinc-200">
           {archive.map(([category, projects]) => (
             <div className="pt-5 pb-2" key={category}>
               <h3 className="m-0 mb-2 font-mono text-sm font-normal leading-5 capitalize text-zinc-400">{category === "app" ? "Mobile apps" : category === "ai" ? "AI" : category === "web" ? "Web" : "Blockchain"}</h3>
@@ -179,6 +207,22 @@ function FeaturedWork() {
               ))}
             </div>
           ))}
+        </div>
+      )}
+
+      {activeProject && (
+        <div
+          className="fixed inset-0 z-50 grid place-items-center bg-zinc-950/85 p-4 backdrop-blur-sm"
+          role="presentation"
+          onMouseDown={(event) => { if (event.target === event.currentTarget) setActiveProject(null); }}
+        >
+          <section className="relative w-full max-w-5xl" role="dialog" aria-modal="true" aria-label={`${activeProject.title} demo`}>
+            <div className="mb-3 flex items-center justify-between gap-4 text-white">
+              <h3 className="m-0 text-base font-medium">{activeProject.title}</h3>
+              <button type="button" className="grid h-10 w-10 shrink-0 place-items-center rounded-full border border-white/25 bg-white/10 text-2xl leading-none text-white transition hover:bg-white/20" onClick={() => setActiveProject(null)} aria-label="Close video">×</button>
+            </div>
+            <video key={activeProject.videoLink} className="max-h-[78vh] w-full rounded-lg bg-black" src={activeProject.videoLink} poster={activeProject.image} controls autoPlay muted playsInline />
+          </section>
         </div>
       )}
     </section>
