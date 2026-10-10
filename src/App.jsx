@@ -110,18 +110,50 @@ function FeaturedWork() {
   );
 }
 
+const skillIcons = {
+  "Web Development": (
+    <>
+      <path d="m16 18 6-6-6-6" />
+      <path d="m8 6-6 6 6 6" />
+    </>
+  ),
+  "App Development": (
+    <>
+      <rect width="14" height="20" x="5" y="2" rx="2" ry="2" />
+      <path d="M12 18h.01" />
+    </>
+  ),
+  AI: (
+    <path d="M12 3l1.9 5.7a2 2 0 0 0 1.3 1.3L21 12l-5.8 1.9a2 2 0 0 0-1.3 1.3L12 21l-1.9-5.8a2 2 0 0 0-1.3-1.3L3 12l5.8-1.9a2 2 0 0 0 1.3-1.3L12 3Z" />
+  ),
+  Blockchain: (
+    <>
+      <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" />
+      <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" />
+    </>
+  ),
+};
+
+function SkillIcon({ title }) {
+  return (
+    <svg className="skill-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+      {skillIcons[title]}
+    </svg>
+  );
+}
+
 function MoreAbout() {
   return (
     <section className="section more-section" aria-labelledby="more-heading">
-      <h2 id="more-heading" className="section-title">More About Me</h2>
-      <p className="more-copy">
-        I work across mobile and web development, AI, and backend systems. Here are a few of the areas I keep building in and learning about.
-      </p>
-      <div className="simple-list">
+      <h2 id="more-heading" className="section-title">Skills</h2>
+      <div className="skill-list">
         {skills.map((item) => (
-          <div className="simple-row" key={item.title}>
-            <span className="simple-label">{item.title}</span>
-            <span className="simple-detail">{item.skills}</span>
+          <div className="skill-row" key={item.title}>
+            <span className="skill-label">
+              <SkillIcon title={item.title} />
+              {item.title}
+            </span>
+            <span className="skill-detail">{item.skills.split(",").map((skill) => skill.trim()).join(" · ")}</span>
           </div>
         ))}
       </div>
