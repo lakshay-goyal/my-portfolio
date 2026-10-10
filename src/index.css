@@ -85,6 +85,34 @@
   .dark .decoration-zinc-500 {
     text-decoration-color: #71717a !important;
   }
+
+  .schedule-cta {
+    box-shadow: 0 3px 12px rgb(24 24 27 / 18%), 0 0 18px rgb(24 24 27 / 7%);
+  }
+
+  .schedule-cta:hover {
+    box-shadow: 0 5px 16px rgb(24 24 27 / 23%), 0 0 22px rgb(24 24 27 / 10%);
+  }
+
+  .schedule-cta-surface {
+    background: #18181b;
+    color: #fafafa;
+    box-shadow: inset 0 1px 0 rgb(255 255 255 / 16%), inset 0 -1px 0 rgb(0 0 0 / 18%);
+  }
+
+  .dark .schedule-cta {
+    box-shadow: 0 3px 14px rgb(0 0 0 / 42%), 0 0 18px rgb(255 255 255 / 8%);
+  }
+
+  .dark .schedule-cta:hover {
+    box-shadow: 0 5px 18px rgb(0 0 0 / 50%), 0 0 24px rgb(255 255 255 / 13%);
+  }
+
+  .dark .schedule-cta-surface {
+    background: #fafafa;
+    color: #18181b;
+    box-shadow: inset 0 1px 0 rgb(255 255 255 / 90%), inset 0 -1px 0 rgb(24 24 27 / 8%);
+  }
 }
 
 ::view-transition-old(root),
