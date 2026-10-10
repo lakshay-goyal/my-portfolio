@@ -204,7 +204,24 @@ function PageHeading({ eyebrow, title, description }) {
 function AboutPage() {
   return (
     <div className="inner-page">
-      <PageHeading eyebrow="About me" title="I turn curiosity into shipped software." description="A little more about the path that brought me here." />
+      <section className="section about-section" aria-labelledby="about-heading">
+        <h2 id="about-heading" className="section-title">About</h2>
+        <div className="about-copy">
+          <p>
+            Just a developer who loves building random shit, experimenting with everything,
+            messing things up, and learning along the way.
+          </p>
+          <p>
+            I have a bad habit of wanting to become a polymath — from code, AI, and design
+            to philosophy, psychology, politics, and every other shitty thing life has to
+            offer. Don’t mistake me for a generalist, though. I love going deep into every
+            rabbit hole.
+          </p>
+          <p>
+            I love being a developer, but hell no, I'm not spending my entire life just coding. Wanna be that 60-year-old grandpa still trying to figure out some new shit while living every bit of life.
+          </p>
+        </div>
+      </section>
       <div className="story-list">
         {story.map(([period, title, copy]) => (
           <ScrollReveal key={period}>
