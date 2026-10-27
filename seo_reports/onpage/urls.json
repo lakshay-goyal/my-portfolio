@@ -1,0 +1,545 @@
+{
+  "schema_version": "2.0",
+  "category": "urls",
+  "extraction": {
+    "mode": "static-source",
+    "route_count": 5,
+    "limitations": [
+      "File routes, literal React Router routes and supported pathname dispatch are enumerated; arbitrary routing remains unresolved.",
+      "No application code is executed; runtime content is unknown.",
+      "Supported React composition follows source-selected component order; browser layout and visibility are unverified."
+    ]
+  },
+  "pages": [
+    {
+      "url": "/",
+      "template": "src/App.jsx",
+      "is_dynamic": false,
+      "coverage": {
+        "mode": "static-source",
+        "complete": false,
+        "limitations": [
+          {
+            "file": "src/components/ScrollReveal.jsx",
+            "line": 22,
+            "reason": "unresolved_rendered_expression"
+          },
+          {
+            "file": "src/components/ScrollReveal.jsx",
+            "line": 22,
+            "reason": "unresolved_attributes:ref"
+          },
+          {
+            "file": "src/App.jsx",
+            "line": 71,
+            "reason": "unresolved_rendered_expression"
+          },
+          {
+            "file": "src/App.jsx",
+            "line": 74,
+            "reason": "unresolved_condition"
+          },
+          {
+            "file": "src/App.jsx",
+            "line": 74,
+            "reason": "unresolved_rendered_expression"
+          },
+          {
+            "file": "src/App.jsx",
+            "line": 75,
+            "reason": "unresolved_rendered_expression"
+          },
+          {
+            "file": "src/App.jsx",
+            "line": 76,
+            "reason": "unresolved_condition"
+          },
+          {
+            "file": "src/App.jsx",
+            "line": 76,
+            "reason": "unresolved_rendered_expression"
+          },
+          {
+            "file": "src/App.jsx",
+            "line": 79,
+            "reason": "unresolved_condition"
+          },
+          {
+            "file": "src/App.jsx",
+            "line": 79,
+            "reason": "unresolved_rendered_expression"
+          },
+          {
+            "file": "src/App.jsx",
+            "line": 70,
+            "reason": "unresolved_attributes:ref,aria-label,aria-pressed,title"
+          },
+          {
+            "file": "src/components/ContactRail.jsx",
+            "line": 58,
+            "reason": "unresolved_rendered_expression"
+          },
+          {
+            "file": "src/components/ContactRail.jsx",
+            "line": 45,
+            "reason": "unresolved_component:LiquidMetal"
+          }
+        ],
+        "route_patterns": [
+          "/blog",
+          "/blog/"
+        ],
+        "entrypoint": "src/main.jsx",
+        "resolved_interaction_states": 4,
+        "resolved_local_fetches": [],
+        "note": "Composed from allowlisted source semantics. CSS visibility, arbitrary runtime/network data and browser behavior remain unverified."
+      },
+      "depth": 0,
+      "query_links": [
+        {
+          "source_id": "src/components/ContactRail.jsx:1943/22007/4420",
+          "file": "src/components/ContactRail.jsx",
+          "line": 37,
+          "section": "main",
+          "section_id": "src/App.jsx:21181",
+          "ui_state": "initial",
+          "data_bindings": [],
+          "href": "https://cal.com/lakshay-goyal/30min?overlayCalendar=true",
+          "anchor_text": "Schedule",
+          "accessible_name": "Schedule a 30-minute Google Meet",
+          "rel": "noopener noreferrer",
+          "target": "_blank",
+          "target_url": "https://cal.com/lakshay-goyal/30min?overlayCalendar=true",
+          "kind": "absolute-unclassified"
+        }
+      ]
+    },
+    {
+      "url": "/about",
+      "template": "src/App.jsx",
+      "is_dynamic": false,
+      "coverage": {
+        "mode": "static-source",
+        "complete": false,
+        "limitations": [
+          {
+            "file": "src/components/ScrollReveal.jsx",
+            "line": 22,
+            "reason": "unresolved_rendered_expression"
+          },
+          {
+            "file": "src/components/ScrollReveal.jsx",
+            "line": 22,
+            "reason": "unresolved_attributes:ref"
+          },
+          {
+            "file": "src/App.jsx",
+            "line": 71,
+            "reason": "unresolved_rendered_expression"
+          },
+          {
+            "file": "src/App.jsx",
+            "line": 74,
+            "reason": "unresolved_condition"
+          },
+          {
+            "file": "src/App.jsx",
+            "line": 74,
+            "reason": "unresolved_rendered_expression"
+          },
+          {
+            "file": "src/App.jsx",
+            "line": 75,
+            "reason": "unresolved_rendered_expression"
+          },
+          {
+            "file": "src/App.jsx",
+            "line": 76,
+            "reason": "unresolved_condition"
+          },
+          {
+            "file": "src/App.jsx",
+            "line": 76,
+            "reason": "unresolved_rendered_expression"
+          },
+          {
+            "file": "src/App.jsx",
+            "line": 79,
+            "reason": "unresolved_condition"
+          },
+          {
+            "file": "src/App.jsx",
+            "line": 79,
+            "reason": "unresolved_rendered_expression"
+          },
+          {
+            "file": "src/App.jsx",
+            "line": 70,
+            "reason": "unresolved_attributes:ref,aria-label,aria-pressed,title"
+          },
+          {
+            "file": "src/components/ContactRail.jsx",
+            "line": 58,
+            "reason": "unresolved_rendered_expression"
+          },
+          {
+            "file": "src/components/ContactRail.jsx",
+            "line": 45,
+            "reason": "unresolved_component:LiquidMetal"
+          }
+        ],
+        "route_patterns": [
+          "/blog",
+          "/blog/"
+        ],
+        "entrypoint": "src/main.jsx",
+        "resolved_interaction_states": 0,
+        "resolved_local_fetches": [],
+        "note": "Composed from allowlisted source semantics. CSS visibility, arbitrary runtime/network data and browser behavior remain unverified."
+      },
+      "depth": 1,
+      "query_links": [
+        {
+          "source_id": "src/components/ContactRail.jsx:1943/22007/4420",
+          "file": "src/components/ContactRail.jsx",
+          "line": 37,
+          "section": "main",
+          "section_id": "src/App.jsx:21181",
+          "ui_state": "initial",
+          "data_bindings": [],
+          "href": "https://cal.com/lakshay-goyal/30min?overlayCalendar=true",
+          "anchor_text": "Schedule",
+          "accessible_name": "Schedule a 30-minute Google Meet",
+          "rel": "noopener noreferrer",
+          "target": "_blank",
+          "target_url": "https://cal.com/lakshay-goyal/30min?overlayCalendar=true",
+          "kind": "absolute-unclassified"
+        }
+      ]
+    },
+    {
+      "url": "/blog",
+      "template": "src/App.jsx",
+      "is_dynamic": false,
+      "coverage": {
+        "mode": "static-source",
+        "complete": false,
+        "limitations": [
+          {
+            "file": "src/components/ScrollReveal.jsx",
+            "line": 22,
+            "reason": "unresolved_rendered_expression"
+          },
+          {
+            "file": "src/components/ScrollReveal.jsx",
+            "line": 22,
+            "reason": "unresolved_attributes:ref"
+          },
+          {
+            "file": "src/App.jsx",
+            "line": 71,
+            "reason": "unresolved_rendered_expression"
+          },
+          {
+            "file": "src/App.jsx",
+            "line": 74,
+            "reason": "unresolved_condition"
+          },
+          {
+            "file": "src/App.jsx",
+            "line": 74,
+            "reason": "unresolved_rendered_expression"
+          },
+          {
+            "file": "src/App.jsx",
+            "line": 75,
+            "reason": "unresolved_rendered_expression"
+          },
+          {
+            "file": "src/App.jsx",
+            "line": 76,
+            "reason": "unresolved_condition"
+          },
+          {
+            "file": "src/App.jsx",
+            "line": 76,
+            "reason": "unresolved_rendered_expression"
+          },
+          {
+            "file": "src/App.jsx",
+            "line": 79,
+            "reason": "unresolved_condition"
+          },
+          {
+            "file": "src/App.jsx",
+            "line": 79,
+            "reason": "unresolved_rendered_expression"
+          },
+          {
+            "file": "src/App.jsx",
+            "line": 70,
+            "reason": "unresolved_attributes:ref,aria-label,aria-pressed,title"
+          },
+          {
+            "file": "src/components/ContactRail.jsx",
+            "line": 58,
+            "reason": "unresolved_rendered_expression"
+          },
+          {
+            "file": "src/components/ContactRail.jsx",
+            "line": 45,
+            "reason": "unresolved_component:LiquidMetal"
+          }
+        ],
+        "route_patterns": [
+          "/blog",
+          "/blog/"
+        ],
+        "entrypoint": "src/main.jsx",
+        "resolved_interaction_states": 0,
+        "resolved_local_fetches": [
+          "public/blog/blog.json"
+        ],
+        "note": "Composed from allowlisted source semantics. CSS visibility, arbitrary runtime/network data and browser behavior remain unverified."
+      },
+      "depth": 1,
+      "query_links": [
+        {
+          "source_id": "src/components/ContactRail.jsx:1943/22007/4420",
+          "file": "src/components/ContactRail.jsx",
+          "line": 37,
+          "section": "main",
+          "section_id": "src/App.jsx:21181",
+          "ui_state": "initial",
+          "data_bindings": [],
+          "href": "https://cal.com/lakshay-goyal/30min?overlayCalendar=true",
+          "anchor_text": "Schedule",
+          "accessible_name": "Schedule a 30-minute Google Meet",
+          "rel": "noopener noreferrer",
+          "target": "_blank",
+          "target_url": "https://cal.com/lakshay-goyal/30min?overlayCalendar=true",
+          "kind": "absolute-unclassified"
+        }
+      ]
+    },
+    {
+      "url": "/blog/deploying-your-site-with-vercel",
+      "template": "src/App.jsx",
+      "is_dynamic": false,
+      "coverage": {
+        "mode": "static-source",
+        "complete": false,
+        "limitations": [
+          {
+            "file": "src/App.jsx",
+            "line": 71,
+            "reason": "unresolved_rendered_expression"
+          },
+          {
+            "file": "src/App.jsx",
+            "line": 74,
+            "reason": "unresolved_condition"
+          },
+          {
+            "file": "src/App.jsx",
+            "line": 74,
+            "reason": "unresolved_rendered_expression"
+          },
+          {
+            "file": "src/App.jsx",
+            "line": 75,
+            "reason": "unresolved_rendered_expression"
+          },
+          {
+            "file": "src/App.jsx",
+            "line": 76,
+            "reason": "unresolved_condition"
+          },
+          {
+            "file": "src/App.jsx",
+            "line": 76,
+            "reason": "unresolved_rendered_expression"
+          },
+          {
+            "file": "src/App.jsx",
+            "line": 79,
+            "reason": "unresolved_condition"
+          },
+          {
+            "file": "src/App.jsx",
+            "line": 79,
+            "reason": "unresolved_rendered_expression"
+          },
+          {
+            "file": "src/App.jsx",
+            "line": 70,
+            "reason": "unresolved_attributes:ref,aria-label,aria-pressed,title"
+          },
+          {
+            "file": "src/components/ContactRail.jsx",
+            "line": 58,
+            "reason": "unresolved_rendered_expression"
+          },
+          {
+            "file": "src/components/ContactRail.jsx",
+            "line": 45,
+            "reason": "unresolved_component:LiquidMetal"
+          }
+        ],
+        "route_patterns": [
+          "/blog",
+          "/blog/"
+        ],
+        "entrypoint": "src/main.jsx",
+        "resolved_interaction_states": 0,
+        "resolved_local_fetches": [
+          "public/blog/deploying-your-site-with-vercel.md"
+        ],
+        "note": "Composed from allowlisted source semantics. CSS visibility, arbitrary runtime/network data and browser behavior remain unverified."
+      },
+      "depth": 2,
+      "query_links": [
+        {
+          "source_id": "src/components/ContactRail.jsx:1943/22007/4420",
+          "file": "src/components/ContactRail.jsx",
+          "line": 37,
+          "section": "main",
+          "section_id": "src/App.jsx:21181",
+          "ui_state": "initial",
+          "data_bindings": [],
+          "href": "https://cal.com/lakshay-goyal/30min?overlayCalendar=true",
+          "anchor_text": "Schedule",
+          "accessible_name": "Schedule a 30-minute Google Meet",
+          "rel": "noopener noreferrer",
+          "target": "_blank",
+          "target_url": "https://cal.com/lakshay-goyal/30min?overlayCalendar=true",
+          "kind": "absolute-unclassified"
+        }
+      ]
+    },
+    {
+      "url": "/bookshelf",
+      "template": "src/App.jsx",
+      "is_dynamic": false,
+      "coverage": {
+        "mode": "static-source",
+        "complete": false,
+        "limitations": [
+          {
+            "file": "src/components/ScrollReveal.jsx",
+            "line": 22,
+            "reason": "unresolved_rendered_expression"
+          },
+          {
+            "file": "src/components/ScrollReveal.jsx",
+            "line": 22,
+            "reason": "unresolved_attributes:ref"
+          },
+          {
+            "file": "src/App.jsx",
+            "line": 71,
+            "reason": "unresolved_rendered_expression"
+          },
+          {
+            "file": "src/App.jsx",
+            "line": 74,
+            "reason": "unresolved_condition"
+          },
+          {
+            "file": "src/App.jsx",
+            "line": 74,
+            "reason": "unresolved_rendered_expression"
+          },
+          {
+            "file": "src/App.jsx",
+            "line": 75,
+            "reason": "unresolved_rendered_expression"
+          },
+          {
+            "file": "src/App.jsx",
+            "line": 76,
+            "reason": "unresolved_condition"
+          },
+          {
+            "file": "src/App.jsx",
+            "line": 76,
+            "reason": "unresolved_rendered_expression"
+          },
+          {
+            "file": "src/App.jsx",
+            "line": 79,
+            "reason": "unresolved_condition"
+          },
+          {
+            "file": "src/App.jsx",
+            "line": 79,
+            "reason": "unresolved_rendered_expression"
+          },
+          {
+            "file": "src/App.jsx",
+            "line": 70,
+            "reason": "unresolved_attributes:ref,aria-label,aria-pressed,title"
+          },
+          {
+            "file": "src/components/ContactRail.jsx",
+            "line": 58,
+            "reason": "unresolved_rendered_expression"
+          },
+          {
+            "file": "src/components/ContactRail.jsx",
+            "line": 45,
+            "reason": "unresolved_component:LiquidMetal"
+          }
+        ],
+        "route_patterns": [
+          "/blog",
+          "/blog/"
+        ],
+        "entrypoint": "src/main.jsx",
+        "resolved_interaction_states": 0,
+        "resolved_local_fetches": [],
+        "note": "Composed from allowlisted source semantics. CSS visibility, arbitrary runtime/network data and browser behavior remain unverified."
+      },
+      "depth": 1,
+      "query_links": [
+        {
+          "source_id": "src/App.jsx:3886/20762/16267:0/17363",
+          "file": "src/App.jsx",
+          "line": 97,
+          "section": "article",
+          "section_id": "src/App.jsx:16340/20762/16267:0",
+          "ui_state": "initial",
+          "data_bindings": [
+            {
+              "file": "src/store/data/books.json",
+              "json_pointer": "/0"
+            }
+          ],
+          "href": "https://www.amazon.in/Freedom-Known-J-Krishnamurti-ebook/dp/B003NX6Y6A?ref_=ast_author_mpb",
+          "anchor_text": "View book",
+          "accessible_name": "View book",
+          "rel": "noopener noreferrer",
+          "target": "_blank",
+          "target_url": "https://www.amazon.in/Freedom-Known-J-Krishnamurti-ebook/dp/B003NX6Y6A?ref_=ast_author_mpb",
+          "kind": "absolute-unclassified"
+        },
+        {
+          "source_id": "src/components/ContactRail.jsx:1943/22007/4420",
+          "file": "src/components/ContactRail.jsx",
+          "line": 37,
+          "section": "main",
+          "section_id": "src/App.jsx:21181",
+          "ui_state": "initial",
+          "data_bindings": [],
+          "href": "https://cal.com/lakshay-goyal/30min?overlayCalendar=true",
+          "anchor_text": "Schedule",
+          "accessible_name": "Schedule a 30-minute Google Meet",
+          "rel": "noopener noreferrer",
+          "target": "_blank",
+          "target_url": "https://cal.com/lakshay-goyal/30min?overlayCalendar=true",
+          "kind": "absolute-unclassified"
+        }
+      ]
+    }
+  ]
+}

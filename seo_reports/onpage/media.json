@@ -1,0 +1,919 @@
+{
+  "schema_version": "2.0",
+  "category": "media",
+  "extraction": {
+    "mode": "static-source",
+    "route_count": 5,
+    "limitations": [
+      "File routes, literal React Router routes and supported pathname dispatch are enumerated; arbitrary routing remains unresolved.",
+      "No application code is executed; runtime content is unknown.",
+      "Supported React composition follows source-selected component order; browser layout and visibility are unverified."
+    ]
+  },
+  "pages": [
+    {
+      "url": "/",
+      "template": "src/App.jsx",
+      "is_dynamic": false,
+      "coverage": {
+        "mode": "static-source",
+        "complete": false,
+        "limitations": [
+          {
+            "file": "src/components/ScrollReveal.jsx",
+            "line": 22,
+            "reason": "unresolved_rendered_expression"
+          },
+          {
+            "file": "src/components/ScrollReveal.jsx",
+            "line": 22,
+            "reason": "unresolved_attributes:ref"
+          },
+          {
+            "file": "src/App.jsx",
+            "line": 71,
+            "reason": "unresolved_rendered_expression"
+          },
+          {
+            "file": "src/App.jsx",
+            "line": 74,
+            "reason": "unresolved_condition"
+          },
+          {
+            "file": "src/App.jsx",
+            "line": 74,
+            "reason": "unresolved_rendered_expression"
+          },
+          {
+            "file": "src/App.jsx",
+            "line": 75,
+            "reason": "unresolved_rendered_expression"
+          },
+          {
+            "file": "src/App.jsx",
+            "line": 76,
+            "reason": "unresolved_condition"
+          },
+          {
+            "file": "src/App.jsx",
+            "line": 76,
+            "reason": "unresolved_rendered_expression"
+          },
+          {
+            "file": "src/App.jsx",
+            "line": 79,
+            "reason": "unresolved_condition"
+          },
+          {
+            "file": "src/App.jsx",
+            "line": 79,
+            "reason": "unresolved_rendered_expression"
+          },
+          {
+            "file": "src/App.jsx",
+            "line": 70,
+            "reason": "unresolved_attributes:ref,aria-label,aria-pressed,title"
+          },
+          {
+            "file": "src/components/ContactRail.jsx",
+            "line": 58,
+            "reason": "unresolved_rendered_expression"
+          },
+          {
+            "file": "src/components/ContactRail.jsx",
+            "line": 45,
+            "reason": "unresolved_component:LiquidMetal"
+          }
+        ],
+        "route_patterns": [
+          "/blog",
+          "/blog/"
+        ],
+        "entrypoint": "src/main.jsx",
+        "resolved_interaction_states": 4,
+        "resolved_local_fetches": [],
+        "note": "Composed from allowlisted source semantics. CSS visibility, arbitrary runtime/network data and browser behavior remain unverified."
+      },
+      "items": [
+        {
+          "source_id": "src/App.jsx:6865/20679/12274/6384:0",
+          "file": "src/App.jsx",
+          "line": 161,
+          "section": "article",
+          "section_id": "src/App.jsx:6434/20679/12274/6384:0",
+          "ui_state": "initial",
+          "data_bindings": [
+            {
+              "file": "src/store/data/majorProjects.json",
+              "json_pointer": "/0"
+            }
+          ],
+          "kind": "img",
+          "classname": "h-full w-full object-cover transition-transform duration-300 group-hover:scale-[1.025]",
+          "src": "/Image/UnlovableWeb.png",
+          "alt": "Unlovable - Application Builder. interface screenshot",
+          "loading": "lazy",
+          "section_heading": "Selected Work",
+          "format": "png",
+          "asset_file": "public/Image/UnlovableWeb.png",
+          "size_bytes": 530868,
+          "intrinsic_width": 1920.0,
+          "intrinsic_height": 1080.0,
+          "duration_seconds": null,
+          "probe_status": "measured",
+          "declared_width": null,
+          "declared_height": null,
+          "effective_loading": "lazy",
+          "loading_basis": "declared",
+          "measurement_status": "local-source-file",
+          "size_review": "over_200_kib_review",
+          "size_budget_note": "Review budget only; source bytes are not optimized transfer bytes. Display size and placement are needed to assess undersizing."
+        },
+        {
+          "source_id": "src/App.jsx:6865/20679/12274/6384:1",
+          "file": "src/App.jsx",
+          "line": 161,
+          "section": "article",
+          "section_id": "src/App.jsx:6434/20679/12274/6384:1",
+          "ui_state": "initial",
+          "data_bindings": [
+            {
+              "file": "src/store/data/majorProjects.json",
+              "json_pointer": "/1"
+            }
+          ],
+          "kind": "img",
+          "classname": "h-full w-full object-cover transition-transform duration-300 group-hover:scale-[1.025]",
+          "src": "/Image/UnlovableMobile.png",
+          "alt": "Unlovable - Mobile Application. interface screenshot",
+          "loading": "lazy",
+          "section_heading": "Selected Work",
+          "format": "png",
+          "asset_file": "public/Image/UnlovableMobile.png",
+          "size_bytes": 372704,
+          "intrinsic_width": 1920.0,
+          "intrinsic_height": 1080.0,
+          "duration_seconds": null,
+          "probe_status": "measured",
+          "declared_width": null,
+          "declared_height": null,
+          "effective_loading": "lazy",
+          "loading_basis": "declared",
+          "measurement_status": "local-source-file",
+          "size_review": "over_200_kib_review",
+          "size_budget_note": "Review budget only; source bytes are not optimized transfer bytes. Display size and placement are needed to assess undersizing."
+        },
+        {
+          "source_id": "src/App.jsx:6865/20679/12274/6384:2",
+          "file": "src/App.jsx",
+          "line": 161,
+          "section": "article",
+          "section_id": "src/App.jsx:6434/20679/12274/6384:2",
+          "ui_state": "initial",
+          "data_bindings": [
+            {
+              "file": "src/store/data/majorProjects.json",
+              "json_pointer": "/2"
+            }
+          ],
+          "kind": "img",
+          "classname": "h-full w-full object-cover transition-transform duration-300 group-hover:scale-[1.025]",
+          "src": "/Image/ExnessWeb.png",
+          "alt": "Exness - CFD Application. interface screenshot",
+          "loading": "lazy",
+          "section_heading": "Selected Work",
+          "format": "png",
+          "asset_file": "public/Image/ExnessWeb.png",
+          "size_bytes": 1253174,
+          "intrinsic_width": 1920.0,
+          "intrinsic_height": 1080.0,
+          "duration_seconds": null,
+          "probe_status": "measured",
+          "declared_width": null,
+          "declared_height": null,
+          "effective_loading": "lazy",
+          "loading_basis": "declared",
+          "measurement_status": "local-source-file",
+          "size_review": "over_200_kib_review",
+          "size_budget_note": "Review budget only; source bytes are not optimized transfer bytes. Display size and placement are needed to assess undersizing."
+        },
+        {
+          "source_id": "src/App.jsx:6865/20679/12274/6384:3",
+          "file": "src/App.jsx",
+          "line": 161,
+          "section": "article",
+          "section_id": "src/App.jsx:6434/20679/12274/6384:3",
+          "ui_state": "initial",
+          "data_bindings": [
+            {
+              "file": "src/store/data/majorProjects.json",
+              "json_pointer": "/3"
+            }
+          ],
+          "kind": "img",
+          "classname": "h-full w-full object-cover transition-transform duration-300 group-hover:scale-[1.025]",
+          "src": "/Image/ExnessMobile.png",
+          "alt": "Exness - Mobile Application. interface screenshot",
+          "loading": "lazy",
+          "section_heading": "Selected Work",
+          "format": "png",
+          "asset_file": "public/Image/ExnessMobile.png",
+          "size_bytes": 1988607,
+          "intrinsic_width": 1920.0,
+          "intrinsic_height": 1080.0,
+          "duration_seconds": null,
+          "probe_status": "measured",
+          "declared_width": null,
+          "declared_height": null,
+          "effective_loading": "lazy",
+          "loading_basis": "declared",
+          "measurement_status": "local-source-file",
+          "size_review": "over_200_kib_review",
+          "size_budget_note": "Review budget only; source bytes are not optimized transfer bytes. Display size and placement are needed to assess undersizing."
+        },
+        {
+          "source_id": "src/App.jsx:9540/20679/12274",
+          "file": "src/App.jsx",
+          "line": 192,
+          "section": "section",
+          "section_id": "src/App.jsx:8929/20679/12274",
+          "ui_state": "interaction:activeProject:0",
+          "data_bindings": [],
+          "kind": "video",
+          "key": "/video/UnlovableWeb.mp4",
+          "classname": "mx-auto block h-auto w-auto max-h-[calc(100dvh-8rem)] max-w-[calc(100vw-2rem)] rounded-lg bg-black object-contain",
+          "src": "/video/UnlovableWeb.mp4",
+          "poster": "/Image/UnlovableWeb.png",
+          "controls": "true",
+          "autoplay": "true",
+          "muted": "true",
+          "playsinline": "true",
+          "section_heading": "Unlovable - Application Builder. demo",
+          "format": "mp4",
+          "asset_file": "public/video/UnlovableWeb.mp4",
+          "size_bytes": 18364134,
+          "intrinsic_width": null,
+          "intrinsic_height": null,
+          "duration_seconds": null,
+          "probe_status": "unknown",
+          "declared_width": null,
+          "declared_height": null,
+          "effective_loading": null,
+          "loading_basis": "not-applicable",
+          "measurement_status": "local-source-file",
+          "size_review": "not-an-image-budget",
+          "size_budget_note": "Review budget only; source bytes are not optimized transfer bytes. Display size and placement are needed to assess undersizing."
+        },
+        {
+          "source_id": "src/App.jsx:9540/20679/12274",
+          "file": "src/App.jsx",
+          "line": 192,
+          "section": "section",
+          "section_id": "src/App.jsx:8929/20679/12274",
+          "ui_state": "interaction:activeProject:1",
+          "data_bindings": [],
+          "kind": "video",
+          "key": "/video/UnlovableMobile.mp4",
+          "classname": "mx-auto block h-auto w-auto max-h-[calc(100dvh-8rem)] max-w-[calc(100vw-2rem)] rounded-lg bg-black object-contain",
+          "src": "/video/UnlovableMobile.mp4",
+          "poster": "/Image/UnlovableMobile.png",
+          "controls": "true",
+          "autoplay": "true",
+          "muted": "true",
+          "playsinline": "true",
+          "section_heading": "Unlovable - Mobile Application. demo",
+          "format": "mp4",
+          "asset_file": "public/video/UnlovableMobile.mp4",
+          "size_bytes": 15634718,
+          "intrinsic_width": null,
+          "intrinsic_height": null,
+          "duration_seconds": null,
+          "probe_status": "unknown",
+          "declared_width": null,
+          "declared_height": null,
+          "effective_loading": null,
+          "loading_basis": "not-applicable",
+          "measurement_status": "local-source-file",
+          "size_review": "not-an-image-budget",
+          "size_budget_note": "Review budget only; source bytes are not optimized transfer bytes. Display size and placement are needed to assess undersizing."
+        },
+        {
+          "source_id": "src/App.jsx:9540/20679/12274",
+          "file": "src/App.jsx",
+          "line": 192,
+          "section": "section",
+          "section_id": "src/App.jsx:8929/20679/12274",
+          "ui_state": "interaction:activeProject:2",
+          "data_bindings": [],
+          "kind": "video",
+          "key": "/video/ExnessWeb.mp4",
+          "classname": "mx-auto block h-auto w-auto max-h-[calc(100dvh-8rem)] max-w-[calc(100vw-2rem)] rounded-lg bg-black object-contain",
+          "src": "/video/ExnessWeb.mp4",
+          "poster": "/Image/ExnessWeb.png",
+          "controls": "true",
+          "autoplay": "true",
+          "muted": "true",
+          "playsinline": "true",
+          "section_heading": "Exness - CFD Application. demo",
+          "format": "mp4",
+          "asset_file": "public/video/ExnessWeb.mp4",
+          "size_bytes": 21437476,
+          "intrinsic_width": null,
+          "intrinsic_height": null,
+          "duration_seconds": null,
+          "probe_status": "unknown",
+          "declared_width": null,
+          "declared_height": null,
+          "effective_loading": null,
+          "loading_basis": "not-applicable",
+          "measurement_status": "local-source-file",
+          "size_review": "not-an-image-budget",
+          "size_budget_note": "Review budget only; source bytes are not optimized transfer bytes. Display size and placement are needed to assess undersizing."
+        },
+        {
+          "source_id": "src/App.jsx:9540/20679/12274",
+          "file": "src/App.jsx",
+          "line": 192,
+          "section": "section",
+          "section_id": "src/App.jsx:8929/20679/12274",
+          "ui_state": "interaction:activeProject:3",
+          "data_bindings": [],
+          "kind": "video",
+          "key": "/video/ExnessMobile.mp4",
+          "classname": "mx-auto block h-auto w-auto max-h-[calc(100dvh-8rem)] max-w-[calc(100vw-2rem)] rounded-lg bg-black object-contain",
+          "src": "/video/ExnessMobile.mp4",
+          "poster": "/Image/ExnessMobile.png",
+          "controls": "true",
+          "autoplay": "true",
+          "muted": "true",
+          "playsinline": "true",
+          "section_heading": "Exness - Mobile Application. demo",
+          "format": "mp4",
+          "asset_file": "public/video/ExnessMobile.mp4",
+          "size_bytes": 7715219,
+          "intrinsic_width": null,
+          "intrinsic_height": null,
+          "duration_seconds": null,
+          "probe_status": "unknown",
+          "declared_width": null,
+          "declared_height": null,
+          "effective_loading": null,
+          "loading_basis": "not-applicable",
+          "measurement_status": "local-source-file",
+          "size_review": "not-an-image-budget",
+          "size_budget_note": "Review budget only; source bytes are not optimized transfer bytes. Display size and placement are needed to assess undersizing."
+        }
+      ]
+    },
+    {
+      "url": "/about",
+      "template": "src/App.jsx",
+      "is_dynamic": false,
+      "coverage": {
+        "mode": "static-source",
+        "complete": false,
+        "limitations": [
+          {
+            "file": "src/components/ScrollReveal.jsx",
+            "line": 22,
+            "reason": "unresolved_rendered_expression"
+          },
+          {
+            "file": "src/components/ScrollReveal.jsx",
+            "line": 22,
+            "reason": "unresolved_attributes:ref"
+          },
+          {
+            "file": "src/App.jsx",
+            "line": 71,
+            "reason": "unresolved_rendered_expression"
+          },
+          {
+            "file": "src/App.jsx",
+            "line": 74,
+            "reason": "unresolved_condition"
+          },
+          {
+            "file": "src/App.jsx",
+            "line": 74,
+            "reason": "unresolved_rendered_expression"
+          },
+          {
+            "file": "src/App.jsx",
+            "line": 75,
+            "reason": "unresolved_rendered_expression"
+          },
+          {
+            "file": "src/App.jsx",
+            "line": 76,
+            "reason": "unresolved_condition"
+          },
+          {
+            "file": "src/App.jsx",
+            "line": 76,
+            "reason": "unresolved_rendered_expression"
+          },
+          {
+            "file": "src/App.jsx",
+            "line": 79,
+            "reason": "unresolved_condition"
+          },
+          {
+            "file": "src/App.jsx",
+            "line": 79,
+            "reason": "unresolved_rendered_expression"
+          },
+          {
+            "file": "src/App.jsx",
+            "line": 70,
+            "reason": "unresolved_attributes:ref,aria-label,aria-pressed,title"
+          },
+          {
+            "file": "src/components/ContactRail.jsx",
+            "line": 58,
+            "reason": "unresolved_rendered_expression"
+          },
+          {
+            "file": "src/components/ContactRail.jsx",
+            "line": 45,
+            "reason": "unresolved_component:LiquidMetal"
+          }
+        ],
+        "route_patterns": [
+          "/blog",
+          "/blog/"
+        ],
+        "entrypoint": "src/main.jsx",
+        "resolved_interaction_states": 0,
+        "resolved_local_fetches": [],
+        "note": "Composed from allowlisted source semantics. CSS visibility, arbitrary runtime/network data and browser behavior remain unverified."
+      },
+      "items": []
+    },
+    {
+      "url": "/blog",
+      "template": "src/App.jsx",
+      "is_dynamic": false,
+      "coverage": {
+        "mode": "static-source",
+        "complete": false,
+        "limitations": [
+          {
+            "file": "src/components/ScrollReveal.jsx",
+            "line": 22,
+            "reason": "unresolved_rendered_expression"
+          },
+          {
+            "file": "src/components/ScrollReveal.jsx",
+            "line": 22,
+            "reason": "unresolved_attributes:ref"
+          },
+          {
+            "file": "src/App.jsx",
+            "line": 71,
+            "reason": "unresolved_rendered_expression"
+          },
+          {
+            "file": "src/App.jsx",
+            "line": 74,
+            "reason": "unresolved_condition"
+          },
+          {
+            "file": "src/App.jsx",
+            "line": 74,
+            "reason": "unresolved_rendered_expression"
+          },
+          {
+            "file": "src/App.jsx",
+            "line": 75,
+            "reason": "unresolved_rendered_expression"
+          },
+          {
+            "file": "src/App.jsx",
+            "line": 76,
+            "reason": "unresolved_condition"
+          },
+          {
+            "file": "src/App.jsx",
+            "line": 76,
+            "reason": "unresolved_rendered_expression"
+          },
+          {
+            "file": "src/App.jsx",
+            "line": 79,
+            "reason": "unresolved_condition"
+          },
+          {
+            "file": "src/App.jsx",
+            "line": 79,
+            "reason": "unresolved_rendered_expression"
+          },
+          {
+            "file": "src/App.jsx",
+            "line": 70,
+            "reason": "unresolved_attributes:ref,aria-label,aria-pressed,title"
+          },
+          {
+            "file": "src/components/ContactRail.jsx",
+            "line": 58,
+            "reason": "unresolved_rendered_expression"
+          },
+          {
+            "file": "src/components/ContactRail.jsx",
+            "line": 45,
+            "reason": "unresolved_component:LiquidMetal"
+          }
+        ],
+        "route_patterns": [
+          "/blog",
+          "/blog/"
+        ],
+        "entrypoint": "src/main.jsx",
+        "resolved_interaction_states": 0,
+        "resolved_local_fetches": [
+          "public/blog/blog.json"
+        ],
+        "note": "Composed from allowlisted source semantics. CSS visibility, arbitrary runtime/network data and browser behavior remain unverified."
+      },
+      "items": []
+    },
+    {
+      "url": "/blog/deploying-your-site-with-vercel",
+      "template": "src/App.jsx",
+      "is_dynamic": false,
+      "coverage": {
+        "mode": "static-source",
+        "complete": false,
+        "limitations": [
+          {
+            "file": "src/App.jsx",
+            "line": 71,
+            "reason": "unresolved_rendered_expression"
+          },
+          {
+            "file": "src/App.jsx",
+            "line": 74,
+            "reason": "unresolved_condition"
+          },
+          {
+            "file": "src/App.jsx",
+            "line": 74,
+            "reason": "unresolved_rendered_expression"
+          },
+          {
+            "file": "src/App.jsx",
+            "line": 75,
+            "reason": "unresolved_rendered_expression"
+          },
+          {
+            "file": "src/App.jsx",
+            "line": 76,
+            "reason": "unresolved_condition"
+          },
+          {
+            "file": "src/App.jsx",
+            "line": 76,
+            "reason": "unresolved_rendered_expression"
+          },
+          {
+            "file": "src/App.jsx",
+            "line": 79,
+            "reason": "unresolved_condition"
+          },
+          {
+            "file": "src/App.jsx",
+            "line": 79,
+            "reason": "unresolved_rendered_expression"
+          },
+          {
+            "file": "src/App.jsx",
+            "line": 70,
+            "reason": "unresolved_attributes:ref,aria-label,aria-pressed,title"
+          },
+          {
+            "file": "src/components/ContactRail.jsx",
+            "line": 58,
+            "reason": "unresolved_rendered_expression"
+          },
+          {
+            "file": "src/components/ContactRail.jsx",
+            "line": 45,
+            "reason": "unresolved_component:LiquidMetal"
+          }
+        ],
+        "route_patterns": [
+          "/blog",
+          "/blog/"
+        ],
+        "entrypoint": "src/main.jsx",
+        "resolved_interaction_states": 0,
+        "resolved_local_fetches": [
+          "public/blog/deploying-your-site-with-vercel.md"
+        ],
+        "note": "Composed from allowlisted source semantics. CSS visibility, arbitrary runtime/network data and browser behavior remain unverified."
+      },
+      "items": []
+    },
+    {
+      "url": "/bookshelf",
+      "template": "src/App.jsx",
+      "is_dynamic": false,
+      "coverage": {
+        "mode": "static-source",
+        "complete": false,
+        "limitations": [
+          {
+            "file": "src/components/ScrollReveal.jsx",
+            "line": 22,
+            "reason": "unresolved_rendered_expression"
+          },
+          {
+            "file": "src/components/ScrollReveal.jsx",
+            "line": 22,
+            "reason": "unresolved_attributes:ref"
+          },
+          {
+            "file": "src/App.jsx",
+            "line": 71,
+            "reason": "unresolved_rendered_expression"
+          },
+          {
+            "file": "src/App.jsx",
+            "line": 74,
+            "reason": "unresolved_condition"
+          },
+          {
+            "file": "src/App.jsx",
+            "line": 74,
+            "reason": "unresolved_rendered_expression"
+          },
+          {
+            "file": "src/App.jsx",
+            "line": 75,
+            "reason": "unresolved_rendered_expression"
+          },
+          {
+            "file": "src/App.jsx",
+            "line": 76,
+            "reason": "unresolved_condition"
+          },
+          {
+            "file": "src/App.jsx",
+            "line": 76,
+            "reason": "unresolved_rendered_expression"
+          },
+          {
+            "file": "src/App.jsx",
+            "line": 79,
+            "reason": "unresolved_condition"
+          },
+          {
+            "file": "src/App.jsx",
+            "line": 79,
+            "reason": "unresolved_rendered_expression"
+          },
+          {
+            "file": "src/App.jsx",
+            "line": 70,
+            "reason": "unresolved_attributes:ref,aria-label,aria-pressed,title"
+          },
+          {
+            "file": "src/components/ContactRail.jsx",
+            "line": 58,
+            "reason": "unresolved_rendered_expression"
+          },
+          {
+            "file": "src/components/ContactRail.jsx",
+            "line": 45,
+            "reason": "unresolved_component:LiquidMetal"
+          }
+        ],
+        "route_patterns": [
+          "/blog",
+          "/blog/"
+        ],
+        "entrypoint": "src/main.jsx",
+        "resolved_interaction_states": 0,
+        "resolved_local_fetches": [],
+        "note": "Composed from allowlisted source semantics. CSS visibility, arbitrary runtime/network data and browser behavior remain unverified."
+      },
+      "items": [
+        {
+          "source_id": "src/App.jsx:16515/20762/16267:0",
+          "file": "src/App.jsx",
+          "line": 341,
+          "section": "article",
+          "section_id": "src/App.jsx:16340/20762/16267:0",
+          "ui_state": "initial",
+          "data_bindings": [
+            {
+              "file": "src/store/data/books.json",
+              "json_pointer": "/0"
+            }
+          ],
+          "kind": "img",
+          "classname": "block w-28 max-h-[170px] object-contain object-top max-[640px]:w-20 max-[640px]:max-h-[120px]",
+          "src": "https://m.media-amazon.com/images/I/71tAHjMNWUL._SL1169_.jpg",
+          "alt": "Cover of Freedom from the Known",
+          "loading": "lazy",
+          "format": "jpg",
+          "asset_file": null,
+          "size_bytes": null,
+          "intrinsic_width": null,
+          "intrinsic_height": null,
+          "duration_seconds": null,
+          "probe_status": "unresolved-or-remote",
+          "declared_width": null,
+          "declared_height": null,
+          "effective_loading": "lazy",
+          "loading_basis": "declared",
+          "measurement_status": "unresolved-or-remote",
+          "size_review": "unknown",
+          "size_budget_note": "Review budget only; source bytes are not optimized transfer bytes. Display size and placement are needed to assess undersizing."
+        },
+        {
+          "source_id": "src/App.jsx:16515/20762/16267:1",
+          "file": "src/App.jsx",
+          "line": 341,
+          "section": "article",
+          "section_id": "src/App.jsx:16340/20762/16267:1",
+          "ui_state": "initial",
+          "data_bindings": [
+            {
+              "file": "src/store/data/books.json",
+              "json_pointer": "/1"
+            }
+          ],
+          "kind": "img",
+          "classname": "block w-28 max-h-[170px] object-contain object-top max-[640px]:w-20 max-[640px]:max-h-[120px]",
+          "src": "https://m.media-amazon.com/images/I/71ZMsYuwELL._SY466_.jpg",
+          "alt": "Cover of The 12 Week Year",
+          "loading": "lazy",
+          "format": "jpg",
+          "asset_file": null,
+          "size_bytes": null,
+          "intrinsic_width": null,
+          "intrinsic_height": null,
+          "duration_seconds": null,
+          "probe_status": "unresolved-or-remote",
+          "declared_width": null,
+          "declared_height": null,
+          "effective_loading": "lazy",
+          "loading_basis": "declared",
+          "measurement_status": "unresolved-or-remote",
+          "size_review": "unknown",
+          "size_budget_note": "Review budget only; source bytes are not optimized transfer bytes. Display size and placement are needed to assess undersizing."
+        }
+      ]
+    }
+  ],
+  "assets": [
+    {
+      "asset_file": "public/logo.png",
+      "format": "png",
+      "size_bytes": 260416,
+      "intrinsic_width": 500.0,
+      "intrinsic_height": 500.0,
+      "duration_seconds": null,
+      "measurement_status": "measured",
+      "page_references": [],
+      "usage_status": "not-in-page-media-inventory"
+    },
+    {
+      "asset_file": "public/Image/ExnessMobile.png",
+      "format": "png",
+      "size_bytes": 1988607,
+      "intrinsic_width": 1920.0,
+      "intrinsic_height": 1080.0,
+      "duration_seconds": null,
+      "measurement_status": "measured",
+      "page_references": [
+        {
+          "url": "/",
+          "source_id": "src/App.jsx:6865/20679/12274/6384:3",
+          "ui_state": "initial"
+        }
+      ],
+      "usage_status": "page-referenced"
+    },
+    {
+      "asset_file": "public/Image/ExnessWeb.png",
+      "format": "png",
+      "size_bytes": 1253174,
+      "intrinsic_width": 1920.0,
+      "intrinsic_height": 1080.0,
+      "duration_seconds": null,
+      "measurement_status": "measured",
+      "page_references": [
+        {
+          "url": "/",
+          "source_id": "src/App.jsx:6865/20679/12274/6384:2",
+          "ui_state": "initial"
+        }
+      ],
+      "usage_status": "page-referenced"
+    },
+    {
+      "asset_file": "public/Image/UnlovableMobile.png",
+      "format": "png",
+      "size_bytes": 372704,
+      "intrinsic_width": 1920.0,
+      "intrinsic_height": 1080.0,
+      "duration_seconds": null,
+      "measurement_status": "measured",
+      "page_references": [
+        {
+          "url": "/",
+          "source_id": "src/App.jsx:6865/20679/12274/6384:1",
+          "ui_state": "initial"
+        }
+      ],
+      "usage_status": "page-referenced"
+    },
+    {
+      "asset_file": "public/Image/UnlovableWeb.png",
+      "format": "png",
+      "size_bytes": 530868,
+      "intrinsic_width": 1920.0,
+      "intrinsic_height": 1080.0,
+      "duration_seconds": null,
+      "measurement_status": "measured",
+      "page_references": [
+        {
+          "url": "/",
+          "source_id": "src/App.jsx:6865/20679/12274/6384:0",
+          "ui_state": "initial"
+        }
+      ],
+      "usage_status": "page-referenced"
+    },
+    {
+      "asset_file": "public/video/ExnessMobile.mp4",
+      "format": "mp4",
+      "size_bytes": 7715219,
+      "intrinsic_width": null,
+      "intrinsic_height": null,
+      "duration_seconds": null,
+      "measurement_status": "unknown",
+      "page_references": [
+        {
+          "url": "/",
+          "source_id": "src/App.jsx:9540/20679/12274",
+          "ui_state": "interaction:activeProject:3"
+        }
+      ],
+      "usage_status": "page-referenced"
+    },
+    {
+      "asset_file": "public/video/ExnessWeb.mp4",
+      "format": "mp4",
+      "size_bytes": 21437476,
+      "intrinsic_width": null,
+      "intrinsic_height": null,
+      "duration_seconds": null,
+      "measurement_status": "unknown",
+      "page_references": [
+        {
+          "url": "/",
+          "source_id": "src/App.jsx:9540/20679/12274",
+          "ui_state": "interaction:activeProject:2"
+        }
+      ],
+      "usage_status": "page-referenced"
+    },
+    {
+      "asset_file": "public/video/UnlovableMobile.mp4",
+      "format": "mp4",
+      "size_bytes": 15634718,
+      "intrinsic_width": null,
+      "intrinsic_height": null,
+      "duration_seconds": null,
+      "measurement_status": "unknown",
+      "page_references": [
+        {
+          "url": "/",
+          "source_id": "src/App.jsx:9540/20679/12274",
+          "ui_state": "interaction:activeProject:1"
+        }
+      ],
+      "usage_status": "page-referenced"
+    },
+    {
+      "asset_file": "public/video/UnlovableWeb.mp4",
+      "format": "mp4",
+      "size_bytes": 18364134,
+      "intrinsic_width": null,
+      "intrinsic_height": null,
+      "duration_seconds": null,
+      "measurement_status": "unknown",
+      "page_references": [
+        {
+          "url": "/",
+          "source_id": "src/App.jsx:9540/20679/12274",
+          "ui_state": "interaction:activeProject:0"
+        }
+      ],
+      "usage_status": "page-referenced"
+    }
+  ]
+}

@@ -1,0 +1,1270 @@
+{
+  "schema_version": "2.0",
+  "category": "page_structure",
+  "extraction": {
+    "mode": "static-source",
+    "route_count": 5,
+    "limitations": [
+      "File routes, literal React Router routes and supported pathname dispatch are enumerated; arbitrary routing remains unresolved.",
+      "No application code is executed; runtime content is unknown.",
+      "Supported React composition follows source-selected component order; browser layout and visibility are unverified."
+    ]
+  },
+  "pages": [
+    {
+      "url": "/",
+      "template": "src/App.jsx",
+      "is_dynamic": false,
+      "coverage": {
+        "mode": "static-source",
+        "complete": false,
+        "limitations": [
+          {
+            "file": "src/components/ScrollReveal.jsx",
+            "line": 22,
+            "reason": "unresolved_rendered_expression"
+          },
+          {
+            "file": "src/components/ScrollReveal.jsx",
+            "line": 22,
+            "reason": "unresolved_attributes:ref"
+          },
+          {
+            "file": "src/App.jsx",
+            "line": 71,
+            "reason": "unresolved_rendered_expression"
+          },
+          {
+            "file": "src/App.jsx",
+            "line": 74,
+            "reason": "unresolved_condition"
+          },
+          {
+            "file": "src/App.jsx",
+            "line": 74,
+            "reason": "unresolved_rendered_expression"
+          },
+          {
+            "file": "src/App.jsx",
+            "line": 75,
+            "reason": "unresolved_rendered_expression"
+          },
+          {
+            "file": "src/App.jsx",
+            "line": 76,
+            "reason": "unresolved_condition"
+          },
+          {
+            "file": "src/App.jsx",
+            "line": 76,
+            "reason": "unresolved_rendered_expression"
+          },
+          {
+            "file": "src/App.jsx",
+            "line": 79,
+            "reason": "unresolved_condition"
+          },
+          {
+            "file": "src/App.jsx",
+            "line": 79,
+            "reason": "unresolved_rendered_expression"
+          },
+          {
+            "file": "src/App.jsx",
+            "line": 70,
+            "reason": "unresolved_attributes:ref,aria-label,aria-pressed,title"
+          },
+          {
+            "file": "src/components/ContactRail.jsx",
+            "line": 58,
+            "reason": "unresolved_rendered_expression"
+          },
+          {
+            "file": "src/components/ContactRail.jsx",
+            "line": 45,
+            "reason": "unresolved_component:LiquidMetal"
+          }
+        ],
+        "route_patterns": [
+          "/blog",
+          "/blog/"
+        ],
+        "entrypoint": "src/main.jsx",
+        "resolved_interaction_states": 4,
+        "resolved_local_fetches": [],
+        "note": "Composed from allowlisted source semantics. CSS visibility, arbitrary runtime/network data and browser behavior remain unverified."
+      },
+      "headings": [
+        {
+          "source_id": "src/App.jsx:11762/20679",
+          "file": "src/App.jsx",
+          "line": 252,
+          "section": "section",
+          "section_id": "src/App.jsx:11675/20679",
+          "ui_state": "initial",
+          "data_bindings": [],
+          "level": 2,
+          "text": "About",
+          "id": "about-heading",
+          "section_heading": "About"
+        },
+        {
+          "source_id": "src/App.jsx:4490/20679/12224",
+          "file": "src/App.jsx",
+          "line": 111,
+          "section": "section",
+          "section_id": "src/App.jsx:4401/20679/12224",
+          "ui_state": "initial",
+          "data_bindings": [],
+          "level": 2,
+          "text": "Work Experience",
+          "id": "experience-heading",
+          "section_heading": "Work Experience"
+        },
+        {
+          "source_id": "src/App.jsx:6200/20679/12274",
+          "file": "src/App.jsx",
+          "line": 151,
+          "section": "section",
+          "section_id": "src/App.jsx:6095/20679/12274",
+          "ui_state": "initial",
+          "data_bindings": [],
+          "level": 2,
+          "text": "Selected Work",
+          "id": "work-heading",
+          "section_heading": "Selected Work"
+        },
+        {
+          "source_id": "src/App.jsx:7996/20679/12274/6384:0",
+          "file": "src/App.jsx",
+          "line": 171,
+          "section": "article",
+          "section_id": "src/App.jsx:6434/20679/12274/6384:0",
+          "ui_state": "initial",
+          "data_bindings": [
+            {
+              "file": "src/store/data/majorProjects.json",
+              "json_pointer": "/0"
+            }
+          ],
+          "level": 3,
+          "text": "Unlovable - Application Builder.",
+          "id": null,
+          "section_heading": "Selected Work"
+        },
+        {
+          "source_id": "src/App.jsx:7996/20679/12274/6384:1",
+          "file": "src/App.jsx",
+          "line": 171,
+          "section": "article",
+          "section_id": "src/App.jsx:6434/20679/12274/6384:1",
+          "ui_state": "initial",
+          "data_bindings": [
+            {
+              "file": "src/store/data/majorProjects.json",
+              "json_pointer": "/1"
+            }
+          ],
+          "level": 3,
+          "text": "Unlovable - Mobile Application.",
+          "id": null,
+          "section_heading": "Selected Work"
+        },
+        {
+          "source_id": "src/App.jsx:7996/20679/12274/6384:2",
+          "file": "src/App.jsx",
+          "line": 171,
+          "section": "article",
+          "section_id": "src/App.jsx:6434/20679/12274/6384:2",
+          "ui_state": "initial",
+          "data_bindings": [
+            {
+              "file": "src/store/data/majorProjects.json",
+              "json_pointer": "/2"
+            }
+          ],
+          "level": 3,
+          "text": "Exness - CFD Application.",
+          "id": null,
+          "section_heading": "Selected Work"
+        },
+        {
+          "source_id": "src/App.jsx:7996/20679/12274/6384:3",
+          "file": "src/App.jsx",
+          "line": 171,
+          "section": "article",
+          "section_id": "src/App.jsx:6434/20679/12274/6384:3",
+          "ui_state": "initial",
+          "data_bindings": [
+            {
+              "file": "src/store/data/majorProjects.json",
+              "json_pointer": "/3"
+            }
+          ],
+          "level": 3,
+          "text": "Exness - Mobile Application.",
+          "id": null,
+          "section_heading": "Selected Work"
+        },
+        {
+          "source_id": "src/App.jsx:10782/20679/12326",
+          "file": "src/App.jsx",
+          "line": 231,
+          "section": "section",
+          "section_id": "src/App.jsx:10699/20679/12326",
+          "ui_state": "initial",
+          "data_bindings": [],
+          "level": 2,
+          "text": "Skills",
+          "id": "more-heading",
+          "section_heading": "Skills"
+        },
+        {
+          "source_id": "src/App.jsx:9147/20679/12274",
+          "file": "src/App.jsx",
+          "line": 189,
+          "section": "section",
+          "section_id": "src/App.jsx:8929/20679/12274",
+          "ui_state": "interaction:activeProject:0",
+          "data_bindings": [],
+          "level": 3,
+          "text": "Unlovable - Application Builder.",
+          "id": null,
+          "section_heading": "Unlovable - Application Builder. demo"
+        },
+        {
+          "source_id": "src/App.jsx:9147/20679/12274",
+          "file": "src/App.jsx",
+          "line": 189,
+          "section": "section",
+          "section_id": "src/App.jsx:8929/20679/12274",
+          "ui_state": "interaction:activeProject:1",
+          "data_bindings": [],
+          "level": 3,
+          "text": "Unlovable - Mobile Application.",
+          "id": null,
+          "section_heading": "Unlovable - Mobile Application. demo"
+        },
+        {
+          "source_id": "src/App.jsx:9147/20679/12274",
+          "file": "src/App.jsx",
+          "line": 189,
+          "section": "section",
+          "section_id": "src/App.jsx:8929/20679/12274",
+          "ui_state": "interaction:activeProject:2",
+          "data_bindings": [],
+          "level": 3,
+          "text": "Exness - CFD Application.",
+          "id": null,
+          "section_heading": "Exness - CFD Application. demo"
+        },
+        {
+          "source_id": "src/App.jsx:9147/20679/12274",
+          "file": "src/App.jsx",
+          "line": 189,
+          "section": "section",
+          "section_id": "src/App.jsx:8929/20679/12274",
+          "ui_state": "interaction:activeProject:3",
+          "data_bindings": [],
+          "level": 3,
+          "text": "Exness - Mobile Application.",
+          "id": null,
+          "section_heading": "Exness - Mobile Application. demo"
+        }
+      ],
+      "landmarks": [
+        {
+          "file": "composed-react-tree",
+          "landmarks": {
+            "main": 1,
+            "nav": 2,
+            "header": 1,
+            "section": 4,
+            "article": 6,
+            "aside": 1
+          },
+          "sections": [
+            {
+              "parent_section_id": null,
+              "source_id": "src/App.jsx:21181",
+              "tag": "main",
+              "id": null,
+              "labelledby": null,
+              "label": null
+            },
+            {
+              "parent_section_id": "src/App.jsx:21181",
+              "source_id": "src/components/PageRail.jsx:233/21536",
+              "tag": "nav",
+              "id": null,
+              "labelledby": null,
+              "label": "Pages"
+            },
+            {
+              "parent_section_id": "src/App.jsx:21181",
+              "source_id": "src/App.jsx:21638",
+              "tag": "header",
+              "id": null,
+              "labelledby": null,
+              "label": null
+            },
+            {
+              "parent_section_id": "src/App.jsx:21181",
+              "source_id": "src/App.jsx:11675/20679",
+              "tag": "section",
+              "id": null,
+              "labelledby": "about-heading",
+              "label": null
+            },
+            {
+              "parent_section_id": "src/App.jsx:21181",
+              "source_id": "src/App.jsx:4401/20679/12224",
+              "tag": "section",
+              "id": null,
+              "labelledby": "experience-heading",
+              "label": null
+            },
+            {
+              "parent_section_id": "src/App.jsx:4401/20679/12224",
+              "source_id": "src/App.jsx:4668/20679/12224/4624:0",
+              "tag": "article",
+              "id": null,
+              "labelledby": null,
+              "label": null
+            },
+            {
+              "parent_section_id": "src/App.jsx:4401/20679/12224",
+              "source_id": "src/App.jsx:4668/20679/12224/4624:1",
+              "tag": "article",
+              "id": null,
+              "labelledby": null,
+              "label": null
+            },
+            {
+              "parent_section_id": "src/App.jsx:21181",
+              "source_id": "src/App.jsx:6095/20679/12274",
+              "tag": "section",
+              "id": "work",
+              "labelledby": "work-heading",
+              "label": null
+            },
+            {
+              "parent_section_id": "src/App.jsx:6095/20679/12274",
+              "source_id": "src/App.jsx:6434/20679/12274/6384:0",
+              "tag": "article",
+              "id": null,
+              "labelledby": null,
+              "label": null
+            },
+            {
+              "parent_section_id": "src/App.jsx:6095/20679/12274",
+              "source_id": "src/App.jsx:6434/20679/12274/6384:1",
+              "tag": "article",
+              "id": null,
+              "labelledby": null,
+              "label": null
+            },
+            {
+              "parent_section_id": "src/App.jsx:6095/20679/12274",
+              "source_id": "src/App.jsx:6434/20679/12274/6384:2",
+              "tag": "article",
+              "id": null,
+              "labelledby": null,
+              "label": null
+            },
+            {
+              "parent_section_id": "src/App.jsx:6095/20679/12274",
+              "source_id": "src/App.jsx:6434/20679/12274/6384:3",
+              "tag": "article",
+              "id": null,
+              "labelledby": null,
+              "label": null
+            },
+            {
+              "parent_section_id": "src/App.jsx:21181",
+              "source_id": "src/App.jsx:10699/20679/12326",
+              "tag": "section",
+              "id": null,
+              "labelledby": "more-heading",
+              "label": null
+            },
+            {
+              "parent_section_id": "src/App.jsx:21181",
+              "source_id": "src/components/ContactRail.jsx:3056/22007",
+              "tag": "aside",
+              "id": null,
+              "labelledby": null,
+              "label": "Contact links"
+            },
+            {
+              "parent_section_id": "src/components/ContactRail.jsx:3056/22007",
+              "source_id": "src/components/ContactRail.jsx:3532/22007",
+              "tag": "nav",
+              "id": null,
+              "labelledby": null,
+              "label": "Contact links"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "/about",
+      "template": "src/App.jsx",
+      "is_dynamic": false,
+      "coverage": {
+        "mode": "static-source",
+        "complete": false,
+        "limitations": [
+          {
+            "file": "src/components/ScrollReveal.jsx",
+            "line": 22,
+            "reason": "unresolved_rendered_expression"
+          },
+          {
+            "file": "src/components/ScrollReveal.jsx",
+            "line": 22,
+            "reason": "unresolved_attributes:ref"
+          },
+          {
+            "file": "src/App.jsx",
+            "line": 71,
+            "reason": "unresolved_rendered_expression"
+          },
+          {
+            "file": "src/App.jsx",
+            "line": 74,
+            "reason": "unresolved_condition"
+          },
+          {
+            "file": "src/App.jsx",
+            "line": 74,
+            "reason": "unresolved_rendered_expression"
+          },
+          {
+            "file": "src/App.jsx",
+            "line": 75,
+            "reason": "unresolved_rendered_expression"
+          },
+          {
+            "file": "src/App.jsx",
+            "line": 76,
+            "reason": "unresolved_condition"
+          },
+          {
+            "file": "src/App.jsx",
+            "line": 76,
+            "reason": "unresolved_rendered_expression"
+          },
+          {
+            "file": "src/App.jsx",
+            "line": 79,
+            "reason": "unresolved_condition"
+          },
+          {
+            "file": "src/App.jsx",
+            "line": 79,
+            "reason": "unresolved_rendered_expression"
+          },
+          {
+            "file": "src/App.jsx",
+            "line": 70,
+            "reason": "unresolved_attributes:ref,aria-label,aria-pressed,title"
+          },
+          {
+            "file": "src/components/ContactRail.jsx",
+            "line": 58,
+            "reason": "unresolved_rendered_expression"
+          },
+          {
+            "file": "src/components/ContactRail.jsx",
+            "line": 45,
+            "reason": "unresolved_component:LiquidMetal"
+          }
+        ],
+        "route_patterns": [
+          "/blog",
+          "/blog/"
+        ],
+        "entrypoint": "src/main.jsx",
+        "resolved_interaction_states": 0,
+        "resolved_local_fetches": [],
+        "note": "Composed from allowlisted source semantics. CSS visibility, arbitrary runtime/network data and browser behavior remain unverified."
+      },
+      "headings": [
+        {
+          "source_id": "src/App.jsx:13501/20718/13846",
+          "file": "src/App.jsx",
+          "line": 280,
+          "section": "header",
+          "section_id": "src/App.jsx:13330/20718/13846",
+          "ui_state": "initial",
+          "data_bindings": [],
+          "level": 2,
+          "text": "A little about me.",
+          "id": null
+        },
+        {
+          "source_id": "src/App.jsx:14136/20718",
+          "file": "src/App.jsx",
+          "line": 296,
+          "section": "section",
+          "section_id": "src/App.jsx:14051/20718",
+          "ui_state": "initial",
+          "data_bindings": [],
+          "level": 2,
+          "text": "What keeps me curious",
+          "id": "about-heading",
+          "section_heading": "What keeps me curious"
+        },
+        {
+          "source_id": "src/App.jsx:15181/20718",
+          "file": "src/App.jsx",
+          "line": 314,
+          "section": "section",
+          "section_id": "src/App.jsx:15131/20718",
+          "ui_state": "initial",
+          "data_bindings": [],
+          "level": 2,
+          "text": "How I got here",
+          "id": "story-heading",
+          "section_heading": "How I got here"
+        },
+        {
+          "source_id": "src/App.jsx:15688/20718/15312:0",
+          "file": "src/App.jsx",
+          "line": 321,
+          "section": "article",
+          "section_id": "src/App.jsx:15405/20718/15312:0",
+          "ui_state": "initial",
+          "data_bindings": [],
+          "level": 3,
+          "text": "Finding a direction",
+          "id": null,
+          "section_heading": "How I got here"
+        },
+        {
+          "source_id": "src/App.jsx:15688/20718/15312:1",
+          "file": "src/App.jsx",
+          "line": 321,
+          "section": "article",
+          "section_id": "src/App.jsx:15405/20718/15312:1",
+          "ui_state": "initial",
+          "data_bindings": [],
+          "level": 3,
+          "text": "Building for the web",
+          "id": null,
+          "section_heading": "How I got here"
+        },
+        {
+          "source_id": "src/App.jsx:15688/20718/15312:2",
+          "file": "src/App.jsx",
+          "line": 321,
+          "section": "article",
+          "section_id": "src/App.jsx:15405/20718/15312:2",
+          "ui_state": "initial",
+          "data_bindings": [],
+          "level": 3,
+          "text": "Going deeper",
+          "id": null,
+          "section_heading": "How I got here"
+        },
+        {
+          "source_id": "src/App.jsx:15688/20718/15312:3",
+          "file": "src/App.jsx",
+          "line": 321,
+          "section": "article",
+          "section_id": "src/App.jsx:15405/20718/15312:3",
+          "ui_state": "initial",
+          "data_bindings": [],
+          "level": 3,
+          "text": "Working on products",
+          "id": null,
+          "section_heading": "How I got here"
+        }
+      ],
+      "landmarks": [
+        {
+          "file": "composed-react-tree",
+          "landmarks": {
+            "main": 1,
+            "nav": 2,
+            "header": 2,
+            "section": 2,
+            "article": 4,
+            "aside": 1
+          },
+          "sections": [
+            {
+              "parent_section_id": null,
+              "source_id": "src/App.jsx:21181",
+              "tag": "main",
+              "id": null,
+              "labelledby": null,
+              "label": null
+            },
+            {
+              "parent_section_id": "src/App.jsx:21181",
+              "source_id": "src/components/PageRail.jsx:233/21536",
+              "tag": "nav",
+              "id": null,
+              "labelledby": null,
+              "label": "Pages"
+            },
+            {
+              "parent_section_id": "src/App.jsx:21181",
+              "source_id": "src/App.jsx:21638",
+              "tag": "header",
+              "id": null,
+              "labelledby": null,
+              "label": null
+            },
+            {
+              "parent_section_id": "src/App.jsx:21181",
+              "source_id": "src/App.jsx:13330/20718/13846",
+              "tag": "header",
+              "id": null,
+              "labelledby": null,
+              "label": null
+            },
+            {
+              "parent_section_id": "src/App.jsx:21181",
+              "source_id": "src/App.jsx:14051/20718",
+              "tag": "section",
+              "id": null,
+              "labelledby": "about-heading",
+              "label": null
+            },
+            {
+              "parent_section_id": "src/App.jsx:21181",
+              "source_id": "src/App.jsx:15131/20718",
+              "tag": "section",
+              "id": null,
+              "labelledby": "story-heading",
+              "label": null
+            },
+            {
+              "parent_section_id": "src/App.jsx:15131/20718",
+              "source_id": "src/App.jsx:15405/20718/15312:0",
+              "tag": "article",
+              "id": null,
+              "labelledby": null,
+              "label": null
+            },
+            {
+              "parent_section_id": "src/App.jsx:15131/20718",
+              "source_id": "src/App.jsx:15405/20718/15312:1",
+              "tag": "article",
+              "id": null,
+              "labelledby": null,
+              "label": null
+            },
+            {
+              "parent_section_id": "src/App.jsx:15131/20718",
+              "source_id": "src/App.jsx:15405/20718/15312:2",
+              "tag": "article",
+              "id": null,
+              "labelledby": null,
+              "label": null
+            },
+            {
+              "parent_section_id": "src/App.jsx:15131/20718",
+              "source_id": "src/App.jsx:15405/20718/15312:3",
+              "tag": "article",
+              "id": null,
+              "labelledby": null,
+              "label": null
+            },
+            {
+              "parent_section_id": "src/App.jsx:21181",
+              "source_id": "src/components/ContactRail.jsx:3056/22007",
+              "tag": "aside",
+              "id": null,
+              "labelledby": null,
+              "label": "Contact links"
+            },
+            {
+              "parent_section_id": "src/components/ContactRail.jsx:3056/22007",
+              "source_id": "src/components/ContactRail.jsx:3532/22007",
+              "tag": "nav",
+              "id": null,
+              "labelledby": null,
+              "label": "Contact links"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "/blog",
+      "template": "src/App.jsx",
+      "is_dynamic": false,
+      "coverage": {
+        "mode": "static-source",
+        "complete": false,
+        "limitations": [
+          {
+            "file": "src/components/ScrollReveal.jsx",
+            "line": 22,
+            "reason": "unresolved_rendered_expression"
+          },
+          {
+            "file": "src/components/ScrollReveal.jsx",
+            "line": 22,
+            "reason": "unresolved_attributes:ref"
+          },
+          {
+            "file": "src/App.jsx",
+            "line": 71,
+            "reason": "unresolved_rendered_expression"
+          },
+          {
+            "file": "src/App.jsx",
+            "line": 74,
+            "reason": "unresolved_condition"
+          },
+          {
+            "file": "src/App.jsx",
+            "line": 74,
+            "reason": "unresolved_rendered_expression"
+          },
+          {
+            "file": "src/App.jsx",
+            "line": 75,
+            "reason": "unresolved_rendered_expression"
+          },
+          {
+            "file": "src/App.jsx",
+            "line": 76,
+            "reason": "unresolved_condition"
+          },
+          {
+            "file": "src/App.jsx",
+            "line": 76,
+            "reason": "unresolved_rendered_expression"
+          },
+          {
+            "file": "src/App.jsx",
+            "line": 79,
+            "reason": "unresolved_condition"
+          },
+          {
+            "file": "src/App.jsx",
+            "line": 79,
+            "reason": "unresolved_rendered_expression"
+          },
+          {
+            "file": "src/App.jsx",
+            "line": 70,
+            "reason": "unresolved_attributes:ref,aria-label,aria-pressed,title"
+          },
+          {
+            "file": "src/components/ContactRail.jsx",
+            "line": 58,
+            "reason": "unresolved_rendered_expression"
+          },
+          {
+            "file": "src/components/ContactRail.jsx",
+            "line": 45,
+            "reason": "unresolved_component:LiquidMetal"
+          }
+        ],
+        "route_patterns": [
+          "/blog",
+          "/blog/"
+        ],
+        "entrypoint": "src/main.jsx",
+        "resolved_interaction_states": 0,
+        "resolved_local_fetches": [
+          "public/blog/blog.json"
+        ],
+        "note": "Composed from allowlisted source semantics. CSS visibility, arbitrary runtime/network data and browser behavior remain unverified."
+      },
+      "headings": [
+        {
+          "source_id": "src/App.jsx:13501/20805/18047",
+          "file": "src/App.jsx",
+          "line": 280,
+          "section": "header",
+          "section_id": "src/App.jsx:13330/20805/18047",
+          "ui_state": "initial",
+          "data_bindings": [
+            {
+              "file": "public/blog/blog.json",
+              "json_pointer": ""
+            }
+          ],
+          "level": 2,
+          "text": "Blogs",
+          "id": null
+        },
+        {
+          "source_id": "src/App.jsx:18702/20805/18428:0",
+          "file": "src/App.jsx",
+          "line": 379,
+          "section": "article",
+          "section_id": "src/App.jsx:18504/20805/18428:0",
+          "ui_state": "initial",
+          "data_bindings": [
+            {
+              "file": "public/blog/blog.json",
+              "json_pointer": ""
+            },
+            {
+              "file": "public/blog/blog.json",
+              "json_pointer": "/0"
+            }
+          ],
+          "level": 3,
+          "text": "Deploying Your Site with Vercel (Dummy Blog)",
+          "id": null
+        }
+      ],
+      "landmarks": [
+        {
+          "file": "composed-react-tree",
+          "landmarks": {
+            "main": 1,
+            "nav": 2,
+            "header": 2,
+            "article": 1,
+            "aside": 1
+          },
+          "sections": [
+            {
+              "parent_section_id": null,
+              "source_id": "src/App.jsx:21181",
+              "tag": "main",
+              "id": null,
+              "labelledby": null,
+              "label": null
+            },
+            {
+              "parent_section_id": "src/App.jsx:21181",
+              "source_id": "src/components/PageRail.jsx:233/21536",
+              "tag": "nav",
+              "id": null,
+              "labelledby": null,
+              "label": "Pages"
+            },
+            {
+              "parent_section_id": "src/App.jsx:21181",
+              "source_id": "src/App.jsx:21638",
+              "tag": "header",
+              "id": null,
+              "labelledby": null,
+              "label": null
+            },
+            {
+              "parent_section_id": "src/App.jsx:21181",
+              "source_id": "src/App.jsx:13330/20805/18047",
+              "tag": "header",
+              "id": null,
+              "labelledby": null,
+              "label": null
+            },
+            {
+              "parent_section_id": "src/App.jsx:21181",
+              "source_id": "src/App.jsx:18504/20805/18428:0",
+              "tag": "article",
+              "id": null,
+              "labelledby": null,
+              "label": null
+            },
+            {
+              "parent_section_id": "src/App.jsx:21181",
+              "source_id": "src/components/ContactRail.jsx:3056/22007",
+              "tag": "aside",
+              "id": null,
+              "labelledby": null,
+              "label": "Contact links"
+            },
+            {
+              "parent_section_id": "src/components/ContactRail.jsx:3056/22007",
+              "source_id": "src/components/ContactRail.jsx:3532/22007",
+              "tag": "nav",
+              "id": null,
+              "labelledby": null,
+              "label": "Contact links"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "/blog/deploying-your-site-with-vercel",
+      "template": "src/App.jsx",
+      "is_dynamic": false,
+      "coverage": {
+        "mode": "static-source",
+        "complete": false,
+        "limitations": [
+          {
+            "file": "src/App.jsx",
+            "line": 71,
+            "reason": "unresolved_rendered_expression"
+          },
+          {
+            "file": "src/App.jsx",
+            "line": 74,
+            "reason": "unresolved_condition"
+          },
+          {
+            "file": "src/App.jsx",
+            "line": 74,
+            "reason": "unresolved_rendered_expression"
+          },
+          {
+            "file": "src/App.jsx",
+            "line": 75,
+            "reason": "unresolved_rendered_expression"
+          },
+          {
+            "file": "src/App.jsx",
+            "line": 76,
+            "reason": "unresolved_condition"
+          },
+          {
+            "file": "src/App.jsx",
+            "line": 76,
+            "reason": "unresolved_rendered_expression"
+          },
+          {
+            "file": "src/App.jsx",
+            "line": 79,
+            "reason": "unresolved_condition"
+          },
+          {
+            "file": "src/App.jsx",
+            "line": 79,
+            "reason": "unresolved_rendered_expression"
+          },
+          {
+            "file": "src/App.jsx",
+            "line": 70,
+            "reason": "unresolved_attributes:ref,aria-label,aria-pressed,title"
+          },
+          {
+            "file": "src/components/ContactRail.jsx",
+            "line": 58,
+            "reason": "unresolved_rendered_expression"
+          },
+          {
+            "file": "src/components/ContactRail.jsx",
+            "line": 45,
+            "reason": "unresolved_component:LiquidMetal"
+          }
+        ],
+        "route_patterns": [
+          "/blog",
+          "/blog/"
+        ],
+        "entrypoint": "src/main.jsx",
+        "resolved_interaction_states": 0,
+        "resolved_local_fetches": [
+          "public/blog/deploying-your-site-with-vercel.md"
+        ],
+        "note": "Composed from allowlisted source semantics. CSS visibility, arbitrary runtime/network data and browser behavior remain unverified."
+      },
+      "headings": [
+        {
+          "source_id": "src/App.jsx:20059/20853/19984:0",
+          "file": "src/App.jsx",
+          "line": 408,
+          "section": "main",
+          "section_id": "src/App.jsx:21181",
+          "ui_state": "initial",
+          "data_bindings": [
+            {
+              "file": "public/blog/deploying-your-site-with-vercel.md",
+              "json_pointer": ""
+            }
+          ],
+          "level": 2,
+          "text": "Deploying Your Site",
+          "id": null
+        },
+        {
+          "source_id": "src/App.jsx:20199/20853/19984:2",
+          "file": "src/App.jsx",
+          "line": 409,
+          "section": "main",
+          "section_id": "src/App.jsx:21181",
+          "ui_state": "initial",
+          "data_bindings": [
+            {
+              "file": "public/blog/deploying-your-site-with-vercel.md",
+              "json_pointer": ""
+            }
+          ],
+          "level": 3,
+          "text": "Steps 1. Push your code to GitHub 2. Sign up at vercel.com and import your repo 3. Configure build settings if needed 4. Click deploy and get your live URL!",
+          "id": null
+        }
+      ],
+      "landmarks": [
+        {
+          "file": "composed-react-tree",
+          "landmarks": {
+            "main": 1,
+            "nav": 2,
+            "header": 1,
+            "aside": 1
+          },
+          "sections": [
+            {
+              "parent_section_id": null,
+              "source_id": "src/App.jsx:21181",
+              "tag": "main",
+              "id": null,
+              "labelledby": null,
+              "label": null
+            },
+            {
+              "parent_section_id": "src/App.jsx:21181",
+              "source_id": "src/components/PageRail.jsx:233/21536",
+              "tag": "nav",
+              "id": null,
+              "labelledby": null,
+              "label": "Pages"
+            },
+            {
+              "parent_section_id": "src/App.jsx:21181",
+              "source_id": "src/App.jsx:21638",
+              "tag": "header",
+              "id": null,
+              "labelledby": null,
+              "label": null
+            },
+            {
+              "parent_section_id": "src/App.jsx:21181",
+              "source_id": "src/components/ContactRail.jsx:3056/22007",
+              "tag": "aside",
+              "id": null,
+              "labelledby": null,
+              "label": "Contact links"
+            },
+            {
+              "parent_section_id": "src/components/ContactRail.jsx:3056/22007",
+              "source_id": "src/components/ContactRail.jsx:3532/22007",
+              "tag": "nav",
+              "id": null,
+              "labelledby": null,
+              "label": "Contact links"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "/bookshelf",
+      "template": "src/App.jsx",
+      "is_dynamic": false,
+      "coverage": {
+        "mode": "static-source",
+        "complete": false,
+        "limitations": [
+          {
+            "file": "src/components/ScrollReveal.jsx",
+            "line": 22,
+            "reason": "unresolved_rendered_expression"
+          },
+          {
+            "file": "src/components/ScrollReveal.jsx",
+            "line": 22,
+            "reason": "unresolved_attributes:ref"
+          },
+          {
+            "file": "src/App.jsx",
+            "line": 71,
+            "reason": "unresolved_rendered_expression"
+          },
+          {
+            "file": "src/App.jsx",
+            "line": 74,
+            "reason": "unresolved_condition"
+          },
+          {
+            "file": "src/App.jsx",
+            "line": 74,
+            "reason": "unresolved_rendered_expression"
+          },
+          {
+            "file": "src/App.jsx",
+            "line": 75,
+            "reason": "unresolved_rendered_expression"
+          },
+          {
+            "file": "src/App.jsx",
+            "line": 76,
+            "reason": "unresolved_condition"
+          },
+          {
+            "file": "src/App.jsx",
+            "line": 76,
+            "reason": "unresolved_rendered_expression"
+          },
+          {
+            "file": "src/App.jsx",
+            "line": 79,
+            "reason": "unresolved_condition"
+          },
+          {
+            "file": "src/App.jsx",
+            "line": 79,
+            "reason": "unresolved_rendered_expression"
+          },
+          {
+            "file": "src/App.jsx",
+            "line": 70,
+            "reason": "unresolved_attributes:ref,aria-label,aria-pressed,title"
+          },
+          {
+            "file": "src/components/ContactRail.jsx",
+            "line": 58,
+            "reason": "unresolved_rendered_expression"
+          },
+          {
+            "file": "src/components/ContactRail.jsx",
+            "line": 45,
+            "reason": "unresolved_component:LiquidMetal"
+          }
+        ],
+        "route_patterns": [
+          "/blog",
+          "/blog/"
+        ],
+        "entrypoint": "src/main.jsx",
+        "resolved_interaction_states": 0,
+        "resolved_local_fetches": [],
+        "note": "Composed from allowlisted source semantics. CSS visibility, arbitrary runtime/network data and browser behavior remain unverified."
+      },
+      "headings": [
+        {
+          "source_id": "src/App.jsx:13501/20762/16095",
+          "file": "src/App.jsx",
+          "line": 280,
+          "section": "header",
+          "section_id": "src/App.jsx:13330/20762/16095",
+          "ui_state": "initial",
+          "data_bindings": [],
+          "level": 2,
+          "text": "Ideas I keep close.",
+          "id": null
+        },
+        {
+          "source_id": "src/App.jsx:16906/20762/16267:0",
+          "file": "src/App.jsx",
+          "line": 344,
+          "section": "article",
+          "section_id": "src/App.jsx:16340/20762/16267:0",
+          "ui_state": "initial",
+          "data_bindings": [
+            {
+              "file": "src/store/data/books.json",
+              "json_pointer": "/0"
+            }
+          ],
+          "level": 3,
+          "text": "Freedom from the Known",
+          "id": null
+        },
+        {
+          "source_id": "src/App.jsx:16906/20762/16267:1",
+          "file": "src/App.jsx",
+          "line": 344,
+          "section": "article",
+          "section_id": "src/App.jsx:16340/20762/16267:1",
+          "ui_state": "initial",
+          "data_bindings": [
+            {
+              "file": "src/store/data/books.json",
+              "json_pointer": "/1"
+            }
+          ],
+          "level": 3,
+          "text": "The 12 Week Year",
+          "id": null
+        }
+      ],
+      "landmarks": [
+        {
+          "file": "composed-react-tree",
+          "landmarks": {
+            "main": 1,
+            "nav": 2,
+            "header": 2,
+            "article": 2,
+            "aside": 1
+          },
+          "sections": [
+            {
+              "parent_section_id": null,
+              "source_id": "src/App.jsx:21181",
+              "tag": "main",
+              "id": null,
+              "labelledby": null,
+              "label": null
+            },
+            {
+              "parent_section_id": "src/App.jsx:21181",
+              "source_id": "src/components/PageRail.jsx:233/21536",
+              "tag": "nav",
+              "id": null,
+              "labelledby": null,
+              "label": "Pages"
+            },
+            {
+              "parent_section_id": "src/App.jsx:21181",
+              "source_id": "src/App.jsx:21638",
+              "tag": "header",
+              "id": null,
+              "labelledby": null,
+              "label": null
+            },
+            {
+              "parent_section_id": "src/App.jsx:21181",
+              "source_id": "src/App.jsx:13330/20762/16095",
+              "tag": "header",
+              "id": null,
+              "labelledby": null,
+              "label": null
+            },
+            {
+              "parent_section_id": "src/App.jsx:21181",
+              "source_id": "src/App.jsx:16340/20762/16267:0",
+              "tag": "article",
+              "id": null,
+              "labelledby": null,
+              "label": null
+            },
+            {
+              "parent_section_id": "src/App.jsx:21181",
+              "source_id": "src/App.jsx:16340/20762/16267:1",
+              "tag": "article",
+              "id": null,
+              "labelledby": null,
+              "label": null
+            },
+            {
+              "parent_section_id": "src/App.jsx:21181",
+              "source_id": "src/components/ContactRail.jsx:3056/22007",
+              "tag": "aside",
+              "id": null,
+              "labelledby": null,
+              "label": "Contact links"
+            },
+            {
+              "parent_section_id": "src/components/ContactRail.jsx:3056/22007",
+              "source_id": "src/components/ContactRail.jsx:3532/22007",
+              "tag": "nav",
+              "id": null,
+              "labelledby": null,
+              "label": "Contact links"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

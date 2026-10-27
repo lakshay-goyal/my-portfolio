@@ -1,0 +1,1628 @@
+{
+  "schema_version": "2.0",
+  "category": "internal_links",
+  "extraction": {
+    "mode": "static-source",
+    "route_count": 5,
+    "limitations": [
+      "File routes, literal React Router routes and supported pathname dispatch are enumerated; arbitrary routing remains unresolved.",
+      "No application code is executed; runtime content is unknown.",
+      "Supported React composition follows source-selected component order; browser layout and visibility are unverified."
+    ]
+  },
+  "pages": [
+    {
+      "url": "/",
+      "template": "src/App.jsx",
+      "is_dynamic": false,
+      "coverage": {
+        "mode": "static-source",
+        "complete": false,
+        "limitations": [
+          {
+            "file": "src/components/ScrollReveal.jsx",
+            "line": 22,
+            "reason": "unresolved_rendered_expression"
+          },
+          {
+            "file": "src/components/ScrollReveal.jsx",
+            "line": 22,
+            "reason": "unresolved_attributes:ref"
+          },
+          {
+            "file": "src/App.jsx",
+            "line": 71,
+            "reason": "unresolved_rendered_expression"
+          },
+          {
+            "file": "src/App.jsx",
+            "line": 74,
+            "reason": "unresolved_condition"
+          },
+          {
+            "file": "src/App.jsx",
+            "line": 74,
+            "reason": "unresolved_rendered_expression"
+          },
+          {
+            "file": "src/App.jsx",
+            "line": 75,
+            "reason": "unresolved_rendered_expression"
+          },
+          {
+            "file": "src/App.jsx",
+            "line": 76,
+            "reason": "unresolved_condition"
+          },
+          {
+            "file": "src/App.jsx",
+            "line": 76,
+            "reason": "unresolved_rendered_expression"
+          },
+          {
+            "file": "src/App.jsx",
+            "line": 79,
+            "reason": "unresolved_condition"
+          },
+          {
+            "file": "src/App.jsx",
+            "line": 79,
+            "reason": "unresolved_rendered_expression"
+          },
+          {
+            "file": "src/App.jsx",
+            "line": 70,
+            "reason": "unresolved_attributes:ref,aria-label,aria-pressed,title"
+          },
+          {
+            "file": "src/components/ContactRail.jsx",
+            "line": 58,
+            "reason": "unresolved_rendered_expression"
+          },
+          {
+            "file": "src/components/ContactRail.jsx",
+            "line": 45,
+            "reason": "unresolved_component:LiquidMetal"
+          }
+        ],
+        "route_patterns": [
+          "/blog",
+          "/blog/"
+        ],
+        "entrypoint": "src/main.jsx",
+        "resolved_interaction_states": 4,
+        "resolved_local_fetches": [],
+        "note": "Composed from allowlisted source semantics. CSS visibility, arbitrary runtime/network data and browser behavior remain unverified."
+      },
+      "links": [
+        {
+          "source_id": "src/components/PageRail.jsx:735/21536/701:0",
+          "file": "src/components/PageRail.jsx",
+          "line": 14,
+          "section": "nav",
+          "section_id": "src/components/PageRail.jsx:233/21536",
+          "ui_state": "initial",
+          "data_bindings": [],
+          "href": "/",
+          "anchor_text": "Home",
+          "accessible_name": "Home",
+          "rel": null,
+          "target": null,
+          "section_heading": "Pages",
+          "target_url": "/",
+          "kind": "internal"
+        },
+        {
+          "source_id": "src/components/PageRail.jsx:735/21536/701:1",
+          "file": "src/components/PageRail.jsx",
+          "line": 14,
+          "section": "nav",
+          "section_id": "src/components/PageRail.jsx:233/21536",
+          "ui_state": "initial",
+          "data_bindings": [],
+          "href": "/about",
+          "anchor_text": "About",
+          "accessible_name": "About",
+          "rel": null,
+          "target": null,
+          "section_heading": "Pages",
+          "target_url": "/about",
+          "kind": "internal"
+        },
+        {
+          "source_id": "src/components/PageRail.jsx:735/21536/701:2",
+          "file": "src/components/PageRail.jsx",
+          "line": 14,
+          "section": "nav",
+          "section_id": "src/components/PageRail.jsx:233/21536",
+          "ui_state": "initial",
+          "data_bindings": [],
+          "href": "/bookshelf",
+          "anchor_text": "Bookshelf",
+          "accessible_name": "Bookshelf",
+          "rel": null,
+          "target": null,
+          "section_heading": "Pages",
+          "target_url": "/bookshelf",
+          "kind": "internal"
+        },
+        {
+          "source_id": "src/components/PageRail.jsx:735/21536/701:3",
+          "file": "src/components/PageRail.jsx",
+          "line": 14,
+          "section": "nav",
+          "section_id": "src/components/PageRail.jsx:233/21536",
+          "ui_state": "initial",
+          "data_bindings": [],
+          "href": "/blog",
+          "anchor_text": "Blogs",
+          "accessible_name": "Blogs",
+          "rel": null,
+          "target": null,
+          "section_heading": "Pages",
+          "target_url": "/blog",
+          "kind": "internal"
+        },
+        {
+          "source_id": "src/App.jsx:21658",
+          "file": "src/App.jsx",
+          "line": 432,
+          "section": "header",
+          "section_id": "src/App.jsx:21638",
+          "ui_state": "initial",
+          "data_bindings": [],
+          "href": "/",
+          "anchor_text": "Lakshay Goyal",
+          "accessible_name": "Lakshay Goyal",
+          "rel": null,
+          "target": null,
+          "target_url": "/",
+          "kind": "internal"
+        },
+        {
+          "source_id": "src/App.jsx:3886/20679/12224/4624:0/5164",
+          "file": "src/App.jsx",
+          "line": 97,
+          "section": "article",
+          "section_id": "src/App.jsx:4668/20679/12224/4624:0",
+          "ui_state": "initial",
+          "data_bindings": [
+            {
+              "file": "src/store/data/experiences.json",
+              "json_pointer": "/0"
+            }
+          ],
+          "href": "https://testsigma.com/",
+          "anchor_text": "Testsigma",
+          "accessible_name": "Testsigma",
+          "rel": "noopener noreferrer",
+          "target": "_blank",
+          "section_heading": "Work Experience",
+          "target_url": "https://testsigma.com/",
+          "kind": "absolute-unclassified"
+        },
+        {
+          "source_id": "src/App.jsx:3886/20679/12224/4624:1/5164",
+          "file": "src/App.jsx",
+          "line": 97,
+          "section": "article",
+          "section_id": "src/App.jsx:4668/20679/12224/4624:1",
+          "ui_state": "initial",
+          "data_bindings": [
+            {
+              "file": "src/store/data/experiences.json",
+              "json_pointer": "/1"
+            }
+          ],
+          "href": "https://getfozo.in",
+          "anchor_text": "FOZO",
+          "accessible_name": "FOZO",
+          "rel": "noopener noreferrer",
+          "target": "_blank",
+          "section_heading": "Work Experience",
+          "target_url": "https://getfozo.in",
+          "kind": "absolute-unclassified"
+        },
+        {
+          "source_id": "src/App.jsx:3886/20679/12274/6384:0/8062",
+          "file": "src/App.jsx",
+          "line": 97,
+          "section": "article",
+          "section_id": "src/App.jsx:6434/20679/12274/6384:0",
+          "ui_state": "initial",
+          "data_bindings": [
+            {
+              "file": "src/store/data/majorProjects.json",
+              "json_pointer": "/0"
+            }
+          ],
+          "href": "https://unlovable.lakshaygoyal.in/",
+          "anchor_text": "Unlovable - Application Builder.",
+          "accessible_name": "Unlovable - Application Builder.",
+          "rel": "noopener noreferrer",
+          "target": "_blank",
+          "section_heading": "Selected Work",
+          "target_url": "https://unlovable.lakshaygoyal.in/",
+          "kind": "absolute-unclassified"
+        },
+        {
+          "source_id": "src/App.jsx:3886/20679/12274/6384:0/8395",
+          "file": "src/App.jsx",
+          "line": 97,
+          "section": "article",
+          "section_id": "src/App.jsx:6434/20679/12274/6384:0",
+          "ui_state": "initial",
+          "data_bindings": [
+            {
+              "file": "src/store/data/majorProjects.json",
+              "json_pointer": "/0"
+            }
+          ],
+          "href": "https://github.com/lakshay-goyal/Unlovable",
+          "anchor_text": "Source code",
+          "accessible_name": "Source code",
+          "rel": "noopener noreferrer",
+          "target": "_blank",
+          "section_heading": "Selected Work",
+          "target_url": "https://github.com/lakshay-goyal/Unlovable",
+          "kind": "absolute-unclassified"
+        },
+        {
+          "source_id": "src/App.jsx:3886/20679/12274/6384:1/8062",
+          "file": "src/App.jsx",
+          "line": 97,
+          "section": "article",
+          "section_id": "src/App.jsx:6434/20679/12274/6384:1",
+          "ui_state": "initial",
+          "data_bindings": [
+            {
+              "file": "src/store/data/majorProjects.json",
+              "json_pointer": "/1"
+            }
+          ],
+          "href": "https://github.com/lakshay-goyal/Unlovable",
+          "anchor_text": "Unlovable - Mobile Application.",
+          "accessible_name": "Unlovable - Mobile Application.",
+          "rel": "noopener noreferrer",
+          "target": "_blank",
+          "section_heading": "Selected Work",
+          "target_url": "https://github.com/lakshay-goyal/Unlovable",
+          "kind": "absolute-unclassified"
+        },
+        {
+          "source_id": "src/App.jsx:3886/20679/12274/6384:2/8062",
+          "file": "src/App.jsx",
+          "line": 97,
+          "section": "article",
+          "section_id": "src/App.jsx:6434/20679/12274/6384:2",
+          "ui_state": "initial",
+          "data_bindings": [
+            {
+              "file": "src/store/data/majorProjects.json",
+              "json_pointer": "/2"
+            }
+          ],
+          "href": "https://exness.lakshaygoyal.in/",
+          "anchor_text": "Exness - CFD Application.",
+          "accessible_name": "Exness - CFD Application.",
+          "rel": "noopener noreferrer",
+          "target": "_blank",
+          "section_heading": "Selected Work",
+          "target_url": "https://exness.lakshaygoyal.in/",
+          "kind": "absolute-unclassified"
+        },
+        {
+          "source_id": "src/App.jsx:3886/20679/12274/6384:2/8395",
+          "file": "src/App.jsx",
+          "line": 97,
+          "section": "article",
+          "section_id": "src/App.jsx:6434/20679/12274/6384:2",
+          "ui_state": "initial",
+          "data_bindings": [
+            {
+              "file": "src/store/data/majorProjects.json",
+              "json_pointer": "/2"
+            }
+          ],
+          "href": "https://github.com/lakshay-goyal/Exness",
+          "anchor_text": "Source code",
+          "accessible_name": "Source code",
+          "rel": "noopener noreferrer",
+          "target": "_blank",
+          "section_heading": "Selected Work",
+          "target_url": "https://github.com/lakshay-goyal/Exness",
+          "kind": "absolute-unclassified"
+        },
+        {
+          "source_id": "src/App.jsx:3886/20679/12274/6384:3/8062",
+          "file": "src/App.jsx",
+          "line": 97,
+          "section": "article",
+          "section_id": "src/App.jsx:6434/20679/12274/6384:3",
+          "ui_state": "initial",
+          "data_bindings": [
+            {
+              "file": "src/store/data/majorProjects.json",
+              "json_pointer": "/3"
+            }
+          ],
+          "href": "https://github.com/lakshay-goyal/Exness",
+          "anchor_text": "Exness - Mobile Application.",
+          "accessible_name": "Exness - Mobile Application.",
+          "rel": "noopener noreferrer",
+          "target": "_blank",
+          "section_heading": "Selected Work",
+          "target_url": "https://github.com/lakshay-goyal/Exness",
+          "kind": "absolute-unclassified"
+        },
+        {
+          "source_id": "src/components/ContactRail.jsx:3677/22007/3637:0",
+          "file": "src/components/ContactRail.jsx",
+          "line": 75,
+          "section": "nav",
+          "section_id": "src/components/ContactRail.jsx:3532/22007",
+          "ui_state": "initial",
+          "data_bindings": [],
+          "href": "mailto:lakshaygoyal201@gmail.com",
+          "anchor_text": "",
+          "accessible_name": "Email",
+          "rel": null,
+          "target": null,
+          "section_heading": "Contact links",
+          "target_url": "mailto:lakshaygoyal201@gmail.com",
+          "kind": "action"
+        },
+        {
+          "source_id": "src/components/ContactRail.jsx:3677/22007/3637:1",
+          "file": "src/components/ContactRail.jsx",
+          "line": 75,
+          "section": "nav",
+          "section_id": "src/components/ContactRail.jsx:3532/22007",
+          "ui_state": "initial",
+          "data_bindings": [],
+          "href": "https://github.com/lakshay-goyal",
+          "anchor_text": "",
+          "accessible_name": "GitHub",
+          "rel": "noopener noreferrer",
+          "target": "_blank",
+          "section_heading": "Contact links",
+          "target_url": "https://github.com/lakshay-goyal",
+          "kind": "absolute-unclassified"
+        },
+        {
+          "source_id": "src/components/ContactRail.jsx:3677/22007/3637:2",
+          "file": "src/components/ContactRail.jsx",
+          "line": 75,
+          "section": "nav",
+          "section_id": "src/components/ContactRail.jsx:3532/22007",
+          "ui_state": "initial",
+          "data_bindings": [],
+          "href": "https://www.linkedin.com/in/lakshay-goyal-9778a6246/",
+          "anchor_text": "",
+          "accessible_name": "LinkedIn",
+          "rel": "noopener noreferrer",
+          "target": "_blank",
+          "section_heading": "Contact links",
+          "target_url": "https://www.linkedin.com/in/lakshay-goyal-9778a6246/",
+          "kind": "absolute-unclassified"
+        },
+        {
+          "source_id": "src/components/ContactRail.jsx:3677/22007/3637:3",
+          "file": "src/components/ContactRail.jsx",
+          "line": 75,
+          "section": "nav",
+          "section_id": "src/components/ContactRail.jsx:3532/22007",
+          "ui_state": "initial",
+          "data_bindings": [],
+          "href": "https://x.com/lakshayg2004",
+          "anchor_text": "",
+          "accessible_name": "X",
+          "rel": "noopener noreferrer",
+          "target": "_blank",
+          "section_heading": "Contact links",
+          "target_url": "https://x.com/lakshayg2004",
+          "kind": "absolute-unclassified"
+        },
+        {
+          "source_id": "src/components/ContactRail.jsx:3677/22007/3637:4",
+          "file": "src/components/ContactRail.jsx",
+          "line": 75,
+          "section": "nav",
+          "section_id": "src/components/ContactRail.jsx:3532/22007",
+          "ui_state": "initial",
+          "data_bindings": [],
+          "href": "/Lakshay_Resume.pdf",
+          "anchor_text": "",
+          "accessible_name": "Resume",
+          "rel": "noopener noreferrer",
+          "target": "_blank",
+          "section_heading": "Contact links",
+          "target_url": "/Lakshay_Resume.pdf",
+          "kind": "resource"
+        },
+        {
+          "source_id": "src/components/ContactRail.jsx:1943/22007/4420",
+          "file": "src/components/ContactRail.jsx",
+          "line": 37,
+          "section": "main",
+          "section_id": "src/App.jsx:21181",
+          "ui_state": "initial",
+          "data_bindings": [],
+          "href": "https://cal.com/lakshay-goyal/30min?overlayCalendar=true",
+          "anchor_text": "Schedule",
+          "accessible_name": "Schedule a 30-minute Google Meet",
+          "rel": "noopener noreferrer",
+          "target": "_blank",
+          "target_url": "https://cal.com/lakshay-goyal/30min?overlayCalendar=true",
+          "kind": "absolute-unclassified"
+        }
+      ]
+    },
+    {
+      "url": "/about",
+      "template": "src/App.jsx",
+      "is_dynamic": false,
+      "coverage": {
+        "mode": "static-source",
+        "complete": false,
+        "limitations": [
+          {
+            "file": "src/components/ScrollReveal.jsx",
+            "line": 22,
+            "reason": "unresolved_rendered_expression"
+          },
+          {
+            "file": "src/components/ScrollReveal.jsx",
+            "line": 22,
+            "reason": "unresolved_attributes:ref"
+          },
+          {
+            "file": "src/App.jsx",
+            "line": 71,
+            "reason": "unresolved_rendered_expression"
+          },
+          {
+            "file": "src/App.jsx",
+            "line": 74,
+            "reason": "unresolved_condition"
+          },
+          {
+            "file": "src/App.jsx",
+            "line": 74,
+            "reason": "unresolved_rendered_expression"
+          },
+          {
+            "file": "src/App.jsx",
+            "line": 75,
+            "reason": "unresolved_rendered_expression"
+          },
+          {
+            "file": "src/App.jsx",
+            "line": 76,
+            "reason": "unresolved_condition"
+          },
+          {
+            "file": "src/App.jsx",
+            "line": 76,
+            "reason": "unresolved_rendered_expression"
+          },
+          {
+            "file": "src/App.jsx",
+            "line": 79,
+            "reason": "unresolved_condition"
+          },
+          {
+            "file": "src/App.jsx",
+            "line": 79,
+            "reason": "unresolved_rendered_expression"
+          },
+          {
+            "file": "src/App.jsx",
+            "line": 70,
+            "reason": "unresolved_attributes:ref,aria-label,aria-pressed,title"
+          },
+          {
+            "file": "src/components/ContactRail.jsx",
+            "line": 58,
+            "reason": "unresolved_rendered_expression"
+          },
+          {
+            "file": "src/components/ContactRail.jsx",
+            "line": 45,
+            "reason": "unresolved_component:LiquidMetal"
+          }
+        ],
+        "route_patterns": [
+          "/blog",
+          "/blog/"
+        ],
+        "entrypoint": "src/main.jsx",
+        "resolved_interaction_states": 0,
+        "resolved_local_fetches": [],
+        "note": "Composed from allowlisted source semantics. CSS visibility, arbitrary runtime/network data and browser behavior remain unverified."
+      },
+      "links": [
+        {
+          "source_id": "src/components/PageRail.jsx:735/21536/701:0",
+          "file": "src/components/PageRail.jsx",
+          "line": 14,
+          "section": "nav",
+          "section_id": "src/components/PageRail.jsx:233/21536",
+          "ui_state": "initial",
+          "data_bindings": [],
+          "href": "/",
+          "anchor_text": "Home",
+          "accessible_name": "Home",
+          "rel": null,
+          "target": null,
+          "section_heading": "Pages",
+          "target_url": "/",
+          "kind": "internal"
+        },
+        {
+          "source_id": "src/components/PageRail.jsx:735/21536/701:1",
+          "file": "src/components/PageRail.jsx",
+          "line": 14,
+          "section": "nav",
+          "section_id": "src/components/PageRail.jsx:233/21536",
+          "ui_state": "initial",
+          "data_bindings": [],
+          "href": "/about",
+          "anchor_text": "About",
+          "accessible_name": "About",
+          "rel": null,
+          "target": null,
+          "section_heading": "Pages",
+          "target_url": "/about",
+          "kind": "internal"
+        },
+        {
+          "source_id": "src/components/PageRail.jsx:735/21536/701:2",
+          "file": "src/components/PageRail.jsx",
+          "line": 14,
+          "section": "nav",
+          "section_id": "src/components/PageRail.jsx:233/21536",
+          "ui_state": "initial",
+          "data_bindings": [],
+          "href": "/bookshelf",
+          "anchor_text": "Bookshelf",
+          "accessible_name": "Bookshelf",
+          "rel": null,
+          "target": null,
+          "section_heading": "Pages",
+          "target_url": "/bookshelf",
+          "kind": "internal"
+        },
+        {
+          "source_id": "src/components/PageRail.jsx:735/21536/701:3",
+          "file": "src/components/PageRail.jsx",
+          "line": 14,
+          "section": "nav",
+          "section_id": "src/components/PageRail.jsx:233/21536",
+          "ui_state": "initial",
+          "data_bindings": [],
+          "href": "/blog",
+          "anchor_text": "Blogs",
+          "accessible_name": "Blogs",
+          "rel": null,
+          "target": null,
+          "section_heading": "Pages",
+          "target_url": "/blog",
+          "kind": "internal"
+        },
+        {
+          "source_id": "src/App.jsx:21658",
+          "file": "src/App.jsx",
+          "line": 432,
+          "section": "header",
+          "section_id": "src/App.jsx:21638",
+          "ui_state": "initial",
+          "data_bindings": [],
+          "href": "/",
+          "anchor_text": "Lakshay Goyal",
+          "accessible_name": "Lakshay Goyal",
+          "rel": null,
+          "target": null,
+          "target_url": "/",
+          "kind": "internal"
+        },
+        {
+          "source_id": "src/components/ContactRail.jsx:3677/22007/3637:0",
+          "file": "src/components/ContactRail.jsx",
+          "line": 75,
+          "section": "nav",
+          "section_id": "src/components/ContactRail.jsx:3532/22007",
+          "ui_state": "initial",
+          "data_bindings": [],
+          "href": "mailto:lakshaygoyal201@gmail.com",
+          "anchor_text": "",
+          "accessible_name": "Email",
+          "rel": null,
+          "target": null,
+          "section_heading": "Contact links",
+          "target_url": "mailto:lakshaygoyal201@gmail.com",
+          "kind": "action"
+        },
+        {
+          "source_id": "src/components/ContactRail.jsx:3677/22007/3637:1",
+          "file": "src/components/ContactRail.jsx",
+          "line": 75,
+          "section": "nav",
+          "section_id": "src/components/ContactRail.jsx:3532/22007",
+          "ui_state": "initial",
+          "data_bindings": [],
+          "href": "https://github.com/lakshay-goyal",
+          "anchor_text": "",
+          "accessible_name": "GitHub",
+          "rel": "noopener noreferrer",
+          "target": "_blank",
+          "section_heading": "Contact links",
+          "target_url": "https://github.com/lakshay-goyal",
+          "kind": "absolute-unclassified"
+        },
+        {
+          "source_id": "src/components/ContactRail.jsx:3677/22007/3637:2",
+          "file": "src/components/ContactRail.jsx",
+          "line": 75,
+          "section": "nav",
+          "section_id": "src/components/ContactRail.jsx:3532/22007",
+          "ui_state": "initial",
+          "data_bindings": [],
+          "href": "https://www.linkedin.com/in/lakshay-goyal-9778a6246/",
+          "anchor_text": "",
+          "accessible_name": "LinkedIn",
+          "rel": "noopener noreferrer",
+          "target": "_blank",
+          "section_heading": "Contact links",
+          "target_url": "https://www.linkedin.com/in/lakshay-goyal-9778a6246/",
+          "kind": "absolute-unclassified"
+        },
+        {
+          "source_id": "src/components/ContactRail.jsx:3677/22007/3637:3",
+          "file": "src/components/ContactRail.jsx",
+          "line": 75,
+          "section": "nav",
+          "section_id": "src/components/ContactRail.jsx:3532/22007",
+          "ui_state": "initial",
+          "data_bindings": [],
+          "href": "https://x.com/lakshayg2004",
+          "anchor_text": "",
+          "accessible_name": "X",
+          "rel": "noopener noreferrer",
+          "target": "_blank",
+          "section_heading": "Contact links",
+          "target_url": "https://x.com/lakshayg2004",
+          "kind": "absolute-unclassified"
+        },
+        {
+          "source_id": "src/components/ContactRail.jsx:3677/22007/3637:4",
+          "file": "src/components/ContactRail.jsx",
+          "line": 75,
+          "section": "nav",
+          "section_id": "src/components/ContactRail.jsx:3532/22007",
+          "ui_state": "initial",
+          "data_bindings": [],
+          "href": "/Lakshay_Resume.pdf",
+          "anchor_text": "",
+          "accessible_name": "Resume",
+          "rel": "noopener noreferrer",
+          "target": "_blank",
+          "section_heading": "Contact links",
+          "target_url": "/Lakshay_Resume.pdf",
+          "kind": "resource"
+        },
+        {
+          "source_id": "src/components/ContactRail.jsx:1943/22007/4420",
+          "file": "src/components/ContactRail.jsx",
+          "line": 37,
+          "section": "main",
+          "section_id": "src/App.jsx:21181",
+          "ui_state": "initial",
+          "data_bindings": [],
+          "href": "https://cal.com/lakshay-goyal/30min?overlayCalendar=true",
+          "anchor_text": "Schedule",
+          "accessible_name": "Schedule a 30-minute Google Meet",
+          "rel": "noopener noreferrer",
+          "target": "_blank",
+          "target_url": "https://cal.com/lakshay-goyal/30min?overlayCalendar=true",
+          "kind": "absolute-unclassified"
+        }
+      ]
+    },
+    {
+      "url": "/blog",
+      "template": "src/App.jsx",
+      "is_dynamic": false,
+      "coverage": {
+        "mode": "static-source",
+        "complete": false,
+        "limitations": [
+          {
+            "file": "src/components/ScrollReveal.jsx",
+            "line": 22,
+            "reason": "unresolved_rendered_expression"
+          },
+          {
+            "file": "src/components/ScrollReveal.jsx",
+            "line": 22,
+            "reason": "unresolved_attributes:ref"
+          },
+          {
+            "file": "src/App.jsx",
+            "line": 71,
+            "reason": "unresolved_rendered_expression"
+          },
+          {
+            "file": "src/App.jsx",
+            "line": 74,
+            "reason": "unresolved_condition"
+          },
+          {
+            "file": "src/App.jsx",
+            "line": 74,
+            "reason": "unresolved_rendered_expression"
+          },
+          {
+            "file": "src/App.jsx",
+            "line": 75,
+            "reason": "unresolved_rendered_expression"
+          },
+          {
+            "file": "src/App.jsx",
+            "line": 76,
+            "reason": "unresolved_condition"
+          },
+          {
+            "file": "src/App.jsx",
+            "line": 76,
+            "reason": "unresolved_rendered_expression"
+          },
+          {
+            "file": "src/App.jsx",
+            "line": 79,
+            "reason": "unresolved_condition"
+          },
+          {
+            "file": "src/App.jsx",
+            "line": 79,
+            "reason": "unresolved_rendered_expression"
+          },
+          {
+            "file": "src/App.jsx",
+            "line": 70,
+            "reason": "unresolved_attributes:ref,aria-label,aria-pressed,title"
+          },
+          {
+            "file": "src/components/ContactRail.jsx",
+            "line": 58,
+            "reason": "unresolved_rendered_expression"
+          },
+          {
+            "file": "src/components/ContactRail.jsx",
+            "line": 45,
+            "reason": "unresolved_component:LiquidMetal"
+          }
+        ],
+        "route_patterns": [
+          "/blog",
+          "/blog/"
+        ],
+        "entrypoint": "src/main.jsx",
+        "resolved_interaction_states": 0,
+        "resolved_local_fetches": [
+          "public/blog/blog.json"
+        ],
+        "note": "Composed from allowlisted source semantics. CSS visibility, arbitrary runtime/network data and browser behavior remain unverified."
+      },
+      "links": [
+        {
+          "source_id": "src/components/PageRail.jsx:735/21536/701:0",
+          "file": "src/components/PageRail.jsx",
+          "line": 14,
+          "section": "nav",
+          "section_id": "src/components/PageRail.jsx:233/21536",
+          "ui_state": "initial",
+          "data_bindings": [],
+          "href": "/",
+          "anchor_text": "Home",
+          "accessible_name": "Home",
+          "rel": null,
+          "target": null,
+          "section_heading": "Pages",
+          "target_url": "/",
+          "kind": "internal"
+        },
+        {
+          "source_id": "src/components/PageRail.jsx:735/21536/701:1",
+          "file": "src/components/PageRail.jsx",
+          "line": 14,
+          "section": "nav",
+          "section_id": "src/components/PageRail.jsx:233/21536",
+          "ui_state": "initial",
+          "data_bindings": [],
+          "href": "/about",
+          "anchor_text": "About",
+          "accessible_name": "About",
+          "rel": null,
+          "target": null,
+          "section_heading": "Pages",
+          "target_url": "/about",
+          "kind": "internal"
+        },
+        {
+          "source_id": "src/components/PageRail.jsx:735/21536/701:2",
+          "file": "src/components/PageRail.jsx",
+          "line": 14,
+          "section": "nav",
+          "section_id": "src/components/PageRail.jsx:233/21536",
+          "ui_state": "initial",
+          "data_bindings": [],
+          "href": "/bookshelf",
+          "anchor_text": "Bookshelf",
+          "accessible_name": "Bookshelf",
+          "rel": null,
+          "target": null,
+          "section_heading": "Pages",
+          "target_url": "/bookshelf",
+          "kind": "internal"
+        },
+        {
+          "source_id": "src/components/PageRail.jsx:735/21536/701:3",
+          "file": "src/components/PageRail.jsx",
+          "line": 14,
+          "section": "nav",
+          "section_id": "src/components/PageRail.jsx:233/21536",
+          "ui_state": "initial",
+          "data_bindings": [],
+          "href": "/blog",
+          "anchor_text": "Blogs",
+          "accessible_name": "Blogs",
+          "rel": null,
+          "target": null,
+          "section_heading": "Pages",
+          "target_url": "/blog",
+          "kind": "internal"
+        },
+        {
+          "source_id": "src/App.jsx:21658",
+          "file": "src/App.jsx",
+          "line": 432,
+          "section": "header",
+          "section_id": "src/App.jsx:21638",
+          "ui_state": "initial",
+          "data_bindings": [],
+          "href": "/",
+          "anchor_text": "Lakshay Goyal",
+          "accessible_name": "Lakshay Goyal",
+          "rel": null,
+          "target": null,
+          "target_url": "/",
+          "kind": "internal"
+        },
+        {
+          "source_id": "src/App.jsx:3886/20805/18428:0/18774",
+          "file": "src/App.jsx",
+          "line": 97,
+          "section": "article",
+          "section_id": "src/App.jsx:18504/20805/18428:0",
+          "ui_state": "initial",
+          "data_bindings": [
+            {
+              "file": "public/blog/blog.json",
+              "json_pointer": ""
+            },
+            {
+              "file": "public/blog/blog.json",
+              "json_pointer": "/0"
+            }
+          ],
+          "href": "/blog/deploying-your-site-with-vercel",
+          "anchor_text": "Deploying Your Site with Vercel (Dummy Blog)",
+          "accessible_name": "Deploying Your Site with Vercel (Dummy Blog)",
+          "rel": null,
+          "target": null,
+          "target_url": "/blog/deploying-your-site-with-vercel",
+          "kind": "internal"
+        },
+        {
+          "source_id": "src/components/ContactRail.jsx:3677/22007/3637:0",
+          "file": "src/components/ContactRail.jsx",
+          "line": 75,
+          "section": "nav",
+          "section_id": "src/components/ContactRail.jsx:3532/22007",
+          "ui_state": "initial",
+          "data_bindings": [],
+          "href": "mailto:lakshaygoyal201@gmail.com",
+          "anchor_text": "",
+          "accessible_name": "Email",
+          "rel": null,
+          "target": null,
+          "section_heading": "Contact links",
+          "target_url": "mailto:lakshaygoyal201@gmail.com",
+          "kind": "action"
+        },
+        {
+          "source_id": "src/components/ContactRail.jsx:3677/22007/3637:1",
+          "file": "src/components/ContactRail.jsx",
+          "line": 75,
+          "section": "nav",
+          "section_id": "src/components/ContactRail.jsx:3532/22007",
+          "ui_state": "initial",
+          "data_bindings": [],
+          "href": "https://github.com/lakshay-goyal",
+          "anchor_text": "",
+          "accessible_name": "GitHub",
+          "rel": "noopener noreferrer",
+          "target": "_blank",
+          "section_heading": "Contact links",
+          "target_url": "https://github.com/lakshay-goyal",
+          "kind": "absolute-unclassified"
+        },
+        {
+          "source_id": "src/components/ContactRail.jsx:3677/22007/3637:2",
+          "file": "src/components/ContactRail.jsx",
+          "line": 75,
+          "section": "nav",
+          "section_id": "src/components/ContactRail.jsx:3532/22007",
+          "ui_state": "initial",
+          "data_bindings": [],
+          "href": "https://www.linkedin.com/in/lakshay-goyal-9778a6246/",
+          "anchor_text": "",
+          "accessible_name": "LinkedIn",
+          "rel": "noopener noreferrer",
+          "target": "_blank",
+          "section_heading": "Contact links",
+          "target_url": "https://www.linkedin.com/in/lakshay-goyal-9778a6246/",
+          "kind": "absolute-unclassified"
+        },
+        {
+          "source_id": "src/components/ContactRail.jsx:3677/22007/3637:3",
+          "file": "src/components/ContactRail.jsx",
+          "line": 75,
+          "section": "nav",
+          "section_id": "src/components/ContactRail.jsx:3532/22007",
+          "ui_state": "initial",
+          "data_bindings": [],
+          "href": "https://x.com/lakshayg2004",
+          "anchor_text": "",
+          "accessible_name": "X",
+          "rel": "noopener noreferrer",
+          "target": "_blank",
+          "section_heading": "Contact links",
+          "target_url": "https://x.com/lakshayg2004",
+          "kind": "absolute-unclassified"
+        },
+        {
+          "source_id": "src/components/ContactRail.jsx:3677/22007/3637:4",
+          "file": "src/components/ContactRail.jsx",
+          "line": 75,
+          "section": "nav",
+          "section_id": "src/components/ContactRail.jsx:3532/22007",
+          "ui_state": "initial",
+          "data_bindings": [],
+          "href": "/Lakshay_Resume.pdf",
+          "anchor_text": "",
+          "accessible_name": "Resume",
+          "rel": "noopener noreferrer",
+          "target": "_blank",
+          "section_heading": "Contact links",
+          "target_url": "/Lakshay_Resume.pdf",
+          "kind": "resource"
+        },
+        {
+          "source_id": "src/components/ContactRail.jsx:1943/22007/4420",
+          "file": "src/components/ContactRail.jsx",
+          "line": 37,
+          "section": "main",
+          "section_id": "src/App.jsx:21181",
+          "ui_state": "initial",
+          "data_bindings": [],
+          "href": "https://cal.com/lakshay-goyal/30min?overlayCalendar=true",
+          "anchor_text": "Schedule",
+          "accessible_name": "Schedule a 30-minute Google Meet",
+          "rel": "noopener noreferrer",
+          "target": "_blank",
+          "target_url": "https://cal.com/lakshay-goyal/30min?overlayCalendar=true",
+          "kind": "absolute-unclassified"
+        }
+      ]
+    },
+    {
+      "url": "/blog/deploying-your-site-with-vercel",
+      "template": "src/App.jsx",
+      "is_dynamic": false,
+      "coverage": {
+        "mode": "static-source",
+        "complete": false,
+        "limitations": [
+          {
+            "file": "src/App.jsx",
+            "line": 71,
+            "reason": "unresolved_rendered_expression"
+          },
+          {
+            "file": "src/App.jsx",
+            "line": 74,
+            "reason": "unresolved_condition"
+          },
+          {
+            "file": "src/App.jsx",
+            "line": 74,
+            "reason": "unresolved_rendered_expression"
+          },
+          {
+            "file": "src/App.jsx",
+            "line": 75,
+            "reason": "unresolved_rendered_expression"
+          },
+          {
+            "file": "src/App.jsx",
+            "line": 76,
+            "reason": "unresolved_condition"
+          },
+          {
+            "file": "src/App.jsx",
+            "line": 76,
+            "reason": "unresolved_rendered_expression"
+          },
+          {
+            "file": "src/App.jsx",
+            "line": 79,
+            "reason": "unresolved_condition"
+          },
+          {
+            "file": "src/App.jsx",
+            "line": 79,
+            "reason": "unresolved_rendered_expression"
+          },
+          {
+            "file": "src/App.jsx",
+            "line": 70,
+            "reason": "unresolved_attributes:ref,aria-label,aria-pressed,title"
+          },
+          {
+            "file": "src/components/ContactRail.jsx",
+            "line": 58,
+            "reason": "unresolved_rendered_expression"
+          },
+          {
+            "file": "src/components/ContactRail.jsx",
+            "line": 45,
+            "reason": "unresolved_component:LiquidMetal"
+          }
+        ],
+        "route_patterns": [
+          "/blog",
+          "/blog/"
+        ],
+        "entrypoint": "src/main.jsx",
+        "resolved_interaction_states": 0,
+        "resolved_local_fetches": [
+          "public/blog/deploying-your-site-with-vercel.md"
+        ],
+        "note": "Composed from allowlisted source semantics. CSS visibility, arbitrary runtime/network data and browser behavior remain unverified."
+      },
+      "links": [
+        {
+          "source_id": "src/components/PageRail.jsx:735/21536/701:0",
+          "file": "src/components/PageRail.jsx",
+          "line": 14,
+          "section": "nav",
+          "section_id": "src/components/PageRail.jsx:233/21536",
+          "ui_state": "initial",
+          "data_bindings": [],
+          "href": "/",
+          "anchor_text": "Home",
+          "accessible_name": "Home",
+          "rel": null,
+          "target": null,
+          "section_heading": "Pages",
+          "target_url": "/",
+          "kind": "internal"
+        },
+        {
+          "source_id": "src/components/PageRail.jsx:735/21536/701:1",
+          "file": "src/components/PageRail.jsx",
+          "line": 14,
+          "section": "nav",
+          "section_id": "src/components/PageRail.jsx:233/21536",
+          "ui_state": "initial",
+          "data_bindings": [],
+          "href": "/about",
+          "anchor_text": "About",
+          "accessible_name": "About",
+          "rel": null,
+          "target": null,
+          "section_heading": "Pages",
+          "target_url": "/about",
+          "kind": "internal"
+        },
+        {
+          "source_id": "src/components/PageRail.jsx:735/21536/701:2",
+          "file": "src/components/PageRail.jsx",
+          "line": 14,
+          "section": "nav",
+          "section_id": "src/components/PageRail.jsx:233/21536",
+          "ui_state": "initial",
+          "data_bindings": [],
+          "href": "/bookshelf",
+          "anchor_text": "Bookshelf",
+          "accessible_name": "Bookshelf",
+          "rel": null,
+          "target": null,
+          "section_heading": "Pages",
+          "target_url": "/bookshelf",
+          "kind": "internal"
+        },
+        {
+          "source_id": "src/components/PageRail.jsx:735/21536/701:3",
+          "file": "src/components/PageRail.jsx",
+          "line": 14,
+          "section": "nav",
+          "section_id": "src/components/PageRail.jsx:233/21536",
+          "ui_state": "initial",
+          "data_bindings": [],
+          "href": "/blog",
+          "anchor_text": "Blogs",
+          "accessible_name": "Blogs",
+          "rel": null,
+          "target": null,
+          "section_heading": "Pages",
+          "target_url": "/blog",
+          "kind": "internal"
+        },
+        {
+          "source_id": "src/App.jsx:21658",
+          "file": "src/App.jsx",
+          "line": 432,
+          "section": "header",
+          "section_id": "src/App.jsx:21638",
+          "ui_state": "initial",
+          "data_bindings": [],
+          "href": "/",
+          "anchor_text": "Lakshay Goyal",
+          "accessible_name": "Lakshay Goyal",
+          "rel": null,
+          "target": null,
+          "target_url": "/",
+          "kind": "internal"
+        },
+        {
+          "source_id": "src/App.jsx:19694/20853",
+          "file": "src/App.jsx",
+          "line": 404,
+          "section": "main",
+          "section_id": "src/App.jsx:21181",
+          "ui_state": "initial",
+          "data_bindings": [
+            {
+              "file": "public/blog/deploying-your-site-with-vercel.md",
+              "json_pointer": ""
+            }
+          ],
+          "href": "/blog",
+          "anchor_text": "← All blogs",
+          "accessible_name": "← All blogs",
+          "rel": null,
+          "target": null,
+          "target_url": "/blog",
+          "kind": "internal"
+        },
+        {
+          "source_id": "src/components/ContactRail.jsx:3677/22007/3637:0",
+          "file": "src/components/ContactRail.jsx",
+          "line": 75,
+          "section": "nav",
+          "section_id": "src/components/ContactRail.jsx:3532/22007",
+          "ui_state": "initial",
+          "data_bindings": [],
+          "href": "mailto:lakshaygoyal201@gmail.com",
+          "anchor_text": "",
+          "accessible_name": "Email",
+          "rel": null,
+          "target": null,
+          "section_heading": "Contact links",
+          "target_url": "mailto:lakshaygoyal201@gmail.com",
+          "kind": "action"
+        },
+        {
+          "source_id": "src/components/ContactRail.jsx:3677/22007/3637:1",
+          "file": "src/components/ContactRail.jsx",
+          "line": 75,
+          "section": "nav",
+          "section_id": "src/components/ContactRail.jsx:3532/22007",
+          "ui_state": "initial",
+          "data_bindings": [],
+          "href": "https://github.com/lakshay-goyal",
+          "anchor_text": "",
+          "accessible_name": "GitHub",
+          "rel": "noopener noreferrer",
+          "target": "_blank",
+          "section_heading": "Contact links",
+          "target_url": "https://github.com/lakshay-goyal",
+          "kind": "absolute-unclassified"
+        },
+        {
+          "source_id": "src/components/ContactRail.jsx:3677/22007/3637:2",
+          "file": "src/components/ContactRail.jsx",
+          "line": 75,
+          "section": "nav",
+          "section_id": "src/components/ContactRail.jsx:3532/22007",
+          "ui_state": "initial",
+          "data_bindings": [],
+          "href": "https://www.linkedin.com/in/lakshay-goyal-9778a6246/",
+          "anchor_text": "",
+          "accessible_name": "LinkedIn",
+          "rel": "noopener noreferrer",
+          "target": "_blank",
+          "section_heading": "Contact links",
+          "target_url": "https://www.linkedin.com/in/lakshay-goyal-9778a6246/",
+          "kind": "absolute-unclassified"
+        },
+        {
+          "source_id": "src/components/ContactRail.jsx:3677/22007/3637:3",
+          "file": "src/components/ContactRail.jsx",
+          "line": 75,
+          "section": "nav",
+          "section_id": "src/components/ContactRail.jsx:3532/22007",
+          "ui_state": "initial",
+          "data_bindings": [],
+          "href": "https://x.com/lakshayg2004",
+          "anchor_text": "",
+          "accessible_name": "X",
+          "rel": "noopener noreferrer",
+          "target": "_blank",
+          "section_heading": "Contact links",
+          "target_url": "https://x.com/lakshayg2004",
+          "kind": "absolute-unclassified"
+        },
+        {
+          "source_id": "src/components/ContactRail.jsx:3677/22007/3637:4",
+          "file": "src/components/ContactRail.jsx",
+          "line": 75,
+          "section": "nav",
+          "section_id": "src/components/ContactRail.jsx:3532/22007",
+          "ui_state": "initial",
+          "data_bindings": [],
+          "href": "/Lakshay_Resume.pdf",
+          "anchor_text": "",
+          "accessible_name": "Resume",
+          "rel": "noopener noreferrer",
+          "target": "_blank",
+          "section_heading": "Contact links",
+          "target_url": "/Lakshay_Resume.pdf",
+          "kind": "resource"
+        },
+        {
+          "source_id": "src/components/ContactRail.jsx:1943/22007/4420",
+          "file": "src/components/ContactRail.jsx",
+          "line": 37,
+          "section": "main",
+          "section_id": "src/App.jsx:21181",
+          "ui_state": "initial",
+          "data_bindings": [],
+          "href": "https://cal.com/lakshay-goyal/30min?overlayCalendar=true",
+          "anchor_text": "Schedule",
+          "accessible_name": "Schedule a 30-minute Google Meet",
+          "rel": "noopener noreferrer",
+          "target": "_blank",
+          "target_url": "https://cal.com/lakshay-goyal/30min?overlayCalendar=true",
+          "kind": "absolute-unclassified"
+        }
+      ]
+    },
+    {
+      "url": "/bookshelf",
+      "template": "src/App.jsx",
+      "is_dynamic": false,
+      "coverage": {
+        "mode": "static-source",
+        "complete": false,
+        "limitations": [
+          {
+            "file": "src/components/ScrollReveal.jsx",
+            "line": 22,
+            "reason": "unresolved_rendered_expression"
+          },
+          {
+            "file": "src/components/ScrollReveal.jsx",
+            "line": 22,
+            "reason": "unresolved_attributes:ref"
+          },
+          {
+            "file": "src/App.jsx",
+            "line": 71,
+            "reason": "unresolved_rendered_expression"
+          },
+          {
+            "file": "src/App.jsx",
+            "line": 74,
+            "reason": "unresolved_condition"
+          },
+          {
+            "file": "src/App.jsx",
+            "line": 74,
+            "reason": "unresolved_rendered_expression"
+          },
+          {
+            "file": "src/App.jsx",
+            "line": 75,
+            "reason": "unresolved_rendered_expression"
+          },
+          {
+            "file": "src/App.jsx",
+            "line": 76,
+            "reason": "unresolved_condition"
+          },
+          {
+            "file": "src/App.jsx",
+            "line": 76,
+            "reason": "unresolved_rendered_expression"
+          },
+          {
+            "file": "src/App.jsx",
+            "line": 79,
+            "reason": "unresolved_condition"
+          },
+          {
+            "file": "src/App.jsx",
+            "line": 79,
+            "reason": "unresolved_rendered_expression"
+          },
+          {
+            "file": "src/App.jsx",
+            "line": 70,
+            "reason": "unresolved_attributes:ref,aria-label,aria-pressed,title"
+          },
+          {
+            "file": "src/components/ContactRail.jsx",
+            "line": 58,
+            "reason": "unresolved_rendered_expression"
+          },
+          {
+            "file": "src/components/ContactRail.jsx",
+            "line": 45,
+            "reason": "unresolved_component:LiquidMetal"
+          }
+        ],
+        "route_patterns": [
+          "/blog",
+          "/blog/"
+        ],
+        "entrypoint": "src/main.jsx",
+        "resolved_interaction_states": 0,
+        "resolved_local_fetches": [],
+        "note": "Composed from allowlisted source semantics. CSS visibility, arbitrary runtime/network data and browser behavior remain unverified."
+      },
+      "links": [
+        {
+          "source_id": "src/components/PageRail.jsx:735/21536/701:0",
+          "file": "src/components/PageRail.jsx",
+          "line": 14,
+          "section": "nav",
+          "section_id": "src/components/PageRail.jsx:233/21536",
+          "ui_state": "initial",
+          "data_bindings": [],
+          "href": "/",
+          "anchor_text": "Home",
+          "accessible_name": "Home",
+          "rel": null,
+          "target": null,
+          "section_heading": "Pages",
+          "target_url": "/",
+          "kind": "internal"
+        },
+        {
+          "source_id": "src/components/PageRail.jsx:735/21536/701:1",
+          "file": "src/components/PageRail.jsx",
+          "line": 14,
+          "section": "nav",
+          "section_id": "src/components/PageRail.jsx:233/21536",
+          "ui_state": "initial",
+          "data_bindings": [],
+          "href": "/about",
+          "anchor_text": "About",
+          "accessible_name": "About",
+          "rel": null,
+          "target": null,
+          "section_heading": "Pages",
+          "target_url": "/about",
+          "kind": "internal"
+        },
+        {
+          "source_id": "src/components/PageRail.jsx:735/21536/701:2",
+          "file": "src/components/PageRail.jsx",
+          "line": 14,
+          "section": "nav",
+          "section_id": "src/components/PageRail.jsx:233/21536",
+          "ui_state": "initial",
+          "data_bindings": [],
+          "href": "/bookshelf",
+          "anchor_text": "Bookshelf",
+          "accessible_name": "Bookshelf",
+          "rel": null,
+          "target": null,
+          "section_heading": "Pages",
+          "target_url": "/bookshelf",
+          "kind": "internal"
+        },
+        {
+          "source_id": "src/components/PageRail.jsx:735/21536/701:3",
+          "file": "src/components/PageRail.jsx",
+          "line": 14,
+          "section": "nav",
+          "section_id": "src/components/PageRail.jsx:233/21536",
+          "ui_state": "initial",
+          "data_bindings": [],
+          "href": "/blog",
+          "anchor_text": "Blogs",
+          "accessible_name": "Blogs",
+          "rel": null,
+          "target": null,
+          "section_heading": "Pages",
+          "target_url": "/blog",
+          "kind": "internal"
+        },
+        {
+          "source_id": "src/App.jsx:21658",
+          "file": "src/App.jsx",
+          "line": 432,
+          "section": "header",
+          "section_id": "src/App.jsx:21638",
+          "ui_state": "initial",
+          "data_bindings": [],
+          "href": "/",
+          "anchor_text": "Lakshay Goyal",
+          "accessible_name": "Lakshay Goyal",
+          "rel": null,
+          "target": null,
+          "target_url": "/",
+          "kind": "internal"
+        },
+        {
+          "source_id": "src/App.jsx:3886/20762/16267:0/17363",
+          "file": "src/App.jsx",
+          "line": 97,
+          "section": "article",
+          "section_id": "src/App.jsx:16340/20762/16267:0",
+          "ui_state": "initial",
+          "data_bindings": [
+            {
+              "file": "src/store/data/books.json",
+              "json_pointer": "/0"
+            }
+          ],
+          "href": "https://www.amazon.in/Freedom-Known-J-Krishnamurti-ebook/dp/B003NX6Y6A?ref_=ast_author_mpb",
+          "anchor_text": "View book",
+          "accessible_name": "View book",
+          "rel": "noopener noreferrer",
+          "target": "_blank",
+          "target_url": "https://www.amazon.in/Freedom-Known-J-Krishnamurti-ebook/dp/B003NX6Y6A?ref_=ast_author_mpb",
+          "kind": "absolute-unclassified"
+        },
+        {
+          "source_id": "src/App.jsx:3886/20762/16267:1/17363",
+          "file": "src/App.jsx",
+          "line": 97,
+          "section": "article",
+          "section_id": "src/App.jsx:16340/20762/16267:1",
+          "ui_state": "initial",
+          "data_bindings": [
+            {
+              "file": "src/store/data/books.json",
+              "json_pointer": "/1"
+            }
+          ],
+          "href": "https://www.amazon.in/12-Week-Year-Others-Months/dp/1118509234",
+          "anchor_text": "View book",
+          "accessible_name": "View book",
+          "rel": "noopener noreferrer",
+          "target": "_blank",
+          "target_url": "https://www.amazon.in/12-Week-Year-Others-Months/dp/1118509234",
+          "kind": "absolute-unclassified"
+        },
+        {
+          "source_id": "src/components/ContactRail.jsx:3677/22007/3637:0",
+          "file": "src/components/ContactRail.jsx",
+          "line": 75,
+          "section": "nav",
+          "section_id": "src/components/ContactRail.jsx:3532/22007",
+          "ui_state": "initial",
+          "data_bindings": [],
+          "href": "mailto:lakshaygoyal201@gmail.com",
+          "anchor_text": "",
+          "accessible_name": "Email",
+          "rel": null,
+          "target": null,
+          "section_heading": "Contact links",
+          "target_url": "mailto:lakshaygoyal201@gmail.com",
+          "kind": "action"
+        },
+        {
+          "source_id": "src/components/ContactRail.jsx:3677/22007/3637:1",
+          "file": "src/components/ContactRail.jsx",
+          "line": 75,
+          "section": "nav",
+          "section_id": "src/components/ContactRail.jsx:3532/22007",
+          "ui_state": "initial",
+          "data_bindings": [],
+          "href": "https://github.com/lakshay-goyal",
+          "anchor_text": "",
+          "accessible_name": "GitHub",
+          "rel": "noopener noreferrer",
+          "target": "_blank",
+          "section_heading": "Contact links",
+          "target_url": "https://github.com/lakshay-goyal",
+          "kind": "absolute-unclassified"
+        },
+        {
+          "source_id": "src/components/ContactRail.jsx:3677/22007/3637:2",
+          "file": "src/components/ContactRail.jsx",
+          "line": 75,
+          "section": "nav",
+          "section_id": "src/components/ContactRail.jsx:3532/22007",
+          "ui_state": "initial",
+          "data_bindings": [],
+          "href": "https://www.linkedin.com/in/lakshay-goyal-9778a6246/",
+          "anchor_text": "",
+          "accessible_name": "LinkedIn",
+          "rel": "noopener noreferrer",
+          "target": "_blank",
+          "section_heading": "Contact links",
+          "target_url": "https://www.linkedin.com/in/lakshay-goyal-9778a6246/",
+          "kind": "absolute-unclassified"
+        },
+        {
+          "source_id": "src/components/ContactRail.jsx:3677/22007/3637:3",
+          "file": "src/components/ContactRail.jsx",
+          "line": 75,
+          "section": "nav",
+          "section_id": "src/components/ContactRail.jsx:3532/22007",
+          "ui_state": "initial",
+          "data_bindings": [],
+          "href": "https://x.com/lakshayg2004",
+          "anchor_text": "",
+          "accessible_name": "X",
+          "rel": "noopener noreferrer",
+          "target": "_blank",
+          "section_heading": "Contact links",
+          "target_url": "https://x.com/lakshayg2004",
+          "kind": "absolute-unclassified"
+        },
+        {
+          "source_id": "src/components/ContactRail.jsx:3677/22007/3637:4",
+          "file": "src/components/ContactRail.jsx",
+          "line": 75,
+          "section": "nav",
+          "section_id": "src/components/ContactRail.jsx:3532/22007",
+          "ui_state": "initial",
+          "data_bindings": [],
+          "href": "/Lakshay_Resume.pdf",
+          "anchor_text": "",
+          "accessible_name": "Resume",
+          "rel": "noopener noreferrer",
+          "target": "_blank",
+          "section_heading": "Contact links",
+          "target_url": "/Lakshay_Resume.pdf",
+          "kind": "resource"
+        },
+        {
+          "source_id": "src/components/ContactRail.jsx:1943/22007/4420",
+          "file": "src/components/ContactRail.jsx",
+          "line": 37,
+          "section": "main",
+          "section_id": "src/App.jsx:21181",
+          "ui_state": "initial",
+          "data_bindings": [],
+          "href": "https://cal.com/lakshay-goyal/30min?overlayCalendar=true",
+          "anchor_text": "Schedule",
+          "accessible_name": "Schedule a 30-minute Google Meet",
+          "rel": "noopener noreferrer",
+          "target": "_blank",
+          "target_url": "https://cal.com/lakshay-goyal/30min?overlayCalendar=true",
+          "kind": "absolute-unclassified"
+        }
+      ]
+    }
+  ]
+}

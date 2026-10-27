@@ -1,0 +1,3463 @@
+{
+  "schema_version": "2.0",
+  "category": "content",
+  "extraction": {
+    "mode": "static-source",
+    "route_count": 5,
+    "limitations": [
+      "File routes, literal React Router routes and supported pathname dispatch are enumerated; arbitrary routing remains unresolved.",
+      "No application code is executed; runtime content is unknown.",
+      "Supported React composition follows source-selected component order; browser layout and visibility are unverified."
+    ]
+  },
+  "pages": [
+    {
+      "url": "/",
+      "template": "src/App.jsx",
+      "is_dynamic": false,
+      "coverage": {
+        "mode": "static-source",
+        "complete": false,
+        "limitations": [
+          {
+            "file": "src/components/ScrollReveal.jsx",
+            "line": 22,
+            "reason": "unresolved_rendered_expression"
+          },
+          {
+            "file": "src/components/ScrollReveal.jsx",
+            "line": 22,
+            "reason": "unresolved_attributes:ref"
+          },
+          {
+            "file": "src/App.jsx",
+            "line": 71,
+            "reason": "unresolved_rendered_expression"
+          },
+          {
+            "file": "src/App.jsx",
+            "line": 74,
+            "reason": "unresolved_condition"
+          },
+          {
+            "file": "src/App.jsx",
+            "line": 74,
+            "reason": "unresolved_rendered_expression"
+          },
+          {
+            "file": "src/App.jsx",
+            "line": 75,
+            "reason": "unresolved_rendered_expression"
+          },
+          {
+            "file": "src/App.jsx",
+            "line": 76,
+            "reason": "unresolved_condition"
+          },
+          {
+            "file": "src/App.jsx",
+            "line": 76,
+            "reason": "unresolved_rendered_expression"
+          },
+          {
+            "file": "src/App.jsx",
+            "line": 79,
+            "reason": "unresolved_condition"
+          },
+          {
+            "file": "src/App.jsx",
+            "line": 79,
+            "reason": "unresolved_rendered_expression"
+          },
+          {
+            "file": "src/App.jsx",
+            "line": 70,
+            "reason": "unresolved_attributes:ref,aria-label,aria-pressed,title"
+          },
+          {
+            "file": "src/components/ContactRail.jsx",
+            "line": 58,
+            "reason": "unresolved_rendered_expression"
+          },
+          {
+            "file": "src/components/ContactRail.jsx",
+            "line": 45,
+            "reason": "unresolved_component:LiquidMetal"
+          }
+        ],
+        "route_patterns": [
+          "/blog",
+          "/blog/"
+        ],
+        "entrypoint": "src/main.jsx",
+        "resolved_interaction_states": 4,
+        "resolved_local_fetches": [],
+        "note": "Composed from allowlisted source semantics. CSS visibility, arbitrary runtime/network data and browser behavior remain unverified."
+      },
+      "sections": [
+        {
+          "parent_section_id": null,
+          "source_id": "src/App.jsx:21181",
+          "tag": "main",
+          "id": null,
+          "labelledby": null,
+          "label": null
+        },
+        {
+          "parent_section_id": "src/App.jsx:21181",
+          "source_id": "src/components/PageRail.jsx:233/21536",
+          "tag": "nav",
+          "id": null,
+          "labelledby": null,
+          "label": "Pages"
+        },
+        {
+          "parent_section_id": "src/App.jsx:21181",
+          "source_id": "src/App.jsx:21638",
+          "tag": "header",
+          "id": null,
+          "labelledby": null,
+          "label": null
+        },
+        {
+          "parent_section_id": "src/App.jsx:21181",
+          "source_id": "src/App.jsx:11675/20679",
+          "tag": "section",
+          "id": null,
+          "labelledby": "about-heading",
+          "label": null
+        },
+        {
+          "parent_section_id": "src/App.jsx:21181",
+          "source_id": "src/App.jsx:4401/20679/12224",
+          "tag": "section",
+          "id": null,
+          "labelledby": "experience-heading",
+          "label": null
+        },
+        {
+          "parent_section_id": "src/App.jsx:4401/20679/12224",
+          "source_id": "src/App.jsx:4668/20679/12224/4624:0",
+          "tag": "article",
+          "id": null,
+          "labelledby": null,
+          "label": null
+        },
+        {
+          "parent_section_id": "src/App.jsx:4401/20679/12224",
+          "source_id": "src/App.jsx:4668/20679/12224/4624:1",
+          "tag": "article",
+          "id": null,
+          "labelledby": null,
+          "label": null
+        },
+        {
+          "parent_section_id": "src/App.jsx:21181",
+          "source_id": "src/App.jsx:6095/20679/12274",
+          "tag": "section",
+          "id": "work",
+          "labelledby": "work-heading",
+          "label": null
+        },
+        {
+          "parent_section_id": "src/App.jsx:6095/20679/12274",
+          "source_id": "src/App.jsx:6434/20679/12274/6384:0",
+          "tag": "article",
+          "id": null,
+          "labelledby": null,
+          "label": null
+        },
+        {
+          "parent_section_id": "src/App.jsx:6095/20679/12274",
+          "source_id": "src/App.jsx:6434/20679/12274/6384:1",
+          "tag": "article",
+          "id": null,
+          "labelledby": null,
+          "label": null
+        },
+        {
+          "parent_section_id": "src/App.jsx:6095/20679/12274",
+          "source_id": "src/App.jsx:6434/20679/12274/6384:2",
+          "tag": "article",
+          "id": null,
+          "labelledby": null,
+          "label": null
+        },
+        {
+          "parent_section_id": "src/App.jsx:6095/20679/12274",
+          "source_id": "src/App.jsx:6434/20679/12274/6384:3",
+          "tag": "article",
+          "id": null,
+          "labelledby": null,
+          "label": null
+        },
+        {
+          "parent_section_id": "src/App.jsx:21181",
+          "source_id": "src/App.jsx:10699/20679/12326",
+          "tag": "section",
+          "id": null,
+          "labelledby": "more-heading",
+          "label": null
+        },
+        {
+          "parent_section_id": "src/App.jsx:21181",
+          "source_id": "src/components/ContactRail.jsx:3056/22007",
+          "tag": "aside",
+          "id": null,
+          "labelledby": null,
+          "label": "Contact links"
+        },
+        {
+          "parent_section_id": "src/components/ContactRail.jsx:3056/22007",
+          "source_id": "src/components/ContactRail.jsx:3532/22007",
+          "tag": "nav",
+          "id": null,
+          "labelledby": null,
+          "label": "Contact links"
+        }
+      ],
+      "blocks": [
+        {
+          "source_id": "src/components/PageRail.jsx:1375/21536/701:0",
+          "file": "src/components/PageRail.jsx",
+          "line": 20,
+          "section": "nav",
+          "section_id": "src/components/PageRail.jsx:233/21536",
+          "ui_state": "initial",
+          "data_bindings": [],
+          "tag": "span",
+          "text": "Home",
+          "context_text": "Home",
+          "section_heading": "Pages"
+        },
+        {
+          "source_id": "src/components/PageRail.jsx:1375/21536/701:1",
+          "file": "src/components/PageRail.jsx",
+          "line": 20,
+          "section": "nav",
+          "section_id": "src/components/PageRail.jsx:233/21536",
+          "ui_state": "initial",
+          "data_bindings": [],
+          "tag": "span",
+          "text": "About",
+          "context_text": "About",
+          "section_heading": "Pages"
+        },
+        {
+          "source_id": "src/components/PageRail.jsx:1375/21536/701:2",
+          "file": "src/components/PageRail.jsx",
+          "line": 20,
+          "section": "nav",
+          "section_id": "src/components/PageRail.jsx:233/21536",
+          "ui_state": "initial",
+          "data_bindings": [],
+          "tag": "span",
+          "text": "Bookshelf",
+          "context_text": "Bookshelf",
+          "section_heading": "Pages"
+        },
+        {
+          "source_id": "src/components/PageRail.jsx:1375/21536/701:3",
+          "file": "src/components/PageRail.jsx",
+          "line": 20,
+          "section": "nav",
+          "section_id": "src/components/PageRail.jsx:233/21536",
+          "ui_state": "initial",
+          "data_bindings": [],
+          "tag": "span",
+          "text": "Blogs",
+          "context_text": "Blogs",
+          "section_heading": "Pages"
+        },
+        {
+          "source_id": "src/App.jsx:21658",
+          "file": "src/App.jsx",
+          "line": 432,
+          "section": "header",
+          "section_id": "src/App.jsx:21638",
+          "ui_state": "initial",
+          "data_bindings": [],
+          "tag": "a",
+          "text": "Lakshay Goyal",
+          "context_text": "Lakshay Goyal"
+        },
+        {
+          "source_id": "src/App.jsx:21870",
+          "file": "src/App.jsx",
+          "line": 433,
+          "section": "header",
+          "section_id": "src/App.jsx:21638",
+          "ui_state": "initial",
+          "data_bindings": [],
+          "tag": "p",
+          "text": "Software Engineer",
+          "context_text": "Software Engineer"
+        },
+        {
+          "source_id": "src/App.jsx:11762/20679",
+          "file": "src/App.jsx",
+          "line": 252,
+          "section": "section",
+          "section_id": "src/App.jsx:11675/20679",
+          "ui_state": "initial",
+          "data_bindings": [],
+          "tag": "h2",
+          "text": "About",
+          "context_text": "About",
+          "section_heading": "About"
+        },
+        {
+          "source_id": "src/App.jsx:11975/20679",
+          "file": "src/App.jsx",
+          "line": 254,
+          "section": "section",
+          "section_id": "src/App.jsx:11675/20679",
+          "ui_state": "initial",
+          "data_bindings": [],
+          "tag": "p",
+          "text": "Just a curious builder with a bad habit of going down every damn rabbit hole, building random shit, and figuring out life beyond code.",
+          "context_text": "Just a curious builder with a bad habit of going down every damn rabbit hole, building random shit, and figuring out life beyond code.",
+          "section_heading": "About"
+        },
+        {
+          "source_id": "src/App.jsx:4490/20679/12224",
+          "file": "src/App.jsx",
+          "line": 111,
+          "section": "section",
+          "section_id": "src/App.jsx:4401/20679/12224",
+          "ui_state": "initial",
+          "data_bindings": [],
+          "tag": "h2",
+          "text": "Work Experience",
+          "context_text": "Work Experience",
+          "section_heading": "Work Experience"
+        },
+        {
+          "source_id": "src/App.jsx:4872/20679/12224/4624:0",
+          "file": "src/App.jsx",
+          "line": 115,
+          "section": "article",
+          "section_id": "src/App.jsx:4668/20679/12224/4624:0",
+          "ui_state": "initial",
+          "data_bindings": [
+            {
+              "file": "src/store/data/experiences.json",
+              "json_pointer": "/0"
+            }
+          ],
+          "tag": "p",
+          "text": "July 2026 — Present",
+          "context_text": "July 2026 — Present",
+          "section_heading": "Work Experience"
+        },
+        {
+          "source_id": "src/App.jsx:5023/20679/12224/4624:0",
+          "file": "src/App.jsx",
+          "line": 117,
+          "section": "article",
+          "section_id": "src/App.jsx:4668/20679/12224/4624:0",
+          "ui_state": "initial",
+          "data_bindings": [
+            {
+              "file": "src/store/data/experiences.json",
+              "json_pointer": "/0"
+            }
+          ],
+          "tag": "p",
+          "text": "Software Engineer",
+          "context_text": "Software Engineer at Testsigma",
+          "section_heading": "Work Experience"
+        },
+        {
+          "source_id": "src/App.jsx:5023/20679/12224/4624:0",
+          "file": "src/App.jsx",
+          "line": 117,
+          "section": "article",
+          "section_id": "src/App.jsx:4668/20679/12224/4624:0",
+          "ui_state": "initial",
+          "data_bindings": [
+            {
+              "file": "src/store/data/experiences.json",
+              "json_pointer": "/0"
+            }
+          ],
+          "tag": "p",
+          "text": "at",
+          "context_text": "Software Engineer at Testsigma",
+          "section_heading": "Work Experience"
+        },
+        {
+          "source_id": "src/App.jsx:3886/20679/12224/4624:0/5164",
+          "file": "src/App.jsx",
+          "line": 97,
+          "section": "article",
+          "section_id": "src/App.jsx:4668/20679/12224/4624:0",
+          "ui_state": "initial",
+          "data_bindings": [
+            {
+              "file": "src/store/data/experiences.json",
+              "json_pointer": "/0"
+            }
+          ],
+          "tag": "a",
+          "text": "Testsigma",
+          "context_text": "Testsigma",
+          "section_heading": "Work Experience"
+        },
+        {
+          "source_id": "src/App.jsx:5261/20679/12224/4624:0",
+          "file": "src/App.jsx",
+          "line": 121,
+          "section": "article",
+          "section_id": "src/App.jsx:4668/20679/12224/4624:0",
+          "ui_state": "initial",
+          "data_bindings": [
+            {
+              "file": "src/store/data/experiences.json",
+              "json_pointer": "/0"
+            }
+          ],
+          "tag": "p",
+          "text": "Bangalore, India",
+          "context_text": "Bangalore, India • Full-time",
+          "section_heading": "Work Experience"
+        },
+        {
+          "source_id": "src/App.jsx:5261/20679/12224/4624:0",
+          "file": "src/App.jsx",
+          "line": 121,
+          "section": "article",
+          "section_id": "src/App.jsx:4668/20679/12224/4624:0",
+          "ui_state": "initial",
+          "data_bindings": [
+            {
+              "file": "src/store/data/experiences.json",
+              "json_pointer": "/0"
+            }
+          ],
+          "tag": "p",
+          "text": "• Full-time",
+          "context_text": "Bangalore, India • Full-time",
+          "section_heading": "Work Experience"
+        },
+        {
+          "source_id": "src/App.jsx:5386/20679/12224/4624:0",
+          "file": "src/App.jsx",
+          "line": 122,
+          "section": "article",
+          "section_id": "src/App.jsx:4668/20679/12224/4624:0",
+          "ui_state": "initial",
+          "data_bindings": [
+            {
+              "file": "src/store/data/experiences.json",
+              "json_pointer": "/0"
+            }
+          ],
+          "tag": "p",
+          "text": "Building things that make test automation a little less painful. Mostly jumping between backend, frontend, and infra, figuring things out along the way.",
+          "context_text": "Building things that make test automation a little less painful. Mostly jumping between backend, frontend, and infra, figuring things out along the way.",
+          "section_heading": "Work Experience"
+        },
+        {
+          "source_id": "src/App.jsx:4872/20679/12224/4624:1",
+          "file": "src/App.jsx",
+          "line": 115,
+          "section": "article",
+          "section_id": "src/App.jsx:4668/20679/12224/4624:1",
+          "ui_state": "initial",
+          "data_bindings": [
+            {
+              "file": "src/store/data/experiences.json",
+              "json_pointer": "/1"
+            }
+          ],
+          "tag": "p",
+          "text": "Dec 2025 — June 2026",
+          "context_text": "Dec 2025 — June 2026",
+          "section_heading": "Work Experience"
+        },
+        {
+          "source_id": "src/App.jsx:5023/20679/12224/4624:1",
+          "file": "src/App.jsx",
+          "line": 117,
+          "section": "article",
+          "section_id": "src/App.jsx:4668/20679/12224/4624:1",
+          "ui_state": "initial",
+          "data_bindings": [
+            {
+              "file": "src/store/data/experiences.json",
+              "json_pointer": "/1"
+            }
+          ],
+          "tag": "p",
+          "text": "Founding Engineer",
+          "context_text": "Founding Engineer at FOZO",
+          "section_heading": "Work Experience"
+        },
+        {
+          "source_id": "src/App.jsx:5023/20679/12224/4624:1",
+          "file": "src/App.jsx",
+          "line": 117,
+          "section": "article",
+          "section_id": "src/App.jsx:4668/20679/12224/4624:1",
+          "ui_state": "initial",
+          "data_bindings": [
+            {
+              "file": "src/store/data/experiences.json",
+              "json_pointer": "/1"
+            }
+          ],
+          "tag": "p",
+          "text": "at",
+          "context_text": "Founding Engineer at FOZO",
+          "section_heading": "Work Experience"
+        },
+        {
+          "source_id": "src/App.jsx:3886/20679/12224/4624:1/5164",
+          "file": "src/App.jsx",
+          "line": 97,
+          "section": "article",
+          "section_id": "src/App.jsx:4668/20679/12224/4624:1",
+          "ui_state": "initial",
+          "data_bindings": [
+            {
+              "file": "src/store/data/experiences.json",
+              "json_pointer": "/1"
+            }
+          ],
+          "tag": "a",
+          "text": "FOZO",
+          "context_text": "FOZO",
+          "section_heading": "Work Experience"
+        },
+        {
+          "source_id": "src/App.jsx:5261/20679/12224/4624:1",
+          "file": "src/App.jsx",
+          "line": 121,
+          "section": "article",
+          "section_id": "src/App.jsx:4668/20679/12224/4624:1",
+          "ui_state": "initial",
+          "data_bindings": [
+            {
+              "file": "src/store/data/experiences.json",
+              "json_pointer": "/1"
+            }
+          ],
+          "tag": "p",
+          "text": "Bangalore, India",
+          "context_text": "Bangalore, India • Full-time",
+          "section_heading": "Work Experience"
+        },
+        {
+          "source_id": "src/App.jsx:5261/20679/12224/4624:1",
+          "file": "src/App.jsx",
+          "line": 121,
+          "section": "article",
+          "section_id": "src/App.jsx:4668/20679/12224/4624:1",
+          "ui_state": "initial",
+          "data_bindings": [
+            {
+              "file": "src/store/data/experiences.json",
+              "json_pointer": "/1"
+            }
+          ],
+          "tag": "p",
+          "text": "• Full-time",
+          "context_text": "Bangalore, India • Full-time",
+          "section_heading": "Work Experience"
+        },
+        {
+          "source_id": "src/App.jsx:5386/20679/12224/4624:1",
+          "file": "src/App.jsx",
+          "line": 122,
+          "section": "article",
+          "section_id": "src/App.jsx:4668/20679/12224/4624:1",
+          "ui_state": "initial",
+          "data_bindings": [
+            {
+              "file": "src/store/data/experiences.json",
+              "json_pointer": "/1"
+            }
+          ],
+          "tag": "p",
+          "text": "Built a food delivery platform from scratch, handling everything from architecture and mobile apps to servers, deployments, and all the chaos in between.",
+          "context_text": "Built a food delivery platform from scratch, handling everything from architecture and mobile apps to servers, deployments, and all the chaos in between.",
+          "section_heading": "Work Experience"
+        },
+        {
+          "source_id": "src/App.jsx:6200/20679/12274",
+          "file": "src/App.jsx",
+          "line": 151,
+          "section": "section",
+          "section_id": "src/App.jsx:6095/20679/12274",
+          "ui_state": "initial",
+          "data_bindings": [],
+          "tag": "h2",
+          "text": "Selected Work",
+          "context_text": "Selected Work",
+          "section_heading": "Selected Work"
+        },
+        {
+          "source_id": "src/App.jsx:6555/20679/12274/6384:0",
+          "file": "src/App.jsx",
+          "line": 155,
+          "section": "article",
+          "section_id": "src/App.jsx:6434/20679/12274/6384:0",
+          "ui_state": "initial",
+          "data_bindings": [
+            {
+              "file": "src/store/data/majorProjects.json",
+              "json_pointer": "/0"
+            }
+          ],
+          "tag": "button",
+          "text": "Play Unlovable - Application Builder. demo",
+          "text_source": "aria-label",
+          "section_heading": "Selected Work"
+        },
+        {
+          "source_id": "src/App.jsx:7679/20679/12274/6384:0",
+          "file": "src/App.jsx",
+          "line": 167,
+          "section": "article",
+          "section_id": "src/App.jsx:6434/20679/12274/6384:0",
+          "ui_state": "initial",
+          "data_bindings": [
+            {
+              "file": "src/store/data/majorProjects.json",
+              "json_pointer": "/0"
+            }
+          ],
+          "tag": "span",
+          "text": "Play demo",
+          "context_text": "Play demo",
+          "section_heading": "Selected Work"
+        },
+        {
+          "source_id": "src/App.jsx:7879/20679/12274/6384:0",
+          "file": "src/App.jsx",
+          "line": 170,
+          "section": "article",
+          "section_id": "src/App.jsx:6434/20679/12274/6384:0",
+          "ui_state": "initial",
+          "data_bindings": [
+            {
+              "file": "src/store/data/majorProjects.json",
+              "json_pointer": "/0"
+            }
+          ],
+          "tag": "p",
+          "text": "01",
+          "context_text": "01",
+          "section_heading": "Selected Work"
+        },
+        {
+          "source_id": "src/App.jsx:3886/20679/12274/6384:0/8062",
+          "file": "src/App.jsx",
+          "line": 97,
+          "section": "article",
+          "section_id": "src/App.jsx:6434/20679/12274/6384:0",
+          "ui_state": "initial",
+          "data_bindings": [
+            {
+              "file": "src/store/data/majorProjects.json",
+              "json_pointer": "/0"
+            }
+          ],
+          "tag": "a",
+          "text": "Unlovable - Application Builder.",
+          "context_text": "Unlovable - Application Builder.",
+          "section_heading": "Selected Work"
+        },
+        {
+          "source_id": "src/App.jsx:8156/20679/12274/6384:0",
+          "file": "src/App.jsx",
+          "line": 172,
+          "section": "article",
+          "section_id": "src/App.jsx:6434/20679/12274/6384:0",
+          "ui_state": "initial",
+          "data_bindings": [
+            {
+              "file": "src/store/data/majorProjects.json",
+              "json_pointer": "/0"
+            }
+          ],
+          "tag": "p",
+          "text": "Built an application builder, where anyone can able to generate an web application using a prompt and creativity.",
+          "context_text": "Built an application builder, where anyone can able to generate an web application using a prompt and creativity.",
+          "section_heading": "Selected Work"
+        },
+        {
+          "source_id": "src/App.jsx:8253/20679/12274/6384:0",
+          "file": "src/App.jsx",
+          "line": 173,
+          "section": "article",
+          "section_id": "src/App.jsx:6434/20679/12274/6384:0",
+          "ui_state": "initial",
+          "data_bindings": [
+            {
+              "file": "src/store/data/majorProjects.json",
+              "json_pointer": "/0"
+            }
+          ],
+          "tag": "p",
+          "text": "Turborepo · Expo · E2B sandbox · Redis",
+          "context_text": "Turborepo · Expo · E2B sandbox · Redis",
+          "section_heading": "Selected Work"
+        },
+        {
+          "source_id": "src/App.jsx:3886/20679/12274/6384:0/8395",
+          "file": "src/App.jsx",
+          "line": 97,
+          "section": "article",
+          "section_id": "src/App.jsx:6434/20679/12274/6384:0",
+          "ui_state": "initial",
+          "data_bindings": [
+            {
+              "file": "src/store/data/majorProjects.json",
+              "json_pointer": "/0"
+            }
+          ],
+          "tag": "a",
+          "text": "Source code",
+          "context_text": "Source code",
+          "section_heading": "Selected Work"
+        },
+        {
+          "source_id": "src/App.jsx:6555/20679/12274/6384:1",
+          "file": "src/App.jsx",
+          "line": 155,
+          "section": "article",
+          "section_id": "src/App.jsx:6434/20679/12274/6384:1",
+          "ui_state": "initial",
+          "data_bindings": [
+            {
+              "file": "src/store/data/majorProjects.json",
+              "json_pointer": "/1"
+            }
+          ],
+          "tag": "button",
+          "text": "Play Unlovable - Mobile Application. demo",
+          "text_source": "aria-label",
+          "section_heading": "Selected Work"
+        },
+        {
+          "source_id": "src/App.jsx:7679/20679/12274/6384:1",
+          "file": "src/App.jsx",
+          "line": 167,
+          "section": "article",
+          "section_id": "src/App.jsx:6434/20679/12274/6384:1",
+          "ui_state": "initial",
+          "data_bindings": [
+            {
+              "file": "src/store/data/majorProjects.json",
+              "json_pointer": "/1"
+            }
+          ],
+          "tag": "span",
+          "text": "Play demo",
+          "context_text": "Play demo",
+          "section_heading": "Selected Work"
+        },
+        {
+          "source_id": "src/App.jsx:7879/20679/12274/6384:1",
+          "file": "src/App.jsx",
+          "line": 170,
+          "section": "article",
+          "section_id": "src/App.jsx:6434/20679/12274/6384:1",
+          "ui_state": "initial",
+          "data_bindings": [
+            {
+              "file": "src/store/data/majorProjects.json",
+              "json_pointer": "/1"
+            }
+          ],
+          "tag": "p",
+          "text": "02",
+          "context_text": "02",
+          "section_heading": "Selected Work"
+        },
+        {
+          "source_id": "src/App.jsx:3886/20679/12274/6384:1/8062",
+          "file": "src/App.jsx",
+          "line": 97,
+          "section": "article",
+          "section_id": "src/App.jsx:6434/20679/12274/6384:1",
+          "ui_state": "initial",
+          "data_bindings": [
+            {
+              "file": "src/store/data/majorProjects.json",
+              "json_pointer": "/1"
+            }
+          ],
+          "tag": "a",
+          "text": "Unlovable - Mobile Application.",
+          "context_text": "Unlovable - Mobile Application.",
+          "section_heading": "Selected Work"
+        },
+        {
+          "source_id": "src/App.jsx:8156/20679/12274/6384:1",
+          "file": "src/App.jsx",
+          "line": 172,
+          "section": "article",
+          "section_id": "src/App.jsx:6434/20679/12274/6384:1",
+          "ui_state": "initial",
+          "data_bindings": [
+            {
+              "file": "src/store/data/majorProjects.json",
+              "json_pointer": "/1"
+            }
+          ],
+          "tag": "p",
+          "text": "Built an Mobile application builder, where anyone can able to generate an mobile application using a prompt and creativity.",
+          "context_text": "Built an Mobile application builder, where anyone can able to generate an mobile application using a prompt and creativity.",
+          "section_heading": "Selected Work"
+        },
+        {
+          "source_id": "src/App.jsx:8253/20679/12274/6384:1",
+          "file": "src/App.jsx",
+          "line": 173,
+          "section": "article",
+          "section_id": "src/App.jsx:6434/20679/12274/6384:1",
+          "ui_state": "initial",
+          "data_bindings": [
+            {
+              "file": "src/store/data/majorProjects.json",
+              "json_pointer": "/1"
+            }
+          ],
+          "tag": "p",
+          "text": "React Native · Expo · Nativewind · EAS",
+          "context_text": "React Native · Expo · Nativewind · EAS",
+          "section_heading": "Selected Work"
+        },
+        {
+          "source_id": "src/App.jsx:6555/20679/12274/6384:2",
+          "file": "src/App.jsx",
+          "line": 155,
+          "section": "article",
+          "section_id": "src/App.jsx:6434/20679/12274/6384:2",
+          "ui_state": "initial",
+          "data_bindings": [
+            {
+              "file": "src/store/data/majorProjects.json",
+              "json_pointer": "/2"
+            }
+          ],
+          "tag": "button",
+          "text": "Play Exness - CFD Application. demo",
+          "text_source": "aria-label",
+          "section_heading": "Selected Work"
+        },
+        {
+          "source_id": "src/App.jsx:7679/20679/12274/6384:2",
+          "file": "src/App.jsx",
+          "line": 167,
+          "section": "article",
+          "section_id": "src/App.jsx:6434/20679/12274/6384:2",
+          "ui_state": "initial",
+          "data_bindings": [
+            {
+              "file": "src/store/data/majorProjects.json",
+              "json_pointer": "/2"
+            }
+          ],
+          "tag": "span",
+          "text": "Play demo",
+          "context_text": "Play demo",
+          "section_heading": "Selected Work"
+        },
+        {
+          "source_id": "src/App.jsx:7879/20679/12274/6384:2",
+          "file": "src/App.jsx",
+          "line": 170,
+          "section": "article",
+          "section_id": "src/App.jsx:6434/20679/12274/6384:2",
+          "ui_state": "initial",
+          "data_bindings": [
+            {
+              "file": "src/store/data/majorProjects.json",
+              "json_pointer": "/2"
+            }
+          ],
+          "tag": "p",
+          "text": "03",
+          "context_text": "03",
+          "section_heading": "Selected Work"
+        },
+        {
+          "source_id": "src/App.jsx:3886/20679/12274/6384:2/8062",
+          "file": "src/App.jsx",
+          "line": 97,
+          "section": "article",
+          "section_id": "src/App.jsx:6434/20679/12274/6384:2",
+          "ui_state": "initial",
+          "data_bindings": [
+            {
+              "file": "src/store/data/majorProjects.json",
+              "json_pointer": "/2"
+            }
+          ],
+          "tag": "a",
+          "text": "Exness - CFD Application.",
+          "context_text": "Exness - CFD Application.",
+          "section_heading": "Selected Work"
+        },
+        {
+          "source_id": "src/App.jsx:8156/20679/12274/6384:2",
+          "file": "src/App.jsx",
+          "line": 172,
+          "section": "article",
+          "section_id": "src/App.jsx:6434/20679/12274/6384:2",
+          "ui_state": "initial",
+          "data_bindings": [
+            {
+              "file": "src/store/data/majorProjects.json",
+              "json_pointer": "/2"
+            }
+          ],
+          "tag": "p",
+          "text": "A CFD application for trade on crypto currencies.",
+          "context_text": "A CFD application for trade on crypto currencies.",
+          "section_heading": "Selected Work"
+        },
+        {
+          "source_id": "src/App.jsx:8253/20679/12274/6384:2",
+          "file": "src/App.jsx",
+          "line": 173,
+          "section": "article",
+          "section_id": "src/App.jsx:6434/20679/12274/6384:2",
+          "ui_state": "initial",
+          "data_bindings": [
+            {
+              "file": "src/store/data/majorProjects.json",
+              "json_pointer": "/2"
+            }
+          ],
+          "tag": "p",
+          "text": "Turborepo · Redis · Pub-Sub · TimescaleDB",
+          "context_text": "Turborepo · Redis · Pub-Sub · TimescaleDB",
+          "section_heading": "Selected Work"
+        },
+        {
+          "source_id": "src/App.jsx:3886/20679/12274/6384:2/8395",
+          "file": "src/App.jsx",
+          "line": 97,
+          "section": "article",
+          "section_id": "src/App.jsx:6434/20679/12274/6384:2",
+          "ui_state": "initial",
+          "data_bindings": [
+            {
+              "file": "src/store/data/majorProjects.json",
+              "json_pointer": "/2"
+            }
+          ],
+          "tag": "a",
+          "text": "Source code",
+          "context_text": "Source code",
+          "section_heading": "Selected Work"
+        },
+        {
+          "source_id": "src/App.jsx:6555/20679/12274/6384:3",
+          "file": "src/App.jsx",
+          "line": 155,
+          "section": "article",
+          "section_id": "src/App.jsx:6434/20679/12274/6384:3",
+          "ui_state": "initial",
+          "data_bindings": [
+            {
+              "file": "src/store/data/majorProjects.json",
+              "json_pointer": "/3"
+            }
+          ],
+          "tag": "button",
+          "text": "Play Exness - Mobile Application. demo",
+          "text_source": "aria-label",
+          "section_heading": "Selected Work"
+        },
+        {
+          "source_id": "src/App.jsx:7679/20679/12274/6384:3",
+          "file": "src/App.jsx",
+          "line": 167,
+          "section": "article",
+          "section_id": "src/App.jsx:6434/20679/12274/6384:3",
+          "ui_state": "initial",
+          "data_bindings": [
+            {
+              "file": "src/store/data/majorProjects.json",
+              "json_pointer": "/3"
+            }
+          ],
+          "tag": "span",
+          "text": "Play demo",
+          "context_text": "Play demo",
+          "section_heading": "Selected Work"
+        },
+        {
+          "source_id": "src/App.jsx:7879/20679/12274/6384:3",
+          "file": "src/App.jsx",
+          "line": 170,
+          "section": "article",
+          "section_id": "src/App.jsx:6434/20679/12274/6384:3",
+          "ui_state": "initial",
+          "data_bindings": [
+            {
+              "file": "src/store/data/majorProjects.json",
+              "json_pointer": "/3"
+            }
+          ],
+          "tag": "p",
+          "text": "04",
+          "context_text": "04",
+          "section_heading": "Selected Work"
+        },
+        {
+          "source_id": "src/App.jsx:3886/20679/12274/6384:3/8062",
+          "file": "src/App.jsx",
+          "line": 97,
+          "section": "article",
+          "section_id": "src/App.jsx:6434/20679/12274/6384:3",
+          "ui_state": "initial",
+          "data_bindings": [
+            {
+              "file": "src/store/data/majorProjects.json",
+              "json_pointer": "/3"
+            }
+          ],
+          "tag": "a",
+          "text": "Exness - Mobile Application.",
+          "context_text": "Exness - Mobile Application.",
+          "section_heading": "Selected Work"
+        },
+        {
+          "source_id": "src/App.jsx:8156/20679/12274/6384:3",
+          "file": "src/App.jsx",
+          "line": 172,
+          "section": "article",
+          "section_id": "src/App.jsx:6434/20679/12274/6384:3",
+          "ui_state": "initial",
+          "data_bindings": [
+            {
+              "file": "src/store/data/majorProjects.json",
+              "json_pointer": "/3"
+            }
+          ],
+          "tag": "p",
+          "text": "A CFD Mobile application for trade on crypto currencies.",
+          "context_text": "A CFD Mobile application for trade on crypto currencies.",
+          "section_heading": "Selected Work"
+        },
+        {
+          "source_id": "src/App.jsx:8253/20679/12274/6384:3",
+          "file": "src/App.jsx",
+          "line": 173,
+          "section": "article",
+          "section_id": "src/App.jsx:6434/20679/12274/6384:3",
+          "ui_state": "initial",
+          "data_bindings": [
+            {
+              "file": "src/store/data/majorProjects.json",
+              "json_pointer": "/3"
+            }
+          ],
+          "tag": "p",
+          "text": "React Native · Expo · Nativewind · EAS",
+          "context_text": "React Native · Expo · Nativewind · EAS",
+          "section_heading": "Selected Work"
+        },
+        {
+          "source_id": "src/App.jsx:10782/20679/12326",
+          "file": "src/App.jsx",
+          "line": 231,
+          "section": "section",
+          "section_id": "src/App.jsx:10699/20679/12326",
+          "ui_state": "initial",
+          "data_bindings": [],
+          "tag": "h2",
+          "text": "Skills",
+          "context_text": "Skills",
+          "section_heading": "Skills"
+        },
+        {
+          "source_id": "src/App.jsx:11197/20679/12326/10900:0",
+          "file": "src/App.jsx",
+          "line": 235,
+          "section": "section",
+          "section_id": "src/App.jsx:10699/20679/12326",
+          "ui_state": "initial",
+          "data_bindings": [
+            {
+              "file": "src/store/data/skills.json",
+              "json_pointer": "/0"
+            }
+          ],
+          "tag": "span",
+          "text": "Web Development",
+          "context_text": "Web Development",
+          "section_heading": "Skills"
+        },
+        {
+          "source_id": "src/App.jsx:11418/20679/12326/10900:0",
+          "file": "src/App.jsx",
+          "line": 239,
+          "section": "section",
+          "section_id": "src/App.jsx:10699/20679/12326",
+          "ui_state": "initial",
+          "data_bindings": [
+            {
+              "file": "src/store/data/skills.json",
+              "json_pointer": "/0"
+            }
+          ],
+          "tag": "span",
+          "text": "MERN Stack · Next.js · Remix · Turborepo · PostgreSQL (Prisma) · API Development",
+          "context_text": "MERN Stack · Next.js · Remix · Turborepo · PostgreSQL (Prisma) · API Development",
+          "section_heading": "Skills"
+        },
+        {
+          "source_id": "src/App.jsx:11197/20679/12326/10900:1",
+          "file": "src/App.jsx",
+          "line": 235,
+          "section": "section",
+          "section_id": "src/App.jsx:10699/20679/12326",
+          "ui_state": "initial",
+          "data_bindings": [
+            {
+              "file": "src/store/data/skills.json",
+              "json_pointer": "/1"
+            }
+          ],
+          "tag": "span",
+          "text": "Mobile Development",
+          "context_text": "Mobile Development",
+          "section_heading": "Skills"
+        },
+        {
+          "source_id": "src/App.jsx:11418/20679/12326/10900:1",
+          "file": "src/App.jsx",
+          "line": 239,
+          "section": "section",
+          "section_id": "src/App.jsx:10699/20679/12326",
+          "ui_state": "initial",
+          "data_bindings": [
+            {
+              "file": "src/store/data/skills.json",
+              "json_pointer": "/1"
+            }
+          ],
+          "tag": "span",
+          "text": "React Native · API Connectivity",
+          "context_text": "React Native · API Connectivity",
+          "section_heading": "Skills"
+        },
+        {
+          "source_id": "src/App.jsx:11197/20679/12326/10900:2",
+          "file": "src/App.jsx",
+          "line": 235,
+          "section": "section",
+          "section_id": "src/App.jsx:10699/20679/12326",
+          "ui_state": "initial",
+          "data_bindings": [
+            {
+              "file": "src/store/data/skills.json",
+              "json_pointer": "/2"
+            }
+          ],
+          "tag": "span",
+          "text": "AI",
+          "context_text": "AI",
+          "section_heading": "Skills"
+        },
+        {
+          "source_id": "src/App.jsx:11418/20679/12326/10900:2",
+          "file": "src/App.jsx",
+          "line": 239,
+          "section": "section",
+          "section_id": "src/App.jsx:10699/20679/12326",
+          "ui_state": "initial",
+          "data_bindings": [
+            {
+              "file": "src/store/data/skills.json",
+              "json_pointer": "/2"
+            }
+          ],
+          "tag": "span",
+          "text": "Python · FastAPI · Machine Learning · Deep Learning · NLP · Computer Vision · AI Applications · GenAI · AI Agents",
+          "context_text": "Python · FastAPI · Machine Learning · Deep Learning · NLP · Computer Vision · AI Applications · GenAI · AI Agents",
+          "section_heading": "Skills"
+        },
+        {
+          "source_id": "src/components/ContactRail.jsx:2939/22007/4420",
+          "file": "src/components/ContactRail.jsx",
+          "line": 62,
+          "section": "main",
+          "section_id": "src/App.jsx:21181",
+          "ui_state": "initial",
+          "data_bindings": [],
+          "tag": "span",
+          "text": "Schedule",
+          "context_text": "Schedule"
+        },
+        {
+          "source_id": "src/App.jsx:9147/20679/12274",
+          "file": "src/App.jsx",
+          "line": 189,
+          "section": "section",
+          "section_id": "src/App.jsx:8929/20679/12274",
+          "ui_state": "interaction:activeProject:0",
+          "data_bindings": [],
+          "tag": "h3",
+          "text": "Unlovable - Application Builder.",
+          "context_text": "Unlovable - Application Builder.",
+          "section_heading": "Unlovable - Application Builder. demo"
+        },
+        {
+          "source_id": "src/App.jsx:9232/20679/12274",
+          "file": "src/App.jsx",
+          "line": 190,
+          "section": "section",
+          "section_id": "src/App.jsx:8929/20679/12274",
+          "ui_state": "interaction:activeProject:0",
+          "data_bindings": [],
+          "tag": "button",
+          "text": "Close video",
+          "text_source": "aria-label",
+          "section_heading": "Unlovable - Application Builder. demo"
+        },
+        {
+          "source_id": "src/App.jsx:9232/20679/12274",
+          "file": "src/App.jsx",
+          "line": 190,
+          "section": "section",
+          "section_id": "src/App.jsx:8929/20679/12274",
+          "ui_state": "interaction:activeProject:0",
+          "data_bindings": [],
+          "tag": "button",
+          "text": "×",
+          "context_text": "×",
+          "section_heading": "Unlovable - Application Builder. demo"
+        },
+        {
+          "source_id": "src/App.jsx:9147/20679/12274",
+          "file": "src/App.jsx",
+          "line": 189,
+          "section": "section",
+          "section_id": "src/App.jsx:8929/20679/12274",
+          "ui_state": "interaction:activeProject:1",
+          "data_bindings": [],
+          "tag": "h3",
+          "text": "Unlovable - Mobile Application.",
+          "context_text": "Unlovable - Mobile Application.",
+          "section_heading": "Unlovable - Mobile Application. demo"
+        },
+        {
+          "source_id": "src/App.jsx:9232/20679/12274",
+          "file": "src/App.jsx",
+          "line": 190,
+          "section": "section",
+          "section_id": "src/App.jsx:8929/20679/12274",
+          "ui_state": "interaction:activeProject:1",
+          "data_bindings": [],
+          "tag": "button",
+          "text": "Close video",
+          "text_source": "aria-label",
+          "section_heading": "Unlovable - Mobile Application. demo"
+        },
+        {
+          "source_id": "src/App.jsx:9232/20679/12274",
+          "file": "src/App.jsx",
+          "line": 190,
+          "section": "section",
+          "section_id": "src/App.jsx:8929/20679/12274",
+          "ui_state": "interaction:activeProject:1",
+          "data_bindings": [],
+          "tag": "button",
+          "text": "×",
+          "context_text": "×",
+          "section_heading": "Unlovable - Mobile Application. demo"
+        },
+        {
+          "source_id": "src/App.jsx:9147/20679/12274",
+          "file": "src/App.jsx",
+          "line": 189,
+          "section": "section",
+          "section_id": "src/App.jsx:8929/20679/12274",
+          "ui_state": "interaction:activeProject:2",
+          "data_bindings": [],
+          "tag": "h3",
+          "text": "Exness - CFD Application.",
+          "context_text": "Exness - CFD Application.",
+          "section_heading": "Exness - CFD Application. demo"
+        },
+        {
+          "source_id": "src/App.jsx:9232/20679/12274",
+          "file": "src/App.jsx",
+          "line": 190,
+          "section": "section",
+          "section_id": "src/App.jsx:8929/20679/12274",
+          "ui_state": "interaction:activeProject:2",
+          "data_bindings": [],
+          "tag": "button",
+          "text": "Close video",
+          "text_source": "aria-label",
+          "section_heading": "Exness - CFD Application. demo"
+        },
+        {
+          "source_id": "src/App.jsx:9232/20679/12274",
+          "file": "src/App.jsx",
+          "line": 190,
+          "section": "section",
+          "section_id": "src/App.jsx:8929/20679/12274",
+          "ui_state": "interaction:activeProject:2",
+          "data_bindings": [],
+          "tag": "button",
+          "text": "×",
+          "context_text": "×",
+          "section_heading": "Exness - CFD Application. demo"
+        },
+        {
+          "source_id": "src/App.jsx:9147/20679/12274",
+          "file": "src/App.jsx",
+          "line": 189,
+          "section": "section",
+          "section_id": "src/App.jsx:8929/20679/12274",
+          "ui_state": "interaction:activeProject:3",
+          "data_bindings": [],
+          "tag": "h3",
+          "text": "Exness - Mobile Application.",
+          "context_text": "Exness - Mobile Application.",
+          "section_heading": "Exness - Mobile Application. demo"
+        },
+        {
+          "source_id": "src/App.jsx:9232/20679/12274",
+          "file": "src/App.jsx",
+          "line": 190,
+          "section": "section",
+          "section_id": "src/App.jsx:8929/20679/12274",
+          "ui_state": "interaction:activeProject:3",
+          "data_bindings": [],
+          "tag": "button",
+          "text": "Close video",
+          "text_source": "aria-label",
+          "section_heading": "Exness - Mobile Application. demo"
+        },
+        {
+          "source_id": "src/App.jsx:9232/20679/12274",
+          "file": "src/App.jsx",
+          "line": 190,
+          "section": "section",
+          "section_id": "src/App.jsx:8929/20679/12274",
+          "ui_state": "interaction:activeProject:3",
+          "data_bindings": [],
+          "tag": "button",
+          "text": "×",
+          "context_text": "×",
+          "section_heading": "Exness - Mobile Application. demo"
+        }
+      ],
+      "word_count": 325,
+      "link_refs": [
+        {
+          "source_id": "src/components/PageRail.jsx:735/21536/701:0",
+          "report": "internal_links.json"
+        },
+        {
+          "source_id": "src/components/PageRail.jsx:735/21536/701:1",
+          "report": "internal_links.json"
+        },
+        {
+          "source_id": "src/components/PageRail.jsx:735/21536/701:2",
+          "report": "internal_links.json"
+        },
+        {
+          "source_id": "src/components/PageRail.jsx:735/21536/701:3",
+          "report": "internal_links.json"
+        },
+        {
+          "source_id": "src/App.jsx:21658",
+          "report": "internal_links.json"
+        },
+        {
+          "source_id": "src/App.jsx:3886/20679/12224/4624:0/5164",
+          "report": "internal_links.json"
+        },
+        {
+          "source_id": "src/App.jsx:3886/20679/12224/4624:1/5164",
+          "report": "internal_links.json"
+        },
+        {
+          "source_id": "src/App.jsx:3886/20679/12274/6384:0/8062",
+          "report": "internal_links.json"
+        },
+        {
+          "source_id": "src/App.jsx:3886/20679/12274/6384:0/8395",
+          "report": "internal_links.json"
+        },
+        {
+          "source_id": "src/App.jsx:3886/20679/12274/6384:1/8062",
+          "report": "internal_links.json"
+        },
+        {
+          "source_id": "src/App.jsx:3886/20679/12274/6384:2/8062",
+          "report": "internal_links.json"
+        },
+        {
+          "source_id": "src/App.jsx:3886/20679/12274/6384:2/8395",
+          "report": "internal_links.json"
+        },
+        {
+          "source_id": "src/App.jsx:3886/20679/12274/6384:3/8062",
+          "report": "internal_links.json"
+        },
+        {
+          "source_id": "src/components/ContactRail.jsx:3677/22007/3637:0",
+          "report": "internal_links.json"
+        },
+        {
+          "source_id": "src/components/ContactRail.jsx:3677/22007/3637:1",
+          "report": "internal_links.json"
+        },
+        {
+          "source_id": "src/components/ContactRail.jsx:3677/22007/3637:2",
+          "report": "internal_links.json"
+        },
+        {
+          "source_id": "src/components/ContactRail.jsx:3677/22007/3637:3",
+          "report": "internal_links.json"
+        },
+        {
+          "source_id": "src/components/ContactRail.jsx:3677/22007/3637:4",
+          "report": "internal_links.json"
+        },
+        {
+          "source_id": "src/components/ContactRail.jsx:1943/22007/4420",
+          "report": "internal_links.json"
+        }
+      ],
+      "media_refs": [
+        {
+          "source_id": "src/App.jsx:6865/20679/12274/6384:0",
+          "report": "media.json"
+        },
+        {
+          "source_id": "src/App.jsx:6865/20679/12274/6384:1",
+          "report": "media.json"
+        },
+        {
+          "source_id": "src/App.jsx:6865/20679/12274/6384:2",
+          "report": "media.json"
+        },
+        {
+          "source_id": "src/App.jsx:6865/20679/12274/6384:3",
+          "report": "media.json"
+        },
+        {
+          "source_id": "src/App.jsx:9540/20679/12274",
+          "report": "media.json"
+        },
+        {
+          "source_id": "src/App.jsx:9540/20679/12274",
+          "report": "media.json"
+        },
+        {
+          "source_id": "src/App.jsx:9540/20679/12274",
+          "report": "media.json"
+        },
+        {
+          "source_id": "src/App.jsx:9540/20679/12274",
+          "report": "media.json"
+        }
+      ]
+    },
+    {
+      "url": "/about",
+      "template": "src/App.jsx",
+      "is_dynamic": false,
+      "coverage": {
+        "mode": "static-source",
+        "complete": false,
+        "limitations": [
+          {
+            "file": "src/components/ScrollReveal.jsx",
+            "line": 22,
+            "reason": "unresolved_rendered_expression"
+          },
+          {
+            "file": "src/components/ScrollReveal.jsx",
+            "line": 22,
+            "reason": "unresolved_attributes:ref"
+          },
+          {
+            "file": "src/App.jsx",
+            "line": 71,
+            "reason": "unresolved_rendered_expression"
+          },
+          {
+            "file": "src/App.jsx",
+            "line": 74,
+            "reason": "unresolved_condition"
+          },
+          {
+            "file": "src/App.jsx",
+            "line": 74,
+            "reason": "unresolved_rendered_expression"
+          },
+          {
+            "file": "src/App.jsx",
+            "line": 75,
+            "reason": "unresolved_rendered_expression"
+          },
+          {
+            "file": "src/App.jsx",
+            "line": 76,
+            "reason": "unresolved_condition"
+          },
+          {
+            "file": "src/App.jsx",
+            "line": 76,
+            "reason": "unresolved_rendered_expression"
+          },
+          {
+            "file": "src/App.jsx",
+            "line": 79,
+            "reason": "unresolved_condition"
+          },
+          {
+            "file": "src/App.jsx",
+            "line": 79,
+            "reason": "unresolved_rendered_expression"
+          },
+          {
+            "file": "src/App.jsx",
+            "line": 70,
+            "reason": "unresolved_attributes:ref,aria-label,aria-pressed,title"
+          },
+          {
+            "file": "src/components/ContactRail.jsx",
+            "line": 58,
+            "reason": "unresolved_rendered_expression"
+          },
+          {
+            "file": "src/components/ContactRail.jsx",
+            "line": 45,
+            "reason": "unresolved_component:LiquidMetal"
+          }
+        ],
+        "route_patterns": [
+          "/blog",
+          "/blog/"
+        ],
+        "entrypoint": "src/main.jsx",
+        "resolved_interaction_states": 0,
+        "resolved_local_fetches": [],
+        "note": "Composed from allowlisted source semantics. CSS visibility, arbitrary runtime/network data and browser behavior remain unverified."
+      },
+      "sections": [
+        {
+          "parent_section_id": null,
+          "source_id": "src/App.jsx:21181",
+          "tag": "main",
+          "id": null,
+          "labelledby": null,
+          "label": null
+        },
+        {
+          "parent_section_id": "src/App.jsx:21181",
+          "source_id": "src/components/PageRail.jsx:233/21536",
+          "tag": "nav",
+          "id": null,
+          "labelledby": null,
+          "label": "Pages"
+        },
+        {
+          "parent_section_id": "src/App.jsx:21181",
+          "source_id": "src/App.jsx:21638",
+          "tag": "header",
+          "id": null,
+          "labelledby": null,
+          "label": null
+        },
+        {
+          "parent_section_id": "src/App.jsx:21181",
+          "source_id": "src/App.jsx:13330/20718/13846",
+          "tag": "header",
+          "id": null,
+          "labelledby": null,
+          "label": null
+        },
+        {
+          "parent_section_id": "src/App.jsx:21181",
+          "source_id": "src/App.jsx:14051/20718",
+          "tag": "section",
+          "id": null,
+          "labelledby": "about-heading",
+          "label": null
+        },
+        {
+          "parent_section_id": "src/App.jsx:21181",
+          "source_id": "src/App.jsx:15131/20718",
+          "tag": "section",
+          "id": null,
+          "labelledby": "story-heading",
+          "label": null
+        },
+        {
+          "parent_section_id": "src/App.jsx:15131/20718",
+          "source_id": "src/App.jsx:15405/20718/15312:0",
+          "tag": "article",
+          "id": null,
+          "labelledby": null,
+          "label": null
+        },
+        {
+          "parent_section_id": "src/App.jsx:15131/20718",
+          "source_id": "src/App.jsx:15405/20718/15312:1",
+          "tag": "article",
+          "id": null,
+          "labelledby": null,
+          "label": null
+        },
+        {
+          "parent_section_id": "src/App.jsx:15131/20718",
+          "source_id": "src/App.jsx:15405/20718/15312:2",
+          "tag": "article",
+          "id": null,
+          "labelledby": null,
+          "label": null
+        },
+        {
+          "parent_section_id": "src/App.jsx:15131/20718",
+          "source_id": "src/App.jsx:15405/20718/15312:3",
+          "tag": "article",
+          "id": null,
+          "labelledby": null,
+          "label": null
+        },
+        {
+          "parent_section_id": "src/App.jsx:21181",
+          "source_id": "src/components/ContactRail.jsx:3056/22007",
+          "tag": "aside",
+          "id": null,
+          "labelledby": null,
+          "label": "Contact links"
+        },
+        {
+          "parent_section_id": "src/components/ContactRail.jsx:3056/22007",
+          "source_id": "src/components/ContactRail.jsx:3532/22007",
+          "tag": "nav",
+          "id": null,
+          "labelledby": null,
+          "label": "Contact links"
+        }
+      ],
+      "blocks": [
+        {
+          "source_id": "src/components/PageRail.jsx:1375/21536/701:0",
+          "file": "src/components/PageRail.jsx",
+          "line": 20,
+          "section": "nav",
+          "section_id": "src/components/PageRail.jsx:233/21536",
+          "ui_state": "initial",
+          "data_bindings": [],
+          "tag": "span",
+          "text": "Home",
+          "context_text": "Home",
+          "section_heading": "Pages"
+        },
+        {
+          "source_id": "src/components/PageRail.jsx:1375/21536/701:1",
+          "file": "src/components/PageRail.jsx",
+          "line": 20,
+          "section": "nav",
+          "section_id": "src/components/PageRail.jsx:233/21536",
+          "ui_state": "initial",
+          "data_bindings": [],
+          "tag": "span",
+          "text": "About",
+          "context_text": "About",
+          "section_heading": "Pages"
+        },
+        {
+          "source_id": "src/components/PageRail.jsx:1375/21536/701:2",
+          "file": "src/components/PageRail.jsx",
+          "line": 20,
+          "section": "nav",
+          "section_id": "src/components/PageRail.jsx:233/21536",
+          "ui_state": "initial",
+          "data_bindings": [],
+          "tag": "span",
+          "text": "Bookshelf",
+          "context_text": "Bookshelf",
+          "section_heading": "Pages"
+        },
+        {
+          "source_id": "src/components/PageRail.jsx:1375/21536/701:3",
+          "file": "src/components/PageRail.jsx",
+          "line": 20,
+          "section": "nav",
+          "section_id": "src/components/PageRail.jsx:233/21536",
+          "ui_state": "initial",
+          "data_bindings": [],
+          "tag": "span",
+          "text": "Blogs",
+          "context_text": "Blogs",
+          "section_heading": "Pages"
+        },
+        {
+          "source_id": "src/App.jsx:21658",
+          "file": "src/App.jsx",
+          "line": 432,
+          "section": "header",
+          "section_id": "src/App.jsx:21638",
+          "ui_state": "initial",
+          "data_bindings": [],
+          "tag": "a",
+          "text": "Lakshay Goyal",
+          "context_text": "Lakshay Goyal"
+        },
+        {
+          "source_id": "src/App.jsx:21870",
+          "file": "src/App.jsx",
+          "line": 433,
+          "section": "header",
+          "section_id": "src/App.jsx:21638",
+          "ui_state": "initial",
+          "data_bindings": [],
+          "tag": "p",
+          "text": "Software Engineer",
+          "context_text": "Software Engineer"
+        },
+        {
+          "source_id": "src/App.jsx:13386/20718/13846",
+          "file": "src/App.jsx",
+          "line": 279,
+          "section": "header",
+          "section_id": "src/App.jsx:13330/20718/13846",
+          "ui_state": "initial",
+          "data_bindings": [],
+          "tag": "p",
+          "text": "About",
+          "context_text": "About"
+        },
+        {
+          "source_id": "src/App.jsx:13501/20718/13846",
+          "file": "src/App.jsx",
+          "line": 280,
+          "section": "header",
+          "section_id": "src/App.jsx:13330/20718/13846",
+          "ui_state": "initial",
+          "data_bindings": [],
+          "tag": "h2",
+          "text": "A little about me.",
+          "context_text": "A little about me."
+        },
+        {
+          "source_id": "src/App.jsx:13644/20718/13846",
+          "file": "src/App.jsx",
+          "line": 281,
+          "section": "header",
+          "section_id": "src/App.jsx:13330/20718/13846",
+          "ui_state": "initial",
+          "data_bindings": [],
+          "tag": "p",
+          "text": "The curiosity that pulled me into software, and the interests that keep me exploring beyond it.",
+          "context_text": "The curiosity that pulled me into software, and the interests that keep me exploring beyond it."
+        },
+        {
+          "source_id": "src/App.jsx:14136/20718",
+          "file": "src/App.jsx",
+          "line": 296,
+          "section": "section",
+          "section_id": "src/App.jsx:14051/20718",
+          "ui_state": "initial",
+          "data_bindings": [],
+          "tag": "h2",
+          "text": "What keeps me curious",
+          "context_text": "What keeps me curious",
+          "section_heading": "What keeps me curious"
+        },
+        {
+          "source_id": "src/App.jsx:14361/20718",
+          "file": "src/App.jsx",
+          "line": 298,
+          "section": "section",
+          "section_id": "src/App.jsx:14051/20718",
+          "ui_state": "initial",
+          "data_bindings": [],
+          "tag": "p",
+          "text": "Just a developer who loves building random shit, experimenting with everything, messing things up, and learning along the way.",
+          "context_text": "Just a developer who loves building random shit, experimenting with everything, messing things up, and learning along the way.",
+          "section_heading": "What keeps me curious"
+        },
+        {
+          "source_id": "src/App.jsx:14541/20718",
+          "file": "src/App.jsx",
+          "line": 302,
+          "section": "section",
+          "section_id": "src/App.jsx:14051/20718",
+          "ui_state": "initial",
+          "data_bindings": [],
+          "tag": "p",
+          "text": "I have a bad habit of wanting to become a polymath — from code, AI, and design to philosophy, psychology, politics, and every other shitty thing life has to offer. Don’t mistake me for a generalist, though. I love going deep into every rabbit hole.",
+          "context_text": "I have a bad habit of wanting to become a polymath — from code, AI, and design to philosophy, psychology, politics, and every other shitty thing life has to offer. Don’t mistake me for a generalist, though. I love going deep into every rabbit hole.",
+          "section_heading": "What keeps me curious"
+        },
+        {
+          "source_id": "src/App.jsx:14871/20718",
+          "file": "src/App.jsx",
+          "line": 308,
+          "section": "section",
+          "section_id": "src/App.jsx:14051/20718",
+          "ui_state": "initial",
+          "data_bindings": [],
+          "tag": "p",
+          "text": "I love being a developer, but hell no, I'm not spending my entire life just coding. Wanna be that 60-year-old grandpa still trying to figure out some new shit while living every bit of life.",
+          "context_text": "I love being a developer, but hell no, I'm not spending my entire life just coding. Wanna be that 60-year-old grandpa still trying to figure out some new shit while living every bit of life.",
+          "section_heading": "What keeps me curious"
+        },
+        {
+          "source_id": "src/App.jsx:15181/20718",
+          "file": "src/App.jsx",
+          "line": 314,
+          "section": "section",
+          "section_id": "src/App.jsx:15131/20718",
+          "ui_state": "initial",
+          "data_bindings": [],
+          "tag": "h2",
+          "text": "How I got here",
+          "context_text": "How I got here",
+          "section_heading": "How I got here"
+        },
+        {
+          "source_id": "src/App.jsx:15558/20718/15312:0",
+          "file": "src/App.jsx",
+          "line": 319,
+          "section": "article",
+          "section_id": "src/App.jsx:15405/20718/15312:0",
+          "ui_state": "initial",
+          "data_bindings": [],
+          "tag": "span",
+          "text": "2022–2023",
+          "context_text": "2022–2023",
+          "section_heading": "How I got here"
+        },
+        {
+          "source_id": "src/App.jsx:15688/20718/15312:0",
+          "file": "src/App.jsx",
+          "line": 321,
+          "section": "article",
+          "section_id": "src/App.jsx:15405/20718/15312:0",
+          "ui_state": "initial",
+          "data_bindings": [],
+          "tag": "h3",
+          "text": "Finding a direction",
+          "context_text": "Finding a direction",
+          "section_heading": "How I got here"
+        },
+        {
+          "source_id": "src/App.jsx:15791/20718/15312:0",
+          "file": "src/App.jsx",
+          "line": 322,
+          "section": "article",
+          "section_id": "src/App.jsx:15405/20718/15312:0",
+          "ui_state": "initial",
+          "data_bindings": [],
+          "tag": "p",
+          "text": "I started learning by building projects in college. Coming from a commerce background, I worked through the maths behind machine learning and deep learning, then built a language translator app with a local NLP model.",
+          "context_text": "I started learning by building projects in college. Coming from a commerce background, I worked through the maths behind machine learning and deep learning, then built a language translator app with a local NLP model.",
+          "section_heading": "How I got here"
+        },
+        {
+          "source_id": "src/App.jsx:15558/20718/15312:1",
+          "file": "src/App.jsx",
+          "line": 319,
+          "section": "article",
+          "section_id": "src/App.jsx:15405/20718/15312:1",
+          "ui_state": "initial",
+          "data_bindings": [],
+          "tag": "span",
+          "text": "2025",
+          "context_text": "2025",
+          "section_heading": "How I got here"
+        },
+        {
+          "source_id": "src/App.jsx:15688/20718/15312:1",
+          "file": "src/App.jsx",
+          "line": 321,
+          "section": "article",
+          "section_id": "src/App.jsx:15405/20718/15312:1",
+          "ui_state": "initial",
+          "data_bindings": [],
+          "tag": "h3",
+          "text": "Building for the web",
+          "context_text": "Building for the web",
+          "section_heading": "How I got here"
+        },
+        {
+          "source_id": "src/App.jsx:15791/20718/15312:1",
+          "file": "src/App.jsx",
+          "line": 322,
+          "section": "article",
+          "section_id": "src/App.jsx:15405/20718/15312:1",
+          "ui_state": "initial",
+          "data_bindings": [],
+          "tag": "p",
+          "text": "I moved into the MERN stack and learned how authentication, APIs, interfaces, and deployment come together in real products.",
+          "context_text": "I moved into the MERN stack and learned how authentication, APIs, interfaces, and deployment come together in real products.",
+          "section_heading": "How I got here"
+        },
+        {
+          "source_id": "src/App.jsx:15558/20718/15312:2",
+          "file": "src/App.jsx",
+          "line": 319,
+          "section": "article",
+          "section_id": "src/App.jsx:15405/20718/15312:2",
+          "ui_state": "initial",
+          "data_bindings": [],
+          "tag": "span",
+          "text": "Super30",
+          "context_text": "Super30",
+          "section_heading": "How I got here"
+        },
+        {
+          "source_id": "src/App.jsx:15688/20718/15312:2",
+          "file": "src/App.jsx",
+          "line": 321,
+          "section": "article",
+          "section_id": "src/App.jsx:15405/20718/15312:2",
+          "ui_state": "initial",
+          "data_bindings": [],
+          "tag": "h3",
+          "text": "Going deeper",
+          "context_text": "Going deeper",
+          "section_heading": "How I got here"
+        },
+        {
+          "source_id": "src/App.jsx:15791/20718/15312:2",
+          "file": "src/App.jsx",
+          "line": 322,
+          "section": "article",
+          "section_id": "src/App.jsx:15405/20718/15312:2",
+          "ui_state": "initial",
+          "data_bindings": [],
+          "tag": "p",
+          "text": "Being part of Super30 pushed me to ship more and learn about backend design, DevOps, AI engineering, real-time systems, and system design.",
+          "context_text": "Being part of Super30 pushed me to ship more and learn about backend design, DevOps, AI engineering, real-time systems, and system design.",
+          "section_heading": "How I got here"
+        },
+        {
+          "source_id": "src/App.jsx:15558/20718/15312:3",
+          "file": "src/App.jsx",
+          "line": 319,
+          "section": "article",
+          "section_id": "src/App.jsx:15405/20718/15312:3",
+          "ui_state": "initial",
+          "data_bindings": [],
+          "tag": "span",
+          "text": "Now",
+          "context_text": "Now",
+          "section_heading": "How I got here"
+        },
+        {
+          "source_id": "src/App.jsx:15688/20718/15312:3",
+          "file": "src/App.jsx",
+          "line": 321,
+          "section": "article",
+          "section_id": "src/App.jsx:15405/20718/15312:3",
+          "ui_state": "initial",
+          "data_bindings": [],
+          "tag": "h3",
+          "text": "Working on products",
+          "context_text": "Working on products",
+          "section_heading": "How I got here"
+        },
+        {
+          "source_id": "src/App.jsx:15791/20718/15312:3",
+          "file": "src/App.jsx",
+          "line": 322,
+          "section": "article",
+          "section_id": "src/App.jsx:15405/20718/15312:3",
+          "ui_state": "initial",
+          "data_bindings": [],
+          "tag": "p",
+          "text": "I moved from Delhi to Bangalore, helped build FOZO from the ground up, and now work on test automation at Testsigma. I care about polished interfaces, understandable systems, and work that lasts beyond a demo.",
+          "context_text": "I moved from Delhi to Bangalore, helped build FOZO from the ground up, and now work on test automation at Testsigma. I care about polished interfaces, understandable systems, and work that lasts beyond a demo.",
+          "section_heading": "How I got here"
+        },
+        {
+          "source_id": "src/components/ContactRail.jsx:2939/22007/4420",
+          "file": "src/components/ContactRail.jsx",
+          "line": 62,
+          "section": "main",
+          "section_id": "src/App.jsx:21181",
+          "ui_state": "initial",
+          "data_bindings": [],
+          "tag": "span",
+          "text": "Schedule",
+          "context_text": "Schedule"
+        }
+      ],
+      "word_count": 264,
+      "link_refs": [
+        {
+          "source_id": "src/components/PageRail.jsx:735/21536/701:0",
+          "report": "internal_links.json"
+        },
+        {
+          "source_id": "src/components/PageRail.jsx:735/21536/701:1",
+          "report": "internal_links.json"
+        },
+        {
+          "source_id": "src/components/PageRail.jsx:735/21536/701:2",
+          "report": "internal_links.json"
+        },
+        {
+          "source_id": "src/components/PageRail.jsx:735/21536/701:3",
+          "report": "internal_links.json"
+        },
+        {
+          "source_id": "src/App.jsx:21658",
+          "report": "internal_links.json"
+        },
+        {
+          "source_id": "src/components/ContactRail.jsx:3677/22007/3637:0",
+          "report": "internal_links.json"
+        },
+        {
+          "source_id": "src/components/ContactRail.jsx:3677/22007/3637:1",
+          "report": "internal_links.json"
+        },
+        {
+          "source_id": "src/components/ContactRail.jsx:3677/22007/3637:2",
+          "report": "internal_links.json"
+        },
+        {
+          "source_id": "src/components/ContactRail.jsx:3677/22007/3637:3",
+          "report": "internal_links.json"
+        },
+        {
+          "source_id": "src/components/ContactRail.jsx:3677/22007/3637:4",
+          "report": "internal_links.json"
+        },
+        {
+          "source_id": "src/components/ContactRail.jsx:1943/22007/4420",
+          "report": "internal_links.json"
+        }
+      ],
+      "media_refs": []
+    },
+    {
+      "url": "/blog",
+      "template": "src/App.jsx",
+      "is_dynamic": false,
+      "coverage": {
+        "mode": "static-source",
+        "complete": false,
+        "limitations": [
+          {
+            "file": "src/components/ScrollReveal.jsx",
+            "line": 22,
+            "reason": "unresolved_rendered_expression"
+          },
+          {
+            "file": "src/components/ScrollReveal.jsx",
+            "line": 22,
+            "reason": "unresolved_attributes:ref"
+          },
+          {
+            "file": "src/App.jsx",
+            "line": 71,
+            "reason": "unresolved_rendered_expression"
+          },
+          {
+            "file": "src/App.jsx",
+            "line": 74,
+            "reason": "unresolved_condition"
+          },
+          {
+            "file": "src/App.jsx",
+            "line": 74,
+            "reason": "unresolved_rendered_expression"
+          },
+          {
+            "file": "src/App.jsx",
+            "line": 75,
+            "reason": "unresolved_rendered_expression"
+          },
+          {
+            "file": "src/App.jsx",
+            "line": 76,
+            "reason": "unresolved_condition"
+          },
+          {
+            "file": "src/App.jsx",
+            "line": 76,
+            "reason": "unresolved_rendered_expression"
+          },
+          {
+            "file": "src/App.jsx",
+            "line": 79,
+            "reason": "unresolved_condition"
+          },
+          {
+            "file": "src/App.jsx",
+            "line": 79,
+            "reason": "unresolved_rendered_expression"
+          },
+          {
+            "file": "src/App.jsx",
+            "line": 70,
+            "reason": "unresolved_attributes:ref,aria-label,aria-pressed,title"
+          },
+          {
+            "file": "src/components/ContactRail.jsx",
+            "line": 58,
+            "reason": "unresolved_rendered_expression"
+          },
+          {
+            "file": "src/components/ContactRail.jsx",
+            "line": 45,
+            "reason": "unresolved_component:LiquidMetal"
+          }
+        ],
+        "route_patterns": [
+          "/blog",
+          "/blog/"
+        ],
+        "entrypoint": "src/main.jsx",
+        "resolved_interaction_states": 0,
+        "resolved_local_fetches": [
+          "public/blog/blog.json"
+        ],
+        "note": "Composed from allowlisted source semantics. CSS visibility, arbitrary runtime/network data and browser behavior remain unverified."
+      },
+      "sections": [
+        {
+          "parent_section_id": null,
+          "source_id": "src/App.jsx:21181",
+          "tag": "main",
+          "id": null,
+          "labelledby": null,
+          "label": null
+        },
+        {
+          "parent_section_id": "src/App.jsx:21181",
+          "source_id": "src/components/PageRail.jsx:233/21536",
+          "tag": "nav",
+          "id": null,
+          "labelledby": null,
+          "label": "Pages"
+        },
+        {
+          "parent_section_id": "src/App.jsx:21181",
+          "source_id": "src/App.jsx:21638",
+          "tag": "header",
+          "id": null,
+          "labelledby": null,
+          "label": null
+        },
+        {
+          "parent_section_id": "src/App.jsx:21181",
+          "source_id": "src/App.jsx:13330/20805/18047",
+          "tag": "header",
+          "id": null,
+          "labelledby": null,
+          "label": null
+        },
+        {
+          "parent_section_id": "src/App.jsx:21181",
+          "source_id": "src/App.jsx:18504/20805/18428:0",
+          "tag": "article",
+          "id": null,
+          "labelledby": null,
+          "label": null
+        },
+        {
+          "parent_section_id": "src/App.jsx:21181",
+          "source_id": "src/components/ContactRail.jsx:3056/22007",
+          "tag": "aside",
+          "id": null,
+          "labelledby": null,
+          "label": "Contact links"
+        },
+        {
+          "parent_section_id": "src/components/ContactRail.jsx:3056/22007",
+          "source_id": "src/components/ContactRail.jsx:3532/22007",
+          "tag": "nav",
+          "id": null,
+          "labelledby": null,
+          "label": "Contact links"
+        }
+      ],
+      "blocks": [
+        {
+          "source_id": "src/components/PageRail.jsx:1375/21536/701:0",
+          "file": "src/components/PageRail.jsx",
+          "line": 20,
+          "section": "nav",
+          "section_id": "src/components/PageRail.jsx:233/21536",
+          "ui_state": "initial",
+          "data_bindings": [],
+          "tag": "span",
+          "text": "Home",
+          "context_text": "Home",
+          "section_heading": "Pages"
+        },
+        {
+          "source_id": "src/components/PageRail.jsx:1375/21536/701:1",
+          "file": "src/components/PageRail.jsx",
+          "line": 20,
+          "section": "nav",
+          "section_id": "src/components/PageRail.jsx:233/21536",
+          "ui_state": "initial",
+          "data_bindings": [],
+          "tag": "span",
+          "text": "About",
+          "context_text": "About",
+          "section_heading": "Pages"
+        },
+        {
+          "source_id": "src/components/PageRail.jsx:1375/21536/701:2",
+          "file": "src/components/PageRail.jsx",
+          "line": 20,
+          "section": "nav",
+          "section_id": "src/components/PageRail.jsx:233/21536",
+          "ui_state": "initial",
+          "data_bindings": [],
+          "tag": "span",
+          "text": "Bookshelf",
+          "context_text": "Bookshelf",
+          "section_heading": "Pages"
+        },
+        {
+          "source_id": "src/components/PageRail.jsx:1375/21536/701:3",
+          "file": "src/components/PageRail.jsx",
+          "line": 20,
+          "section": "nav",
+          "section_id": "src/components/PageRail.jsx:233/21536",
+          "ui_state": "initial",
+          "data_bindings": [],
+          "tag": "span",
+          "text": "Blogs",
+          "context_text": "Blogs",
+          "section_heading": "Pages"
+        },
+        {
+          "source_id": "src/App.jsx:21658",
+          "file": "src/App.jsx",
+          "line": 432,
+          "section": "header",
+          "section_id": "src/App.jsx:21638",
+          "ui_state": "initial",
+          "data_bindings": [],
+          "tag": "a",
+          "text": "Lakshay Goyal",
+          "context_text": "Lakshay Goyal"
+        },
+        {
+          "source_id": "src/App.jsx:21870",
+          "file": "src/App.jsx",
+          "line": 433,
+          "section": "header",
+          "section_id": "src/App.jsx:21638",
+          "ui_state": "initial",
+          "data_bindings": [],
+          "tag": "p",
+          "text": "Software Engineer",
+          "context_text": "Software Engineer"
+        },
+        {
+          "source_id": "src/App.jsx:13386/20805/18047",
+          "file": "src/App.jsx",
+          "line": 279,
+          "section": "header",
+          "section_id": "src/App.jsx:13330/20805/18047",
+          "ui_state": "initial",
+          "data_bindings": [
+            {
+              "file": "public/blog/blog.json",
+              "json_pointer": ""
+            }
+          ],
+          "tag": "p",
+          "text": "Writing",
+          "context_text": "Writing"
+        },
+        {
+          "source_id": "src/App.jsx:13501/20805/18047",
+          "file": "src/App.jsx",
+          "line": 280,
+          "section": "header",
+          "section_id": "src/App.jsx:13330/20805/18047",
+          "ui_state": "initial",
+          "data_bindings": [
+            {
+              "file": "public/blog/blog.json",
+              "json_pointer": ""
+            }
+          ],
+          "tag": "h2",
+          "text": "Blogs",
+          "context_text": "Blogs"
+        },
+        {
+          "source_id": "src/App.jsx:13644/20805/18047",
+          "file": "src/App.jsx",
+          "line": 281,
+          "section": "header",
+          "section_id": "src/App.jsx:13330/20805/18047",
+          "ui_state": "initial",
+          "data_bindings": [
+            {
+              "file": "public/blog/blog.json",
+              "json_pointer": ""
+            }
+          ],
+          "tag": "p",
+          "text": "Notes from building, deploying, and learning software.",
+          "context_text": "Notes from building, deploying, and learning software."
+        },
+        {
+          "source_id": "src/App.jsx:18575/20805/18428:0",
+          "file": "src/App.jsx",
+          "line": 379,
+          "section": "article",
+          "section_id": "src/App.jsx:18504/20805/18428:0",
+          "ui_state": "initial",
+          "data_bindings": [
+            {
+              "file": "public/blog/blog.json",
+              "json_pointer": ""
+            },
+            {
+              "file": "public/blog/blog.json",
+              "json_pointer": "/0"
+            }
+          ],
+          "tag": "p",
+          "text": "HTML",
+          "context_text": "HTML · July 1, 2023"
+        },
+        {
+          "source_id": "src/App.jsx:18575/20805/18428:0",
+          "file": "src/App.jsx",
+          "line": 379,
+          "section": "article",
+          "section_id": "src/App.jsx:18504/20805/18428:0",
+          "ui_state": "initial",
+          "data_bindings": [
+            {
+              "file": "public/blog/blog.json",
+              "json_pointer": ""
+            },
+            {
+              "file": "public/blog/blog.json",
+              "json_pointer": "/0"
+            }
+          ],
+          "tag": "p",
+          "text": "·",
+          "context_text": "HTML · July 1, 2023"
+        },
+        {
+          "source_id": "src/App.jsx:18575/20805/18428:0",
+          "file": "src/App.jsx",
+          "line": 379,
+          "section": "article",
+          "section_id": "src/App.jsx:18504/20805/18428:0",
+          "ui_state": "initial",
+          "data_bindings": [
+            {
+              "file": "public/blog/blog.json",
+              "json_pointer": ""
+            },
+            {
+              "file": "public/blog/blog.json",
+              "json_pointer": "/0"
+            }
+          ],
+          "tag": "p",
+          "text": "July 1, 2023",
+          "context_text": "HTML · July 1, 2023"
+        },
+        {
+          "source_id": "src/App.jsx:3886/20805/18428:0/18774",
+          "file": "src/App.jsx",
+          "line": 97,
+          "section": "article",
+          "section_id": "src/App.jsx:18504/20805/18428:0",
+          "ui_state": "initial",
+          "data_bindings": [
+            {
+              "file": "public/blog/blog.json",
+              "json_pointer": ""
+            },
+            {
+              "file": "public/blog/blog.json",
+              "json_pointer": "/0"
+            }
+          ],
+          "tag": "a",
+          "text": "Deploying Your Site with Vercel (Dummy Blog)",
+          "context_text": "Deploying Your Site with Vercel (Dummy Blog)"
+        },
+        {
+          "source_id": "src/components/ContactRail.jsx:2939/22007/4420",
+          "file": "src/components/ContactRail.jsx",
+          "line": 62,
+          "section": "main",
+          "section_id": "src/App.jsx:21181",
+          "ui_state": "initial",
+          "data_bindings": [],
+          "tag": "span",
+          "text": "Schedule",
+          "context_text": "Schedule"
+        }
+      ],
+      "word_count": 30,
+      "link_refs": [
+        {
+          "source_id": "src/components/PageRail.jsx:735/21536/701:0",
+          "report": "internal_links.json"
+        },
+        {
+          "source_id": "src/components/PageRail.jsx:735/21536/701:1",
+          "report": "internal_links.json"
+        },
+        {
+          "source_id": "src/components/PageRail.jsx:735/21536/701:2",
+          "report": "internal_links.json"
+        },
+        {
+          "source_id": "src/components/PageRail.jsx:735/21536/701:3",
+          "report": "internal_links.json"
+        },
+        {
+          "source_id": "src/App.jsx:21658",
+          "report": "internal_links.json"
+        },
+        {
+          "source_id": "src/App.jsx:3886/20805/18428:0/18774",
+          "report": "internal_links.json"
+        },
+        {
+          "source_id": "src/components/ContactRail.jsx:3677/22007/3637:0",
+          "report": "internal_links.json"
+        },
+        {
+          "source_id": "src/components/ContactRail.jsx:3677/22007/3637:1",
+          "report": "internal_links.json"
+        },
+        {
+          "source_id": "src/components/ContactRail.jsx:3677/22007/3637:2",
+          "report": "internal_links.json"
+        },
+        {
+          "source_id": "src/components/ContactRail.jsx:3677/22007/3637:3",
+          "report": "internal_links.json"
+        },
+        {
+          "source_id": "src/components/ContactRail.jsx:3677/22007/3637:4",
+          "report": "internal_links.json"
+        },
+        {
+          "source_id": "src/components/ContactRail.jsx:1943/22007/4420",
+          "report": "internal_links.json"
+        }
+      ],
+      "media_refs": []
+    },
+    {
+      "url": "/blog/deploying-your-site-with-vercel",
+      "template": "src/App.jsx",
+      "is_dynamic": false,
+      "coverage": {
+        "mode": "static-source",
+        "complete": false,
+        "limitations": [
+          {
+            "file": "src/App.jsx",
+            "line": 71,
+            "reason": "unresolved_rendered_expression"
+          },
+          {
+            "file": "src/App.jsx",
+            "line": 74,
+            "reason": "unresolved_condition"
+          },
+          {
+            "file": "src/App.jsx",
+            "line": 74,
+            "reason": "unresolved_rendered_expression"
+          },
+          {
+            "file": "src/App.jsx",
+            "line": 75,
+            "reason": "unresolved_rendered_expression"
+          },
+          {
+            "file": "src/App.jsx",
+            "line": 76,
+            "reason": "unresolved_condition"
+          },
+          {
+            "file": "src/App.jsx",
+            "line": 76,
+            "reason": "unresolved_rendered_expression"
+          },
+          {
+            "file": "src/App.jsx",
+            "line": 79,
+            "reason": "unresolved_condition"
+          },
+          {
+            "file": "src/App.jsx",
+            "line": 79,
+            "reason": "unresolved_rendered_expression"
+          },
+          {
+            "file": "src/App.jsx",
+            "line": 70,
+            "reason": "unresolved_attributes:ref,aria-label,aria-pressed,title"
+          },
+          {
+            "file": "src/components/ContactRail.jsx",
+            "line": 58,
+            "reason": "unresolved_rendered_expression"
+          },
+          {
+            "file": "src/components/ContactRail.jsx",
+            "line": 45,
+            "reason": "unresolved_component:LiquidMetal"
+          }
+        ],
+        "route_patterns": [
+          "/blog",
+          "/blog/"
+        ],
+        "entrypoint": "src/main.jsx",
+        "resolved_interaction_states": 0,
+        "resolved_local_fetches": [
+          "public/blog/deploying-your-site-with-vercel.md"
+        ],
+        "note": "Composed from allowlisted source semantics. CSS visibility, arbitrary runtime/network data and browser behavior remain unverified."
+      },
+      "sections": [
+        {
+          "parent_section_id": null,
+          "source_id": "src/App.jsx:21181",
+          "tag": "main",
+          "id": null,
+          "labelledby": null,
+          "label": null
+        },
+        {
+          "parent_section_id": "src/App.jsx:21181",
+          "source_id": "src/components/PageRail.jsx:233/21536",
+          "tag": "nav",
+          "id": null,
+          "labelledby": null,
+          "label": "Pages"
+        },
+        {
+          "parent_section_id": "src/App.jsx:21181",
+          "source_id": "src/App.jsx:21638",
+          "tag": "header",
+          "id": null,
+          "labelledby": null,
+          "label": null
+        },
+        {
+          "parent_section_id": "src/App.jsx:21181",
+          "source_id": "src/components/ContactRail.jsx:3056/22007",
+          "tag": "aside",
+          "id": null,
+          "labelledby": null,
+          "label": "Contact links"
+        },
+        {
+          "parent_section_id": "src/components/ContactRail.jsx:3056/22007",
+          "source_id": "src/components/ContactRail.jsx:3532/22007",
+          "tag": "nav",
+          "id": null,
+          "labelledby": null,
+          "label": "Contact links"
+        }
+      ],
+      "blocks": [
+        {
+          "source_id": "src/components/PageRail.jsx:1375/21536/701:0",
+          "file": "src/components/PageRail.jsx",
+          "line": 20,
+          "section": "nav",
+          "section_id": "src/components/PageRail.jsx:233/21536",
+          "ui_state": "initial",
+          "data_bindings": [],
+          "tag": "span",
+          "text": "Home",
+          "context_text": "Home",
+          "section_heading": "Pages"
+        },
+        {
+          "source_id": "src/components/PageRail.jsx:1375/21536/701:1",
+          "file": "src/components/PageRail.jsx",
+          "line": 20,
+          "section": "nav",
+          "section_id": "src/components/PageRail.jsx:233/21536",
+          "ui_state": "initial",
+          "data_bindings": [],
+          "tag": "span",
+          "text": "About",
+          "context_text": "About",
+          "section_heading": "Pages"
+        },
+        {
+          "source_id": "src/components/PageRail.jsx:1375/21536/701:2",
+          "file": "src/components/PageRail.jsx",
+          "line": 20,
+          "section": "nav",
+          "section_id": "src/components/PageRail.jsx:233/21536",
+          "ui_state": "initial",
+          "data_bindings": [],
+          "tag": "span",
+          "text": "Bookshelf",
+          "context_text": "Bookshelf",
+          "section_heading": "Pages"
+        },
+        {
+          "source_id": "src/components/PageRail.jsx:1375/21536/701:3",
+          "file": "src/components/PageRail.jsx",
+          "line": 20,
+          "section": "nav",
+          "section_id": "src/components/PageRail.jsx:233/21536",
+          "ui_state": "initial",
+          "data_bindings": [],
+          "tag": "span",
+          "text": "Blogs",
+          "context_text": "Blogs",
+          "section_heading": "Pages"
+        },
+        {
+          "source_id": "src/App.jsx:21658",
+          "file": "src/App.jsx",
+          "line": 432,
+          "section": "header",
+          "section_id": "src/App.jsx:21638",
+          "ui_state": "initial",
+          "data_bindings": [],
+          "tag": "a",
+          "text": "Lakshay Goyal",
+          "context_text": "Lakshay Goyal"
+        },
+        {
+          "source_id": "src/App.jsx:21870",
+          "file": "src/App.jsx",
+          "line": 433,
+          "section": "header",
+          "section_id": "src/App.jsx:21638",
+          "ui_state": "initial",
+          "data_bindings": [],
+          "tag": "p",
+          "text": "Software Engineer",
+          "context_text": "Software Engineer"
+        },
+        {
+          "source_id": "src/App.jsx:19694/20853",
+          "file": "src/App.jsx",
+          "line": 404,
+          "section": "main",
+          "section_id": "src/App.jsx:21181",
+          "ui_state": "initial",
+          "data_bindings": [
+            {
+              "file": "public/blog/deploying-your-site-with-vercel.md",
+              "json_pointer": ""
+            }
+          ],
+          "tag": "a",
+          "text": "← All blogs",
+          "context_text": "← All blogs"
+        },
+        {
+          "source_id": "src/App.jsx:20059/20853/19984:0",
+          "file": "src/App.jsx",
+          "line": 408,
+          "section": "main",
+          "section_id": "src/App.jsx:21181",
+          "ui_state": "initial",
+          "data_bindings": [
+            {
+              "file": "public/blog/deploying-your-site-with-vercel.md",
+              "json_pointer": ""
+            }
+          ],
+          "tag": "h2",
+          "text": "Deploying Your Site",
+          "context_text": "Deploying Your Site"
+        },
+        {
+          "source_id": "src/App.jsx:20453/20853/19984:1",
+          "file": "src/App.jsx",
+          "line": 411,
+          "section": "main",
+          "section_id": "src/App.jsx:21181",
+          "ui_state": "initial",
+          "data_bindings": [
+            {
+              "file": "public/blog/deploying-your-site-with-vercel.md",
+              "json_pointer": ""
+            }
+          ],
+          "tag": "p",
+          "text": "Vercel makes it easy to deploy your React, Next.js, or static site.",
+          "context_text": "Vercel makes it easy to deploy your React, Next.js, or static site."
+        },
+        {
+          "source_id": "src/App.jsx:20199/20853/19984:2",
+          "file": "src/App.jsx",
+          "line": 409,
+          "section": "main",
+          "section_id": "src/App.jsx:21181",
+          "ui_state": "initial",
+          "data_bindings": [
+            {
+              "file": "public/blog/deploying-your-site-with-vercel.md",
+              "json_pointer": ""
+            }
+          ],
+          "tag": "h3",
+          "text": "Steps 1. Push your code to GitHub 2. Sign up at vercel.com and import your repo 3. Configure build settings if needed 4. Click deploy and get your live URL!",
+          "context_text": "Steps 1. Push your code to GitHub 2. Sign up at vercel.com and import your repo 3. Configure build settings if needed 4. Click deploy and get your live URL!"
+        },
+        {
+          "source_id": "src/App.jsx:20453/20853/19984:3",
+          "file": "src/App.jsx",
+          "line": 411,
+          "section": "main",
+          "section_id": "src/App.jsx:21181",
+          "ui_state": "initial",
+          "data_bindings": [
+            {
+              "file": "public/blog/deploying-your-site-with-vercel.md",
+              "json_pointer": ""
+            }
+          ],
+          "tag": "p",
+          "text": "hello world Vercel offers fast, global hosting for modern web apps.",
+          "context_text": "hello world Vercel offers fast, global hosting for modern web apps."
+        },
+        {
+          "source_id": "src/components/ContactRail.jsx:2939/22007/4420",
+          "file": "src/components/ContactRail.jsx",
+          "line": 62,
+          "section": "main",
+          "section_id": "src/App.jsx:21181",
+          "ui_state": "initial",
+          "data_bindings": [],
+          "tag": "span",
+          "text": "Schedule",
+          "context_text": "Schedule"
+        }
+      ],
+      "word_count": 68,
+      "link_refs": [
+        {
+          "source_id": "src/components/PageRail.jsx:735/21536/701:0",
+          "report": "internal_links.json"
+        },
+        {
+          "source_id": "src/components/PageRail.jsx:735/21536/701:1",
+          "report": "internal_links.json"
+        },
+        {
+          "source_id": "src/components/PageRail.jsx:735/21536/701:2",
+          "report": "internal_links.json"
+        },
+        {
+          "source_id": "src/components/PageRail.jsx:735/21536/701:3",
+          "report": "internal_links.json"
+        },
+        {
+          "source_id": "src/App.jsx:21658",
+          "report": "internal_links.json"
+        },
+        {
+          "source_id": "src/App.jsx:19694/20853",
+          "report": "internal_links.json"
+        },
+        {
+          "source_id": "src/components/ContactRail.jsx:3677/22007/3637:0",
+          "report": "internal_links.json"
+        },
+        {
+          "source_id": "src/components/ContactRail.jsx:3677/22007/3637:1",
+          "report": "internal_links.json"
+        },
+        {
+          "source_id": "src/components/ContactRail.jsx:3677/22007/3637:2",
+          "report": "internal_links.json"
+        },
+        {
+          "source_id": "src/components/ContactRail.jsx:3677/22007/3637:3",
+          "report": "internal_links.json"
+        },
+        {
+          "source_id": "src/components/ContactRail.jsx:3677/22007/3637:4",
+          "report": "internal_links.json"
+        },
+        {
+          "source_id": "src/components/ContactRail.jsx:1943/22007/4420",
+          "report": "internal_links.json"
+        }
+      ],
+      "media_refs": []
+    },
+    {
+      "url": "/bookshelf",
+      "template": "src/App.jsx",
+      "is_dynamic": false,
+      "coverage": {
+        "mode": "static-source",
+        "complete": false,
+        "limitations": [
+          {
+            "file": "src/components/ScrollReveal.jsx",
+            "line": 22,
+            "reason": "unresolved_rendered_expression"
+          },
+          {
+            "file": "src/components/ScrollReveal.jsx",
+            "line": 22,
+            "reason": "unresolved_attributes:ref"
+          },
+          {
+            "file": "src/App.jsx",
+            "line": 71,
+            "reason": "unresolved_rendered_expression"
+          },
+          {
+            "file": "src/App.jsx",
+            "line": 74,
+            "reason": "unresolved_condition"
+          },
+          {
+            "file": "src/App.jsx",
+            "line": 74,
+            "reason": "unresolved_rendered_expression"
+          },
+          {
+            "file": "src/App.jsx",
+            "line": 75,
+            "reason": "unresolved_rendered_expression"
+          },
+          {
+            "file": "src/App.jsx",
+            "line": 76,
+            "reason": "unresolved_condition"
+          },
+          {
+            "file": "src/App.jsx",
+            "line": 76,
+            "reason": "unresolved_rendered_expression"
+          },
+          {
+            "file": "src/App.jsx",
+            "line": 79,
+            "reason": "unresolved_condition"
+          },
+          {
+            "file": "src/App.jsx",
+            "line": 79,
+            "reason": "unresolved_rendered_expression"
+          },
+          {
+            "file": "src/App.jsx",
+            "line": 70,
+            "reason": "unresolved_attributes:ref,aria-label,aria-pressed,title"
+          },
+          {
+            "file": "src/components/ContactRail.jsx",
+            "line": 58,
+            "reason": "unresolved_rendered_expression"
+          },
+          {
+            "file": "src/components/ContactRail.jsx",
+            "line": 45,
+            "reason": "unresolved_component:LiquidMetal"
+          }
+        ],
+        "route_patterns": [
+          "/blog",
+          "/blog/"
+        ],
+        "entrypoint": "src/main.jsx",
+        "resolved_interaction_states": 0,
+        "resolved_local_fetches": [],
+        "note": "Composed from allowlisted source semantics. CSS visibility, arbitrary runtime/network data and browser behavior remain unverified."
+      },
+      "sections": [
+        {
+          "parent_section_id": null,
+          "source_id": "src/App.jsx:21181",
+          "tag": "main",
+          "id": null,
+          "labelledby": null,
+          "label": null
+        },
+        {
+          "parent_section_id": "src/App.jsx:21181",
+          "source_id": "src/components/PageRail.jsx:233/21536",
+          "tag": "nav",
+          "id": null,
+          "labelledby": null,
+          "label": "Pages"
+        },
+        {
+          "parent_section_id": "src/App.jsx:21181",
+          "source_id": "src/App.jsx:21638",
+          "tag": "header",
+          "id": null,
+          "labelledby": null,
+          "label": null
+        },
+        {
+          "parent_section_id": "src/App.jsx:21181",
+          "source_id": "src/App.jsx:13330/20762/16095",
+          "tag": "header",
+          "id": null,
+          "labelledby": null,
+          "label": null
+        },
+        {
+          "parent_section_id": "src/App.jsx:21181",
+          "source_id": "src/App.jsx:16340/20762/16267:0",
+          "tag": "article",
+          "id": null,
+          "labelledby": null,
+          "label": null
+        },
+        {
+          "parent_section_id": "src/App.jsx:21181",
+          "source_id": "src/App.jsx:16340/20762/16267:1",
+          "tag": "article",
+          "id": null,
+          "labelledby": null,
+          "label": null
+        },
+        {
+          "parent_section_id": "src/App.jsx:21181",
+          "source_id": "src/components/ContactRail.jsx:3056/22007",
+          "tag": "aside",
+          "id": null,
+          "labelledby": null,
+          "label": "Contact links"
+        },
+        {
+          "parent_section_id": "src/components/ContactRail.jsx:3056/22007",
+          "source_id": "src/components/ContactRail.jsx:3532/22007",
+          "tag": "nav",
+          "id": null,
+          "labelledby": null,
+          "label": "Contact links"
+        }
+      ],
+      "blocks": [
+        {
+          "source_id": "src/components/PageRail.jsx:1375/21536/701:0",
+          "file": "src/components/PageRail.jsx",
+          "line": 20,
+          "section": "nav",
+          "section_id": "src/components/PageRail.jsx:233/21536",
+          "ui_state": "initial",
+          "data_bindings": [],
+          "tag": "span",
+          "text": "Home",
+          "context_text": "Home",
+          "section_heading": "Pages"
+        },
+        {
+          "source_id": "src/components/PageRail.jsx:1375/21536/701:1",
+          "file": "src/components/PageRail.jsx",
+          "line": 20,
+          "section": "nav",
+          "section_id": "src/components/PageRail.jsx:233/21536",
+          "ui_state": "initial",
+          "data_bindings": [],
+          "tag": "span",
+          "text": "About",
+          "context_text": "About",
+          "section_heading": "Pages"
+        },
+        {
+          "source_id": "src/components/PageRail.jsx:1375/21536/701:2",
+          "file": "src/components/PageRail.jsx",
+          "line": 20,
+          "section": "nav",
+          "section_id": "src/components/PageRail.jsx:233/21536",
+          "ui_state": "initial",
+          "data_bindings": [],
+          "tag": "span",
+          "text": "Bookshelf",
+          "context_text": "Bookshelf",
+          "section_heading": "Pages"
+        },
+        {
+          "source_id": "src/components/PageRail.jsx:1375/21536/701:3",
+          "file": "src/components/PageRail.jsx",
+          "line": 20,
+          "section": "nav",
+          "section_id": "src/components/PageRail.jsx:233/21536",
+          "ui_state": "initial",
+          "data_bindings": [],
+          "tag": "span",
+          "text": "Blogs",
+          "context_text": "Blogs",
+          "section_heading": "Pages"
+        },
+        {
+          "source_id": "src/App.jsx:21658",
+          "file": "src/App.jsx",
+          "line": 432,
+          "section": "header",
+          "section_id": "src/App.jsx:21638",
+          "ui_state": "initial",
+          "data_bindings": [],
+          "tag": "a",
+          "text": "Lakshay Goyal",
+          "context_text": "Lakshay Goyal"
+        },
+        {
+          "source_id": "src/App.jsx:21870",
+          "file": "src/App.jsx",
+          "line": 433,
+          "section": "header",
+          "section_id": "src/App.jsx:21638",
+          "ui_state": "initial",
+          "data_bindings": [],
+          "tag": "p",
+          "text": "Software Engineer",
+          "context_text": "Software Engineer"
+        },
+        {
+          "source_id": "src/App.jsx:13386/20762/16095",
+          "file": "src/App.jsx",
+          "line": 279,
+          "section": "header",
+          "section_id": "src/App.jsx:13330/20762/16095",
+          "ui_state": "initial",
+          "data_bindings": [],
+          "tag": "p",
+          "text": "Bookshelf",
+          "context_text": "Bookshelf"
+        },
+        {
+          "source_id": "src/App.jsx:13501/20762/16095",
+          "file": "src/App.jsx",
+          "line": 280,
+          "section": "header",
+          "section_id": "src/App.jsx:13330/20762/16095",
+          "ui_state": "initial",
+          "data_bindings": [],
+          "tag": "h2",
+          "text": "Ideas I keep close.",
+          "context_text": "Ideas I keep close."
+        },
+        {
+          "source_id": "src/App.jsx:13644/20762/16095",
+          "file": "src/App.jsx",
+          "line": 281,
+          "section": "header",
+          "section_id": "src/App.jsx:13330/20762/16095",
+          "ui_state": "initial",
+          "data_bindings": [],
+          "tag": "p",
+          "text": "A small collection of books I’ve read and the ideas I took from them.",
+          "context_text": "A small collection of books I’ve read and the ideas I took from them."
+        },
+        {
+          "source_id": "src/App.jsx:16728/20762/16267:0",
+          "file": "src/App.jsx",
+          "line": 343,
+          "section": "article",
+          "section_id": "src/App.jsx:16340/20762/16267:0",
+          "ui_state": "initial",
+          "data_bindings": [
+            {
+              "file": "src/store/data/books.json",
+              "json_pointer": "/0"
+            }
+          ],
+          "tag": "p",
+          "text": "Philosophy",
+          "context_text": "Philosophy"
+        },
+        {
+          "source_id": "src/App.jsx:16906/20762/16267:0",
+          "file": "src/App.jsx",
+          "line": 344,
+          "section": "article",
+          "section_id": "src/App.jsx:16340/20762/16267:0",
+          "ui_state": "initial",
+          "data_bindings": [
+            {
+              "file": "src/store/data/books.json",
+              "json_pointer": "/0"
+            }
+          ],
+          "tag": "h3",
+          "text": "Freedom from the Known",
+          "context_text": "Freedom from the Known"
+        },
+        {
+          "source_id": "src/App.jsx:17012/20762/16267:0",
+          "file": "src/App.jsx",
+          "line": 345,
+          "section": "article",
+          "section_id": "src/App.jsx:16340/20762/16267:0",
+          "ui_state": "initial",
+          "data_bindings": [
+            {
+              "file": "src/store/data/books.json",
+              "json_pointer": "/0"
+            }
+          ],
+          "tag": "p",
+          "text": "by",
+          "context_text": "by J Krishnamurti"
+        },
+        {
+          "source_id": "src/App.jsx:17012/20762/16267:0",
+          "file": "src/App.jsx",
+          "line": 345,
+          "section": "article",
+          "section_id": "src/App.jsx:16340/20762/16267:0",
+          "ui_state": "initial",
+          "data_bindings": [
+            {
+              "file": "src/store/data/books.json",
+              "json_pointer": "/0"
+            }
+          ],
+          "tag": "p",
+          "text": "J Krishnamurti",
+          "context_text": "by J Krishnamurti"
+        },
+        {
+          "source_id": "src/App.jsx:17112/20762/16267:0",
+          "file": "src/App.jsx",
+          "line": 346,
+          "section": "article",
+          "section_id": "src/App.jsx:16340/20762/16267:0",
+          "ui_state": "initial",
+          "data_bindings": [
+            {
+              "file": "src/store/data/books.json",
+              "json_pointer": "/0"
+            }
+          ],
+          "tag": "p",
+          "text": "A profound exploration of the nature of thought and the self.",
+          "context_text": "A profound exploration of the nature of thought and the self."
+        },
+        {
+          "source_id": "src/App.jsx:17311/20762/16267:0/17281:0",
+          "file": "src/App.jsx",
+          "line": 347,
+          "section": "article",
+          "section_id": "src/App.jsx:16340/20762/16267:0",
+          "ui_state": "initial",
+          "data_bindings": [
+            {
+              "file": "src/store/data/books.json",
+              "json_pointer": "/0"
+            }
+          ],
+          "tag": "li",
+          "text": "Understanding the limitations of thought",
+          "context_text": "Understanding the limitations of thought"
+        },
+        {
+          "source_id": "src/App.jsx:17311/20762/16267:0/17281:1",
+          "file": "src/App.jsx",
+          "line": 347,
+          "section": "article",
+          "section_id": "src/App.jsx:16340/20762/16267:0",
+          "ui_state": "initial",
+          "data_bindings": [
+            {
+              "file": "src/store/data/books.json",
+              "json_pointer": "/0"
+            }
+          ],
+          "tag": "li",
+          "text": "The nature of self and identity",
+          "context_text": "The nature of self and identity"
+        },
+        {
+          "source_id": "src/App.jsx:17311/20762/16267:0/17281:2",
+          "file": "src/App.jsx",
+          "line": 347,
+          "section": "article",
+          "section_id": "src/App.jsx:16340/20762/16267:0",
+          "ui_state": "initial",
+          "data_bindings": [
+            {
+              "file": "src/store/data/books.json",
+              "json_pointer": "/0"
+            }
+          ],
+          "tag": "li",
+          "text": "Breaking free from conditioning",
+          "context_text": "Breaking free from conditioning"
+        },
+        {
+          "source_id": "src/App.jsx:3886/20762/16267:0/17363",
+          "file": "src/App.jsx",
+          "line": 97,
+          "section": "article",
+          "section_id": "src/App.jsx:16340/20762/16267:0",
+          "ui_state": "initial",
+          "data_bindings": [
+            {
+              "file": "src/store/data/books.json",
+              "json_pointer": "/0"
+            }
+          ],
+          "tag": "a",
+          "text": "View book",
+          "context_text": "View book"
+        },
+        {
+          "source_id": "src/App.jsx:16728/20762/16267:1",
+          "file": "src/App.jsx",
+          "line": 343,
+          "section": "article",
+          "section_id": "src/App.jsx:16340/20762/16267:1",
+          "ui_state": "initial",
+          "data_bindings": [
+            {
+              "file": "src/store/data/books.json",
+              "json_pointer": "/1"
+            }
+          ],
+          "tag": "p",
+          "text": "Productivity",
+          "context_text": "Productivity"
+        },
+        {
+          "source_id": "src/App.jsx:16906/20762/16267:1",
+          "file": "src/App.jsx",
+          "line": 344,
+          "section": "article",
+          "section_id": "src/App.jsx:16340/20762/16267:1",
+          "ui_state": "initial",
+          "data_bindings": [
+            {
+              "file": "src/store/data/books.json",
+              "json_pointer": "/1"
+            }
+          ],
+          "tag": "h3",
+          "text": "The 12 Week Year",
+          "context_text": "The 12 Week Year"
+        },
+        {
+          "source_id": "src/App.jsx:17012/20762/16267:1",
+          "file": "src/App.jsx",
+          "line": 345,
+          "section": "article",
+          "section_id": "src/App.jsx:16340/20762/16267:1",
+          "ui_state": "initial",
+          "data_bindings": [
+            {
+              "file": "src/store/data/books.json",
+              "json_pointer": "/1"
+            }
+          ],
+          "tag": "p",
+          "text": "by",
+          "context_text": "by Brian P. Moran, Michael Lennington"
+        },
+        {
+          "source_id": "src/App.jsx:17012/20762/16267:1",
+          "file": "src/App.jsx",
+          "line": 345,
+          "section": "article",
+          "section_id": "src/App.jsx:16340/20762/16267:1",
+          "ui_state": "initial",
+          "data_bindings": [
+            {
+              "file": "src/store/data/books.json",
+              "json_pointer": "/1"
+            }
+          ],
+          "tag": "p",
+          "text": "Brian P. Moran, Michael Lennington",
+          "context_text": "by Brian P. Moran, Michael Lennington"
+        },
+        {
+          "source_id": "src/App.jsx:17112/20762/16267:1",
+          "file": "src/App.jsx",
+          "line": 346,
+          "section": "article",
+          "section_id": "src/App.jsx:16340/20762/16267:1",
+          "ui_state": "initial",
+          "data_bindings": [
+            {
+              "file": "src/store/data/books.json",
+              "json_pointer": "/1"
+            }
+          ],
+          "tag": "p",
+          "text": "A practical execution system for compressing annual goals into focused 12-week cycles.",
+          "context_text": "A practical execution system for compressing annual goals into focused 12-week cycles."
+        },
+        {
+          "source_id": "src/App.jsx:17311/20762/16267:1/17281:0",
+          "file": "src/App.jsx",
+          "line": 347,
+          "section": "article",
+          "section_id": "src/App.jsx:16340/20762/16267:1",
+          "ui_state": "initial",
+          "data_bindings": [
+            {
+              "file": "src/store/data/books.json",
+              "json_pointer": "/1"
+            }
+          ],
+          "tag": "li",
+          "text": "Plan work in focused 12-week execution cycles",
+          "context_text": "Plan work in focused 12-week execution cycles"
+        },
+        {
+          "source_id": "src/App.jsx:17311/20762/16267:1/17281:1",
+          "file": "src/App.jsx",
+          "line": 347,
+          "section": "article",
+          "section_id": "src/App.jsx:16340/20762/16267:1",
+          "ui_state": "initial",
+          "data_bindings": [
+            {
+              "file": "src/store/data/books.json",
+              "json_pointer": "/1"
+            }
+          ],
+          "tag": "li",
+          "text": "Create weekly scorecards and accountability rhythms",
+          "context_text": "Create weekly scorecards and accountability rhythms"
+        },
+        {
+          "source_id": "src/App.jsx:17311/20762/16267:1/17281:2",
+          "file": "src/App.jsx",
+          "line": 347,
+          "section": "article",
+          "section_id": "src/App.jsx:16340/20762/16267:1",
+          "ui_state": "initial",
+          "data_bindings": [
+            {
+              "file": "src/store/data/books.json",
+              "json_pointer": "/1"
+            }
+          ],
+          "tag": "li",
+          "text": "Build urgency around the highest-leverage goals",
+          "context_text": "Build urgency around the highest-leverage goals"
+        },
+        {
+          "source_id": "src/App.jsx:3886/20762/16267:1/17363",
+          "file": "src/App.jsx",
+          "line": 97,
+          "section": "article",
+          "section_id": "src/App.jsx:16340/20762/16267:1",
+          "ui_state": "initial",
+          "data_bindings": [
+            {
+              "file": "src/store/data/books.json",
+              "json_pointer": "/1"
+            }
+          ],
+          "tag": "a",
+          "text": "View book",
+          "context_text": "View book"
+        },
+        {
+          "source_id": "src/components/ContactRail.jsx:2939/22007/4420",
+          "file": "src/components/ContactRail.jsx",
+          "line": 62,
+          "section": "main",
+          "section_id": "src/App.jsx:21181",
+          "ui_state": "initial",
+          "data_bindings": [],
+          "tag": "span",
+          "text": "Schedule",
+          "context_text": "Schedule"
+        }
+      ],
+      "word_count": 108,
+      "link_refs": [
+        {
+          "source_id": "src/components/PageRail.jsx:735/21536/701:0",
+          "report": "internal_links.json"
+        },
+        {
+          "source_id": "src/components/PageRail.jsx:735/21536/701:1",
+          "report": "internal_links.json"
+        },
+        {
+          "source_id": "src/components/PageRail.jsx:735/21536/701:2",
+          "report": "internal_links.json"
+        },
+        {
+          "source_id": "src/components/PageRail.jsx:735/21536/701:3",
+          "report": "internal_links.json"
+        },
+        {
+          "source_id": "src/App.jsx:21658",
+          "report": "internal_links.json"
+        },
+        {
+          "source_id": "src/App.jsx:3886/20762/16267:0/17363",
+          "report": "internal_links.json"
+        },
+        {
+          "source_id": "src/App.jsx:3886/20762/16267:1/17363",
+          "report": "internal_links.json"
+        },
+        {
+          "source_id": "src/components/ContactRail.jsx:3677/22007/3637:0",
+          "report": "internal_links.json"
+        },
+        {
+          "source_id": "src/components/ContactRail.jsx:3677/22007/3637:1",
+          "report": "internal_links.json"
+        },
+        {
+          "source_id": "src/components/ContactRail.jsx:3677/22007/3637:2",
+          "report": "internal_links.json"
+        },
+        {
+          "source_id": "src/components/ContactRail.jsx:3677/22007/3637:3",
+          "report": "internal_links.json"
+        },
+        {
+          "source_id": "src/components/ContactRail.jsx:3677/22007/3637:4",
+          "report": "internal_links.json"
+        },
+        {
+          "source_id": "src/components/ContactRail.jsx:1943/22007/4420",
+          "report": "internal_links.json"
+        }
+      ],
+      "media_refs": [
+        {
+          "source_id": "src/App.jsx:16515/20762/16267:0",
+          "report": "media.json"
+        },
+        {
+          "source_id": "src/App.jsx:16515/20762/16267:1",
+          "report": "media.json"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,2567 @@
+{
+  "schema_version": "2.0",
+  "category": "eeat",
+  "extraction": {
+    "mode": "static-source",
+    "route_count": 5,
+    "limitations": [
+      "File routes, literal React Router routes and supported pathname dispatch are enumerated; arbitrary routing remains unresolved.",
+      "No application code is executed; runtime content is unknown.",
+      "Supported React composition follows source-selected component order; browser layout and visibility are unverified."
+    ]
+  },
+  "pages": [
+    {
+      "url": "/",
+      "template": "src/App.jsx",
+      "is_dynamic": false,
+      "coverage": {
+        "mode": "static-source",
+        "complete": false,
+        "limitations": [
+          {
+            "file": "src/components/ScrollReveal.jsx",
+            "line": 22,
+            "reason": "unresolved_rendered_expression"
+          },
+          {
+            "file": "src/components/ScrollReveal.jsx",
+            "line": 22,
+            "reason": "unresolved_attributes:ref"
+          },
+          {
+            "file": "src/App.jsx",
+            "line": 71,
+            "reason": "unresolved_rendered_expression"
+          },
+          {
+            "file": "src/App.jsx",
+            "line": 74,
+            "reason": "unresolved_condition"
+          },
+          {
+            "file": "src/App.jsx",
+            "line": 74,
+            "reason": "unresolved_rendered_expression"
+          },
+          {
+            "file": "src/App.jsx",
+            "line": 75,
+            "reason": "unresolved_rendered_expression"
+          },
+          {
+            "file": "src/App.jsx",
+            "line": 76,
+            "reason": "unresolved_condition"
+          },
+          {
+            "file": "src/App.jsx",
+            "line": 76,
+            "reason": "unresolved_rendered_expression"
+          },
+          {
+            "file": "src/App.jsx",
+            "line": 79,
+            "reason": "unresolved_condition"
+          },
+          {
+            "file": "src/App.jsx",
+            "line": 79,
+            "reason": "unresolved_rendered_expression"
+          },
+          {
+            "file": "src/App.jsx",
+            "line": 70,
+            "reason": "unresolved_attributes:ref,aria-label,aria-pressed,title"
+          },
+          {
+            "file": "src/components/ContactRail.jsx",
+            "line": 58,
+            "reason": "unresolved_rendered_expression"
+          },
+          {
+            "file": "src/components/ContactRail.jsx",
+            "line": 45,
+            "reason": "unresolved_component:LiquidMetal"
+          }
+        ],
+        "route_patterns": [
+          "/blog",
+          "/blog/"
+        ],
+        "entrypoint": "src/main.jsx",
+        "resolved_interaction_states": 4,
+        "resolved_local_fetches": [],
+        "note": "Composed from allowlisted source semantics. CSS visibility, arbitrary runtime/network data and browser behavior remain unverified."
+      },
+      "signals": [
+        {
+          "signal": "authorship",
+          "status": "not_observed_in_static_content",
+          "evidence": []
+        },
+        {
+          "signal": "experience",
+          "status": "candidate_evidence",
+          "evidence": [
+            {
+              "source_id": "src/App.jsx:4490/20679/12224",
+              "file": "src/App.jsx",
+              "line": 111,
+              "section": "section",
+              "section_id": "src/App.jsx:4401/20679/12224",
+              "ui_state": "initial",
+              "data_bindings": [],
+              "tag": "h2",
+              "text": "Work Experience",
+              "context_text": "Work Experience",
+              "section_heading": "Work Experience"
+            },
+            {
+              "source_id": "src/App.jsx:4872/20679/12224/4624:0",
+              "file": "src/App.jsx",
+              "line": 115,
+              "section": "article",
+              "section_id": "src/App.jsx:4668/20679/12224/4624:0",
+              "ui_state": "initial",
+              "data_bindings": [
+                {
+                  "file": "src/store/data/experiences.json",
+                  "json_pointer": "/0"
+                }
+              ],
+              "tag": "p",
+              "text": "July 2026 — Present",
+              "context_text": "July 2026 — Present",
+              "section_heading": "Work Experience"
+            },
+            {
+              "source_id": "src/App.jsx:5023/20679/12224/4624:0",
+              "file": "src/App.jsx",
+              "line": 117,
+              "section": "article",
+              "section_id": "src/App.jsx:4668/20679/12224/4624:0",
+              "ui_state": "initial",
+              "data_bindings": [
+                {
+                  "file": "src/store/data/experiences.json",
+                  "json_pointer": "/0"
+                }
+              ],
+              "tag": "p",
+              "text": "Software Engineer",
+              "context_text": "Software Engineer at Testsigma",
+              "section_heading": "Work Experience"
+            },
+            {
+              "source_id": "src/App.jsx:5023/20679/12224/4624:0",
+              "file": "src/App.jsx",
+              "line": 117,
+              "section": "article",
+              "section_id": "src/App.jsx:4668/20679/12224/4624:0",
+              "ui_state": "initial",
+              "data_bindings": [
+                {
+                  "file": "src/store/data/experiences.json",
+                  "json_pointer": "/0"
+                }
+              ],
+              "tag": "p",
+              "text": "at",
+              "context_text": "Software Engineer at Testsigma",
+              "section_heading": "Work Experience"
+            },
+            {
+              "source_id": "src/App.jsx:3886/20679/12224/4624:0/5164",
+              "file": "src/App.jsx",
+              "line": 97,
+              "section": "article",
+              "section_id": "src/App.jsx:4668/20679/12224/4624:0",
+              "ui_state": "initial",
+              "data_bindings": [
+                {
+                  "file": "src/store/data/experiences.json",
+                  "json_pointer": "/0"
+                }
+              ],
+              "tag": "a",
+              "text": "Testsigma",
+              "context_text": "Testsigma",
+              "section_heading": "Work Experience"
+            },
+            {
+              "source_id": "src/App.jsx:5261/20679/12224/4624:0",
+              "file": "src/App.jsx",
+              "line": 121,
+              "section": "article",
+              "section_id": "src/App.jsx:4668/20679/12224/4624:0",
+              "ui_state": "initial",
+              "data_bindings": [
+                {
+                  "file": "src/store/data/experiences.json",
+                  "json_pointer": "/0"
+                }
+              ],
+              "tag": "p",
+              "text": "Bangalore, India",
+              "context_text": "Bangalore, India • Full-time",
+              "section_heading": "Work Experience"
+            },
+            {
+              "source_id": "src/App.jsx:5261/20679/12224/4624:0",
+              "file": "src/App.jsx",
+              "line": 121,
+              "section": "article",
+              "section_id": "src/App.jsx:4668/20679/12224/4624:0",
+              "ui_state": "initial",
+              "data_bindings": [
+                {
+                  "file": "src/store/data/experiences.json",
+                  "json_pointer": "/0"
+                }
+              ],
+              "tag": "p",
+              "text": "• Full-time",
+              "context_text": "Bangalore, India • Full-time",
+              "section_heading": "Work Experience"
+            },
+            {
+              "source_id": "src/App.jsx:5386/20679/12224/4624:0",
+              "file": "src/App.jsx",
+              "line": 122,
+              "section": "article",
+              "section_id": "src/App.jsx:4668/20679/12224/4624:0",
+              "ui_state": "initial",
+              "data_bindings": [
+                {
+                  "file": "src/store/data/experiences.json",
+                  "json_pointer": "/0"
+                }
+              ],
+              "tag": "p",
+              "text": "Building things that make test automation a little less painful. Mostly jumping between backend, frontend, and infra, figuring things out along the way.",
+              "context_text": "Building things that make test automation a little less painful. Mostly jumping between backend, frontend, and infra, figuring things out along the way.",
+              "section_heading": "Work Experience"
+            },
+            {
+              "source_id": "src/App.jsx:4872/20679/12224/4624:1",
+              "file": "src/App.jsx",
+              "line": 115,
+              "section": "article",
+              "section_id": "src/App.jsx:4668/20679/12224/4624:1",
+              "ui_state": "initial",
+              "data_bindings": [
+                {
+                  "file": "src/store/data/experiences.json",
+                  "json_pointer": "/1"
+                }
+              ],
+              "tag": "p",
+              "text": "Dec 2025 — June 2026",
+              "context_text": "Dec 2025 — June 2026",
+              "section_heading": "Work Experience"
+            },
+            {
+              "source_id": "src/App.jsx:5023/20679/12224/4624:1",
+              "file": "src/App.jsx",
+              "line": 117,
+              "section": "article",
+              "section_id": "src/App.jsx:4668/20679/12224/4624:1",
+              "ui_state": "initial",
+              "data_bindings": [
+                {
+                  "file": "src/store/data/experiences.json",
+                  "json_pointer": "/1"
+                }
+              ],
+              "tag": "p",
+              "text": "Founding Engineer",
+              "context_text": "Founding Engineer at FOZO",
+              "section_heading": "Work Experience"
+            },
+            {
+              "source_id": "src/App.jsx:5023/20679/12224/4624:1",
+              "file": "src/App.jsx",
+              "line": 117,
+              "section": "article",
+              "section_id": "src/App.jsx:4668/20679/12224/4624:1",
+              "ui_state": "initial",
+              "data_bindings": [
+                {
+                  "file": "src/store/data/experiences.json",
+                  "json_pointer": "/1"
+                }
+              ],
+              "tag": "p",
+              "text": "at",
+              "context_text": "Founding Engineer at FOZO",
+              "section_heading": "Work Experience"
+            },
+            {
+              "source_id": "src/App.jsx:3886/20679/12224/4624:1/5164",
+              "file": "src/App.jsx",
+              "line": 97,
+              "section": "article",
+              "section_id": "src/App.jsx:4668/20679/12224/4624:1",
+              "ui_state": "initial",
+              "data_bindings": [
+                {
+                  "file": "src/store/data/experiences.json",
+                  "json_pointer": "/1"
+                }
+              ],
+              "tag": "a",
+              "text": "FOZO",
+              "context_text": "FOZO",
+              "section_heading": "Work Experience"
+            },
+            {
+              "source_id": "src/App.jsx:5261/20679/12224/4624:1",
+              "file": "src/App.jsx",
+              "line": 121,
+              "section": "article",
+              "section_id": "src/App.jsx:4668/20679/12224/4624:1",
+              "ui_state": "initial",
+              "data_bindings": [
+                {
+                  "file": "src/store/data/experiences.json",
+                  "json_pointer": "/1"
+                }
+              ],
+              "tag": "p",
+              "text": "Bangalore, India",
+              "context_text": "Bangalore, India • Full-time",
+              "section_heading": "Work Experience"
+            },
+            {
+              "source_id": "src/App.jsx:5261/20679/12224/4624:1",
+              "file": "src/App.jsx",
+              "line": 121,
+              "section": "article",
+              "section_id": "src/App.jsx:4668/20679/12224/4624:1",
+              "ui_state": "initial",
+              "data_bindings": [
+                {
+                  "file": "src/store/data/experiences.json",
+                  "json_pointer": "/1"
+                }
+              ],
+              "tag": "p",
+              "text": "• Full-time",
+              "context_text": "Bangalore, India • Full-time",
+              "section_heading": "Work Experience"
+            },
+            {
+              "source_id": "src/App.jsx:5386/20679/12224/4624:1",
+              "file": "src/App.jsx",
+              "line": 122,
+              "section": "article",
+              "section_id": "src/App.jsx:4668/20679/12224/4624:1",
+              "ui_state": "initial",
+              "data_bindings": [
+                {
+                  "file": "src/store/data/experiences.json",
+                  "json_pointer": "/1"
+                }
+              ],
+              "tag": "p",
+              "text": "Built a food delivery platform from scratch, handling everything from architecture and mobile apps to servers, deployments, and all the chaos in between.",
+              "context_text": "Built a food delivery platform from scratch, handling everything from architecture and mobile apps to servers, deployments, and all the chaos in between.",
+              "section_heading": "Work Experience"
+            },
+            {
+              "source_id": "src/App.jsx:6200/20679/12274",
+              "file": "src/App.jsx",
+              "line": 151,
+              "section": "section",
+              "section_id": "src/App.jsx:6095/20679/12274",
+              "ui_state": "initial",
+              "data_bindings": [],
+              "tag": "h2",
+              "text": "Selected Work",
+              "context_text": "Selected Work",
+              "section_heading": "Selected Work"
+            },
+            {
+              "source_id": "src/App.jsx:6555/20679/12274/6384:0",
+              "file": "src/App.jsx",
+              "line": 155,
+              "section": "article",
+              "section_id": "src/App.jsx:6434/20679/12274/6384:0",
+              "ui_state": "initial",
+              "data_bindings": [
+                {
+                  "file": "src/store/data/majorProjects.json",
+                  "json_pointer": "/0"
+                }
+              ],
+              "tag": "button",
+              "text": "Play Unlovable - Application Builder. demo",
+              "text_source": "aria-label",
+              "section_heading": "Selected Work"
+            },
+            {
+              "source_id": "src/App.jsx:7679/20679/12274/6384:0",
+              "file": "src/App.jsx",
+              "line": 167,
+              "section": "article",
+              "section_id": "src/App.jsx:6434/20679/12274/6384:0",
+              "ui_state": "initial",
+              "data_bindings": [
+                {
+                  "file": "src/store/data/majorProjects.json",
+                  "json_pointer": "/0"
+                }
+              ],
+              "tag": "span",
+              "text": "Play demo",
+              "context_text": "Play demo",
+              "section_heading": "Selected Work"
+            },
+            {
+              "source_id": "src/App.jsx:7879/20679/12274/6384:0",
+              "file": "src/App.jsx",
+              "line": 170,
+              "section": "article",
+              "section_id": "src/App.jsx:6434/20679/12274/6384:0",
+              "ui_state": "initial",
+              "data_bindings": [
+                {
+                  "file": "src/store/data/majorProjects.json",
+                  "json_pointer": "/0"
+                }
+              ],
+              "tag": "p",
+              "text": "01",
+              "context_text": "01",
+              "section_heading": "Selected Work"
+            },
+            {
+              "source_id": "src/App.jsx:3886/20679/12274/6384:0/8062",
+              "file": "src/App.jsx",
+              "line": 97,
+              "section": "article",
+              "section_id": "src/App.jsx:6434/20679/12274/6384:0",
+              "ui_state": "initial",
+              "data_bindings": [
+                {
+                  "file": "src/store/data/majorProjects.json",
+                  "json_pointer": "/0"
+                }
+              ],
+              "tag": "a",
+              "text": "Unlovable - Application Builder.",
+              "context_text": "Unlovable - Application Builder.",
+              "section_heading": "Selected Work"
+            },
+            {
+              "source_id": "src/App.jsx:8156/20679/12274/6384:0",
+              "file": "src/App.jsx",
+              "line": 172,
+              "section": "article",
+              "section_id": "src/App.jsx:6434/20679/12274/6384:0",
+              "ui_state": "initial",
+              "data_bindings": [
+                {
+                  "file": "src/store/data/majorProjects.json",
+                  "json_pointer": "/0"
+                }
+              ],
+              "tag": "p",
+              "text": "Built an application builder, where anyone can able to generate an web application using a prompt and creativity.",
+              "context_text": "Built an application builder, where anyone can able to generate an web application using a prompt and creativity.",
+              "section_heading": "Selected Work"
+            },
+            {
+              "source_id": "src/App.jsx:8253/20679/12274/6384:0",
+              "file": "src/App.jsx",
+              "line": 173,
+              "section": "article",
+              "section_id": "src/App.jsx:6434/20679/12274/6384:0",
+              "ui_state": "initial",
+              "data_bindings": [
+                {
+                  "file": "src/store/data/majorProjects.json",
+                  "json_pointer": "/0"
+                }
+              ],
+              "tag": "p",
+              "text": "Turborepo · Expo · E2B sandbox · Redis",
+              "context_text": "Turborepo · Expo · E2B sandbox · Redis",
+              "section_heading": "Selected Work"
+            },
+            {
+              "source_id": "src/App.jsx:3886/20679/12274/6384:0/8395",
+              "file": "src/App.jsx",
+              "line": 97,
+              "section": "article",
+              "section_id": "src/App.jsx:6434/20679/12274/6384:0",
+              "ui_state": "initial",
+              "data_bindings": [
+                {
+                  "file": "src/store/data/majorProjects.json",
+                  "json_pointer": "/0"
+                }
+              ],
+              "tag": "a",
+              "text": "Source code",
+              "context_text": "Source code",
+              "section_heading": "Selected Work"
+            },
+            {
+              "source_id": "src/App.jsx:6555/20679/12274/6384:1",
+              "file": "src/App.jsx",
+              "line": 155,
+              "section": "article",
+              "section_id": "src/App.jsx:6434/20679/12274/6384:1",
+              "ui_state": "initial",
+              "data_bindings": [
+                {
+                  "file": "src/store/data/majorProjects.json",
+                  "json_pointer": "/1"
+                }
+              ],
+              "tag": "button",
+              "text": "Play Unlovable - Mobile Application. demo",
+              "text_source": "aria-label",
+              "section_heading": "Selected Work"
+            },
+            {
+              "source_id": "src/App.jsx:7679/20679/12274/6384:1",
+              "file": "src/App.jsx",
+              "line": 167,
+              "section": "article",
+              "section_id": "src/App.jsx:6434/20679/12274/6384:1",
+              "ui_state": "initial",
+              "data_bindings": [
+                {
+                  "file": "src/store/data/majorProjects.json",
+                  "json_pointer": "/1"
+                }
+              ],
+              "tag": "span",
+              "text": "Play demo",
+              "context_text": "Play demo",
+              "section_heading": "Selected Work"
+            },
+            {
+              "source_id": "src/App.jsx:7879/20679/12274/6384:1",
+              "file": "src/App.jsx",
+              "line": 170,
+              "section": "article",
+              "section_id": "src/App.jsx:6434/20679/12274/6384:1",
+              "ui_state": "initial",
+              "data_bindings": [
+                {
+                  "file": "src/store/data/majorProjects.json",
+                  "json_pointer": "/1"
+                }
+              ],
+              "tag": "p",
+              "text": "02",
+              "context_text": "02",
+              "section_heading": "Selected Work"
+            },
+            {
+              "source_id": "src/App.jsx:3886/20679/12274/6384:1/8062",
+              "file": "src/App.jsx",
+              "line": 97,
+              "section": "article",
+              "section_id": "src/App.jsx:6434/20679/12274/6384:1",
+              "ui_state": "initial",
+              "data_bindings": [
+                {
+                  "file": "src/store/data/majorProjects.json",
+                  "json_pointer": "/1"
+                }
+              ],
+              "tag": "a",
+              "text": "Unlovable - Mobile Application.",
+              "context_text": "Unlovable - Mobile Application.",
+              "section_heading": "Selected Work"
+            },
+            {
+              "source_id": "src/App.jsx:8156/20679/12274/6384:1",
+              "file": "src/App.jsx",
+              "line": 172,
+              "section": "article",
+              "section_id": "src/App.jsx:6434/20679/12274/6384:1",
+              "ui_state": "initial",
+              "data_bindings": [
+                {
+                  "file": "src/store/data/majorProjects.json",
+                  "json_pointer": "/1"
+                }
+              ],
+              "tag": "p",
+              "text": "Built an Mobile application builder, where anyone can able to generate an mobile application using a prompt and creativity.",
+              "context_text": "Built an Mobile application builder, where anyone can able to generate an mobile application using a prompt and creativity.",
+              "section_heading": "Selected Work"
+            },
+            {
+              "source_id": "src/App.jsx:8253/20679/12274/6384:1",
+              "file": "src/App.jsx",
+              "line": 173,
+              "section": "article",
+              "section_id": "src/App.jsx:6434/20679/12274/6384:1",
+              "ui_state": "initial",
+              "data_bindings": [
+                {
+                  "file": "src/store/data/majorProjects.json",
+                  "json_pointer": "/1"
+                }
+              ],
+              "tag": "p",
+              "text": "React Native · Expo · Nativewind · EAS",
+              "context_text": "React Native · Expo · Nativewind · EAS",
+              "section_heading": "Selected Work"
+            },
+            {
+              "source_id": "src/App.jsx:6555/20679/12274/6384:2",
+              "file": "src/App.jsx",
+              "line": 155,
+              "section": "article",
+              "section_id": "src/App.jsx:6434/20679/12274/6384:2",
+              "ui_state": "initial",
+              "data_bindings": [
+                {
+                  "file": "src/store/data/majorProjects.json",
+                  "json_pointer": "/2"
+                }
+              ],
+              "tag": "button",
+              "text": "Play Exness - CFD Application. demo",
+              "text_source": "aria-label",
+              "section_heading": "Selected Work"
+            },
+            {
+              "source_id": "src/App.jsx:7679/20679/12274/6384:2",
+              "file": "src/App.jsx",
+              "line": 167,
+              "section": "article",
+              "section_id": "src/App.jsx:6434/20679/12274/6384:2",
+              "ui_state": "initial",
+              "data_bindings": [
+                {
+                  "file": "src/store/data/majorProjects.json",
+                  "json_pointer": "/2"
+                }
+              ],
+              "tag": "span",
+              "text": "Play demo",
+              "context_text": "Play demo",
+              "section_heading": "Selected Work"
+            },
+            {
+              "source_id": "src/App.jsx:7879/20679/12274/6384:2",
+              "file": "src/App.jsx",
+              "line": 170,
+              "section": "article",
+              "section_id": "src/App.jsx:6434/20679/12274/6384:2",
+              "ui_state": "initial",
+              "data_bindings": [
+                {
+                  "file": "src/store/data/majorProjects.json",
+                  "json_pointer": "/2"
+                }
+              ],
+              "tag": "p",
+              "text": "03",
+              "context_text": "03",
+              "section_heading": "Selected Work"
+            },
+            {
+              "source_id": "src/App.jsx:3886/20679/12274/6384:2/8062",
+              "file": "src/App.jsx",
+              "line": 97,
+              "section": "article",
+              "section_id": "src/App.jsx:6434/20679/12274/6384:2",
+              "ui_state": "initial",
+              "data_bindings": [
+                {
+                  "file": "src/store/data/majorProjects.json",
+                  "json_pointer": "/2"
+                }
+              ],
+              "tag": "a",
+              "text": "Exness - CFD Application.",
+              "context_text": "Exness - CFD Application.",
+              "section_heading": "Selected Work"
+            },
+            {
+              "source_id": "src/App.jsx:8156/20679/12274/6384:2",
+              "file": "src/App.jsx",
+              "line": 172,
+              "section": "article",
+              "section_id": "src/App.jsx:6434/20679/12274/6384:2",
+              "ui_state": "initial",
+              "data_bindings": [
+                {
+                  "file": "src/store/data/majorProjects.json",
+                  "json_pointer": "/2"
+                }
+              ],
+              "tag": "p",
+              "text": "A CFD application for trade on crypto currencies.",
+              "context_text": "A CFD application for trade on crypto currencies.",
+              "section_heading": "Selected Work"
+            },
+            {
+              "source_id": "src/App.jsx:8253/20679/12274/6384:2",
+              "file": "src/App.jsx",
+              "line": 173,
+              "section": "article",
+              "section_id": "src/App.jsx:6434/20679/12274/6384:2",
+              "ui_state": "initial",
+              "data_bindings": [
+                {
+                  "file": "src/store/data/majorProjects.json",
+                  "json_pointer": "/2"
+                }
+              ],
+              "tag": "p",
+              "text": "Turborepo · Redis · Pub-Sub · TimescaleDB",
+              "context_text": "Turborepo · Redis · Pub-Sub · TimescaleDB",
+              "section_heading": "Selected Work"
+            },
+            {
+              "source_id": "src/App.jsx:3886/20679/12274/6384:2/8395",
+              "file": "src/App.jsx",
+              "line": 97,
+              "section": "article",
+              "section_id": "src/App.jsx:6434/20679/12274/6384:2",
+              "ui_state": "initial",
+              "data_bindings": [
+                {
+                  "file": "src/store/data/majorProjects.json",
+                  "json_pointer": "/2"
+                }
+              ],
+              "tag": "a",
+              "text": "Source code",
+              "context_text": "Source code",
+              "section_heading": "Selected Work"
+            },
+            {
+              "source_id": "src/App.jsx:6555/20679/12274/6384:3",
+              "file": "src/App.jsx",
+              "line": 155,
+              "section": "article",
+              "section_id": "src/App.jsx:6434/20679/12274/6384:3",
+              "ui_state": "initial",
+              "data_bindings": [
+                {
+                  "file": "src/store/data/majorProjects.json",
+                  "json_pointer": "/3"
+                }
+              ],
+              "tag": "button",
+              "text": "Play Exness - Mobile Application. demo",
+              "text_source": "aria-label",
+              "section_heading": "Selected Work"
+            },
+            {
+              "source_id": "src/App.jsx:7679/20679/12274/6384:3",
+              "file": "src/App.jsx",
+              "line": 167,
+              "section": "article",
+              "section_id": "src/App.jsx:6434/20679/12274/6384:3",
+              "ui_state": "initial",
+              "data_bindings": [
+                {
+                  "file": "src/store/data/majorProjects.json",
+                  "json_pointer": "/3"
+                }
+              ],
+              "tag": "span",
+              "text": "Play demo",
+              "context_text": "Play demo",
+              "section_heading": "Selected Work"
+            },
+            {
+              "source_id": "src/App.jsx:7879/20679/12274/6384:3",
+              "file": "src/App.jsx",
+              "line": 170,
+              "section": "article",
+              "section_id": "src/App.jsx:6434/20679/12274/6384:3",
+              "ui_state": "initial",
+              "data_bindings": [
+                {
+                  "file": "src/store/data/majorProjects.json",
+                  "json_pointer": "/3"
+                }
+              ],
+              "tag": "p",
+              "text": "04",
+              "context_text": "04",
+              "section_heading": "Selected Work"
+            },
+            {
+              "source_id": "src/App.jsx:3886/20679/12274/6384:3/8062",
+              "file": "src/App.jsx",
+              "line": 97,
+              "section": "article",
+              "section_id": "src/App.jsx:6434/20679/12274/6384:3",
+              "ui_state": "initial",
+              "data_bindings": [
+                {
+                  "file": "src/store/data/majorProjects.json",
+                  "json_pointer": "/3"
+                }
+              ],
+              "tag": "a",
+              "text": "Exness - Mobile Application.",
+              "context_text": "Exness - Mobile Application.",
+              "section_heading": "Selected Work"
+            },
+            {
+              "source_id": "src/App.jsx:8156/20679/12274/6384:3",
+              "file": "src/App.jsx",
+              "line": 172,
+              "section": "article",
+              "section_id": "src/App.jsx:6434/20679/12274/6384:3",
+              "ui_state": "initial",
+              "data_bindings": [
+                {
+                  "file": "src/store/data/majorProjects.json",
+                  "json_pointer": "/3"
+                }
+              ],
+              "tag": "p",
+              "text": "A CFD Mobile application for trade on crypto currencies.",
+              "context_text": "A CFD Mobile application for trade on crypto currencies.",
+              "section_heading": "Selected Work"
+            },
+            {
+              "source_id": "src/App.jsx:8253/20679/12274/6384:3",
+              "file": "src/App.jsx",
+              "line": 173,
+              "section": "article",
+              "section_id": "src/App.jsx:6434/20679/12274/6384:3",
+              "ui_state": "initial",
+              "data_bindings": [
+                {
+                  "file": "src/store/data/majorProjects.json",
+                  "json_pointer": "/3"
+                }
+              ],
+              "tag": "p",
+              "text": "React Native · Expo · Nativewind · EAS",
+              "context_text": "React Native · Expo · Nativewind · EAS",
+              "section_heading": "Selected Work"
+            }
+          ]
+        },
+        {
+          "signal": "expertise",
+          "status": "candidate_evidence",
+          "evidence": [
+            {
+              "source_id": "src/App.jsx:10782/20679/12326",
+              "file": "src/App.jsx",
+              "line": 231,
+              "section": "section",
+              "section_id": "src/App.jsx:10699/20679/12326",
+              "ui_state": "initial",
+              "data_bindings": [],
+              "tag": "h2",
+              "text": "Skills",
+              "context_text": "Skills",
+              "section_heading": "Skills"
+            },
+            {
+              "source_id": "src/App.jsx:11197/20679/12326/10900:0",
+              "file": "src/App.jsx",
+              "line": 235,
+              "section": "section",
+              "section_id": "src/App.jsx:10699/20679/12326",
+              "ui_state": "initial",
+              "data_bindings": [
+                {
+                  "file": "src/store/data/skills.json",
+                  "json_pointer": "/0"
+                }
+              ],
+              "tag": "span",
+              "text": "Web Development",
+              "context_text": "Web Development",
+              "section_heading": "Skills"
+            },
+            {
+              "source_id": "src/App.jsx:11418/20679/12326/10900:0",
+              "file": "src/App.jsx",
+              "line": 239,
+              "section": "section",
+              "section_id": "src/App.jsx:10699/20679/12326",
+              "ui_state": "initial",
+              "data_bindings": [
+                {
+                  "file": "src/store/data/skills.json",
+                  "json_pointer": "/0"
+                }
+              ],
+              "tag": "span",
+              "text": "MERN Stack · Next.js · Remix · Turborepo · PostgreSQL (Prisma) · API Development",
+              "context_text": "MERN Stack · Next.js · Remix · Turborepo · PostgreSQL (Prisma) · API Development",
+              "section_heading": "Skills"
+            },
+            {
+              "source_id": "src/App.jsx:11197/20679/12326/10900:1",
+              "file": "src/App.jsx",
+              "line": 235,
+              "section": "section",
+              "section_id": "src/App.jsx:10699/20679/12326",
+              "ui_state": "initial",
+              "data_bindings": [
+                {
+                  "file": "src/store/data/skills.json",
+                  "json_pointer": "/1"
+                }
+              ],
+              "tag": "span",
+              "text": "Mobile Development",
+              "context_text": "Mobile Development",
+              "section_heading": "Skills"
+            },
+            {
+              "source_id": "src/App.jsx:11418/20679/12326/10900:1",
+              "file": "src/App.jsx",
+              "line": 239,
+              "section": "section",
+              "section_id": "src/App.jsx:10699/20679/12326",
+              "ui_state": "initial",
+              "data_bindings": [
+                {
+                  "file": "src/store/data/skills.json",
+                  "json_pointer": "/1"
+                }
+              ],
+              "tag": "span",
+              "text": "React Native · API Connectivity",
+              "context_text": "React Native · API Connectivity",
+              "section_heading": "Skills"
+            },
+            {
+              "source_id": "src/App.jsx:11197/20679/12326/10900:2",
+              "file": "src/App.jsx",
+              "line": 235,
+              "section": "section",
+              "section_id": "src/App.jsx:10699/20679/12326",
+              "ui_state": "initial",
+              "data_bindings": [
+                {
+                  "file": "src/store/data/skills.json",
+                  "json_pointer": "/2"
+                }
+              ],
+              "tag": "span",
+              "text": "AI",
+              "context_text": "AI",
+              "section_heading": "Skills"
+            },
+            {
+              "source_id": "src/App.jsx:11418/20679/12326/10900:2",
+              "file": "src/App.jsx",
+              "line": 239,
+              "section": "section",
+              "section_id": "src/App.jsx:10699/20679/12326",
+              "ui_state": "initial",
+              "data_bindings": [
+                {
+                  "file": "src/store/data/skills.json",
+                  "json_pointer": "/2"
+                }
+              ],
+              "tag": "span",
+              "text": "Python · FastAPI · Machine Learning · Deep Learning · NLP · Computer Vision · AI Applications · GenAI · AI Agents",
+              "context_text": "Python · FastAPI · Machine Learning · Deep Learning · NLP · Computer Vision · AI Applications · GenAI · AI Agents",
+              "section_heading": "Skills"
+            }
+          ]
+        },
+        {
+          "signal": "trust",
+          "status": "not_observed_in_static_content",
+          "evidence": []
+        },
+        {
+          "signal": "reviews",
+          "status": "not_observed_in_static_content",
+          "evidence": []
+        },
+        {
+          "signal": "dates",
+          "status": "not_observed_in_static_content",
+          "evidence": []
+        }
+      ],
+      "trust_links": [
+        {
+          "source_id": "src/components/PageRail.jsx:735/21536/701:1",
+          "file": "src/components/PageRail.jsx",
+          "line": 14,
+          "section": "nav",
+          "section_id": "src/components/PageRail.jsx:233/21536",
+          "ui_state": "initial",
+          "data_bindings": [],
+          "href": "/about",
+          "anchor_text": "About",
+          "accessible_name": "About",
+          "rel": null,
+          "target": null,
+          "section_heading": "Pages",
+          "target_url": "/about",
+          "kind": "internal"
+        },
+        {
+          "source_id": "src/components/ContactRail.jsx:3677/22007/3637:0",
+          "file": "src/components/ContactRail.jsx",
+          "line": 75,
+          "section": "nav",
+          "section_id": "src/components/ContactRail.jsx:3532/22007",
+          "ui_state": "initial",
+          "data_bindings": [],
+          "href": "mailto:lakshaygoyal201@gmail.com",
+          "anchor_text": "",
+          "accessible_name": "Email",
+          "rel": null,
+          "target": null,
+          "section_heading": "Contact links",
+          "target_url": "mailto:lakshaygoyal201@gmail.com",
+          "kind": "action"
+        },
+        {
+          "source_id": "src/components/ContactRail.jsx:3677/22007/3637:1",
+          "file": "src/components/ContactRail.jsx",
+          "line": 75,
+          "section": "nav",
+          "section_id": "src/components/ContactRail.jsx:3532/22007",
+          "ui_state": "initial",
+          "data_bindings": [],
+          "href": "https://github.com/lakshay-goyal",
+          "anchor_text": "",
+          "accessible_name": "GitHub",
+          "rel": "noopener noreferrer",
+          "target": "_blank",
+          "section_heading": "Contact links",
+          "target_url": "https://github.com/lakshay-goyal",
+          "kind": "absolute-unclassified"
+        },
+        {
+          "source_id": "src/components/ContactRail.jsx:3677/22007/3637:2",
+          "file": "src/components/ContactRail.jsx",
+          "line": 75,
+          "section": "nav",
+          "section_id": "src/components/ContactRail.jsx:3532/22007",
+          "ui_state": "initial",
+          "data_bindings": [],
+          "href": "https://www.linkedin.com/in/lakshay-goyal-9778a6246/",
+          "anchor_text": "",
+          "accessible_name": "LinkedIn",
+          "rel": "noopener noreferrer",
+          "target": "_blank",
+          "section_heading": "Contact links",
+          "target_url": "https://www.linkedin.com/in/lakshay-goyal-9778a6246/",
+          "kind": "absolute-unclassified"
+        }
+      ],
+      "citations": [
+        {
+          "source_id": "src/App.jsx:3886/20679/12224/4624:0/5164",
+          "file": "src/App.jsx",
+          "line": 97,
+          "section": "article",
+          "section_id": "src/App.jsx:4668/20679/12224/4624:0",
+          "ui_state": "initial",
+          "data_bindings": [
+            {
+              "file": "src/store/data/experiences.json",
+              "json_pointer": "/0"
+            }
+          ],
+          "href": "https://testsigma.com/",
+          "anchor_text": "Testsigma",
+          "accessible_name": "Testsigma",
+          "rel": "noopener noreferrer",
+          "target": "_blank",
+          "section_heading": "Work Experience",
+          "target_url": "https://testsigma.com/",
+          "kind": "absolute-unclassified"
+        },
+        {
+          "source_id": "src/App.jsx:3886/20679/12224/4624:1/5164",
+          "file": "src/App.jsx",
+          "line": 97,
+          "section": "article",
+          "section_id": "src/App.jsx:4668/20679/12224/4624:1",
+          "ui_state": "initial",
+          "data_bindings": [
+            {
+              "file": "src/store/data/experiences.json",
+              "json_pointer": "/1"
+            }
+          ],
+          "href": "https://getfozo.in",
+          "anchor_text": "FOZO",
+          "accessible_name": "FOZO",
+          "rel": "noopener noreferrer",
+          "target": "_blank",
+          "section_heading": "Work Experience",
+          "target_url": "https://getfozo.in",
+          "kind": "absolute-unclassified"
+        },
+        {
+          "source_id": "src/App.jsx:3886/20679/12274/6384:0/8062",
+          "file": "src/App.jsx",
+          "line": 97,
+          "section": "article",
+          "section_id": "src/App.jsx:6434/20679/12274/6384:0",
+          "ui_state": "initial",
+          "data_bindings": [
+            {
+              "file": "src/store/data/majorProjects.json",
+              "json_pointer": "/0"
+            }
+          ],
+          "href": "https://unlovable.lakshaygoyal.in/",
+          "anchor_text": "Unlovable - Application Builder.",
+          "accessible_name": "Unlovable - Application Builder.",
+          "rel": "noopener noreferrer",
+          "target": "_blank",
+          "section_heading": "Selected Work",
+          "target_url": "https://unlovable.lakshaygoyal.in/",
+          "kind": "absolute-unclassified"
+        },
+        {
+          "source_id": "src/App.jsx:3886/20679/12274/6384:0/8395",
+          "file": "src/App.jsx",
+          "line": 97,
+          "section": "article",
+          "section_id": "src/App.jsx:6434/20679/12274/6384:0",
+          "ui_state": "initial",
+          "data_bindings": [
+            {
+              "file": "src/store/data/majorProjects.json",
+              "json_pointer": "/0"
+            }
+          ],
+          "href": "https://github.com/lakshay-goyal/Unlovable",
+          "anchor_text": "Source code",
+          "accessible_name": "Source code",
+          "rel": "noopener noreferrer",
+          "target": "_blank",
+          "section_heading": "Selected Work",
+          "target_url": "https://github.com/lakshay-goyal/Unlovable",
+          "kind": "absolute-unclassified"
+        },
+        {
+          "source_id": "src/App.jsx:3886/20679/12274/6384:1/8062",
+          "file": "src/App.jsx",
+          "line": 97,
+          "section": "article",
+          "section_id": "src/App.jsx:6434/20679/12274/6384:1",
+          "ui_state": "initial",
+          "data_bindings": [
+            {
+              "file": "src/store/data/majorProjects.json",
+              "json_pointer": "/1"
+            }
+          ],
+          "href": "https://github.com/lakshay-goyal/Unlovable",
+          "anchor_text": "Unlovable - Mobile Application.",
+          "accessible_name": "Unlovable - Mobile Application.",
+          "rel": "noopener noreferrer",
+          "target": "_blank",
+          "section_heading": "Selected Work",
+          "target_url": "https://github.com/lakshay-goyal/Unlovable",
+          "kind": "absolute-unclassified"
+        },
+        {
+          "source_id": "src/App.jsx:3886/20679/12274/6384:2/8062",
+          "file": "src/App.jsx",
+          "line": 97,
+          "section": "article",
+          "section_id": "src/App.jsx:6434/20679/12274/6384:2",
+          "ui_state": "initial",
+          "data_bindings": [
+            {
+              "file": "src/store/data/majorProjects.json",
+              "json_pointer": "/2"
+            }
+          ],
+          "href": "https://exness.lakshaygoyal.in/",
+          "anchor_text": "Exness - CFD Application.",
+          "accessible_name": "Exness - CFD Application.",
+          "rel": "noopener noreferrer",
+          "target": "_blank",
+          "section_heading": "Selected Work",
+          "target_url": "https://exness.lakshaygoyal.in/",
+          "kind": "absolute-unclassified"
+        },
+        {
+          "source_id": "src/App.jsx:3886/20679/12274/6384:2/8395",
+          "file": "src/App.jsx",
+          "line": 97,
+          "section": "article",
+          "section_id": "src/App.jsx:6434/20679/12274/6384:2",
+          "ui_state": "initial",
+          "data_bindings": [
+            {
+              "file": "src/store/data/majorProjects.json",
+              "json_pointer": "/2"
+            }
+          ],
+          "href": "https://github.com/lakshay-goyal/Exness",
+          "anchor_text": "Source code",
+          "accessible_name": "Source code",
+          "rel": "noopener noreferrer",
+          "target": "_blank",
+          "section_heading": "Selected Work",
+          "target_url": "https://github.com/lakshay-goyal/Exness",
+          "kind": "absolute-unclassified"
+        },
+        {
+          "source_id": "src/App.jsx:3886/20679/12274/6384:3/8062",
+          "file": "src/App.jsx",
+          "line": 97,
+          "section": "article",
+          "section_id": "src/App.jsx:6434/20679/12274/6384:3",
+          "ui_state": "initial",
+          "data_bindings": [
+            {
+              "file": "src/store/data/majorProjects.json",
+              "json_pointer": "/3"
+            }
+          ],
+          "href": "https://github.com/lakshay-goyal/Exness",
+          "anchor_text": "Exness - Mobile Application.",
+          "accessible_name": "Exness - Mobile Application.",
+          "rel": "noopener noreferrer",
+          "target": "_blank",
+          "section_heading": "Selected Work",
+          "target_url": "https://github.com/lakshay-goyal/Exness",
+          "kind": "absolute-unclassified"
+        },
+        {
+          "source_id": "src/components/ContactRail.jsx:3677/22007/3637:1",
+          "file": "src/components/ContactRail.jsx",
+          "line": 75,
+          "section": "nav",
+          "section_id": "src/components/ContactRail.jsx:3532/22007",
+          "ui_state": "initial",
+          "data_bindings": [],
+          "href": "https://github.com/lakshay-goyal",
+          "anchor_text": "",
+          "accessible_name": "GitHub",
+          "rel": "noopener noreferrer",
+          "target": "_blank",
+          "section_heading": "Contact links",
+          "target_url": "https://github.com/lakshay-goyal",
+          "kind": "absolute-unclassified"
+        },
+        {
+          "source_id": "src/components/ContactRail.jsx:3677/22007/3637:2",
+          "file": "src/components/ContactRail.jsx",
+          "line": 75,
+          "section": "nav",
+          "section_id": "src/components/ContactRail.jsx:3532/22007",
+          "ui_state": "initial",
+          "data_bindings": [],
+          "href": "https://www.linkedin.com/in/lakshay-goyal-9778a6246/",
+          "anchor_text": "",
+          "accessible_name": "LinkedIn",
+          "rel": "noopener noreferrer",
+          "target": "_blank",
+          "section_heading": "Contact links",
+          "target_url": "https://www.linkedin.com/in/lakshay-goyal-9778a6246/",
+          "kind": "absolute-unclassified"
+        },
+        {
+          "source_id": "src/components/ContactRail.jsx:3677/22007/3637:3",
+          "file": "src/components/ContactRail.jsx",
+          "line": 75,
+          "section": "nav",
+          "section_id": "src/components/ContactRail.jsx:3532/22007",
+          "ui_state": "initial",
+          "data_bindings": [],
+          "href": "https://x.com/lakshayg2004",
+          "anchor_text": "",
+          "accessible_name": "X",
+          "rel": "noopener noreferrer",
+          "target": "_blank",
+          "section_heading": "Contact links",
+          "target_url": "https://x.com/lakshayg2004",
+          "kind": "absolute-unclassified"
+        },
+        {
+          "source_id": "src/components/ContactRail.jsx:1943/22007/4420",
+          "file": "src/components/ContactRail.jsx",
+          "line": 37,
+          "section": "main",
+          "section_id": "src/App.jsx:21181",
+          "ui_state": "initial",
+          "data_bindings": [],
+          "href": "https://cal.com/lakshay-goyal/30min?overlayCalendar=true",
+          "anchor_text": "Schedule",
+          "accessible_name": "Schedule a 30-minute Google Meet",
+          "rel": "noopener noreferrer",
+          "target": "_blank",
+          "target_url": "https://cal.com/lakshay-goyal/30min?overlayCalendar=true",
+          "kind": "absolute-unclassified"
+        }
+      ],
+      "interpretation": "Candidate evidence does not verify experience, credentials, reputation, or review authenticity. Absence is not proof of absence at runtime."
+    },
+    {
+      "url": "/about",
+      "template": "src/App.jsx",
+      "is_dynamic": false,
+      "coverage": {
+        "mode": "static-source",
+        "complete": false,
+        "limitations": [
+          {
+            "file": "src/components/ScrollReveal.jsx",
+            "line": 22,
+            "reason": "unresolved_rendered_expression"
+          },
+          {
+            "file": "src/components/ScrollReveal.jsx",
+            "line": 22,
+            "reason": "unresolved_attributes:ref"
+          },
+          {
+            "file": "src/App.jsx",
+            "line": 71,
+            "reason": "unresolved_rendered_expression"
+          },
+          {
+            "file": "src/App.jsx",
+            "line": 74,
+            "reason": "unresolved_condition"
+          },
+          {
+            "file": "src/App.jsx",
+            "line": 74,
+            "reason": "unresolved_rendered_expression"
+          },
+          {
+            "file": "src/App.jsx",
+            "line": 75,
+            "reason": "unresolved_rendered_expression"
+          },
+          {
+            "file": "src/App.jsx",
+            "line": 76,
+            "reason": "unresolved_condition"
+          },
+          {
+            "file": "src/App.jsx",
+            "line": 76,
+            "reason": "unresolved_rendered_expression"
+          },
+          {
+            "file": "src/App.jsx",
+            "line": 79,
+            "reason": "unresolved_condition"
+          },
+          {
+            "file": "src/App.jsx",
+            "line": 79,
+            "reason": "unresolved_rendered_expression"
+          },
+          {
+            "file": "src/App.jsx",
+            "line": 70,
+            "reason": "unresolved_attributes:ref,aria-label,aria-pressed,title"
+          },
+          {
+            "file": "src/components/ContactRail.jsx",
+            "line": 58,
+            "reason": "unresolved_rendered_expression"
+          },
+          {
+            "file": "src/components/ContactRail.jsx",
+            "line": 45,
+            "reason": "unresolved_component:LiquidMetal"
+          }
+        ],
+        "route_patterns": [
+          "/blog",
+          "/blog/"
+        ],
+        "entrypoint": "src/main.jsx",
+        "resolved_interaction_states": 0,
+        "resolved_local_fetches": [],
+        "note": "Composed from allowlisted source semantics. CSS visibility, arbitrary runtime/network data and browser behavior remain unverified."
+      },
+      "signals": [
+        {
+          "signal": "authorship",
+          "status": "not_observed_in_static_content",
+          "evidence": []
+        },
+        {
+          "signal": "experience",
+          "status": "candidate_evidence",
+          "evidence": [
+            {
+              "source_id": "src/App.jsx:15181/20718",
+              "file": "src/App.jsx",
+              "line": 314,
+              "section": "section",
+              "section_id": "src/App.jsx:15131/20718",
+              "ui_state": "initial",
+              "data_bindings": [],
+              "tag": "h2",
+              "text": "How I got here",
+              "context_text": "How I got here",
+              "section_heading": "How I got here"
+            },
+            {
+              "source_id": "src/App.jsx:15558/20718/15312:0",
+              "file": "src/App.jsx",
+              "line": 319,
+              "section": "article",
+              "section_id": "src/App.jsx:15405/20718/15312:0",
+              "ui_state": "initial",
+              "data_bindings": [],
+              "tag": "span",
+              "text": "2022–2023",
+              "context_text": "2022–2023",
+              "section_heading": "How I got here"
+            },
+            {
+              "source_id": "src/App.jsx:15688/20718/15312:0",
+              "file": "src/App.jsx",
+              "line": 321,
+              "section": "article",
+              "section_id": "src/App.jsx:15405/20718/15312:0",
+              "ui_state": "initial",
+              "data_bindings": [],
+              "tag": "h3",
+              "text": "Finding a direction",
+              "context_text": "Finding a direction",
+              "section_heading": "How I got here"
+            },
+            {
+              "source_id": "src/App.jsx:15791/20718/15312:0",
+              "file": "src/App.jsx",
+              "line": 322,
+              "section": "article",
+              "section_id": "src/App.jsx:15405/20718/15312:0",
+              "ui_state": "initial",
+              "data_bindings": [],
+              "tag": "p",
+              "text": "I started learning by building projects in college. Coming from a commerce background, I worked through the maths behind machine learning and deep learning, then built a language translator app with a local NLP model.",
+              "context_text": "I started learning by building projects in college. Coming from a commerce background, I worked through the maths behind machine learning and deep learning, then built a language translator app with a local NLP model.",
+              "section_heading": "How I got here"
+            },
+            {
+              "source_id": "src/App.jsx:15558/20718/15312:1",
+              "file": "src/App.jsx",
+              "line": 319,
+              "section": "article",
+              "section_id": "src/App.jsx:15405/20718/15312:1",
+              "ui_state": "initial",
+              "data_bindings": [],
+              "tag": "span",
+              "text": "2025",
+              "context_text": "2025",
+              "section_heading": "How I got here"
+            },
+            {
+              "source_id": "src/App.jsx:15688/20718/15312:1",
+              "file": "src/App.jsx",
+              "line": 321,
+              "section": "article",
+              "section_id": "src/App.jsx:15405/20718/15312:1",
+              "ui_state": "initial",
+              "data_bindings": [],
+              "tag": "h3",
+              "text": "Building for the web",
+              "context_text": "Building for the web",
+              "section_heading": "How I got here"
+            },
+            {
+              "source_id": "src/App.jsx:15791/20718/15312:1",
+              "file": "src/App.jsx",
+              "line": 322,
+              "section": "article",
+              "section_id": "src/App.jsx:15405/20718/15312:1",
+              "ui_state": "initial",
+              "data_bindings": [],
+              "tag": "p",
+              "text": "I moved into the MERN stack and learned how authentication, APIs, interfaces, and deployment come together in real products.",
+              "context_text": "I moved into the MERN stack and learned how authentication, APIs, interfaces, and deployment come together in real products.",
+              "section_heading": "How I got here"
+            },
+            {
+              "source_id": "src/App.jsx:15558/20718/15312:2",
+              "file": "src/App.jsx",
+              "line": 319,
+              "section": "article",
+              "section_id": "src/App.jsx:15405/20718/15312:2",
+              "ui_state": "initial",
+              "data_bindings": [],
+              "tag": "span",
+              "text": "Super30",
+              "context_text": "Super30",
+              "section_heading": "How I got here"
+            },
+            {
+              "source_id": "src/App.jsx:15688/20718/15312:2",
+              "file": "src/App.jsx",
+              "line": 321,
+              "section": "article",
+              "section_id": "src/App.jsx:15405/20718/15312:2",
+              "ui_state": "initial",
+              "data_bindings": [],
+              "tag": "h3",
+              "text": "Going deeper",
+              "context_text": "Going deeper",
+              "section_heading": "How I got here"
+            },
+            {
+              "source_id": "src/App.jsx:15791/20718/15312:2",
+              "file": "src/App.jsx",
+              "line": 322,
+              "section": "article",
+              "section_id": "src/App.jsx:15405/20718/15312:2",
+              "ui_state": "initial",
+              "data_bindings": [],
+              "tag": "p",
+              "text": "Being part of Super30 pushed me to ship more and learn about backend design, DevOps, AI engineering, real-time systems, and system design.",
+              "context_text": "Being part of Super30 pushed me to ship more and learn about backend design, DevOps, AI engineering, real-time systems, and system design.",
+              "section_heading": "How I got here"
+            },
+            {
+              "source_id": "src/App.jsx:15558/20718/15312:3",
+              "file": "src/App.jsx",
+              "line": 319,
+              "section": "article",
+              "section_id": "src/App.jsx:15405/20718/15312:3",
+              "ui_state": "initial",
+              "data_bindings": [],
+              "tag": "span",
+              "text": "Now",
+              "context_text": "Now",
+              "section_heading": "How I got here"
+            },
+            {
+              "source_id": "src/App.jsx:15688/20718/15312:3",
+              "file": "src/App.jsx",
+              "line": 321,
+              "section": "article",
+              "section_id": "src/App.jsx:15405/20718/15312:3",
+              "ui_state": "initial",
+              "data_bindings": [],
+              "tag": "h3",
+              "text": "Working on products",
+              "context_text": "Working on products",
+              "section_heading": "How I got here"
+            },
+            {
+              "source_id": "src/App.jsx:15791/20718/15312:3",
+              "file": "src/App.jsx",
+              "line": 322,
+              "section": "article",
+              "section_id": "src/App.jsx:15405/20718/15312:3",
+              "ui_state": "initial",
+              "data_bindings": [],
+              "tag": "p",
+              "text": "I moved from Delhi to Bangalore, helped build FOZO from the ground up, and now work on test automation at Testsigma. I care about polished interfaces, understandable systems, and work that lasts beyond a demo.",
+              "context_text": "I moved from Delhi to Bangalore, helped build FOZO from the ground up, and now work on test automation at Testsigma. I care about polished interfaces, understandable systems, and work that lasts beyond a demo.",
+              "section_heading": "How I got here"
+            }
+          ]
+        },
+        {
+          "signal": "expertise",
+          "status": "not_observed_in_static_content",
+          "evidence": []
+        },
+        {
+          "signal": "trust",
+          "status": "not_observed_in_static_content",
+          "evidence": []
+        },
+        {
+          "signal": "reviews",
+          "status": "not_observed_in_static_content",
+          "evidence": []
+        },
+        {
+          "signal": "dates",
+          "status": "not_observed_in_static_content",
+          "evidence": []
+        }
+      ],
+      "trust_links": [
+        {
+          "source_id": "src/components/PageRail.jsx:735/21536/701:1",
+          "file": "src/components/PageRail.jsx",
+          "line": 14,
+          "section": "nav",
+          "section_id": "src/components/PageRail.jsx:233/21536",
+          "ui_state": "initial",
+          "data_bindings": [],
+          "href": "/about",
+          "anchor_text": "About",
+          "accessible_name": "About",
+          "rel": null,
+          "target": null,
+          "section_heading": "Pages",
+          "target_url": "/about",
+          "kind": "internal"
+        },
+        {
+          "source_id": "src/components/ContactRail.jsx:3677/22007/3637:0",
+          "file": "src/components/ContactRail.jsx",
+          "line": 75,
+          "section": "nav",
+          "section_id": "src/components/ContactRail.jsx:3532/22007",
+          "ui_state": "initial",
+          "data_bindings": [],
+          "href": "mailto:lakshaygoyal201@gmail.com",
+          "anchor_text": "",
+          "accessible_name": "Email",
+          "rel": null,
+          "target": null,
+          "section_heading": "Contact links",
+          "target_url": "mailto:lakshaygoyal201@gmail.com",
+          "kind": "action"
+        },
+        {
+          "source_id": "src/components/ContactRail.jsx:3677/22007/3637:1",
+          "file": "src/components/ContactRail.jsx",
+          "line": 75,
+          "section": "nav",
+          "section_id": "src/components/ContactRail.jsx:3532/22007",
+          "ui_state": "initial",
+          "data_bindings": [],
+          "href": "https://github.com/lakshay-goyal",
+          "anchor_text": "",
+          "accessible_name": "GitHub",
+          "rel": "noopener noreferrer",
+          "target": "_blank",
+          "section_heading": "Contact links",
+          "target_url": "https://github.com/lakshay-goyal",
+          "kind": "absolute-unclassified"
+        },
+        {
+          "source_id": "src/components/ContactRail.jsx:3677/22007/3637:2",
+          "file": "src/components/ContactRail.jsx",
+          "line": 75,
+          "section": "nav",
+          "section_id": "src/components/ContactRail.jsx:3532/22007",
+          "ui_state": "initial",
+          "data_bindings": [],
+          "href": "https://www.linkedin.com/in/lakshay-goyal-9778a6246/",
+          "anchor_text": "",
+          "accessible_name": "LinkedIn",
+          "rel": "noopener noreferrer",
+          "target": "_blank",
+          "section_heading": "Contact links",
+          "target_url": "https://www.linkedin.com/in/lakshay-goyal-9778a6246/",
+          "kind": "absolute-unclassified"
+        }
+      ],
+      "citations": [
+        {
+          "source_id": "src/components/ContactRail.jsx:3677/22007/3637:1",
+          "file": "src/components/ContactRail.jsx",
+          "line": 75,
+          "section": "nav",
+          "section_id": "src/components/ContactRail.jsx:3532/22007",
+          "ui_state": "initial",
+          "data_bindings": [],
+          "href": "https://github.com/lakshay-goyal",
+          "anchor_text": "",
+          "accessible_name": "GitHub",
+          "rel": "noopener noreferrer",
+          "target": "_blank",
+          "section_heading": "Contact links",
+          "target_url": "https://github.com/lakshay-goyal",
+          "kind": "absolute-unclassified"
+        },
+        {
+          "source_id": "src/components/ContactRail.jsx:3677/22007/3637:2",
+          "file": "src/components/ContactRail.jsx",
+          "line": 75,
+          "section": "nav",
+          "section_id": "src/components/ContactRail.jsx:3532/22007",
+          "ui_state": "initial",
+          "data_bindings": [],
+          "href": "https://www.linkedin.com/in/lakshay-goyal-9778a6246/",
+          "anchor_text": "",
+          "accessible_name": "LinkedIn",
+          "rel": "noopener noreferrer",
+          "target": "_blank",
+          "section_heading": "Contact links",
+          "target_url": "https://www.linkedin.com/in/lakshay-goyal-9778a6246/",
+          "kind": "absolute-unclassified"
+        },
+        {
+          "source_id": "src/components/ContactRail.jsx:3677/22007/3637:3",
+          "file": "src/components/ContactRail.jsx",
+          "line": 75,
+          "section": "nav",
+          "section_id": "src/components/ContactRail.jsx:3532/22007",
+          "ui_state": "initial",
+          "data_bindings": [],
+          "href": "https://x.com/lakshayg2004",
+          "anchor_text": "",
+          "accessible_name": "X",
+          "rel": "noopener noreferrer",
+          "target": "_blank",
+          "section_heading": "Contact links",
+          "target_url": "https://x.com/lakshayg2004",
+          "kind": "absolute-unclassified"
+        },
+        {
+          "source_id": "src/components/ContactRail.jsx:1943/22007/4420",
+          "file": "src/components/ContactRail.jsx",
+          "line": 37,
+          "section": "main",
+          "section_id": "src/App.jsx:21181",
+          "ui_state": "initial",
+          "data_bindings": [],
+          "href": "https://cal.com/lakshay-goyal/30min?overlayCalendar=true",
+          "anchor_text": "Schedule",
+          "accessible_name": "Schedule a 30-minute Google Meet",
+          "rel": "noopener noreferrer",
+          "target": "_blank",
+          "target_url": "https://cal.com/lakshay-goyal/30min?overlayCalendar=true",
+          "kind": "absolute-unclassified"
+        }
+      ],
+      "interpretation": "Candidate evidence does not verify experience, credentials, reputation, or review authenticity. Absence is not proof of absence at runtime."
+    },
+    {
+      "url": "/blog",
+      "template": "src/App.jsx",
+      "is_dynamic": false,
+      "coverage": {
+        "mode": "static-source",
+        "complete": false,
+        "limitations": [
+          {
+            "file": "src/components/ScrollReveal.jsx",
+            "line": 22,
+            "reason": "unresolved_rendered_expression"
+          },
+          {
+            "file": "src/components/ScrollReveal.jsx",
+            "line": 22,
+            "reason": "unresolved_attributes:ref"
+          },
+          {
+            "file": "src/App.jsx",
+            "line": 71,
+            "reason": "unresolved_rendered_expression"
+          },
+          {
+            "file": "src/App.jsx",
+            "line": 74,
+            "reason": "unresolved_condition"
+          },
+          {
+            "file": "src/App.jsx",
+            "line": 74,
+            "reason": "unresolved_rendered_expression"
+          },
+          {
+            "file": "src/App.jsx",
+            "line": 75,
+            "reason": "unresolved_rendered_expression"
+          },
+          {
+            "file": "src/App.jsx",
+            "line": 76,
+            "reason": "unresolved_condition"
+          },
+          {
+            "file": "src/App.jsx",
+            "line": 76,
+            "reason": "unresolved_rendered_expression"
+          },
+          {
+            "file": "src/App.jsx",
+            "line": 79,
+            "reason": "unresolved_condition"
+          },
+          {
+            "file": "src/App.jsx",
+            "line": 79,
+            "reason": "unresolved_rendered_expression"
+          },
+          {
+            "file": "src/App.jsx",
+            "line": 70,
+            "reason": "unresolved_attributes:ref,aria-label,aria-pressed,title"
+          },
+          {
+            "file": "src/components/ContactRail.jsx",
+            "line": 58,
+            "reason": "unresolved_rendered_expression"
+          },
+          {
+            "file": "src/components/ContactRail.jsx",
+            "line": 45,
+            "reason": "unresolved_component:LiquidMetal"
+          }
+        ],
+        "route_patterns": [
+          "/blog",
+          "/blog/"
+        ],
+        "entrypoint": "src/main.jsx",
+        "resolved_interaction_states": 0,
+        "resolved_local_fetches": [
+          "public/blog/blog.json"
+        ],
+        "note": "Composed from allowlisted source semantics. CSS visibility, arbitrary runtime/network data and browser behavior remain unverified."
+      },
+      "signals": [
+        {
+          "signal": "authorship",
+          "status": "not_observed_in_static_content",
+          "evidence": []
+        },
+        {
+          "signal": "experience",
+          "status": "not_observed_in_static_content",
+          "evidence": []
+        },
+        {
+          "signal": "expertise",
+          "status": "not_observed_in_static_content",
+          "evidence": []
+        },
+        {
+          "signal": "trust",
+          "status": "not_observed_in_static_content",
+          "evidence": []
+        },
+        {
+          "signal": "reviews",
+          "status": "not_observed_in_static_content",
+          "evidence": []
+        },
+        {
+          "signal": "dates",
+          "status": "not_observed_in_static_content",
+          "evidence": []
+        }
+      ],
+      "trust_links": [
+        {
+          "source_id": "src/components/PageRail.jsx:735/21536/701:1",
+          "file": "src/components/PageRail.jsx",
+          "line": 14,
+          "section": "nav",
+          "section_id": "src/components/PageRail.jsx:233/21536",
+          "ui_state": "initial",
+          "data_bindings": [],
+          "href": "/about",
+          "anchor_text": "About",
+          "accessible_name": "About",
+          "rel": null,
+          "target": null,
+          "section_heading": "Pages",
+          "target_url": "/about",
+          "kind": "internal"
+        },
+        {
+          "source_id": "src/components/ContactRail.jsx:3677/22007/3637:0",
+          "file": "src/components/ContactRail.jsx",
+          "line": 75,
+          "section": "nav",
+          "section_id": "src/components/ContactRail.jsx:3532/22007",
+          "ui_state": "initial",
+          "data_bindings": [],
+          "href": "mailto:lakshaygoyal201@gmail.com",
+          "anchor_text": "",
+          "accessible_name": "Email",
+          "rel": null,
+          "target": null,
+          "section_heading": "Contact links",
+          "target_url": "mailto:lakshaygoyal201@gmail.com",
+          "kind": "action"
+        },
+        {
+          "source_id": "src/components/ContactRail.jsx:3677/22007/3637:1",
+          "file": "src/components/ContactRail.jsx",
+          "line": 75,
+          "section": "nav",
+          "section_id": "src/components/ContactRail.jsx:3532/22007",
+          "ui_state": "initial",
+          "data_bindings": [],
+          "href": "https://github.com/lakshay-goyal",
+          "anchor_text": "",
+          "accessible_name": "GitHub",
+          "rel": "noopener noreferrer",
+          "target": "_blank",
+          "section_heading": "Contact links",
+          "target_url": "https://github.com/lakshay-goyal",
+          "kind": "absolute-unclassified"
+        },
+        {
+          "source_id": "src/components/ContactRail.jsx:3677/22007/3637:2",
+          "file": "src/components/ContactRail.jsx",
+          "line": 75,
+          "section": "nav",
+          "section_id": "src/components/ContactRail.jsx:3532/22007",
+          "ui_state": "initial",
+          "data_bindings": [],
+          "href": "https://www.linkedin.com/in/lakshay-goyal-9778a6246/",
+          "anchor_text": "",
+          "accessible_name": "LinkedIn",
+          "rel": "noopener noreferrer",
+          "target": "_blank",
+          "section_heading": "Contact links",
+          "target_url": "https://www.linkedin.com/in/lakshay-goyal-9778a6246/",
+          "kind": "absolute-unclassified"
+        }
+      ],
+      "citations": [
+        {
+          "source_id": "src/components/ContactRail.jsx:3677/22007/3637:1",
+          "file": "src/components/ContactRail.jsx",
+          "line": 75,
+          "section": "nav",
+          "section_id": "src/components/ContactRail.jsx:3532/22007",
+          "ui_state": "initial",
+          "data_bindings": [],
+          "href": "https://github.com/lakshay-goyal",
+          "anchor_text": "",
+          "accessible_name": "GitHub",
+          "rel": "noopener noreferrer",
+          "target": "_blank",
+          "section_heading": "Contact links",
+          "target_url": "https://github.com/lakshay-goyal",
+          "kind": "absolute-unclassified"
+        },
+        {
+          "source_id": "src/components/ContactRail.jsx:3677/22007/3637:2",
+          "file": "src/components/ContactRail.jsx",
+          "line": 75,
+          "section": "nav",
+          "section_id": "src/components/ContactRail.jsx:3532/22007",
+          "ui_state": "initial",
+          "data_bindings": [],
+          "href": "https://www.linkedin.com/in/lakshay-goyal-9778a6246/",
+          "anchor_text": "",
+          "accessible_name": "LinkedIn",
+          "rel": "noopener noreferrer",
+          "target": "_blank",
+          "section_heading": "Contact links",
+          "target_url": "https://www.linkedin.com/in/lakshay-goyal-9778a6246/",
+          "kind": "absolute-unclassified"
+        },
+        {
+          "source_id": "src/components/ContactRail.jsx:3677/22007/3637:3",
+          "file": "src/components/ContactRail.jsx",
+          "line": 75,
+          "section": "nav",
+          "section_id": "src/components/ContactRail.jsx:3532/22007",
+          "ui_state": "initial",
+          "data_bindings": [],
+          "href": "https://x.com/lakshayg2004",
+          "anchor_text": "",
+          "accessible_name": "X",
+          "rel": "noopener noreferrer",
+          "target": "_blank",
+          "section_heading": "Contact links",
+          "target_url": "https://x.com/lakshayg2004",
+          "kind": "absolute-unclassified"
+        },
+        {
+          "source_id": "src/components/ContactRail.jsx:1943/22007/4420",
+          "file": "src/components/ContactRail.jsx",
+          "line": 37,
+          "section": "main",
+          "section_id": "src/App.jsx:21181",
+          "ui_state": "initial",
+          "data_bindings": [],
+          "href": "https://cal.com/lakshay-goyal/30min?overlayCalendar=true",
+          "anchor_text": "Schedule",
+          "accessible_name": "Schedule a 30-minute Google Meet",
+          "rel": "noopener noreferrer",
+          "target": "_blank",
+          "target_url": "https://cal.com/lakshay-goyal/30min?overlayCalendar=true",
+          "kind": "absolute-unclassified"
+        }
+      ],
+      "interpretation": "Candidate evidence does not verify experience, credentials, reputation, or review authenticity. Absence is not proof of absence at runtime."
+    },
+    {
+      "url": "/blog/deploying-your-site-with-vercel",
+      "template": "src/App.jsx",
+      "is_dynamic": false,
+      "coverage": {
+        "mode": "static-source",
+        "complete": false,
+        "limitations": [
+          {
+            "file": "src/App.jsx",
+            "line": 71,
+            "reason": "unresolved_rendered_expression"
+          },
+          {
+            "file": "src/App.jsx",
+            "line": 74,
+            "reason": "unresolved_condition"
+          },
+          {
+            "file": "src/App.jsx",
+            "line": 74,
+            "reason": "unresolved_rendered_expression"
+          },
+          {
+            "file": "src/App.jsx",
+            "line": 75,
+            "reason": "unresolved_rendered_expression"
+          },
+          {
+            "file": "src/App.jsx",
+            "line": 76,
+            "reason": "unresolved_condition"
+          },
+          {
+            "file": "src/App.jsx",
+            "line": 76,
+            "reason": "unresolved_rendered_expression"
+          },
+          {
+            "file": "src/App.jsx",
+            "line": 79,
+            "reason": "unresolved_condition"
+          },
+          {
+            "file": "src/App.jsx",
+            "line": 79,
+            "reason": "unresolved_rendered_expression"
+          },
+          {
+            "file": "src/App.jsx",
+            "line": 70,
+            "reason": "unresolved_attributes:ref,aria-label,aria-pressed,title"
+          },
+          {
+            "file": "src/components/ContactRail.jsx",
+            "line": 58,
+            "reason": "unresolved_rendered_expression"
+          },
+          {
+            "file": "src/components/ContactRail.jsx",
+            "line": 45,
+            "reason": "unresolved_component:LiquidMetal"
+          }
+        ],
+        "route_patterns": [
+          "/blog",
+          "/blog/"
+        ],
+        "entrypoint": "src/main.jsx",
+        "resolved_interaction_states": 0,
+        "resolved_local_fetches": [
+          "public/blog/deploying-your-site-with-vercel.md"
+        ],
+        "note": "Composed from allowlisted source semantics. CSS visibility, arbitrary runtime/network data and browser behavior remain unverified."
+      },
+      "signals": [
+        {
+          "signal": "authorship",
+          "status": "not_observed_in_static_content",
+          "evidence": []
+        },
+        {
+          "signal": "experience",
+          "status": "not_observed_in_static_content",
+          "evidence": []
+        },
+        {
+          "signal": "expertise",
+          "status": "not_observed_in_static_content",
+          "evidence": []
+        },
+        {
+          "signal": "trust",
+          "status": "not_observed_in_static_content",
+          "evidence": []
+        },
+        {
+          "signal": "reviews",
+          "status": "not_observed_in_static_content",
+          "evidence": []
+        },
+        {
+          "signal": "dates",
+          "status": "not_observed_in_static_content",
+          "evidence": []
+        }
+      ],
+      "trust_links": [
+        {
+          "source_id": "src/components/PageRail.jsx:735/21536/701:1",
+          "file": "src/components/PageRail.jsx",
+          "line": 14,
+          "section": "nav",
+          "section_id": "src/components/PageRail.jsx:233/21536",
+          "ui_state": "initial",
+          "data_bindings": [],
+          "href": "/about",
+          "anchor_text": "About",
+          "accessible_name": "About",
+          "rel": null,
+          "target": null,
+          "section_heading": "Pages",
+          "target_url": "/about",
+          "kind": "internal"
+        },
+        {
+          "source_id": "src/components/ContactRail.jsx:3677/22007/3637:0",
+          "file": "src/components/ContactRail.jsx",
+          "line": 75,
+          "section": "nav",
+          "section_id": "src/components/ContactRail.jsx:3532/22007",
+          "ui_state": "initial",
+          "data_bindings": [],
+          "href": "mailto:lakshaygoyal201@gmail.com",
+          "anchor_text": "",
+          "accessible_name": "Email",
+          "rel": null,
+          "target": null,
+          "section_heading": "Contact links",
+          "target_url": "mailto:lakshaygoyal201@gmail.com",
+          "kind": "action"
+        },
+        {
+          "source_id": "src/components/ContactRail.jsx:3677/22007/3637:1",
+          "file": "src/components/ContactRail.jsx",
+          "line": 75,
+          "section": "nav",
+          "section_id": "src/components/ContactRail.jsx:3532/22007",
+          "ui_state": "initial",
+          "data_bindings": [],
+          "href": "https://github.com/lakshay-goyal",
+          "anchor_text": "",
+          "accessible_name": "GitHub",
+          "rel": "noopener noreferrer",
+          "target": "_blank",
+          "section_heading": "Contact links",
+          "target_url": "https://github.com/lakshay-goyal",
+          "kind": "absolute-unclassified"
+        },
+        {
+          "source_id": "src/components/ContactRail.jsx:3677/22007/3637:2",
+          "file": "src/components/ContactRail.jsx",
+          "line": 75,
+          "section": "nav",
+          "section_id": "src/components/ContactRail.jsx:3532/22007",
+          "ui_state": "initial",
+          "data_bindings": [],
+          "href": "https://www.linkedin.com/in/lakshay-goyal-9778a6246/",
+          "anchor_text": "",
+          "accessible_name": "LinkedIn",
+          "rel": "noopener noreferrer",
+          "target": "_blank",
+          "section_heading": "Contact links",
+          "target_url": "https://www.linkedin.com/in/lakshay-goyal-9778a6246/",
+          "kind": "absolute-unclassified"
+        }
+      ],
+      "citations": [
+        {
+          "source_id": "src/components/ContactRail.jsx:3677/22007/3637:1",
+          "file": "src/components/ContactRail.jsx",
+          "line": 75,
+          "section": "nav",
+          "section_id": "src/components/ContactRail.jsx:3532/22007",
+          "ui_state": "initial",
+          "data_bindings": [],
+          "href": "https://github.com/lakshay-goyal",
+          "anchor_text": "",
+          "accessible_name": "GitHub",
+          "rel": "noopener noreferrer",
+          "target": "_blank",
+          "section_heading": "Contact links",
+          "target_url": "https://github.com/lakshay-goyal",
+          "kind": "absolute-unclassified"
+        },
+        {
+          "source_id": "src/components/ContactRail.jsx:3677/22007/3637:2",
+          "file": "src/components/ContactRail.jsx",
+          "line": 75,
+          "section": "nav",
+          "section_id": "src/components/ContactRail.jsx:3532/22007",
+          "ui_state": "initial",
+          "data_bindings": [],
+          "href": "https://www.linkedin.com/in/lakshay-goyal-9778a6246/",
+          "anchor_text": "",
+          "accessible_name": "LinkedIn",
+          "rel": "noopener noreferrer",
+          "target": "_blank",
+          "section_heading": "Contact links",
+          "target_url": "https://www.linkedin.com/in/lakshay-goyal-9778a6246/",
+          "kind": "absolute-unclassified"
+        },
+        {
+          "source_id": "src/components/ContactRail.jsx:3677/22007/3637:3",
+          "file": "src/components/ContactRail.jsx",
+          "line": 75,
+          "section": "nav",
+          "section_id": "src/components/ContactRail.jsx:3532/22007",
+          "ui_state": "initial",
+          "data_bindings": [],
+          "href": "https://x.com/lakshayg2004",
+          "anchor_text": "",
+          "accessible_name": "X",
+          "rel": "noopener noreferrer",
+          "target": "_blank",
+          "section_heading": "Contact links",
+          "target_url": "https://x.com/lakshayg2004",
+          "kind": "absolute-unclassified"
+        },
+        {
+          "source_id": "src/components/ContactRail.jsx:1943/22007/4420",
+          "file": "src/components/ContactRail.jsx",
+          "line": 37,
+          "section": "main",
+          "section_id": "src/App.jsx:21181",
+          "ui_state": "initial",
+          "data_bindings": [],
+          "href": "https://cal.com/lakshay-goyal/30min?overlayCalendar=true",
+          "anchor_text": "Schedule",
+          "accessible_name": "Schedule a 30-minute Google Meet",
+          "rel": "noopener noreferrer",
+          "target": "_blank",
+          "target_url": "https://cal.com/lakshay-goyal/30min?overlayCalendar=true",
+          "kind": "absolute-unclassified"
+        }
+      ],
+      "interpretation": "Candidate evidence does not verify experience, credentials, reputation, or review authenticity. Absence is not proof of absence at runtime."
+    },
+    {
+      "url": "/bookshelf",
+      "template": "src/App.jsx",
+      "is_dynamic": false,
+      "coverage": {
+        "mode": "static-source",
+        "complete": false,
+        "limitations": [
+          {
+            "file": "src/components/ScrollReveal.jsx",
+            "line": 22,
+            "reason": "unresolved_rendered_expression"
+          },
+          {
+            "file": "src/components/ScrollReveal.jsx",
+            "line": 22,
+            "reason": "unresolved_attributes:ref"
+          },
+          {
+            "file": "src/App.jsx",
+            "line": 71,
+            "reason": "unresolved_rendered_expression"
+          },
+          {
+            "file": "src/App.jsx",
+            "line": 74,
+            "reason": "unresolved_condition"
+          },
+          {
+            "file": "src/App.jsx",
+            "line": 74,
+            "reason": "unresolved_rendered_expression"
+          },
+          {
+            "file": "src/App.jsx",
+            "line": 75,
+            "reason": "unresolved_rendered_expression"
+          },
+          {
+            "file": "src/App.jsx",
+            "line": 76,
+            "reason": "unresolved_condition"
+          },
+          {
+            "file": "src/App.jsx",
+            "line": 76,
+            "reason": "unresolved_rendered_expression"
+          },
+          {
+            "file": "src/App.jsx",
+            "line": 79,
+            "reason": "unresolved_condition"
+          },
+          {
+            "file": "src/App.jsx",
+            "line": 79,
+            "reason": "unresolved_rendered_expression"
+          },
+          {
+            "file": "src/App.jsx",
+            "line": 70,
+            "reason": "unresolved_attributes:ref,aria-label,aria-pressed,title"
+          },
+          {
+            "file": "src/components/ContactRail.jsx",
+            "line": 58,
+            "reason": "unresolved_rendered_expression"
+          },
+          {
+            "file": "src/components/ContactRail.jsx",
+            "line": 45,
+            "reason": "unresolved_component:LiquidMetal"
+          }
+        ],
+        "route_patterns": [
+          "/blog",
+          "/blog/"
+        ],
+        "entrypoint": "src/main.jsx",
+        "resolved_interaction_states": 0,
+        "resolved_local_fetches": [],
+        "note": "Composed from allowlisted source semantics. CSS visibility, arbitrary runtime/network data and browser behavior remain unverified."
+      },
+      "signals": [
+        {
+          "signal": "authorship",
+          "status": "not_observed_in_static_content",
+          "evidence": []
+        },
+        {
+          "signal": "experience",
+          "status": "not_observed_in_static_content",
+          "evidence": []
+        },
+        {
+          "signal": "expertise",
+          "status": "not_observed_in_static_content",
+          "evidence": []
+        },
+        {
+          "signal": "trust",
+          "status": "not_observed_in_static_content",
+          "evidence": []
+        },
+        {
+          "signal": "reviews",
+          "status": "not_observed_in_static_content",
+          "evidence": []
+        },
+        {
+          "signal": "dates",
+          "status": "not_observed_in_static_content",
+          "evidence": []
+        }
+      ],
+      "trust_links": [
+        {
+          "source_id": "src/components/PageRail.jsx:735/21536/701:1",
+          "file": "src/components/PageRail.jsx",
+          "line": 14,
+          "section": "nav",
+          "section_id": "src/components/PageRail.jsx:233/21536",
+          "ui_state": "initial",
+          "data_bindings": [],
+          "href": "/about",
+          "anchor_text": "About",
+          "accessible_name": "About",
+          "rel": null,
+          "target": null,
+          "section_heading": "Pages",
+          "target_url": "/about",
+          "kind": "internal"
+        },
+        {
+          "source_id": "src/App.jsx:3886/20762/16267:0/17363",
+          "file": "src/App.jsx",
+          "line": 97,
+          "section": "article",
+          "section_id": "src/App.jsx:16340/20762/16267:0",
+          "ui_state": "initial",
+          "data_bindings": [
+            {
+              "file": "src/store/data/books.json",
+              "json_pointer": "/0"
+            }
+          ],
+          "href": "https://www.amazon.in/Freedom-Known-J-Krishnamurti-ebook/dp/B003NX6Y6A?ref_=ast_author_mpb",
+          "anchor_text": "View book",
+          "accessible_name": "View book",
+          "rel": "noopener noreferrer",
+          "target": "_blank",
+          "target_url": "https://www.amazon.in/Freedom-Known-J-Krishnamurti-ebook/dp/B003NX6Y6A?ref_=ast_author_mpb",
+          "kind": "absolute-unclassified"
+        },
+        {
+          "source_id": "src/components/ContactRail.jsx:3677/22007/3637:0",
+          "file": "src/components/ContactRail.jsx",
+          "line": 75,
+          "section": "nav",
+          "section_id": "src/components/ContactRail.jsx:3532/22007",
+          "ui_state": "initial",
+          "data_bindings": [],
+          "href": "mailto:lakshaygoyal201@gmail.com",
+          "anchor_text": "",
+          "accessible_name": "Email",
+          "rel": null,
+          "target": null,
+          "section_heading": "Contact links",
+          "target_url": "mailto:lakshaygoyal201@gmail.com",
+          "kind": "action"
+        },
+        {
+          "source_id": "src/components/ContactRail.jsx:3677/22007/3637:1",
+          "file": "src/components/ContactRail.jsx",
+          "line": 75,
+          "section": "nav",
+          "section_id": "src/components/ContactRail.jsx:3532/22007",
+          "ui_state": "initial",
+          "data_bindings": [],
+          "href": "https://github.com/lakshay-goyal",
+          "anchor_text": "",
+          "accessible_name": "GitHub",
+          "rel": "noopener noreferrer",
+          "target": "_blank",
+          "section_heading": "Contact links",
+          "target_url": "https://github.com/lakshay-goyal",
+          "kind": "absolute-unclassified"
+        },
+        {
+          "source_id": "src/components/ContactRail.jsx:3677/22007/3637:2",
+          "file": "src/components/ContactRail.jsx",
+          "line": 75,
+          "section": "nav",
+          "section_id": "src/components/ContactRail.jsx:3532/22007",
+          "ui_state": "initial",
+          "data_bindings": [],
+          "href": "https://www.linkedin.com/in/lakshay-goyal-9778a6246/",
+          "anchor_text": "",
+          "accessible_name": "LinkedIn",
+          "rel": "noopener noreferrer",
+          "target": "_blank",
+          "section_heading": "Contact links",
+          "target_url": "https://www.linkedin.com/in/lakshay-goyal-9778a6246/",
+          "kind": "absolute-unclassified"
+        }
+      ],
+      "citations": [
+        {
+          "source_id": "src/App.jsx:3886/20762/16267:0/17363",
+          "file": "src/App.jsx",
+          "line": 97,
+          "section": "article",
+          "section_id": "src/App.jsx:16340/20762/16267:0",
+          "ui_state": "initial",
+          "data_bindings": [
+            {
+              "file": "src/store/data/books.json",
+              "json_pointer": "/0"
+            }
+          ],
+          "href": "https://www.amazon.in/Freedom-Known-J-Krishnamurti-ebook/dp/B003NX6Y6A?ref_=ast_author_mpb",
+          "anchor_text": "View book",
+          "accessible_name": "View book",
+          "rel": "noopener noreferrer",
+          "target": "_blank",
+          "target_url": "https://www.amazon.in/Freedom-Known-J-Krishnamurti-ebook/dp/B003NX6Y6A?ref_=ast_author_mpb",
+          "kind": "absolute-unclassified"
+        },
+        {
+          "source_id": "src/App.jsx:3886/20762/16267:1/17363",
+          "file": "src/App.jsx",
+          "line": 97,
+          "section": "article",
+          "section_id": "src/App.jsx:16340/20762/16267:1",
+          "ui_state": "initial",
+          "data_bindings": [
+            {
+              "file": "src/store/data/books.json",
+              "json_pointer": "/1"
+            }
+          ],
+          "href": "https://www.amazon.in/12-Week-Year-Others-Months/dp/1118509234",
+          "anchor_text": "View book",
+          "accessible_name": "View book",
+          "rel": "noopener noreferrer",
+          "target": "_blank",
+          "target_url": "https://www.amazon.in/12-Week-Year-Others-Months/dp/1118509234",
+          "kind": "absolute-unclassified"
+        },
+        {
+          "source_id": "src/components/ContactRail.jsx:3677/22007/3637:1",
+          "file": "src/components/ContactRail.jsx",
+          "line": 75,
+          "section": "nav",
+          "section_id": "src/components/ContactRail.jsx:3532/22007",
+          "ui_state": "initial",
+          "data_bindings": [],
+          "href": "https://github.com/lakshay-goyal",
+          "anchor_text": "",
+          "accessible_name": "GitHub",
+          "rel": "noopener noreferrer",
+          "target": "_blank",
+          "section_heading": "Contact links",
+          "target_url": "https://github.com/lakshay-goyal",
+          "kind": "absolute-unclassified"
+        },
+        {
+          "source_id": "src/components/ContactRail.jsx:3677/22007/3637:2",
+          "file": "src/components/ContactRail.jsx",
+          "line": 75,
+          "section": "nav",
+          "section_id": "src/components/ContactRail.jsx:3532/22007",
+          "ui_state": "initial",
+          "data_bindings": [],
+          "href": "https://www.linkedin.com/in/lakshay-goyal-9778a6246/",
+          "anchor_text": "",
+          "accessible_name": "LinkedIn",
+          "rel": "noopener noreferrer",
+          "target": "_blank",
+          "section_heading": "Contact links",
+          "target_url": "https://www.linkedin.com/in/lakshay-goyal-9778a6246/",
+          "kind": "absolute-unclassified"
+        },
+        {
+          "source_id": "src/components/ContactRail.jsx:3677/22007/3637:3",
+          "file": "src/components/ContactRail.jsx",
+          "line": 75,
+          "section": "nav",
+          "section_id": "src/components/ContactRail.jsx:3532/22007",
+          "ui_state": "initial",
+          "data_bindings": [],
+          "href": "https://x.com/lakshayg2004",
+          "anchor_text": "",
+          "accessible_name": "X",
+          "rel": "noopener noreferrer",
+          "target": "_blank",
+          "section_heading": "Contact links",
+          "target_url": "https://x.com/lakshayg2004",
+          "kind": "absolute-unclassified"
+        },
+        {
+          "source_id": "src/components/ContactRail.jsx:1943/22007/4420",
+          "file": "src/components/ContactRail.jsx",
+          "line": 37,
+          "section": "main",
+          "section_id": "src/App.jsx:21181",
+          "ui_state": "initial",
+          "data_bindings": [],
+          "href": "https://cal.com/lakshay-goyal/30min?overlayCalendar=true",
+          "anchor_text": "Schedule",
+          "accessible_name": "Schedule a 30-minute Google Meet",
+          "rel": "noopener noreferrer",
+          "target": "_blank",
+          "target_url": "https://cal.com/lakshay-goyal/30min?overlayCalendar=true",
+          "kind": "absolute-unclassified"
+        }
+      ],
+      "interpretation": "Candidate evidence does not verify experience, credentials, reputation, or review authenticity. Absence is not proof of absence at runtime."
+    }
+  ]
+}

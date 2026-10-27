@@ -1,0 +1,754 @@
+{
+  "schema_version": "2.0",
+  "category": "metadata",
+  "extraction": {
+    "mode": "static-source",
+    "route_count": 5,
+    "limitations": [
+      "File routes, literal React Router routes and supported pathname dispatch are enumerated; arbitrary routing remains unresolved.",
+      "No application code is executed; runtime content is unknown.",
+      "Supported React composition follows source-selected component order; browser layout and visibility are unverified."
+    ]
+  },
+  "pages": [
+    {
+      "url": "/",
+      "template": "src/App.jsx",
+      "is_dynamic": false,
+      "coverage": {
+        "mode": "static-source",
+        "complete": false,
+        "limitations": [
+          {
+            "file": "src/components/ScrollReveal.jsx",
+            "line": 22,
+            "reason": "unresolved_rendered_expression"
+          },
+          {
+            "file": "src/components/ScrollReveal.jsx",
+            "line": 22,
+            "reason": "unresolved_attributes:ref"
+          },
+          {
+            "file": "src/App.jsx",
+            "line": 71,
+            "reason": "unresolved_rendered_expression"
+          },
+          {
+            "file": "src/App.jsx",
+            "line": 74,
+            "reason": "unresolved_condition"
+          },
+          {
+            "file": "src/App.jsx",
+            "line": 74,
+            "reason": "unresolved_rendered_expression"
+          },
+          {
+            "file": "src/App.jsx",
+            "line": 75,
+            "reason": "unresolved_rendered_expression"
+          },
+          {
+            "file": "src/App.jsx",
+            "line": 76,
+            "reason": "unresolved_condition"
+          },
+          {
+            "file": "src/App.jsx",
+            "line": 76,
+            "reason": "unresolved_rendered_expression"
+          },
+          {
+            "file": "src/App.jsx",
+            "line": 79,
+            "reason": "unresolved_condition"
+          },
+          {
+            "file": "src/App.jsx",
+            "line": 79,
+            "reason": "unresolved_rendered_expression"
+          },
+          {
+            "file": "src/App.jsx",
+            "line": 70,
+            "reason": "unresolved_attributes:ref,aria-label,aria-pressed,title"
+          },
+          {
+            "file": "src/components/ContactRail.jsx",
+            "line": 58,
+            "reason": "unresolved_rendered_expression"
+          },
+          {
+            "file": "src/components/ContactRail.jsx",
+            "line": 45,
+            "reason": "unresolved_component:LiquidMetal"
+          }
+        ],
+        "route_patterns": [
+          "/blog",
+          "/blog/"
+        ],
+        "entrypoint": "src/main.jsx",
+        "resolved_interaction_states": 4,
+        "resolved_local_fetches": [],
+        "note": "Composed from allowlisted source semantics. CSS visibility, arbitrary runtime/network data and browser behavior remain unverified."
+      },
+      "declarations": [
+        {
+          "source_id": "index.html:3",
+          "file": "index.html",
+          "line": 4,
+          "section": "body",
+          "charset": "UTF-8"
+        },
+        {
+          "source_id": "index.html:4",
+          "file": "index.html",
+          "line": 5,
+          "section": "body",
+          "rel": "icon",
+          "href": "/logo.png"
+        },
+        {
+          "source_id": "index.html:5",
+          "file": "index.html",
+          "line": 6,
+          "section": "body",
+          "name": "viewport",
+          "content": "width=device-width, initial-scale=1.0"
+        },
+        {
+          "source_id": "index.html:6",
+          "file": "index.html",
+          "line": 7,
+          "section": "body",
+          "name": "description",
+          "content": "Lakshay Goyal is a Software Engineer building thoughtful mobile and web products."
+        },
+        {
+          "source_id": "index.html:7",
+          "file": "index.html",
+          "line": 8,
+          "section": "body",
+          "rel": "preconnect",
+          "href": "https://fonts.googleapis.com"
+        },
+        {
+          "source_id": "index.html:8",
+          "file": "index.html",
+          "line": 9,
+          "section": "body",
+          "rel": "preconnect",
+          "href": "https://fonts.gstatic.com"
+        },
+        {
+          "source_id": "index.html:9",
+          "file": "index.html",
+          "line": 10,
+          "section": "body",
+          "href": "https://fonts.googleapis.com/css2?family=Geist+Mono:wght@400&display=swap",
+          "rel": "stylesheet"
+        },
+        {
+          "source_id": "index.html:10",
+          "file": "index.html",
+          "line": 14,
+          "section": "body",
+          "title": "Lakshay Goyal — Software Engineer"
+        }
+      ],
+      "inheritance_note": "Declarations include ancestor layouts; effective metadata merging is not evaluated."
+    },
+    {
+      "url": "/about",
+      "template": "src/App.jsx",
+      "is_dynamic": false,
+      "coverage": {
+        "mode": "static-source",
+        "complete": false,
+        "limitations": [
+          {
+            "file": "src/components/ScrollReveal.jsx",
+            "line": 22,
+            "reason": "unresolved_rendered_expression"
+          },
+          {
+            "file": "src/components/ScrollReveal.jsx",
+            "line": 22,
+            "reason": "unresolved_attributes:ref"
+          },
+          {
+            "file": "src/App.jsx",
+            "line": 71,
+            "reason": "unresolved_rendered_expression"
+          },
+          {
+            "file": "src/App.jsx",
+            "line": 74,
+            "reason": "unresolved_condition"
+          },
+          {
+            "file": "src/App.jsx",
+            "line": 74,
+            "reason": "unresolved_rendered_expression"
+          },
+          {
+            "file": "src/App.jsx",
+            "line": 75,
+            "reason": "unresolved_rendered_expression"
+          },
+          {
+            "file": "src/App.jsx",
+            "line": 76,
+            "reason": "unresolved_condition"
+          },
+          {
+            "file": "src/App.jsx",
+            "line": 76,
+            "reason": "unresolved_rendered_expression"
+          },
+          {
+            "file": "src/App.jsx",
+            "line": 79,
+            "reason": "unresolved_condition"
+          },
+          {
+            "file": "src/App.jsx",
+            "line": 79,
+            "reason": "unresolved_rendered_expression"
+          },
+          {
+            "file": "src/App.jsx",
+            "line": 70,
+            "reason": "unresolved_attributes:ref,aria-label,aria-pressed,title"
+          },
+          {
+            "file": "src/components/ContactRail.jsx",
+            "line": 58,
+            "reason": "unresolved_rendered_expression"
+          },
+          {
+            "file": "src/components/ContactRail.jsx",
+            "line": 45,
+            "reason": "unresolved_component:LiquidMetal"
+          }
+        ],
+        "route_patterns": [
+          "/blog",
+          "/blog/"
+        ],
+        "entrypoint": "src/main.jsx",
+        "resolved_interaction_states": 0,
+        "resolved_local_fetches": [],
+        "note": "Composed from allowlisted source semantics. CSS visibility, arbitrary runtime/network data and browser behavior remain unverified."
+      },
+      "declarations": [
+        {
+          "source_id": "index.html:3",
+          "file": "index.html",
+          "line": 4,
+          "section": "body",
+          "charset": "UTF-8"
+        },
+        {
+          "source_id": "index.html:4",
+          "file": "index.html",
+          "line": 5,
+          "section": "body",
+          "rel": "icon",
+          "href": "/logo.png"
+        },
+        {
+          "source_id": "index.html:5",
+          "file": "index.html",
+          "line": 6,
+          "section": "body",
+          "name": "viewport",
+          "content": "width=device-width, initial-scale=1.0"
+        },
+        {
+          "source_id": "index.html:6",
+          "file": "index.html",
+          "line": 7,
+          "section": "body",
+          "name": "description",
+          "content": "Lakshay Goyal is a Software Engineer building thoughtful mobile and web products."
+        },
+        {
+          "source_id": "index.html:7",
+          "file": "index.html",
+          "line": 8,
+          "section": "body",
+          "rel": "preconnect",
+          "href": "https://fonts.googleapis.com"
+        },
+        {
+          "source_id": "index.html:8",
+          "file": "index.html",
+          "line": 9,
+          "section": "body",
+          "rel": "preconnect",
+          "href": "https://fonts.gstatic.com"
+        },
+        {
+          "source_id": "index.html:9",
+          "file": "index.html",
+          "line": 10,
+          "section": "body",
+          "href": "https://fonts.googleapis.com/css2?family=Geist+Mono:wght@400&display=swap",
+          "rel": "stylesheet"
+        },
+        {
+          "source_id": "index.html:10",
+          "file": "index.html",
+          "line": 14,
+          "section": "body",
+          "title": "Lakshay Goyal — Software Engineer"
+        }
+      ],
+      "inheritance_note": "Declarations include ancestor layouts; effective metadata merging is not evaluated."
+    },
+    {
+      "url": "/blog",
+      "template": "src/App.jsx",
+      "is_dynamic": false,
+      "coverage": {
+        "mode": "static-source",
+        "complete": false,
+        "limitations": [
+          {
+            "file": "src/components/ScrollReveal.jsx",
+            "line": 22,
+            "reason": "unresolved_rendered_expression"
+          },
+          {
+            "file": "src/components/ScrollReveal.jsx",
+            "line": 22,
+            "reason": "unresolved_attributes:ref"
+          },
+          {
+            "file": "src/App.jsx",
+            "line": 71,
+            "reason": "unresolved_rendered_expression"
+          },
+          {
+            "file": "src/App.jsx",
+            "line": 74,
+            "reason": "unresolved_condition"
+          },
+          {
+            "file": "src/App.jsx",
+            "line": 74,
+            "reason": "unresolved_rendered_expression"
+          },
+          {
+            "file": "src/App.jsx",
+            "line": 75,
+            "reason": "unresolved_rendered_expression"
+          },
+          {
+            "file": "src/App.jsx",
+            "line": 76,
+            "reason": "unresolved_condition"
+          },
+          {
+            "file": "src/App.jsx",
+            "line": 76,
+            "reason": "unresolved_rendered_expression"
+          },
+          {
+            "file": "src/App.jsx",
+            "line": 79,
+            "reason": "unresolved_condition"
+          },
+          {
+            "file": "src/App.jsx",
+            "line": 79,
+            "reason": "unresolved_rendered_expression"
+          },
+          {
+            "file": "src/App.jsx",
+            "line": 70,
+            "reason": "unresolved_attributes:ref,aria-label,aria-pressed,title"
+          },
+          {
+            "file": "src/components/ContactRail.jsx",
+            "line": 58,
+            "reason": "unresolved_rendered_expression"
+          },
+          {
+            "file": "src/components/ContactRail.jsx",
+            "line": 45,
+            "reason": "unresolved_component:LiquidMetal"
+          }
+        ],
+        "route_patterns": [
+          "/blog",
+          "/blog/"
+        ],
+        "entrypoint": "src/main.jsx",
+        "resolved_interaction_states": 0,
+        "resolved_local_fetches": [
+          "public/blog/blog.json"
+        ],
+        "note": "Composed from allowlisted source semantics. CSS visibility, arbitrary runtime/network data and browser behavior remain unverified."
+      },
+      "declarations": [
+        {
+          "source_id": "index.html:3",
+          "file": "index.html",
+          "line": 4,
+          "section": "body",
+          "charset": "UTF-8"
+        },
+        {
+          "source_id": "index.html:4",
+          "file": "index.html",
+          "line": 5,
+          "section": "body",
+          "rel": "icon",
+          "href": "/logo.png"
+        },
+        {
+          "source_id": "index.html:5",
+          "file": "index.html",
+          "line": 6,
+          "section": "body",
+          "name": "viewport",
+          "content": "width=device-width, initial-scale=1.0"
+        },
+        {
+          "source_id": "index.html:6",
+          "file": "index.html",
+          "line": 7,
+          "section": "body",
+          "name": "description",
+          "content": "Lakshay Goyal is a Software Engineer building thoughtful mobile and web products."
+        },
+        {
+          "source_id": "index.html:7",
+          "file": "index.html",
+          "line": 8,
+          "section": "body",
+          "rel": "preconnect",
+          "href": "https://fonts.googleapis.com"
+        },
+        {
+          "source_id": "index.html:8",
+          "file": "index.html",
+          "line": 9,
+          "section": "body",
+          "rel": "preconnect",
+          "href": "https://fonts.gstatic.com"
+        },
+        {
+          "source_id": "index.html:9",
+          "file": "index.html",
+          "line": 10,
+          "section": "body",
+          "href": "https://fonts.googleapis.com/css2?family=Geist+Mono:wght@400&display=swap",
+          "rel": "stylesheet"
+        },
+        {
+          "source_id": "index.html:10",
+          "file": "index.html",
+          "line": 14,
+          "section": "body",
+          "title": "Lakshay Goyal — Software Engineer"
+        }
+      ],
+      "inheritance_note": "Declarations include ancestor layouts; effective metadata merging is not evaluated."
+    },
+    {
+      "url": "/blog/deploying-your-site-with-vercel",
+      "template": "src/App.jsx",
+      "is_dynamic": false,
+      "coverage": {
+        "mode": "static-source",
+        "complete": false,
+        "limitations": [
+          {
+            "file": "src/App.jsx",
+            "line": 71,
+            "reason": "unresolved_rendered_expression"
+          },
+          {
+            "file": "src/App.jsx",
+            "line": 74,
+            "reason": "unresolved_condition"
+          },
+          {
+            "file": "src/App.jsx",
+            "line": 74,
+            "reason": "unresolved_rendered_expression"
+          },
+          {
+            "file": "src/App.jsx",
+            "line": 75,
+            "reason": "unresolved_rendered_expression"
+          },
+          {
+            "file": "src/App.jsx",
+            "line": 76,
+            "reason": "unresolved_condition"
+          },
+          {
+            "file": "src/App.jsx",
+            "line": 76,
+            "reason": "unresolved_rendered_expression"
+          },
+          {
+            "file": "src/App.jsx",
+            "line": 79,
+            "reason": "unresolved_condition"
+          },
+          {
+            "file": "src/App.jsx",
+            "line": 79,
+            "reason": "unresolved_rendered_expression"
+          },
+          {
+            "file": "src/App.jsx",
+            "line": 70,
+            "reason": "unresolved_attributes:ref,aria-label,aria-pressed,title"
+          },
+          {
+            "file": "src/components/ContactRail.jsx",
+            "line": 58,
+            "reason": "unresolved_rendered_expression"
+          },
+          {
+            "file": "src/components/ContactRail.jsx",
+            "line": 45,
+            "reason": "unresolved_component:LiquidMetal"
+          }
+        ],
+        "route_patterns": [
+          "/blog",
+          "/blog/"
+        ],
+        "entrypoint": "src/main.jsx",
+        "resolved_interaction_states": 0,
+        "resolved_local_fetches": [
+          "public/blog/deploying-your-site-with-vercel.md"
+        ],
+        "note": "Composed from allowlisted source semantics. CSS visibility, arbitrary runtime/network data and browser behavior remain unverified."
+      },
+      "declarations": [
+        {
+          "source_id": "index.html:3",
+          "file": "index.html",
+          "line": 4,
+          "section": "body",
+          "charset": "UTF-8"
+        },
+        {
+          "source_id": "index.html:4",
+          "file": "index.html",
+          "line": 5,
+          "section": "body",
+          "rel": "icon",
+          "href": "/logo.png"
+        },
+        {
+          "source_id": "index.html:5",
+          "file": "index.html",
+          "line": 6,
+          "section": "body",
+          "name": "viewport",
+          "content": "width=device-width, initial-scale=1.0"
+        },
+        {
+          "source_id": "index.html:6",
+          "file": "index.html",
+          "line": 7,
+          "section": "body",
+          "name": "description",
+          "content": "Lakshay Goyal is a Software Engineer building thoughtful mobile and web products."
+        },
+        {
+          "source_id": "index.html:7",
+          "file": "index.html",
+          "line": 8,
+          "section": "body",
+          "rel": "preconnect",
+          "href": "https://fonts.googleapis.com"
+        },
+        {
+          "source_id": "index.html:8",
+          "file": "index.html",
+          "line": 9,
+          "section": "body",
+          "rel": "preconnect",
+          "href": "https://fonts.gstatic.com"
+        },
+        {
+          "source_id": "index.html:9",
+          "file": "index.html",
+          "line": 10,
+          "section": "body",
+          "href": "https://fonts.googleapis.com/css2?family=Geist+Mono:wght@400&display=swap",
+          "rel": "stylesheet"
+        },
+        {
+          "source_id": "index.html:10",
+          "file": "index.html",
+          "line": 14,
+          "section": "body",
+          "title": "Lakshay Goyal — Software Engineer"
+        }
+      ],
+      "inheritance_note": "Declarations include ancestor layouts; effective metadata merging is not evaluated."
+    },
+    {
+      "url": "/bookshelf",
+      "template": "src/App.jsx",
+      "is_dynamic": false,
+      "coverage": {
+        "mode": "static-source",
+        "complete": false,
+        "limitations": [
+          {
+            "file": "src/components/ScrollReveal.jsx",
+            "line": 22,
+            "reason": "unresolved_rendered_expression"
+          },
+          {
+            "file": "src/components/ScrollReveal.jsx",
+            "line": 22,
+            "reason": "unresolved_attributes:ref"
+          },
+          {
+            "file": "src/App.jsx",
+            "line": 71,
+            "reason": "unresolved_rendered_expression"
+          },
+          {
+            "file": "src/App.jsx",
+            "line": 74,
+            "reason": "unresolved_condition"
+          },
+          {
+            "file": "src/App.jsx",
+            "line": 74,
+            "reason": "unresolved_rendered_expression"
+          },
+          {
+            "file": "src/App.jsx",
+            "line": 75,
+            "reason": "unresolved_rendered_expression"
+          },
+          {
+            "file": "src/App.jsx",
+            "line": 76,
+            "reason": "unresolved_condition"
+          },
+          {
+            "file": "src/App.jsx",
+            "line": 76,
+            "reason": "unresolved_rendered_expression"
+          },
+          {
+            "file": "src/App.jsx",
+            "line": 79,
+            "reason": "unresolved_condition"
+          },
+          {
+            "file": "src/App.jsx",
+            "line": 79,
+            "reason": "unresolved_rendered_expression"
+          },
+          {
+            "file": "src/App.jsx",
+            "line": 70,
+            "reason": "unresolved_attributes:ref,aria-label,aria-pressed,title"
+          },
+          {
+            "file": "src/components/ContactRail.jsx",
+            "line": 58,
+            "reason": "unresolved_rendered_expression"
+          },
+          {
+            "file": "src/components/ContactRail.jsx",
+            "line": 45,
+            "reason": "unresolved_component:LiquidMetal"
+          }
+        ],
+        "route_patterns": [
+          "/blog",
+          "/blog/"
+        ],
+        "entrypoint": "src/main.jsx",
+        "resolved_interaction_states": 0,
+        "resolved_local_fetches": [],
+        "note": "Composed from allowlisted source semantics. CSS visibility, arbitrary runtime/network data and browser behavior remain unverified."
+      },
+      "declarations": [
+        {
+          "source_id": "index.html:3",
+          "file": "index.html",
+          "line": 4,
+          "section": "body",
+          "charset": "UTF-8"
+        },
+        {
+          "source_id": "index.html:4",
+          "file": "index.html",
+          "line": 5,
+          "section": "body",
+          "rel": "icon",
+          "href": "/logo.png"
+        },
+        {
+          "source_id": "index.html:5",
+          "file": "index.html",
+          "line": 6,
+          "section": "body",
+          "name": "viewport",
+          "content": "width=device-width, initial-scale=1.0"
+        },
+        {
+          "source_id": "index.html:6",
+          "file": "index.html",
+          "line": 7,
+          "section": "body",
+          "name": "description",
+          "content": "Lakshay Goyal is a Software Engineer building thoughtful mobile and web products."
+        },
+        {
+          "source_id": "index.html:7",
+          "file": "index.html",
+          "line": 8,
+          "section": "body",
+          "rel": "preconnect",
+          "href": "https://fonts.googleapis.com"
+        },
+        {
+          "source_id": "index.html:8",
+          "file": "index.html",
+          "line": 9,
+          "section": "body",
+          "rel": "preconnect",
+          "href": "https://fonts.gstatic.com"
+        },
+        {
+          "source_id": "index.html:9",
+          "file": "index.html",
+          "line": 10,
+          "section": "body",
+          "href": "https://fonts.googleapis.com/css2?family=Geist+Mono:wght@400&display=swap",
+          "rel": "stylesheet"
+        },
+        {
+          "source_id": "index.html:10",
+          "file": "index.html",
+          "line": 14,
+          "section": "body",
+          "title": "Lakshay Goyal — Software Engineer"
+        }
+      ],
+      "inheritance_note": "Declarations include ancestor layouts; effective metadata merging is not evaluated."
+    }
+  ]
+}
