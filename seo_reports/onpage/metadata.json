@@ -1,0 +1,91 @@
+{
+  "schema_version": "2.0",
+  "category": "metadata",
+  "extraction": {
+    "mode": "static-source",
+    "route_count": 1,
+    "limitations": [
+      "Only recognized file routes and literal React Router element routes are enumerated.",
+      "No application code is executed; runtime content is unknown.",
+      "Content fragments retain source order per file; composed rendered order is unknown."
+    ]
+  },
+  "pages": [
+    {
+      "url": "/",
+      "template": "index.html",
+      "is_dynamic": false,
+      "coverage": {
+        "mode": "static-source",
+        "complete": false,
+        "limitations": [],
+        "note": "Runtime data, conditions, component props, CSS visibility and rendered order require browser verification."
+      },
+      "declarations": [
+        {
+          "source_id": "index.html:3",
+          "file": "index.html",
+          "line": 4,
+          "section": "body",
+          "charset": "UTF-8"
+        },
+        {
+          "source_id": "index.html:4",
+          "file": "index.html",
+          "line": 5,
+          "section": "body",
+          "rel": "icon",
+          "href": "/logo.png"
+        },
+        {
+          "source_id": "index.html:5",
+          "file": "index.html",
+          "line": 6,
+          "section": "body",
+          "name": "viewport",
+          "content": "width=device-width, initial-scale=1.0"
+        },
+        {
+          "source_id": "index.html:6",
+          "file": "index.html",
+          "line": 7,
+          "section": "body",
+          "name": "description",
+          "content": "Lakshay Goyal is a Software Engineer building thoughtful mobile and web products."
+        },
+        {
+          "source_id": "index.html:7",
+          "file": "index.html",
+          "line": 8,
+          "section": "body",
+          "rel": "preconnect",
+          "href": "https://fonts.googleapis.com"
+        },
+        {
+          "source_id": "index.html:8",
+          "file": "index.html",
+          "line": 9,
+          "section": "body",
+          "rel": "preconnect",
+          "href": "https://fonts.gstatic.com"
+        },
+        {
+          "source_id": "index.html:9",
+          "file": "index.html",
+          "line": 10,
+          "section": "body",
+          "href": "https://fonts.googleapis.com/css2?family=Geist+Mono:wght@400&display=swap",
+          "rel": "stylesheet"
+        },
+        {
+          "source_id": "index.html:10",
+          "file": "index.html",
+          "line": 14,
+          "section": "body",
+          "title": "Lakshay Goyal — Software Engineer"
+        }
+      ],
+      "inheritance_note": "Declarations include ancestor layouts; effective metadata merging is not evaluated."
+    }
+  ]
+}

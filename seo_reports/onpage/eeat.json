@@ -1,0 +1,61 @@
+{
+  "schema_version": "2.0",
+  "category": "eeat",
+  "extraction": {
+    "mode": "static-source",
+    "route_count": 1,
+    "limitations": [
+      "Only recognized file routes and literal React Router element routes are enumerated.",
+      "No application code is executed; runtime content is unknown.",
+      "Content fragments retain source order per file; composed rendered order is unknown."
+    ]
+  },
+  "pages": [
+    {
+      "url": "/",
+      "template": "index.html",
+      "is_dynamic": false,
+      "coverage": {
+        "mode": "static-source",
+        "complete": false,
+        "limitations": [],
+        "note": "Runtime data, conditions, component props, CSS visibility and rendered order require browser verification."
+      },
+      "signals": [
+        {
+          "signal": "authorship",
+          "status": "not_observed_in_static_content",
+          "evidence": []
+        },
+        {
+          "signal": "experience",
+          "status": "not_observed_in_static_content",
+          "evidence": []
+        },
+        {
+          "signal": "expertise",
+          "status": "not_observed_in_static_content",
+          "evidence": []
+        },
+        {
+          "signal": "trust",
+          "status": "not_observed_in_static_content",
+          "evidence": []
+        },
+        {
+          "signal": "reviews",
+          "status": "not_observed_in_static_content",
+          "evidence": []
+        },
+        {
+          "signal": "dates",
+          "status": "not_observed_in_static_content",
+          "evidence": []
+        }
+      ],
+      "trust_links": [],
+      "citations": [],
+      "interpretation": "Candidate evidence does not verify experience, credentials, reputation, or review authenticity. Absence is not proof of absence at runtime."
+    }
+  ]
+}
