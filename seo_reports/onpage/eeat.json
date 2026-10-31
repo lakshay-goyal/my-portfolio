@@ -1,0 +1,1583 @@
+{
+  "schema_version": "2.0",
+  "category": "eeat",
+  "extraction": {
+    "framework": "React 18 SPA (Vite + Tailwind), manual pathname switch in src/App.jsx; no react-router, no route manifest; local JSON data in src/store/data and public/blog",
+    "routing": "window.location.pathname ternary chain in App(); no react-router, no route manifest",
+    "data_sources": [
+      "src/store/data/experiences.json",
+      "src/store/data/skills.json",
+      "src/store/data/majorProjects.json",
+      "src/store/data/books.json",
+      "public/blog/blog.json",
+      "public/blog/deploying-your-site-with-vercel.md"
+    ],
+    "shared_layout": [
+      "src/App.jsx header (Lakshay Goyal / Software Engineer)",
+      "src/components/PageRail.jsx nav",
+      "src/components/ContactRail.jsx aside + Schedule CTA"
+    ],
+    "script_access": {
+      "files": [
+        "README.md",
+        "index.html",
+        "public/blog/blog.json",
+        "public/blog/deploying-your-site-with-vercel.md",
+        "src/App.jsx",
+        "src/components/ContactRail.jsx",
+        "src/components/PageRail.jsx",
+        "src/components/ScrollReveal.jsx",
+        "src/store/data/books.json",
+        "src/store/data/experiences.json",
+        "src/store/data/majorProjects.json",
+        "src/store/data/skills.json"
+      ],
+      "meaning": "Source values accessed, not proof of semantic understanding",
+      "html_parsing": {
+        "calls": 5,
+        "cache_hits": 0
+      }
+    },
+    "mode": "static-source",
+    "engine": "skill-guided-agent",
+    "verification": "passed",
+    "script_sha256": "271367f799ec798ebd9fd4640b5b60d0e75721253386095e5ce37ec6bf880fc5",
+    "snapshot_sha256": "4cedf6d44c63840bb34fd6f1eab8e014285fc00e1b340374082b47cbc1fcc888",
+    "snapshot_limitations": [],
+    "skill_sha256": "e17391844f4a22aa827368abf259045173ec6c11a1861793f87bee0cc9a11394",
+    "discovery_budget": {
+      "max_model_rounds": 12,
+      "reached": true
+    }
+  },
+  "pages": [
+    {
+      "url": "/",
+      "template": "src/App.jsx",
+      "is_dynamic": false,
+      "route_family": "/",
+      "instance_status": "template",
+      "locale": null,
+      "coverage": {
+        "mode": "static-source",
+        "complete": false,
+        "limitations": [
+          "Client-rendered React SPA: parse_html sees only literal JSX/HTML; data-driven text is read from JSON/array declarations, not rendered DOM.",
+          "No author byline, reviewer, credential, review or policy evidence exists in captured source.",
+          "Blog list and post bodies are fetched at runtime (/blog/blog.json, /blog/<slug>.md); only one markdown instance is statically enumerable.",
+          "README.md is repository documentation, not a public page; its claims are unverified source evidence.",
+          "No production origin is assumed; hrefs are preserved as written.",
+          "Model discovery budget reached; remaining semantic investigation is unresolved. The extractor still receives the full captured snapshot."
+        ]
+      },
+      "signals": [
+        {
+          "signal": "authorship",
+          "status": "candidate_evidence",
+          "evidence": [
+            {
+              "file": "src/App.jsx",
+              "line": 432,
+              "source_id": "src/App.jsx:432:194:a",
+              "text": "Lakshay Goyal"
+            },
+            {
+              "file": "src/App.jsx",
+              "line": 433,
+              "source_id": "src/App.jsx:433:73:p",
+              "text": "Software Engineer"
+            },
+            {
+              "file": "src/App.jsx",
+              "line": 292,
+              "source_id": "src/App.jsx:292:15:h2",
+              "text": "A little about me."
+            },
+            {
+              "file": "index.html",
+              "line": 14,
+              "source_id": "index.html:14:11:title",
+              "text": "Lakshay Goyal — Software Engineer"
+            },
+            {
+              "file": "index.html",
+              "line": 7,
+              "source_id": "index.html:7:38:meta",
+              "text": "Lakshay Goyal is a Software Engineer building thoughtful mobile and web products."
+            },
+            {
+              "file": "index.html",
+              "line": 14,
+              "source_id": "index.html:14:4:title",
+              "text": "Lakshay Goyal — Software Engineer"
+            }
+          ]
+        },
+        {
+          "signal": "experience",
+          "status": "candidate_evidence",
+          "evidence": [
+            {
+              "file": "src/App.jsx",
+              "line": 111,
+              "source_id": "src/App.jsx:111:97:h2",
+              "text": "Work Experience"
+            },
+            {
+              "file": "src/App.jsx",
+              "line": 151,
+              "source_id": "src/App.jsx:151:91:h2",
+              "text": "Selected Work"
+            },
+            {
+              "file": "src/App.jsx",
+              "line": 314,
+              "source_id": "src/App.jsx:314:94:h2",
+              "text": "How I got here"
+            },
+            {
+              "file": "src/App.jsx",
+              "line": 296,
+              "source_id": "src/App.jsx:296:94:h2",
+              "text": "What keeps me curious"
+            },
+            {
+              "file": "src/App.jsx",
+              "line": 272,
+              "source_id": "src/App.jsx:272:34:p",
+              "text": "I moved from Delhi to Bangalore, helped build FOZO from the ground up, and now work on test automation at Testsigma. I care about polished interfaces, understandable systems, and work that lasts beyond a demo."
+            },
+            {
+              "file": "src/store/data/experiences.json",
+              "line": 3,
+              "source_id": "src/store/data/experiences.json:3:4:json-value",
+              "text": "Testsigma"
+            },
+            {
+              "file": "src/store/data/experiences.json",
+              "line": 5,
+              "source_id": "src/store/data/experiences.json:5:4:json-value",
+              "text": "Software Engineer"
+            },
+            {
+              "file": "src/store/data/experiences.json",
+              "line": 8,
+              "source_id": "src/store/data/experiences.json:8:4:json-value",
+              "text": "Building things that make test automation a little less painful. Mostly jumping between backend, frontend, and infra, figuring things out along the way."
+            },
+            {
+              "file": "src/store/data/experiences.json",
+              "line": 3,
+              "source_id": "src/store/data/experiences.json:3:4:json-value",
+              "text": "FOZO"
+            },
+            {
+              "file": "src/store/data/experiences.json",
+              "line": 5,
+              "source_id": "src/store/data/experiences.json:5:4:json-value",
+              "text": "Founding Engineer"
+            },
+            {
+              "file": "src/store/data/experiences.json",
+              "line": 8,
+              "source_id": "src/store/data/experiences.json:8:4:json-value",
+              "text": "Built a food delivery platform from scratch, handling everything from architecture and mobile apps to servers, deployments, and all the chaos in between."
+            },
+            {
+              "file": "src/store/data/majorProjects.json",
+              "line": 3,
+              "source_id": "src/store/data/majorProjects.json:3:4:json-value",
+              "text": "Unlovable - Application Builder."
+            },
+            {
+              "file": "src/store/data/majorProjects.json",
+              "line": 4,
+              "source_id": "src/store/data/majorProjects.json:4:4:json-value",
+              "text": "Built an application builder, where anyone can able to generate an web application using a prompt and creativity."
+            },
+            {
+              "file": "src/store/data/majorProjects.json",
+              "line": 3,
+              "source_id": "src/store/data/majorProjects.json:3:4:json-value",
+              "text": "Unlovable - Mobile Application."
+            },
+            {
+              "file": "src/store/data/majorProjects.json",
+              "line": 4,
+              "source_id": "src/store/data/majorProjects.json:4:4:json-value",
+              "text": "Built an Mobile application builder, where anyone can able to generate an mobile application using a prompt and creativity."
+            },
+            {
+              "file": "src/store/data/majorProjects.json",
+              "line": 3,
+              "source_id": "src/store/data/majorProjects.json:3:4:json-value",
+              "text": "Exness - CFD Application."
+            },
+            {
+              "file": "src/store/data/majorProjects.json",
+              "line": 4,
+              "source_id": "src/store/data/majorProjects.json:4:4:json-value",
+              "text": "A CFD application for trade on crypto currencies."
+            },
+            {
+              "file": "src/store/data/majorProjects.json",
+              "line": 3,
+              "source_id": "src/store/data/majorProjects.json:3:4:json-value",
+              "text": "Exness - Mobile Application."
+            },
+            {
+              "file": "src/store/data/majorProjects.json",
+              "line": 4,
+              "source_id": "src/store/data/majorProjects.json:4:4:json-value",
+              "text": "A CFD Mobile application for trade on crypto currencies."
+            },
+            {
+              "file": "src/App.jsx",
+              "line": 111,
+              "source_id": "src/App.jsx:111:6:h2",
+              "text": "Work Experience"
+            }
+          ]
+        },
+        {
+          "signal": "expertise",
+          "status": "candidate_evidence",
+          "evidence": [
+            {
+              "file": "src/App.jsx",
+              "line": 231,
+              "source_id": "src/App.jsx:231:91:h2",
+              "text": "Skills"
+            },
+            {
+              "file": "src/store/data/skills.json",
+              "line": 3,
+              "source_id": "src/store/data/skills.json:3:4:json-value",
+              "text": "Web Development"
+            },
+            {
+              "file": "src/store/data/skills.json",
+              "line": 4,
+              "source_id": "src/store/data/skills.json:4:4:json-value",
+              "text": "MERN Stack, Next.js, Remix, Turborepo, PostgreSQL (Prisma), API Development"
+            },
+            {
+              "file": "src/store/data/skills.json",
+              "line": 3,
+              "source_id": "src/store/data/skills.json:3:4:json-value",
+              "text": "Mobile Development"
+            },
+            {
+              "file": "src/store/data/skills.json",
+              "line": 4,
+              "source_id": "src/store/data/skills.json:4:4:json-value",
+              "text": "React Native, API Connectivity"
+            },
+            {
+              "file": "src/store/data/skills.json",
+              "line": 3,
+              "source_id": "src/store/data/skills.json:3:4:json-value",
+              "text": "AI"
+            },
+            {
+              "file": "src/store/data/skills.json",
+              "line": 4,
+              "source_id": "src/store/data/skills.json:4:4:json-value",
+              "text": "Python, FastAPI, Machine Learning, Deep Learning, NLP, Computer Vision, AI Applications, GenAI, AI Agents"
+            },
+            {
+              "file": "src/App.jsx",
+              "line": 231,
+              "source_id": "src/App.jsx:231:6:h2",
+              "text": "Skills"
+            }
+          ]
+        },
+        {
+          "signal": "credentials",
+          "status": "candidate_evidence",
+          "evidence": [
+            {
+              "file": "src/App.jsx",
+              "line": 271,
+              "source_id": "src/App.jsx:271:4:span",
+              "text": "Super30"
+            }
+          ]
+        },
+        {
+          "signal": "trust",
+          "status": "candidate_evidence",
+          "evidence": [
+            {
+              "file": "src/components/ContactRail.jsx",
+              "line": 42,
+              "source_id": "src/components/ContactRail.jsx:42:18:a",
+              "text": "Schedule a 30-minute Google Meet"
+            }
+          ]
+        },
+        {
+          "signal": "reviews",
+          "status": "not_observed_in_static_content",
+          "evidence": []
+        },
+        {
+          "signal": "dates",
+          "status": "candidate_evidence",
+          "evidence": [
+            {
+              "file": "src/App.jsx",
+              "line": 269,
+              "source_id": "src/App.jsx:269:4:span",
+              "text": "2022–2023"
+            },
+            {
+              "file": "src/store/data/experiences.json",
+              "line": 6,
+              "source_id": "src/store/data/experiences.json:6:4:json-value",
+              "text": "July 2026 — Present"
+            },
+            {
+              "file": "src/store/data/experiences.json",
+              "line": 6,
+              "source_id": "src/store/data/experiences.json:6:4:json-value",
+              "text": "Dec 2025 — June 2026"
+            }
+          ]
+        },
+        {
+          "signal": "company",
+          "status": "not_observed_in_static_content",
+          "evidence": []
+        }
+      ],
+      "trust_links": [
+        {
+          "file": "src/components/ContactRail.jsx",
+          "line": 3,
+          "source_id": "src/components/ContactRail.jsx:3:15:a",
+          "href": "lakshaygoyal201@gmail.com"
+        },
+        {
+          "file": "src/components/ContactRail.jsx",
+          "line": 8,
+          "source_id": "src/components/ContactRail.jsx:8:28:a",
+          "href": "https://github.com/lakshay-goyal"
+        },
+        {
+          "file": "src/components/ContactRail.jsx",
+          "line": 9,
+          "source_id": "src/components/ContactRail.jsx:9:30:a",
+          "href": "https://www.linkedin.com/in/lakshay-goyal-9778a6246/"
+        },
+        {
+          "file": "src/components/ContactRail.jsx",
+          "line": 10,
+          "source_id": "src/components/ContactRail.jsx:10:23:a",
+          "href": "https://x.com/lakshayg2004"
+        },
+        {
+          "file": "src/components/ContactRail.jsx",
+          "line": 11,
+          "source_id": "src/components/ContactRail.jsx:11:28:a",
+          "href": "/Lakshay_Resume.pdf"
+        },
+        {
+          "file": "src/components/ContactRail.jsx",
+          "line": 4,
+          "source_id": "src/components/ContactRail.jsx:4:20:a",
+          "href": "https://cal.com/lakshay-goyal/30min?overlayCalendar=true"
+        },
+        {
+          "file": "src/components/PageRail.jsx",
+          "line": 3,
+          "source_id": "src/components/PageRail.jsx:3:12:a",
+          "href": "/about"
+        },
+        {
+          "file": "src/components/ContactRail.jsx",
+          "line": 75,
+          "source_id": "src/components/ContactRail.jsx:75:12:a",
+          "href": "{contact.href}"
+        }
+      ],
+      "citations": [
+        {
+          "file": "src/store/data/experiences.json",
+          "line": 4,
+          "source_id": "src/store/data/experiences.json:4:4:json-value",
+          "href": "https://testsigma.com/"
+        },
+        {
+          "file": "src/store/data/experiences.json",
+          "line": 4,
+          "source_id": "src/store/data/experiences.json:4:4:json-value",
+          "href": "https://getfozo.in"
+        },
+        {
+          "file": "src/store/data/majorProjects.json",
+          "line": 7,
+          "source_id": "src/store/data/majorProjects.json:7:4:json-value",
+          "href": "https://github.com/lakshay-goyal/Unlovable"
+        },
+        {
+          "file": "src/store/data/majorProjects.json",
+          "line": 8,
+          "source_id": "src/store/data/majorProjects.json:8:4:json-value",
+          "href": "https://unlovable.lakshaygoyal.in/"
+        },
+        {
+          "file": "src/store/data/majorProjects.json",
+          "line": 7,
+          "source_id": "src/store/data/majorProjects.json:7:4:json-value",
+          "href": "https://github.com/lakshay-goyal/Exness"
+        },
+        {
+          "file": "src/store/data/majorProjects.json",
+          "line": 8,
+          "source_id": "src/store/data/majorProjects.json:8:4:json-value",
+          "href": "https://exness.lakshaygoyal.in/"
+        }
+      ],
+      "interpretation": "Static-source candidate evidence only. Authorship is inferred from the shared header anchor 'Lakshay Goyal' and the 'Software Engineer' subtitle plus the index.html title/description; there is no per-article byline component and the blog markdown has no author field. Experience/expertise/date evidence comes from local JSON data (experiences, skills, majorProjects, books) and the App.jsx story array, which are client-rendered and not verified as displayed. Trust links are contact/social/resume/booking hrefs; citations are outbound company, GitHub, live demo, Amazon and README links. No reviews, testimonials, ratings, credentials or policy pages were observed in captured source; absence is static-source absence, not runtime absence. Observing a claim does not verify its truth."
+    },
+    {
+      "url": "/404",
+      "template": "src/App.jsx",
+      "is_dynamic": false,
+      "route_family": "/404",
+      "instance_status": "template",
+      "locale": null,
+      "coverage": {
+        "mode": "static-source",
+        "complete": false,
+        "limitations": [
+          "Client-rendered React SPA: parse_html sees only literal JSX/HTML; data-driven text is read from JSON/array declarations, not rendered DOM.",
+          "No author byline, reviewer, credential, review or policy evidence exists in captured source.",
+          "Blog list and post bodies are fetched at runtime (/blog/blog.json, /blog/<slug>.md); only one markdown instance is statically enumerable.",
+          "README.md is repository documentation, not a public page; its claims are unverified source evidence.",
+          "No production origin is assumed; hrefs are preserved as written.",
+          "Model discovery budget reached; remaining semantic investigation is unresolved. The extractor still receives the full captured snapshot."
+        ]
+      },
+      "signals": [
+        {
+          "signal": "authorship",
+          "status": "candidate_evidence",
+          "evidence": [
+            {
+              "file": "src/App.jsx",
+              "line": 432,
+              "source_id": "src/App.jsx:432:194:a",
+              "text": "Lakshay Goyal"
+            },
+            {
+              "file": "src/App.jsx",
+              "line": 433,
+              "source_id": "src/App.jsx:433:73:p",
+              "text": "Software Engineer"
+            },
+            {
+              "file": "src/App.jsx",
+              "line": 292,
+              "source_id": "src/App.jsx:292:15:h2",
+              "text": "A little about me."
+            },
+            {
+              "file": "index.html",
+              "line": 14,
+              "source_id": "index.html:14:11:title",
+              "text": "Lakshay Goyal — Software Engineer"
+            },
+            {
+              "file": "index.html",
+              "line": 7,
+              "source_id": "index.html:7:38:meta",
+              "text": "Lakshay Goyal is a Software Engineer building thoughtful mobile and web products."
+            },
+            {
+              "file": "index.html",
+              "line": 14,
+              "source_id": "index.html:14:4:title",
+              "text": "Lakshay Goyal — Software Engineer"
+            }
+          ]
+        },
+        {
+          "signal": "experience",
+          "status": "candidate_evidence",
+          "evidence": [
+            {
+              "file": "src/App.jsx",
+              "line": 111,
+              "source_id": "src/App.jsx:111:97:h2",
+              "text": "Work Experience"
+            },
+            {
+              "file": "src/App.jsx",
+              "line": 151,
+              "source_id": "src/App.jsx:151:91:h2",
+              "text": "Selected Work"
+            },
+            {
+              "file": "src/App.jsx",
+              "line": 314,
+              "source_id": "src/App.jsx:314:94:h2",
+              "text": "How I got here"
+            },
+            {
+              "file": "src/App.jsx",
+              "line": 296,
+              "source_id": "src/App.jsx:296:94:h2",
+              "text": "What keeps me curious"
+            },
+            {
+              "file": "src/App.jsx",
+              "line": 272,
+              "source_id": "src/App.jsx:272:34:p",
+              "text": "I moved from Delhi to Bangalore, helped build FOZO from the ground up, and now work on test automation at Testsigma. I care about polished interfaces, understandable systems, and work that lasts beyond a demo."
+            }
+          ]
+        },
+        {
+          "signal": "expertise",
+          "status": "candidate_evidence",
+          "evidence": [
+            {
+              "file": "src/App.jsx",
+              "line": 231,
+              "source_id": "src/App.jsx:231:91:h2",
+              "text": "Skills"
+            }
+          ]
+        },
+        {
+          "signal": "credentials",
+          "status": "candidate_evidence",
+          "evidence": [
+            {
+              "file": "src/App.jsx",
+              "line": 271,
+              "source_id": "src/App.jsx:271:4:span",
+              "text": "Super30"
+            }
+          ]
+        },
+        {
+          "signal": "trust",
+          "status": "candidate_evidence",
+          "evidence": [
+            {
+              "file": "src/components/ContactRail.jsx",
+              "line": 42,
+              "source_id": "src/components/ContactRail.jsx:42:18:a",
+              "text": "Schedule a 30-minute Google Meet"
+            }
+          ]
+        },
+        {
+          "signal": "reviews",
+          "status": "not_observed_in_static_content",
+          "evidence": []
+        },
+        {
+          "signal": "dates",
+          "status": "candidate_evidence",
+          "evidence": [
+            {
+              "file": "src/App.jsx",
+              "line": 269,
+              "source_id": "src/App.jsx:269:4:span",
+              "text": "2022–2023"
+            }
+          ]
+        },
+        {
+          "signal": "company",
+          "status": "not_observed_in_static_content",
+          "evidence": []
+        }
+      ],
+      "trust_links": [
+        {
+          "file": "src/components/ContactRail.jsx",
+          "line": 3,
+          "source_id": "src/components/ContactRail.jsx:3:15:a",
+          "href": "lakshaygoyal201@gmail.com"
+        },
+        {
+          "file": "src/components/ContactRail.jsx",
+          "line": 8,
+          "source_id": "src/components/ContactRail.jsx:8:28:a",
+          "href": "https://github.com/lakshay-goyal"
+        },
+        {
+          "file": "src/components/ContactRail.jsx",
+          "line": 9,
+          "source_id": "src/components/ContactRail.jsx:9:30:a",
+          "href": "https://www.linkedin.com/in/lakshay-goyal-9778a6246/"
+        },
+        {
+          "file": "src/components/ContactRail.jsx",
+          "line": 10,
+          "source_id": "src/components/ContactRail.jsx:10:23:a",
+          "href": "https://x.com/lakshayg2004"
+        },
+        {
+          "file": "src/components/ContactRail.jsx",
+          "line": 11,
+          "source_id": "src/components/ContactRail.jsx:11:28:a",
+          "href": "/Lakshay_Resume.pdf"
+        },
+        {
+          "file": "src/components/ContactRail.jsx",
+          "line": 4,
+          "source_id": "src/components/ContactRail.jsx:4:20:a",
+          "href": "https://cal.com/lakshay-goyal/30min?overlayCalendar=true"
+        },
+        {
+          "file": "src/components/PageRail.jsx",
+          "line": 3,
+          "source_id": "src/components/PageRail.jsx:3:12:a",
+          "href": "/about"
+        },
+        {
+          "file": "src/components/ContactRail.jsx",
+          "line": 75,
+          "source_id": "src/components/ContactRail.jsx:75:12:a",
+          "href": "{contact.href}"
+        }
+      ],
+      "citations": [],
+      "interpretation": "Static-source candidate evidence only. Authorship is inferred from the shared header anchor 'Lakshay Goyal' and the 'Software Engineer' subtitle plus the index.html title/description; there is no per-article byline component and the blog markdown has no author field. Experience/expertise/date evidence comes from local JSON data (experiences, skills, majorProjects, books) and the App.jsx story array, which are client-rendered and not verified as displayed. Trust links are contact/social/resume/booking hrefs; citations are outbound company, GitHub, live demo, Amazon and README links. No reviews, testimonials, ratings, credentials or policy pages were observed in captured source; absence is static-source absence, not runtime absence. Observing a claim does not verify its truth."
+    },
+    {
+      "url": "/about",
+      "template": "src/App.jsx",
+      "is_dynamic": false,
+      "route_family": "/about",
+      "instance_status": "template",
+      "locale": null,
+      "coverage": {
+        "mode": "static-source",
+        "complete": false,
+        "limitations": [
+          "Client-rendered React SPA: parse_html sees only literal JSX/HTML; data-driven text is read from JSON/array declarations, not rendered DOM.",
+          "No author byline, reviewer, credential, review or policy evidence exists in captured source.",
+          "Blog list and post bodies are fetched at runtime (/blog/blog.json, /blog/<slug>.md); only one markdown instance is statically enumerable.",
+          "README.md is repository documentation, not a public page; its claims are unverified source evidence.",
+          "No production origin is assumed; hrefs are preserved as written.",
+          "Model discovery budget reached; remaining semantic investigation is unresolved. The extractor still receives the full captured snapshot."
+        ]
+      },
+      "signals": [
+        {
+          "signal": "authorship",
+          "status": "candidate_evidence",
+          "evidence": [
+            {
+              "file": "src/App.jsx",
+              "line": 432,
+              "source_id": "src/App.jsx:432:194:a",
+              "text": "Lakshay Goyal"
+            },
+            {
+              "file": "src/App.jsx",
+              "line": 433,
+              "source_id": "src/App.jsx:433:73:p",
+              "text": "Software Engineer"
+            },
+            {
+              "file": "src/App.jsx",
+              "line": 292,
+              "source_id": "src/App.jsx:292:15:h2",
+              "text": "A little about me."
+            },
+            {
+              "file": "index.html",
+              "line": 14,
+              "source_id": "index.html:14:11:title",
+              "text": "Lakshay Goyal — Software Engineer"
+            },
+            {
+              "file": "index.html",
+              "line": 7,
+              "source_id": "index.html:7:38:meta",
+              "text": "Lakshay Goyal is a Software Engineer building thoughtful mobile and web products."
+            },
+            {
+              "file": "src/App.jsx",
+              "line": 292,
+              "source_id": "src/App.jsx:292:15:h2",
+              "text": "A little about me."
+            },
+            {
+              "file": "index.html",
+              "line": 14,
+              "source_id": "index.html:14:4:title",
+              "text": "Lakshay Goyal — Software Engineer"
+            }
+          ]
+        },
+        {
+          "signal": "experience",
+          "status": "candidate_evidence",
+          "evidence": [
+            {
+              "file": "src/App.jsx",
+              "line": 111,
+              "source_id": "src/App.jsx:111:97:h2",
+              "text": "Work Experience"
+            },
+            {
+              "file": "src/App.jsx",
+              "line": 151,
+              "source_id": "src/App.jsx:151:91:h2",
+              "text": "Selected Work"
+            },
+            {
+              "file": "src/App.jsx",
+              "line": 314,
+              "source_id": "src/App.jsx:314:94:h2",
+              "text": "How I got here"
+            },
+            {
+              "file": "src/App.jsx",
+              "line": 296,
+              "source_id": "src/App.jsx:296:94:h2",
+              "text": "What keeps me curious"
+            },
+            {
+              "file": "src/App.jsx",
+              "line": 272,
+              "source_id": "src/App.jsx:272:34:p",
+              "text": "I moved from Delhi to Bangalore, helped build FOZO from the ground up, and now work on test automation at Testsigma. I care about polished interfaces, understandable systems, and work that lasts beyond a demo."
+            },
+            {
+              "file": "src/App.jsx",
+              "line": 314,
+              "source_id": "src/App.jsx:314:94:h2",
+              "text": "How I got here"
+            },
+            {
+              "file": "src/App.jsx",
+              "line": 296,
+              "source_id": "src/App.jsx:296:94:h2",
+              "text": "What keeps me curious"
+            }
+          ]
+        },
+        {
+          "signal": "expertise",
+          "status": "candidate_evidence",
+          "evidence": [
+            {
+              "file": "src/App.jsx",
+              "line": 231,
+              "source_id": "src/App.jsx:231:91:h2",
+              "text": "Skills"
+            }
+          ]
+        },
+        {
+          "signal": "credentials",
+          "status": "candidate_evidence",
+          "evidence": [
+            {
+              "file": "src/App.jsx",
+              "line": 271,
+              "source_id": "src/App.jsx:271:4:span",
+              "text": "Super30"
+            },
+            {
+              "file": "src/App.jsx",
+              "line": 271,
+              "source_id": "src/App.jsx:271:4:span",
+              "text": "Super30"
+            }
+          ]
+        },
+        {
+          "signal": "trust",
+          "status": "candidate_evidence",
+          "evidence": [
+            {
+              "file": "src/components/ContactRail.jsx",
+              "line": 42,
+              "source_id": "src/components/ContactRail.jsx:42:18:a",
+              "text": "Schedule a 30-minute Google Meet"
+            }
+          ]
+        },
+        {
+          "signal": "reviews",
+          "status": "not_observed_in_static_content",
+          "evidence": []
+        },
+        {
+          "signal": "dates",
+          "status": "candidate_evidence",
+          "evidence": [
+            {
+              "file": "src/App.jsx",
+              "line": 269,
+              "source_id": "src/App.jsx:269:4:span",
+              "text": "2022–2023"
+            },
+            {
+              "file": "src/App.jsx",
+              "line": 269,
+              "source_id": "src/App.jsx:269:4:span",
+              "text": "2022–2023"
+            }
+          ]
+        },
+        {
+          "signal": "company",
+          "status": "candidate_evidence",
+          "evidence": [
+            {
+              "file": "src/App.jsx",
+              "line": 296,
+              "source_id": "src/App.jsx:296:8:h2",
+              "text": "What keeps me curious"
+            }
+          ]
+        }
+      ],
+      "trust_links": [
+        {
+          "file": "src/components/ContactRail.jsx",
+          "line": 3,
+          "source_id": "src/components/ContactRail.jsx:3:15:a",
+          "href": "lakshaygoyal201@gmail.com"
+        },
+        {
+          "file": "src/components/ContactRail.jsx",
+          "line": 8,
+          "source_id": "src/components/ContactRail.jsx:8:28:a",
+          "href": "https://github.com/lakshay-goyal"
+        },
+        {
+          "file": "src/components/ContactRail.jsx",
+          "line": 9,
+          "source_id": "src/components/ContactRail.jsx:9:30:a",
+          "href": "https://www.linkedin.com/in/lakshay-goyal-9778a6246/"
+        },
+        {
+          "file": "src/components/ContactRail.jsx",
+          "line": 10,
+          "source_id": "src/components/ContactRail.jsx:10:23:a",
+          "href": "https://x.com/lakshayg2004"
+        },
+        {
+          "file": "src/components/ContactRail.jsx",
+          "line": 11,
+          "source_id": "src/components/ContactRail.jsx:11:28:a",
+          "href": "/Lakshay_Resume.pdf"
+        },
+        {
+          "file": "src/components/ContactRail.jsx",
+          "line": 4,
+          "source_id": "src/components/ContactRail.jsx:4:20:a",
+          "href": "https://cal.com/lakshay-goyal/30min?overlayCalendar=true"
+        },
+        {
+          "file": "src/components/PageRail.jsx",
+          "line": 3,
+          "source_id": "src/components/PageRail.jsx:3:12:a",
+          "href": "/about"
+        },
+        {
+          "file": "src/components/ContactRail.jsx",
+          "line": 75,
+          "source_id": "src/components/ContactRail.jsx:75:12:a",
+          "href": "{contact.href}"
+        }
+      ],
+      "citations": [],
+      "interpretation": "Static-source candidate evidence only. Authorship is inferred from the shared header anchor 'Lakshay Goyal' and the 'Software Engineer' subtitle plus the index.html title/description; there is no per-article byline component and the blog markdown has no author field. Experience/expertise/date evidence comes from local JSON data (experiences, skills, majorProjects, books) and the App.jsx story array, which are client-rendered and not verified as displayed. Trust links are contact/social/resume/booking hrefs; citations are outbound company, GitHub, live demo, Amazon and README links. No reviews, testimonials, ratings, credentials or policy pages were observed in captured source; absence is static-source absence, not runtime absence. Observing a claim does not verify its truth."
+    },
+    {
+      "url": "/blog",
+      "template": "src/App.jsx",
+      "is_dynamic": false,
+      "route_family": "/blog",
+      "instance_status": "template",
+      "locale": null,
+      "coverage": {
+        "mode": "static-source",
+        "complete": false,
+        "limitations": [
+          "Client-rendered React SPA: parse_html sees only literal JSX/HTML; data-driven text is read from JSON/array declarations, not rendered DOM.",
+          "No author byline, reviewer, credential, review or policy evidence exists in captured source.",
+          "Blog list and post bodies are fetched at runtime (/blog/blog.json, /blog/<slug>.md); only one markdown instance is statically enumerable.",
+          "README.md is repository documentation, not a public page; its claims are unverified source evidence.",
+          "No production origin is assumed; hrefs are preserved as written.",
+          "Model discovery budget reached; remaining semantic investigation is unresolved. The extractor still receives the full captured snapshot."
+        ]
+      },
+      "signals": [
+        {
+          "signal": "authorship",
+          "status": "candidate_evidence",
+          "evidence": [
+            {
+              "file": "src/App.jsx",
+              "line": 432,
+              "source_id": "src/App.jsx:432:194:a",
+              "text": "Lakshay Goyal"
+            },
+            {
+              "file": "src/App.jsx",
+              "line": 433,
+              "source_id": "src/App.jsx:433:73:p",
+              "text": "Software Engineer"
+            },
+            {
+              "file": "src/App.jsx",
+              "line": 292,
+              "source_id": "src/App.jsx:292:15:h2",
+              "text": "A little about me."
+            },
+            {
+              "file": "index.html",
+              "line": 14,
+              "source_id": "index.html:14:11:title",
+              "text": "Lakshay Goyal — Software Engineer"
+            },
+            {
+              "file": "index.html",
+              "line": 7,
+              "source_id": "index.html:7:38:meta",
+              "text": "Lakshay Goyal is a Software Engineer building thoughtful mobile and web products."
+            },
+            {
+              "file": "public/blog/blog.json",
+              "line": 4,
+              "source_id": "public/blog/blog.json:4:8:json-value",
+              "text": "Deploying Your Site with Vercel (Dummy Blog)"
+            },
+            {
+              "file": "index.html",
+              "line": 14,
+              "source_id": "index.html:14:4:title",
+              "text": "Lakshay Goyal — Software Engineer"
+            }
+          ]
+        },
+        {
+          "signal": "experience",
+          "status": "candidate_evidence",
+          "evidence": [
+            {
+              "file": "src/App.jsx",
+              "line": 111,
+              "source_id": "src/App.jsx:111:97:h2",
+              "text": "Work Experience"
+            },
+            {
+              "file": "src/App.jsx",
+              "line": 151,
+              "source_id": "src/App.jsx:151:91:h2",
+              "text": "Selected Work"
+            },
+            {
+              "file": "src/App.jsx",
+              "line": 314,
+              "source_id": "src/App.jsx:314:94:h2",
+              "text": "How I got here"
+            },
+            {
+              "file": "src/App.jsx",
+              "line": 296,
+              "source_id": "src/App.jsx:296:94:h2",
+              "text": "What keeps me curious"
+            },
+            {
+              "file": "src/App.jsx",
+              "line": 272,
+              "source_id": "src/App.jsx:272:34:p",
+              "text": "I moved from Delhi to Bangalore, helped build FOZO from the ground up, and now work on test automation at Testsigma. I care about polished interfaces, understandable systems, and work that lasts beyond a demo."
+            }
+          ]
+        },
+        {
+          "signal": "expertise",
+          "status": "candidate_evidence",
+          "evidence": [
+            {
+              "file": "src/App.jsx",
+              "line": 231,
+              "source_id": "src/App.jsx:231:91:h2",
+              "text": "Skills"
+            }
+          ]
+        },
+        {
+          "signal": "credentials",
+          "status": "candidate_evidence",
+          "evidence": [
+            {
+              "file": "src/App.jsx",
+              "line": 271,
+              "source_id": "src/App.jsx:271:4:span",
+              "text": "Super30"
+            }
+          ]
+        },
+        {
+          "signal": "trust",
+          "status": "candidate_evidence",
+          "evidence": [
+            {
+              "file": "src/components/ContactRail.jsx",
+              "line": 42,
+              "source_id": "src/components/ContactRail.jsx:42:18:a",
+              "text": "Schedule a 30-minute Google Meet"
+            }
+          ]
+        },
+        {
+          "signal": "reviews",
+          "status": "not_observed_in_static_content",
+          "evidence": []
+        },
+        {
+          "signal": "dates",
+          "status": "candidate_evidence",
+          "evidence": [
+            {
+              "file": "src/App.jsx",
+              "line": 269,
+              "source_id": "src/App.jsx:269:4:span",
+              "text": "2022–2023"
+            },
+            {
+              "file": "public/blog/blog.json",
+              "line": 6,
+              "source_id": "public/blog/blog.json:6:8:json-value",
+              "text": "July 1, 2023"
+            }
+          ]
+        },
+        {
+          "signal": "company",
+          "status": "not_observed_in_static_content",
+          "evidence": []
+        }
+      ],
+      "trust_links": [
+        {
+          "file": "src/components/ContactRail.jsx",
+          "line": 3,
+          "source_id": "src/components/ContactRail.jsx:3:15:a",
+          "href": "lakshaygoyal201@gmail.com"
+        },
+        {
+          "file": "src/components/ContactRail.jsx",
+          "line": 8,
+          "source_id": "src/components/ContactRail.jsx:8:28:a",
+          "href": "https://github.com/lakshay-goyal"
+        },
+        {
+          "file": "src/components/ContactRail.jsx",
+          "line": 9,
+          "source_id": "src/components/ContactRail.jsx:9:30:a",
+          "href": "https://www.linkedin.com/in/lakshay-goyal-9778a6246/"
+        },
+        {
+          "file": "src/components/ContactRail.jsx",
+          "line": 10,
+          "source_id": "src/components/ContactRail.jsx:10:23:a",
+          "href": "https://x.com/lakshayg2004"
+        },
+        {
+          "file": "src/components/ContactRail.jsx",
+          "line": 11,
+          "source_id": "src/components/ContactRail.jsx:11:28:a",
+          "href": "/Lakshay_Resume.pdf"
+        },
+        {
+          "file": "src/components/ContactRail.jsx",
+          "line": 4,
+          "source_id": "src/components/ContactRail.jsx:4:20:a",
+          "href": "https://cal.com/lakshay-goyal/30min?overlayCalendar=true"
+        },
+        {
+          "file": "src/components/PageRail.jsx",
+          "line": 3,
+          "source_id": "src/components/PageRail.jsx:3:12:a",
+          "href": "/about"
+        },
+        {
+          "file": "src/components/ContactRail.jsx",
+          "line": 75,
+          "source_id": "src/components/ContactRail.jsx:75:12:a",
+          "href": "{contact.href}"
+        }
+      ],
+      "citations": [],
+      "interpretation": "Static-source candidate evidence only. Authorship is inferred from the shared header anchor 'Lakshay Goyal' and the 'Software Engineer' subtitle plus the index.html title/description; there is no per-article byline component and the blog markdown has no author field. Experience/expertise/date evidence comes from local JSON data (experiences, skills, majorProjects, books) and the App.jsx story array, which are client-rendered and not verified as displayed. Trust links are contact/social/resume/booking hrefs; citations are outbound company, GitHub, live demo, Amazon and README links. No reviews, testimonials, ratings, credentials or policy pages were observed in captured source; absence is static-source absence, not runtime absence. Observing a claim does not verify its truth."
+    },
+    {
+      "url": "/bookshelf",
+      "template": "src/App.jsx",
+      "is_dynamic": false,
+      "route_family": "/bookshelf",
+      "instance_status": "template",
+      "locale": null,
+      "coverage": {
+        "mode": "static-source",
+        "complete": false,
+        "limitations": [
+          "Client-rendered React SPA: parse_html sees only literal JSX/HTML; data-driven text is read from JSON/array declarations, not rendered DOM.",
+          "No author byline, reviewer, credential, review or policy evidence exists in captured source.",
+          "Blog list and post bodies are fetched at runtime (/blog/blog.json, /blog/<slug>.md); only one markdown instance is statically enumerable.",
+          "README.md is repository documentation, not a public page; its claims are unverified source evidence.",
+          "No production origin is assumed; hrefs are preserved as written.",
+          "Model discovery budget reached; remaining semantic investigation is unresolved. The extractor still receives the full captured snapshot."
+        ]
+      },
+      "signals": [
+        {
+          "signal": "authorship",
+          "status": "candidate_evidence",
+          "evidence": [
+            {
+              "file": "src/App.jsx",
+              "line": 432,
+              "source_id": "src/App.jsx:432:194:a",
+              "text": "Lakshay Goyal"
+            },
+            {
+              "file": "src/App.jsx",
+              "line": 433,
+              "source_id": "src/App.jsx:433:73:p",
+              "text": "Software Engineer"
+            },
+            {
+              "file": "src/App.jsx",
+              "line": 292,
+              "source_id": "src/App.jsx:292:15:h2",
+              "text": "A little about me."
+            },
+            {
+              "file": "index.html",
+              "line": 14,
+              "source_id": "index.html:14:11:title",
+              "text": "Lakshay Goyal — Software Engineer"
+            },
+            {
+              "file": "index.html",
+              "line": 7,
+              "source_id": "index.html:7:38:meta",
+              "text": "Lakshay Goyal is a Software Engineer building thoughtful mobile and web products."
+            },
+            {
+              "file": "src/store/data/books.json",
+              "line": 5,
+              "source_id": "src/store/data/books.json:5:4:json-value",
+              "text": "J Krishnamurti"
+            },
+            {
+              "file": "src/store/data/books.json",
+              "line": 5,
+              "source_id": "src/store/data/books.json:5:4:json-value",
+              "text": "Brian P. Moran, Michael Lennington"
+            },
+            {
+              "file": "index.html",
+              "line": 14,
+              "source_id": "index.html:14:4:title",
+              "text": "Lakshay Goyal — Software Engineer"
+            }
+          ]
+        },
+        {
+          "signal": "experience",
+          "status": "candidate_evidence",
+          "evidence": [
+            {
+              "file": "src/App.jsx",
+              "line": 111,
+              "source_id": "src/App.jsx:111:97:h2",
+              "text": "Work Experience"
+            },
+            {
+              "file": "src/App.jsx",
+              "line": 151,
+              "source_id": "src/App.jsx:151:91:h2",
+              "text": "Selected Work"
+            },
+            {
+              "file": "src/App.jsx",
+              "line": 314,
+              "source_id": "src/App.jsx:314:94:h2",
+              "text": "How I got here"
+            },
+            {
+              "file": "src/App.jsx",
+              "line": 296,
+              "source_id": "src/App.jsx:296:94:h2",
+              "text": "What keeps me curious"
+            },
+            {
+              "file": "src/App.jsx",
+              "line": 272,
+              "source_id": "src/App.jsx:272:34:p",
+              "text": "I moved from Delhi to Bangalore, helped build FOZO from the ground up, and now work on test automation at Testsigma. I care about polished interfaces, understandable systems, and work that lasts beyond a demo."
+            }
+          ]
+        },
+        {
+          "signal": "expertise",
+          "status": "candidate_evidence",
+          "evidence": [
+            {
+              "file": "src/App.jsx",
+              "line": 231,
+              "source_id": "src/App.jsx:231:91:h2",
+              "text": "Skills"
+            }
+          ]
+        },
+        {
+          "signal": "credentials",
+          "status": "candidate_evidence",
+          "evidence": [
+            {
+              "file": "src/App.jsx",
+              "line": 271,
+              "source_id": "src/App.jsx:271:4:span",
+              "text": "Super30"
+            }
+          ]
+        },
+        {
+          "signal": "trust",
+          "status": "candidate_evidence",
+          "evidence": [
+            {
+              "file": "src/components/ContactRail.jsx",
+              "line": 42,
+              "source_id": "src/components/ContactRail.jsx:42:18:a",
+              "text": "Schedule a 30-minute Google Meet"
+            }
+          ]
+        },
+        {
+          "signal": "reviews",
+          "status": "not_observed_in_static_content",
+          "evidence": []
+        },
+        {
+          "signal": "dates",
+          "status": "candidate_evidence",
+          "evidence": [
+            {
+              "file": "src/App.jsx",
+              "line": 269,
+              "source_id": "src/App.jsx:269:4:span",
+              "text": "2022–2023"
+            }
+          ]
+        },
+        {
+          "signal": "company",
+          "status": "not_observed_in_static_content",
+          "evidence": []
+        }
+      ],
+      "trust_links": [
+        {
+          "file": "src/components/ContactRail.jsx",
+          "line": 3,
+          "source_id": "src/components/ContactRail.jsx:3:15:a",
+          "href": "lakshaygoyal201@gmail.com"
+        },
+        {
+          "file": "src/components/ContactRail.jsx",
+          "line": 8,
+          "source_id": "src/components/ContactRail.jsx:8:28:a",
+          "href": "https://github.com/lakshay-goyal"
+        },
+        {
+          "file": "src/components/ContactRail.jsx",
+          "line": 9,
+          "source_id": "src/components/ContactRail.jsx:9:30:a",
+          "href": "https://www.linkedin.com/in/lakshay-goyal-9778a6246/"
+        },
+        {
+          "file": "src/components/ContactRail.jsx",
+          "line": 10,
+          "source_id": "src/components/ContactRail.jsx:10:23:a",
+          "href": "https://x.com/lakshayg2004"
+        },
+        {
+          "file": "src/components/ContactRail.jsx",
+          "line": 11,
+          "source_id": "src/components/ContactRail.jsx:11:28:a",
+          "href": "/Lakshay_Resume.pdf"
+        },
+        {
+          "file": "src/components/ContactRail.jsx",
+          "line": 4,
+          "source_id": "src/components/ContactRail.jsx:4:20:a",
+          "href": "https://cal.com/lakshay-goyal/30min?overlayCalendar=true"
+        },
+        {
+          "file": "src/components/PageRail.jsx",
+          "line": 3,
+          "source_id": "src/components/PageRail.jsx:3:12:a",
+          "href": "/about"
+        },
+        {
+          "file": "src/components/ContactRail.jsx",
+          "line": 75,
+          "source_id": "src/components/ContactRail.jsx:75:12:a",
+          "href": "{contact.href}"
+        }
+      ],
+      "citations": [
+        {
+          "file": "src/store/data/books.json",
+          "line": 9,
+          "source_id": "src/store/data/books.json:9:4:json-value",
+          "href": "https://www.amazon.in/Freedom-Known-J-Krishnamurti-ebook/dp/B003NX6Y6A?ref_=ast_author_mpb"
+        },
+        {
+          "file": "src/store/data/books.json",
+          "line": 9,
+          "source_id": "src/store/data/books.json:9:4:json-value",
+          "href": "https://www.amazon.in/12-Week-Year-Others-Months/dp/1118509234"
+        }
+      ],
+      "interpretation": "Static-source candidate evidence only. Authorship is inferred from the shared header anchor 'Lakshay Goyal' and the 'Software Engineer' subtitle plus the index.html title/description; there is no per-article byline component and the blog markdown has no author field. Experience/expertise/date evidence comes from local JSON data (experiences, skills, majorProjects, books) and the App.jsx story array, which are client-rendered and not verified as displayed. Trust links are contact/social/resume/booking hrefs; citations are outbound company, GitHub, live demo, Amazon and README links. No reviews, testimonials, ratings, credentials or policy pages were observed in captured source; absence is static-source absence, not runtime absence. Observing a claim does not verify its truth."
+    },
+    {
+      "url": "/blog/:slug",
+      "template": "src/App.jsx",
+      "is_dynamic": true,
+      "route_family": "/blog/:slug",
+      "instance_status": "template",
+      "locale": null,
+      "coverage": {
+        "mode": "static-source",
+        "complete": false,
+        "limitations": [
+          "Client-rendered React SPA: parse_html sees only literal JSX/HTML; data-driven text is read from JSON/array declarations, not rendered DOM.",
+          "No author byline, reviewer, credential, review or policy evidence exists in captured source.",
+          "Blog list and post bodies are fetched at runtime (/blog/blog.json, /blog/<slug>.md); only one markdown instance is statically enumerable.",
+          "README.md is repository documentation, not a public page; its claims are unverified source evidence.",
+          "No production origin is assumed; hrefs are preserved as written.",
+          "Dynamic route: only the slug 'deploying-your-site-with-vercel' is statically enumerable; other instances and their content are unknown.",
+          "Model discovery budget reached; remaining semantic investigation is unresolved. The extractor still receives the full captured snapshot."
+        ]
+      },
+      "signals": [
+        {
+          "signal": "authorship",
+          "status": "candidate_evidence",
+          "evidence": [
+            {
+              "file": "src/App.jsx",
+              "line": 432,
+              "source_id": "src/App.jsx:432:194:a",
+              "text": "Lakshay Goyal"
+            },
+            {
+              "file": "src/App.jsx",
+              "line": 433,
+              "source_id": "src/App.jsx:433:73:p",
+              "text": "Software Engineer"
+            },
+            {
+              "file": "src/App.jsx",
+              "line": 292,
+              "source_id": "src/App.jsx:292:15:h2",
+              "text": "A little about me."
+            },
+            {
+              "file": "index.html",
+              "line": 14,
+              "source_id": "index.html:14:11:title",
+              "text": "Lakshay Goyal — Software Engineer"
+            },
+            {
+              "file": "index.html",
+              "line": 7,
+              "source_id": "index.html:7:38:meta",
+              "text": "Lakshay Goyal is a Software Engineer building thoughtful mobile and web products."
+            },
+            {
+              "file": "public/blog/deploying-your-site-with-vercel.md",
+              "line": 2,
+              "source_id": "public/blog/deploying-your-site-with-vercel.md:2:0:frontmatter",
+              "text": "title: Deploying Your Site with Vercel"
+            },
+            {
+              "file": "index.html",
+              "line": 14,
+              "source_id": "index.html:14:4:title",
+              "text": "Lakshay Goyal — Software Engineer"
+            }
+          ]
+        },
+        {
+          "signal": "experience",
+          "status": "candidate_evidence",
+          "evidence": [
+            {
+              "file": "src/App.jsx",
+              "line": 111,
+              "source_id": "src/App.jsx:111:97:h2",
+              "text": "Work Experience"
+            },
+            {
+              "file": "src/App.jsx",
+              "line": 151,
+              "source_id": "src/App.jsx:151:91:h2",
+              "text": "Selected Work"
+            },
+            {
+              "file": "src/App.jsx",
+              "line": 314,
+              "source_id": "src/App.jsx:314:94:h2",
+              "text": "How I got here"
+            },
+            {
+              "file": "src/App.jsx",
+              "line": 296,
+              "source_id": "src/App.jsx:296:94:h2",
+              "text": "What keeps me curious"
+            },
+            {
+              "file": "src/App.jsx",
+              "line": 272,
+              "source_id": "src/App.jsx:272:34:p",
+              "text": "I moved from Delhi to Bangalore, helped build FOZO from the ground up, and now work on test automation at Testsigma. I care about polished interfaces, understandable systems, and work that lasts beyond a demo."
+            }
+          ]
+        },
+        {
+          "signal": "expertise",
+          "status": "candidate_evidence",
+          "evidence": [
+            {
+              "file": "src/App.jsx",
+              "line": 231,
+              "source_id": "src/App.jsx:231:91:h2",
+              "text": "Skills"
+            }
+          ]
+        },
+        {
+          "signal": "credentials",
+          "status": "candidate_evidence",
+          "evidence": [
+            {
+              "file": "src/App.jsx",
+              "line": 271,
+              "source_id": "src/App.jsx:271:4:span",
+              "text": "Super30"
+            }
+          ]
+        },
+        {
+          "signal": "trust",
+          "status": "candidate_evidence",
+          "evidence": [
+            {
+              "file": "src/components/ContactRail.jsx",
+              "line": 42,
+              "source_id": "src/components/ContactRail.jsx:42:18:a",
+              "text": "Schedule a 30-minute Google Meet"
+            }
+          ]
+        },
+        {
+          "signal": "reviews",
+          "status": "not_observed_in_static_content",
+          "evidence": []
+        },
+        {
+          "signal": "dates",
+          "status": "candidate_evidence",
+          "evidence": [
+            {
+              "file": "src/App.jsx",
+              "line": 269,
+              "source_id": "src/App.jsx:269:4:span",
+              "text": "2022–2023"
+            },
+            {
+              "file": "public/blog/deploying-your-site-with-vercel.md",
+              "line": 3,
+              "source_id": "public/blog/deploying-your-site-with-vercel.md:3:0:frontmatter",
+              "text": "date: July 1, 2023"
+            }
+          ]
+        },
+        {
+          "signal": "company",
+          "status": "not_observed_in_static_content",
+          "evidence": []
+        }
+      ],
+      "trust_links": [
+        {
+          "file": "src/components/ContactRail.jsx",
+          "line": 3,
+          "source_id": "src/components/ContactRail.jsx:3:15:a",
+          "href": "lakshaygoyal201@gmail.com"
+        },
+        {
+          "file": "src/components/ContactRail.jsx",
+          "line": 8,
+          "source_id": "src/components/ContactRail.jsx:8:28:a",
+          "href": "https://github.com/lakshay-goyal"
+        },
+        {
+          "file": "src/components/ContactRail.jsx",
+          "line": 9,
+          "source_id": "src/components/ContactRail.jsx:9:30:a",
+          "href": "https://www.linkedin.com/in/lakshay-goyal-9778a6246/"
+        },
+        {
+          "file": "src/components/ContactRail.jsx",
+          "line": 10,
+          "source_id": "src/components/ContactRail.jsx:10:23:a",
+          "href": "https://x.com/lakshayg2004"
+        },
+        {
+          "file": "src/components/ContactRail.jsx",
+          "line": 11,
+          "source_id": "src/components/ContactRail.jsx:11:28:a",
+          "href": "/Lakshay_Resume.pdf"
+        },
+        {
+          "file": "src/components/ContactRail.jsx",
+          "line": 4,
+          "source_id": "src/components/ContactRail.jsx:4:20:a",
+          "href": "https://cal.com/lakshay-goyal/30min?overlayCalendar=true"
+        },
+        {
+          "file": "src/components/PageRail.jsx",
+          "line": 3,
+          "source_id": "src/components/PageRail.jsx:3:12:a",
+          "href": "/about"
+        },
+        {
+          "file": "src/components/ContactRail.jsx",
+          "line": 75,
+          "source_id": "src/components/ContactRail.jsx:75:12:a",
+          "href": "{contact.href}"
+        }
+      ],
+      "citations": [],
+      "interpretation": "Static-source candidate evidence only. Authorship is inferred from the shared header anchor 'Lakshay Goyal' and the 'Software Engineer' subtitle plus the index.html title/description; there is no per-article byline component and the blog markdown has no author field. Experience/expertise/date evidence comes from local JSON data (experiences, skills, majorProjects, books) and the App.jsx story array, which are client-rendered and not verified as displayed. Trust links are contact/social/resume/booking hrefs; citations are outbound company, GitHub, live demo, Amazon and README links. No reviews, testimonials, ratings, credentials or policy pages were observed in captured source; absence is static-source absence, not runtime absence. Observing a claim does not verify its truth."
+    }
+  ]
+}

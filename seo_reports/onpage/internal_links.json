@@ -1,0 +1,973 @@
+{
+  "schema_version": "2.0",
+  "category": "internal_links",
+  "extraction": {
+    "framework": "React 18 SPA (Vite + Tailwind), manual pathname switch in src/App.jsx; no react-router; local JSON data in src/store/data and public/blog",
+    "router": "window.location.pathname switch in src/App.jsx App()",
+    "link_wrappers": [
+      "src/components/PageRail.jsx",
+      "src/components/ContactRail.jsx",
+      "TextLink in src/App.jsx"
+    ],
+    "data_sources": [
+      "src/store/data/experiences.json",
+      "src/store/data/majorProjects.json",
+      "src/store/data/books.json",
+      "public/blog/blog.json"
+    ],
+    "script_access": {
+      "files": [
+        "README.md",
+        "eslint.config.js",
+        "index.html",
+        "package.json",
+        "postcss.config.js",
+        "public/blog/blog.json",
+        "public/blog/deploying-your-site-with-vercel.md",
+        "src/App.jsx",
+        "src/components/ContactRail.jsx",
+        "src/components/PageRail.jsx",
+        "src/components/ScrollReveal.jsx",
+        "src/index.css",
+        "src/main.jsx",
+        "src/store/data/books.json",
+        "src/store/data/experiences.json",
+        "src/store/data/majorProjects.json",
+        "src/store/data/skills.json",
+        "tailwind.config.js",
+        "vercel.json",
+        "vite.config.js"
+      ],
+      "meaning": "Source values accessed, not proof of semantic understanding",
+      "html_parsing": {
+        "calls": 1,
+        "cache_hits": 5
+      }
+    },
+    "mode": "static-source",
+    "engine": "skill-guided-agent",
+    "verification": "passed",
+    "script_sha256": "9da38573afff30c61536140e1b0288f742452feb997a0af6859a85861f87a632",
+    "snapshot_sha256": "4cedf6d44c63840bb34fd6f1eab8e014285fc00e1b340374082b47cbc1fcc888",
+    "snapshot_limitations": [],
+    "skill_sha256": "72abe5a6af2b8a3c8a30c17fb52c2e201272886f37aa52b2357920ce84c6f529",
+    "discovery_budget": {
+      "max_model_rounds": 12,
+      "reached": false
+    }
+  },
+  "pages": [
+    {
+      "url": "/",
+      "template": "src/App.jsx",
+      "is_dynamic": false,
+      "route_family": "/",
+      "instance_status": "template",
+      "locale": null,
+      "coverage": {
+        "mode": "static-source",
+        "complete": false,
+        "limitations": [
+          "Manual pathname switch in src/App.jsx; no router manifest or <Link> components.",
+          "Runtime-fetched markdown bodies (/blog/<slug>.md) may contain links not visible in captured source.",
+          "Conditional hrefs (project.live || project.github) and computed target/rel are resolved only where data is literal.",
+          "Only one /blog/:slug instance is statically enumerable from public/blog/blog.json."
+        ]
+      },
+      "links": [
+        {
+          "file": "public/blog/blog.json",
+          "line": 5,
+          "source_id": "public/blog/blog.json:5:8:json-value",
+          "href": "/blog/deploying-your-site-with-vercel",
+          "anchor_text": "",
+          "accessible_name": "",
+          "target_url": "/blog/deploying-your-site-with-vercel",
+          "kind": "internal",
+          "rel": null,
+          "target": null
+        },
+        {
+          "file": "src/store/data/books.json",
+          "line": 9,
+          "source_id": "src/store/data/books.json:9:4:json-value",
+          "href": "https://www.amazon.in/Freedom-Known-J-Krishnamurti-ebook/dp/B003NX6Y6A?ref_=ast_author_mpb",
+          "anchor_text": "",
+          "accessible_name": "",
+          "target_url": "https://www.amazon.in/Freedom-Known-J-Krishnamurti-ebook/dp/B003NX6Y6A?ref_=ast_author_mpb",
+          "kind": "absolute-unclassified",
+          "rel": null,
+          "target": null
+        },
+        {
+          "file": "src/store/data/books.json",
+          "line": 23,
+          "source_id": "src/store/data/books.json:23:4:json-value",
+          "href": "https://www.amazon.in/12-Week-Year-Others-Months/dp/1118509234",
+          "anchor_text": "",
+          "accessible_name": "",
+          "target_url": "https://www.amazon.in/12-Week-Year-Others-Months/dp/1118509234",
+          "kind": "absolute-unclassified",
+          "rel": null,
+          "target": null
+        },
+        {
+          "file": "src/store/data/experiences.json",
+          "line": 4,
+          "source_id": "src/store/data/experiences.json:4:4:json-value",
+          "href": "https://testsigma.com/",
+          "anchor_text": "",
+          "accessible_name": "",
+          "target_url": "https://testsigma.com/",
+          "kind": "absolute-unclassified",
+          "rel": null,
+          "target": null
+        },
+        {
+          "file": "src/store/data/experiences.json",
+          "line": 12,
+          "source_id": "src/store/data/experiences.json:12:4:json-value",
+          "href": "https://getfozo.in",
+          "anchor_text": "",
+          "accessible_name": "",
+          "target_url": "https://getfozo.in",
+          "kind": "absolute-unclassified",
+          "rel": null,
+          "target": null
+        },
+        {
+          "file": "src/store/data/majorProjects.json",
+          "line": 7,
+          "source_id": "src/store/data/majorProjects.json:7:4:json-value",
+          "href": "https://github.com/lakshay-goyal/Unlovable",
+          "anchor_text": "",
+          "accessible_name": "",
+          "target_url": "https://github.com/lakshay-goyal/Unlovable",
+          "kind": "absolute-unclassified",
+          "rel": null,
+          "target": null
+        },
+        {
+          "file": "src/store/data/majorProjects.json",
+          "line": 7,
+          "source_id": "src/store/data/majorProjects.json:7:4:json-value",
+          "href": "https://github.com/lakshay-goyal/Unlovable",
+          "anchor_text": "",
+          "accessible_name": "",
+          "target_url": "https://github.com/lakshay-goyal/Unlovable",
+          "kind": "absolute-unclassified",
+          "rel": null,
+          "target": null
+        },
+        {
+          "file": "src/store/data/majorProjects.json",
+          "line": 25,
+          "source_id": "src/store/data/majorProjects.json:25:4:json-value",
+          "href": "https://github.com/lakshay-goyal/Exness",
+          "anchor_text": "",
+          "accessible_name": "",
+          "target_url": "https://github.com/lakshay-goyal/Exness",
+          "kind": "absolute-unclassified",
+          "rel": null,
+          "target": null
+        },
+        {
+          "file": "src/store/data/majorProjects.json",
+          "line": 25,
+          "source_id": "src/store/data/majorProjects.json:25:4:json-value",
+          "href": "https://github.com/lakshay-goyal/Exness",
+          "anchor_text": "",
+          "accessible_name": "",
+          "target_url": "https://github.com/lakshay-goyal/Exness",
+          "kind": "absolute-unclassified",
+          "rel": null,
+          "target": null
+        },
+        {
+          "file": "src/store/data/majorProjects.json",
+          "line": 8,
+          "source_id": "src/store/data/majorProjects.json:8:4:json-value",
+          "href": "https://unlovable.lakshaygoyal.in/",
+          "anchor_text": "",
+          "accessible_name": "",
+          "target_url": "https://unlovable.lakshaygoyal.in/",
+          "kind": "absolute-unclassified",
+          "rel": null,
+          "target": null
+        },
+        {
+          "file": "src/store/data/majorProjects.json",
+          "line": 26,
+          "source_id": "src/store/data/majorProjects.json:26:4:json-value",
+          "href": "https://exness.lakshaygoyal.in/",
+          "anchor_text": "",
+          "accessible_name": "",
+          "target_url": "https://exness.lakshaygoyal.in/",
+          "kind": "absolute-unclassified",
+          "rel": null,
+          "target": null
+        }
+      ]
+    },
+    {
+      "url": "/404",
+      "template": "src/App.jsx",
+      "is_dynamic": false,
+      "route_family": "/404",
+      "instance_status": "template",
+      "locale": null,
+      "coverage": {
+        "mode": "static-source",
+        "complete": false,
+        "limitations": [
+          "Manual pathname switch in src/App.jsx; no router manifest or <Link> components.",
+          "Runtime-fetched markdown bodies (/blog/<slug>.md) may contain links not visible in captured source.",
+          "Conditional hrefs (project.live || project.github) and computed target/rel are resolved only where data is literal.",
+          "Only one /blog/:slug instance is statically enumerable from public/blog/blog.json."
+        ]
+      },
+      "links": [
+        {
+          "file": "public/blog/blog.json",
+          "line": 5,
+          "source_id": "public/blog/blog.json:5:8:json-value",
+          "href": "/blog/deploying-your-site-with-vercel",
+          "anchor_text": "",
+          "accessible_name": "",
+          "target_url": "/blog/deploying-your-site-with-vercel",
+          "kind": "internal",
+          "rel": null,
+          "target": null
+        },
+        {
+          "file": "src/store/data/books.json",
+          "line": 9,
+          "source_id": "src/store/data/books.json:9:4:json-value",
+          "href": "https://www.amazon.in/Freedom-Known-J-Krishnamurti-ebook/dp/B003NX6Y6A?ref_=ast_author_mpb",
+          "anchor_text": "",
+          "accessible_name": "",
+          "target_url": "https://www.amazon.in/Freedom-Known-J-Krishnamurti-ebook/dp/B003NX6Y6A?ref_=ast_author_mpb",
+          "kind": "absolute-unclassified",
+          "rel": null,
+          "target": null
+        },
+        {
+          "file": "src/store/data/books.json",
+          "line": 23,
+          "source_id": "src/store/data/books.json:23:4:json-value",
+          "href": "https://www.amazon.in/12-Week-Year-Others-Months/dp/1118509234",
+          "anchor_text": "",
+          "accessible_name": "",
+          "target_url": "https://www.amazon.in/12-Week-Year-Others-Months/dp/1118509234",
+          "kind": "absolute-unclassified",
+          "rel": null,
+          "target": null
+        },
+        {
+          "file": "src/store/data/experiences.json",
+          "line": 4,
+          "source_id": "src/store/data/experiences.json:4:4:json-value",
+          "href": "https://testsigma.com/",
+          "anchor_text": "",
+          "accessible_name": "",
+          "target_url": "https://testsigma.com/",
+          "kind": "absolute-unclassified",
+          "rel": null,
+          "target": null
+        },
+        {
+          "file": "src/store/data/experiences.json",
+          "line": 12,
+          "source_id": "src/store/data/experiences.json:12:4:json-value",
+          "href": "https://getfozo.in",
+          "anchor_text": "",
+          "accessible_name": "",
+          "target_url": "https://getfozo.in",
+          "kind": "absolute-unclassified",
+          "rel": null,
+          "target": null
+        },
+        {
+          "file": "src/store/data/majorProjects.json",
+          "line": 7,
+          "source_id": "src/store/data/majorProjects.json:7:4:json-value",
+          "href": "https://github.com/lakshay-goyal/Unlovable",
+          "anchor_text": "",
+          "accessible_name": "",
+          "target_url": "https://github.com/lakshay-goyal/Unlovable",
+          "kind": "absolute-unclassified",
+          "rel": null,
+          "target": null
+        },
+        {
+          "file": "src/store/data/majorProjects.json",
+          "line": 7,
+          "source_id": "src/store/data/majorProjects.json:7:4:json-value",
+          "href": "https://github.com/lakshay-goyal/Unlovable",
+          "anchor_text": "",
+          "accessible_name": "",
+          "target_url": "https://github.com/lakshay-goyal/Unlovable",
+          "kind": "absolute-unclassified",
+          "rel": null,
+          "target": null
+        },
+        {
+          "file": "src/store/data/majorProjects.json",
+          "line": 25,
+          "source_id": "src/store/data/majorProjects.json:25:4:json-value",
+          "href": "https://github.com/lakshay-goyal/Exness",
+          "anchor_text": "",
+          "accessible_name": "",
+          "target_url": "https://github.com/lakshay-goyal/Exness",
+          "kind": "absolute-unclassified",
+          "rel": null,
+          "target": null
+        },
+        {
+          "file": "src/store/data/majorProjects.json",
+          "line": 25,
+          "source_id": "src/store/data/majorProjects.json:25:4:json-value",
+          "href": "https://github.com/lakshay-goyal/Exness",
+          "anchor_text": "",
+          "accessible_name": "",
+          "target_url": "https://github.com/lakshay-goyal/Exness",
+          "kind": "absolute-unclassified",
+          "rel": null,
+          "target": null
+        },
+        {
+          "file": "src/store/data/majorProjects.json",
+          "line": 8,
+          "source_id": "src/store/data/majorProjects.json:8:4:json-value",
+          "href": "https://unlovable.lakshaygoyal.in/",
+          "anchor_text": "",
+          "accessible_name": "",
+          "target_url": "https://unlovable.lakshaygoyal.in/",
+          "kind": "absolute-unclassified",
+          "rel": null,
+          "target": null
+        },
+        {
+          "file": "src/store/data/majorProjects.json",
+          "line": 26,
+          "source_id": "src/store/data/majorProjects.json:26:4:json-value",
+          "href": "https://exness.lakshaygoyal.in/",
+          "anchor_text": "",
+          "accessible_name": "",
+          "target_url": "https://exness.lakshaygoyal.in/",
+          "kind": "absolute-unclassified",
+          "rel": null,
+          "target": null
+        }
+      ]
+    },
+    {
+      "url": "/about",
+      "template": "src/App.jsx",
+      "is_dynamic": false,
+      "route_family": "/about",
+      "instance_status": "template",
+      "locale": null,
+      "coverage": {
+        "mode": "static-source",
+        "complete": false,
+        "limitations": [
+          "Manual pathname switch in src/App.jsx; no router manifest or <Link> components.",
+          "Runtime-fetched markdown bodies (/blog/<slug>.md) may contain links not visible in captured source.",
+          "Conditional hrefs (project.live || project.github) and computed target/rel are resolved only where data is literal.",
+          "Only one /blog/:slug instance is statically enumerable from public/blog/blog.json."
+        ]
+      },
+      "links": [
+        {
+          "file": "public/blog/blog.json",
+          "line": 5,
+          "source_id": "public/blog/blog.json:5:8:json-value",
+          "href": "/blog/deploying-your-site-with-vercel",
+          "anchor_text": "",
+          "accessible_name": "",
+          "target_url": "/blog/deploying-your-site-with-vercel",
+          "kind": "internal",
+          "rel": null,
+          "target": null
+        },
+        {
+          "file": "src/store/data/books.json",
+          "line": 9,
+          "source_id": "src/store/data/books.json:9:4:json-value",
+          "href": "https://www.amazon.in/Freedom-Known-J-Krishnamurti-ebook/dp/B003NX6Y6A?ref_=ast_author_mpb",
+          "anchor_text": "",
+          "accessible_name": "",
+          "target_url": "https://www.amazon.in/Freedom-Known-J-Krishnamurti-ebook/dp/B003NX6Y6A?ref_=ast_author_mpb",
+          "kind": "absolute-unclassified",
+          "rel": null,
+          "target": null
+        },
+        {
+          "file": "src/store/data/books.json",
+          "line": 23,
+          "source_id": "src/store/data/books.json:23:4:json-value",
+          "href": "https://www.amazon.in/12-Week-Year-Others-Months/dp/1118509234",
+          "anchor_text": "",
+          "accessible_name": "",
+          "target_url": "https://www.amazon.in/12-Week-Year-Others-Months/dp/1118509234",
+          "kind": "absolute-unclassified",
+          "rel": null,
+          "target": null
+        },
+        {
+          "file": "src/store/data/experiences.json",
+          "line": 4,
+          "source_id": "src/store/data/experiences.json:4:4:json-value",
+          "href": "https://testsigma.com/",
+          "anchor_text": "",
+          "accessible_name": "",
+          "target_url": "https://testsigma.com/",
+          "kind": "absolute-unclassified",
+          "rel": null,
+          "target": null
+        },
+        {
+          "file": "src/store/data/experiences.json",
+          "line": 12,
+          "source_id": "src/store/data/experiences.json:12:4:json-value",
+          "href": "https://getfozo.in",
+          "anchor_text": "",
+          "accessible_name": "",
+          "target_url": "https://getfozo.in",
+          "kind": "absolute-unclassified",
+          "rel": null,
+          "target": null
+        },
+        {
+          "file": "src/store/data/majorProjects.json",
+          "line": 7,
+          "source_id": "src/store/data/majorProjects.json:7:4:json-value",
+          "href": "https://github.com/lakshay-goyal/Unlovable",
+          "anchor_text": "",
+          "accessible_name": "",
+          "target_url": "https://github.com/lakshay-goyal/Unlovable",
+          "kind": "absolute-unclassified",
+          "rel": null,
+          "target": null
+        },
+        {
+          "file": "src/store/data/majorProjects.json",
+          "line": 7,
+          "source_id": "src/store/data/majorProjects.json:7:4:json-value",
+          "href": "https://github.com/lakshay-goyal/Unlovable",
+          "anchor_text": "",
+          "accessible_name": "",
+          "target_url": "https://github.com/lakshay-goyal/Unlovable",
+          "kind": "absolute-unclassified",
+          "rel": null,
+          "target": null
+        },
+        {
+          "file": "src/store/data/majorProjects.json",
+          "line": 25,
+          "source_id": "src/store/data/majorProjects.json:25:4:json-value",
+          "href": "https://github.com/lakshay-goyal/Exness",
+          "anchor_text": "",
+          "accessible_name": "",
+          "target_url": "https://github.com/lakshay-goyal/Exness",
+          "kind": "absolute-unclassified",
+          "rel": null,
+          "target": null
+        },
+        {
+          "file": "src/store/data/majorProjects.json",
+          "line": 25,
+          "source_id": "src/store/data/majorProjects.json:25:4:json-value",
+          "href": "https://github.com/lakshay-goyal/Exness",
+          "anchor_text": "",
+          "accessible_name": "",
+          "target_url": "https://github.com/lakshay-goyal/Exness",
+          "kind": "absolute-unclassified",
+          "rel": null,
+          "target": null
+        },
+        {
+          "file": "src/store/data/majorProjects.json",
+          "line": 8,
+          "source_id": "src/store/data/majorProjects.json:8:4:json-value",
+          "href": "https://unlovable.lakshaygoyal.in/",
+          "anchor_text": "",
+          "accessible_name": "",
+          "target_url": "https://unlovable.lakshaygoyal.in/",
+          "kind": "absolute-unclassified",
+          "rel": null,
+          "target": null
+        },
+        {
+          "file": "src/store/data/majorProjects.json",
+          "line": 26,
+          "source_id": "src/store/data/majorProjects.json:26:4:json-value",
+          "href": "https://exness.lakshaygoyal.in/",
+          "anchor_text": "",
+          "accessible_name": "",
+          "target_url": "https://exness.lakshaygoyal.in/",
+          "kind": "absolute-unclassified",
+          "rel": null,
+          "target": null
+        }
+      ]
+    },
+    {
+      "url": "/blog",
+      "template": "src/App.jsx",
+      "is_dynamic": false,
+      "route_family": "/blog",
+      "instance_status": "template",
+      "locale": null,
+      "coverage": {
+        "mode": "static-source",
+        "complete": false,
+        "limitations": [
+          "Manual pathname switch in src/App.jsx; no router manifest or <Link> components.",
+          "Runtime-fetched markdown bodies (/blog/<slug>.md) may contain links not visible in captured source.",
+          "Conditional hrefs (project.live || project.github) and computed target/rel are resolved only where data is literal.",
+          "Only one /blog/:slug instance is statically enumerable from public/blog/blog.json."
+        ]
+      },
+      "links": [
+        {
+          "file": "public/blog/blog.json",
+          "line": 5,
+          "source_id": "public/blog/blog.json:5:8:json-value",
+          "href": "/blog/deploying-your-site-with-vercel",
+          "anchor_text": "",
+          "accessible_name": "",
+          "target_url": "/blog/deploying-your-site-with-vercel",
+          "kind": "internal",
+          "rel": null,
+          "target": null
+        },
+        {
+          "file": "src/store/data/books.json",
+          "line": 9,
+          "source_id": "src/store/data/books.json:9:4:json-value",
+          "href": "https://www.amazon.in/Freedom-Known-J-Krishnamurti-ebook/dp/B003NX6Y6A?ref_=ast_author_mpb",
+          "anchor_text": "",
+          "accessible_name": "",
+          "target_url": "https://www.amazon.in/Freedom-Known-J-Krishnamurti-ebook/dp/B003NX6Y6A?ref_=ast_author_mpb",
+          "kind": "absolute-unclassified",
+          "rel": null,
+          "target": null
+        },
+        {
+          "file": "src/store/data/books.json",
+          "line": 23,
+          "source_id": "src/store/data/books.json:23:4:json-value",
+          "href": "https://www.amazon.in/12-Week-Year-Others-Months/dp/1118509234",
+          "anchor_text": "",
+          "accessible_name": "",
+          "target_url": "https://www.amazon.in/12-Week-Year-Others-Months/dp/1118509234",
+          "kind": "absolute-unclassified",
+          "rel": null,
+          "target": null
+        },
+        {
+          "file": "src/store/data/experiences.json",
+          "line": 4,
+          "source_id": "src/store/data/experiences.json:4:4:json-value",
+          "href": "https://testsigma.com/",
+          "anchor_text": "",
+          "accessible_name": "",
+          "target_url": "https://testsigma.com/",
+          "kind": "absolute-unclassified",
+          "rel": null,
+          "target": null
+        },
+        {
+          "file": "src/store/data/experiences.json",
+          "line": 12,
+          "source_id": "src/store/data/experiences.json:12:4:json-value",
+          "href": "https://getfozo.in",
+          "anchor_text": "",
+          "accessible_name": "",
+          "target_url": "https://getfozo.in",
+          "kind": "absolute-unclassified",
+          "rel": null,
+          "target": null
+        },
+        {
+          "file": "src/store/data/majorProjects.json",
+          "line": 7,
+          "source_id": "src/store/data/majorProjects.json:7:4:json-value",
+          "href": "https://github.com/lakshay-goyal/Unlovable",
+          "anchor_text": "",
+          "accessible_name": "",
+          "target_url": "https://github.com/lakshay-goyal/Unlovable",
+          "kind": "absolute-unclassified",
+          "rel": null,
+          "target": null
+        },
+        {
+          "file": "src/store/data/majorProjects.json",
+          "line": 7,
+          "source_id": "src/store/data/majorProjects.json:7:4:json-value",
+          "href": "https://github.com/lakshay-goyal/Unlovable",
+          "anchor_text": "",
+          "accessible_name": "",
+          "target_url": "https://github.com/lakshay-goyal/Unlovable",
+          "kind": "absolute-unclassified",
+          "rel": null,
+          "target": null
+        },
+        {
+          "file": "src/store/data/majorProjects.json",
+          "line": 25,
+          "source_id": "src/store/data/majorProjects.json:25:4:json-value",
+          "href": "https://github.com/lakshay-goyal/Exness",
+          "anchor_text": "",
+          "accessible_name": "",
+          "target_url": "https://github.com/lakshay-goyal/Exness",
+          "kind": "absolute-unclassified",
+          "rel": null,
+          "target": null
+        },
+        {
+          "file": "src/store/data/majorProjects.json",
+          "line": 25,
+          "source_id": "src/store/data/majorProjects.json:25:4:json-value",
+          "href": "https://github.com/lakshay-goyal/Exness",
+          "anchor_text": "",
+          "accessible_name": "",
+          "target_url": "https://github.com/lakshay-goyal/Exness",
+          "kind": "absolute-unclassified",
+          "rel": null,
+          "target": null
+        },
+        {
+          "file": "src/store/data/majorProjects.json",
+          "line": 8,
+          "source_id": "src/store/data/majorProjects.json:8:4:json-value",
+          "href": "https://unlovable.lakshaygoyal.in/",
+          "anchor_text": "",
+          "accessible_name": "",
+          "target_url": "https://unlovable.lakshaygoyal.in/",
+          "kind": "absolute-unclassified",
+          "rel": null,
+          "target": null
+        },
+        {
+          "file": "src/store/data/majorProjects.json",
+          "line": 26,
+          "source_id": "src/store/data/majorProjects.json:26:4:json-value",
+          "href": "https://exness.lakshaygoyal.in/",
+          "anchor_text": "",
+          "accessible_name": "",
+          "target_url": "https://exness.lakshaygoyal.in/",
+          "kind": "absolute-unclassified",
+          "rel": null,
+          "target": null
+        }
+      ]
+    },
+    {
+      "url": "/bookshelf",
+      "template": "src/App.jsx",
+      "is_dynamic": false,
+      "route_family": "/bookshelf",
+      "instance_status": "template",
+      "locale": null,
+      "coverage": {
+        "mode": "static-source",
+        "complete": false,
+        "limitations": [
+          "Manual pathname switch in src/App.jsx; no router manifest or <Link> components.",
+          "Runtime-fetched markdown bodies (/blog/<slug>.md) may contain links not visible in captured source.",
+          "Conditional hrefs (project.live || project.github) and computed target/rel are resolved only where data is literal.",
+          "Only one /blog/:slug instance is statically enumerable from public/blog/blog.json."
+        ]
+      },
+      "links": [
+        {
+          "file": "public/blog/blog.json",
+          "line": 5,
+          "source_id": "public/blog/blog.json:5:8:json-value",
+          "href": "/blog/deploying-your-site-with-vercel",
+          "anchor_text": "",
+          "accessible_name": "",
+          "target_url": "/blog/deploying-your-site-with-vercel",
+          "kind": "internal",
+          "rel": null,
+          "target": null
+        },
+        {
+          "file": "src/store/data/books.json",
+          "line": 9,
+          "source_id": "src/store/data/books.json:9:4:json-value",
+          "href": "https://www.amazon.in/Freedom-Known-J-Krishnamurti-ebook/dp/B003NX6Y6A?ref_=ast_author_mpb",
+          "anchor_text": "",
+          "accessible_name": "",
+          "target_url": "https://www.amazon.in/Freedom-Known-J-Krishnamurti-ebook/dp/B003NX6Y6A?ref_=ast_author_mpb",
+          "kind": "absolute-unclassified",
+          "rel": null,
+          "target": null
+        },
+        {
+          "file": "src/store/data/books.json",
+          "line": 23,
+          "source_id": "src/store/data/books.json:23:4:json-value",
+          "href": "https://www.amazon.in/12-Week-Year-Others-Months/dp/1118509234",
+          "anchor_text": "",
+          "accessible_name": "",
+          "target_url": "https://www.amazon.in/12-Week-Year-Others-Months/dp/1118509234",
+          "kind": "absolute-unclassified",
+          "rel": null,
+          "target": null
+        },
+        {
+          "file": "src/store/data/experiences.json",
+          "line": 4,
+          "source_id": "src/store/data/experiences.json:4:4:json-value",
+          "href": "https://testsigma.com/",
+          "anchor_text": "",
+          "accessible_name": "",
+          "target_url": "https://testsigma.com/",
+          "kind": "absolute-unclassified",
+          "rel": null,
+          "target": null
+        },
+        {
+          "file": "src/store/data/experiences.json",
+          "line": 12,
+          "source_id": "src/store/data/experiences.json:12:4:json-value",
+          "href": "https://getfozo.in",
+          "anchor_text": "",
+          "accessible_name": "",
+          "target_url": "https://getfozo.in",
+          "kind": "absolute-unclassified",
+          "rel": null,
+          "target": null
+        },
+        {
+          "file": "src/store/data/majorProjects.json",
+          "line": 7,
+          "source_id": "src/store/data/majorProjects.json:7:4:json-value",
+          "href": "https://github.com/lakshay-goyal/Unlovable",
+          "anchor_text": "",
+          "accessible_name": "",
+          "target_url": "https://github.com/lakshay-goyal/Unlovable",
+          "kind": "absolute-unclassified",
+          "rel": null,
+          "target": null
+        },
+        {
+          "file": "src/store/data/majorProjects.json",
+          "line": 7,
+          "source_id": "src/store/data/majorProjects.json:7:4:json-value",
+          "href": "https://github.com/lakshay-goyal/Unlovable",
+          "anchor_text": "",
+          "accessible_name": "",
+          "target_url": "https://github.com/lakshay-goyal/Unlovable",
+          "kind": "absolute-unclassified",
+          "rel": null,
+          "target": null
+        },
+        {
+          "file": "src/store/data/majorProjects.json",
+          "line": 25,
+          "source_id": "src/store/data/majorProjects.json:25:4:json-value",
+          "href": "https://github.com/lakshay-goyal/Exness",
+          "anchor_text": "",
+          "accessible_name": "",
+          "target_url": "https://github.com/lakshay-goyal/Exness",
+          "kind": "absolute-unclassified",
+          "rel": null,
+          "target": null
+        },
+        {
+          "file": "src/store/data/majorProjects.json",
+          "line": 25,
+          "source_id": "src/store/data/majorProjects.json:25:4:json-value",
+          "href": "https://github.com/lakshay-goyal/Exness",
+          "anchor_text": "",
+          "accessible_name": "",
+          "target_url": "https://github.com/lakshay-goyal/Exness",
+          "kind": "absolute-unclassified",
+          "rel": null,
+          "target": null
+        },
+        {
+          "file": "src/store/data/majorProjects.json",
+          "line": 8,
+          "source_id": "src/store/data/majorProjects.json:8:4:json-value",
+          "href": "https://unlovable.lakshaygoyal.in/",
+          "anchor_text": "",
+          "accessible_name": "",
+          "target_url": "https://unlovable.lakshaygoyal.in/",
+          "kind": "absolute-unclassified",
+          "rel": null,
+          "target": null
+        },
+        {
+          "file": "src/store/data/majorProjects.json",
+          "line": 26,
+          "source_id": "src/store/data/majorProjects.json:26:4:json-value",
+          "href": "https://exness.lakshaygoyal.in/",
+          "anchor_text": "",
+          "accessible_name": "",
+          "target_url": "https://exness.lakshaygoyal.in/",
+          "kind": "absolute-unclassified",
+          "rel": null,
+          "target": null
+        }
+      ]
+    },
+    {
+      "url": "/blog/:slug",
+      "template": "src/App.jsx",
+      "is_dynamic": true,
+      "route_family": "/blog/:slug",
+      "instance_status": "template",
+      "locale": null,
+      "coverage": {
+        "mode": "static-source",
+        "complete": false,
+        "limitations": [
+          "Manual pathname switch in src/App.jsx; no router manifest or <Link> components.",
+          "Runtime-fetched markdown bodies (/blog/<slug>.md) may contain links not visible in captured source.",
+          "Conditional hrefs (project.live || project.github) and computed target/rel are resolved only where data is literal.",
+          "Only one /blog/:slug instance is statically enumerable from public/blog/blog.json."
+        ]
+      },
+      "links": [
+        {
+          "file": "public/blog/blog.json",
+          "line": 5,
+          "source_id": "public/blog/blog.json:5:8:json-value",
+          "href": "/blog/deploying-your-site-with-vercel",
+          "anchor_text": "",
+          "accessible_name": "",
+          "target_url": "/blog/deploying-your-site-with-vercel",
+          "kind": "internal",
+          "rel": null,
+          "target": null
+        },
+        {
+          "file": "src/store/data/books.json",
+          "line": 9,
+          "source_id": "src/store/data/books.json:9:4:json-value",
+          "href": "https://www.amazon.in/Freedom-Known-J-Krishnamurti-ebook/dp/B003NX6Y6A?ref_=ast_author_mpb",
+          "anchor_text": "",
+          "accessible_name": "",
+          "target_url": "https://www.amazon.in/Freedom-Known-J-Krishnamurti-ebook/dp/B003NX6Y6A?ref_=ast_author_mpb",
+          "kind": "absolute-unclassified",
+          "rel": null,
+          "target": null
+        },
+        {
+          "file": "src/store/data/books.json",
+          "line": 23,
+          "source_id": "src/store/data/books.json:23:4:json-value",
+          "href": "https://www.amazon.in/12-Week-Year-Others-Months/dp/1118509234",
+          "anchor_text": "",
+          "accessible_name": "",
+          "target_url": "https://www.amazon.in/12-Week-Year-Others-Months/dp/1118509234",
+          "kind": "absolute-unclassified",
+          "rel": null,
+          "target": null
+        },
+        {
+          "file": "src/store/data/experiences.json",
+          "line": 4,
+          "source_id": "src/store/data/experiences.json:4:4:json-value",
+          "href": "https://testsigma.com/",
+          "anchor_text": "",
+          "accessible_name": "",
+          "target_url": "https://testsigma.com/",
+          "kind": "absolute-unclassified",
+          "rel": null,
+          "target": null
+        },
+        {
+          "file": "src/store/data/experiences.json",
+          "line": 12,
+          "source_id": "src/store/data/experiences.json:12:4:json-value",
+          "href": "https://getfozo.in",
+          "anchor_text": "",
+          "accessible_name": "",
+          "target_url": "https://getfozo.in",
+          "kind": "absolute-unclassified",
+          "rel": null,
+          "target": null
+        },
+        {
+          "file": "src/store/data/majorProjects.json",
+          "line": 7,
+          "source_id": "src/store/data/majorProjects.json:7:4:json-value",
+          "href": "https://github.com/lakshay-goyal/Unlovable",
+          "anchor_text": "",
+          "accessible_name": "",
+          "target_url": "https://github.com/lakshay-goyal/Unlovable",
+          "kind": "absolute-unclassified",
+          "rel": null,
+          "target": null
+        },
+        {
+          "file": "src/store/data/majorProjects.json",
+          "line": 7,
+          "source_id": "src/store/data/majorProjects.json:7:4:json-value",
+          "href": "https://github.com/lakshay-goyal/Unlovable",
+          "anchor_text": "",
+          "accessible_name": "",
+          "target_url": "https://github.com/lakshay-goyal/Unlovable",
+          "kind": "absolute-unclassified",
+          "rel": null,
+          "target": null
+        },
+        {
+          "file": "src/store/data/majorProjects.json",
+          "line": 25,
+          "source_id": "src/store/data/majorProjects.json:25:4:json-value",
+          "href": "https://github.com/lakshay-goyal/Exness",
+          "anchor_text": "",
+          "accessible_name": "",
+          "target_url": "https://github.com/lakshay-goyal/Exness",
+          "kind": "absolute-unclassified",
+          "rel": null,
+          "target": null
+        },
+        {
+          "file": "src/store/data/majorProjects.json",
+          "line": 25,
+          "source_id": "src/store/data/majorProjects.json:25:4:json-value",
+          "href": "https://github.com/lakshay-goyal/Exness",
+          "anchor_text": "",
+          "accessible_name": "",
+          "target_url": "https://github.com/lakshay-goyal/Exness",
+          "kind": "absolute-unclassified",
+          "rel": null,
+          "target": null
+        },
+        {
+          "file": "src/store/data/majorProjects.json",
+          "line": 8,
+          "source_id": "src/store/data/majorProjects.json:8:4:json-value",
+          "href": "https://unlovable.lakshaygoyal.in/",
+          "anchor_text": "",
+          "accessible_name": "",
+          "target_url": "https://unlovable.lakshaygoyal.in/",
+          "kind": "absolute-unclassified",
+          "rel": null,
+          "target": null
+        },
+        {
+          "file": "src/store/data/majorProjects.json",
+          "line": 26,
+          "source_id": "src/store/data/majorProjects.json:26:4:json-value",
+          "href": "https://exness.lakshaygoyal.in/",
+          "anchor_text": "",
+          "accessible_name": "",
+          "target_url": "https://exness.lakshaygoyal.in/",
+          "kind": "absolute-unclassified",
+          "rel": null,
+          "target": null
+        }
+      ]
+    }
+  ]
+}

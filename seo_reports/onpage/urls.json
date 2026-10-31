@@ -1,0 +1,234 @@
+{
+  "schema_version": "2.0",
+  "category": "urls",
+  "extraction": {
+    "framework": "React 18 SPA (Vite + Tailwind), client-side pathname switch in src/App.jsx; no react-router, no route manifest; SPA rewrites via vercel.json and (per README) CloudFront 403/404 -> index.html",
+    "routing": "manual pathname switch in src/App.jsx (no react-router)",
+    "entry": "index.html -> src/main.jsx -> src/App.jsx",
+    "base_path": null,
+    "origin": null,
+    "spa_fallback": "vercel.json rewrite /(.*) -> /index.html; README documents CloudFront 403/404 -> index.html",
+    "route_sources": [
+      {
+        "file": "src/App.jsx",
+        "kind": "pathname-switch"
+      },
+      {
+        "file": "src/components/PageRail.jsx",
+        "kind": "nav-hrefs"
+      },
+      {
+        "file": "public/blog/blog.json",
+        "kind": "blog-index-data"
+      }
+    ],
+    "notes": [
+      "Trailing slashes are normalized (path.replace(/\\/$/, '') || '/'), so /about/ equals /about.",
+      "No query-string navigation, hash routing, locale prefixes or redirects are declared in source.",
+      "In-page anchors observed: #work, #about-heading, #experience-heading, #more-heading, #story-heading (not separate routes)."
+    ],
+    "script_access": {
+      "files": [
+        "public/blog/blog.json",
+        "src/App.jsx",
+        "src/components/PageRail.jsx"
+      ],
+      "meaning": "Source values accessed, not proof of semantic understanding",
+      "html_parsing": {
+        "calls": 0,
+        "cache_hits": 0
+      }
+    },
+    "mode": "static-source",
+    "engine": "skill-guided-agent",
+    "verification": "passed",
+    "script_sha256": "b00697f725de7888cef23fd62b6a469c17c76cec3175f4a57b6e7324f0262b9a",
+    "snapshot_sha256": "4cedf6d44c63840bb34fd6f1eab8e014285fc00e1b340374082b47cbc1fcc888",
+    "snapshot_limitations": [],
+    "skill_sha256": "344ebc4fc44932569934c30435ff0bbd96be5515719636dd9f63be0ccac2435e",
+    "discovery_budget": {
+      "max_model_rounds": 12,
+      "reached": true
+    }
+  },
+  "pages": [
+    {
+      "url": "/",
+      "template": "src/App.jsx",
+      "is_dynamic": false,
+      "depth": 0,
+      "query_links": [],
+      "route_family": "/",
+      "instance_status": "template",
+      "locale": null,
+      "content_sources": [
+        {
+          "file": "src/App.jsx",
+          "pointer": "",
+          "kind": "route-declaration",
+          "pointer_validation": "file-reference"
+        }
+      ],
+      "coverage": {
+        "mode": "static-source",
+        "complete": false,
+        "limitations": [
+          "Route set inferred from the manual pathname switch in src/App.jsx and literal hrefs in src/components/PageRail.jsx; no router manifest, sitemap or prerender data exists in the snapshot.",
+          "No query-string navigation is declared in source; query_links is empty unless a literal query URL is observed.",
+          "Production origin/base path is not declared in source (README prose mentions https://lakshaygoyal.in); all internal hrefs are root-relative.",
+          "vercel.json rewrites /(.*) to /index.html and README describes CloudFront 403/404 -> index.html SPA fallback; server-side redirects/aliases are not enumerable from source.",
+          "Model discovery budget reached; remaining semantic investigation is unresolved. The extractor still receives the full captured snapshot."
+        ]
+      }
+    },
+    {
+      "url": "/404",
+      "template": "src/App.jsx",
+      "is_dynamic": false,
+      "depth": 1,
+      "query_links": [],
+      "route_family": "/404",
+      "instance_status": "template",
+      "locale": null,
+      "content_sources": [
+        {
+          "file": "src/App.jsx",
+          "pointer": "",
+          "kind": "fallback-declaration",
+          "pointer_validation": "file-reference"
+        }
+      ],
+      "coverage": {
+        "mode": "static-source",
+        "complete": false,
+        "limitations": [
+          "Route set inferred from the manual pathname switch in src/App.jsx and literal hrefs in src/components/PageRail.jsx; no router manifest, sitemap or prerender data exists in the snapshot.",
+          "No query-string navigation is declared in source; query_links is empty unless a literal query URL is observed.",
+          "Production origin/base path is not declared in source (README prose mentions https://lakshaygoyal.in); all internal hrefs are root-relative.",
+          "vercel.json rewrites /(.*) to /index.html and README describes CloudFront 403/404 -> index.html SPA fallback; server-side redirects/aliases are not enumerable from source.",
+          "Fallback template serves arbitrary unmatched paths; per-path depth is not statically knowable.",
+          "Fallback branch renders PageHeading eyebrow=404 title=Page not found for any unmatched pathname.",
+          "Model discovery budget reached; remaining semantic investigation is unresolved. The extractor still receives the full captured snapshot."
+        ]
+      }
+    },
+    {
+      "url": "/about",
+      "template": "src/App.jsx",
+      "is_dynamic": false,
+      "depth": 1,
+      "query_links": [],
+      "route_family": "/about",
+      "instance_status": "template",
+      "locale": null,
+      "content_sources": [
+        {
+          "file": "src/App.jsx",
+          "pointer": "",
+          "kind": "route-declaration",
+          "pointer_validation": "file-reference"
+        }
+      ],
+      "coverage": {
+        "mode": "static-source",
+        "complete": false,
+        "limitations": [
+          "Route set inferred from the manual pathname switch in src/App.jsx and literal hrefs in src/components/PageRail.jsx; no router manifest, sitemap or prerender data exists in the snapshot.",
+          "No query-string navigation is declared in source; query_links is empty unless a literal query URL is observed.",
+          "Production origin/base path is not declared in source (README prose mentions https://lakshaygoyal.in); all internal hrefs are root-relative.",
+          "vercel.json rewrites /(.*) to /index.html and README describes CloudFront 403/404 -> index.html SPA fallback; server-side redirects/aliases are not enumerable from source.",
+          "Model discovery budget reached; remaining semantic investigation is unresolved. The extractor still receives the full captured snapshot."
+        ]
+      }
+    },
+    {
+      "url": "/blog",
+      "template": "src/App.jsx",
+      "is_dynamic": false,
+      "depth": 1,
+      "query_links": [],
+      "route_family": "/blog",
+      "instance_status": "template",
+      "locale": null,
+      "content_sources": [
+        {
+          "file": "src/App.jsx",
+          "pointer": "",
+          "kind": "route-declaration",
+          "pointer_validation": "file-reference"
+        }
+      ],
+      "coverage": {
+        "mode": "static-source",
+        "complete": false,
+        "limitations": [
+          "Route set inferred from the manual pathname switch in src/App.jsx and literal hrefs in src/components/PageRail.jsx; no router manifest, sitemap or prerender data exists in the snapshot.",
+          "No query-string navigation is declared in source; query_links is empty unless a literal query URL is observed.",
+          "Production origin/base path is not declared in source (README prose mentions https://lakshaygoyal.in); all internal hrefs are root-relative.",
+          "vercel.json rewrites /(.*) to /index.html and README describes CloudFront 403/404 -> index.html SPA fallback; server-side redirects/aliases are not enumerable from source.",
+          "Model discovery budget reached; remaining semantic investigation is unresolved. The extractor still receives the full captured snapshot."
+        ]
+      }
+    },
+    {
+      "url": "/bookshelf",
+      "template": "src/App.jsx",
+      "is_dynamic": false,
+      "depth": 1,
+      "query_links": [],
+      "route_family": "/bookshelf",
+      "instance_status": "template",
+      "locale": null,
+      "content_sources": [
+        {
+          "file": "src/App.jsx",
+          "pointer": "",
+          "kind": "route-declaration",
+          "pointer_validation": "file-reference"
+        }
+      ],
+      "coverage": {
+        "mode": "static-source",
+        "complete": false,
+        "limitations": [
+          "Route set inferred from the manual pathname switch in src/App.jsx and literal hrefs in src/components/PageRail.jsx; no router manifest, sitemap or prerender data exists in the snapshot.",
+          "No query-string navigation is declared in source; query_links is empty unless a literal query URL is observed.",
+          "Production origin/base path is not declared in source (README prose mentions https://lakshaygoyal.in); all internal hrefs are root-relative.",
+          "vercel.json rewrites /(.*) to /index.html and README describes CloudFront 403/404 -> index.html SPA fallback; server-side redirects/aliases are not enumerable from source.",
+          "Model discovery budget reached; remaining semantic investigation is unresolved. The extractor still receives the full captured snapshot."
+        ]
+      }
+    },
+    {
+      "url": "/blog/:slug",
+      "template": "src/App.jsx",
+      "is_dynamic": true,
+      "depth": 2,
+      "query_links": [],
+      "route_family": "/blog/:slug",
+      "instance_status": "template",
+      "locale": null,
+      "content_sources": [
+        {
+          "file": "src/App.jsx",
+          "pointer": "",
+          "kind": "route-declaration",
+          "pointer_validation": "file-reference"
+        }
+      ],
+      "coverage": {
+        "mode": "static-source",
+        "complete": false,
+        "limitations": [
+          "Route set inferred from the manual pathname switch in src/App.jsx and literal hrefs in src/components/PageRail.jsx; no router manifest, sitemap or prerender data exists in the snapshot.",
+          "No query-string navigation is declared in source; query_links is empty unless a literal query URL is observed.",
+          "Production origin/base path is not declared in source (README prose mentions https://lakshaygoyal.in); all internal hrefs are root-relative.",
+          "vercel.json rewrites /(.*) to /index.html and README describes CloudFront 403/404 -> index.html SPA fallback; server-side redirects/aliases are not enumerable from source.",
+          "Dynamic segment values are data-driven (public/blog/blog.json and public/blog/*.md); the full instance set is unknown beyond captured files.",
+          "Prefix route /blog/ maps to BlogPostPage with slug = path.slice(6); the template row is retained because the instance set is data-driven.",
+          "Model discovery budget reached; remaining semantic investigation is unresolved. The extractor still receives the full captured snapshot."
+        ]
+      }
+    }
+  ]
+}

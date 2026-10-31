@@ -1,0 +1,1354 @@
+{
+  "schema_version": "2.0",
+  "category": "metadata",
+  "extraction": {
+    "framework": "React 18 SPA (Vite + Tailwind), manual pathname switch in src/App.jsx; no react-router, no head/metadata library (no react-helmet, no document.title writes)",
+    "head_sources": [
+      "index.html"
+    ],
+    "head_api_observed": false,
+    "route_switch_file": "src/App.jsx",
+    "entry_file": "src/main.jsx",
+    "shared_head_inherited_by_all_routes": true,
+    "notes": [
+      "index.html is the only captured head source; it is static and shared by every route.",
+      "No document.title assignment, meta/link creation or helmet/Head import was observed in captured JS/JSX.",
+      "PageHeading title/description props render body <h2>/<p> copy, not head metadata.",
+      "Blog markdown front matter (title/date/image) is stripped by BlogPostPage and never applied to the head."
+    ],
+    "script_access": {
+      "files": [
+        "eslint.config.js",
+        "index.html",
+        "postcss.config.js",
+        "public/blog/blog.json",
+        "public/blog/deploying-your-site-with-vercel.md",
+        "src/App.jsx",
+        "src/components/ContactRail.jsx",
+        "src/components/PageRail.jsx",
+        "src/components/ScrollReveal.jsx",
+        "src/main.jsx",
+        "tailwind.config.js",
+        "vite.config.js"
+      ],
+      "meaning": "Source values accessed, not proof of semantic understanding",
+      "html_parsing": {
+        "calls": 1,
+        "cache_hits": 0
+      }
+    },
+    "mode": "static-source",
+    "engine": "skill-guided-agent",
+    "verification": "passed",
+    "script_sha256": "bab6133e9fa54b3aa406d6f9a1c5fd44b77dd07e9596a3398961995ad11b39fc",
+    "snapshot_sha256": "4cedf6d44c63840bb34fd6f1eab8e014285fc00e1b340374082b47cbc1fcc888",
+    "snapshot_limitations": [],
+    "skill_sha256": "227560fbf9b144a8673a4a6875513036286630012730d73f9be4f9d293fb99f5",
+    "discovery_budget": {
+      "max_model_rounds": 12,
+      "reached": true
+    }
+  },
+  "pages": [
+    {
+      "url": "/",
+      "template": "src/App.jsx",
+      "is_dynamic": false,
+      "route_family": "/",
+      "instance_status": "template",
+      "locale": "en",
+      "content_sources": [
+        {
+          "file": "src/App.jsx",
+          "pointer": "",
+          "kind": "route-declaration",
+          "pointer_validation": "file-reference"
+        }
+      ],
+      "declarations": [
+        {
+          "file": "index.html",
+          "line": 2,
+          "source_id": "index.html:2:0:html",
+          "tag": "html",
+          "kind": "html-lang",
+          "lang": "en"
+        },
+        {
+          "file": "index.html",
+          "line": 4,
+          "source_id": "index.html:4:4:meta",
+          "tag": "meta",
+          "kind": "meta",
+          "charset": "UTF-8"
+        },
+        {
+          "file": "index.html",
+          "line": 5,
+          "source_id": "index.html:5:4:link",
+          "tag": "link",
+          "kind": "link",
+          "rel": "icon",
+          "href": "/logo.png"
+        },
+        {
+          "file": "index.html",
+          "line": 6,
+          "source_id": "index.html:6:4:meta",
+          "tag": "meta",
+          "kind": "meta",
+          "name": "viewport",
+          "content": "width=device-width, initial-scale=1.0"
+        },
+        {
+          "file": "index.html",
+          "line": 7,
+          "source_id": "index.html:7:4:meta",
+          "tag": "meta",
+          "kind": "meta",
+          "name": "description",
+          "content": "Lakshay Goyal is a Software Engineer building thoughtful mobile and web products.",
+          "description": "Lakshay Goyal is a Software Engineer building thoughtful mobile and web products."
+        },
+        {
+          "file": "index.html",
+          "line": 8,
+          "source_id": "index.html:8:4:link",
+          "tag": "link",
+          "kind": "link",
+          "rel": "preconnect",
+          "href": "https://fonts.googleapis.com"
+        },
+        {
+          "file": "index.html",
+          "line": 9,
+          "source_id": "index.html:9:4:link",
+          "tag": "link",
+          "kind": "link",
+          "rel": "preconnect",
+          "href": "https://fonts.gstatic.com",
+          "crossorigin": null
+        },
+        {
+          "file": "index.html",
+          "line": 10,
+          "source_id": "index.html:10:4:link",
+          "tag": "link",
+          "kind": "link",
+          "rel": "stylesheet",
+          "href": "https://fonts.googleapis.com/css2?family=Geist+Mono:wght@400&display=swap"
+        },
+        {
+          "file": "index.html",
+          "line": 14,
+          "source_id": "index.html:14:4:title",
+          "tag": "title",
+          "kind": "title",
+          "title": "Lakshay Goyal — Software Engineer"
+        },
+        {
+          "file": "src/App.jsx",
+          "line": 290,
+          "source_id": "src/App.jsx:290:6:PageHeading",
+          "kind": "component-prop",
+          "component": "PageHeading",
+          "note": "PageHeading renders <h2>{title}</h2> and <p>{description}</p> in the body; these props are visible copy, not document head metadata",
+          "eyebrow": "About",
+          "title": "A little about me.",
+          "description": "The curiosity that pulled me into software, and the interests that keep me exploring beyond it."
+        },
+        {
+          "file": "src/App.jsx",
+          "line": 336,
+          "source_id": "src/App.jsx:336:6:PageHeading",
+          "kind": "component-prop",
+          "component": "PageHeading",
+          "note": "PageHeading renders <h2>{title}</h2> and <p>{description}</p> in the body; these props are visible copy, not document head metadata",
+          "eyebrow": "Bookshelf",
+          "title": "Ideas I keep close.",
+          "description": "A small collection of books I’ve read and the ideas I took from them."
+        },
+        {
+          "file": "src/App.jsx",
+          "line": 371,
+          "source_id": "src/App.jsx:371:6:PageHeading",
+          "kind": "component-prop",
+          "component": "PageHeading",
+          "note": "PageHeading renders <h2>{title}</h2> and <p>{description}</p> in the body; these props are visible copy, not document head metadata",
+          "eyebrow": "Writing",
+          "title": "Blogs",
+          "description": "Notes from building, deploying, and learning software."
+        },
+        {
+          "file": "src/App.jsx",
+          "line": 424,
+          "source_id": "src/App.jsx:424:46:PageHeading",
+          "kind": "component-prop",
+          "component": "PageHeading",
+          "note": "PageHeading renders <h2>{title}</h2> and <p>{description}</p> in the body; these props are visible copy, not document head metadata",
+          "eyebrow": "404",
+          "title": "Page not found",
+          "description": "There’s nothing at this address."
+        },
+        {
+          "file": "public/blog/deploying-your-site-with-vercel.md",
+          "line": 2,
+          "source_id": "public/blog/deploying-your-site-with-vercel.md:2:0:front-matter",
+          "kind": "front-matter",
+          "key": "title",
+          "value": "Deploying Your Site with Vercel",
+          "note": "markdown front matter; BlogPostPage strips the leading --- block and never applies these values to the document head"
+        },
+        {
+          "file": "public/blog/deploying-your-site-with-vercel.md",
+          "line": 3,
+          "source_id": "public/blog/deploying-your-site-with-vercel.md:3:0:front-matter",
+          "kind": "front-matter",
+          "key": "date",
+          "value": "July 1, 2023",
+          "note": "markdown front matter; BlogPostPage strips the leading --- block and never applies these values to the document head"
+        },
+        {
+          "file": "public/blog/deploying-your-site-with-vercel.md",
+          "line": 4,
+          "source_id": "public/blog/deploying-your-site-with-vercel.md:4:0:front-matter",
+          "kind": "front-matter",
+          "key": "image",
+          "value": "https://images.unsplash.com/photo-1621839673705-6617adf9e890?q=80&w=1032&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+          "note": "markdown front matter; BlogPostPage strips the leading --- block and never applies these values to the document head"
+        },
+        {
+          "file": "public/blog/blog.json",
+          "line": 1,
+          "source_id": "public/blog/blog.json#/HTML/0/title",
+          "kind": "json-data",
+          "pointer": "/HTML/0/title",
+          "field": "title",
+          "value": "Deploying Your Site with Vercel (Dummy Blog)",
+          "note": "local JSON data rendered as visible list copy; not applied to the document head"
+        },
+        {
+          "file": "public/blog/blog.json",
+          "line": 1,
+          "source_id": "public/blog/blog.json#/HTML/0/date",
+          "kind": "json-data",
+          "pointer": "/HTML/0/date",
+          "field": "date",
+          "value": "July 1, 2023",
+          "note": "local JSON data rendered as visible list copy; not applied to the document head"
+        },
+        {
+          "file": "public/blog/blog.json",
+          "line": 1,
+          "source_id": "public/blog/blog.json#/HTML/0/link",
+          "kind": "json-data",
+          "pointer": "/HTML/0/link",
+          "field": "link",
+          "value": "/blog/deploying-your-site-with-vercel",
+          "note": "local JSON data rendered as visible list copy; not applied to the document head"
+        }
+      ],
+      "inheritance_note": "Single shared static head: index.html declares <html lang=\"en\">, meta charset, viewport, name=description, favicon, font preconnects/stylesheet and <title>Lakshay Goyal — Software Engineer</title>. src/main.jsx renders <App/> and src/App.jsx switches pages on window.location.pathname with no head API, no document.title write and no helmet/Head dependency, so all routes inherit exactly this head. PageHeading title/description props and blog front matter (title/date/image) are visible body copy or data only and are not applied to the document head. No canonical, Open Graph, Twitter card, robots or hreflang declarations were observed; no title template or generated canonical/social-image URL exists in source.",
+      "coverage": {
+        "mode": "static-source",
+        "complete": false,
+        "limitations": [
+          "Head metadata is a single static index.html <head>; this SPA has no per-route head API, so every route inherits the same title/description and no canonical, Open Graph, Twitter or robots declarations exist in source.",
+          "No head-management library (react-helmet/next-head/useHead) and no document.title assignment were observed; runtime head manipulation is not evaluated.",
+          "Production origin/base path is not declared in source (README prose mentions https://lakshaygoyal.in), so canonical/og:url values cannot be resolved.",
+          "vercel.json rewrites /(.*) to /index.html; server-side redirects/aliases are not enumerable from source.",
+          "Excluded subtrees (.agents, .git) and lockfiles were not inspected; no sitemap/robots/prerender data exists in the snapshot.",
+          "Model discovery budget reached; remaining semantic investigation is unresolved. The extractor still receives the full captured snapshot."
+        ]
+      }
+    },
+    {
+      "url": "/about",
+      "template": "src/App.jsx",
+      "is_dynamic": false,
+      "route_family": "/about",
+      "instance_status": "template",
+      "locale": "en",
+      "content_sources": [
+        {
+          "file": "src/App.jsx",
+          "pointer": "",
+          "kind": "route-declaration",
+          "pointer_validation": "file-reference"
+        }
+      ],
+      "declarations": [
+        {
+          "file": "index.html",
+          "line": 2,
+          "source_id": "index.html:2:0:html",
+          "tag": "html",
+          "kind": "html-lang",
+          "lang": "en"
+        },
+        {
+          "file": "index.html",
+          "line": 4,
+          "source_id": "index.html:4:4:meta",
+          "tag": "meta",
+          "kind": "meta",
+          "charset": "UTF-8"
+        },
+        {
+          "file": "index.html",
+          "line": 5,
+          "source_id": "index.html:5:4:link",
+          "tag": "link",
+          "kind": "link",
+          "rel": "icon",
+          "href": "/logo.png"
+        },
+        {
+          "file": "index.html",
+          "line": 6,
+          "source_id": "index.html:6:4:meta",
+          "tag": "meta",
+          "kind": "meta",
+          "name": "viewport",
+          "content": "width=device-width, initial-scale=1.0"
+        },
+        {
+          "file": "index.html",
+          "line": 7,
+          "source_id": "index.html:7:4:meta",
+          "tag": "meta",
+          "kind": "meta",
+          "name": "description",
+          "content": "Lakshay Goyal is a Software Engineer building thoughtful mobile and web products.",
+          "description": "Lakshay Goyal is a Software Engineer building thoughtful mobile and web products."
+        },
+        {
+          "file": "index.html",
+          "line": 8,
+          "source_id": "index.html:8:4:link",
+          "tag": "link",
+          "kind": "link",
+          "rel": "preconnect",
+          "href": "https://fonts.googleapis.com"
+        },
+        {
+          "file": "index.html",
+          "line": 9,
+          "source_id": "index.html:9:4:link",
+          "tag": "link",
+          "kind": "link",
+          "rel": "preconnect",
+          "href": "https://fonts.gstatic.com",
+          "crossorigin": null
+        },
+        {
+          "file": "index.html",
+          "line": 10,
+          "source_id": "index.html:10:4:link",
+          "tag": "link",
+          "kind": "link",
+          "rel": "stylesheet",
+          "href": "https://fonts.googleapis.com/css2?family=Geist+Mono:wght@400&display=swap"
+        },
+        {
+          "file": "index.html",
+          "line": 14,
+          "source_id": "index.html:14:4:title",
+          "tag": "title",
+          "kind": "title",
+          "title": "Lakshay Goyal — Software Engineer"
+        },
+        {
+          "file": "src/App.jsx",
+          "line": 290,
+          "source_id": "src/App.jsx:290:6:PageHeading",
+          "kind": "component-prop",
+          "component": "PageHeading",
+          "note": "PageHeading renders <h2>{title}</h2> and <p>{description}</p> in the body; these props are visible copy, not document head metadata",
+          "eyebrow": "About",
+          "title": "A little about me.",
+          "description": "The curiosity that pulled me into software, and the interests that keep me exploring beyond it."
+        },
+        {
+          "file": "src/App.jsx",
+          "line": 336,
+          "source_id": "src/App.jsx:336:6:PageHeading",
+          "kind": "component-prop",
+          "component": "PageHeading",
+          "note": "PageHeading renders <h2>{title}</h2> and <p>{description}</p> in the body; these props are visible copy, not document head metadata",
+          "eyebrow": "Bookshelf",
+          "title": "Ideas I keep close.",
+          "description": "A small collection of books I’ve read and the ideas I took from them."
+        },
+        {
+          "file": "src/App.jsx",
+          "line": 371,
+          "source_id": "src/App.jsx:371:6:PageHeading",
+          "kind": "component-prop",
+          "component": "PageHeading",
+          "note": "PageHeading renders <h2>{title}</h2> and <p>{description}</p> in the body; these props are visible copy, not document head metadata",
+          "eyebrow": "Writing",
+          "title": "Blogs",
+          "description": "Notes from building, deploying, and learning software."
+        },
+        {
+          "file": "src/App.jsx",
+          "line": 424,
+          "source_id": "src/App.jsx:424:46:PageHeading",
+          "kind": "component-prop",
+          "component": "PageHeading",
+          "note": "PageHeading renders <h2>{title}</h2> and <p>{description}</p> in the body; these props are visible copy, not document head metadata",
+          "eyebrow": "404",
+          "title": "Page not found",
+          "description": "There’s nothing at this address."
+        },
+        {
+          "file": "public/blog/deploying-your-site-with-vercel.md",
+          "line": 2,
+          "source_id": "public/blog/deploying-your-site-with-vercel.md:2:0:front-matter",
+          "kind": "front-matter",
+          "key": "title",
+          "value": "Deploying Your Site with Vercel",
+          "note": "markdown front matter; BlogPostPage strips the leading --- block and never applies these values to the document head"
+        },
+        {
+          "file": "public/blog/deploying-your-site-with-vercel.md",
+          "line": 3,
+          "source_id": "public/blog/deploying-your-site-with-vercel.md:3:0:front-matter",
+          "kind": "front-matter",
+          "key": "date",
+          "value": "July 1, 2023",
+          "note": "markdown front matter; BlogPostPage strips the leading --- block and never applies these values to the document head"
+        },
+        {
+          "file": "public/blog/deploying-your-site-with-vercel.md",
+          "line": 4,
+          "source_id": "public/blog/deploying-your-site-with-vercel.md:4:0:front-matter",
+          "kind": "front-matter",
+          "key": "image",
+          "value": "https://images.unsplash.com/photo-1621839673705-6617adf9e890?q=80&w=1032&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+          "note": "markdown front matter; BlogPostPage strips the leading --- block and never applies these values to the document head"
+        },
+        {
+          "file": "public/blog/blog.json",
+          "line": 1,
+          "source_id": "public/blog/blog.json#/HTML/0/title",
+          "kind": "json-data",
+          "pointer": "/HTML/0/title",
+          "field": "title",
+          "value": "Deploying Your Site with Vercel (Dummy Blog)",
+          "note": "local JSON data rendered as visible list copy; not applied to the document head"
+        },
+        {
+          "file": "public/blog/blog.json",
+          "line": 1,
+          "source_id": "public/blog/blog.json#/HTML/0/date",
+          "kind": "json-data",
+          "pointer": "/HTML/0/date",
+          "field": "date",
+          "value": "July 1, 2023",
+          "note": "local JSON data rendered as visible list copy; not applied to the document head"
+        },
+        {
+          "file": "public/blog/blog.json",
+          "line": 1,
+          "source_id": "public/blog/blog.json#/HTML/0/link",
+          "kind": "json-data",
+          "pointer": "/HTML/0/link",
+          "field": "link",
+          "value": "/blog/deploying-your-site-with-vercel",
+          "note": "local JSON data rendered as visible list copy; not applied to the document head"
+        }
+      ],
+      "inheritance_note": "Single shared static head: index.html declares <html lang=\"en\">, meta charset, viewport, name=description, favicon, font preconnects/stylesheet and <title>Lakshay Goyal — Software Engineer</title>. src/main.jsx renders <App/> and src/App.jsx switches pages on window.location.pathname with no head API, no document.title write and no helmet/Head dependency, so all routes inherit exactly this head. PageHeading title/description props and blog front matter (title/date/image) are visible body copy or data only and are not applied to the document head. No canonical, Open Graph, Twitter card, robots or hreflang declarations were observed; no title template or generated canonical/social-image URL exists in source.",
+      "coverage": {
+        "mode": "static-source",
+        "complete": false,
+        "limitations": [
+          "Head metadata is a single static index.html <head>; this SPA has no per-route head API, so every route inherits the same title/description and no canonical, Open Graph, Twitter or robots declarations exist in source.",
+          "No head-management library (react-helmet/next-head/useHead) and no document.title assignment were observed; runtime head manipulation is not evaluated.",
+          "Production origin/base path is not declared in source (README prose mentions https://lakshaygoyal.in), so canonical/og:url values cannot be resolved.",
+          "vercel.json rewrites /(.*) to /index.html; server-side redirects/aliases are not enumerable from source.",
+          "Excluded subtrees (.agents, .git) and lockfiles were not inspected; no sitemap/robots/prerender data exists in the snapshot.",
+          "Model discovery budget reached; remaining semantic investigation is unresolved. The extractor still receives the full captured snapshot."
+        ]
+      }
+    },
+    {
+      "url": "/bookshelf",
+      "template": "src/App.jsx",
+      "is_dynamic": false,
+      "route_family": "/bookshelf",
+      "instance_status": "template",
+      "locale": "en",
+      "content_sources": [
+        {
+          "file": "src/App.jsx",
+          "pointer": "",
+          "kind": "route-declaration",
+          "pointer_validation": "file-reference"
+        }
+      ],
+      "declarations": [
+        {
+          "file": "index.html",
+          "line": 2,
+          "source_id": "index.html:2:0:html",
+          "tag": "html",
+          "kind": "html-lang",
+          "lang": "en"
+        },
+        {
+          "file": "index.html",
+          "line": 4,
+          "source_id": "index.html:4:4:meta",
+          "tag": "meta",
+          "kind": "meta",
+          "charset": "UTF-8"
+        },
+        {
+          "file": "index.html",
+          "line": 5,
+          "source_id": "index.html:5:4:link",
+          "tag": "link",
+          "kind": "link",
+          "rel": "icon",
+          "href": "/logo.png"
+        },
+        {
+          "file": "index.html",
+          "line": 6,
+          "source_id": "index.html:6:4:meta",
+          "tag": "meta",
+          "kind": "meta",
+          "name": "viewport",
+          "content": "width=device-width, initial-scale=1.0"
+        },
+        {
+          "file": "index.html",
+          "line": 7,
+          "source_id": "index.html:7:4:meta",
+          "tag": "meta",
+          "kind": "meta",
+          "name": "description",
+          "content": "Lakshay Goyal is a Software Engineer building thoughtful mobile and web products.",
+          "description": "Lakshay Goyal is a Software Engineer building thoughtful mobile and web products."
+        },
+        {
+          "file": "index.html",
+          "line": 8,
+          "source_id": "index.html:8:4:link",
+          "tag": "link",
+          "kind": "link",
+          "rel": "preconnect",
+          "href": "https://fonts.googleapis.com"
+        },
+        {
+          "file": "index.html",
+          "line": 9,
+          "source_id": "index.html:9:4:link",
+          "tag": "link",
+          "kind": "link",
+          "rel": "preconnect",
+          "href": "https://fonts.gstatic.com",
+          "crossorigin": null
+        },
+        {
+          "file": "index.html",
+          "line": 10,
+          "source_id": "index.html:10:4:link",
+          "tag": "link",
+          "kind": "link",
+          "rel": "stylesheet",
+          "href": "https://fonts.googleapis.com/css2?family=Geist+Mono:wght@400&display=swap"
+        },
+        {
+          "file": "index.html",
+          "line": 14,
+          "source_id": "index.html:14:4:title",
+          "tag": "title",
+          "kind": "title",
+          "title": "Lakshay Goyal — Software Engineer"
+        },
+        {
+          "file": "src/App.jsx",
+          "line": 290,
+          "source_id": "src/App.jsx:290:6:PageHeading",
+          "kind": "component-prop",
+          "component": "PageHeading",
+          "note": "PageHeading renders <h2>{title}</h2> and <p>{description}</p> in the body; these props are visible copy, not document head metadata",
+          "eyebrow": "About",
+          "title": "A little about me.",
+          "description": "The curiosity that pulled me into software, and the interests that keep me exploring beyond it."
+        },
+        {
+          "file": "src/App.jsx",
+          "line": 336,
+          "source_id": "src/App.jsx:336:6:PageHeading",
+          "kind": "component-prop",
+          "component": "PageHeading",
+          "note": "PageHeading renders <h2>{title}</h2> and <p>{description}</p> in the body; these props are visible copy, not document head metadata",
+          "eyebrow": "Bookshelf",
+          "title": "Ideas I keep close.",
+          "description": "A small collection of books I’ve read and the ideas I took from them."
+        },
+        {
+          "file": "src/App.jsx",
+          "line": 371,
+          "source_id": "src/App.jsx:371:6:PageHeading",
+          "kind": "component-prop",
+          "component": "PageHeading",
+          "note": "PageHeading renders <h2>{title}</h2> and <p>{description}</p> in the body; these props are visible copy, not document head metadata",
+          "eyebrow": "Writing",
+          "title": "Blogs",
+          "description": "Notes from building, deploying, and learning software."
+        },
+        {
+          "file": "src/App.jsx",
+          "line": 424,
+          "source_id": "src/App.jsx:424:46:PageHeading",
+          "kind": "component-prop",
+          "component": "PageHeading",
+          "note": "PageHeading renders <h2>{title}</h2> and <p>{description}</p> in the body; these props are visible copy, not document head metadata",
+          "eyebrow": "404",
+          "title": "Page not found",
+          "description": "There’s nothing at this address."
+        },
+        {
+          "file": "public/blog/deploying-your-site-with-vercel.md",
+          "line": 2,
+          "source_id": "public/blog/deploying-your-site-with-vercel.md:2:0:front-matter",
+          "kind": "front-matter",
+          "key": "title",
+          "value": "Deploying Your Site with Vercel",
+          "note": "markdown front matter; BlogPostPage strips the leading --- block and never applies these values to the document head"
+        },
+        {
+          "file": "public/blog/deploying-your-site-with-vercel.md",
+          "line": 3,
+          "source_id": "public/blog/deploying-your-site-with-vercel.md:3:0:front-matter",
+          "kind": "front-matter",
+          "key": "date",
+          "value": "July 1, 2023",
+          "note": "markdown front matter; BlogPostPage strips the leading --- block and never applies these values to the document head"
+        },
+        {
+          "file": "public/blog/deploying-your-site-with-vercel.md",
+          "line": 4,
+          "source_id": "public/blog/deploying-your-site-with-vercel.md:4:0:front-matter",
+          "kind": "front-matter",
+          "key": "image",
+          "value": "https://images.unsplash.com/photo-1621839673705-6617adf9e890?q=80&w=1032&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+          "note": "markdown front matter; BlogPostPage strips the leading --- block and never applies these values to the document head"
+        },
+        {
+          "file": "public/blog/blog.json",
+          "line": 1,
+          "source_id": "public/blog/blog.json#/HTML/0/title",
+          "kind": "json-data",
+          "pointer": "/HTML/0/title",
+          "field": "title",
+          "value": "Deploying Your Site with Vercel (Dummy Blog)",
+          "note": "local JSON data rendered as visible list copy; not applied to the document head"
+        },
+        {
+          "file": "public/blog/blog.json",
+          "line": 1,
+          "source_id": "public/blog/blog.json#/HTML/0/date",
+          "kind": "json-data",
+          "pointer": "/HTML/0/date",
+          "field": "date",
+          "value": "July 1, 2023",
+          "note": "local JSON data rendered as visible list copy; not applied to the document head"
+        },
+        {
+          "file": "public/blog/blog.json",
+          "line": 1,
+          "source_id": "public/blog/blog.json#/HTML/0/link",
+          "kind": "json-data",
+          "pointer": "/HTML/0/link",
+          "field": "link",
+          "value": "/blog/deploying-your-site-with-vercel",
+          "note": "local JSON data rendered as visible list copy; not applied to the document head"
+        }
+      ],
+      "inheritance_note": "Single shared static head: index.html declares <html lang=\"en\">, meta charset, viewport, name=description, favicon, font preconnects/stylesheet and <title>Lakshay Goyal — Software Engineer</title>. src/main.jsx renders <App/> and src/App.jsx switches pages on window.location.pathname with no head API, no document.title write and no helmet/Head dependency, so all routes inherit exactly this head. PageHeading title/description props and blog front matter (title/date/image) are visible body copy or data only and are not applied to the document head. No canonical, Open Graph, Twitter card, robots or hreflang declarations were observed; no title template or generated canonical/social-image URL exists in source.",
+      "coverage": {
+        "mode": "static-source",
+        "complete": false,
+        "limitations": [
+          "Head metadata is a single static index.html <head>; this SPA has no per-route head API, so every route inherits the same title/description and no canonical, Open Graph, Twitter or robots declarations exist in source.",
+          "No head-management library (react-helmet/next-head/useHead) and no document.title assignment were observed; runtime head manipulation is not evaluated.",
+          "Production origin/base path is not declared in source (README prose mentions https://lakshaygoyal.in), so canonical/og:url values cannot be resolved.",
+          "vercel.json rewrites /(.*) to /index.html; server-side redirects/aliases are not enumerable from source.",
+          "Excluded subtrees (.agents, .git) and lockfiles were not inspected; no sitemap/robots/prerender data exists in the snapshot.",
+          "Model discovery budget reached; remaining semantic investigation is unresolved. The extractor still receives the full captured snapshot."
+        ]
+      }
+    },
+    {
+      "url": "/blog",
+      "template": "src/App.jsx",
+      "is_dynamic": false,
+      "route_family": "/blog",
+      "instance_status": "template",
+      "locale": "en",
+      "content_sources": [
+        {
+          "file": "src/App.jsx",
+          "pointer": "",
+          "kind": "route-declaration",
+          "pointer_validation": "file-reference"
+        },
+        {
+          "file": "public/blog/blog.json",
+          "pointer": "/HTML/0/title",
+          "kind": "list-data",
+          "pointer_validation": "resolved-json-pointer"
+        }
+      ],
+      "declarations": [
+        {
+          "file": "index.html",
+          "line": 2,
+          "source_id": "index.html:2:0:html",
+          "tag": "html",
+          "kind": "html-lang",
+          "lang": "en"
+        },
+        {
+          "file": "index.html",
+          "line": 4,
+          "source_id": "index.html:4:4:meta",
+          "tag": "meta",
+          "kind": "meta",
+          "charset": "UTF-8"
+        },
+        {
+          "file": "index.html",
+          "line": 5,
+          "source_id": "index.html:5:4:link",
+          "tag": "link",
+          "kind": "link",
+          "rel": "icon",
+          "href": "/logo.png"
+        },
+        {
+          "file": "index.html",
+          "line": 6,
+          "source_id": "index.html:6:4:meta",
+          "tag": "meta",
+          "kind": "meta",
+          "name": "viewport",
+          "content": "width=device-width, initial-scale=1.0"
+        },
+        {
+          "file": "index.html",
+          "line": 7,
+          "source_id": "index.html:7:4:meta",
+          "tag": "meta",
+          "kind": "meta",
+          "name": "description",
+          "content": "Lakshay Goyal is a Software Engineer building thoughtful mobile and web products.",
+          "description": "Lakshay Goyal is a Software Engineer building thoughtful mobile and web products."
+        },
+        {
+          "file": "index.html",
+          "line": 8,
+          "source_id": "index.html:8:4:link",
+          "tag": "link",
+          "kind": "link",
+          "rel": "preconnect",
+          "href": "https://fonts.googleapis.com"
+        },
+        {
+          "file": "index.html",
+          "line": 9,
+          "source_id": "index.html:9:4:link",
+          "tag": "link",
+          "kind": "link",
+          "rel": "preconnect",
+          "href": "https://fonts.gstatic.com",
+          "crossorigin": null
+        },
+        {
+          "file": "index.html",
+          "line": 10,
+          "source_id": "index.html:10:4:link",
+          "tag": "link",
+          "kind": "link",
+          "rel": "stylesheet",
+          "href": "https://fonts.googleapis.com/css2?family=Geist+Mono:wght@400&display=swap"
+        },
+        {
+          "file": "index.html",
+          "line": 14,
+          "source_id": "index.html:14:4:title",
+          "tag": "title",
+          "kind": "title",
+          "title": "Lakshay Goyal — Software Engineer"
+        },
+        {
+          "file": "src/App.jsx",
+          "line": 290,
+          "source_id": "src/App.jsx:290:6:PageHeading",
+          "kind": "component-prop",
+          "component": "PageHeading",
+          "note": "PageHeading renders <h2>{title}</h2> and <p>{description}</p> in the body; these props are visible copy, not document head metadata",
+          "eyebrow": "About",
+          "title": "A little about me.",
+          "description": "The curiosity that pulled me into software, and the interests that keep me exploring beyond it."
+        },
+        {
+          "file": "src/App.jsx",
+          "line": 336,
+          "source_id": "src/App.jsx:336:6:PageHeading",
+          "kind": "component-prop",
+          "component": "PageHeading",
+          "note": "PageHeading renders <h2>{title}</h2> and <p>{description}</p> in the body; these props are visible copy, not document head metadata",
+          "eyebrow": "Bookshelf",
+          "title": "Ideas I keep close.",
+          "description": "A small collection of books I’ve read and the ideas I took from them."
+        },
+        {
+          "file": "src/App.jsx",
+          "line": 371,
+          "source_id": "src/App.jsx:371:6:PageHeading",
+          "kind": "component-prop",
+          "component": "PageHeading",
+          "note": "PageHeading renders <h2>{title}</h2> and <p>{description}</p> in the body; these props are visible copy, not document head metadata",
+          "eyebrow": "Writing",
+          "title": "Blogs",
+          "description": "Notes from building, deploying, and learning software."
+        },
+        {
+          "file": "src/App.jsx",
+          "line": 424,
+          "source_id": "src/App.jsx:424:46:PageHeading",
+          "kind": "component-prop",
+          "component": "PageHeading",
+          "note": "PageHeading renders <h2>{title}</h2> and <p>{description}</p> in the body; these props are visible copy, not document head metadata",
+          "eyebrow": "404",
+          "title": "Page not found",
+          "description": "There’s nothing at this address."
+        },
+        {
+          "file": "public/blog/deploying-your-site-with-vercel.md",
+          "line": 2,
+          "source_id": "public/blog/deploying-your-site-with-vercel.md:2:0:front-matter",
+          "kind": "front-matter",
+          "key": "title",
+          "value": "Deploying Your Site with Vercel",
+          "note": "markdown front matter; BlogPostPage strips the leading --- block and never applies these values to the document head"
+        },
+        {
+          "file": "public/blog/deploying-your-site-with-vercel.md",
+          "line": 3,
+          "source_id": "public/blog/deploying-your-site-with-vercel.md:3:0:front-matter",
+          "kind": "front-matter",
+          "key": "date",
+          "value": "July 1, 2023",
+          "note": "markdown front matter; BlogPostPage strips the leading --- block and never applies these values to the document head"
+        },
+        {
+          "file": "public/blog/deploying-your-site-with-vercel.md",
+          "line": 4,
+          "source_id": "public/blog/deploying-your-site-with-vercel.md:4:0:front-matter",
+          "kind": "front-matter",
+          "key": "image",
+          "value": "https://images.unsplash.com/photo-1621839673705-6617adf9e890?q=80&w=1032&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+          "note": "markdown front matter; BlogPostPage strips the leading --- block and never applies these values to the document head"
+        },
+        {
+          "file": "public/blog/blog.json",
+          "line": 1,
+          "source_id": "public/blog/blog.json#/HTML/0/title",
+          "kind": "json-data",
+          "pointer": "/HTML/0/title",
+          "field": "title",
+          "value": "Deploying Your Site with Vercel (Dummy Blog)",
+          "note": "local JSON data rendered as visible list copy; not applied to the document head"
+        },
+        {
+          "file": "public/blog/blog.json",
+          "line": 1,
+          "source_id": "public/blog/blog.json#/HTML/0/date",
+          "kind": "json-data",
+          "pointer": "/HTML/0/date",
+          "field": "date",
+          "value": "July 1, 2023",
+          "note": "local JSON data rendered as visible list copy; not applied to the document head"
+        },
+        {
+          "file": "public/blog/blog.json",
+          "line": 1,
+          "source_id": "public/blog/blog.json#/HTML/0/link",
+          "kind": "json-data",
+          "pointer": "/HTML/0/link",
+          "field": "link",
+          "value": "/blog/deploying-your-site-with-vercel",
+          "note": "local JSON data rendered as visible list copy; not applied to the document head"
+        }
+      ],
+      "inheritance_note": "Single shared static head: index.html declares <html lang=\"en\">, meta charset, viewport, name=description, favicon, font preconnects/stylesheet and <title>Lakshay Goyal — Software Engineer</title>. src/main.jsx renders <App/> and src/App.jsx switches pages on window.location.pathname with no head API, no document.title write and no helmet/Head dependency, so all routes inherit exactly this head. PageHeading title/description props and blog front matter (title/date/image) are visible body copy or data only and are not applied to the document head. No canonical, Open Graph, Twitter card, robots or hreflang declarations were observed; no title template or generated canonical/social-image URL exists in source.",
+      "coverage": {
+        "mode": "static-source",
+        "complete": false,
+        "limitations": [
+          "Head metadata is a single static index.html <head>; this SPA has no per-route head API, so every route inherits the same title/description and no canonical, Open Graph, Twitter or robots declarations exist in source.",
+          "No head-management library (react-helmet/next-head/useHead) and no document.title assignment were observed; runtime head manipulation is not evaluated.",
+          "Production origin/base path is not declared in source (README prose mentions https://lakshaygoyal.in), so canonical/og:url values cannot be resolved.",
+          "vercel.json rewrites /(.*) to /index.html; server-side redirects/aliases are not enumerable from source.",
+          "Excluded subtrees (.agents, .git) and lockfiles were not inspected; no sitemap/robots/prerender data exists in the snapshot.",
+          "Model discovery budget reached; remaining semantic investigation is unresolved. The extractor still receives the full captured snapshot."
+        ]
+      }
+    },
+    {
+      "url": "/blog/:slug",
+      "template": "src/App.jsx",
+      "is_dynamic": true,
+      "route_family": "/blog/:slug",
+      "instance_status": "template",
+      "locale": "en",
+      "content_sources": [
+        {
+          "file": "src/App.jsx",
+          "pointer": "",
+          "kind": "route-declaration",
+          "pointer_validation": "file-reference"
+        },
+        {
+          "file": "public/blog/blog.json",
+          "pointer": "/HTML/0/link",
+          "kind": "instance-data",
+          "pointer_validation": "resolved-json-pointer"
+        },
+        {
+          "file": "public/blog/deploying-your-site-with-vercel.md",
+          "pointer": "",
+          "kind": "front-matter-source",
+          "pointer_validation": "file-reference"
+        }
+      ],
+      "declarations": [
+        {
+          "file": "index.html",
+          "line": 2,
+          "source_id": "index.html:2:0:html",
+          "tag": "html",
+          "kind": "html-lang",
+          "lang": "en"
+        },
+        {
+          "file": "index.html",
+          "line": 4,
+          "source_id": "index.html:4:4:meta",
+          "tag": "meta",
+          "kind": "meta",
+          "charset": "UTF-8"
+        },
+        {
+          "file": "index.html",
+          "line": 5,
+          "source_id": "index.html:5:4:link",
+          "tag": "link",
+          "kind": "link",
+          "rel": "icon",
+          "href": "/logo.png"
+        },
+        {
+          "file": "index.html",
+          "line": 6,
+          "source_id": "index.html:6:4:meta",
+          "tag": "meta",
+          "kind": "meta",
+          "name": "viewport",
+          "content": "width=device-width, initial-scale=1.0"
+        },
+        {
+          "file": "index.html",
+          "line": 7,
+          "source_id": "index.html:7:4:meta",
+          "tag": "meta",
+          "kind": "meta",
+          "name": "description",
+          "content": "Lakshay Goyal is a Software Engineer building thoughtful mobile and web products.",
+          "description": "Lakshay Goyal is a Software Engineer building thoughtful mobile and web products."
+        },
+        {
+          "file": "index.html",
+          "line": 8,
+          "source_id": "index.html:8:4:link",
+          "tag": "link",
+          "kind": "link",
+          "rel": "preconnect",
+          "href": "https://fonts.googleapis.com"
+        },
+        {
+          "file": "index.html",
+          "line": 9,
+          "source_id": "index.html:9:4:link",
+          "tag": "link",
+          "kind": "link",
+          "rel": "preconnect",
+          "href": "https://fonts.gstatic.com",
+          "crossorigin": null
+        },
+        {
+          "file": "index.html",
+          "line": 10,
+          "source_id": "index.html:10:4:link",
+          "tag": "link",
+          "kind": "link",
+          "rel": "stylesheet",
+          "href": "https://fonts.googleapis.com/css2?family=Geist+Mono:wght@400&display=swap"
+        },
+        {
+          "file": "index.html",
+          "line": 14,
+          "source_id": "index.html:14:4:title",
+          "tag": "title",
+          "kind": "title",
+          "title": "Lakshay Goyal — Software Engineer"
+        },
+        {
+          "file": "src/App.jsx",
+          "line": 290,
+          "source_id": "src/App.jsx:290:6:PageHeading",
+          "kind": "component-prop",
+          "component": "PageHeading",
+          "note": "PageHeading renders <h2>{title}</h2> and <p>{description}</p> in the body; these props are visible copy, not document head metadata",
+          "eyebrow": "About",
+          "title": "A little about me.",
+          "description": "The curiosity that pulled me into software, and the interests that keep me exploring beyond it."
+        },
+        {
+          "file": "src/App.jsx",
+          "line": 336,
+          "source_id": "src/App.jsx:336:6:PageHeading",
+          "kind": "component-prop",
+          "component": "PageHeading",
+          "note": "PageHeading renders <h2>{title}</h2> and <p>{description}</p> in the body; these props are visible copy, not document head metadata",
+          "eyebrow": "Bookshelf",
+          "title": "Ideas I keep close.",
+          "description": "A small collection of books I’ve read and the ideas I took from them."
+        },
+        {
+          "file": "src/App.jsx",
+          "line": 371,
+          "source_id": "src/App.jsx:371:6:PageHeading",
+          "kind": "component-prop",
+          "component": "PageHeading",
+          "note": "PageHeading renders <h2>{title}</h2> and <p>{description}</p> in the body; these props are visible copy, not document head metadata",
+          "eyebrow": "Writing",
+          "title": "Blogs",
+          "description": "Notes from building, deploying, and learning software."
+        },
+        {
+          "file": "src/App.jsx",
+          "line": 424,
+          "source_id": "src/App.jsx:424:46:PageHeading",
+          "kind": "component-prop",
+          "component": "PageHeading",
+          "note": "PageHeading renders <h2>{title}</h2> and <p>{description}</p> in the body; these props are visible copy, not document head metadata",
+          "eyebrow": "404",
+          "title": "Page not found",
+          "description": "There’s nothing at this address."
+        },
+        {
+          "file": "public/blog/deploying-your-site-with-vercel.md",
+          "line": 2,
+          "source_id": "public/blog/deploying-your-site-with-vercel.md:2:0:front-matter",
+          "kind": "front-matter",
+          "key": "title",
+          "value": "Deploying Your Site with Vercel",
+          "note": "markdown front matter; BlogPostPage strips the leading --- block and never applies these values to the document head"
+        },
+        {
+          "file": "public/blog/deploying-your-site-with-vercel.md",
+          "line": 3,
+          "source_id": "public/blog/deploying-your-site-with-vercel.md:3:0:front-matter",
+          "kind": "front-matter",
+          "key": "date",
+          "value": "July 1, 2023",
+          "note": "markdown front matter; BlogPostPage strips the leading --- block and never applies these values to the document head"
+        },
+        {
+          "file": "public/blog/deploying-your-site-with-vercel.md",
+          "line": 4,
+          "source_id": "public/blog/deploying-your-site-with-vercel.md:4:0:front-matter",
+          "kind": "front-matter",
+          "key": "image",
+          "value": "https://images.unsplash.com/photo-1621839673705-6617adf9e890?q=80&w=1032&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+          "note": "markdown front matter; BlogPostPage strips the leading --- block and never applies these values to the document head"
+        },
+        {
+          "file": "public/blog/blog.json",
+          "line": 1,
+          "source_id": "public/blog/blog.json#/HTML/0/title",
+          "kind": "json-data",
+          "pointer": "/HTML/0/title",
+          "field": "title",
+          "value": "Deploying Your Site with Vercel (Dummy Blog)",
+          "note": "local JSON data rendered as visible list copy; not applied to the document head"
+        },
+        {
+          "file": "public/blog/blog.json",
+          "line": 1,
+          "source_id": "public/blog/blog.json#/HTML/0/date",
+          "kind": "json-data",
+          "pointer": "/HTML/0/date",
+          "field": "date",
+          "value": "July 1, 2023",
+          "note": "local JSON data rendered as visible list copy; not applied to the document head"
+        },
+        {
+          "file": "public/blog/blog.json",
+          "line": 1,
+          "source_id": "public/blog/blog.json#/HTML/0/link",
+          "kind": "json-data",
+          "pointer": "/HTML/0/link",
+          "field": "link",
+          "value": "/blog/deploying-your-site-with-vercel",
+          "note": "local JSON data rendered as visible list copy; not applied to the document head"
+        },
+        {
+          "file": "public/blog/blog.json",
+          "line": 1,
+          "source_id": "public/blog/blog.json#/HTML/0/link",
+          "kind": "instance-route",
+          "route": "/blog/deploying-your-site-with-vercel",
+          "note": "concrete instance of the /blog/:slug template enumerated from local data; head metadata is still the shared static head"
+        }
+      ],
+      "inheritance_note": "Single shared static head: index.html declares <html lang=\"en\">, meta charset, viewport, name=description, favicon, font preconnects/stylesheet and <title>Lakshay Goyal — Software Engineer</title>. src/main.jsx renders <App/> and src/App.jsx switches pages on window.location.pathname with no head API, no document.title write and no helmet/Head dependency, so all routes inherit exactly this head. PageHeading title/description props and blog front matter (title/date/image) are visible body copy or data only and are not applied to the document head. No canonical, Open Graph, Twitter card, robots or hreflang declarations were observed; no title template or generated canonical/social-image URL exists in source.",
+      "coverage": {
+        "mode": "static-source",
+        "complete": false,
+        "limitations": [
+          "Head metadata is a single static index.html <head>; this SPA has no per-route head API, so every route inherits the same title/description and no canonical, Open Graph, Twitter or robots declarations exist in source.",
+          "No head-management library (react-helmet/next-head/useHead) and no document.title assignment were observed; runtime head manipulation is not evaluated.",
+          "Production origin/base path is not declared in source (README prose mentions https://lakshaygoyal.in), so canonical/og:url values cannot be resolved.",
+          "vercel.json rewrites /(.*) to /index.html; server-side redirects/aliases are not enumerable from source.",
+          "Excluded subtrees (.agents, .git) and lockfiles were not inspected; no sitemap/robots/prerender data exists in the snapshot.",
+          "Dynamic segment values are data-driven (public/blog/blog.json and public/blog/*.md); the full instance set is unknown beyond captured files, and markdown front matter is stripped rather than applied to the head.",
+          "Model discovery budget reached; remaining semantic investigation is unresolved. The extractor still receives the full captured snapshot."
+        ]
+      }
+    },
+    {
+      "url": "/404",
+      "template": "src/App.jsx",
+      "is_dynamic": false,
+      "route_family": "/404",
+      "instance_status": "template",
+      "locale": "en",
+      "content_sources": [
+        {
+          "file": "src/App.jsx",
+          "pointer": "",
+          "kind": "route-declaration",
+          "pointer_validation": "file-reference"
+        }
+      ],
+      "declarations": [
+        {
+          "file": "index.html",
+          "line": 2,
+          "source_id": "index.html:2:0:html",
+          "tag": "html",
+          "kind": "html-lang",
+          "lang": "en"
+        },
+        {
+          "file": "index.html",
+          "line": 4,
+          "source_id": "index.html:4:4:meta",
+          "tag": "meta",
+          "kind": "meta",
+          "charset": "UTF-8"
+        },
+        {
+          "file": "index.html",
+          "line": 5,
+          "source_id": "index.html:5:4:link",
+          "tag": "link",
+          "kind": "link",
+          "rel": "icon",
+          "href": "/logo.png"
+        },
+        {
+          "file": "index.html",
+          "line": 6,
+          "source_id": "index.html:6:4:meta",
+          "tag": "meta",
+          "kind": "meta",
+          "name": "viewport",
+          "content": "width=device-width, initial-scale=1.0"
+        },
+        {
+          "file": "index.html",
+          "line": 7,
+          "source_id": "index.html:7:4:meta",
+          "tag": "meta",
+          "kind": "meta",
+          "name": "description",
+          "content": "Lakshay Goyal is a Software Engineer building thoughtful mobile and web products.",
+          "description": "Lakshay Goyal is a Software Engineer building thoughtful mobile and web products."
+        },
+        {
+          "file": "index.html",
+          "line": 8,
+          "source_id": "index.html:8:4:link",
+          "tag": "link",
+          "kind": "link",
+          "rel": "preconnect",
+          "href": "https://fonts.googleapis.com"
+        },
+        {
+          "file": "index.html",
+          "line": 9,
+          "source_id": "index.html:9:4:link",
+          "tag": "link",
+          "kind": "link",
+          "rel": "preconnect",
+          "href": "https://fonts.gstatic.com",
+          "crossorigin": null
+        },
+        {
+          "file": "index.html",
+          "line": 10,
+          "source_id": "index.html:10:4:link",
+          "tag": "link",
+          "kind": "link",
+          "rel": "stylesheet",
+          "href": "https://fonts.googleapis.com/css2?family=Geist+Mono:wght@400&display=swap"
+        },
+        {
+          "file": "index.html",
+          "line": 14,
+          "source_id": "index.html:14:4:title",
+          "tag": "title",
+          "kind": "title",
+          "title": "Lakshay Goyal — Software Engineer"
+        },
+        {
+          "file": "src/App.jsx",
+          "line": 290,
+          "source_id": "src/App.jsx:290:6:PageHeading",
+          "kind": "component-prop",
+          "component": "PageHeading",
+          "note": "PageHeading renders <h2>{title}</h2> and <p>{description}</p> in the body; these props are visible copy, not document head metadata",
+          "eyebrow": "About",
+          "title": "A little about me.",
+          "description": "The curiosity that pulled me into software, and the interests that keep me exploring beyond it."
+        },
+        {
+          "file": "src/App.jsx",
+          "line": 336,
+          "source_id": "src/App.jsx:336:6:PageHeading",
+          "kind": "component-prop",
+          "component": "PageHeading",
+          "note": "PageHeading renders <h2>{title}</h2> and <p>{description}</p> in the body; these props are visible copy, not document head metadata",
+          "eyebrow": "Bookshelf",
+          "title": "Ideas I keep close.",
+          "description": "A small collection of books I’ve read and the ideas I took from them."
+        },
+        {
+          "file": "src/App.jsx",
+          "line": 371,
+          "source_id": "src/App.jsx:371:6:PageHeading",
+          "kind": "component-prop",
+          "component": "PageHeading",
+          "note": "PageHeading renders <h2>{title}</h2> and <p>{description}</p> in the body; these props are visible copy, not document head metadata",
+          "eyebrow": "Writing",
+          "title": "Blogs",
+          "description": "Notes from building, deploying, and learning software."
+        },
+        {
+          "file": "src/App.jsx",
+          "line": 424,
+          "source_id": "src/App.jsx:424:46:PageHeading",
+          "kind": "component-prop",
+          "component": "PageHeading",
+          "note": "PageHeading renders <h2>{title}</h2> and <p>{description}</p> in the body; these props are visible copy, not document head metadata",
+          "eyebrow": "404",
+          "title": "Page not found",
+          "description": "There’s nothing at this address."
+        },
+        {
+          "file": "public/blog/deploying-your-site-with-vercel.md",
+          "line": 2,
+          "source_id": "public/blog/deploying-your-site-with-vercel.md:2:0:front-matter",
+          "kind": "front-matter",
+          "key": "title",
+          "value": "Deploying Your Site with Vercel",
+          "note": "markdown front matter; BlogPostPage strips the leading --- block and never applies these values to the document head"
+        },
+        {
+          "file": "public/blog/deploying-your-site-with-vercel.md",
+          "line": 3,
+          "source_id": "public/blog/deploying-your-site-with-vercel.md:3:0:front-matter",
+          "kind": "front-matter",
+          "key": "date",
+          "value": "July 1, 2023",
+          "note": "markdown front matter; BlogPostPage strips the leading --- block and never applies these values to the document head"
+        },
+        {
+          "file": "public/blog/deploying-your-site-with-vercel.md",
+          "line": 4,
+          "source_id": "public/blog/deploying-your-site-with-vercel.md:4:0:front-matter",
+          "kind": "front-matter",
+          "key": "image",
+          "value": "https://images.unsplash.com/photo-1621839673705-6617adf9e890?q=80&w=1032&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+          "note": "markdown front matter; BlogPostPage strips the leading --- block and never applies these values to the document head"
+        },
+        {
+          "file": "public/blog/blog.json",
+          "line": 1,
+          "source_id": "public/blog/blog.json#/HTML/0/title",
+          "kind": "json-data",
+          "pointer": "/HTML/0/title",
+          "field": "title",
+          "value": "Deploying Your Site with Vercel (Dummy Blog)",
+          "note": "local JSON data rendered as visible list copy; not applied to the document head"
+        },
+        {
+          "file": "public/blog/blog.json",
+          "line": 1,
+          "source_id": "public/blog/blog.json#/HTML/0/date",
+          "kind": "json-data",
+          "pointer": "/HTML/0/date",
+          "field": "date",
+          "value": "July 1, 2023",
+          "note": "local JSON data rendered as visible list copy; not applied to the document head"
+        },
+        {
+          "file": "public/blog/blog.json",
+          "line": 1,
+          "source_id": "public/blog/blog.json#/HTML/0/link",
+          "kind": "json-data",
+          "pointer": "/HTML/0/link",
+          "field": "link",
+          "value": "/blog/deploying-your-site-with-vercel",
+          "note": "local JSON data rendered as visible list copy; not applied to the document head"
+        }
+      ],
+      "inheritance_note": "Single shared static head: index.html declares <html lang=\"en\">, meta charset, viewport, name=description, favicon, font preconnects/stylesheet and <title>Lakshay Goyal — Software Engineer</title>. src/main.jsx renders <App/> and src/App.jsx switches pages on window.location.pathname with no head API, no document.title write and no helmet/Head dependency, so all routes inherit exactly this head. PageHeading title/description props and blog front matter (title/date/image) are visible body copy or data only and are not applied to the document head. No canonical, Open Graph, Twitter card, robots or hreflang declarations were observed; no title template or generated canonical/social-image URL exists in source.",
+      "coverage": {
+        "mode": "static-source",
+        "complete": false,
+        "limitations": [
+          "Head metadata is a single static index.html <head>; this SPA has no per-route head API, so every route inherits the same title/description and no canonical, Open Graph, Twitter or robots declarations exist in source.",
+          "No head-management library (react-helmet/next-head/useHead) and no document.title assignment were observed; runtime head manipulation is not evaluated.",
+          "Production origin/base path is not declared in source (README prose mentions https://lakshaygoyal.in), so canonical/og:url values cannot be resolved.",
+          "vercel.json rewrites /(.*) to /index.html; server-side redirects/aliases are not enumerable from source.",
+          "Excluded subtrees (.agents, .git) and lockfiles were not inspected; no sitemap/robots/prerender data exists in the snapshot.",
+          "The 404 fallback serves arbitrary unmatched paths; per-path head metadata is identical to the shared static head.",
+          "Model discovery budget reached; remaining semantic investigation is unresolved. The extractor still receives the full captured snapshot."
+        ]
+      }
+    }
+  ]
+}
