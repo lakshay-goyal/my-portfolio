@@ -1,0 +1,690 @@
+{
+  "schema_version": "2.0",
+  "category": "page_structure",
+  "extraction": {
+    "framework": "React 18 SPA built with Vite 5 (no router library; hand-rolled pathname ternary switch in src/App.jsx), single index.html shell, Vercel SPA rewrite",
+    "routing": "src/App.jsx ternary chain on window.location.pathname; vercel.json SPA rewrite",
+    "entry": "index.html -> src/main.jsx -> src/App.jsx",
+    "shared_shell": "App() <main> + <header> + PageRail <nav> + ContactRail <aside>/<nav>",
+    "heading_note": "No <h1> in captured source; page titles render as <h2> via PageHeading",
+    "script_access": {
+      "files": [
+        "index.html",
+        "public/blog/blog.json",
+        "public/blog/deploying-your-site-with-vercel.md",
+        "src/App.jsx",
+        "src/components/ContactRail.jsx",
+        "src/components/PageRail.jsx",
+        "src/store/data/books.json"
+      ],
+      "meaning": "Source values accessed, not proof of semantic understanding",
+      "html_parsing": {
+        "calls": 0,
+        "cache_hits": 0
+      }
+    },
+    "mode": "static-source",
+    "engine": "skill-guided-agent",
+    "verification": "passed",
+    "script_sha256": "c0e0ba2b57a8378ffb764a84b542f5d9ce8b54cf1d3e1e8155a65ec5bc560324",
+    "snapshot_sha256": "50b9f780e2de9e5d17ea2ddeea47cfa88c06c79589aae40585e39187fe3a24d1",
+    "snapshot_limitations": [],
+    "skill_sha256": "9b97ef87a08352c7a01d11ded6db720456d1e111087415b3dcec47d33b1b7ca1",
+    "discovery_budget": {
+      "max_model_rounds": 12,
+      "reached": true
+    }
+  },
+  "pages": [
+    {
+      "url": "/",
+      "template": "src/App.jsx",
+      "is_dynamic": false,
+      "route_family": "/",
+      "instance_status": "concrete",
+      "locale": "en",
+      "headings": [
+        {
+          "file": "src/App.jsx",
+          "line": 111,
+          "source_id": "src/App.jsx:111:6:h2",
+          "level": 2,
+          "text": "Work Experience"
+        },
+        {
+          "file": "src/App.jsx",
+          "line": 151,
+          "source_id": "src/App.jsx:151:6:h2",
+          "level": 2,
+          "text": "Selected Work"
+        },
+        {
+          "file": "src/App.jsx",
+          "line": 171,
+          "source_id": "src/App.jsx:171:14:h3",
+          "level": 3,
+          "text": "TextLink href= /TextLink"
+        },
+        {
+          "file": "src/App.jsx",
+          "line": 189,
+          "source_id": "src/App.jsx:189:16:h3",
+          "level": 3,
+          "text": ""
+        },
+        {
+          "file": "src/App.jsx",
+          "line": 231,
+          "source_id": "src/App.jsx:231:6:h2",
+          "level": 2,
+          "text": "Skills"
+        },
+        {
+          "file": "src/App.jsx",
+          "line": 252,
+          "source_id": "src/App.jsx:252:10:h2",
+          "level": 2,
+          "text": "About"
+        }
+      ],
+      "landmarks": [
+        {
+          "file": "src/App.jsx",
+          "line": 110,
+          "source_id": "src/App.jsx:110:4:section",
+          "landmarks": {
+            "section": 1
+          }
+        },
+        {
+          "file": "src/App.jsx",
+          "line": 114,
+          "source_id": "src/App.jsx:114:10:article",
+          "landmarks": {
+            "article": 1
+          }
+        },
+        {
+          "file": "src/App.jsx",
+          "line": 150,
+          "source_id": "src/App.jsx:150:4:section",
+          "landmarks": {
+            "section": 1
+          }
+        },
+        {
+          "file": "src/App.jsx",
+          "line": 154,
+          "source_id": "src/App.jsx:154:10:article",
+          "landmarks": {
+            "article": 1
+          }
+        },
+        {
+          "file": "src/App.jsx",
+          "line": 187,
+          "source_id": "src/App.jsx:187:12:section",
+          "landmarks": {
+            "section": 1
+          }
+        },
+        {
+          "file": "src/App.jsx",
+          "line": 230,
+          "source_id": "src/App.jsx:230:4:section",
+          "landmarks": {
+            "section": 1
+          }
+        },
+        {
+          "file": "src/App.jsx",
+          "line": 251,
+          "source_id": "src/App.jsx:251:8:section",
+          "landmarks": {
+            "section": 1
+          }
+        },
+        {
+          "file": "src/App.jsx",
+          "line": 427,
+          "source_id": "src/App.jsx:427:4:main",
+          "landmarks": {
+            "main": 1
+          }
+        },
+        {
+          "file": "src/App.jsx",
+          "line": 431,
+          "source_id": "src/App.jsx:431:8:header",
+          "landmarks": {
+            "header": 1
+          }
+        },
+        {
+          "file": "src/components/ContactRail.jsx",
+          "line": 71,
+          "source_id": "src/components/ContactRail.jsx:71:6:aside",
+          "landmarks": {
+            "aside": 1
+          }
+        },
+        {
+          "file": "src/components/ContactRail.jsx",
+          "line": 72,
+          "source_id": "src/components/ContactRail.jsx:72:6:nav",
+          "landmarks": {
+            "nav": 1
+          }
+        },
+        {
+          "file": "src/components/PageRail.jsx",
+          "line": 10,
+          "source_id": "src/components/PageRail.jsx:10:4:nav",
+          "landmarks": {
+            "nav": 1
+          }
+        }
+      ],
+      "coverage": {
+        "mode": "static-source",
+        "complete": false,
+        "limitations": [
+          "Static source inspection only; no browser rendering or runtime data.",
+          "Route matching is runtime pathname logic in src/App.jsx; no static route manifest.",
+          "Single index.html shell supplies the same title/meta for all routes.",
+          "ScrollReveal visibility is runtime (IntersectionObserver); headings inside are source-observed.",
+          "FeaturedWork dialog <h3> is interaction-only (activeProject state) and excluded from initial-page headings.",
+          "Experience/FeaturedWork/MoreAbout item titles are data-driven (experiences.json, majorProjects.json, skills.json); only literal JSX headings captured.",
+          "Model discovery budget reached; remaining semantic investigation is unresolved. The extractor still receives the full captured snapshot."
+        ]
+      }
+    },
+    {
+      "url": "/about",
+      "template": "src/App.jsx",
+      "is_dynamic": false,
+      "route_family": "/about",
+      "instance_status": "concrete",
+      "locale": "en",
+      "headings": [
+        {
+          "file": "src/App.jsx",
+          "line": 280,
+          "source_id": "src/App.jsx:280:8:h2",
+          "level": 2,
+          "text": ""
+        },
+        {
+          "file": "src/App.jsx",
+          "line": 296,
+          "source_id": "src/App.jsx:296:8:h2",
+          "level": 2,
+          "text": "What keeps me curious"
+        },
+        {
+          "file": "src/App.jsx",
+          "line": 314,
+          "source_id": "src/App.jsx:314:8:h2",
+          "level": 2,
+          "text": "How I got here"
+        },
+        {
+          "file": "src/App.jsx",
+          "line": 321,
+          "source_id": "src/App.jsx:321:18:h3",
+          "level": 3,
+          "text": ""
+        }
+      ],
+      "landmarks": [
+        {
+          "file": "src/App.jsx",
+          "line": 295,
+          "source_id": "src/App.jsx:295:6:section",
+          "landmarks": {
+            "section": 1
+          }
+        },
+        {
+          "file": "src/App.jsx",
+          "line": 313,
+          "source_id": "src/App.jsx:313:6:section",
+          "landmarks": {
+            "section": 1
+          }
+        },
+        {
+          "file": "src/App.jsx",
+          "line": 318,
+          "source_id": "src/App.jsx:318:14:article",
+          "landmarks": {
+            "article": 1
+          }
+        },
+        {
+          "file": "src/App.jsx",
+          "line": 427,
+          "source_id": "src/App.jsx:427:4:main",
+          "landmarks": {
+            "main": 1
+          }
+        },
+        {
+          "file": "src/App.jsx",
+          "line": 431,
+          "source_id": "src/App.jsx:431:8:header",
+          "landmarks": {
+            "header": 1
+          }
+        },
+        {
+          "file": "src/components/ContactRail.jsx",
+          "line": 71,
+          "source_id": "src/components/ContactRail.jsx:71:6:aside",
+          "landmarks": {
+            "aside": 1
+          }
+        },
+        {
+          "file": "src/components/ContactRail.jsx",
+          "line": 72,
+          "source_id": "src/components/ContactRail.jsx:72:6:nav",
+          "landmarks": {
+            "nav": 1
+          }
+        },
+        {
+          "file": "src/components/PageRail.jsx",
+          "line": 10,
+          "source_id": "src/components/PageRail.jsx:10:4:nav",
+          "landmarks": {
+            "nav": 1
+          }
+        }
+      ],
+      "coverage": {
+        "mode": "static-source",
+        "complete": false,
+        "limitations": [
+          "Static source inspection only; no browser rendering or runtime data.",
+          "Route matching is runtime pathname logic in src/App.jsx; no static route manifest.",
+          "Single index.html shell supplies the same title/meta for all routes.",
+          "ScrollReveal visibility is runtime (IntersectionObserver); headings inside are source-observed.",
+          "Story <h3> titles come from the literal `story` array in src/App.jsx (4 entries).",
+          "PageHeading renders the page title as <h2>, not <h1>.",
+          "Model discovery budget reached; remaining semantic investigation is unresolved. The extractor still receives the full captured snapshot."
+        ]
+      }
+    },
+    {
+      "url": "/bookshelf",
+      "template": "src/App.jsx",
+      "is_dynamic": false,
+      "route_family": "/bookshelf",
+      "instance_status": "concrete",
+      "locale": "en",
+      "headings": [
+        {
+          "file": "src/App.jsx",
+          "line": 280,
+          "source_id": "src/App.jsx:280:8:h2",
+          "level": 2,
+          "text": ""
+        },
+        {
+          "file": "src/App.jsx",
+          "line": 344,
+          "source_id": "src/App.jsx:344:16:h3",
+          "level": 3,
+          "text": ""
+        },
+        {
+          "file": "src/store/data/books.json",
+          "line": 4,
+          "source_id": "src/store/data/books.json:4:4:h3",
+          "level": 3,
+          "text": "Freedom from the Known"
+        },
+        {
+          "file": "src/store/data/books.json",
+          "line": 18,
+          "source_id": "src/store/data/books.json:18:4:h3",
+          "level": 3,
+          "text": "The 12 Week Year"
+        }
+      ],
+      "landmarks": [
+        {
+          "file": "src/App.jsx",
+          "line": 340,
+          "source_id": "src/App.jsx:340:12:article",
+          "landmarks": {
+            "article": 1
+          }
+        },
+        {
+          "file": "src/App.jsx",
+          "line": 427,
+          "source_id": "src/App.jsx:427:4:main",
+          "landmarks": {
+            "main": 1
+          }
+        },
+        {
+          "file": "src/App.jsx",
+          "line": 431,
+          "source_id": "src/App.jsx:431:8:header",
+          "landmarks": {
+            "header": 1
+          }
+        },
+        {
+          "file": "src/components/ContactRail.jsx",
+          "line": 71,
+          "source_id": "src/components/ContactRail.jsx:71:6:aside",
+          "landmarks": {
+            "aside": 1
+          }
+        },
+        {
+          "file": "src/components/ContactRail.jsx",
+          "line": 72,
+          "source_id": "src/components/ContactRail.jsx:72:6:nav",
+          "landmarks": {
+            "nav": 1
+          }
+        },
+        {
+          "file": "src/components/PageRail.jsx",
+          "line": 10,
+          "source_id": "src/components/PageRail.jsx:10:4:nav",
+          "landmarks": {
+            "nav": 1
+          }
+        }
+      ],
+      "coverage": {
+        "mode": "static-source",
+        "complete": false,
+        "limitations": [
+          "Static source inspection only; no browser rendering or runtime data.",
+          "Route matching is runtime pathname logic in src/App.jsx; no static route manifest.",
+          "Single index.html shell supplies the same title/meta for all routes.",
+          "ScrollReveal visibility is runtime (IntersectionObserver); headings inside are source-observed.",
+          "Book <h3> titles are data-driven from src/store/data/books.json (2 items); JSON line/column recorded.",
+          "PageHeading renders the page title as <h2>, not <h1>.",
+          "Model discovery budget reached; remaining semantic investigation is unresolved. The extractor still receives the full captured snapshot."
+        ]
+      }
+    },
+    {
+      "url": "/blog",
+      "template": "src/App.jsx",
+      "is_dynamic": false,
+      "route_family": "/blog",
+      "instance_status": "concrete",
+      "locale": "en",
+      "headings": [
+        {
+          "file": "public/blog/blog.json",
+          "line": 4,
+          "source_id": "public/blog/blog.json:4:8:h3",
+          "level": 3,
+          "text": "Deploying Your Site with Vercel (Dummy Blog)"
+        },
+        {
+          "file": "src/App.jsx",
+          "line": 280,
+          "source_id": "src/App.jsx:280:8:h2",
+          "level": 2,
+          "text": ""
+        },
+        {
+          "file": "src/App.jsx",
+          "line": 379,
+          "source_id": "src/App.jsx:379:145:h3",
+          "level": 3,
+          "text": "TextLink href= /TextLink"
+        }
+      ],
+      "landmarks": [
+        {
+          "file": "src/App.jsx",
+          "line": 378,
+          "source_id": "src/App.jsx:378:12:article",
+          "landmarks": {
+            "article": 1
+          }
+        },
+        {
+          "file": "src/App.jsx",
+          "line": 427,
+          "source_id": "src/App.jsx:427:4:main",
+          "landmarks": {
+            "main": 1
+          }
+        },
+        {
+          "file": "src/App.jsx",
+          "line": 431,
+          "source_id": "src/App.jsx:431:8:header",
+          "landmarks": {
+            "header": 1
+          }
+        },
+        {
+          "file": "src/components/ContactRail.jsx",
+          "line": 71,
+          "source_id": "src/components/ContactRail.jsx:71:6:aside",
+          "landmarks": {
+            "aside": 1
+          }
+        },
+        {
+          "file": "src/components/ContactRail.jsx",
+          "line": 72,
+          "source_id": "src/components/ContactRail.jsx:72:6:nav",
+          "landmarks": {
+            "nav": 1
+          }
+        },
+        {
+          "file": "src/components/PageRail.jsx",
+          "line": 10,
+          "source_id": "src/components/PageRail.jsx:10:4:nav",
+          "landmarks": {
+            "nav": 1
+          }
+        }
+      ],
+      "coverage": {
+        "mode": "static-source",
+        "complete": false,
+        "limitations": [
+          "Static source inspection only; no browser rendering or runtime data.",
+          "Route matching is runtime pathname logic in src/App.jsx; no static route manifest.",
+          "Single index.html shell supplies the same title/meta for all routes.",
+          "ScrollReveal visibility is runtime (IntersectionObserver); headings inside are source-observed.",
+          "Post <h3> titles are fetched at runtime from /blog/blog.json; captured JSON used as source-backed candidate.",
+          "Loading/error/empty states render <p> only; no headings.",
+          "PageHeading renders the page title as <h2>, not <h1>.",
+          "Model discovery budget reached; remaining semantic investigation is unresolved. The extractor still receives the full captured snapshot."
+        ]
+      }
+    },
+    {
+      "url": "/blog/:slug",
+      "template": "src/App.jsx",
+      "is_dynamic": true,
+      "route_family": "/blog/:slug",
+      "instance_status": "template",
+      "locale": "en",
+      "headings": [
+        {
+          "file": "src/App.jsx",
+          "line": 408,
+          "source_id": "src/App.jsx:408:43:h2",
+          "level": 2,
+          "text": ""
+        },
+        {
+          "file": "src/App.jsx",
+          "line": 409,
+          "source_id": "src/App.jsx:409:44:h3",
+          "level": 3,
+          "text": ""
+        }
+      ],
+      "landmarks": [
+        {
+          "file": "src/App.jsx",
+          "line": 427,
+          "source_id": "src/App.jsx:427:4:main",
+          "landmarks": {
+            "main": 1
+          }
+        },
+        {
+          "file": "src/App.jsx",
+          "line": 431,
+          "source_id": "src/App.jsx:431:8:header",
+          "landmarks": {
+            "header": 1
+          }
+        },
+        {
+          "file": "src/components/ContactRail.jsx",
+          "line": 71,
+          "source_id": "src/components/ContactRail.jsx:71:6:aside",
+          "landmarks": {
+            "aside": 1
+          }
+        },
+        {
+          "file": "src/components/ContactRail.jsx",
+          "line": 72,
+          "source_id": "src/components/ContactRail.jsx:72:6:nav",
+          "landmarks": {
+            "nav": 1
+          }
+        },
+        {
+          "file": "src/components/PageRail.jsx",
+          "line": 10,
+          "source_id": "src/components/PageRail.jsx:10:4:nav",
+          "landmarks": {
+            "nav": 1
+          }
+        }
+      ],
+      "coverage": {
+        "mode": "static-source",
+        "complete": false,
+        "limitations": [
+          "Static source inspection only; no browser rendering or runtime data.",
+          "Route matching is runtime pathname logic in src/App.jsx; no static route manifest.",
+          "Single index.html shell supplies the same title/meta for all routes.",
+          "ScrollReveal visibility is runtime (IntersectionObserver); headings inside are source-observed.",
+          "Markdown body fetched at runtime from /blog/<slug>.md; heading levels depend on markdown content.",
+          "Only one concrete instance is statically enumerable (blog.json); other instances unknown.",
+          "No <h1> in template; markdown '# ' maps to <h2> and '## ' maps to <h3>.",
+          "Model discovery budget reached; remaining semantic investigation is unresolved. The extractor still receives the full captured snapshot."
+        ]
+      }
+    },
+    {
+      "url": "/blog/deploying-your-site-with-vercel",
+      "template": "src/App.jsx",
+      "is_dynamic": true,
+      "route_family": "/blog/:slug",
+      "instance_status": "concrete",
+      "locale": "en",
+      "headings": [
+        {
+          "file": "public/blog/deploying-your-site-with-vercel.md",
+          "line": 7,
+          "source_id": "public/blog/deploying-your-site-with-vercel.md:7:0:h2",
+          "level": 2,
+          "text": "Deploying Your Site"
+        },
+        {
+          "file": "public/blog/deploying-your-site-with-vercel.md",
+          "line": 11,
+          "source_id": "public/blog/deploying-your-site-with-vercel.md:11:0:h2",
+          "level": 2,
+          "text": "Steps"
+        },
+        {
+          "file": "src/App.jsx",
+          "line": 408,
+          "source_id": "src/App.jsx:408:43:h2",
+          "level": 2,
+          "text": ""
+        },
+        {
+          "file": "src/App.jsx",
+          "line": 409,
+          "source_id": "src/App.jsx:409:44:h3",
+          "level": 3,
+          "text": ""
+        }
+      ],
+      "landmarks": [
+        {
+          "file": "src/App.jsx",
+          "line": 427,
+          "source_id": "src/App.jsx:427:4:main",
+          "landmarks": {
+            "main": 1
+          }
+        },
+        {
+          "file": "src/App.jsx",
+          "line": 431,
+          "source_id": "src/App.jsx:431:8:header",
+          "landmarks": {
+            "header": 1
+          }
+        },
+        {
+          "file": "src/components/ContactRail.jsx",
+          "line": 71,
+          "source_id": "src/components/ContactRail.jsx:71:6:aside",
+          "landmarks": {
+            "aside": 1
+          }
+        },
+        {
+          "file": "src/components/ContactRail.jsx",
+          "line": 72,
+          "source_id": "src/components/ContactRail.jsx:72:6:nav",
+          "landmarks": {
+            "nav": 1
+          }
+        },
+        {
+          "file": "src/components/PageRail.jsx",
+          "line": 10,
+          "source_id": "src/components/PageRail.jsx:10:4:nav",
+          "landmarks": {
+            "nav": 1
+          }
+        }
+      ],
+      "coverage": {
+        "mode": "static-source",
+        "complete": false,
+        "limitations": [
+          "Static source inspection only; no browser rendering or runtime data.",
+          "Route matching is runtime pathname logic in src/App.jsx; no static route manifest.",
+          "Single index.html shell supplies the same title/meta for all routes.",
+          "ScrollReveal visibility is runtime (IntersectionObserver); headings inside are source-observed.",
+          "Concrete instance enumerated from public/blog/blog.json; other instances may exist at runtime.",
+          "Markdown headings derived from public/blog/deploying-your-site-with-vercel.md; front matter stripped by the component regex.",
+          "Markdown '# ' renders as <h2> and '## ' as <h3> in BlogPostPage.",
+          "Model discovery budget reached; remaining semantic investigation is unresolved. The extractor still receives the full captured snapshot."
+        ]
+      }
+    }
+  ]
+}
