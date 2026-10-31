@@ -1,0 +1,2225 @@
+{
+  "schema_version": "2.0",
+  "category": "content",
+  "extraction": {
+    "framework": "React 18 SPA built with Vite 5 (no router library; hand-rolled pathname ternary switch in src/App.jsx), single index.html shell, Vercel SPA catch-all rewrite",
+    "entry": "index.html -> src/main.jsx -> src/App.jsx",
+    "content_sources": [
+      {
+        "file": "src/store/data/experiences.json",
+        "pointer": "",
+        "kind": "local-json-data"
+      },
+      {
+        "file": "src/store/data/majorProjects.json",
+        "pointer": "",
+        "kind": "local-json-data"
+      },
+      {
+        "file": "src/store/data/skills.json",
+        "pointer": "",
+        "kind": "local-json-data"
+      },
+      {
+        "file": "src/store/data/books.json",
+        "pointer": "",
+        "kind": "local-json-data"
+      },
+      {
+        "file": "public/blog/blog.json",
+        "pointer": "",
+        "kind": "runtime-fetched-json"
+      },
+      {
+        "file": "public/blog/deploying-your-site-with-vercel.md",
+        "pointer": "",
+        "kind": "runtime-fetched-markdown"
+      }
+    ],
+    "notes": "Literal copy extracted from JSX text nodes, local JSON data rows and the captured markdown post; runtime-fetched data and interaction-only states recorded as limitations.",
+    "script_access": {
+      "files": [
+        "public/blog/blog.json",
+        "public/blog/deploying-your-site-with-vercel.md",
+        "src/components/ContactRail.jsx",
+        "src/components/PageRail.jsx",
+        "src/store/data/books.json",
+        "src/store/data/experiences.json",
+        "src/store/data/majorProjects.json",
+        "src/store/data/skills.json"
+      ],
+      "meaning": "Source values accessed, not proof of semantic understanding",
+      "html_parsing": {
+        "calls": 0,
+        "cache_hits": 0
+      }
+    },
+    "mode": "static-source",
+    "engine": "skill-guided-agent",
+    "verification": "passed",
+    "script_sha256": "b35602d23d2e93bc48a0f4acb0906e949a89c3c2f55105fde467f63cdeff688b",
+    "snapshot_sha256": "50b9f780e2de9e5d17ea2ddeea47cfa88c06c79589aae40585e39187fe3a24d1",
+    "snapshot_limitations": [],
+    "skill_sha256": "3bbc5b3d54ff130703178a7dc775a9eb7b15f2240a2778cce6411be6cb027304",
+    "discovery_budget": {
+      "max_model_rounds": 12,
+      "reached": true
+    }
+  },
+  "pages": [
+    {
+      "url": "/",
+      "template": "src/App.jsx",
+      "is_dynamic": false,
+      "coverage": {
+        "mode": "static-source",
+        "complete": false,
+        "limitations": [
+          "Route matching is runtime pathname logic in src/App.jsx; no static route manifest, prerender or per-route metadata (single index.html title/description for all routes).",
+          "No production origin in source; internal hrefs are origin-relative.",
+          "Shared layout copy (header, PageRail nav, ContactRail, Schedule button, theme toggle) is rendered on every route and repeated per page row.",
+          "JSX expressions and component composition are not evaluated; only literal copy and statically enumerable local JSON/Markdown data are captured.",
+          "FeaturedWork video dialog (h3 title, Close video button, <video>) is interaction-only and excluded from initial copy.",
+          "Project index numbers are computed at runtime (String(index+1).padStart) and not emitted as literal copy.",
+          "Model discovery budget reached; remaining semantic investigation is unresolved. The extractor still receives the full captured snapshot."
+        ]
+      },
+      "blocks": [
+        {
+          "file": "src/App.jsx",
+          "line": 3,
+          "source_id": "src/App.jsx:3:26:a",
+          "tag": "a",
+          "text": "Lakshay Goyal",
+          "section": "header",
+          "role": "site-title-link",
+          "href": "/"
+        },
+        {
+          "file": "src/App.jsx",
+          "line": 4,
+          "source_id": "src/App.jsx:4:26:p",
+          "tag": "p",
+          "text": "Software Engineer",
+          "section": "header"
+        },
+        {
+          "file": "src/components/PageRail.jsx",
+          "line": 2,
+          "source_id": "src/components/PageRail.jsx:2:4:a",
+          "tag": "a",
+          "text": "Home",
+          "section": "nav",
+          "href": "/",
+          "nav": "Pages"
+        },
+        {
+          "file": "src/components/PageRail.jsx",
+          "line": 3,
+          "source_id": "src/components/PageRail.jsx:3:4:a",
+          "tag": "a",
+          "text": "About",
+          "section": "nav",
+          "href": "/about",
+          "nav": "Pages"
+        },
+        {
+          "file": "src/components/PageRail.jsx",
+          "line": 4,
+          "source_id": "src/components/PageRail.jsx:4:4:a",
+          "tag": "a",
+          "text": "Bookshelf",
+          "section": "nav",
+          "href": "/bookshelf",
+          "nav": "Pages"
+        },
+        {
+          "file": "src/components/PageRail.jsx",
+          "line": 5,
+          "source_id": "src/components/PageRail.jsx:5:4:a",
+          "tag": "a",
+          "text": "Blogs",
+          "section": "nav",
+          "href": "/blog",
+          "nav": "Pages"
+        },
+        {
+          "file": "src/components/ContactRail.jsx",
+          "line": 7,
+          "source_id": "src/components/ContactRail.jsx:7:4:a",
+          "tag": "a",
+          "text": "Email",
+          "section": "aside",
+          "nav": "Contact links"
+        },
+        {
+          "file": "src/components/ContactRail.jsx",
+          "line": 8,
+          "source_id": "src/components/ContactRail.jsx:8:4:a",
+          "tag": "a",
+          "text": "GitHub",
+          "section": "aside",
+          "nav": "Contact links"
+        },
+        {
+          "file": "src/components/ContactRail.jsx",
+          "line": 9,
+          "source_id": "src/components/ContactRail.jsx:9:4:a",
+          "tag": "a",
+          "text": "LinkedIn",
+          "section": "aside",
+          "nav": "Contact links"
+        },
+        {
+          "file": "src/components/ContactRail.jsx",
+          "line": 10,
+          "source_id": "src/components/ContactRail.jsx:10:4:a",
+          "tag": "a",
+          "text": "X",
+          "section": "aside",
+          "nav": "Contact links"
+        },
+        {
+          "file": "src/components/ContactRail.jsx",
+          "line": 11,
+          "source_id": "src/components/ContactRail.jsx:11:4:a",
+          "tag": "a",
+          "text": "Resume",
+          "section": "aside",
+          "nav": "Contact links"
+        },
+        {
+          "file": "src/components/ContactRail.jsx",
+          "line": 55,
+          "source_id": "src/components/ContactRail.jsx:55:8:span",
+          "tag": "span",
+          "text": "Schedule",
+          "section": "aside",
+          "aria_label": "Schedule a 30-minute Google Meet"
+        },
+        {
+          "file": "src/App.jsx",
+          "line": 78,
+          "source_id": "src/App.jsx:78:6:button",
+          "tag": "button",
+          "text": "Switch to dark mode",
+          "section": "body",
+          "ui_state": "alternate",
+          "aria_label": "Switch to dark mode"
+        },
+        {
+          "file": "src/App.jsx",
+          "line": 78,
+          "source_id": "src/App.jsx:78:6:button",
+          "tag": "button",
+          "text": "Switch to light mode",
+          "section": "body",
+          "ui_state": "alternate",
+          "aria_label": "Switch to light mode"
+        },
+        {
+          "file": "src/App.jsx",
+          "line": 252,
+          "source_id": "src/App.jsx:252:10:h2",
+          "tag": "h2",
+          "text": "About",
+          "section": "section"
+        },
+        {
+          "file": "src/App.jsx",
+          "line": 255,
+          "source_id": "src/App.jsx:255:12:p",
+          "tag": "p",
+          "text": "Just a curious builder with a bad habit of going down every damn rabbit hole, building random shit, and figuring out life beyond code.",
+          "section": "section"
+        },
+        {
+          "file": "src/App.jsx",
+          "line": 111,
+          "source_id": "src/App.jsx:111:6:h2",
+          "tag": "h2",
+          "text": "Work Experience",
+          "section": "section"
+        },
+        {
+          "file": "src/store/data/experiences.json",
+          "line": 3,
+          "source_id": "src/store/data/experiences.json:3:4:p",
+          "tag": "p",
+          "text": "Software Engineer at Testsigma",
+          "section": "section",
+          "data_pointer": "src/store/data/experiences.json#/0",
+          "instance": "Testsigma"
+        },
+        {
+          "file": "src/store/data/experiences.json",
+          "line": 6,
+          "source_id": "src/store/data/experiences.json:6:4:p",
+          "tag": "p",
+          "text": "July 2026 — Present",
+          "section": "section",
+          "data_pointer": "src/store/data/experiences.json#/0/period"
+        },
+        {
+          "file": "src/store/data/experiences.json",
+          "line": 7,
+          "source_id": "src/store/data/experiences.json:7:4:p",
+          "tag": "p",
+          "text": "Bangalore, India • Full-time",
+          "section": "section",
+          "data_pointer": "src/store/data/experiences.json#/0/location"
+        },
+        {
+          "file": "src/store/data/experiences.json",
+          "line": 8,
+          "source_id": "src/store/data/experiences.json:8:4:p",
+          "tag": "p",
+          "text": "Building things that make test automation a little less painful. Mostly jumping between backend, frontend, and infra, figuring things out along the way.",
+          "section": "section",
+          "data_pointer": "src/store/data/experiences.json#/0/summary"
+        },
+        {
+          "file": "src/store/data/experiences.json",
+          "line": 11,
+          "source_id": "src/store/data/experiences.json:11:4:p",
+          "tag": "p",
+          "text": "Founding Engineer at FOZO",
+          "section": "section",
+          "data_pointer": "src/store/data/experiences.json#/1",
+          "instance": "FOZO"
+        },
+        {
+          "file": "src/store/data/experiences.json",
+          "line": 14,
+          "source_id": "src/store/data/experiences.json:14:4:p",
+          "tag": "p",
+          "text": "Dec 2025 — June 2026",
+          "section": "section",
+          "data_pointer": "src/store/data/experiences.json#/1/period"
+        },
+        {
+          "file": "src/store/data/experiences.json",
+          "line": 15,
+          "source_id": "src/store/data/experiences.json:15:4:p",
+          "tag": "p",
+          "text": "Bangalore, India • Full-time",
+          "section": "section",
+          "data_pointer": "src/store/data/experiences.json#/1/location"
+        },
+        {
+          "file": "src/store/data/experiences.json",
+          "line": 16,
+          "source_id": "src/store/data/experiences.json:16:4:p",
+          "tag": "p",
+          "text": "Built a food delivery platform from scratch, handling everything from architecture and mobile apps to servers, deployments, and all the chaos in between.",
+          "section": "section",
+          "data_pointer": "src/store/data/experiences.json#/1/summary"
+        },
+        {
+          "file": "src/App.jsx",
+          "line": 151,
+          "source_id": "src/App.jsx:151:6:h2",
+          "tag": "h2",
+          "text": "Selected Work",
+          "section": "section"
+        },
+        {
+          "file": "src/store/data/majorProjects.json",
+          "line": 3,
+          "source_id": "src/store/data/majorProjects.json:3:4:h3",
+          "tag": "h3",
+          "text": "Unlovable - Application Builder.",
+          "section": "section",
+          "data_pointer": "src/store/data/majorProjects.json#/0/title",
+          "instance": "Unlovable - Application Builder."
+        },
+        {
+          "file": "src/store/data/majorProjects.json",
+          "line": 4,
+          "source_id": "src/store/data/majorProjects.json:4:4:p",
+          "tag": "p",
+          "text": "Built an application builder, where anyone can able to generate an web application using a prompt and creativity.",
+          "section": "section",
+          "data_pointer": "src/store/data/majorProjects.json#/0/description"
+        },
+        {
+          "file": "src/store/data/majorProjects.json",
+          "line": 4,
+          "source_id": "src/store/data/majorProjects.json:4:4:p",
+          "tag": "p",
+          "text": "Turborepo · Expo · E2B sandbox · Redis",
+          "section": "section",
+          "data_pointer": "src/store/data/majorProjects.json#/0/tech"
+        },
+        {
+          "file": "src/App.jsx",
+          "line": 163,
+          "source_id": "src/App.jsx:163:14:span",
+          "tag": "span",
+          "text": "Play demo",
+          "section": "section",
+          "instance": "Unlovable - Application Builder."
+        },
+        {
+          "file": "src/App.jsx",
+          "line": 160,
+          "source_id": "src/App.jsx:160:14:button",
+          "tag": "button",
+          "text": "Play Unlovable - Application Builder. demo",
+          "section": "section",
+          "aria_label": "Play Unlovable - Application Builder. demo",
+          "instance": "Unlovable - Application Builder."
+        },
+        {
+          "file": "src/App.jsx",
+          "line": 174,
+          "source_id": "src/App.jsx:174:14:a",
+          "tag": "a",
+          "text": "Source code",
+          "section": "section",
+          "instance": "Unlovable - Application Builder."
+        },
+        {
+          "file": "src/store/data/majorProjects.json",
+          "line": 12,
+          "source_id": "src/store/data/majorProjects.json:12:4:h3",
+          "tag": "h3",
+          "text": "Unlovable - Mobile Application.",
+          "section": "section",
+          "data_pointer": "src/store/data/majorProjects.json#/1/title",
+          "instance": "Unlovable - Mobile Application."
+        },
+        {
+          "file": "src/store/data/majorProjects.json",
+          "line": 13,
+          "source_id": "src/store/data/majorProjects.json:13:4:p",
+          "tag": "p",
+          "text": "Built an Mobile application builder, where anyone can able to generate an mobile application using a prompt and creativity.",
+          "section": "section",
+          "data_pointer": "src/store/data/majorProjects.json#/1/description"
+        },
+        {
+          "file": "src/store/data/majorProjects.json",
+          "line": 13,
+          "source_id": "src/store/data/majorProjects.json:13:4:p",
+          "tag": "p",
+          "text": "React Native · Expo · Nativewind · EAS",
+          "section": "section",
+          "data_pointer": "src/store/data/majorProjects.json#/1/tech"
+        },
+        {
+          "file": "src/App.jsx",
+          "line": 163,
+          "source_id": "src/App.jsx:163:14:span",
+          "tag": "span",
+          "text": "Play demo",
+          "section": "section",
+          "instance": "Unlovable - Mobile Application."
+        },
+        {
+          "file": "src/App.jsx",
+          "line": 160,
+          "source_id": "src/App.jsx:160:14:button",
+          "tag": "button",
+          "text": "Play Unlovable - Mobile Application. demo",
+          "section": "section",
+          "aria_label": "Play Unlovable - Mobile Application. demo",
+          "instance": "Unlovable - Mobile Application."
+        },
+        {
+          "file": "src/store/data/majorProjects.json",
+          "line": 21,
+          "source_id": "src/store/data/majorProjects.json:21:4:h3",
+          "tag": "h3",
+          "text": "Exness - CFD Application.",
+          "section": "section",
+          "data_pointer": "src/store/data/majorProjects.json#/2/title",
+          "instance": "Exness - CFD Application."
+        },
+        {
+          "file": "src/store/data/majorProjects.json",
+          "line": 22,
+          "source_id": "src/store/data/majorProjects.json:22:4:p",
+          "tag": "p",
+          "text": "A CFD application for trade on crypto currencies.",
+          "section": "section",
+          "data_pointer": "src/store/data/majorProjects.json#/2/description"
+        },
+        {
+          "file": "src/store/data/majorProjects.json",
+          "line": 22,
+          "source_id": "src/store/data/majorProjects.json:22:4:p",
+          "tag": "p",
+          "text": "Turborepo · Redis · Pub-Sub · TimescaleDB",
+          "section": "section",
+          "data_pointer": "src/store/data/majorProjects.json#/2/tech"
+        },
+        {
+          "file": "src/App.jsx",
+          "line": 163,
+          "source_id": "src/App.jsx:163:14:span",
+          "tag": "span",
+          "text": "Play demo",
+          "section": "section",
+          "instance": "Exness - CFD Application."
+        },
+        {
+          "file": "src/App.jsx",
+          "line": 160,
+          "source_id": "src/App.jsx:160:14:button",
+          "tag": "button",
+          "text": "Play Exness - CFD Application. demo",
+          "section": "section",
+          "aria_label": "Play Exness - CFD Application. demo",
+          "instance": "Exness - CFD Application."
+        },
+        {
+          "file": "src/App.jsx",
+          "line": 174,
+          "source_id": "src/App.jsx:174:14:a",
+          "tag": "a",
+          "text": "Source code",
+          "section": "section",
+          "instance": "Exness - CFD Application."
+        },
+        {
+          "file": "src/store/data/majorProjects.json",
+          "line": 30,
+          "source_id": "src/store/data/majorProjects.json:30:4:h3",
+          "tag": "h3",
+          "text": "Exness - Mobile Application.",
+          "section": "section",
+          "data_pointer": "src/store/data/majorProjects.json#/3/title",
+          "instance": "Exness - Mobile Application."
+        },
+        {
+          "file": "src/store/data/majorProjects.json",
+          "line": 31,
+          "source_id": "src/store/data/majorProjects.json:31:4:p",
+          "tag": "p",
+          "text": "A CFD Mobile application for trade on crypto currencies.",
+          "section": "section",
+          "data_pointer": "src/store/data/majorProjects.json#/3/description"
+        },
+        {
+          "file": "src/store/data/majorProjects.json",
+          "line": 31,
+          "source_id": "src/store/data/majorProjects.json:31:4:p",
+          "tag": "p",
+          "text": "React Native · Expo · Nativewind · EAS",
+          "section": "section",
+          "data_pointer": "src/store/data/majorProjects.json#/3/tech"
+        },
+        {
+          "file": "src/App.jsx",
+          "line": 163,
+          "source_id": "src/App.jsx:163:14:span",
+          "tag": "span",
+          "text": "Play demo",
+          "section": "section",
+          "instance": "Exness - Mobile Application."
+        },
+        {
+          "file": "src/App.jsx",
+          "line": 160,
+          "source_id": "src/App.jsx:160:14:button",
+          "tag": "button",
+          "text": "Play Exness - Mobile Application. demo",
+          "section": "section",
+          "aria_label": "Play Exness - Mobile Application. demo",
+          "instance": "Exness - Mobile Application."
+        },
+        {
+          "file": "src/App.jsx",
+          "line": 231,
+          "source_id": "src/App.jsx:231:6:h2",
+          "tag": "h2",
+          "text": "Skills",
+          "section": "section"
+        },
+        {
+          "file": "src/store/data/skills.json",
+          "line": 3,
+          "source_id": "src/store/data/skills.json:3:4:span",
+          "tag": "span",
+          "text": "Web Development",
+          "section": "section",
+          "data_pointer": "src/store/data/skills.json#/0/title"
+        },
+        {
+          "file": "src/store/data/skills.json",
+          "line": 4,
+          "source_id": "src/store/data/skills.json:4:4:span",
+          "tag": "span",
+          "text": "MERN Stack · Next.js · Remix · Turborepo · PostgreSQL (Prisma) · API Development",
+          "section": "section",
+          "data_pointer": "src/store/data/skills.json#/0/skills"
+        },
+        {
+          "file": "src/store/data/skills.json",
+          "line": 7,
+          "source_id": "src/store/data/skills.json:7:4:span",
+          "tag": "span",
+          "text": "Mobile Development",
+          "section": "section",
+          "data_pointer": "src/store/data/skills.json#/1/title"
+        },
+        {
+          "file": "src/store/data/skills.json",
+          "line": 8,
+          "source_id": "src/store/data/skills.json:8:4:span",
+          "tag": "span",
+          "text": "React Native · API Connectivity",
+          "section": "section",
+          "data_pointer": "src/store/data/skills.json#/1/skills"
+        },
+        {
+          "file": "src/store/data/skills.json",
+          "line": 11,
+          "source_id": "src/store/data/skills.json:11:4:span",
+          "tag": "span",
+          "text": "AI",
+          "section": "section",
+          "data_pointer": "src/store/data/skills.json#/2/title"
+        },
+        {
+          "file": "src/store/data/skills.json",
+          "line": 12,
+          "source_id": "src/store/data/skills.json:12:4:span",
+          "tag": "span",
+          "text": "Python · FastAPI · Machine Learning · Deep Learning · NLP · Computer Vision · AI Applications · GenAI · AI Agents",
+          "section": "section",
+          "data_pointer": "src/store/data/skills.json#/2/skills"
+        },
+        {
+          "file": "src/App.jsx",
+          "line": 189,
+          "source_id": "src/App.jsx:189:16:h3",
+          "tag": "h3",
+          "text": "Project demo",
+          "section": "section",
+          "ui_state": "interaction-only"
+        },
+        {
+          "file": "src/App.jsx",
+          "line": 190,
+          "source_id": "src/App.jsx:190:16:button",
+          "tag": "button",
+          "text": "Close video",
+          "section": "section",
+          "ui_state": "interaction-only",
+          "aria_label": "Close video"
+        }
+      ],
+      "link_refs": [
+        {
+          "source_id": "src/App.jsx:3:26:a",
+          "report": "internal_links.json"
+        },
+        {
+          "source_id": "src/components/PageRail.jsx:2:26:a",
+          "report": "internal_links.json"
+        },
+        {
+          "source_id": "src/components/PageRail.jsx:3:27:a",
+          "report": "internal_links.json"
+        },
+        {
+          "source_id": "src/components/PageRail.jsx:4:31:a",
+          "report": "internal_links.json"
+        },
+        {
+          "source_id": "src/components/PageRail.jsx:5:27:a",
+          "report": "internal_links.json"
+        },
+        {
+          "source_id": "src/components/ContactRail.jsx:4:6:a",
+          "report": "internal_links.json"
+        },
+        {
+          "source_id": "src/components/ContactRail.jsx:7:27:a",
+          "report": "internal_links.json"
+        },
+        {
+          "source_id": "src/components/ContactRail.jsx:8:28:a",
+          "report": "internal_links.json"
+        },
+        {
+          "source_id": "src/components/ContactRail.jsx:9:30:a",
+          "report": "internal_links.json"
+        },
+        {
+          "source_id": "src/components/ContactRail.jsx:10:23:a",
+          "report": "internal_links.json"
+        },
+        {
+          "source_id": "src/components/ContactRail.jsx:11:28:a",
+          "report": "internal_links.json"
+        },
+        {
+          "source_id": "src/App.jsx:93:20:a",
+          "report": "internal_links.json"
+        },
+        {
+          "source_id": "src/store/data/experiences.json:4:4:url",
+          "report": "internal_links.json"
+        },
+        {
+          "source_id": "src/store/data/majorProjects.json:7:4:github",
+          "report": "internal_links.json"
+        },
+        {
+          "source_id": "src/store/data/majorProjects.json:8:4:live",
+          "report": "internal_links.json"
+        }
+      ],
+      "media_refs": [
+        {
+          "source_id": "index.html:5:4:link",
+          "report": "media.json"
+        },
+        {
+          "source_id": "src/App.jsx:161:14:img",
+          "report": "media.json"
+        },
+        {
+          "source_id": "src/App.jsx:192:14:video",
+          "report": "media.json"
+        }
+      ],
+      "word_count": 310,
+      "route_family": "/",
+      "instance_status": "concrete"
+    },
+    {
+      "url": "/about",
+      "template": "src/App.jsx",
+      "is_dynamic": false,
+      "coverage": {
+        "mode": "static-source",
+        "complete": false,
+        "limitations": [
+          "Route matching is runtime pathname logic in src/App.jsx; no static route manifest, prerender or per-route metadata (single index.html title/description for all routes).",
+          "No production origin in source; internal hrefs are origin-relative.",
+          "Shared layout copy (header, PageRail nav, ContactRail, Schedule button, theme toggle) is rendered on every route and repeated per page row.",
+          "JSX expressions and component composition are not evaluated; only literal copy and statically enumerable local JSON/Markdown data are captured.",
+          "The favicon link index.html:5:4:link has no media record for this page in the earlier media report; no media_ref is emitted here.",
+          "Story rows come from the inline `story` array; period/title/copy are literal.",
+          "Model discovery budget reached; remaining semantic investigation is unresolved. The extractor still receives the full captured snapshot."
+        ]
+      },
+      "blocks": [
+        {
+          "file": "src/App.jsx",
+          "line": 3,
+          "source_id": "src/App.jsx:3:26:a",
+          "tag": "a",
+          "text": "Lakshay Goyal",
+          "section": "header",
+          "role": "site-title-link",
+          "href": "/"
+        },
+        {
+          "file": "src/App.jsx",
+          "line": 4,
+          "source_id": "src/App.jsx:4:26:p",
+          "tag": "p",
+          "text": "Software Engineer",
+          "section": "header"
+        },
+        {
+          "file": "src/components/PageRail.jsx",
+          "line": 2,
+          "source_id": "src/components/PageRail.jsx:2:4:a",
+          "tag": "a",
+          "text": "Home",
+          "section": "nav",
+          "href": "/",
+          "nav": "Pages"
+        },
+        {
+          "file": "src/components/PageRail.jsx",
+          "line": 3,
+          "source_id": "src/components/PageRail.jsx:3:4:a",
+          "tag": "a",
+          "text": "About",
+          "section": "nav",
+          "href": "/about",
+          "nav": "Pages"
+        },
+        {
+          "file": "src/components/PageRail.jsx",
+          "line": 4,
+          "source_id": "src/components/PageRail.jsx:4:4:a",
+          "tag": "a",
+          "text": "Bookshelf",
+          "section": "nav",
+          "href": "/bookshelf",
+          "nav": "Pages"
+        },
+        {
+          "file": "src/components/PageRail.jsx",
+          "line": 5,
+          "source_id": "src/components/PageRail.jsx:5:4:a",
+          "tag": "a",
+          "text": "Blogs",
+          "section": "nav",
+          "href": "/blog",
+          "nav": "Pages"
+        },
+        {
+          "file": "src/components/ContactRail.jsx",
+          "line": 7,
+          "source_id": "src/components/ContactRail.jsx:7:4:a",
+          "tag": "a",
+          "text": "Email",
+          "section": "aside",
+          "nav": "Contact links"
+        },
+        {
+          "file": "src/components/ContactRail.jsx",
+          "line": 8,
+          "source_id": "src/components/ContactRail.jsx:8:4:a",
+          "tag": "a",
+          "text": "GitHub",
+          "section": "aside",
+          "nav": "Contact links"
+        },
+        {
+          "file": "src/components/ContactRail.jsx",
+          "line": 9,
+          "source_id": "src/components/ContactRail.jsx:9:4:a",
+          "tag": "a",
+          "text": "LinkedIn",
+          "section": "aside",
+          "nav": "Contact links"
+        },
+        {
+          "file": "src/components/ContactRail.jsx",
+          "line": 10,
+          "source_id": "src/components/ContactRail.jsx:10:4:a",
+          "tag": "a",
+          "text": "X",
+          "section": "aside",
+          "nav": "Contact links"
+        },
+        {
+          "file": "src/components/ContactRail.jsx",
+          "line": 11,
+          "source_id": "src/components/ContactRail.jsx:11:4:a",
+          "tag": "a",
+          "text": "Resume",
+          "section": "aside",
+          "nav": "Contact links"
+        },
+        {
+          "file": "src/components/ContactRail.jsx",
+          "line": 55,
+          "source_id": "src/components/ContactRail.jsx:55:8:span",
+          "tag": "span",
+          "text": "Schedule",
+          "section": "aside",
+          "aria_label": "Schedule a 30-minute Google Meet"
+        },
+        {
+          "file": "src/App.jsx",
+          "line": 78,
+          "source_id": "src/App.jsx:78:6:button",
+          "tag": "button",
+          "text": "Switch to dark mode",
+          "section": "body",
+          "ui_state": "alternate",
+          "aria_label": "Switch to dark mode"
+        },
+        {
+          "file": "src/App.jsx",
+          "line": 78,
+          "source_id": "src/App.jsx:78:6:button",
+          "tag": "button",
+          "text": "Switch to light mode",
+          "section": "body",
+          "ui_state": "alternate",
+          "aria_label": "Switch to light mode"
+        },
+        {
+          "file": "src/App.jsx",
+          "line": 280,
+          "source_id": "src/App.jsx:280:8:p",
+          "tag": "p",
+          "text": "About",
+          "section": "header"
+        },
+        {
+          "file": "src/App.jsx",
+          "line": 281,
+          "source_id": "src/App.jsx:281:8:h2",
+          "tag": "h2",
+          "text": "A little about me.",
+          "section": "header"
+        },
+        {
+          "file": "src/App.jsx",
+          "line": 282,
+          "source_id": "src/App.jsx:282:8:p",
+          "tag": "p",
+          "text": "The curiosity that pulled me into software, and the interests that keep me exploring beyond it.",
+          "section": "header"
+        },
+        {
+          "file": "src/App.jsx",
+          "line": 296,
+          "source_id": "src/App.jsx:296:8:h2",
+          "tag": "h2",
+          "text": "What keeps me curious",
+          "section": "section"
+        },
+        {
+          "file": "src/App.jsx",
+          "line": 299,
+          "source_id": "src/App.jsx:299:12:p",
+          "tag": "p",
+          "text": "Just a developer who loves building random shit, experimenting with everything, messing things up, and learning along the way.",
+          "section": "section"
+        },
+        {
+          "file": "src/App.jsx",
+          "line": 303,
+          "source_id": "src/App.jsx:303:12:p",
+          "tag": "p",
+          "text": "I have a bad habit of wanting to become a polymath — from code, AI, and design to philosophy, psychology, politics, and every other shitty thing life has to offer. Don’t mistake me for a generalist, though. I love going deep into every rabbit hole.",
+          "section": "section"
+        },
+        {
+          "file": "src/App.jsx",
+          "line": 308,
+          "source_id": "src/App.jsx:308:12:p",
+          "tag": "p",
+          "text": "I love being a developer, but hell no, I'm not spending my entire life just coding. Wanna be that 60-year-old grandpa still trying to figure out some new shit while living every bit of life.",
+          "section": "section"
+        },
+        {
+          "file": "src/App.jsx",
+          "line": 314,
+          "source_id": "src/App.jsx:314:8:h2",
+          "tag": "h2",
+          "text": "How I got here",
+          "section": "section"
+        },
+        {
+          "file": "src/App.jsx",
+          "line": 321,
+          "source_id": "src/App.jsx:321:18:span",
+          "tag": "span",
+          "text": "2022–2023",
+          "section": "section"
+        },
+        {
+          "file": "src/App.jsx",
+          "line": 321,
+          "source_id": "src/App.jsx:321:18:h3",
+          "tag": "h3",
+          "text": "Finding a direction",
+          "section": "section"
+        },
+        {
+          "file": "src/App.jsx",
+          "line": 321,
+          "source_id": "src/App.jsx:321:18:p",
+          "tag": "p",
+          "text": "I started learning by building projects in college. Coming from a commerce background, I worked through the maths behind machine learning and deep learning, then built a language translator app with a local NLP model.",
+          "section": "section"
+        },
+        {
+          "file": "src/App.jsx",
+          "line": 321,
+          "source_id": "src/App.jsx:321:18:span",
+          "tag": "span",
+          "text": "2025",
+          "section": "section"
+        },
+        {
+          "file": "src/App.jsx",
+          "line": 321,
+          "source_id": "src/App.jsx:321:18:h3",
+          "tag": "h3",
+          "text": "Building for the web",
+          "section": "section"
+        },
+        {
+          "file": "src/App.jsx",
+          "line": 321,
+          "source_id": "src/App.jsx:321:18:p",
+          "tag": "p",
+          "text": "I moved into the MERN stack and learned how authentication, APIs, interfaces, and deployment come together in real products.",
+          "section": "section"
+        },
+        {
+          "file": "src/App.jsx",
+          "line": 321,
+          "source_id": "src/App.jsx:321:18:span",
+          "tag": "span",
+          "text": "Super30",
+          "section": "section"
+        },
+        {
+          "file": "src/App.jsx",
+          "line": 321,
+          "source_id": "src/App.jsx:321:18:h3",
+          "tag": "h3",
+          "text": "Going deeper",
+          "section": "section"
+        },
+        {
+          "file": "src/App.jsx",
+          "line": 321,
+          "source_id": "src/App.jsx:321:18:p",
+          "tag": "p",
+          "text": "Being part of Super30 pushed me to ship more and learn about backend design, DevOps, AI engineering, real-time systems, and system design.",
+          "section": "section"
+        },
+        {
+          "file": "src/App.jsx",
+          "line": 321,
+          "source_id": "src/App.jsx:321:18:span",
+          "tag": "span",
+          "text": "Now",
+          "section": "section"
+        },
+        {
+          "file": "src/App.jsx",
+          "line": 321,
+          "source_id": "src/App.jsx:321:18:h3",
+          "tag": "h3",
+          "text": "Working on products",
+          "section": "section"
+        },
+        {
+          "file": "src/App.jsx",
+          "line": 321,
+          "source_id": "src/App.jsx:321:18:p",
+          "tag": "p",
+          "text": "I moved from Delhi to Bangalore, helped build FOZO from the ground up, and now work on test automation at Testsigma. I care about polished interfaces, understandable systems, and work that lasts beyond a demo.",
+          "section": "section"
+        }
+      ],
+      "link_refs": [
+        {
+          "source_id": "src/App.jsx:3:26:a",
+          "report": "internal_links.json"
+        },
+        {
+          "source_id": "src/components/PageRail.jsx:2:26:a",
+          "report": "internal_links.json"
+        },
+        {
+          "source_id": "src/components/PageRail.jsx:3:27:a",
+          "report": "internal_links.json"
+        },
+        {
+          "source_id": "src/components/PageRail.jsx:4:31:a",
+          "report": "internal_links.json"
+        },
+        {
+          "source_id": "src/components/PageRail.jsx:5:27:a",
+          "report": "internal_links.json"
+        },
+        {
+          "source_id": "src/components/ContactRail.jsx:4:6:a",
+          "report": "internal_links.json"
+        },
+        {
+          "source_id": "src/components/ContactRail.jsx:7:27:a",
+          "report": "internal_links.json"
+        },
+        {
+          "source_id": "src/components/ContactRail.jsx:8:28:a",
+          "report": "internal_links.json"
+        },
+        {
+          "source_id": "src/components/ContactRail.jsx:9:30:a",
+          "report": "internal_links.json"
+        },
+        {
+          "source_id": "src/components/ContactRail.jsx:10:23:a",
+          "report": "internal_links.json"
+        },
+        {
+          "source_id": "src/components/ContactRail.jsx:11:28:a",
+          "report": "internal_links.json"
+        }
+      ],
+      "media_refs": [],
+      "word_count": 277,
+      "route_family": "/about",
+      "instance_status": "concrete"
+    },
+    {
+      "url": "/bookshelf",
+      "template": "src/App.jsx",
+      "is_dynamic": false,
+      "coverage": {
+        "mode": "static-source",
+        "complete": false,
+        "limitations": [
+          "Route matching is runtime pathname logic in src/App.jsx; no static route manifest, prerender or per-route metadata (single index.html title/description for all routes).",
+          "No production origin in source; internal hrefs are origin-relative.",
+          "Shared layout copy (header, PageRail nav, ContactRail, Schedule button, theme toggle) is rendered on every route and repeated per page row.",
+          "JSX expressions and component composition are not evaluated; only literal copy and statically enumerable local JSON/Markdown data are captured.",
+          "Book category 'Phylosohy' is rendered as 'Philosophy' by a template ternary; the corrected label is emitted.",
+          "Model discovery budget reached; remaining semantic investigation is unresolved. The extractor still receives the full captured snapshot."
+        ]
+      },
+      "blocks": [
+        {
+          "file": "src/App.jsx",
+          "line": 3,
+          "source_id": "src/App.jsx:3:26:a",
+          "tag": "a",
+          "text": "Lakshay Goyal",
+          "section": "header",
+          "role": "site-title-link",
+          "href": "/"
+        },
+        {
+          "file": "src/App.jsx",
+          "line": 4,
+          "source_id": "src/App.jsx:4:26:p",
+          "tag": "p",
+          "text": "Software Engineer",
+          "section": "header"
+        },
+        {
+          "file": "src/components/PageRail.jsx",
+          "line": 2,
+          "source_id": "src/components/PageRail.jsx:2:4:a",
+          "tag": "a",
+          "text": "Home",
+          "section": "nav",
+          "href": "/",
+          "nav": "Pages"
+        },
+        {
+          "file": "src/components/PageRail.jsx",
+          "line": 3,
+          "source_id": "src/components/PageRail.jsx:3:4:a",
+          "tag": "a",
+          "text": "About",
+          "section": "nav",
+          "href": "/about",
+          "nav": "Pages"
+        },
+        {
+          "file": "src/components/PageRail.jsx",
+          "line": 4,
+          "source_id": "src/components/PageRail.jsx:4:4:a",
+          "tag": "a",
+          "text": "Bookshelf",
+          "section": "nav",
+          "href": "/bookshelf",
+          "nav": "Pages"
+        },
+        {
+          "file": "src/components/PageRail.jsx",
+          "line": 5,
+          "source_id": "src/components/PageRail.jsx:5:4:a",
+          "tag": "a",
+          "text": "Blogs",
+          "section": "nav",
+          "href": "/blog",
+          "nav": "Pages"
+        },
+        {
+          "file": "src/components/ContactRail.jsx",
+          "line": 7,
+          "source_id": "src/components/ContactRail.jsx:7:4:a",
+          "tag": "a",
+          "text": "Email",
+          "section": "aside",
+          "nav": "Contact links"
+        },
+        {
+          "file": "src/components/ContactRail.jsx",
+          "line": 8,
+          "source_id": "src/components/ContactRail.jsx:8:4:a",
+          "tag": "a",
+          "text": "GitHub",
+          "section": "aside",
+          "nav": "Contact links"
+        },
+        {
+          "file": "src/components/ContactRail.jsx",
+          "line": 9,
+          "source_id": "src/components/ContactRail.jsx:9:4:a",
+          "tag": "a",
+          "text": "LinkedIn",
+          "section": "aside",
+          "nav": "Contact links"
+        },
+        {
+          "file": "src/components/ContactRail.jsx",
+          "line": 10,
+          "source_id": "src/components/ContactRail.jsx:10:4:a",
+          "tag": "a",
+          "text": "X",
+          "section": "aside",
+          "nav": "Contact links"
+        },
+        {
+          "file": "src/components/ContactRail.jsx",
+          "line": 11,
+          "source_id": "src/components/ContactRail.jsx:11:4:a",
+          "tag": "a",
+          "text": "Resume",
+          "section": "aside",
+          "nav": "Contact links"
+        },
+        {
+          "file": "src/components/ContactRail.jsx",
+          "line": 55,
+          "source_id": "src/components/ContactRail.jsx:55:8:span",
+          "tag": "span",
+          "text": "Schedule",
+          "section": "aside",
+          "aria_label": "Schedule a 30-minute Google Meet"
+        },
+        {
+          "file": "src/App.jsx",
+          "line": 78,
+          "source_id": "src/App.jsx:78:6:button",
+          "tag": "button",
+          "text": "Switch to dark mode",
+          "section": "body",
+          "ui_state": "alternate",
+          "aria_label": "Switch to dark mode"
+        },
+        {
+          "file": "src/App.jsx",
+          "line": 78,
+          "source_id": "src/App.jsx:78:6:button",
+          "tag": "button",
+          "text": "Switch to light mode",
+          "section": "body",
+          "ui_state": "alternate",
+          "aria_label": "Switch to light mode"
+        },
+        {
+          "file": "src/App.jsx",
+          "line": 280,
+          "source_id": "src/App.jsx:280:8:p",
+          "tag": "p",
+          "text": "Bookshelf",
+          "section": "header"
+        },
+        {
+          "file": "src/App.jsx",
+          "line": 280,
+          "source_id": "src/App.jsx:280:8:h2",
+          "tag": "h2",
+          "text": "Ideas I keep close.",
+          "section": "header"
+        },
+        {
+          "file": "src/App.jsx",
+          "line": 280,
+          "source_id": "src/App.jsx:280:8:p",
+          "tag": "p",
+          "text": "A small collection of books I’ve read and the ideas I took from them.",
+          "section": "header"
+        },
+        {
+          "file": "src/store/data/books.json",
+          "line": 8,
+          "source_id": "src/store/data/books.json:8:4:p",
+          "tag": "p",
+          "text": "Philosophy",
+          "section": "section",
+          "data_pointer": "src/store/data/books.json#/0/category"
+        },
+        {
+          "file": "src/store/data/books.json",
+          "line": 4,
+          "source_id": "src/store/data/books.json:4:4:h3",
+          "tag": "h3",
+          "text": "Freedom from the Known",
+          "section": "section",
+          "data_pointer": "src/store/data/books.json#/0/title",
+          "instance": "Freedom from the Known"
+        },
+        {
+          "file": "src/store/data/books.json",
+          "line": 5,
+          "source_id": "src/store/data/books.json:5:4:p",
+          "tag": "p",
+          "text": "by J Krishnamurti",
+          "section": "section",
+          "data_pointer": "src/store/data/books.json#/0/author"
+        },
+        {
+          "file": "src/store/data/books.json",
+          "line": 7,
+          "source_id": "src/store/data/books.json:7:4:p",
+          "tag": "p",
+          "text": "A profound exploration of the nature of thought and the self.",
+          "section": "section",
+          "data_pointer": "src/store/data/books.json#/0/description"
+        },
+        {
+          "file": "src/store/data/books.json",
+          "line": 7,
+          "source_id": "src/store/data/books.json:7:4:li",
+          "tag": "li",
+          "text": "Understanding the limitations of thought",
+          "section": "section",
+          "data_pointer": "src/store/data/books.json#/0/keyPoints/0"
+        },
+        {
+          "file": "src/store/data/books.json",
+          "line": 7,
+          "source_id": "src/store/data/books.json:7:4:li",
+          "tag": "li",
+          "text": "The nature of self and identity",
+          "section": "section",
+          "data_pointer": "src/store/data/books.json#/0/keyPoints/1"
+        },
+        {
+          "file": "src/store/data/books.json",
+          "line": 7,
+          "source_id": "src/store/data/books.json:7:4:li",
+          "tag": "li",
+          "text": "Breaking free from conditioning",
+          "section": "section",
+          "data_pointer": "src/store/data/books.json#/0/keyPoints/2"
+        },
+        {
+          "file": "src/App.jsx",
+          "line": 93,
+          "source_id": "src/App.jsx:93:20:a",
+          "tag": "a",
+          "text": "View book",
+          "section": "section",
+          "instance": "Freedom from the Known"
+        },
+        {
+          "file": "src/store/data/books.json",
+          "line": 22,
+          "source_id": "src/store/data/books.json:22:4:p",
+          "tag": "p",
+          "text": "Productivity",
+          "section": "section",
+          "data_pointer": "src/store/data/books.json#/1/category"
+        },
+        {
+          "file": "src/store/data/books.json",
+          "line": 18,
+          "source_id": "src/store/data/books.json:18:4:h3",
+          "tag": "h3",
+          "text": "The 12 Week Year",
+          "section": "section",
+          "data_pointer": "src/store/data/books.json#/1/title",
+          "instance": "The 12 Week Year"
+        },
+        {
+          "file": "src/store/data/books.json",
+          "line": 19,
+          "source_id": "src/store/data/books.json:19:4:p",
+          "tag": "p",
+          "text": "by Brian P. Moran, Michael Lennington",
+          "section": "section",
+          "data_pointer": "src/store/data/books.json#/1/author"
+        },
+        {
+          "file": "src/store/data/books.json",
+          "line": 21,
+          "source_id": "src/store/data/books.json:21:4:p",
+          "tag": "p",
+          "text": "A practical execution system for compressing annual goals into focused 12-week cycles.",
+          "section": "section",
+          "data_pointer": "src/store/data/books.json#/1/description"
+        },
+        {
+          "file": "src/store/data/books.json",
+          "line": 21,
+          "source_id": "src/store/data/books.json:21:4:li",
+          "tag": "li",
+          "text": "Plan work in focused 12-week execution cycles",
+          "section": "section",
+          "data_pointer": "src/store/data/books.json#/1/keyPoints/0"
+        },
+        {
+          "file": "src/store/data/books.json",
+          "line": 21,
+          "source_id": "src/store/data/books.json:21:4:li",
+          "tag": "li",
+          "text": "Create weekly scorecards and accountability rhythms",
+          "section": "section",
+          "data_pointer": "src/store/data/books.json#/1/keyPoints/1"
+        },
+        {
+          "file": "src/store/data/books.json",
+          "line": 21,
+          "source_id": "src/store/data/books.json:21:4:li",
+          "tag": "li",
+          "text": "Build urgency around the highest-leverage goals",
+          "section": "section",
+          "data_pointer": "src/store/data/books.json#/1/keyPoints/2"
+        },
+        {
+          "file": "src/App.jsx",
+          "line": 93,
+          "source_id": "src/App.jsx:93:20:a",
+          "tag": "a",
+          "text": "View book",
+          "section": "section",
+          "instance": "The 12 Week Year"
+        }
+      ],
+      "link_refs": [
+        {
+          "source_id": "src/App.jsx:3:26:a",
+          "report": "internal_links.json"
+        },
+        {
+          "source_id": "src/components/PageRail.jsx:2:26:a",
+          "report": "internal_links.json"
+        },
+        {
+          "source_id": "src/components/PageRail.jsx:3:27:a",
+          "report": "internal_links.json"
+        },
+        {
+          "source_id": "src/components/PageRail.jsx:4:31:a",
+          "report": "internal_links.json"
+        },
+        {
+          "source_id": "src/components/PageRail.jsx:5:27:a",
+          "report": "internal_links.json"
+        },
+        {
+          "source_id": "src/components/ContactRail.jsx:4:6:a",
+          "report": "internal_links.json"
+        },
+        {
+          "source_id": "src/components/ContactRail.jsx:7:27:a",
+          "report": "internal_links.json"
+        },
+        {
+          "source_id": "src/components/ContactRail.jsx:8:28:a",
+          "report": "internal_links.json"
+        },
+        {
+          "source_id": "src/components/ContactRail.jsx:9:30:a",
+          "report": "internal_links.json"
+        },
+        {
+          "source_id": "src/components/ContactRail.jsx:10:23:a",
+          "report": "internal_links.json"
+        },
+        {
+          "source_id": "src/components/ContactRail.jsx:11:28:a",
+          "report": "internal_links.json"
+        },
+        {
+          "source_id": "src/App.jsx:93:20:a",
+          "report": "internal_links.json"
+        },
+        {
+          "source_id": "src/store/data/books.json:9:4:amazonLink",
+          "report": "internal_links.json"
+        }
+      ],
+      "media_refs": [
+        {
+          "source_id": "src/App.jsx:341:14:img",
+          "report": "media.json"
+        }
+      ],
+      "word_count": 121,
+      "route_family": "/bookshelf",
+      "instance_status": "concrete"
+    },
+    {
+      "url": "/blog",
+      "template": "src/App.jsx",
+      "is_dynamic": false,
+      "coverage": {
+        "mode": "static-source",
+        "complete": false,
+        "limitations": [
+          "Route matching is runtime pathname logic in src/App.jsx; no static route manifest, prerender or per-route metadata (single index.html title/description for all routes).",
+          "No production origin in source; internal hrefs are origin-relative.",
+          "Shared layout copy (header, PageRail nav, ContactRail, Schedule button, theme toggle) is rendered on every route and repeated per page row.",
+          "JSX expressions and component composition are not evaluated; only literal copy and statically enumerable local JSON/Markdown data are captured.",
+          "The favicon link index.html:5:4:link has no media record for this page in the earlier media report; no media_ref is emitted here.",
+          "Post list is fetched at runtime from /blog/blog.json; only the single statically present row is enumerated.",
+          "Loading/error/empty paragraphs are mutually exclusive runtime branches, emitted as separate state-tagged blocks.",
+          "Model discovery budget reached; remaining semantic investigation is unresolved. The extractor still receives the full captured snapshot."
+        ]
+      },
+      "blocks": [
+        {
+          "file": "src/App.jsx",
+          "line": 3,
+          "source_id": "src/App.jsx:3:26:a",
+          "tag": "a",
+          "text": "Lakshay Goyal",
+          "section": "header",
+          "role": "site-title-link",
+          "href": "/"
+        },
+        {
+          "file": "src/App.jsx",
+          "line": 4,
+          "source_id": "src/App.jsx:4:26:p",
+          "tag": "p",
+          "text": "Software Engineer",
+          "section": "header"
+        },
+        {
+          "file": "src/components/PageRail.jsx",
+          "line": 2,
+          "source_id": "src/components/PageRail.jsx:2:4:a",
+          "tag": "a",
+          "text": "Home",
+          "section": "nav",
+          "href": "/",
+          "nav": "Pages"
+        },
+        {
+          "file": "src/components/PageRail.jsx",
+          "line": 3,
+          "source_id": "src/components/PageRail.jsx:3:4:a",
+          "tag": "a",
+          "text": "About",
+          "section": "nav",
+          "href": "/about",
+          "nav": "Pages"
+        },
+        {
+          "file": "src/components/PageRail.jsx",
+          "line": 4,
+          "source_id": "src/components/PageRail.jsx:4:4:a",
+          "tag": "a",
+          "text": "Bookshelf",
+          "section": "nav",
+          "href": "/bookshelf",
+          "nav": "Pages"
+        },
+        {
+          "file": "src/components/PageRail.jsx",
+          "line": 5,
+          "source_id": "src/components/PageRail.jsx:5:4:a",
+          "tag": "a",
+          "text": "Blogs",
+          "section": "nav",
+          "href": "/blog",
+          "nav": "Pages"
+        },
+        {
+          "file": "src/components/ContactRail.jsx",
+          "line": 7,
+          "source_id": "src/components/ContactRail.jsx:7:4:a",
+          "tag": "a",
+          "text": "Email",
+          "section": "aside",
+          "nav": "Contact links"
+        },
+        {
+          "file": "src/components/ContactRail.jsx",
+          "line": 8,
+          "source_id": "src/components/ContactRail.jsx:8:4:a",
+          "tag": "a",
+          "text": "GitHub",
+          "section": "aside",
+          "nav": "Contact links"
+        },
+        {
+          "file": "src/components/ContactRail.jsx",
+          "line": 9,
+          "source_id": "src/components/ContactRail.jsx:9:4:a",
+          "tag": "a",
+          "text": "LinkedIn",
+          "section": "aside",
+          "nav": "Contact links"
+        },
+        {
+          "file": "src/components/ContactRail.jsx",
+          "line": 10,
+          "source_id": "src/components/ContactRail.jsx:10:4:a",
+          "tag": "a",
+          "text": "X",
+          "section": "aside",
+          "nav": "Contact links"
+        },
+        {
+          "file": "src/components/ContactRail.jsx",
+          "line": 11,
+          "source_id": "src/components/ContactRail.jsx:11:4:a",
+          "tag": "a",
+          "text": "Resume",
+          "section": "aside",
+          "nav": "Contact links"
+        },
+        {
+          "file": "src/components/ContactRail.jsx",
+          "line": 55,
+          "source_id": "src/components/ContactRail.jsx:55:8:span",
+          "tag": "span",
+          "text": "Schedule",
+          "section": "aside",
+          "aria_label": "Schedule a 30-minute Google Meet"
+        },
+        {
+          "file": "src/App.jsx",
+          "line": 78,
+          "source_id": "src/App.jsx:78:6:button",
+          "tag": "button",
+          "text": "Switch to dark mode",
+          "section": "body",
+          "ui_state": "alternate",
+          "aria_label": "Switch to dark mode"
+        },
+        {
+          "file": "src/App.jsx",
+          "line": 78,
+          "source_id": "src/App.jsx:78:6:button",
+          "tag": "button",
+          "text": "Switch to light mode",
+          "section": "body",
+          "ui_state": "alternate",
+          "aria_label": "Switch to light mode"
+        },
+        {
+          "file": "src/App.jsx",
+          "line": 280,
+          "source_id": "src/App.jsx:280:8:p",
+          "tag": "p",
+          "text": "Writing",
+          "section": "header"
+        },
+        {
+          "file": "src/App.jsx",
+          "line": 280,
+          "source_id": "src/App.jsx:280:8:h2",
+          "tag": "h2",
+          "text": "Blogs",
+          "section": "header"
+        },
+        {
+          "file": "src/App.jsx",
+          "line": 280,
+          "source_id": "src/App.jsx:280:8:p",
+          "tag": "p",
+          "text": "Notes from building, deploying, and learning software.",
+          "section": "header"
+        },
+        {
+          "file": "src/App.jsx",
+          "line": 375,
+          "source_id": "src/App.jsx:375:8:p",
+          "tag": "p",
+          "text": "Loading posts…",
+          "section": "section",
+          "ui_state": "initial-loading"
+        },
+        {
+          "file": "src/App.jsx",
+          "line": 374,
+          "source_id": "src/App.jsx:374:8:p",
+          "tag": "p",
+          "text": "Could not load the posts right now.",
+          "section": "section",
+          "ui_state": "error"
+        },
+        {
+          "file": "src/App.jsx",
+          "line": 376,
+          "source_id": "src/App.jsx:376:8:p",
+          "tag": "p",
+          "text": "No posts yet.",
+          "section": "section",
+          "ui_state": "empty"
+        },
+        {
+          "file": "public/blog/blog.json",
+          "line": 4,
+          "source_id": "public/blog/blog.json:4:8:p",
+          "tag": "p",
+          "text": "HTML · July 1, 2023",
+          "section": "section",
+          "data_pointer": "public/blog/blog.json#/HTML/0/date"
+        },
+        {
+          "file": "public/blog/blog.json",
+          "line": 4,
+          "source_id": "public/blog/blog.json:4:8:h3",
+          "tag": "h3",
+          "text": "Deploying Your Site with Vercel (Dummy Blog)",
+          "section": "section",
+          "data_pointer": "public/blog/blog.json#/HTML/0/title",
+          "instance": "Deploying Your Site with Vercel (Dummy Blog)"
+        }
+      ],
+      "link_refs": [
+        {
+          "source_id": "src/App.jsx:3:26:a",
+          "report": "internal_links.json"
+        },
+        {
+          "source_id": "src/components/PageRail.jsx:2:26:a",
+          "report": "internal_links.json"
+        },
+        {
+          "source_id": "src/components/PageRail.jsx:3:27:a",
+          "report": "internal_links.json"
+        },
+        {
+          "source_id": "src/components/PageRail.jsx:4:31:a",
+          "report": "internal_links.json"
+        },
+        {
+          "source_id": "src/components/PageRail.jsx:5:27:a",
+          "report": "internal_links.json"
+        },
+        {
+          "source_id": "src/components/ContactRail.jsx:4:6:a",
+          "report": "internal_links.json"
+        },
+        {
+          "source_id": "src/components/ContactRail.jsx:7:27:a",
+          "report": "internal_links.json"
+        },
+        {
+          "source_id": "src/components/ContactRail.jsx:8:28:a",
+          "report": "internal_links.json"
+        },
+        {
+          "source_id": "src/components/ContactRail.jsx:9:30:a",
+          "report": "internal_links.json"
+        },
+        {
+          "source_id": "src/components/ContactRail.jsx:10:23:a",
+          "report": "internal_links.json"
+        },
+        {
+          "source_id": "src/components/ContactRail.jsx:11:28:a",
+          "report": "internal_links.json"
+        },
+        {
+          "source_id": "src/App.jsx:93:20:a",
+          "report": "internal_links.json"
+        }
+      ],
+      "media_refs": [],
+      "word_count": 55,
+      "route_family": "/blog",
+      "instance_status": "concrete"
+    },
+    {
+      "url": "/blog/:slug",
+      "template": "src/App.jsx",
+      "is_dynamic": true,
+      "coverage": {
+        "mode": "static-source",
+        "complete": false,
+        "limitations": [
+          "Route matching is runtime pathname logic in src/App.jsx; no static route manifest, prerender or per-route metadata (single index.html title/description for all routes).",
+          "No production origin in source; internal hrefs are origin-relative.",
+          "Shared layout copy (header, PageRail nav, ContactRail, Schedule button, theme toggle) is rendered on every route and repeated per page row.",
+          "JSX expressions and component composition are not evaluated; only literal copy and statically enumerable local JSON/Markdown data are captured.",
+          "Dynamic template: markdown body is fetched at runtime from /blog/<slug>.md; only the one concrete instance present in the capture is enumerated.",
+          "Loading/error paragraphs are mutually exclusive runtime branches.",
+          "Model discovery budget reached; remaining semantic investigation is unresolved. The extractor still receives the full captured snapshot."
+        ]
+      },
+      "blocks": [
+        {
+          "file": "src/App.jsx",
+          "line": 3,
+          "source_id": "src/App.jsx:3:26:a",
+          "tag": "a",
+          "text": "Lakshay Goyal",
+          "section": "header",
+          "role": "site-title-link",
+          "href": "/"
+        },
+        {
+          "file": "src/App.jsx",
+          "line": 4,
+          "source_id": "src/App.jsx:4:26:p",
+          "tag": "p",
+          "text": "Software Engineer",
+          "section": "header"
+        },
+        {
+          "file": "src/components/PageRail.jsx",
+          "line": 2,
+          "source_id": "src/components/PageRail.jsx:2:4:a",
+          "tag": "a",
+          "text": "Home",
+          "section": "nav",
+          "href": "/",
+          "nav": "Pages"
+        },
+        {
+          "file": "src/components/PageRail.jsx",
+          "line": 3,
+          "source_id": "src/components/PageRail.jsx:3:4:a",
+          "tag": "a",
+          "text": "About",
+          "section": "nav",
+          "href": "/about",
+          "nav": "Pages"
+        },
+        {
+          "file": "src/components/PageRail.jsx",
+          "line": 4,
+          "source_id": "src/components/PageRail.jsx:4:4:a",
+          "tag": "a",
+          "text": "Bookshelf",
+          "section": "nav",
+          "href": "/bookshelf",
+          "nav": "Pages"
+        },
+        {
+          "file": "src/components/PageRail.jsx",
+          "line": 5,
+          "source_id": "src/components/PageRail.jsx:5:4:a",
+          "tag": "a",
+          "text": "Blogs",
+          "section": "nav",
+          "href": "/blog",
+          "nav": "Pages"
+        },
+        {
+          "file": "src/components/ContactRail.jsx",
+          "line": 7,
+          "source_id": "src/components/ContactRail.jsx:7:4:a",
+          "tag": "a",
+          "text": "Email",
+          "section": "aside",
+          "nav": "Contact links"
+        },
+        {
+          "file": "src/components/ContactRail.jsx",
+          "line": 8,
+          "source_id": "src/components/ContactRail.jsx:8:4:a",
+          "tag": "a",
+          "text": "GitHub",
+          "section": "aside",
+          "nav": "Contact links"
+        },
+        {
+          "file": "src/components/ContactRail.jsx",
+          "line": 9,
+          "source_id": "src/components/ContactRail.jsx:9:4:a",
+          "tag": "a",
+          "text": "LinkedIn",
+          "section": "aside",
+          "nav": "Contact links"
+        },
+        {
+          "file": "src/components/ContactRail.jsx",
+          "line": 10,
+          "source_id": "src/components/ContactRail.jsx:10:4:a",
+          "tag": "a",
+          "text": "X",
+          "section": "aside",
+          "nav": "Contact links"
+        },
+        {
+          "file": "src/components/ContactRail.jsx",
+          "line": 11,
+          "source_id": "src/components/ContactRail.jsx:11:4:a",
+          "tag": "a",
+          "text": "Resume",
+          "section": "aside",
+          "nav": "Contact links"
+        },
+        {
+          "file": "src/components/ContactRail.jsx",
+          "line": 55,
+          "source_id": "src/components/ContactRail.jsx:55:8:span",
+          "tag": "span",
+          "text": "Schedule",
+          "section": "aside",
+          "aria_label": "Schedule a 30-minute Google Meet"
+        },
+        {
+          "file": "src/App.jsx",
+          "line": 78,
+          "source_id": "src/App.jsx:78:6:button",
+          "tag": "button",
+          "text": "Switch to dark mode",
+          "section": "body",
+          "ui_state": "alternate",
+          "aria_label": "Switch to dark mode"
+        },
+        {
+          "file": "src/App.jsx",
+          "line": 78,
+          "source_id": "src/App.jsx:78:6:button",
+          "tag": "button",
+          "text": "Switch to light mode",
+          "section": "body",
+          "ui_state": "alternate",
+          "aria_label": "Switch to light mode"
+        },
+        {
+          "file": "src/App.jsx",
+          "line": 363,
+          "source_id": "src/App.jsx:363:11:a",
+          "tag": "a",
+          "text": "← All blogs",
+          "section": "body"
+        },
+        {
+          "file": "src/App.jsx",
+          "line": 365,
+          "source_id": "src/App.jsx:365:8:p",
+          "tag": "p",
+          "text": "Loading post…",
+          "section": "body",
+          "ui_state": "initial-loading"
+        },
+        {
+          "file": "src/App.jsx",
+          "line": 364,
+          "source_id": "src/App.jsx:364:8:p",
+          "tag": "p",
+          "text": "This post could not be found.",
+          "section": "body",
+          "ui_state": "error"
+        }
+      ],
+      "link_refs": [
+        {
+          "source_id": "src/App.jsx:3:26:a",
+          "report": "internal_links.json"
+        },
+        {
+          "source_id": "src/components/PageRail.jsx:2:26:a",
+          "report": "internal_links.json"
+        },
+        {
+          "source_id": "src/components/PageRail.jsx:3:27:a",
+          "report": "internal_links.json"
+        },
+        {
+          "source_id": "src/components/PageRail.jsx:4:31:a",
+          "report": "internal_links.json"
+        },
+        {
+          "source_id": "src/components/PageRail.jsx:5:27:a",
+          "report": "internal_links.json"
+        },
+        {
+          "source_id": "src/components/ContactRail.jsx:4:6:a",
+          "report": "internal_links.json"
+        },
+        {
+          "source_id": "src/components/ContactRail.jsx:7:27:a",
+          "report": "internal_links.json"
+        },
+        {
+          "source_id": "src/components/ContactRail.jsx:8:28:a",
+          "report": "internal_links.json"
+        },
+        {
+          "source_id": "src/components/ContactRail.jsx:9:30:a",
+          "report": "internal_links.json"
+        },
+        {
+          "source_id": "src/components/ContactRail.jsx:10:23:a",
+          "report": "internal_links.json"
+        },
+        {
+          "source_id": "src/components/ContactRail.jsx:11:28:a",
+          "report": "internal_links.json"
+        },
+        {
+          "source_id": "src/App.jsx:363:11:a",
+          "report": "internal_links.json"
+        }
+      ],
+      "media_refs": [
+        {
+          "source_id": "public/blog/deploying-your-site-with-vercel.md:4:0:image",
+          "report": "media.json"
+        }
+      ],
+      "word_count": 33,
+      "route_family": "/blog/:slug",
+      "instance_status": "template"
+    },
+    {
+      "url": "/blog/deploying-your-site-with-vercel",
+      "template": "src/App.jsx",
+      "is_dynamic": true,
+      "coverage": {
+        "mode": "static-source",
+        "complete": false,
+        "limitations": [
+          "Route matching is runtime pathname logic in src/App.jsx; no static route manifest, prerender or per-route metadata (single index.html title/description for all routes).",
+          "No production origin in source; internal hrefs are origin-relative.",
+          "Shared layout copy (header, PageRail nav, ContactRail, Schedule button, theme toggle) is rendered on every route and repeated per page row.",
+          "JSX expressions and component composition are not evaluated; only literal copy and statically enumerable local JSON/Markdown data are captured.",
+          "Concrete instance of /blog/:slug; markdown front-matter title differs from the blog.json list title.",
+          "Front-matter image is declared but not rendered by BlogPostPage (no <img> in the template).",
+          "Full instance set beyond blog.json is unknown.",
+          "Model discovery budget reached; remaining semantic investigation is unresolved. The extractor still receives the full captured snapshot."
+        ]
+      },
+      "blocks": [
+        {
+          "file": "src/App.jsx",
+          "line": 3,
+          "source_id": "src/App.jsx:3:26:a",
+          "tag": "a",
+          "text": "Lakshay Goyal",
+          "section": "header",
+          "role": "site-title-link",
+          "href": "/"
+        },
+        {
+          "file": "src/App.jsx",
+          "line": 4,
+          "source_id": "src/App.jsx:4:26:p",
+          "tag": "p",
+          "text": "Software Engineer",
+          "section": "header"
+        },
+        {
+          "file": "src/components/PageRail.jsx",
+          "line": 2,
+          "source_id": "src/components/PageRail.jsx:2:4:a",
+          "tag": "a",
+          "text": "Home",
+          "section": "nav",
+          "href": "/",
+          "nav": "Pages"
+        },
+        {
+          "file": "src/components/PageRail.jsx",
+          "line": 3,
+          "source_id": "src/components/PageRail.jsx:3:4:a",
+          "tag": "a",
+          "text": "About",
+          "section": "nav",
+          "href": "/about",
+          "nav": "Pages"
+        },
+        {
+          "file": "src/components/PageRail.jsx",
+          "line": 4,
+          "source_id": "src/components/PageRail.jsx:4:4:a",
+          "tag": "a",
+          "text": "Bookshelf",
+          "section": "nav",
+          "href": "/bookshelf",
+          "nav": "Pages"
+        },
+        {
+          "file": "src/components/PageRail.jsx",
+          "line": 5,
+          "source_id": "src/components/PageRail.jsx:5:4:a",
+          "tag": "a",
+          "text": "Blogs",
+          "section": "nav",
+          "href": "/blog",
+          "nav": "Pages"
+        },
+        {
+          "file": "src/components/ContactRail.jsx",
+          "line": 7,
+          "source_id": "src/components/ContactRail.jsx:7:4:a",
+          "tag": "a",
+          "text": "Email",
+          "section": "aside",
+          "nav": "Contact links"
+        },
+        {
+          "file": "src/components/ContactRail.jsx",
+          "line": 8,
+          "source_id": "src/components/ContactRail.jsx:8:4:a",
+          "tag": "a",
+          "text": "GitHub",
+          "section": "aside",
+          "nav": "Contact links"
+        },
+        {
+          "file": "src/components/ContactRail.jsx",
+          "line": 9,
+          "source_id": "src/components/ContactRail.jsx:9:4:a",
+          "tag": "a",
+          "text": "LinkedIn",
+          "section": "aside",
+          "nav": "Contact links"
+        },
+        {
+          "file": "src/components/ContactRail.jsx",
+          "line": 10,
+          "source_id": "src/components/ContactRail.jsx:10:4:a",
+          "tag": "a",
+          "text": "X",
+          "section": "aside",
+          "nav": "Contact links"
+        },
+        {
+          "file": "src/components/ContactRail.jsx",
+          "line": 11,
+          "source_id": "src/components/ContactRail.jsx:11:4:a",
+          "tag": "a",
+          "text": "Resume",
+          "section": "aside",
+          "nav": "Contact links"
+        },
+        {
+          "file": "src/components/ContactRail.jsx",
+          "line": 55,
+          "source_id": "src/components/ContactRail.jsx:55:8:span",
+          "tag": "span",
+          "text": "Schedule",
+          "section": "aside",
+          "aria_label": "Schedule a 30-minute Google Meet"
+        },
+        {
+          "file": "src/App.jsx",
+          "line": 78,
+          "source_id": "src/App.jsx:78:6:button",
+          "tag": "button",
+          "text": "Switch to dark mode",
+          "section": "body",
+          "ui_state": "alternate",
+          "aria_label": "Switch to dark mode"
+        },
+        {
+          "file": "src/App.jsx",
+          "line": 78,
+          "source_id": "src/App.jsx:78:6:button",
+          "tag": "button",
+          "text": "Switch to light mode",
+          "section": "body",
+          "ui_state": "alternate",
+          "aria_label": "Switch to light mode"
+        },
+        {
+          "file": "src/App.jsx",
+          "line": 363,
+          "source_id": "src/App.jsx:363:11:a",
+          "tag": "a",
+          "text": "← All blogs",
+          "section": "body"
+        },
+        {
+          "file": "public/blog/deploying-your-site-with-vercel.md",
+          "line": 2,
+          "source_id": "public/blog/deploying-your-site-with-vercel.md:2:0:title",
+          "tag": "title",
+          "text": "Deploying Your Site with Vercel",
+          "section": "body",
+          "data_pointer": "public/blog/deploying-your-site-with-vercel.md#front-matter/title"
+        },
+        {
+          "file": "public/blog/deploying-your-site-with-vercel.md",
+          "line": 3,
+          "source_id": "public/blog/deploying-your-site-with-vercel.md:3:0:date",
+          "tag": "date",
+          "text": "July 1, 2023",
+          "section": "body",
+          "data_pointer": "public/blog/deploying-your-site-with-vercel.md#front-matter/date"
+        },
+        {
+          "file": "public/blog/deploying-your-site-with-vercel.md",
+          "line": 7,
+          "source_id": "public/blog/deploying-your-site-with-vercel.md:7:0:h2",
+          "tag": "h2",
+          "text": "Deploying Your Site",
+          "section": "body"
+        },
+        {
+          "file": "public/blog/deploying-your-site-with-vercel.md",
+          "line": 9,
+          "source_id": "public/blog/deploying-your-site-with-vercel.md:9:0:p",
+          "tag": "p",
+          "text": "Vercel makes it easy to deploy your React, Next.js, or static site.",
+          "section": "body"
+        },
+        {
+          "file": "public/blog/deploying-your-site-with-vercel.md",
+          "line": 11,
+          "source_id": "public/blog/deploying-your-site-with-vercel.md:11:0:h3",
+          "tag": "h3",
+          "text": "Steps",
+          "section": "body"
+        },
+        {
+          "file": "public/blog/deploying-your-site-with-vercel.md",
+          "line": 17,
+          "source_id": "public/blog/deploying-your-site-with-vercel.md:17:0:p",
+          "tag": "p",
+          "text": "hello world Vercel offers fast, global hosting for modern web apps.",
+          "section": "body"
+        }
+      ],
+      "link_refs": [
+        {
+          "source_id": "src/App.jsx:3:26:a",
+          "report": "internal_links.json"
+        },
+        {
+          "source_id": "src/components/PageRail.jsx:2:26:a",
+          "report": "internal_links.json"
+        },
+        {
+          "source_id": "src/components/PageRail.jsx:3:27:a",
+          "report": "internal_links.json"
+        },
+        {
+          "source_id": "src/components/PageRail.jsx:4:31:a",
+          "report": "internal_links.json"
+        },
+        {
+          "source_id": "src/components/PageRail.jsx:5:27:a",
+          "report": "internal_links.json"
+        },
+        {
+          "source_id": "src/components/ContactRail.jsx:4:6:a",
+          "report": "internal_links.json"
+        },
+        {
+          "source_id": "src/components/ContactRail.jsx:7:27:a",
+          "report": "internal_links.json"
+        },
+        {
+          "source_id": "src/components/ContactRail.jsx:8:28:a",
+          "report": "internal_links.json"
+        },
+        {
+          "source_id": "src/components/ContactRail.jsx:9:30:a",
+          "report": "internal_links.json"
+        },
+        {
+          "source_id": "src/components/ContactRail.jsx:10:23:a",
+          "report": "internal_links.json"
+        },
+        {
+          "source_id": "src/components/ContactRail.jsx:11:28:a",
+          "report": "internal_links.json"
+        },
+        {
+          "source_id": "src/App.jsx:363:11:a",
+          "report": "internal_links.json"
+        }
+      ],
+      "media_refs": [
+        {
+          "source_id": "public/blog/deploying-your-site-with-vercel.md:4:0:image",
+          "report": "media.json"
+        }
+      ],
+      "word_count": 60,
+      "route_family": "/blog/:slug",
+      "instance_status": "concrete"
+    }
+  ]
+}

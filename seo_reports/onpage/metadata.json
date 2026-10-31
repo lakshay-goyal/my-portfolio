@@ -1,0 +1,686 @@
+{
+  "schema_version": "2.0",
+  "category": "metadata",
+  "extraction": {
+    "framework": "React 18 SPA built with Vite 5 (no router library; hand-rolled pathname ternary switch in src/App.jsx), single index.html shell, Vercel SPA rewrite",
+    "head_sources": [
+      "index.html"
+    ],
+    "head_manager_dependency_observed": false,
+    "notes": "Head declarations are literal HTML in the captured shell plus source-level frontmatter/content-index values that are not applied to the document head.",
+    "script_access": {
+      "files": [
+        "index.html",
+        "public/blog/blog.json",
+        "public/blog/deploying-your-site-with-vercel.md"
+      ],
+      "meaning": "Source values accessed, not proof of semantic understanding",
+      "html_parsing": {
+        "calls": 0,
+        "cache_hits": 0
+      }
+    },
+    "mode": "static-source",
+    "engine": "skill-guided-agent",
+    "verification": "passed",
+    "script_sha256": "e781ceb49df38357b25013d132d2b80c788fd793e8583e30456669cf1955d636",
+    "snapshot_sha256": "50b9f780e2de9e5d17ea2ddeea47cfa88c06c79589aae40585e39187fe3a24d1",
+    "snapshot_limitations": [],
+    "skill_sha256": "227560fbf9b144a8673a4a6875513036286630012730d73f9be4f9d293fb99f5",
+    "discovery_budget": {
+      "max_model_rounds": 12,
+      "reached": true
+    }
+  },
+  "pages": [
+    {
+      "url": "/",
+      "template": "src/App.jsx",
+      "is_dynamic": false,
+      "route_family": "/",
+      "instance_status": "concrete",
+      "locale": "en",
+      "coverage": {
+        "mode": "static-source",
+        "complete": false,
+        "limitations": [
+          "Static-source inspection only; runtime head behavior (client-side document.head mutation) is not verifiable from captured files.",
+          "No production origin is declared in source, so canonical/absolute-URL metadata cannot be derived.",
+          "Single index.html shell supplies identical head declarations to every route; no per-route metadata exists in source.",
+          "Excluded files (.gitignore, bun.lock, package-lock.json, .agents, .seo_agents, seo_reports) were not inspected.",
+          "Model discovery budget reached; remaining semantic investigation is unresolved. The extractor still receives the full captured snapshot."
+        ]
+      },
+      "declarations": [
+        {
+          "file": "index.html",
+          "line": 3,
+          "source_id": "index.html:3:2:head",
+          "tag": "head",
+          "scope": "global-shell"
+        },
+        {
+          "file": "index.html",
+          "line": 4,
+          "source_id": "index.html:4:4:meta",
+          "tag": "meta",
+          "scope": "global-shell",
+          "charset": "UTF-8"
+        },
+        {
+          "file": "index.html",
+          "line": 5,
+          "source_id": "index.html:5:4:link",
+          "tag": "link",
+          "scope": "global-shell",
+          "rel": "icon",
+          "href": "/logo.png"
+        },
+        {
+          "file": "index.html",
+          "line": 6,
+          "source_id": "index.html:6:4:meta",
+          "tag": "meta",
+          "scope": "global-shell",
+          "name": "viewport",
+          "content": "width=device-width, initial-scale=1.0"
+        },
+        {
+          "file": "index.html",
+          "line": 7,
+          "source_id": "index.html:7:4:meta",
+          "tag": "meta",
+          "scope": "global-shell",
+          "name": "description",
+          "content": "Lakshay Goyal is a Software Engineer building thoughtful mobile and web products.",
+          "description": "Lakshay Goyal is a Software Engineer building thoughtful mobile and web products."
+        },
+        {
+          "file": "index.html",
+          "line": 8,
+          "source_id": "index.html:8:4:link",
+          "tag": "link",
+          "scope": "global-shell",
+          "rel": "preconnect",
+          "href": "https://fonts.googleapis.com"
+        },
+        {
+          "file": "index.html",
+          "line": 9,
+          "source_id": "index.html:9:4:link",
+          "tag": "link",
+          "scope": "global-shell",
+          "rel": "preconnect",
+          "href": "https://fonts.gstatic.com",
+          "crossorigin": null
+        },
+        {
+          "file": "index.html",
+          "line": 10,
+          "source_id": "index.html:10:4:link",
+          "tag": "link",
+          "scope": "global-shell",
+          "rel": "stylesheet",
+          "href": "https://fonts.googleapis.com/css2?family=Geist+Mono:wght@400&display=swap"
+        },
+        {
+          "file": "index.html",
+          "line": 14,
+          "source_id": "index.html:14:4:title",
+          "tag": "title",
+          "scope": "global-shell",
+          "title": "Lakshay Goyal — Software Engineer"
+        }
+      ],
+      "inheritance_note": "Single-page React 18 + Vite SPA: index.html is the only literal head source and is served for every route via the Vercel catch-all rewrite (vercel.json: \"/(.*)\" -> \"/index.html\"). src/main.jsx mounts <App/> into #root; src/App.jsx selects a page component from window.location.pathname (ternary chain at lines 418-424) and passes no head metadata to any page. No document.title assignment, document.head mutation, <title>/<meta> JSX, react-helmet/next-head style dependency, metadata export or head composable exists in the captured source, so all routes inherit the same static title \"Lakshay Goyal — Software Engineer\", meta description, viewport, charset, favicon and font links; no route overrides or templates them. PageHeading({eyebrow,title,description}) in src/App.jsx renders visible <h2>/<p> copy only and is not a head declaration. BlogPostPage strips YAML front matter from /blog/<slug>.md before rendering, so the markdown title and image are never applied to the document head; they are recorded with scope \"markdown-frontmatter-not-applied-to-head\". public/blog/blog.json titles are content-index values (scope \"content-index-not-head\"). No canonical, hreflang, Open Graph, Twitter card, robots or JSON-LD declarations were observed anywhere in the captured source."
+    },
+    {
+      "url": "/about",
+      "template": "src/App.jsx",
+      "is_dynamic": false,
+      "route_family": "/about",
+      "instance_status": "concrete",
+      "locale": "en",
+      "coverage": {
+        "mode": "static-source",
+        "complete": false,
+        "limitations": [
+          "Static-source inspection only; runtime head behavior (client-side document.head mutation) is not verifiable from captured files.",
+          "No production origin is declared in source, so canonical/absolute-URL metadata cannot be derived.",
+          "Single index.html shell supplies identical head declarations to every route; no per-route metadata exists in source.",
+          "Excluded files (.gitignore, bun.lock, package-lock.json, .agents, .seo_agents, seo_reports) were not inspected.",
+          "Model discovery budget reached; remaining semantic investigation is unresolved. The extractor still receives the full captured snapshot."
+        ]
+      },
+      "declarations": [
+        {
+          "file": "index.html",
+          "line": 3,
+          "source_id": "index.html:3:2:head",
+          "tag": "head",
+          "scope": "global-shell"
+        },
+        {
+          "file": "index.html",
+          "line": 4,
+          "source_id": "index.html:4:4:meta",
+          "tag": "meta",
+          "scope": "global-shell",
+          "charset": "UTF-8"
+        },
+        {
+          "file": "index.html",
+          "line": 5,
+          "source_id": "index.html:5:4:link",
+          "tag": "link",
+          "scope": "global-shell",
+          "rel": "icon",
+          "href": "/logo.png"
+        },
+        {
+          "file": "index.html",
+          "line": 6,
+          "source_id": "index.html:6:4:meta",
+          "tag": "meta",
+          "scope": "global-shell",
+          "name": "viewport",
+          "content": "width=device-width, initial-scale=1.0"
+        },
+        {
+          "file": "index.html",
+          "line": 7,
+          "source_id": "index.html:7:4:meta",
+          "tag": "meta",
+          "scope": "global-shell",
+          "name": "description",
+          "content": "Lakshay Goyal is a Software Engineer building thoughtful mobile and web products.",
+          "description": "Lakshay Goyal is a Software Engineer building thoughtful mobile and web products."
+        },
+        {
+          "file": "index.html",
+          "line": 8,
+          "source_id": "index.html:8:4:link",
+          "tag": "link",
+          "scope": "global-shell",
+          "rel": "preconnect",
+          "href": "https://fonts.googleapis.com"
+        },
+        {
+          "file": "index.html",
+          "line": 9,
+          "source_id": "index.html:9:4:link",
+          "tag": "link",
+          "scope": "global-shell",
+          "rel": "preconnect",
+          "href": "https://fonts.gstatic.com",
+          "crossorigin": null
+        },
+        {
+          "file": "index.html",
+          "line": 10,
+          "source_id": "index.html:10:4:link",
+          "tag": "link",
+          "scope": "global-shell",
+          "rel": "stylesheet",
+          "href": "https://fonts.googleapis.com/css2?family=Geist+Mono:wght@400&display=swap"
+        },
+        {
+          "file": "index.html",
+          "line": 14,
+          "source_id": "index.html:14:4:title",
+          "tag": "title",
+          "scope": "global-shell",
+          "title": "Lakshay Goyal — Software Engineer"
+        }
+      ],
+      "inheritance_note": "Single-page React 18 + Vite SPA: index.html is the only literal head source and is served for every route via the Vercel catch-all rewrite (vercel.json: \"/(.*)\" -> \"/index.html\"). src/main.jsx mounts <App/> into #root; src/App.jsx selects a page component from window.location.pathname (ternary chain at lines 418-424) and passes no head metadata to any page. No document.title assignment, document.head mutation, <title>/<meta> JSX, react-helmet/next-head style dependency, metadata export or head composable exists in the captured source, so all routes inherit the same static title \"Lakshay Goyal — Software Engineer\", meta description, viewport, charset, favicon and font links; no route overrides or templates them. PageHeading({eyebrow,title,description}) in src/App.jsx renders visible <h2>/<p> copy only and is not a head declaration. BlogPostPage strips YAML front matter from /blog/<slug>.md before rendering, so the markdown title and image are never applied to the document head; they are recorded with scope \"markdown-frontmatter-not-applied-to-head\". public/blog/blog.json titles are content-index values (scope \"content-index-not-head\"). No canonical, hreflang, Open Graph, Twitter card, robots or JSON-LD declarations were observed anywhere in the captured source."
+    },
+    {
+      "url": "/bookshelf",
+      "template": "src/App.jsx",
+      "is_dynamic": false,
+      "route_family": "/bookshelf",
+      "instance_status": "concrete",
+      "locale": "en",
+      "coverage": {
+        "mode": "static-source",
+        "complete": false,
+        "limitations": [
+          "Static-source inspection only; runtime head behavior (client-side document.head mutation) is not verifiable from captured files.",
+          "No production origin is declared in source, so canonical/absolute-URL metadata cannot be derived.",
+          "Single index.html shell supplies identical head declarations to every route; no per-route metadata exists in source.",
+          "Excluded files (.gitignore, bun.lock, package-lock.json, .agents, .seo_agents, seo_reports) were not inspected.",
+          "Model discovery budget reached; remaining semantic investigation is unresolved. The extractor still receives the full captured snapshot."
+        ]
+      },
+      "declarations": [
+        {
+          "file": "index.html",
+          "line": 3,
+          "source_id": "index.html:3:2:head",
+          "tag": "head",
+          "scope": "global-shell"
+        },
+        {
+          "file": "index.html",
+          "line": 4,
+          "source_id": "index.html:4:4:meta",
+          "tag": "meta",
+          "scope": "global-shell",
+          "charset": "UTF-8"
+        },
+        {
+          "file": "index.html",
+          "line": 5,
+          "source_id": "index.html:5:4:link",
+          "tag": "link",
+          "scope": "global-shell",
+          "rel": "icon",
+          "href": "/logo.png"
+        },
+        {
+          "file": "index.html",
+          "line": 6,
+          "source_id": "index.html:6:4:meta",
+          "tag": "meta",
+          "scope": "global-shell",
+          "name": "viewport",
+          "content": "width=device-width, initial-scale=1.0"
+        },
+        {
+          "file": "index.html",
+          "line": 7,
+          "source_id": "index.html:7:4:meta",
+          "tag": "meta",
+          "scope": "global-shell",
+          "name": "description",
+          "content": "Lakshay Goyal is a Software Engineer building thoughtful mobile and web products.",
+          "description": "Lakshay Goyal is a Software Engineer building thoughtful mobile and web products."
+        },
+        {
+          "file": "index.html",
+          "line": 8,
+          "source_id": "index.html:8:4:link",
+          "tag": "link",
+          "scope": "global-shell",
+          "rel": "preconnect",
+          "href": "https://fonts.googleapis.com"
+        },
+        {
+          "file": "index.html",
+          "line": 9,
+          "source_id": "index.html:9:4:link",
+          "tag": "link",
+          "scope": "global-shell",
+          "rel": "preconnect",
+          "href": "https://fonts.gstatic.com",
+          "crossorigin": null
+        },
+        {
+          "file": "index.html",
+          "line": 10,
+          "source_id": "index.html:10:4:link",
+          "tag": "link",
+          "scope": "global-shell",
+          "rel": "stylesheet",
+          "href": "https://fonts.googleapis.com/css2?family=Geist+Mono:wght@400&display=swap"
+        },
+        {
+          "file": "index.html",
+          "line": 14,
+          "source_id": "index.html:14:4:title",
+          "tag": "title",
+          "scope": "global-shell",
+          "title": "Lakshay Goyal — Software Engineer"
+        }
+      ],
+      "inheritance_note": "Single-page React 18 + Vite SPA: index.html is the only literal head source and is served for every route via the Vercel catch-all rewrite (vercel.json: \"/(.*)\" -> \"/index.html\"). src/main.jsx mounts <App/> into #root; src/App.jsx selects a page component from window.location.pathname (ternary chain at lines 418-424) and passes no head metadata to any page. No document.title assignment, document.head mutation, <title>/<meta> JSX, react-helmet/next-head style dependency, metadata export or head composable exists in the captured source, so all routes inherit the same static title \"Lakshay Goyal — Software Engineer\", meta description, viewport, charset, favicon and font links; no route overrides or templates them. PageHeading({eyebrow,title,description}) in src/App.jsx renders visible <h2>/<p> copy only and is not a head declaration. BlogPostPage strips YAML front matter from /blog/<slug>.md before rendering, so the markdown title and image are never applied to the document head; they are recorded with scope \"markdown-frontmatter-not-applied-to-head\". public/blog/blog.json titles are content-index values (scope \"content-index-not-head\"). No canonical, hreflang, Open Graph, Twitter card, robots or JSON-LD declarations were observed anywhere in the captured source."
+    },
+    {
+      "url": "/blog",
+      "template": "src/App.jsx",
+      "is_dynamic": false,
+      "route_family": "/blog",
+      "instance_status": "concrete",
+      "locale": "en",
+      "coverage": {
+        "mode": "static-source",
+        "complete": false,
+        "limitations": [
+          "Static-source inspection only; runtime head behavior (client-side document.head mutation) is not verifiable from captured files.",
+          "No production origin is declared in source, so canonical/absolute-URL metadata cannot be derived.",
+          "Single index.html shell supplies identical head declarations to every route; no per-route metadata exists in source.",
+          "Blog list titles/dates are fetched at runtime from /blog/blog.json; only the captured index values are recorded.",
+          "Excluded files (.gitignore, bun.lock, package-lock.json, .agents, .seo_agents, seo_reports) were not inspected.",
+          "Model discovery budget reached; remaining semantic investigation is unresolved. The extractor still receives the full captured snapshot."
+        ]
+      },
+      "declarations": [
+        {
+          "file": "index.html",
+          "line": 3,
+          "source_id": "index.html:3:2:head",
+          "tag": "head",
+          "scope": "global-shell"
+        },
+        {
+          "file": "index.html",
+          "line": 4,
+          "source_id": "index.html:4:4:meta",
+          "tag": "meta",
+          "scope": "global-shell",
+          "charset": "UTF-8"
+        },
+        {
+          "file": "index.html",
+          "line": 5,
+          "source_id": "index.html:5:4:link",
+          "tag": "link",
+          "scope": "global-shell",
+          "rel": "icon",
+          "href": "/logo.png"
+        },
+        {
+          "file": "index.html",
+          "line": 6,
+          "source_id": "index.html:6:4:meta",
+          "tag": "meta",
+          "scope": "global-shell",
+          "name": "viewport",
+          "content": "width=device-width, initial-scale=1.0"
+        },
+        {
+          "file": "index.html",
+          "line": 7,
+          "source_id": "index.html:7:4:meta",
+          "tag": "meta",
+          "scope": "global-shell",
+          "name": "description",
+          "content": "Lakshay Goyal is a Software Engineer building thoughtful mobile and web products.",
+          "description": "Lakshay Goyal is a Software Engineer building thoughtful mobile and web products."
+        },
+        {
+          "file": "index.html",
+          "line": 8,
+          "source_id": "index.html:8:4:link",
+          "tag": "link",
+          "scope": "global-shell",
+          "rel": "preconnect",
+          "href": "https://fonts.googleapis.com"
+        },
+        {
+          "file": "index.html",
+          "line": 9,
+          "source_id": "index.html:9:4:link",
+          "tag": "link",
+          "scope": "global-shell",
+          "rel": "preconnect",
+          "href": "https://fonts.gstatic.com",
+          "crossorigin": null
+        },
+        {
+          "file": "index.html",
+          "line": 10,
+          "source_id": "index.html:10:4:link",
+          "tag": "link",
+          "scope": "global-shell",
+          "rel": "stylesheet",
+          "href": "https://fonts.googleapis.com/css2?family=Geist+Mono:wght@400&display=swap"
+        },
+        {
+          "file": "index.html",
+          "line": 14,
+          "source_id": "index.html:14:4:title",
+          "tag": "title",
+          "scope": "global-shell",
+          "title": "Lakshay Goyal — Software Engineer"
+        },
+        {
+          "file": "public/blog/blog.json",
+          "line": 5,
+          "source_id": "public/blog/blog.json:5:16:json-string",
+          "tag": "json-string",
+          "scope": "content-index-not-head",
+          "key": "link",
+          "value": "/blog/deploying-your-site-with-vercel"
+        }
+      ],
+      "inheritance_note": "Single-page React 18 + Vite SPA: index.html is the only literal head source and is served for every route via the Vercel catch-all rewrite (vercel.json: \"/(.*)\" -> \"/index.html\"). src/main.jsx mounts <App/> into #root; src/App.jsx selects a page component from window.location.pathname (ternary chain at lines 418-424) and passes no head metadata to any page. No document.title assignment, document.head mutation, <title>/<meta> JSX, react-helmet/next-head style dependency, metadata export or head composable exists in the captured source, so all routes inherit the same static title \"Lakshay Goyal — Software Engineer\", meta description, viewport, charset, favicon and font links; no route overrides or templates them. PageHeading({eyebrow,title,description}) in src/App.jsx renders visible <h2>/<p> copy only and is not a head declaration. BlogPostPage strips YAML front matter from /blog/<slug>.md before rendering, so the markdown title and image are never applied to the document head; they are recorded with scope \"markdown-frontmatter-not-applied-to-head\". public/blog/blog.json titles are content-index values (scope \"content-index-not-head\"). No canonical, hreflang, Open Graph, Twitter card, robots or JSON-LD declarations were observed anywhere in the captured source."
+    },
+    {
+      "url": "/blog/:slug",
+      "template": "src/App.jsx",
+      "is_dynamic": true,
+      "route_family": "/blog/:slug",
+      "instance_status": "template",
+      "locale": "en",
+      "coverage": {
+        "mode": "static-source",
+        "complete": false,
+        "limitations": [
+          "Static-source inspection only; runtime head behavior (client-side document.head mutation) is not verifiable from captured files.",
+          "No production origin is declared in source, so canonical/absolute-URL metadata cannot be derived.",
+          "Single index.html shell supplies identical head declarations to every route; no per-route metadata exists in source.",
+          "Dynamic route matched by path.startsWith(\"/blog/\") in src/App.jsx line 423; slug is path.slice(6) and is not validated.",
+          "Post body fetched at runtime from /blog/<slug>.md; only instances listed in public/blog/blog.json are statically enumerable, so the full instance set is unknown.",
+          "Concrete instance enumerated from public/blog/blog.json; other instances may exist at runtime.",
+          "Markdown front matter title/image are stripped by BlogPostPage and never applied to the document head.",
+          "Excluded files (.gitignore, bun.lock, package-lock.json, .agents, .seo_agents, seo_reports) were not inspected.",
+          "Model discovery budget reached; remaining semantic investigation is unresolved. The extractor still receives the full captured snapshot."
+        ]
+      },
+      "declarations": [
+        {
+          "file": "index.html",
+          "line": 3,
+          "source_id": "index.html:3:2:head",
+          "tag": "head",
+          "scope": "global-shell"
+        },
+        {
+          "file": "index.html",
+          "line": 4,
+          "source_id": "index.html:4:4:meta",
+          "tag": "meta",
+          "scope": "global-shell",
+          "charset": "UTF-8"
+        },
+        {
+          "file": "index.html",
+          "line": 5,
+          "source_id": "index.html:5:4:link",
+          "tag": "link",
+          "scope": "global-shell",
+          "rel": "icon",
+          "href": "/logo.png"
+        },
+        {
+          "file": "index.html",
+          "line": 6,
+          "source_id": "index.html:6:4:meta",
+          "tag": "meta",
+          "scope": "global-shell",
+          "name": "viewport",
+          "content": "width=device-width, initial-scale=1.0"
+        },
+        {
+          "file": "index.html",
+          "line": 7,
+          "source_id": "index.html:7:4:meta",
+          "tag": "meta",
+          "scope": "global-shell",
+          "name": "description",
+          "content": "Lakshay Goyal is a Software Engineer building thoughtful mobile and web products.",
+          "description": "Lakshay Goyal is a Software Engineer building thoughtful mobile and web products."
+        },
+        {
+          "file": "index.html",
+          "line": 8,
+          "source_id": "index.html:8:4:link",
+          "tag": "link",
+          "scope": "global-shell",
+          "rel": "preconnect",
+          "href": "https://fonts.googleapis.com"
+        },
+        {
+          "file": "index.html",
+          "line": 9,
+          "source_id": "index.html:9:4:link",
+          "tag": "link",
+          "scope": "global-shell",
+          "rel": "preconnect",
+          "href": "https://fonts.gstatic.com",
+          "crossorigin": null
+        },
+        {
+          "file": "index.html",
+          "line": 10,
+          "source_id": "index.html:10:4:link",
+          "tag": "link",
+          "scope": "global-shell",
+          "rel": "stylesheet",
+          "href": "https://fonts.googleapis.com/css2?family=Geist+Mono:wght@400&display=swap"
+        },
+        {
+          "file": "index.html",
+          "line": 14,
+          "source_id": "index.html:14:4:title",
+          "tag": "title",
+          "scope": "global-shell",
+          "title": "Lakshay Goyal — Software Engineer"
+        }
+      ],
+      "inheritance_note": "Single-page React 18 + Vite SPA: index.html is the only literal head source and is served for every route via the Vercel catch-all rewrite (vercel.json: \"/(.*)\" -> \"/index.html\"). src/main.jsx mounts <App/> into #root; src/App.jsx selects a page component from window.location.pathname (ternary chain at lines 418-424) and passes no head metadata to any page. No document.title assignment, document.head mutation, <title>/<meta> JSX, react-helmet/next-head style dependency, metadata export or head composable exists in the captured source, so all routes inherit the same static title \"Lakshay Goyal — Software Engineer\", meta description, viewport, charset, favicon and font links; no route overrides or templates them. PageHeading({eyebrow,title,description}) in src/App.jsx renders visible <h2>/<p> copy only and is not a head declaration. BlogPostPage strips YAML front matter from /blog/<slug>.md before rendering, so the markdown title and image are never applied to the document head; they are recorded with scope \"markdown-frontmatter-not-applied-to-head\". public/blog/blog.json titles are content-index values (scope \"content-index-not-head\"). No canonical, hreflang, Open Graph, Twitter card, robots or JSON-LD declarations were observed anywhere in the captured source."
+    },
+    {
+      "url": "/blog/deploying-your-site-with-vercel",
+      "template": "src/App.jsx",
+      "is_dynamic": true,
+      "route_family": "/blog/:slug",
+      "instance_status": "concrete",
+      "locale": "en",
+      "coverage": {
+        "mode": "static-source",
+        "complete": false,
+        "limitations": [
+          "Static-source inspection only; runtime head behavior (client-side document.head mutation) is not verifiable from captured files.",
+          "No production origin is declared in source, so canonical/absolute-URL metadata cannot be derived.",
+          "Single index.html shell supplies identical head declarations to every route; no per-route metadata exists in source.",
+          "Concrete instance enumerated from public/blog/blog.json; other instances may exist at runtime.",
+          "Markdown front matter title/image are stripped by BlogPostPage and never applied to the document head.",
+          "Excluded files (.gitignore, bun.lock, package-lock.json, .agents, .seo_agents, seo_reports) were not inspected.",
+          "Model discovery budget reached; remaining semantic investigation is unresolved. The extractor still receives the full captured snapshot."
+        ]
+      },
+      "declarations": [
+        {
+          "file": "index.html",
+          "line": 3,
+          "source_id": "index.html:3:2:head",
+          "tag": "head",
+          "scope": "global-shell"
+        },
+        {
+          "file": "index.html",
+          "line": 4,
+          "source_id": "index.html:4:4:meta",
+          "tag": "meta",
+          "scope": "global-shell",
+          "charset": "UTF-8"
+        },
+        {
+          "file": "index.html",
+          "line": 5,
+          "source_id": "index.html:5:4:link",
+          "tag": "link",
+          "scope": "global-shell",
+          "rel": "icon",
+          "href": "/logo.png"
+        },
+        {
+          "file": "index.html",
+          "line": 6,
+          "source_id": "index.html:6:4:meta",
+          "tag": "meta",
+          "scope": "global-shell",
+          "name": "viewport",
+          "content": "width=device-width, initial-scale=1.0"
+        },
+        {
+          "file": "index.html",
+          "line": 7,
+          "source_id": "index.html:7:4:meta",
+          "tag": "meta",
+          "scope": "global-shell",
+          "name": "description",
+          "content": "Lakshay Goyal is a Software Engineer building thoughtful mobile and web products.",
+          "description": "Lakshay Goyal is a Software Engineer building thoughtful mobile and web products."
+        },
+        {
+          "file": "index.html",
+          "line": 8,
+          "source_id": "index.html:8:4:link",
+          "tag": "link",
+          "scope": "global-shell",
+          "rel": "preconnect",
+          "href": "https://fonts.googleapis.com"
+        },
+        {
+          "file": "index.html",
+          "line": 9,
+          "source_id": "index.html:9:4:link",
+          "tag": "link",
+          "scope": "global-shell",
+          "rel": "preconnect",
+          "href": "https://fonts.gstatic.com",
+          "crossorigin": null
+        },
+        {
+          "file": "index.html",
+          "line": 10,
+          "source_id": "index.html:10:4:link",
+          "tag": "link",
+          "scope": "global-shell",
+          "rel": "stylesheet",
+          "href": "https://fonts.googleapis.com/css2?family=Geist+Mono:wght@400&display=swap"
+        },
+        {
+          "file": "index.html",
+          "line": 14,
+          "source_id": "index.html:14:4:title",
+          "tag": "title",
+          "scope": "global-shell",
+          "title": "Lakshay Goyal — Software Engineer"
+        },
+        {
+          "file": "public/blog/deploying-your-site-with-vercel.md",
+          "line": 2,
+          "source_id": "public/blog/deploying-your-site-with-vercel.md:2:0:frontmatter",
+          "tag": "frontmatter",
+          "scope": "markdown-frontmatter-not-applied-to-head",
+          "key": "title",
+          "value": "Deploying Your Site with Vercel"
+        },
+        {
+          "file": "public/blog/deploying-your-site-with-vercel.md",
+          "line": 3,
+          "source_id": "public/blog/deploying-your-site-with-vercel.md:3:0:frontmatter",
+          "tag": "frontmatter",
+          "scope": "markdown-frontmatter-not-applied-to-head",
+          "key": "date",
+          "value": "July 1, 2023"
+        },
+        {
+          "file": "public/blog/deploying-your-site-with-vercel.md",
+          "line": 4,
+          "source_id": "public/blog/deploying-your-site-with-vercel.md:4:0:frontmatter",
+          "tag": "frontmatter",
+          "scope": "markdown-frontmatter-not-applied-to-head",
+          "key": "image",
+          "value": "https://images.unsplash.com/photo-1621839673705-6617adf9e890?q=80&w=1032&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        }
+      ],
+      "inheritance_note": "Single-page React 18 + Vite SPA: index.html is the only literal head source and is served for every route via the Vercel catch-all rewrite (vercel.json: \"/(.*)\" -> \"/index.html\"). src/main.jsx mounts <App/> into #root; src/App.jsx selects a page component from window.location.pathname (ternary chain at lines 418-424) and passes no head metadata to any page. No document.title assignment, document.head mutation, <title>/<meta> JSX, react-helmet/next-head style dependency, metadata export or head composable exists in the captured source, so all routes inherit the same static title \"Lakshay Goyal — Software Engineer\", meta description, viewport, charset, favicon and font links; no route overrides or templates them. PageHeading({eyebrow,title,description}) in src/App.jsx renders visible <h2>/<p> copy only and is not a head declaration. BlogPostPage strips YAML front matter from /blog/<slug>.md before rendering, so the markdown title and image are never applied to the document head; they are recorded with scope \"markdown-frontmatter-not-applied-to-head\". public/blog/blog.json titles are content-index values (scope \"content-index-not-head\"). No canonical, hreflang, Open Graph, Twitter card, robots or JSON-LD declarations were observed anywhere in the captured source."
+    }
+  ]
+}

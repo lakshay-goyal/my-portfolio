@@ -1,0 +1,507 @@
+{
+  "schema_version": "2.0",
+  "category": "urls",
+  "extraction": {
+    "framework": "React 18 SPA built with Vite 5 (no router library; hand-rolled pathname switch in src/App.jsx), deployed with a Vercel catch-all rewrite to /index.html",
+    "routing_evidence": {
+      "router_file": "src/App.jsx",
+      "router_mechanism": "window.location.pathname ternary switch with trailing-slash normalization",
+      "static_routes": [
+        "/",
+        "/about",
+        "/bookshelf",
+        "/blog"
+      ],
+      "dynamic_prefixes": [
+        "/blog/"
+      ],
+      "nav_links": [
+        {
+          "label": "Home",
+          "href": "/",
+          "file": "src/components/PageRail.jsx",
+          "line": 2
+        },
+        {
+          "label": "About",
+          "href": "/about",
+          "file": "src/components/PageRail.jsx",
+          "line": 3
+        },
+        {
+          "label": "Bookshelf",
+          "href": "/bookshelf",
+          "file": "src/components/PageRail.jsx",
+          "line": 4
+        },
+        {
+          "label": "Blogs",
+          "href": "/blog",
+          "file": "src/components/PageRail.jsx",
+          "line": 5
+        }
+      ],
+      "contact_links": [
+        {
+          "label": "Schedule",
+          "href": "https://cal.com/lakshay-goyal/30min?overlayCalendar=true",
+          "file": "src/components/ContactRail.jsx",
+          "line": 4
+        },
+        {
+          "label": "GitHub",
+          "href": "https://github.com/lakshay-goyal",
+          "file": "src/components/ContactRail.jsx",
+          "line": 8
+        },
+        {
+          "label": "LinkedIn",
+          "href": "https://www.linkedin.com/in/lakshay-goyal-9778a6246/",
+          "file": "src/components/ContactRail.jsx",
+          "line": 9
+        },
+        {
+          "label": "X",
+          "href": "https://x.com/lakshayg2004",
+          "file": "src/components/ContactRail.jsx",
+          "line": 10
+        },
+        {
+          "label": "Resume",
+          "href": "/Lakshay_Resume.pdf",
+          "file": "src/components/ContactRail.jsx",
+          "line": 11
+        }
+      ],
+      "inline_links": [
+        {
+          "href": "/blog",
+          "file": "src/App.jsx",
+          "line": 404
+        },
+        {
+          "href": "/",
+          "file": "src/App.jsx",
+          "line": 424
+        },
+        {
+          "href": "/",
+          "file": "src/App.jsx",
+          "line": 432
+        }
+      ],
+      "data_links": [
+        {
+          "owner": "Unlovable - Application Builder.",
+          "field": "live",
+          "href": "https://unlovable.lakshaygoyal.in/"
+        },
+        {
+          "owner": "Unlovable - Application Builder.",
+          "field": "github",
+          "href": "https://github.com/lakshay-goyal/Unlovable"
+        },
+        {
+          "owner": "Unlovable - Mobile Application.",
+          "field": "github",
+          "href": "https://github.com/lakshay-goyal/Unlovable"
+        },
+        {
+          "owner": "Exness - CFD Application.",
+          "field": "live",
+          "href": "https://exness.lakshaygoyal.in/"
+        },
+        {
+          "owner": "Exness - CFD Application.",
+          "field": "github",
+          "href": "https://github.com/lakshay-goyal/Exness"
+        },
+        {
+          "owner": "Exness - Mobile Application.",
+          "field": "github",
+          "href": "https://github.com/lakshay-goyal/Exness"
+        },
+        {
+          "owner": "Testsigma",
+          "field": "url",
+          "href": "https://testsigma.com/"
+        },
+        {
+          "owner": "FOZO",
+          "field": "url",
+          "href": "https://getfozo.in"
+        },
+        {
+          "owner": "Freedom from the Known",
+          "field": "amazonLink",
+          "href": "https://www.amazon.in/Freedom-Known-J-Krishnamurti-ebook/dp/B003NX6Y6A?ref_=ast_author_mpb"
+        },
+        {
+          "owner": "The 12 Week Year",
+          "field": "amazonLink",
+          "href": "https://www.amazon.in/12-Week-Year-Others-Months/dp/1118509234"
+        }
+      ],
+      "blog_instances": [
+        {
+          "url": "/blog/deploying-your-site-with-vercel",
+          "file": "public/blog/blog.json",
+          "line": 5,
+          "pointer": "/link"
+        }
+      ],
+      "spa_fallback": "vercel.json rewrites /(.*) to /index.html",
+      "html_shell": "index.html"
+    },
+    "shared_query_links": [
+      {
+        "file": "src/components/ContactRail.jsx",
+        "line": 4,
+        "source_id": "src/components/ContactRail.jsx:4:20:a",
+        "href": "https://cal.com/lakshay-goyal/30min?overlayCalendar=true",
+        "target_url": "https://cal.com/lakshay-goyal/30min?overlayCalendar=true"
+      },
+      {
+        "file": "src/store/data/books.json",
+        "line": 2,
+        "source_id": "src/store/data/books.json:2:19:a",
+        "href": "https://www.amazon.in/Freedom-Known-J-Krishnamurti-ebook/dp/B003NX6Y6A?ref_=ast_author_mpb",
+        "target_url": "https://www.amazon.in/Freedom-Known-J-Krishnamurti-ebook/dp/B003NX6Y6A?ref_=ast_author_mpb"
+      }
+    ],
+    "limitations": [
+      "No production origin in source; README mentions lakshaygoyal.in but it is not used as a canonical base.",
+      "Route matching is runtime pathname logic; no static route manifest, prerender or SSG.",
+      "Single index.html title/meta applies to all routes; no per-route metadata.",
+      "Blog post instance set limited to public/blog/blog.json; additional runtime posts unknown.",
+      "404 fallback view in src/App.jsx is not treated as a public route.",
+      "Links built from JSON data resolve against data files; empty 'live' values fall back to github.",
+      "Excluded files: .gitignore, bun.lock, package-lock.json."
+    ],
+    "script_access": {
+      "files": [
+        "public/blog/blog.json",
+        "src/App.jsx",
+        "src/components/ContactRail.jsx",
+        "src/components/PageRail.jsx",
+        "src/store/data/books.json",
+        "src/store/data/experiences.json",
+        "src/store/data/majorProjects.json"
+      ],
+      "meaning": "Source values accessed, not proof of semantic understanding",
+      "html_parsing": {
+        "calls": 0,
+        "cache_hits": 0
+      }
+    },
+    "mode": "static-source",
+    "engine": "skill-guided-agent",
+    "verification": "passed",
+    "script_sha256": "217c3631038937fa6b913e36b43bf4bf30fc029643aabc0732852a1de347e391",
+    "snapshot_sha256": "50b9f780e2de9e5d17ea2ddeea47cfa88c06c79589aae40585e39187fe3a24d1",
+    "snapshot_limitations": [],
+    "skill_sha256": "344ebc4fc44932569934c30435ff0bbd96be5515719636dd9f63be0ccac2435e",
+    "discovery_budget": {
+      "max_model_rounds": 12,
+      "reached": true
+    }
+  },
+  "pages": [
+    {
+      "url": "/",
+      "template": "src/App.jsx",
+      "is_dynamic": false,
+      "coverage": {
+        "mode": "static-source",
+        "complete": false,
+        "limitations": [
+          "Route resolved by runtime window.location.pathname switch in src/App.jsx line 419; no static route manifest or prerender.",
+          "Single index.html shell supplies the same title/meta for every route; no per-route metadata in source.",
+          "No production origin declared in source; internal hrefs are origin-relative.",
+          "Model discovery budget reached; remaining semantic investigation is unresolved. The extractor still receives the full captured snapshot."
+        ]
+      },
+      "route_family": "/",
+      "instance_status": "concrete",
+      "locale": "en",
+      "content_sources": [
+        {
+          "file": "src/App.jsx",
+          "pointer": "",
+          "kind": "route-component:HomePage",
+          "pointer_validation": "file-reference"
+        },
+        {
+          "file": "index.html",
+          "pointer": "",
+          "kind": "html-shell",
+          "pointer_validation": "file-reference"
+        }
+      ],
+      "depth": 0,
+      "query_links": [
+        {
+          "file": "src/components/ContactRail.jsx",
+          "line": 4,
+          "source_id": "src/components/ContactRail.jsx:4:20:a",
+          "href": "https://cal.com/lakshay-goyal/30min?overlayCalendar=true",
+          "target_url": "https://cal.com/lakshay-goyal/30min?overlayCalendar=true"
+        },
+        {
+          "file": "src/store/data/books.json",
+          "line": 2,
+          "source_id": "src/store/data/books.json:2:19:a",
+          "href": "https://www.amazon.in/Freedom-Known-J-Krishnamurti-ebook/dp/B003NX6Y6A?ref_=ast_author_mpb",
+          "target_url": "https://www.amazon.in/Freedom-Known-J-Krishnamurti-ebook/dp/B003NX6Y6A?ref_=ast_author_mpb"
+        }
+      ]
+    },
+    {
+      "url": "/about",
+      "template": "src/App.jsx",
+      "is_dynamic": false,
+      "coverage": {
+        "mode": "static-source",
+        "complete": false,
+        "limitations": [
+          "Route resolved by runtime window.location.pathname switch in src/App.jsx line 420; no static route manifest or prerender.",
+          "Single index.html shell supplies the same title/meta for every route; no per-route metadata in source.",
+          "No production origin declared in source; internal hrefs are origin-relative.",
+          "Model discovery budget reached; remaining semantic investigation is unresolved. The extractor still receives the full captured snapshot."
+        ]
+      },
+      "route_family": "/about",
+      "instance_status": "concrete",
+      "locale": "en",
+      "content_sources": [
+        {
+          "file": "src/App.jsx",
+          "pointer": "",
+          "kind": "route-component:AboutPage",
+          "pointer_validation": "file-reference"
+        },
+        {
+          "file": "index.html",
+          "pointer": "",
+          "kind": "html-shell",
+          "pointer_validation": "file-reference"
+        }
+      ],
+      "depth": 1,
+      "query_links": [
+        {
+          "file": "src/components/ContactRail.jsx",
+          "line": 4,
+          "source_id": "src/components/ContactRail.jsx:4:20:a",
+          "href": "https://cal.com/lakshay-goyal/30min?overlayCalendar=true",
+          "target_url": "https://cal.com/lakshay-goyal/30min?overlayCalendar=true"
+        },
+        {
+          "file": "src/store/data/books.json",
+          "line": 2,
+          "source_id": "src/store/data/books.json:2:19:a",
+          "href": "https://www.amazon.in/Freedom-Known-J-Krishnamurti-ebook/dp/B003NX6Y6A?ref_=ast_author_mpb",
+          "target_url": "https://www.amazon.in/Freedom-Known-J-Krishnamurti-ebook/dp/B003NX6Y6A?ref_=ast_author_mpb"
+        }
+      ]
+    },
+    {
+      "url": "/bookshelf",
+      "template": "src/App.jsx",
+      "is_dynamic": false,
+      "coverage": {
+        "mode": "static-source",
+        "complete": false,
+        "limitations": [
+          "Route resolved by runtime window.location.pathname switch in src/App.jsx line 421; no static route manifest or prerender.",
+          "Single index.html shell supplies the same title/meta for every route; no per-route metadata in source.",
+          "No production origin declared in source; internal hrefs are origin-relative.",
+          "Model discovery budget reached; remaining semantic investigation is unresolved. The extractor still receives the full captured snapshot."
+        ]
+      },
+      "route_family": "/bookshelf",
+      "instance_status": "concrete",
+      "locale": "en",
+      "content_sources": [
+        {
+          "file": "src/App.jsx",
+          "pointer": "",
+          "kind": "route-component:BookshelfPage",
+          "pointer_validation": "file-reference"
+        },
+        {
+          "file": "index.html",
+          "pointer": "",
+          "kind": "html-shell",
+          "pointer_validation": "file-reference"
+        }
+      ],
+      "depth": 1,
+      "query_links": [
+        {
+          "file": "src/components/ContactRail.jsx",
+          "line": 4,
+          "source_id": "src/components/ContactRail.jsx:4:20:a",
+          "href": "https://cal.com/lakshay-goyal/30min?overlayCalendar=true",
+          "target_url": "https://cal.com/lakshay-goyal/30min?overlayCalendar=true"
+        },
+        {
+          "file": "src/store/data/books.json",
+          "line": 2,
+          "source_id": "src/store/data/books.json:2:19:a",
+          "href": "https://www.amazon.in/Freedom-Known-J-Krishnamurti-ebook/dp/B003NX6Y6A?ref_=ast_author_mpb",
+          "target_url": "https://www.amazon.in/Freedom-Known-J-Krishnamurti-ebook/dp/B003NX6Y6A?ref_=ast_author_mpb"
+        }
+      ]
+    },
+    {
+      "url": "/blog",
+      "template": "src/App.jsx",
+      "is_dynamic": false,
+      "coverage": {
+        "mode": "static-source",
+        "complete": false,
+        "limitations": [
+          "Route resolved by runtime window.location.pathname switch in src/App.jsx line 422; no static route manifest or prerender.",
+          "Single index.html shell supplies the same title/meta for every route; no per-route metadata in source.",
+          "No production origin declared in source; internal hrefs are origin-relative.",
+          "Model discovery budget reached; remaining semantic investigation is unresolved. The extractor still receives the full captured snapshot."
+        ]
+      },
+      "route_family": "/blog",
+      "instance_status": "concrete",
+      "locale": "en",
+      "content_sources": [
+        {
+          "file": "src/App.jsx",
+          "pointer": "",
+          "kind": "route-component:BlogsPage",
+          "pointer_validation": "file-reference"
+        },
+        {
+          "file": "index.html",
+          "pointer": "",
+          "kind": "html-shell",
+          "pointer_validation": "file-reference"
+        }
+      ],
+      "depth": 1,
+      "query_links": [
+        {
+          "file": "src/components/ContactRail.jsx",
+          "line": 4,
+          "source_id": "src/components/ContactRail.jsx:4:20:a",
+          "href": "https://cal.com/lakshay-goyal/30min?overlayCalendar=true",
+          "target_url": "https://cal.com/lakshay-goyal/30min?overlayCalendar=true"
+        },
+        {
+          "file": "src/store/data/books.json",
+          "line": 2,
+          "source_id": "src/store/data/books.json:2:19:a",
+          "href": "https://www.amazon.in/Freedom-Known-J-Krishnamurti-ebook/dp/B003NX6Y6A?ref_=ast_author_mpb",
+          "target_url": "https://www.amazon.in/Freedom-Known-J-Krishnamurti-ebook/dp/B003NX6Y6A?ref_=ast_author_mpb"
+        }
+      ]
+    },
+    {
+      "url": "/blog/:slug",
+      "template": "src/App.jsx",
+      "is_dynamic": true,
+      "coverage": {
+        "mode": "static-source",
+        "complete": false,
+        "limitations": [
+          "Dynamic route matched by path.startsWith(\"/blog/\") in src/App.jsx line 423; slug is path.slice(6) and is not validated.",
+          "Post body fetched at runtime from /blog/<slug>.md; only instances listed in public/blog/blog.json are statically enumerable.",
+          "Full instance set unknown; runtime 404 handling for missing markdown not statically verifiable.",
+          "Model discovery budget reached; remaining semantic investigation is unresolved. The extractor still receives the full captured snapshot."
+        ]
+      },
+      "route_family": "/blog/:slug",
+      "instance_status": "template",
+      "locale": "en",
+      "content_sources": [
+        {
+          "file": "src/App.jsx",
+          "pointer": "",
+          "kind": "route-component:BlogPostPage",
+          "pointer_validation": "file-reference"
+        },
+        {
+          "file": "public/blog/blog.json",
+          "pointer": "",
+          "kind": "instance-index",
+          "pointer_validation": "file-reference"
+        }
+      ],
+      "depth": 2,
+      "query_links": [
+        {
+          "file": "src/components/ContactRail.jsx",
+          "line": 4,
+          "source_id": "src/components/ContactRail.jsx:4:20:a",
+          "href": "https://cal.com/lakshay-goyal/30min?overlayCalendar=true",
+          "target_url": "https://cal.com/lakshay-goyal/30min?overlayCalendar=true"
+        },
+        {
+          "file": "src/store/data/books.json",
+          "line": 2,
+          "source_id": "src/store/data/books.json:2:19:a",
+          "href": "https://www.amazon.in/Freedom-Known-J-Krishnamurti-ebook/dp/B003NX6Y6A?ref_=ast_author_mpb",
+          "target_url": "https://www.amazon.in/Freedom-Known-J-Krishnamurti-ebook/dp/B003NX6Y6A?ref_=ast_author_mpb"
+        }
+      ]
+    },
+    {
+      "url": "/blog/deploying-your-site-with-vercel",
+      "template": "src/App.jsx",
+      "is_dynamic": true,
+      "coverage": {
+        "mode": "static-source",
+        "complete": false,
+        "limitations": [
+          "Concrete instance enumerated from public/blog/blog.json; other instances may exist at runtime.",
+          "Markdown body served from public/blog/<slug>.md; front matter title differs from blog.json title.",
+          "Single index.html shell supplies the same title/meta for this route.",
+          "Some content-source selectors are unverified or invalid; inspect content_sources.pointer_validation. They are not verified observation locations.",
+          "Model discovery budget reached; remaining semantic investigation is unresolved. The extractor still receives the full captured snapshot."
+        ]
+      },
+      "route_family": "/blog/:slug",
+      "instance_status": "concrete",
+      "locale": "en",
+      "content_sources": [
+        {
+          "file": "public/blog/blog.json",
+          "pointer": "/link",
+          "kind": "instance-link",
+          "pointer_validation": "invalid-or-unresolvable-json-pointer",
+          "pointer_error": "KeyError"
+        },
+        {
+          "file": "public/blog/deploying-your-site-with-vercel.md",
+          "pointer": "",
+          "kind": "markdown-body",
+          "pointer_validation": "file-reference"
+        }
+      ],
+      "depth": 2,
+      "query_links": [
+        {
+          "file": "src/components/ContactRail.jsx",
+          "line": 4,
+          "source_id": "src/components/ContactRail.jsx:4:20:a",
+          "href": "https://cal.com/lakshay-goyal/30min?overlayCalendar=true",
+          "target_url": "https://cal.com/lakshay-goyal/30min?overlayCalendar=true"
+        },
+        {
+          "file": "src/store/data/books.json",
+          "line": 2,
+          "source_id": "src/store/data/books.json:2:19:a",
+          "href": "https://www.amazon.in/Freedom-Known-J-Krishnamurti-ebook/dp/B003NX6Y6A?ref_=ast_author_mpb",
+          "target_url": "https://www.amazon.in/Freedom-Known-J-Krishnamurti-ebook/dp/B003NX6Y6A?ref_=ast_author_mpb"
+        }
+      ]
+    }
+  ]
+}

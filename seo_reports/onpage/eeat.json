@@ -1,0 +1,2266 @@
+{
+  "schema_version": "2.0",
+  "category": "eeat",
+  "extraction": {
+    "framework": "React 18 SPA built with Vite 5 (no router library; hand-rolled pathname ternary switch in src/App.jsx), single index.html shell, Vercel SPA catch-all rewrite",
+    "route_source": "src/App.jsx App() ternary chain; concrete blog instance from public/blog/blog.json",
+    "shared_components": [
+      "src/components/PageRail.jsx",
+      "src/components/ContactRail.jsx"
+    ],
+    "data_sources": [
+      "src/store/data/experiences.json",
+      "src/store/data/majorProjects.json",
+      "src/store/data/skills.json",
+      "src/store/data/books.json",
+      "public/blog/blog.json",
+      "public/blog/deploying-your-site-with-vercel.md"
+    ],
+    "script_access": {
+      "files": [
+        "README.md",
+        "index.html",
+        "public/blog/blog.json",
+        "public/blog/deploying-your-site-with-vercel.md",
+        "src/App.jsx",
+        "src/components/ContactRail.jsx",
+        "src/store/data/books.json",
+        "src/store/data/experiences.json",
+        "src/store/data/majorProjects.json",
+        "src/store/data/skills.json"
+      ],
+      "meaning": "Source values accessed, not proof of semantic understanding",
+      "html_parsing": {
+        "calls": 0,
+        "cache_hits": 0
+      }
+    },
+    "mode": "static-source",
+    "engine": "skill-guided-agent",
+    "verification": "passed",
+    "script_sha256": "9710b8da96ba8318889bf694e69a24a9dad11bb459ed1d0ddcf5a5c0079e0eaf",
+    "snapshot_sha256": "50b9f780e2de9e5d17ea2ddeea47cfa88c06c79589aae40585e39187fe3a24d1",
+    "snapshot_limitations": [],
+    "skill_sha256": "e17391844f4a22aa827368abf259045173ec6c11a1861793f87bee0cc9a11394",
+    "discovery_budget": {
+      "max_model_rounds": 12,
+      "reached": true
+    }
+  },
+  "pages": [
+    {
+      "url": "/",
+      "template": "src/App.jsx",
+      "is_dynamic": false,
+      "route_family": "/",
+      "instance_status": "concrete",
+      "locale": "en",
+      "coverage": {
+        "mode": "static-source",
+        "complete": false,
+        "limitations": [
+          "React SPA: page bodies are composed at runtime from JSX in src/App.jsx; parse_html cannot evaluate JSX expressions.",
+          "Blog list and post bodies are fetched at runtime (fetch /blog/blog.json and /blog/<slug>.md); only statically enumerable instances are reported.",
+          "README.md is repository documentation, not a rendered page; its copy is source evidence only.",
+          "Static absence of a signal is not evidence of runtime absence.",
+          "Model discovery budget reached; remaining semantic investigation is unresolved. The extractor still receives the full captured snapshot."
+        ]
+      },
+      "signals": [
+        {
+          "signal": "authorship",
+          "status": "candidate_evidence",
+          "evidence": [
+            {
+              "file": "src/App.jsx",
+              "line": 432,
+              "source_id": "src/App.jsx:432:194:a",
+              "text": "Lakshay Goyal"
+            },
+            {
+              "file": "src/App.jsx",
+              "line": 433,
+              "source_id": "src/App.jsx:433:73:p",
+              "text": "Software Engineer"
+            },
+            {
+              "file": "README.md",
+              "line": 1,
+              "source_id": "README.md:1:2:h1",
+              "text": "Hey, I'm Lakshay"
+            },
+            {
+              "file": "index.html",
+              "line": 7,
+              "source_id": "index.html:7:38:meta",
+              "text": "Lakshay Goyal is a Software Engineer building thoughtful mobile and web products."
+            }
+          ]
+        },
+        {
+          "signal": "experience",
+          "status": "candidate_evidence",
+          "evidence": [
+            {
+              "file": "src/store/data/experiences.json",
+              "line": 3,
+              "source_id": "src/store/data/experiences.json:3:4:company",
+              "text": "Testsigma"
+            },
+            {
+              "file": "src/store/data/experiences.json",
+              "line": 5,
+              "source_id": "src/store/data/experiences.json:5:4:role",
+              "text": "Software Engineer"
+            },
+            {
+              "file": "src/store/data/experiences.json",
+              "line": 6,
+              "source_id": "src/store/data/experiences.json:6:4:period",
+              "text": "July 2026 — Present"
+            },
+            {
+              "file": "src/store/data/experiences.json",
+              "line": 7,
+              "source_id": "src/store/data/experiences.json:7:4:location",
+              "text": "Bangalore, India"
+            },
+            {
+              "file": "src/store/data/experiences.json",
+              "line": 8,
+              "source_id": "src/store/data/experiences.json:8:4:summary",
+              "text": "Building things that make test automation a little less painful. Mostly jumping between backend, frontend, and infra, figuring things out along the way."
+            },
+            {
+              "file": "src/store/data/experiences.json",
+              "line": 3,
+              "source_id": "src/store/data/experiences.json:3:4:company",
+              "text": "FOZO"
+            },
+            {
+              "file": "src/store/data/experiences.json",
+              "line": 5,
+              "source_id": "src/store/data/experiences.json:5:4:role",
+              "text": "Founding Engineer"
+            },
+            {
+              "file": "src/store/data/experiences.json",
+              "line": 6,
+              "source_id": "src/store/data/experiences.json:6:4:period",
+              "text": "Dec 2025 — June 2026"
+            },
+            {
+              "file": "src/store/data/experiences.json",
+              "line": 7,
+              "source_id": "src/store/data/experiences.json:7:4:location",
+              "text": "Bangalore, India"
+            },
+            {
+              "file": "src/store/data/experiences.json",
+              "line": 8,
+              "source_id": "src/store/data/experiences.json:8:4:summary",
+              "text": "Built a food delivery platform from scratch, handling everything from architecture and mobile apps to servers, deployments, and all the chaos in between."
+            }
+          ]
+        },
+        {
+          "signal": "expertise",
+          "status": "candidate_evidence",
+          "evidence": [
+            {
+              "file": "src/store/data/skills.json",
+              "line": 3,
+              "source_id": "src/store/data/skills.json:3:4:span",
+              "text": "Web Development"
+            },
+            {
+              "file": "src/store/data/skills.json",
+              "line": 4,
+              "source_id": "src/store/data/skills.json:4:4:span",
+              "text": "MERN Stack, Next.js, Remix, Turborepo, PostgreSQL (Prisma), API Development"
+            },
+            {
+              "file": "src/store/data/skills.json",
+              "line": 3,
+              "source_id": "src/store/data/skills.json:3:4:span",
+              "text": "Mobile Development"
+            },
+            {
+              "file": "src/store/data/skills.json",
+              "line": 4,
+              "source_id": "src/store/data/skills.json:4:4:span",
+              "text": "React Native, API Connectivity"
+            },
+            {
+              "file": "src/store/data/skills.json",
+              "line": 3,
+              "source_id": "src/store/data/skills.json:3:4:span",
+              "text": "AI"
+            },
+            {
+              "file": "src/store/data/skills.json",
+              "line": 4,
+              "source_id": "src/store/data/skills.json:4:4:span",
+              "text": "Python, FastAPI, Machine Learning, Deep Learning, NLP, Computer Vision, AI Applications, GenAI, AI Agents"
+            },
+            {
+              "file": "src/store/data/majorProjects.json",
+              "line": 3,
+              "source_id": "src/store/data/majorProjects.json:3:4:p",
+              "text": "Unlovable - Application Builder."
+            },
+            {
+              "file": "src/store/data/majorProjects.json",
+              "line": 4,
+              "source_id": "src/store/data/majorProjects.json:4:4:p",
+              "text": "Built an application builder, where anyone can able to generate an web application using a prompt and creativity."
+            },
+            {
+              "file": "src/store/data/majorProjects.json",
+              "line": 3,
+              "source_id": "src/store/data/majorProjects.json:3:4:p",
+              "text": "Unlovable - Mobile Application."
+            },
+            {
+              "file": "src/store/data/majorProjects.json",
+              "line": 4,
+              "source_id": "src/store/data/majorProjects.json:4:4:p",
+              "text": "Built an Mobile application builder, where anyone can able to generate an mobile application using a prompt and creativity."
+            },
+            {
+              "file": "src/store/data/majorProjects.json",
+              "line": 3,
+              "source_id": "src/store/data/majorProjects.json:3:4:p",
+              "text": "Exness - CFD Application."
+            },
+            {
+              "file": "src/store/data/majorProjects.json",
+              "line": 4,
+              "source_id": "src/store/data/majorProjects.json:4:4:p",
+              "text": "A CFD application for trade on crypto currencies."
+            },
+            {
+              "file": "src/store/data/majorProjects.json",
+              "line": 3,
+              "source_id": "src/store/data/majorProjects.json:3:4:p",
+              "text": "Exness - Mobile Application."
+            },
+            {
+              "file": "src/store/data/majorProjects.json",
+              "line": 4,
+              "source_id": "src/store/data/majorProjects.json:4:4:p",
+              "text": "A CFD Mobile application for trade on crypto currencies."
+            }
+          ]
+        },
+        {
+          "signal": "dates",
+          "status": "candidate_evidence",
+          "evidence": [
+            {
+              "file": "src/store/data/experiences.json",
+              "line": 6,
+              "source_id": "src/store/data/experiences.json:6:4:p",
+              "text": "July 2026 — Present"
+            },
+            {
+              "file": "src/store/data/experiences.json",
+              "line": 6,
+              "source_id": "src/store/data/experiences.json:6:4:p",
+              "text": "Dec 2025 — June 2026"
+            },
+            {
+              "file": "public/blog/blog.json",
+              "line": 6,
+              "source_id": "public/blog/blog.json:6:8:p",
+              "text": "July 1, 2023"
+            },
+            {
+              "file": "src/App.jsx",
+              "line": 269,
+              "source_id": "src/App.jsx:269:2:span",
+              "text": "2022–2023"
+            },
+            {
+              "file": "src/App.jsx",
+              "line": 270,
+              "source_id": "src/App.jsx:270:2:span",
+              "text": "2025"
+            },
+            {
+              "file": "src/App.jsx",
+              "line": 271,
+              "source_id": "src/App.jsx:271:2:span",
+              "text": "Super30"
+            },
+            {
+              "file": "src/App.jsx",
+              "line": 272,
+              "source_id": "src/App.jsx:272:2:span",
+              "text": "Now"
+            }
+          ]
+        },
+        {
+          "signal": "reviews",
+          "status": "not_observed_in_static_content",
+          "evidence": []
+        },
+        {
+          "signal": "credentials",
+          "status": "not_observed_in_static_content",
+          "evidence": []
+        }
+      ],
+      "trust_links": [
+        {
+          "file": "src/components/ContactRail.jsx",
+          "line": 8,
+          "source_id": "src/components/ContactRail.jsx:8:2:a",
+          "href": "https://github.com/lakshay-goyal"
+        },
+        {
+          "file": "src/components/ContactRail.jsx",
+          "line": 9,
+          "source_id": "src/components/ContactRail.jsx:9:2:a",
+          "href": "https://www.linkedin.com/in/lakshay-goyal-9778a6246/"
+        },
+        {
+          "file": "src/components/ContactRail.jsx",
+          "line": 10,
+          "source_id": "src/components/ContactRail.jsx:10:2:a",
+          "href": "https://x.com/lakshayg2004"
+        },
+        {
+          "file": "src/components/ContactRail.jsx",
+          "line": 11,
+          "source_id": "src/components/ContactRail.jsx:11:2:a",
+          "href": "/Lakshay_Resume.pdf"
+        },
+        {
+          "file": "src/components/ContactRail.jsx",
+          "line": 4,
+          "source_id": "src/components/ContactRail.jsx:4:6:a",
+          "href": "https://cal.com/lakshay-goyal/30min?overlayCalendar=true"
+        },
+        {
+          "file": "README.md",
+          "line": 3,
+          "source_id": "README.md:3:0:a",
+          "href": "https://lakshaygoyal.in"
+        },
+        {
+          "file": "README.md",
+          "line": 9,
+          "source_id": "README.md:9:0:a",
+          "href": "https://unlovable.lakshaygoyal.in/"
+        },
+        {
+          "file": "README.md",
+          "line": 11,
+          "source_id": "README.md:11:0:a",
+          "href": "https://github.com/lakshay-goyal/Unlovable"
+        },
+        {
+          "file": "README.md",
+          "line": 13,
+          "source_id": "README.md:13:0:a",
+          "href": "https://exness.lakshaygoyal.in/"
+        },
+        {
+          "file": "README.md",
+          "line": 15,
+          "source_id": "README.md:15:0:a",
+          "href": "https://github.com/lakshay-goyal/Exness"
+        },
+        {
+          "file": "README.md",
+          "line": 65,
+          "source_id": "README.md:65:0:a",
+          "href": "https://lakshaygoyal.in"
+        },
+        {
+          "file": "README.md",
+          "line": 66,
+          "source_id": "README.md:66:0:a",
+          "href": "mailto:lakshaygoyal201@gmail.com"
+        },
+        {
+          "file": "README.md",
+          "line": 67,
+          "source_id": "README.md:67:0:a",
+          "href": "https://www.linkedin.com/in/lakshay-goyal-9778a6246"
+        },
+        {
+          "file": "README.md",
+          "line": 68,
+          "source_id": "README.md:68:0:a",
+          "href": "https://twitter.com/lakshayg2004"
+        },
+        {
+          "file": "README.md",
+          "line": 69,
+          "source_id": "README.md:69:0:a",
+          "href": "https://github.com/lakshay-goyal"
+        }
+      ],
+      "citations": [
+        {
+          "file": "src/store/data/experiences.json",
+          "line": 4,
+          "source_id": "src/store/data/experiences.json:4:4:url",
+          "href": "https://testsigma.com/"
+        },
+        {
+          "file": "src/store/data/experiences.json",
+          "line": 4,
+          "source_id": "src/store/data/experiences.json:4:4:url",
+          "href": "https://getfozo.in"
+        },
+        {
+          "file": "src/store/data/majorProjects.json",
+          "line": 6,
+          "source_id": "src/store/data/majorProjects.json:6:4:image",
+          "href": "/Image/UnlovableWeb.png"
+        },
+        {
+          "file": "src/store/data/majorProjects.json",
+          "line": 7,
+          "source_id": "src/store/data/majorProjects.json:7:4:github",
+          "href": "https://github.com/lakshay-goyal/Unlovable"
+        },
+        {
+          "file": "src/store/data/majorProjects.json",
+          "line": 8,
+          "source_id": "src/store/data/majorProjects.json:8:4:live",
+          "href": "https://unlovable.lakshaygoyal.in/"
+        },
+        {
+          "file": "src/store/data/majorProjects.json",
+          "line": 9,
+          "source_id": "src/store/data/majorProjects.json:9:4:videoLink",
+          "href": "/video/UnlovableWeb.mp4"
+        },
+        {
+          "file": "src/store/data/majorProjects.json",
+          "line": 6,
+          "source_id": "src/store/data/majorProjects.json:6:4:image",
+          "href": "/Image/UnlovableMobile.png"
+        },
+        {
+          "file": "src/store/data/majorProjects.json",
+          "line": 7,
+          "source_id": "src/store/data/majorProjects.json:7:4:github",
+          "href": "https://github.com/lakshay-goyal/Unlovable"
+        },
+        {
+          "file": "src/store/data/majorProjects.json",
+          "line": 9,
+          "source_id": "src/store/data/majorProjects.json:9:4:videoLink",
+          "href": "/video/UnlovableMobile.mp4"
+        },
+        {
+          "file": "src/store/data/majorProjects.json",
+          "line": 6,
+          "source_id": "src/store/data/majorProjects.json:6:4:image",
+          "href": "/Image/ExnessWeb.png"
+        },
+        {
+          "file": "src/store/data/majorProjects.json",
+          "line": 7,
+          "source_id": "src/store/data/majorProjects.json:7:4:github",
+          "href": "https://github.com/lakshay-goyal/Exness"
+        },
+        {
+          "file": "src/store/data/majorProjects.json",
+          "line": 8,
+          "source_id": "src/store/data/majorProjects.json:8:4:live",
+          "href": "https://exness.lakshaygoyal.in/"
+        },
+        {
+          "file": "src/store/data/majorProjects.json",
+          "line": 9,
+          "source_id": "src/store/data/majorProjects.json:9:4:videoLink",
+          "href": "/video/ExnessWeb.mp4"
+        },
+        {
+          "file": "src/store/data/majorProjects.json",
+          "line": 6,
+          "source_id": "src/store/data/majorProjects.json:6:4:image",
+          "href": "/Image/ExnessMobile.png"
+        },
+        {
+          "file": "src/store/data/majorProjects.json",
+          "line": 7,
+          "source_id": "src/store/data/majorProjects.json:7:4:github",
+          "href": "https://github.com/lakshay-goyal/Exness"
+        },
+        {
+          "file": "src/store/data/majorProjects.json",
+          "line": 9,
+          "source_id": "src/store/data/majorProjects.json:9:4:videoLink",
+          "href": "/video/ExnessMobile.mp4"
+        },
+        {
+          "file": "src/store/data/books.json",
+          "line": 6,
+          "source_id": "src/store/data/books.json:6:4:cover",
+          "href": "https://m.media-amazon.com/images/I/71tAHjMNWUL._SL1169_.jpg"
+        },
+        {
+          "file": "src/store/data/books.json",
+          "line": 9,
+          "source_id": "src/store/data/books.json:9:4:amazonLink",
+          "href": "https://www.amazon.in/Freedom-Known-J-Krishnamurti-ebook/dp/B003NX6Y6A?ref_=ast_author_mpb"
+        },
+        {
+          "file": "src/store/data/books.json",
+          "line": 6,
+          "source_id": "src/store/data/books.json:6:4:cover",
+          "href": "https://m.media-amazon.com/images/I/71ZMsYuwELL._SY466_.jpg"
+        },
+        {
+          "file": "src/store/data/books.json",
+          "line": 9,
+          "source_id": "src/store/data/books.json:9:4:amazonLink",
+          "href": "https://www.amazon.in/12-Week-Year-Others-Months/dp/1118509234"
+        }
+      ],
+      "interpretation": "Candidate E-E-A-T evidence only; presence of a claim does not verify its truth. Authorship is inferred from the shared site header (Lakshay Goyal / Software Engineer) and README first-person copy. Experience/expertise evidence comes from src/store/data JSON rendered by page components. No author byline, credential, review or testimonial is observed in static content; no contact/privacy/terms/editorial policy routes exist in the captured route set. Trust links and citations are outbound references, not verified third-party sources."
+    },
+    {
+      "url": "/about",
+      "template": "src/App.jsx",
+      "is_dynamic": false,
+      "route_family": "/about",
+      "instance_status": "concrete",
+      "locale": "en",
+      "coverage": {
+        "mode": "static-source",
+        "complete": false,
+        "limitations": [
+          "React SPA: page bodies are composed at runtime from JSX in src/App.jsx; parse_html cannot evaluate JSX expressions.",
+          "Blog list and post bodies are fetched at runtime (fetch /blog/blog.json and /blog/<slug>.md); only statically enumerable instances are reported.",
+          "README.md is repository documentation, not a rendered page; its copy is source evidence only.",
+          "Static absence of a signal is not evidence of runtime absence.",
+          "Model discovery budget reached; remaining semantic investigation is unresolved. The extractor still receives the full captured snapshot."
+        ]
+      },
+      "signals": [
+        {
+          "signal": "authorship",
+          "status": "candidate_evidence",
+          "evidence": [
+            {
+              "file": "src/App.jsx",
+              "line": 432,
+              "source_id": "src/App.jsx:432:194:a",
+              "text": "Lakshay Goyal"
+            },
+            {
+              "file": "src/App.jsx",
+              "line": 433,
+              "source_id": "src/App.jsx:433:73:p",
+              "text": "Software Engineer"
+            },
+            {
+              "file": "README.md",
+              "line": 1,
+              "source_id": "README.md:1:2:h1",
+              "text": "Hey, I'm Lakshay"
+            },
+            {
+              "file": "index.html",
+              "line": 7,
+              "source_id": "index.html:7:38:meta",
+              "text": "Lakshay Goyal is a Software Engineer building thoughtful mobile and web products."
+            }
+          ]
+        },
+        {
+          "signal": "experience",
+          "status": "candidate_evidence",
+          "evidence": [
+            {
+              "file": "src/App.jsx",
+              "line": 269,
+              "source_id": "src/App.jsx:269:2:span",
+              "text": "2022–2023"
+            },
+            {
+              "file": "src/App.jsx",
+              "line": 269,
+              "source_id": "src/App.jsx:269:2:h3",
+              "text": "Finding a direction"
+            },
+            {
+              "file": "src/App.jsx",
+              "line": 269,
+              "source_id": "src/App.jsx:269:2:p",
+              "text": "I started learning by building projects in college. Coming from a commerce background, I worked through the maths behind machine learning and deep learning, then built a language translator app with a local NLP model."
+            },
+            {
+              "file": "src/App.jsx",
+              "line": 270,
+              "source_id": "src/App.jsx:270:2:span",
+              "text": "2025"
+            },
+            {
+              "file": "src/App.jsx",
+              "line": 270,
+              "source_id": "src/App.jsx:270:2:h3",
+              "text": "Building for the web"
+            },
+            {
+              "file": "src/App.jsx",
+              "line": 270,
+              "source_id": "src/App.jsx:270:2:p",
+              "text": "I moved into the MERN stack and learned how authentication, APIs, interfaces, and deployment come together in real products."
+            },
+            {
+              "file": "src/App.jsx",
+              "line": 271,
+              "source_id": "src/App.jsx:271:2:span",
+              "text": "Super30"
+            },
+            {
+              "file": "src/App.jsx",
+              "line": 271,
+              "source_id": "src/App.jsx:271:2:h3",
+              "text": "Going deeper"
+            },
+            {
+              "file": "src/App.jsx",
+              "line": 271,
+              "source_id": "src/App.jsx:271:2:p",
+              "text": "Being part of Super30 pushed me to ship more and learn about backend design, DevOps, AI engineering, real-time systems, and system design."
+            },
+            {
+              "file": "src/App.jsx",
+              "line": 272,
+              "source_id": "src/App.jsx:272:2:span",
+              "text": "Now"
+            },
+            {
+              "file": "src/App.jsx",
+              "line": 272,
+              "source_id": "src/App.jsx:272:2:h3",
+              "text": "Working on products"
+            },
+            {
+              "file": "src/App.jsx",
+              "line": 272,
+              "source_id": "src/App.jsx:272:2:p",
+              "text": "I moved from Delhi to Bangalore, helped build FOZO from the ground up, and now work on test automation at Testsigma. I care about polished interfaces, understandable systems, and work that lasts beyond a demo."
+            }
+          ]
+        },
+        {
+          "signal": "expertise",
+          "status": "candidate_evidence",
+          "evidence": [
+            {
+              "file": "src/store/data/skills.json",
+              "line": 3,
+              "source_id": "src/store/data/skills.json:3:4:span",
+              "text": "Web Development"
+            },
+            {
+              "file": "src/store/data/skills.json",
+              "line": 4,
+              "source_id": "src/store/data/skills.json:4:4:span",
+              "text": "MERN Stack, Next.js, Remix, Turborepo, PostgreSQL (Prisma), API Development"
+            },
+            {
+              "file": "src/store/data/skills.json",
+              "line": 3,
+              "source_id": "src/store/data/skills.json:3:4:span",
+              "text": "Mobile Development"
+            },
+            {
+              "file": "src/store/data/skills.json",
+              "line": 4,
+              "source_id": "src/store/data/skills.json:4:4:span",
+              "text": "React Native, API Connectivity"
+            },
+            {
+              "file": "src/store/data/skills.json",
+              "line": 3,
+              "source_id": "src/store/data/skills.json:3:4:span",
+              "text": "AI"
+            },
+            {
+              "file": "src/store/data/skills.json",
+              "line": 4,
+              "source_id": "src/store/data/skills.json:4:4:span",
+              "text": "Python, FastAPI, Machine Learning, Deep Learning, NLP, Computer Vision, AI Applications, GenAI, AI Agents"
+            }
+          ]
+        },
+        {
+          "signal": "dates",
+          "status": "candidate_evidence",
+          "evidence": [
+            {
+              "file": "src/store/data/experiences.json",
+              "line": 6,
+              "source_id": "src/store/data/experiences.json:6:4:p",
+              "text": "July 2026 — Present"
+            },
+            {
+              "file": "src/store/data/experiences.json",
+              "line": 6,
+              "source_id": "src/store/data/experiences.json:6:4:p",
+              "text": "Dec 2025 — June 2026"
+            },
+            {
+              "file": "public/blog/blog.json",
+              "line": 6,
+              "source_id": "public/blog/blog.json:6:8:p",
+              "text": "July 1, 2023"
+            },
+            {
+              "file": "src/App.jsx",
+              "line": 269,
+              "source_id": "src/App.jsx:269:2:span",
+              "text": "2022–2023"
+            },
+            {
+              "file": "src/App.jsx",
+              "line": 270,
+              "source_id": "src/App.jsx:270:2:span",
+              "text": "2025"
+            },
+            {
+              "file": "src/App.jsx",
+              "line": 271,
+              "source_id": "src/App.jsx:271:2:span",
+              "text": "Super30"
+            },
+            {
+              "file": "src/App.jsx",
+              "line": 272,
+              "source_id": "src/App.jsx:272:2:span",
+              "text": "Now"
+            }
+          ]
+        },
+        {
+          "signal": "reviews",
+          "status": "not_observed_in_static_content",
+          "evidence": []
+        },
+        {
+          "signal": "credentials",
+          "status": "not_observed_in_static_content",
+          "evidence": []
+        }
+      ],
+      "trust_links": [
+        {
+          "file": "src/components/ContactRail.jsx",
+          "line": 8,
+          "source_id": "src/components/ContactRail.jsx:8:2:a",
+          "href": "https://github.com/lakshay-goyal"
+        },
+        {
+          "file": "src/components/ContactRail.jsx",
+          "line": 9,
+          "source_id": "src/components/ContactRail.jsx:9:2:a",
+          "href": "https://www.linkedin.com/in/lakshay-goyal-9778a6246/"
+        },
+        {
+          "file": "src/components/ContactRail.jsx",
+          "line": 10,
+          "source_id": "src/components/ContactRail.jsx:10:2:a",
+          "href": "https://x.com/lakshayg2004"
+        },
+        {
+          "file": "src/components/ContactRail.jsx",
+          "line": 11,
+          "source_id": "src/components/ContactRail.jsx:11:2:a",
+          "href": "/Lakshay_Resume.pdf"
+        },
+        {
+          "file": "src/components/ContactRail.jsx",
+          "line": 4,
+          "source_id": "src/components/ContactRail.jsx:4:6:a",
+          "href": "https://cal.com/lakshay-goyal/30min?overlayCalendar=true"
+        },
+        {
+          "file": "README.md",
+          "line": 3,
+          "source_id": "README.md:3:0:a",
+          "href": "https://lakshaygoyal.in"
+        },
+        {
+          "file": "README.md",
+          "line": 9,
+          "source_id": "README.md:9:0:a",
+          "href": "https://unlovable.lakshaygoyal.in/"
+        },
+        {
+          "file": "README.md",
+          "line": 11,
+          "source_id": "README.md:11:0:a",
+          "href": "https://github.com/lakshay-goyal/Unlovable"
+        },
+        {
+          "file": "README.md",
+          "line": 13,
+          "source_id": "README.md:13:0:a",
+          "href": "https://exness.lakshaygoyal.in/"
+        },
+        {
+          "file": "README.md",
+          "line": 15,
+          "source_id": "README.md:15:0:a",
+          "href": "https://github.com/lakshay-goyal/Exness"
+        },
+        {
+          "file": "README.md",
+          "line": 65,
+          "source_id": "README.md:65:0:a",
+          "href": "https://lakshaygoyal.in"
+        },
+        {
+          "file": "README.md",
+          "line": 66,
+          "source_id": "README.md:66:0:a",
+          "href": "mailto:lakshaygoyal201@gmail.com"
+        },
+        {
+          "file": "README.md",
+          "line": 67,
+          "source_id": "README.md:67:0:a",
+          "href": "https://www.linkedin.com/in/lakshay-goyal-9778a6246"
+        },
+        {
+          "file": "README.md",
+          "line": 68,
+          "source_id": "README.md:68:0:a",
+          "href": "https://twitter.com/lakshayg2004"
+        },
+        {
+          "file": "README.md",
+          "line": 69,
+          "source_id": "README.md:69:0:a",
+          "href": "https://github.com/lakshay-goyal"
+        }
+      ],
+      "citations": [
+        {
+          "file": "src/store/data/experiences.json",
+          "line": 4,
+          "source_id": "src/store/data/experiences.json:4:4:url",
+          "href": "https://testsigma.com/"
+        },
+        {
+          "file": "src/store/data/experiences.json",
+          "line": 4,
+          "source_id": "src/store/data/experiences.json:4:4:url",
+          "href": "https://getfozo.in"
+        },
+        {
+          "file": "src/store/data/majorProjects.json",
+          "line": 6,
+          "source_id": "src/store/data/majorProjects.json:6:4:image",
+          "href": "/Image/UnlovableWeb.png"
+        },
+        {
+          "file": "src/store/data/majorProjects.json",
+          "line": 7,
+          "source_id": "src/store/data/majorProjects.json:7:4:github",
+          "href": "https://github.com/lakshay-goyal/Unlovable"
+        },
+        {
+          "file": "src/store/data/majorProjects.json",
+          "line": 8,
+          "source_id": "src/store/data/majorProjects.json:8:4:live",
+          "href": "https://unlovable.lakshaygoyal.in/"
+        },
+        {
+          "file": "src/store/data/majorProjects.json",
+          "line": 9,
+          "source_id": "src/store/data/majorProjects.json:9:4:videoLink",
+          "href": "/video/UnlovableWeb.mp4"
+        },
+        {
+          "file": "src/store/data/majorProjects.json",
+          "line": 6,
+          "source_id": "src/store/data/majorProjects.json:6:4:image",
+          "href": "/Image/UnlovableMobile.png"
+        },
+        {
+          "file": "src/store/data/majorProjects.json",
+          "line": 7,
+          "source_id": "src/store/data/majorProjects.json:7:4:github",
+          "href": "https://github.com/lakshay-goyal/Unlovable"
+        },
+        {
+          "file": "src/store/data/majorProjects.json",
+          "line": 9,
+          "source_id": "src/store/data/majorProjects.json:9:4:videoLink",
+          "href": "/video/UnlovableMobile.mp4"
+        },
+        {
+          "file": "src/store/data/majorProjects.json",
+          "line": 6,
+          "source_id": "src/store/data/majorProjects.json:6:4:image",
+          "href": "/Image/ExnessWeb.png"
+        },
+        {
+          "file": "src/store/data/majorProjects.json",
+          "line": 7,
+          "source_id": "src/store/data/majorProjects.json:7:4:github",
+          "href": "https://github.com/lakshay-goyal/Exness"
+        },
+        {
+          "file": "src/store/data/majorProjects.json",
+          "line": 8,
+          "source_id": "src/store/data/majorProjects.json:8:4:live",
+          "href": "https://exness.lakshaygoyal.in/"
+        },
+        {
+          "file": "src/store/data/majorProjects.json",
+          "line": 9,
+          "source_id": "src/store/data/majorProjects.json:9:4:videoLink",
+          "href": "/video/ExnessWeb.mp4"
+        },
+        {
+          "file": "src/store/data/majorProjects.json",
+          "line": 6,
+          "source_id": "src/store/data/majorProjects.json:6:4:image",
+          "href": "/Image/ExnessMobile.png"
+        },
+        {
+          "file": "src/store/data/majorProjects.json",
+          "line": 7,
+          "source_id": "src/store/data/majorProjects.json:7:4:github",
+          "href": "https://github.com/lakshay-goyal/Exness"
+        },
+        {
+          "file": "src/store/data/majorProjects.json",
+          "line": 9,
+          "source_id": "src/store/data/majorProjects.json:9:4:videoLink",
+          "href": "/video/ExnessMobile.mp4"
+        },
+        {
+          "file": "src/store/data/books.json",
+          "line": 6,
+          "source_id": "src/store/data/books.json:6:4:cover",
+          "href": "https://m.media-amazon.com/images/I/71tAHjMNWUL._SL1169_.jpg"
+        },
+        {
+          "file": "src/store/data/books.json",
+          "line": 9,
+          "source_id": "src/store/data/books.json:9:4:amazonLink",
+          "href": "https://www.amazon.in/Freedom-Known-J-Krishnamurti-ebook/dp/B003NX6Y6A?ref_=ast_author_mpb"
+        },
+        {
+          "file": "src/store/data/books.json",
+          "line": 6,
+          "source_id": "src/store/data/books.json:6:4:cover",
+          "href": "https://m.media-amazon.com/images/I/71ZMsYuwELL._SY466_.jpg"
+        },
+        {
+          "file": "src/store/data/books.json",
+          "line": 9,
+          "source_id": "src/store/data/books.json:9:4:amazonLink",
+          "href": "https://www.amazon.in/12-Week-Year-Others-Months/dp/1118509234"
+        }
+      ],
+      "interpretation": "Candidate E-E-A-T evidence only; presence of a claim does not verify its truth. Authorship is inferred from the shared site header (Lakshay Goyal / Software Engineer) and README first-person copy. Experience/expertise evidence comes from src/store/data JSON rendered by page components. No author byline, credential, review or testimonial is observed in static content; no contact/privacy/terms/editorial policy routes exist in the captured route set. Trust links and citations are outbound references, not verified third-party sources."
+    },
+    {
+      "url": "/bookshelf",
+      "template": "src/App.jsx",
+      "is_dynamic": false,
+      "route_family": "/bookshelf",
+      "instance_status": "concrete",
+      "locale": "en",
+      "coverage": {
+        "mode": "static-source",
+        "complete": false,
+        "limitations": [
+          "React SPA: page bodies are composed at runtime from JSX in src/App.jsx; parse_html cannot evaluate JSX expressions.",
+          "Blog list and post bodies are fetched at runtime (fetch /blog/blog.json and /blog/<slug>.md); only statically enumerable instances are reported.",
+          "README.md is repository documentation, not a rendered page; its copy is source evidence only.",
+          "Static absence of a signal is not evidence of runtime absence.",
+          "Model discovery budget reached; remaining semantic investigation is unresolved. The extractor still receives the full captured snapshot."
+        ]
+      },
+      "signals": [
+        {
+          "signal": "authorship",
+          "status": "candidate_evidence",
+          "evidence": [
+            {
+              "file": "src/App.jsx",
+              "line": 432,
+              "source_id": "src/App.jsx:432:194:a",
+              "text": "Lakshay Goyal"
+            },
+            {
+              "file": "src/App.jsx",
+              "line": 433,
+              "source_id": "src/App.jsx:433:73:p",
+              "text": "Software Engineer"
+            },
+            {
+              "file": "README.md",
+              "line": 1,
+              "source_id": "README.md:1:2:h1",
+              "text": "Hey, I'm Lakshay"
+            },
+            {
+              "file": "index.html",
+              "line": 7,
+              "source_id": "index.html:7:38:meta",
+              "text": "Lakshay Goyal is a Software Engineer building thoughtful mobile and web products."
+            }
+          ]
+        },
+        {
+          "signal": "expertise",
+          "status": "candidate_evidence",
+          "evidence": [
+            {
+              "file": "src/store/data/books.json",
+              "line": 4,
+              "source_id": "src/store/data/books.json:4:4:p",
+              "text": "Freedom from the Known"
+            },
+            {
+              "file": "src/store/data/books.json",
+              "line": 5,
+              "source_id": "src/store/data/books.json:5:4:p",
+              "text": "J Krishnamurti"
+            },
+            {
+              "file": "src/store/data/books.json",
+              "line": 7,
+              "source_id": "src/store/data/books.json:7:4:p",
+              "text": "A profound exploration of the nature of thought and the self."
+            },
+            {
+              "file": "src/store/data/books.json",
+              "line": 8,
+              "source_id": "src/store/data/books.json:8:4:p",
+              "text": "Phylosohy"
+            },
+            {
+              "file": "src/store/data/books.json",
+              "line": 4,
+              "source_id": "src/store/data/books.json:4:4:p",
+              "text": "The 12 Week Year"
+            },
+            {
+              "file": "src/store/data/books.json",
+              "line": 5,
+              "source_id": "src/store/data/books.json:5:4:p",
+              "text": "Brian P. Moran, Michael Lennington"
+            },
+            {
+              "file": "src/store/data/books.json",
+              "line": 7,
+              "source_id": "src/store/data/books.json:7:4:p",
+              "text": "A practical execution system for compressing annual goals into focused 12-week cycles."
+            },
+            {
+              "file": "src/store/data/books.json",
+              "line": 8,
+              "source_id": "src/store/data/books.json:8:4:p",
+              "text": "Productivity"
+            }
+          ]
+        },
+        {
+          "signal": "dates",
+          "status": "candidate_evidence",
+          "evidence": [
+            {
+              "file": "src/store/data/experiences.json",
+              "line": 6,
+              "source_id": "src/store/data/experiences.json:6:4:p",
+              "text": "July 2026 — Present"
+            },
+            {
+              "file": "src/store/data/experiences.json",
+              "line": 6,
+              "source_id": "src/store/data/experiences.json:6:4:p",
+              "text": "Dec 2025 — June 2026"
+            },
+            {
+              "file": "public/blog/blog.json",
+              "line": 6,
+              "source_id": "public/blog/blog.json:6:8:p",
+              "text": "July 1, 2023"
+            },
+            {
+              "file": "src/App.jsx",
+              "line": 269,
+              "source_id": "src/App.jsx:269:2:span",
+              "text": "2022–2023"
+            },
+            {
+              "file": "src/App.jsx",
+              "line": 270,
+              "source_id": "src/App.jsx:270:2:span",
+              "text": "2025"
+            },
+            {
+              "file": "src/App.jsx",
+              "line": 271,
+              "source_id": "src/App.jsx:271:2:span",
+              "text": "Super30"
+            },
+            {
+              "file": "src/App.jsx",
+              "line": 272,
+              "source_id": "src/App.jsx:272:2:span",
+              "text": "Now"
+            }
+          ]
+        },
+        {
+          "signal": "reviews",
+          "status": "not_observed_in_static_content",
+          "evidence": []
+        },
+        {
+          "signal": "credentials",
+          "status": "not_observed_in_static_content",
+          "evidence": []
+        }
+      ],
+      "trust_links": [
+        {
+          "file": "src/components/ContactRail.jsx",
+          "line": 8,
+          "source_id": "src/components/ContactRail.jsx:8:2:a",
+          "href": "https://github.com/lakshay-goyal"
+        },
+        {
+          "file": "src/components/ContactRail.jsx",
+          "line": 9,
+          "source_id": "src/components/ContactRail.jsx:9:2:a",
+          "href": "https://www.linkedin.com/in/lakshay-goyal-9778a6246/"
+        },
+        {
+          "file": "src/components/ContactRail.jsx",
+          "line": 10,
+          "source_id": "src/components/ContactRail.jsx:10:2:a",
+          "href": "https://x.com/lakshayg2004"
+        },
+        {
+          "file": "src/components/ContactRail.jsx",
+          "line": 11,
+          "source_id": "src/components/ContactRail.jsx:11:2:a",
+          "href": "/Lakshay_Resume.pdf"
+        },
+        {
+          "file": "src/components/ContactRail.jsx",
+          "line": 4,
+          "source_id": "src/components/ContactRail.jsx:4:6:a",
+          "href": "https://cal.com/lakshay-goyal/30min?overlayCalendar=true"
+        },
+        {
+          "file": "README.md",
+          "line": 3,
+          "source_id": "README.md:3:0:a",
+          "href": "https://lakshaygoyal.in"
+        },
+        {
+          "file": "README.md",
+          "line": 9,
+          "source_id": "README.md:9:0:a",
+          "href": "https://unlovable.lakshaygoyal.in/"
+        },
+        {
+          "file": "README.md",
+          "line": 11,
+          "source_id": "README.md:11:0:a",
+          "href": "https://github.com/lakshay-goyal/Unlovable"
+        },
+        {
+          "file": "README.md",
+          "line": 13,
+          "source_id": "README.md:13:0:a",
+          "href": "https://exness.lakshaygoyal.in/"
+        },
+        {
+          "file": "README.md",
+          "line": 15,
+          "source_id": "README.md:15:0:a",
+          "href": "https://github.com/lakshay-goyal/Exness"
+        },
+        {
+          "file": "README.md",
+          "line": 65,
+          "source_id": "README.md:65:0:a",
+          "href": "https://lakshaygoyal.in"
+        },
+        {
+          "file": "README.md",
+          "line": 66,
+          "source_id": "README.md:66:0:a",
+          "href": "mailto:lakshaygoyal201@gmail.com"
+        },
+        {
+          "file": "README.md",
+          "line": 67,
+          "source_id": "README.md:67:0:a",
+          "href": "https://www.linkedin.com/in/lakshay-goyal-9778a6246"
+        },
+        {
+          "file": "README.md",
+          "line": 68,
+          "source_id": "README.md:68:0:a",
+          "href": "https://twitter.com/lakshayg2004"
+        },
+        {
+          "file": "README.md",
+          "line": 69,
+          "source_id": "README.md:69:0:a",
+          "href": "https://github.com/lakshay-goyal"
+        }
+      ],
+      "citations": [
+        {
+          "file": "src/store/data/experiences.json",
+          "line": 4,
+          "source_id": "src/store/data/experiences.json:4:4:url",
+          "href": "https://testsigma.com/"
+        },
+        {
+          "file": "src/store/data/experiences.json",
+          "line": 4,
+          "source_id": "src/store/data/experiences.json:4:4:url",
+          "href": "https://getfozo.in"
+        },
+        {
+          "file": "src/store/data/majorProjects.json",
+          "line": 6,
+          "source_id": "src/store/data/majorProjects.json:6:4:image",
+          "href": "/Image/UnlovableWeb.png"
+        },
+        {
+          "file": "src/store/data/majorProjects.json",
+          "line": 7,
+          "source_id": "src/store/data/majorProjects.json:7:4:github",
+          "href": "https://github.com/lakshay-goyal/Unlovable"
+        },
+        {
+          "file": "src/store/data/majorProjects.json",
+          "line": 8,
+          "source_id": "src/store/data/majorProjects.json:8:4:live",
+          "href": "https://unlovable.lakshaygoyal.in/"
+        },
+        {
+          "file": "src/store/data/majorProjects.json",
+          "line": 9,
+          "source_id": "src/store/data/majorProjects.json:9:4:videoLink",
+          "href": "/video/UnlovableWeb.mp4"
+        },
+        {
+          "file": "src/store/data/majorProjects.json",
+          "line": 6,
+          "source_id": "src/store/data/majorProjects.json:6:4:image",
+          "href": "/Image/UnlovableMobile.png"
+        },
+        {
+          "file": "src/store/data/majorProjects.json",
+          "line": 7,
+          "source_id": "src/store/data/majorProjects.json:7:4:github",
+          "href": "https://github.com/lakshay-goyal/Unlovable"
+        },
+        {
+          "file": "src/store/data/majorProjects.json",
+          "line": 9,
+          "source_id": "src/store/data/majorProjects.json:9:4:videoLink",
+          "href": "/video/UnlovableMobile.mp4"
+        },
+        {
+          "file": "src/store/data/majorProjects.json",
+          "line": 6,
+          "source_id": "src/store/data/majorProjects.json:6:4:image",
+          "href": "/Image/ExnessWeb.png"
+        },
+        {
+          "file": "src/store/data/majorProjects.json",
+          "line": 7,
+          "source_id": "src/store/data/majorProjects.json:7:4:github",
+          "href": "https://github.com/lakshay-goyal/Exness"
+        },
+        {
+          "file": "src/store/data/majorProjects.json",
+          "line": 8,
+          "source_id": "src/store/data/majorProjects.json:8:4:live",
+          "href": "https://exness.lakshaygoyal.in/"
+        },
+        {
+          "file": "src/store/data/majorProjects.json",
+          "line": 9,
+          "source_id": "src/store/data/majorProjects.json:9:4:videoLink",
+          "href": "/video/ExnessWeb.mp4"
+        },
+        {
+          "file": "src/store/data/majorProjects.json",
+          "line": 6,
+          "source_id": "src/store/data/majorProjects.json:6:4:image",
+          "href": "/Image/ExnessMobile.png"
+        },
+        {
+          "file": "src/store/data/majorProjects.json",
+          "line": 7,
+          "source_id": "src/store/data/majorProjects.json:7:4:github",
+          "href": "https://github.com/lakshay-goyal/Exness"
+        },
+        {
+          "file": "src/store/data/majorProjects.json",
+          "line": 9,
+          "source_id": "src/store/data/majorProjects.json:9:4:videoLink",
+          "href": "/video/ExnessMobile.mp4"
+        },
+        {
+          "file": "src/store/data/books.json",
+          "line": 6,
+          "source_id": "src/store/data/books.json:6:4:cover",
+          "href": "https://m.media-amazon.com/images/I/71tAHjMNWUL._SL1169_.jpg"
+        },
+        {
+          "file": "src/store/data/books.json",
+          "line": 9,
+          "source_id": "src/store/data/books.json:9:4:amazonLink",
+          "href": "https://www.amazon.in/Freedom-Known-J-Krishnamurti-ebook/dp/B003NX6Y6A?ref_=ast_author_mpb"
+        },
+        {
+          "file": "src/store/data/books.json",
+          "line": 6,
+          "source_id": "src/store/data/books.json:6:4:cover",
+          "href": "https://m.media-amazon.com/images/I/71ZMsYuwELL._SY466_.jpg"
+        },
+        {
+          "file": "src/store/data/books.json",
+          "line": 9,
+          "source_id": "src/store/data/books.json:9:4:amazonLink",
+          "href": "https://www.amazon.in/12-Week-Year-Others-Months/dp/1118509234"
+        }
+      ],
+      "interpretation": "Candidate E-E-A-T evidence only; presence of a claim does not verify its truth. Authorship is inferred from the shared site header (Lakshay Goyal / Software Engineer) and README first-person copy. Experience/expertise evidence comes from src/store/data JSON rendered by page components. No author byline, credential, review or testimonial is observed in static content; no contact/privacy/terms/editorial policy routes exist in the captured route set. Trust links and citations are outbound references, not verified third-party sources."
+    },
+    {
+      "url": "/blog",
+      "template": "src/App.jsx",
+      "is_dynamic": false,
+      "route_family": "/blog",
+      "instance_status": "concrete",
+      "locale": "en",
+      "coverage": {
+        "mode": "static-source",
+        "complete": false,
+        "limitations": [
+          "React SPA: page bodies are composed at runtime from JSX in src/App.jsx; parse_html cannot evaluate JSX expressions.",
+          "Blog list and post bodies are fetched at runtime (fetch /blog/blog.json and /blog/<slug>.md); only statically enumerable instances are reported.",
+          "README.md is repository documentation, not a rendered page; its copy is source evidence only.",
+          "Static absence of a signal is not evidence of runtime absence.",
+          "Model discovery budget reached; remaining semantic investigation is unresolved. The extractor still receives the full captured snapshot."
+        ]
+      },
+      "signals": [
+        {
+          "signal": "authorship",
+          "status": "candidate_evidence",
+          "evidence": [
+            {
+              "file": "src/App.jsx",
+              "line": 432,
+              "source_id": "src/App.jsx:432:194:a",
+              "text": "Lakshay Goyal"
+            },
+            {
+              "file": "src/App.jsx",
+              "line": 433,
+              "source_id": "src/App.jsx:433:73:p",
+              "text": "Software Engineer"
+            },
+            {
+              "file": "README.md",
+              "line": 1,
+              "source_id": "README.md:1:2:h1",
+              "text": "Hey, I'm Lakshay"
+            },
+            {
+              "file": "index.html",
+              "line": 7,
+              "source_id": "index.html:7:38:meta",
+              "text": "Lakshay Goyal is a Software Engineer building thoughtful mobile and web products."
+            }
+          ]
+        },
+        {
+          "signal": "dates",
+          "status": "candidate_evidence",
+          "evidence": [
+            {
+              "file": "src/store/data/experiences.json",
+              "line": 6,
+              "source_id": "src/store/data/experiences.json:6:4:p",
+              "text": "July 2026 — Present"
+            },
+            {
+              "file": "src/store/data/experiences.json",
+              "line": 6,
+              "source_id": "src/store/data/experiences.json:6:4:p",
+              "text": "Dec 2025 — June 2026"
+            },
+            {
+              "file": "public/blog/blog.json",
+              "line": 6,
+              "source_id": "public/blog/blog.json:6:8:p",
+              "text": "July 1, 2023"
+            },
+            {
+              "file": "src/App.jsx",
+              "line": 269,
+              "source_id": "src/App.jsx:269:2:span",
+              "text": "2022–2023"
+            },
+            {
+              "file": "src/App.jsx",
+              "line": 270,
+              "source_id": "src/App.jsx:270:2:span",
+              "text": "2025"
+            },
+            {
+              "file": "src/App.jsx",
+              "line": 271,
+              "source_id": "src/App.jsx:271:2:span",
+              "text": "Super30"
+            },
+            {
+              "file": "src/App.jsx",
+              "line": 272,
+              "source_id": "src/App.jsx:272:2:span",
+              "text": "Now"
+            }
+          ]
+        },
+        {
+          "signal": "reviews",
+          "status": "not_observed_in_static_content",
+          "evidence": []
+        },
+        {
+          "signal": "credentials",
+          "status": "not_observed_in_static_content",
+          "evidence": []
+        }
+      ],
+      "trust_links": [
+        {
+          "file": "src/components/ContactRail.jsx",
+          "line": 8,
+          "source_id": "src/components/ContactRail.jsx:8:2:a",
+          "href": "https://github.com/lakshay-goyal"
+        },
+        {
+          "file": "src/components/ContactRail.jsx",
+          "line": 9,
+          "source_id": "src/components/ContactRail.jsx:9:2:a",
+          "href": "https://www.linkedin.com/in/lakshay-goyal-9778a6246/"
+        },
+        {
+          "file": "src/components/ContactRail.jsx",
+          "line": 10,
+          "source_id": "src/components/ContactRail.jsx:10:2:a",
+          "href": "https://x.com/lakshayg2004"
+        },
+        {
+          "file": "src/components/ContactRail.jsx",
+          "line": 11,
+          "source_id": "src/components/ContactRail.jsx:11:2:a",
+          "href": "/Lakshay_Resume.pdf"
+        },
+        {
+          "file": "src/components/ContactRail.jsx",
+          "line": 4,
+          "source_id": "src/components/ContactRail.jsx:4:6:a",
+          "href": "https://cal.com/lakshay-goyal/30min?overlayCalendar=true"
+        },
+        {
+          "file": "README.md",
+          "line": 3,
+          "source_id": "README.md:3:0:a",
+          "href": "https://lakshaygoyal.in"
+        },
+        {
+          "file": "README.md",
+          "line": 9,
+          "source_id": "README.md:9:0:a",
+          "href": "https://unlovable.lakshaygoyal.in/"
+        },
+        {
+          "file": "README.md",
+          "line": 11,
+          "source_id": "README.md:11:0:a",
+          "href": "https://github.com/lakshay-goyal/Unlovable"
+        },
+        {
+          "file": "README.md",
+          "line": 13,
+          "source_id": "README.md:13:0:a",
+          "href": "https://exness.lakshaygoyal.in/"
+        },
+        {
+          "file": "README.md",
+          "line": 15,
+          "source_id": "README.md:15:0:a",
+          "href": "https://github.com/lakshay-goyal/Exness"
+        },
+        {
+          "file": "README.md",
+          "line": 65,
+          "source_id": "README.md:65:0:a",
+          "href": "https://lakshaygoyal.in"
+        },
+        {
+          "file": "README.md",
+          "line": 66,
+          "source_id": "README.md:66:0:a",
+          "href": "mailto:lakshaygoyal201@gmail.com"
+        },
+        {
+          "file": "README.md",
+          "line": 67,
+          "source_id": "README.md:67:0:a",
+          "href": "https://www.linkedin.com/in/lakshay-goyal-9778a6246"
+        },
+        {
+          "file": "README.md",
+          "line": 68,
+          "source_id": "README.md:68:0:a",
+          "href": "https://twitter.com/lakshayg2004"
+        },
+        {
+          "file": "README.md",
+          "line": 69,
+          "source_id": "README.md:69:0:a",
+          "href": "https://github.com/lakshay-goyal"
+        }
+      ],
+      "citations": [
+        {
+          "file": "src/store/data/experiences.json",
+          "line": 4,
+          "source_id": "src/store/data/experiences.json:4:4:url",
+          "href": "https://testsigma.com/"
+        },
+        {
+          "file": "src/store/data/experiences.json",
+          "line": 4,
+          "source_id": "src/store/data/experiences.json:4:4:url",
+          "href": "https://getfozo.in"
+        },
+        {
+          "file": "src/store/data/majorProjects.json",
+          "line": 6,
+          "source_id": "src/store/data/majorProjects.json:6:4:image",
+          "href": "/Image/UnlovableWeb.png"
+        },
+        {
+          "file": "src/store/data/majorProjects.json",
+          "line": 7,
+          "source_id": "src/store/data/majorProjects.json:7:4:github",
+          "href": "https://github.com/lakshay-goyal/Unlovable"
+        },
+        {
+          "file": "src/store/data/majorProjects.json",
+          "line": 8,
+          "source_id": "src/store/data/majorProjects.json:8:4:live",
+          "href": "https://unlovable.lakshaygoyal.in/"
+        },
+        {
+          "file": "src/store/data/majorProjects.json",
+          "line": 9,
+          "source_id": "src/store/data/majorProjects.json:9:4:videoLink",
+          "href": "/video/UnlovableWeb.mp4"
+        },
+        {
+          "file": "src/store/data/majorProjects.json",
+          "line": 6,
+          "source_id": "src/store/data/majorProjects.json:6:4:image",
+          "href": "/Image/UnlovableMobile.png"
+        },
+        {
+          "file": "src/store/data/majorProjects.json",
+          "line": 7,
+          "source_id": "src/store/data/majorProjects.json:7:4:github",
+          "href": "https://github.com/lakshay-goyal/Unlovable"
+        },
+        {
+          "file": "src/store/data/majorProjects.json",
+          "line": 9,
+          "source_id": "src/store/data/majorProjects.json:9:4:videoLink",
+          "href": "/video/UnlovableMobile.mp4"
+        },
+        {
+          "file": "src/store/data/majorProjects.json",
+          "line": 6,
+          "source_id": "src/store/data/majorProjects.json:6:4:image",
+          "href": "/Image/ExnessWeb.png"
+        },
+        {
+          "file": "src/store/data/majorProjects.json",
+          "line": 7,
+          "source_id": "src/store/data/majorProjects.json:7:4:github",
+          "href": "https://github.com/lakshay-goyal/Exness"
+        },
+        {
+          "file": "src/store/data/majorProjects.json",
+          "line": 8,
+          "source_id": "src/store/data/majorProjects.json:8:4:live",
+          "href": "https://exness.lakshaygoyal.in/"
+        },
+        {
+          "file": "src/store/data/majorProjects.json",
+          "line": 9,
+          "source_id": "src/store/data/majorProjects.json:9:4:videoLink",
+          "href": "/video/ExnessWeb.mp4"
+        },
+        {
+          "file": "src/store/data/majorProjects.json",
+          "line": 6,
+          "source_id": "src/store/data/majorProjects.json:6:4:image",
+          "href": "/Image/ExnessMobile.png"
+        },
+        {
+          "file": "src/store/data/majorProjects.json",
+          "line": 7,
+          "source_id": "src/store/data/majorProjects.json:7:4:github",
+          "href": "https://github.com/lakshay-goyal/Exness"
+        },
+        {
+          "file": "src/store/data/majorProjects.json",
+          "line": 9,
+          "source_id": "src/store/data/majorProjects.json:9:4:videoLink",
+          "href": "/video/ExnessMobile.mp4"
+        },
+        {
+          "file": "src/store/data/books.json",
+          "line": 6,
+          "source_id": "src/store/data/books.json:6:4:cover",
+          "href": "https://m.media-amazon.com/images/I/71tAHjMNWUL._SL1169_.jpg"
+        },
+        {
+          "file": "src/store/data/books.json",
+          "line": 9,
+          "source_id": "src/store/data/books.json:9:4:amazonLink",
+          "href": "https://www.amazon.in/Freedom-Known-J-Krishnamurti-ebook/dp/B003NX6Y6A?ref_=ast_author_mpb"
+        },
+        {
+          "file": "src/store/data/books.json",
+          "line": 6,
+          "source_id": "src/store/data/books.json:6:4:cover",
+          "href": "https://m.media-amazon.com/images/I/71ZMsYuwELL._SY466_.jpg"
+        },
+        {
+          "file": "src/store/data/books.json",
+          "line": 9,
+          "source_id": "src/store/data/books.json:9:4:amazonLink",
+          "href": "https://www.amazon.in/12-Week-Year-Others-Months/dp/1118509234"
+        }
+      ],
+      "interpretation": "Candidate E-E-A-T evidence only; presence of a claim does not verify its truth. Authorship is inferred from the shared site header (Lakshay Goyal / Software Engineer) and README first-person copy. Experience/expertise evidence comes from src/store/data JSON rendered by page components. No author byline, credential, review or testimonial is observed in static content; no contact/privacy/terms/editorial policy routes exist in the captured route set. Trust links and citations are outbound references, not verified third-party sources."
+    },
+    {
+      "url": "/blog/:slug",
+      "template": "src/App.jsx",
+      "is_dynamic": true,
+      "route_family": "/blog/:slug",
+      "instance_status": "template",
+      "locale": "en",
+      "coverage": {
+        "mode": "static-source",
+        "complete": false,
+        "limitations": [
+          "React SPA: page bodies are composed at runtime from JSX in src/App.jsx; parse_html cannot evaluate JSX expressions.",
+          "Blog list and post bodies are fetched at runtime (fetch /blog/blog.json and /blog/<slug>.md); only statically enumerable instances are reported.",
+          "README.md is repository documentation, not a rendered page; its copy is source evidence only.",
+          "Static absence of a signal is not evidence of runtime absence.",
+          "Model discovery budget reached; remaining semantic investigation is unresolved. The extractor still receives the full captured snapshot."
+        ]
+      },
+      "signals": [
+        {
+          "signal": "authorship",
+          "status": "candidate_evidence",
+          "evidence": [
+            {
+              "file": "src/App.jsx",
+              "line": 432,
+              "source_id": "src/App.jsx:432:194:a",
+              "text": "Lakshay Goyal"
+            },
+            {
+              "file": "src/App.jsx",
+              "line": 433,
+              "source_id": "src/App.jsx:433:73:p",
+              "text": "Software Engineer"
+            },
+            {
+              "file": "README.md",
+              "line": 1,
+              "source_id": "README.md:1:2:h1",
+              "text": "Hey, I'm Lakshay"
+            },
+            {
+              "file": "index.html",
+              "line": 7,
+              "source_id": "index.html:7:38:meta",
+              "text": "Lakshay Goyal is a Software Engineer building thoughtful mobile and web products."
+            }
+          ]
+        },
+        {
+          "signal": "dates",
+          "status": "candidate_evidence",
+          "evidence": [
+            {
+              "file": "public/blog/deploying-your-site-with-vercel.md",
+              "line": 2,
+              "source_id": "public/blog/deploying-your-site-with-vercel.md:2:0:title",
+              "text": "Deploying Your Site with Vercel"
+            },
+            {
+              "file": "public/blog/deploying-your-site-with-vercel.md",
+              "line": 3,
+              "source_id": "public/blog/deploying-your-site-with-vercel.md:3:0:date",
+              "text": "July 1, 2023"
+            }
+          ]
+        },
+        {
+          "signal": "reviews",
+          "status": "not_observed_in_static_content",
+          "evidence": []
+        },
+        {
+          "signal": "credentials",
+          "status": "not_observed_in_static_content",
+          "evidence": []
+        }
+      ],
+      "trust_links": [
+        {
+          "file": "src/components/ContactRail.jsx",
+          "line": 8,
+          "source_id": "src/components/ContactRail.jsx:8:2:a",
+          "href": "https://github.com/lakshay-goyal"
+        },
+        {
+          "file": "src/components/ContactRail.jsx",
+          "line": 9,
+          "source_id": "src/components/ContactRail.jsx:9:2:a",
+          "href": "https://www.linkedin.com/in/lakshay-goyal-9778a6246/"
+        },
+        {
+          "file": "src/components/ContactRail.jsx",
+          "line": 10,
+          "source_id": "src/components/ContactRail.jsx:10:2:a",
+          "href": "https://x.com/lakshayg2004"
+        },
+        {
+          "file": "src/components/ContactRail.jsx",
+          "line": 11,
+          "source_id": "src/components/ContactRail.jsx:11:2:a",
+          "href": "/Lakshay_Resume.pdf"
+        },
+        {
+          "file": "src/components/ContactRail.jsx",
+          "line": 4,
+          "source_id": "src/components/ContactRail.jsx:4:6:a",
+          "href": "https://cal.com/lakshay-goyal/30min?overlayCalendar=true"
+        },
+        {
+          "file": "README.md",
+          "line": 3,
+          "source_id": "README.md:3:0:a",
+          "href": "https://lakshaygoyal.in"
+        },
+        {
+          "file": "README.md",
+          "line": 9,
+          "source_id": "README.md:9:0:a",
+          "href": "https://unlovable.lakshaygoyal.in/"
+        },
+        {
+          "file": "README.md",
+          "line": 11,
+          "source_id": "README.md:11:0:a",
+          "href": "https://github.com/lakshay-goyal/Unlovable"
+        },
+        {
+          "file": "README.md",
+          "line": 13,
+          "source_id": "README.md:13:0:a",
+          "href": "https://exness.lakshaygoyal.in/"
+        },
+        {
+          "file": "README.md",
+          "line": 15,
+          "source_id": "README.md:15:0:a",
+          "href": "https://github.com/lakshay-goyal/Exness"
+        },
+        {
+          "file": "README.md",
+          "line": 65,
+          "source_id": "README.md:65:0:a",
+          "href": "https://lakshaygoyal.in"
+        },
+        {
+          "file": "README.md",
+          "line": 66,
+          "source_id": "README.md:66:0:a",
+          "href": "mailto:lakshaygoyal201@gmail.com"
+        },
+        {
+          "file": "README.md",
+          "line": 67,
+          "source_id": "README.md:67:0:a",
+          "href": "https://www.linkedin.com/in/lakshay-goyal-9778a6246"
+        },
+        {
+          "file": "README.md",
+          "line": 68,
+          "source_id": "README.md:68:0:a",
+          "href": "https://twitter.com/lakshayg2004"
+        },
+        {
+          "file": "README.md",
+          "line": 69,
+          "source_id": "README.md:69:0:a",
+          "href": "https://github.com/lakshay-goyal"
+        }
+      ],
+      "citations": [
+        {
+          "file": "src/store/data/experiences.json",
+          "line": 4,
+          "source_id": "src/store/data/experiences.json:4:4:url",
+          "href": "https://testsigma.com/"
+        },
+        {
+          "file": "src/store/data/experiences.json",
+          "line": 4,
+          "source_id": "src/store/data/experiences.json:4:4:url",
+          "href": "https://getfozo.in"
+        },
+        {
+          "file": "src/store/data/majorProjects.json",
+          "line": 6,
+          "source_id": "src/store/data/majorProjects.json:6:4:image",
+          "href": "/Image/UnlovableWeb.png"
+        },
+        {
+          "file": "src/store/data/majorProjects.json",
+          "line": 7,
+          "source_id": "src/store/data/majorProjects.json:7:4:github",
+          "href": "https://github.com/lakshay-goyal/Unlovable"
+        },
+        {
+          "file": "src/store/data/majorProjects.json",
+          "line": 8,
+          "source_id": "src/store/data/majorProjects.json:8:4:live",
+          "href": "https://unlovable.lakshaygoyal.in/"
+        },
+        {
+          "file": "src/store/data/majorProjects.json",
+          "line": 9,
+          "source_id": "src/store/data/majorProjects.json:9:4:videoLink",
+          "href": "/video/UnlovableWeb.mp4"
+        },
+        {
+          "file": "src/store/data/majorProjects.json",
+          "line": 6,
+          "source_id": "src/store/data/majorProjects.json:6:4:image",
+          "href": "/Image/UnlovableMobile.png"
+        },
+        {
+          "file": "src/store/data/majorProjects.json",
+          "line": 7,
+          "source_id": "src/store/data/majorProjects.json:7:4:github",
+          "href": "https://github.com/lakshay-goyal/Unlovable"
+        },
+        {
+          "file": "src/store/data/majorProjects.json",
+          "line": 9,
+          "source_id": "src/store/data/majorProjects.json:9:4:videoLink",
+          "href": "/video/UnlovableMobile.mp4"
+        },
+        {
+          "file": "src/store/data/majorProjects.json",
+          "line": 6,
+          "source_id": "src/store/data/majorProjects.json:6:4:image",
+          "href": "/Image/ExnessWeb.png"
+        },
+        {
+          "file": "src/store/data/majorProjects.json",
+          "line": 7,
+          "source_id": "src/store/data/majorProjects.json:7:4:github",
+          "href": "https://github.com/lakshay-goyal/Exness"
+        },
+        {
+          "file": "src/store/data/majorProjects.json",
+          "line": 8,
+          "source_id": "src/store/data/majorProjects.json:8:4:live",
+          "href": "https://exness.lakshaygoyal.in/"
+        },
+        {
+          "file": "src/store/data/majorProjects.json",
+          "line": 9,
+          "source_id": "src/store/data/majorProjects.json:9:4:videoLink",
+          "href": "/video/ExnessWeb.mp4"
+        },
+        {
+          "file": "src/store/data/majorProjects.json",
+          "line": 6,
+          "source_id": "src/store/data/majorProjects.json:6:4:image",
+          "href": "/Image/ExnessMobile.png"
+        },
+        {
+          "file": "src/store/data/majorProjects.json",
+          "line": 7,
+          "source_id": "src/store/data/majorProjects.json:7:4:github",
+          "href": "https://github.com/lakshay-goyal/Exness"
+        },
+        {
+          "file": "src/store/data/majorProjects.json",
+          "line": 9,
+          "source_id": "src/store/data/majorProjects.json:9:4:videoLink",
+          "href": "/video/ExnessMobile.mp4"
+        },
+        {
+          "file": "src/store/data/books.json",
+          "line": 6,
+          "source_id": "src/store/data/books.json:6:4:cover",
+          "href": "https://m.media-amazon.com/images/I/71tAHjMNWUL._SL1169_.jpg"
+        },
+        {
+          "file": "src/store/data/books.json",
+          "line": 9,
+          "source_id": "src/store/data/books.json:9:4:amazonLink",
+          "href": "https://www.amazon.in/Freedom-Known-J-Krishnamurti-ebook/dp/B003NX6Y6A?ref_=ast_author_mpb"
+        },
+        {
+          "file": "src/store/data/books.json",
+          "line": 6,
+          "source_id": "src/store/data/books.json:6:4:cover",
+          "href": "https://m.media-amazon.com/images/I/71ZMsYuwELL._SY466_.jpg"
+        },
+        {
+          "file": "src/store/data/books.json",
+          "line": 9,
+          "source_id": "src/store/data/books.json:9:4:amazonLink",
+          "href": "https://www.amazon.in/12-Week-Year-Others-Months/dp/1118509234"
+        }
+      ],
+      "interpretation": "Candidate E-E-A-T evidence only; presence of a claim does not verify its truth. Authorship is inferred from the shared site header (Lakshay Goyal / Software Engineer) and README first-person copy. Experience/expertise evidence comes from src/store/data JSON rendered by page components. No author byline, credential, review or testimonial is observed in static content; no contact/privacy/terms/editorial policy routes exist in the captured route set. Trust links and citations are outbound references, not verified third-party sources."
+    },
+    {
+      "url": "/blog/deploying-your-site-with-vercel",
+      "template": "src/App.jsx",
+      "is_dynamic": true,
+      "route_family": "/blog/:slug",
+      "instance_status": "concrete",
+      "locale": "en",
+      "coverage": {
+        "mode": "static-source",
+        "complete": false,
+        "limitations": [
+          "React SPA: page bodies are composed at runtime from JSX in src/App.jsx; parse_html cannot evaluate JSX expressions.",
+          "Blog list and post bodies are fetched at runtime (fetch /blog/blog.json and /blog/<slug>.md); only statically enumerable instances are reported.",
+          "README.md is repository documentation, not a rendered page; its copy is source evidence only.",
+          "Static absence of a signal is not evidence of runtime absence.",
+          "Model discovery budget reached; remaining semantic investigation is unresolved. The extractor still receives the full captured snapshot."
+        ]
+      },
+      "signals": [
+        {
+          "signal": "authorship",
+          "status": "candidate_evidence",
+          "evidence": [
+            {
+              "file": "src/App.jsx",
+              "line": 432,
+              "source_id": "src/App.jsx:432:194:a",
+              "text": "Lakshay Goyal"
+            },
+            {
+              "file": "src/App.jsx",
+              "line": 433,
+              "source_id": "src/App.jsx:433:73:p",
+              "text": "Software Engineer"
+            },
+            {
+              "file": "README.md",
+              "line": 1,
+              "source_id": "README.md:1:2:h1",
+              "text": "Hey, I'm Lakshay"
+            },
+            {
+              "file": "index.html",
+              "line": 7,
+              "source_id": "index.html:7:38:meta",
+              "text": "Lakshay Goyal is a Software Engineer building thoughtful mobile and web products."
+            }
+          ]
+        },
+        {
+          "signal": "dates",
+          "status": "candidate_evidence",
+          "evidence": [
+            {
+              "file": "public/blog/deploying-your-site-with-vercel.md",
+              "line": 2,
+              "source_id": "public/blog/deploying-your-site-with-vercel.md:2:0:title",
+              "text": "Deploying Your Site with Vercel"
+            },
+            {
+              "file": "public/blog/deploying-your-site-with-vercel.md",
+              "line": 3,
+              "source_id": "public/blog/deploying-your-site-with-vercel.md:3:0:date",
+              "text": "July 1, 2023"
+            }
+          ]
+        },
+        {
+          "signal": "reviews",
+          "status": "not_observed_in_static_content",
+          "evidence": []
+        },
+        {
+          "signal": "credentials",
+          "status": "not_observed_in_static_content",
+          "evidence": []
+        }
+      ],
+      "trust_links": [
+        {
+          "file": "src/components/ContactRail.jsx",
+          "line": 8,
+          "source_id": "src/components/ContactRail.jsx:8:2:a",
+          "href": "https://github.com/lakshay-goyal"
+        },
+        {
+          "file": "src/components/ContactRail.jsx",
+          "line": 9,
+          "source_id": "src/components/ContactRail.jsx:9:2:a",
+          "href": "https://www.linkedin.com/in/lakshay-goyal-9778a6246/"
+        },
+        {
+          "file": "src/components/ContactRail.jsx",
+          "line": 10,
+          "source_id": "src/components/ContactRail.jsx:10:2:a",
+          "href": "https://x.com/lakshayg2004"
+        },
+        {
+          "file": "src/components/ContactRail.jsx",
+          "line": 11,
+          "source_id": "src/components/ContactRail.jsx:11:2:a",
+          "href": "/Lakshay_Resume.pdf"
+        },
+        {
+          "file": "src/components/ContactRail.jsx",
+          "line": 4,
+          "source_id": "src/components/ContactRail.jsx:4:6:a",
+          "href": "https://cal.com/lakshay-goyal/30min?overlayCalendar=true"
+        },
+        {
+          "file": "README.md",
+          "line": 3,
+          "source_id": "README.md:3:0:a",
+          "href": "https://lakshaygoyal.in"
+        },
+        {
+          "file": "README.md",
+          "line": 9,
+          "source_id": "README.md:9:0:a",
+          "href": "https://unlovable.lakshaygoyal.in/"
+        },
+        {
+          "file": "README.md",
+          "line": 11,
+          "source_id": "README.md:11:0:a",
+          "href": "https://github.com/lakshay-goyal/Unlovable"
+        },
+        {
+          "file": "README.md",
+          "line": 13,
+          "source_id": "README.md:13:0:a",
+          "href": "https://exness.lakshaygoyal.in/"
+        },
+        {
+          "file": "README.md",
+          "line": 15,
+          "source_id": "README.md:15:0:a",
+          "href": "https://github.com/lakshay-goyal/Exness"
+        },
+        {
+          "file": "README.md",
+          "line": 65,
+          "source_id": "README.md:65:0:a",
+          "href": "https://lakshaygoyal.in"
+        },
+        {
+          "file": "README.md",
+          "line": 66,
+          "source_id": "README.md:66:0:a",
+          "href": "mailto:lakshaygoyal201@gmail.com"
+        },
+        {
+          "file": "README.md",
+          "line": 67,
+          "source_id": "README.md:67:0:a",
+          "href": "https://www.linkedin.com/in/lakshay-goyal-9778a6246"
+        },
+        {
+          "file": "README.md",
+          "line": 68,
+          "source_id": "README.md:68:0:a",
+          "href": "https://twitter.com/lakshayg2004"
+        },
+        {
+          "file": "README.md",
+          "line": 69,
+          "source_id": "README.md:69:0:a",
+          "href": "https://github.com/lakshay-goyal"
+        }
+      ],
+      "citations": [
+        {
+          "file": "src/store/data/experiences.json",
+          "line": 4,
+          "source_id": "src/store/data/experiences.json:4:4:url",
+          "href": "https://testsigma.com/"
+        },
+        {
+          "file": "src/store/data/experiences.json",
+          "line": 4,
+          "source_id": "src/store/data/experiences.json:4:4:url",
+          "href": "https://getfozo.in"
+        },
+        {
+          "file": "src/store/data/majorProjects.json",
+          "line": 6,
+          "source_id": "src/store/data/majorProjects.json:6:4:image",
+          "href": "/Image/UnlovableWeb.png"
+        },
+        {
+          "file": "src/store/data/majorProjects.json",
+          "line": 7,
+          "source_id": "src/store/data/majorProjects.json:7:4:github",
+          "href": "https://github.com/lakshay-goyal/Unlovable"
+        },
+        {
+          "file": "src/store/data/majorProjects.json",
+          "line": 8,
+          "source_id": "src/store/data/majorProjects.json:8:4:live",
+          "href": "https://unlovable.lakshaygoyal.in/"
+        },
+        {
+          "file": "src/store/data/majorProjects.json",
+          "line": 9,
+          "source_id": "src/store/data/majorProjects.json:9:4:videoLink",
+          "href": "/video/UnlovableWeb.mp4"
+        },
+        {
+          "file": "src/store/data/majorProjects.json",
+          "line": 6,
+          "source_id": "src/store/data/majorProjects.json:6:4:image",
+          "href": "/Image/UnlovableMobile.png"
+        },
+        {
+          "file": "src/store/data/majorProjects.json",
+          "line": 7,
+          "source_id": "src/store/data/majorProjects.json:7:4:github",
+          "href": "https://github.com/lakshay-goyal/Unlovable"
+        },
+        {
+          "file": "src/store/data/majorProjects.json",
+          "line": 9,
+          "source_id": "src/store/data/majorProjects.json:9:4:videoLink",
+          "href": "/video/UnlovableMobile.mp4"
+        },
+        {
+          "file": "src/store/data/majorProjects.json",
+          "line": 6,
+          "source_id": "src/store/data/majorProjects.json:6:4:image",
+          "href": "/Image/ExnessWeb.png"
+        },
+        {
+          "file": "src/store/data/majorProjects.json",
+          "line": 7,
+          "source_id": "src/store/data/majorProjects.json:7:4:github",
+          "href": "https://github.com/lakshay-goyal/Exness"
+        },
+        {
+          "file": "src/store/data/majorProjects.json",
+          "line": 8,
+          "source_id": "src/store/data/majorProjects.json:8:4:live",
+          "href": "https://exness.lakshaygoyal.in/"
+        },
+        {
+          "file": "src/store/data/majorProjects.json",
+          "line": 9,
+          "source_id": "src/store/data/majorProjects.json:9:4:videoLink",
+          "href": "/video/ExnessWeb.mp4"
+        },
+        {
+          "file": "src/store/data/majorProjects.json",
+          "line": 6,
+          "source_id": "src/store/data/majorProjects.json:6:4:image",
+          "href": "/Image/ExnessMobile.png"
+        },
+        {
+          "file": "src/store/data/majorProjects.json",
+          "line": 7,
+          "source_id": "src/store/data/majorProjects.json:7:4:github",
+          "href": "https://github.com/lakshay-goyal/Exness"
+        },
+        {
+          "file": "src/store/data/majorProjects.json",
+          "line": 9,
+          "source_id": "src/store/data/majorProjects.json:9:4:videoLink",
+          "href": "/video/ExnessMobile.mp4"
+        },
+        {
+          "file": "src/store/data/books.json",
+          "line": 6,
+          "source_id": "src/store/data/books.json:6:4:cover",
+          "href": "https://m.media-amazon.com/images/I/71tAHjMNWUL._SL1169_.jpg"
+        },
+        {
+          "file": "src/store/data/books.json",
+          "line": 9,
+          "source_id": "src/store/data/books.json:9:4:amazonLink",
+          "href": "https://www.amazon.in/Freedom-Known-J-Krishnamurti-ebook/dp/B003NX6Y6A?ref_=ast_author_mpb"
+        },
+        {
+          "file": "src/store/data/books.json",
+          "line": 6,
+          "source_id": "src/store/data/books.json:6:4:cover",
+          "href": "https://m.media-amazon.com/images/I/71ZMsYuwELL._SY466_.jpg"
+        },
+        {
+          "file": "src/store/data/books.json",
+          "line": 9,
+          "source_id": "src/store/data/books.json:9:4:amazonLink",
+          "href": "https://www.amazon.in/12-Week-Year-Others-Months/dp/1118509234"
+        }
+      ],
+      "interpretation": "Candidate E-E-A-T evidence only; presence of a claim does not verify its truth. Authorship is inferred from the shared site header (Lakshay Goyal / Software Engineer) and README first-person copy. Experience/expertise evidence comes from src/store/data JSON rendered by page components. No author byline, credential, review or testimonial is observed in static content; no contact/privacy/terms/editorial policy routes exist in the captured route set. Trust links and citations are outbound references, not verified third-party sources."
+    }
+  ]
+}
