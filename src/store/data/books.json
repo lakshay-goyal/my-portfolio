@@ -4,27 +4,62 @@
     "title": "Freedom from the Known",
     "author": "J Krishnamurti",
     "cover": "https://m.media-amazon.com/images/I/71tAHjMNWUL._SL1169_.jpg",
-    "description": "A profound exploration of the nature of thought and the self.",
+    "description": "Krishnamurti basically says your thoughts are second-hand. Drop the conditioning and actually look at life fresh. Messed with my head in a good way.",
     "category": "Phylosohy",
-    "amazonLink": "https://www.amazon.in/Freedom-Known-J-Krishnamurti-ebook/dp/B003NX6Y6A?ref_=ast_author_mpb",
-    "keyPoints": [
-      "Understanding the limitations of thought",
-      "The nature of self and identity",
-      "Breaking free from conditioning"
-    ]
+    "amazonLink": "https://www.amazon.in/Freedom-Known-J-Krishnamurti-ebook/dp/B003NX6Y6A?ref_=ast_author_mpb"
   },
   {
     "id": "2",
     "title": "The 12 Week Year",
     "author": "Brian P. Moran, Michael Lennington",
     "cover": "https://m.media-amazon.com/images/I/71ZMsYuwELL._SY466_.jpg",
-    "description": "A practical execution system for compressing annual goals into focused 12-week cycles.",
+    "description": "Forget yearly goals. Treat every 12 weeks like a full year and suddenly you stop procrastinating. Simple, but it works.",
     "category": "Productivity",
-    "amazonLink": "https://www.amazon.in/12-Week-Year-Others-Months/dp/1118509234",
-    "keyPoints": [
-      "Plan work in focused 12-week execution cycles",
-      "Create weekly scorecards and accountability rhythms",
-      "Build urgency around the highest-leverage goals"
-    ]
+    "amazonLink": "https://www.amazon.in/12-Week-Year-Others-Months/dp/1118509234"
+  },
+  {
+    "id": "3",
+    "title": "The Diary of a Young Girl",
+    "author": "Anne Frank",
+    "cover": "https://m.media-amazon.com/images/I/21Uwv1RPn6L.jpg",
+    "description": "A 13-year-old hiding from the Nazis for two years, still believing people are good at heart. Makes my bad days look silly.",
+    "category": "Memoir",
+    "amazonLink": "https://www.amazon.com/Anne-Frank-Diary-Young-Girl/dp/B000USUY3K"
+  },
+  {
+    "id": "4",
+    "title": "Krishna: The Man and His Philosophy",
+    "author": "Osho",
+    "cover": "https://m.media-amazon.com/images/I/51kQFx6Qi0L.jpg",
+    "description": "Krishna as a guy who danced, loved, fought, and stayed chill through all of it. You don't need to run to the Himalayas to be spiritual.",
+    "category": "Philosophy",
+    "amazonLink": "https://www.amazon.com/Krishna-Man-his-Philosophy-Osho/dp/B00DO8S3OK"
+  },
+  {
+    "id": "5",
+    "title": "The Book of Man",
+    "author": "Osho",
+    "cover": "https://m.media-amazon.com/images/I/71ok9Pc7XEL._SL1500_.jpg",
+    "description": "Osho on every role men get stuffed into. Big takeaway: Zorba the Buddha. Enjoy life fully and stay aware, no need to pick one.",
+    "category": "Philosophy",
+    "amazonLink": "https://www.amazon.com/Book-Man-Osho/dp/0143420607"
+  },
+  {
+    "id": "6",
+    "title": "The Book of Woman",
+    "author": "Osho",
+    "cover": "https://m.media-amazon.com/images/I/71AYdytWiOL._SL1500_.jpg",
+    "description": "Love, freedom, and the feminine side in all of us. Love that tries to own someone isn't love. Some takes you'll love, some you'll argue with.",
+    "category": "Philosophy",
+    "amazonLink": "https://www.amazon.com/book-woman-Osho/dp/0143420615"
+  },
+  {
+    "id": "7",
+    "title": "Why I Am an Atheist and Other Works",
+    "author": "Bhagat Singh",
+    "cover": "https://m.media-amazon.com/images/I/61MCDl9XbqL._SL1360_.jpg",
+    "description": "A 23-year-old in jail, waiting to be hanged, calmly explaining why he doesn't believe in God. Zero ego, all logic. Question everything.",
+    "category": "Philosophy",
+    "amazonLink": "https://www.amazon.com/Atheist-other-Works-Bhagat-Singh/dp/9387022811"
   }
-] 
+]
