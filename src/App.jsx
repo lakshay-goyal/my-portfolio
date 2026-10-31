@@ -351,8 +351,7 @@ function BookshelfPage() {
                 <p className={`mb-1 ${styles.meta}`}>{book.category === "Phylosohy" ? "Philosophy" : book.category}</p>
                 <h3 className={styles.title}>{book.title}</h3>
                 <p className={`mt-1 ${styles.body}`}>by {book.author}</p>
-                <p className={`mt-2 ${styles.body}`}>{book.description}</p>
-                <ul className={`my-4 list-disc pl-5 ${styles.body}`}>{book.keyPoints.map((point) => <li key={point}>{point}</li>)}</ul>
+                <p className={`mt-2 mb-4 ${styles.body}`}>{book.description}</p>
                 <TextLink href={book.amazonLink}>View book</TextLink>
               </div>
             </article>
