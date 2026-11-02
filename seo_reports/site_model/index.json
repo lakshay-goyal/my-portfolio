@@ -1,0 +1,34 @@
+{
+  "schema": "seo-site-model/1.0",
+  "repo": {
+    "snapshot_sha256": "5d82b35bedbea83e57943210982f580479e7dd8aa8fb602835fa1824a4a4a583",
+    "framework": {
+      "name": "react-spa",
+      "version": "18.3.1",
+      "router": "declared"
+    }
+  },
+  "coverage": {
+    "urls_total": 1,
+    "templates_only": 0,
+    "measured": 1,
+    "source_only": 0,
+    "gaps_open": 0,
+    "validation_issues": 0
+  },
+  "how_to_use": "Plan from this file; load site.json for site-wide facts and pages/<id>.json for one URL. Every value has {value, method, edit, confidence}; edit.kind tells how to change it (literal|json|yaml|markdown|i18n|prop|computed|cms|add) and edit.file/line where.",
+  "pages": [
+    {
+      "id": "p_42099b4af0",
+      "url": "/",
+      "file": "pages/p_42099b4af0.json",
+      "template": "index.html",
+      "status": 307,
+      "title": "Lakshay Goyal — Software Engineer",
+      "title_edit": "literal",
+      "lcp_ms": null,
+      "instance_status": "static",
+      "issues_hint": 1
+    }
+  ]
+}

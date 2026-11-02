@@ -1,0 +1,1605 @@
+{
+  "id": "p_42099b4af0",
+  "url": "/",
+  "route": "/",
+  "template": "index.html",
+  "kind": "page",
+  "is_dynamic": false,
+  "instance_status": "static",
+  "discovered_by": [
+    "adapter:spa-single-entry"
+  ],
+  "composition": [
+    "src/main.jsx",
+    "src/App.jsx",
+    "index.html",
+    "src/index.css",
+    "src/store/data/experiences.json",
+    "src/store/data/majorProjects.json",
+    "src/store/data/skills.json",
+    "src/store/data/books.json",
+    "src/components/PageRail.jsx",
+    "src/components/ContactRail.jsx",
+    "src/components/ScrollReveal.jsx"
+  ],
+  "lens": "rendered",
+  "rendering": {
+    "raw_html_words": null,
+    "rendered_words": 209,
+    "js_dependent": null,
+    "method": "measured"
+  },
+  "http": {
+    "status": "redirect-out-of-scope",
+    "http_status": 307,
+    "final_url": "https://www.lakshaygoyal.in/",
+    "redirect_chain": [
+      {
+        "url": "https://lakshaygoyal.in/",
+        "http_status": 307,
+        "location": "https://www.lakshaygoyal.in/",
+        "target": "https://www.lakshaygoyal.in/"
+      }
+    ],
+    "headers": null,
+    "request_to_headers_ms": null
+  },
+  "head": {
+    "title": {
+      "value": "Lakshay Goyal — Software Engineer",
+      "method": "rendered",
+      "edit": {
+        "kind": "literal",
+        "file": "index.html",
+        "line": 14,
+        "col": 4
+      },
+      "confidence": 0.97,
+      "lens_agreement": true
+    },
+    "description": {
+      "value": "Lakshay Goyal is a Software Engineer building thoughtful mobile and web products.",
+      "method": "rendered",
+      "edit": {
+        "kind": "literal",
+        "file": "index.html",
+        "line": 7,
+        "col": 4,
+        "attr": "content"
+      },
+      "confidence": 0.97,
+      "lens_agreement": true
+    },
+    "canonical": {
+      "value": null,
+      "method": "rendered",
+      "edit": null,
+      "confidence": 0.6
+    },
+    "robots": {
+      "value": null,
+      "method": "rendered",
+      "edit": null,
+      "confidence": 0.6
+    },
+    "lang": {
+      "value": "en",
+      "method": "rendered",
+      "edit": {
+        "kind": "literal",
+        "file": "index.html",
+        "line": 2,
+        "col": 0,
+        "attr": "lang"
+      },
+      "confidence": 0.97,
+      "lens_agreement": true
+    },
+    "viewport": {
+      "value": "width=device-width, initial-scale=1.0",
+      "method": "rendered",
+      "edit": {
+        "kind": "literal",
+        "file": "index.html",
+        "line": 6,
+        "col": 4,
+        "attr": "content"
+      },
+      "confidence": 0.97,
+      "lens_agreement": true
+    },
+    "og": {},
+    "twitter": {},
+    "hreflang": [],
+    "json_ld": [],
+    "keywords": {
+      "value": null,
+      "method": "none",
+      "edit": null,
+      "confidence": 0.0
+    },
+    "add_target": {
+      "kind": "add",
+      "file": "index.html",
+      "line": 1,
+      "anchor": "<Helmet> in page component"
+    },
+    "canonical_count": 0
+  },
+  "headings": [
+    {
+      "level": 2,
+      "text": "About",
+      "el": null,
+      "method": "rendered",
+      "edit": {
+        "kind": "prop",
+        "file": "src/App.jsx",
+        "line": 280,
+        "col": 8,
+        "attr": "title"
+      },
+      "confidence": 0.45,
+      "section": "section",
+      "path": "div:nth-of-type(1) > main:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > section:nth-of-type(1) > h2:nth-of-type(1)",
+      "visible": true,
+      "candidates": [
+        {
+          "id": "c1",
+          "kind": "prop",
+          "file": "src/App.jsx",
+          "line": 280,
+          "col": 8,
+          "el": "e_c48d07a200c8",
+          "attr": "title",
+          "snippet": "<Section id=\"about\" title=\"About\">"
+        },
+        {
+          "id": "c2",
+          "kind": "prop",
+          "file": "src/App.jsx",
+          "line": 306,
+          "col": 6,
+          "el": "e_dfc1283dc196",
+          "attr": "title",
+          "snippet": "<PageHeading title=\"About\" description=\"A little about me. The curiosity that pulled me into software, and the interests that keep me exploring beyond it.\" />"
+        }
+      ]
+    },
+    {
+      "level": 2,
+      "text": "Work Experience",
+      "el": "e_293e530d1261",
+      "method": "rendered",
+      "edit": {
+        "kind": "prop",
+        "file": "src/App.jsx",
+        "line": 147,
+        "col": 4,
+        "attr": "title"
+      },
+      "confidence": 0.9,
+      "section": "section",
+      "path": "div:nth-of-type(1) > main:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(2) > section:nth-of-type(1) > h2:nth-of-type(1)",
+      "visible": true
+    },
+    {
+      "level": 3,
+      "text": "Software Engineer at Testsigma",
+      "el": null,
+      "method": "rendered",
+      "edit": {
+        "kind": "json",
+        "file": "src/store/data/experiences.json",
+        "line": 3,
+        "pointer": "/0",
+        "composed_from": [
+          "/0/company",
+          "/0/role"
+        ],
+        "template": {
+          "file": "src/App.jsx",
+          "line": 152,
+          "col": 12
+        }
+      },
+      "confidence": 0.75,
+      "section": "article",
+      "path": "div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(2) > section:nth-of-type(1) > article:nth-of-type(1) > div:nth-of-type(1) > h3:nth-of-type(1)",
+      "visible": true
+    },
+    {
+      "level": 3,
+      "text": "Founding Engineer at FOZO",
+      "el": null,
+      "method": "rendered",
+      "edit": {
+        "kind": "json",
+        "file": "src/store/data/experiences.json",
+        "line": 11,
+        "pointer": "/1",
+        "composed_from": [
+          "/1/company",
+          "/1/role"
+        ],
+        "template": {
+          "file": "src/App.jsx",
+          "line": 152,
+          "col": 12
+        }
+      },
+      "confidence": 0.75,
+      "section": "article",
+      "path": "div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(2) > section:nth-of-type(1) > article:nth-of-type(2) > div:nth-of-type(1) > h3:nth-of-type(1)",
+      "visible": true
+    },
+    {
+      "level": 2,
+      "text": "Selected Work",
+      "el": "e_4ee89cdde2d1",
+      "method": "rendered",
+      "edit": {
+        "kind": "prop",
+        "file": "src/App.jsx",
+        "line": 183,
+        "col": 4,
+        "attr": "title"
+      },
+      "confidence": 0.9,
+      "section": "section",
+      "path": "div:nth-of-type(1) > main:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(3) > section:nth-of-type(1) > h2:nth-of-type(1)",
+      "visible": true
+    },
+    {
+      "level": 3,
+      "text": "Unlovable - Application Builder.",
+      "el": null,
+      "method": "rendered",
+      "edit": {
+        "kind": "json",
+        "file": "src/store/data/majorProjects.json",
+        "line": 3,
+        "pointer": "/0/title"
+      },
+      "confidence": 0.9,
+      "section": "article",
+      "path": "div:nth-of-type(1) > div:nth-of-type(3) > section:nth-of-type(1) > div:nth-of-type(1) > article:nth-of-type(1) > div:nth-of-type(1) > h3:nth-of-type(1)",
+      "visible": true
+    },
+    {
+      "level": 3,
+      "text": "Unlovable - Mobile Application.",
+      "el": null,
+      "method": "rendered",
+      "edit": {
+        "kind": "json",
+        "file": "src/store/data/majorProjects.json",
+        "line": 12,
+        "pointer": "/1/title"
+      },
+      "confidence": 0.9,
+      "section": "article",
+      "path": "div:nth-of-type(1) > div:nth-of-type(3) > section:nth-of-type(1) > div:nth-of-type(1) > article:nth-of-type(2) > div:nth-of-type(1) > h3:nth-of-type(1)",
+      "visible": true
+    },
+    {
+      "level": 3,
+      "text": "Exness - CFD Application.",
+      "el": null,
+      "method": "rendered",
+      "edit": {
+        "kind": "json",
+        "file": "src/store/data/majorProjects.json",
+        "line": 21,
+        "pointer": "/2/title"
+      },
+      "confidence": 0.9,
+      "section": "article",
+      "path": "div:nth-of-type(1) > div:nth-of-type(3) > section:nth-of-type(1) > div:nth-of-type(1) > article:nth-of-type(3) > div:nth-of-type(1) > h3:nth-of-type(1)",
+      "visible": true
+    },
+    {
+      "level": 3,
+      "text": "Exness - Mobile Application.",
+      "el": null,
+      "method": "rendered",
+      "edit": {
+        "kind": "json",
+        "file": "src/store/data/majorProjects.json",
+        "line": 30,
+        "pointer": "/3/title"
+      },
+      "confidence": 0.9,
+      "section": "article",
+      "path": "div:nth-of-type(1) > div:nth-of-type(3) > section:nth-of-type(1) > div:nth-of-type(1) > article:nth-of-type(4) > div:nth-of-type(1) > h3:nth-of-type(1)",
+      "visible": true
+    },
+    {
+      "level": 2,
+      "text": "Skills",
+      "el": "e_ac5760ac08ab",
+      "method": "rendered",
+      "edit": {
+        "kind": "prop",
+        "file": "src/App.jsx",
+        "line": 262,
+        "col": 4,
+        "attr": "title"
+      },
+      "confidence": 0.9,
+      "section": "section",
+      "path": "div:nth-of-type(1) > main:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(4) > section:nth-of-type(1) > h2:nth-of-type(1)",
+      "visible": true
+    }
+  ],
+  "content": {
+    "main_words": 209,
+    "total_words": 243,
+    "blocks": [
+      {
+        "tag": "p",
+        "text": "Software Engineer",
+        "section": "header",
+        "in_main": false,
+        "edit": {
+          "kind": "literal",
+          "file": "src/App.jsx",
+          "line": 446,
+          "col": 10
+        },
+        "method": "rendered"
+      },
+      {
+        "tag": "h2",
+        "text": "About",
+        "section": "section",
+        "in_main": true,
+        "edit": null,
+        "method": "rendered"
+      },
+      {
+        "tag": "p",
+        "text": "Just a curious builder with a bad habit of going down every damn rabbit hole, building random shit, and figuring out life beyond code.",
+        "section": "section",
+        "in_main": true,
+        "edit": {
+          "kind": "literal",
+          "file": "src/App.jsx",
+          "line": 282,
+          "col": 12
+        },
+        "method": "rendered"
+      },
+      {
+        "tag": "h2",
+        "text": "Work Experience",
+        "section": "section",
+        "in_main": true,
+        "edit": {
+          "kind": "prop",
+          "file": "src/App.jsx",
+          "line": 147,
+          "col": 4,
+          "attr": "title"
+        },
+        "method": "rendered"
+      },
+      {
+        "tag": "p",
+        "text": "July 2026 — Present",
+        "section": "article",
+        "in_main": true,
+        "edit": {
+          "kind": "json",
+          "file": "src/store/data/experiences.json",
+          "line": 6,
+          "pointer": "/0/period"
+        },
+        "method": "rendered"
+      },
+      {
+        "tag": "h3",
+        "text": "Software Engineer at Testsigma",
+        "section": "article",
+        "in_main": true,
+        "edit": null,
+        "method": "rendered"
+      },
+      {
+        "tag": "p",
+        "text": "Bangalore, India · Full-time",
+        "section": "article",
+        "in_main": true,
+        "edit": null,
+        "method": "rendered"
+      },
+      {
+        "tag": "p",
+        "text": "Building things that make test automation a little less painful. Mostly jumping between backend, frontend, and infra, figuring things out along the way.",
+        "section": "article",
+        "in_main": true,
+        "edit": {
+          "kind": "json",
+          "file": "src/store/data/experiences.json",
+          "line": 8,
+          "pointer": "/0/summary"
+        },
+        "method": "rendered"
+      },
+      {
+        "tag": "p",
+        "text": "Dec 2025 — June 2026",
+        "section": "article",
+        "in_main": true,
+        "edit": {
+          "kind": "json",
+          "file": "src/store/data/experiences.json",
+          "line": 14,
+          "pointer": "/1/period"
+        },
+        "method": "rendered"
+      },
+      {
+        "tag": "h3",
+        "text": "Founding Engineer at FOZO",
+        "section": "article",
+        "in_main": true,
+        "edit": null,
+        "method": "rendered"
+      },
+      {
+        "tag": "p",
+        "text": "Bangalore, India · Full-time",
+        "section": "article",
+        "in_main": true,
+        "edit": null,
+        "method": "rendered"
+      },
+      {
+        "tag": "p",
+        "text": "Built a food delivery platform from scratch, handling everything from architecture and mobile apps to servers, deployments, and all the chaos in between.",
+        "section": "article",
+        "in_main": true,
+        "edit": {
+          "kind": "json",
+          "file": "src/store/data/experiences.json",
+          "line": 16,
+          "pointer": "/1/summary"
+        },
+        "method": "rendered"
+      },
+      {
+        "tag": "h2",
+        "text": "Selected Work",
+        "section": "section",
+        "in_main": true,
+        "edit": {
+          "kind": "prop",
+          "file": "src/App.jsx",
+          "line": 183,
+          "col": 4,
+          "attr": "title"
+        },
+        "method": "rendered"
+      },
+      {
+        "tag": "button",
+        "text": "Play demo",
+        "section": "article",
+        "in_main": true,
+        "edit": {
+          "kind": "literal",
+          "file": "src/App.jsx",
+          "line": 187,
+          "col": 12
+        },
+        "method": "rendered"
+      },
+      {
+        "tag": "p",
+        "text": "01",
+        "section": "article",
+        "in_main": true,
+        "edit": null,
+        "method": "rendered"
+      },
+      {
+        "tag": "h3",
+        "text": "Unlovable - Application Builder.",
+        "section": "article",
+        "in_main": true,
+        "edit": {
+          "kind": "json",
+          "file": "src/store/data/majorProjects.json",
+          "line": 3,
+          "pointer": "/0/title"
+        },
+        "method": "rendered"
+      },
+      {
+        "tag": "p",
+        "text": "Built an application builder, where anyone can able to generate an web application using a prompt and creativity.",
+        "section": "article",
+        "in_main": true,
+        "edit": {
+          "kind": "json",
+          "file": "src/store/data/majorProjects.json",
+          "line": 4,
+          "pointer": "/0/description"
+        },
+        "method": "rendered"
+      },
+      {
+        "tag": "p",
+        "text": "Turborepo · Expo · E2B sandbox · Redis",
+        "section": "article",
+        "in_main": true,
+        "edit": null,
+        "method": "rendered"
+      },
+      {
+        "tag": "button",
+        "text": "Play demo",
+        "section": "article",
+        "in_main": true,
+        "edit": {
+          "kind": "literal",
+          "file": "src/App.jsx",
+          "line": 187,
+          "col": 12
+        },
+        "method": "rendered"
+      },
+      {
+        "tag": "p",
+        "text": "02",
+        "section": "article",
+        "in_main": true,
+        "edit": null,
+        "method": "rendered"
+      },
+      {
+        "tag": "h3",
+        "text": "Unlovable - Mobile Application.",
+        "section": "article",
+        "in_main": true,
+        "edit": {
+          "kind": "json",
+          "file": "src/store/data/majorProjects.json",
+          "line": 12,
+          "pointer": "/1/title"
+        },
+        "method": "rendered"
+      },
+      {
+        "tag": "p",
+        "text": "Built an Mobile application builder, where anyone can able to generate an mobile application using a prompt and creativity.",
+        "section": "article",
+        "in_main": true,
+        "edit": {
+          "kind": "json",
+          "file": "src/store/data/majorProjects.json",
+          "line": 13,
+          "pointer": "/1/description"
+        },
+        "method": "rendered"
+      },
+      {
+        "tag": "p",
+        "text": "React Native · Expo · Nativewind · EAS",
+        "section": "article",
+        "in_main": true,
+        "edit": null,
+        "method": "rendered"
+      },
+      {
+        "tag": "button",
+        "text": "Play demo",
+        "section": "article",
+        "in_main": true,
+        "edit": {
+          "kind": "literal",
+          "file": "src/App.jsx",
+          "line": 187,
+          "col": 12
+        },
+        "method": "rendered"
+      },
+      {
+        "tag": "p",
+        "text": "03",
+        "section": "article",
+        "in_main": true,
+        "edit": null,
+        "method": "rendered"
+      },
+      {
+        "tag": "h3",
+        "text": "Exness - CFD Application.",
+        "section": "article",
+        "in_main": true,
+        "edit": {
+          "kind": "json",
+          "file": "src/store/data/majorProjects.json",
+          "line": 21,
+          "pointer": "/2/title"
+        },
+        "method": "rendered"
+      },
+      {
+        "tag": "p",
+        "text": "A CFD application for trade on crypto currencies.",
+        "section": "article",
+        "in_main": true,
+        "edit": {
+          "kind": "json",
+          "file": "src/store/data/majorProjects.json",
+          "line": 22,
+          "pointer": "/2/description"
+        },
+        "method": "rendered"
+      },
+      {
+        "tag": "p",
+        "text": "Turborepo · Redis · Pub-Sub · TimescaleDB",
+        "section": "article",
+        "in_main": true,
+        "edit": null,
+        "method": "rendered"
+      },
+      {
+        "tag": "button",
+        "text": "Play demo",
+        "section": "article",
+        "in_main": true,
+        "edit": {
+          "kind": "literal",
+          "file": "src/App.jsx",
+          "line": 187,
+          "col": 12
+        },
+        "method": "rendered"
+      },
+      {
+        "tag": "p",
+        "text": "04",
+        "section": "article",
+        "in_main": true,
+        "edit": null,
+        "method": "rendered"
+      },
+      {
+        "tag": "h3",
+        "text": "Exness - Mobile Application.",
+        "section": "article",
+        "in_main": true,
+        "edit": {
+          "kind": "json",
+          "file": "src/store/data/majorProjects.json",
+          "line": 30,
+          "pointer": "/3/title"
+        },
+        "method": "rendered"
+      },
+      {
+        "tag": "p",
+        "text": "A CFD Mobile application for trade on crypto currencies.",
+        "section": "article",
+        "in_main": true,
+        "edit": {
+          "kind": "json",
+          "file": "src/store/data/majorProjects.json",
+          "line": 31,
+          "pointer": "/3/description"
+        },
+        "method": "rendered"
+      },
+      {
+        "tag": "p",
+        "text": "React Native · Expo · Nativewind · EAS",
+        "section": "article",
+        "in_main": true,
+        "edit": null,
+        "method": "rendered"
+      },
+      {
+        "tag": "h2",
+        "text": "Skills",
+        "section": "section",
+        "in_main": true,
+        "edit": {
+          "kind": "prop",
+          "file": "src/App.jsx",
+          "line": 262,
+          "col": 4,
+          "attr": "title"
+        },
+        "method": "rendered"
+      },
+      {
+        "tag": "p",
+        "text": "MERN Stack · Next.js · Remix · Turborepo · PostgreSQL (Prisma) · API Development",
+        "section": "section",
+        "in_main": true,
+        "edit": null,
+        "method": "rendered"
+      },
+      {
+        "tag": "p",
+        "text": "React Native · API Connectivity",
+        "section": "section",
+        "in_main": true,
+        "edit": null,
+        "method": "rendered"
+      },
+      {
+        "tag": "p",
+        "text": "Python · FastAPI · Machine Learning · Deep Learning · NLP · Computer Vision · AI Applications · GenAI · AI Agents",
+        "section": "section",
+        "in_main": true,
+        "edit": null,
+        "method": "rendered"
+      }
+    ],
+    "attributed_blocks": 21
+  },
+  "links": {
+    "out": [
+      {
+        "href": "/",
+        "resolved": "https://www.lakshaygoyal.in/",
+        "anchor": "Home",
+        "aria_label": null,
+        "rel": null,
+        "target": null,
+        "section": "nav",
+        "in_main": false,
+        "kind": "internal",
+        "visible": true,
+        "img_alt": null,
+        "edit": {
+          "kind": "literal",
+          "file": "src/App.jsx",
+          "line": 445,
+          "col": 10,
+          "attr": "href"
+        },
+        "anchor_edit": {
+          "kind": "literal",
+          "file": "src/App.jsx",
+          "line": 445,
+          "col": 10
+        },
+        "method": "rendered",
+        "confidence": 0.9,
+        "status": 200
+      },
+      {
+        "href": "/about",
+        "resolved": "https://www.lakshaygoyal.in/about",
+        "anchor": "About",
+        "aria_label": null,
+        "rel": null,
+        "target": null,
+        "section": "nav",
+        "in_main": false,
+        "kind": "internal",
+        "visible": true,
+        "img_alt": null,
+        "edit": {
+          "kind": "prop",
+          "file": "src/App.jsx",
+          "line": 280,
+          "col": 8,
+          "attr": "title"
+        },
+        "anchor_edit": {
+          "kind": "prop",
+          "file": "src/App.jsx",
+          "line": 280,
+          "col": 8,
+          "attr": "title"
+        },
+        "method": "rendered",
+        "confidence": 0.45,
+        "status": 200
+      },
+      {
+        "href": "/bookshelf",
+        "resolved": "https://www.lakshaygoyal.in/bookshelf",
+        "anchor": "Bookshelf",
+        "aria_label": null,
+        "rel": null,
+        "target": null,
+        "section": "nav",
+        "in_main": false,
+        "kind": "internal",
+        "visible": true,
+        "img_alt": null,
+        "edit": {
+          "kind": "prop",
+          "file": "src/App.jsx",
+          "line": 344,
+          "col": 6,
+          "attr": "title"
+        },
+        "anchor_edit": {
+          "kind": "prop",
+          "file": "src/App.jsx",
+          "line": 344,
+          "col": 6,
+          "attr": "title"
+        },
+        "method": "rendered",
+        "confidence": 0.9,
+        "status": 200
+      },
+      {
+        "href": "/blog",
+        "resolved": "https://www.lakshaygoyal.in/blog",
+        "anchor": "Blogs",
+        "aria_label": null,
+        "rel": null,
+        "target": null,
+        "section": "nav",
+        "in_main": false,
+        "kind": "internal",
+        "visible": true,
+        "img_alt": null,
+        "edit": {
+          "kind": "prop",
+          "file": "src/App.jsx",
+          "line": 378,
+          "col": 6,
+          "attr": "title"
+        },
+        "anchor_edit": {
+          "kind": "prop",
+          "file": "src/App.jsx",
+          "line": 378,
+          "col": 6,
+          "attr": "title"
+        },
+        "method": "rendered",
+        "confidence": 0.9,
+        "status": 200
+      },
+      {
+        "href": "/",
+        "resolved": "https://www.lakshaygoyal.in/",
+        "anchor": "Lakshay Goyal",
+        "aria_label": null,
+        "rel": null,
+        "target": null,
+        "section": "header",
+        "in_main": false,
+        "kind": "internal",
+        "visible": true,
+        "img_alt": null,
+        "edit": {
+          "kind": "literal",
+          "file": "src/App.jsx",
+          "line": 445,
+          "col": 10
+        },
+        "anchor_edit": {
+          "kind": "literal",
+          "file": "src/App.jsx",
+          "line": 445,
+          "col": 10
+        },
+        "method": "rendered",
+        "confidence": 0.9,
+        "status": 200
+      },
+      {
+        "href": "https://testsigma.com/",
+        "resolved": "https://testsigma.com/",
+        "anchor": "Testsigma",
+        "aria_label": null,
+        "rel": "noopener noreferrer",
+        "target": "_blank",
+        "section": "article",
+        "in_main": true,
+        "kind": "absolute",
+        "visible": true,
+        "img_alt": null,
+        "edit": {
+          "kind": "json",
+          "file": "src/store/data/experiences.json",
+          "line": 3,
+          "pointer": "/0/company"
+        },
+        "anchor_edit": {
+          "kind": "json",
+          "file": "src/store/data/experiences.json",
+          "line": 3,
+          "pointer": "/0/company"
+        },
+        "method": "rendered",
+        "confidence": 0.9,
+        "status": 200
+      },
+      {
+        "href": "https://getfozo.in",
+        "resolved": "https://getfozo.in/",
+        "anchor": "FOZO",
+        "aria_label": null,
+        "rel": "noopener noreferrer",
+        "target": "_blank",
+        "section": "article",
+        "in_main": true,
+        "kind": "absolute",
+        "visible": true,
+        "img_alt": null,
+        "edit": {
+          "kind": "json",
+          "file": "src/store/data/experiences.json",
+          "line": 11,
+          "pointer": "/1/company"
+        },
+        "anchor_edit": {
+          "kind": "json",
+          "file": "src/store/data/experiences.json",
+          "line": 11,
+          "pointer": "/1/company"
+        },
+        "method": "rendered",
+        "confidence": 0.9,
+        "status": 200
+      },
+      {
+        "href": "https://unlovable.lakshaygoyal.in/",
+        "resolved": "https://unlovable.lakshaygoyal.in/",
+        "anchor": "Unlovable - Application Builder.",
+        "aria_label": null,
+        "rel": "noopener noreferrer",
+        "target": "_blank",
+        "section": "article",
+        "in_main": true,
+        "kind": "absolute",
+        "visible": true,
+        "img_alt": null,
+        "edit": {
+          "kind": "json",
+          "file": "src/store/data/majorProjects.json",
+          "line": 3,
+          "pointer": "/0/title"
+        },
+        "anchor_edit": {
+          "kind": "json",
+          "file": "src/store/data/majorProjects.json",
+          "line": 3,
+          "pointer": "/0/title"
+        },
+        "method": "rendered",
+        "confidence": 0.9,
+        "status": null
+      },
+      {
+        "href": "https://github.com/lakshay-goyal/Unlovable",
+        "resolved": "https://github.com/lakshay-goyal/Unlovable",
+        "anchor": "Source code",
+        "aria_label": null,
+        "rel": "noopener noreferrer",
+        "target": "_blank",
+        "section": "article",
+        "in_main": true,
+        "kind": "absolute",
+        "visible": true,
+        "img_alt": null,
+        "edit": {
+          "kind": "literal",
+          "file": "src/App.jsx",
+          "line": 206,
+          "col": 31
+        },
+        "anchor_edit": {
+          "kind": "literal",
+          "file": "src/App.jsx",
+          "line": 206,
+          "col": 31
+        },
+        "method": "rendered",
+        "confidence": 0.9,
+        "status": 200
+      },
+      {
+        "href": "https://github.com/lakshay-goyal/Unlovable",
+        "resolved": "https://github.com/lakshay-goyal/Unlovable",
+        "anchor": "Unlovable - Mobile Application.",
+        "aria_label": null,
+        "rel": "noopener noreferrer",
+        "target": "_blank",
+        "section": "article",
+        "in_main": true,
+        "kind": "absolute",
+        "visible": true,
+        "img_alt": null,
+        "edit": {
+          "kind": "json",
+          "file": "src/store/data/majorProjects.json",
+          "line": 12,
+          "pointer": "/1/title"
+        },
+        "anchor_edit": {
+          "kind": "json",
+          "file": "src/store/data/majorProjects.json",
+          "line": 12,
+          "pointer": "/1/title"
+        },
+        "method": "rendered",
+        "confidence": 0.9,
+        "status": 200
+      },
+      {
+        "href": "https://exness.lakshaygoyal.in/",
+        "resolved": "https://exness.lakshaygoyal.in/",
+        "anchor": "Exness - CFD Application.",
+        "aria_label": null,
+        "rel": "noopener noreferrer",
+        "target": "_blank",
+        "section": "article",
+        "in_main": true,
+        "kind": "absolute",
+        "visible": true,
+        "img_alt": null,
+        "edit": {
+          "kind": "json",
+          "file": "src/store/data/majorProjects.json",
+          "line": 21,
+          "pointer": "/2/title"
+        },
+        "anchor_edit": {
+          "kind": "json",
+          "file": "src/store/data/majorProjects.json",
+          "line": 21,
+          "pointer": "/2/title"
+        },
+        "method": "rendered",
+        "confidence": 0.9,
+        "status": null
+      },
+      {
+        "href": "https://github.com/lakshay-goyal/Exness",
+        "resolved": "https://github.com/lakshay-goyal/Exness",
+        "anchor": "Source code",
+        "aria_label": null,
+        "rel": "noopener noreferrer",
+        "target": "_blank",
+        "section": "article",
+        "in_main": true,
+        "kind": "absolute",
+        "visible": true,
+        "img_alt": null,
+        "edit": {
+          "kind": "literal",
+          "file": "src/App.jsx",
+          "line": 206,
+          "col": 31
+        },
+        "anchor_edit": {
+          "kind": "literal",
+          "file": "src/App.jsx",
+          "line": 206,
+          "col": 31
+        },
+        "method": "rendered",
+        "confidence": 0.9,
+        "status": 200
+      },
+      {
+        "href": "https://github.com/lakshay-goyal/Exness",
+        "resolved": "https://github.com/lakshay-goyal/Exness",
+        "anchor": "Exness - Mobile Application.",
+        "aria_label": null,
+        "rel": "noopener noreferrer",
+        "target": "_blank",
+        "section": "article",
+        "in_main": true,
+        "kind": "absolute",
+        "visible": true,
+        "img_alt": null,
+        "edit": {
+          "kind": "json",
+          "file": "src/store/data/majorProjects.json",
+          "line": 30,
+          "pointer": "/3/title"
+        },
+        "anchor_edit": {
+          "kind": "json",
+          "file": "src/store/data/majorProjects.json",
+          "line": 30,
+          "pointer": "/3/title"
+        },
+        "method": "rendered",
+        "confidence": 0.9,
+        "status": 200
+      },
+      {
+        "href": "mailto:lakshaygoyal201@gmail.com",
+        "resolved": "mailto:lakshaygoyal201@gmail.com",
+        "anchor": "",
+        "aria_label": "Email",
+        "rel": null,
+        "target": null,
+        "section": "nav",
+        "in_main": false,
+        "kind": "action",
+        "visible": true,
+        "img_alt": null,
+        "edit": {
+          "kind": "computed",
+          "file": "src/App.jsx",
+          "line": 109,
+          "col": 4,
+          "via": "{href}"
+        },
+        "anchor_edit": {
+          "kind": "computed",
+          "file": "src/App.jsx",
+          "line": 109,
+          "col": 4,
+          "via": "{children}"
+        },
+        "method": "rendered",
+        "confidence": 0.9
+      },
+      {
+        "href": "https://github.com/lakshay-goyal",
+        "resolved": "https://github.com/lakshay-goyal",
+        "anchor": "",
+        "aria_label": "GitHub",
+        "rel": "noopener noreferrer",
+        "target": "_blank",
+        "section": "nav",
+        "in_main": false,
+        "kind": "absolute",
+        "visible": true,
+        "img_alt": null,
+        "edit": {
+          "kind": "computed",
+          "file": "src/App.jsx",
+          "line": 121,
+          "col": 9,
+          "via": "{href}"
+        },
+        "anchor_edit": {
+          "kind": "computed",
+          "file": "src/App.jsx",
+          "line": 121,
+          "col": 9,
+          "via": "{children}"
+        },
+        "method": "rendered",
+        "confidence": 0.9,
+        "status": 200
+      },
+      {
+        "href": "https://www.linkedin.com/in/lakshay-goyal-9778a6246/",
+        "resolved": "https://www.linkedin.com/in/lakshay-goyal-9778a6246/",
+        "anchor": "",
+        "aria_label": "LinkedIn",
+        "rel": "noopener noreferrer",
+        "target": "_blank",
+        "section": "nav",
+        "in_main": false,
+        "kind": "absolute",
+        "visible": true,
+        "img_alt": null,
+        "edit": {
+          "kind": "computed",
+          "file": "src/components/PageRail.jsx",
+          "line": 14,
+          "col": 12,
+          "via": "{page.href}"
+        },
+        "anchor_edit": {
+          "kind": "literal",
+          "file": "src/components/PageRail.jsx",
+          "line": 14,
+          "col": 12
+        },
+        "method": "rendered",
+        "confidence": 0.9,
+        "status": 999,
+        "redirect_chain": [
+          {
+            "url": "https://www.linkedin.com/in/lakshay-goyal-9778a6246/",
+            "status": 301,
+            "location": "https://www.linkedin.com/in/lakshay-goyal-9778a6246"
+          }
+        ]
+      },
+      {
+        "href": "https://x.com/lakshayg2004",
+        "resolved": "https://x.com/lakshayg2004",
+        "anchor": "",
+        "aria_label": "X",
+        "rel": "noopener noreferrer",
+        "target": "_blank",
+        "section": "nav",
+        "in_main": false,
+        "kind": "absolute",
+        "visible": true,
+        "img_alt": null,
+        "edit": {
+          "kind": "computed",
+          "file": "src/components/ContactRail.jsx",
+          "line": 75,
+          "col": 12,
+          "via": "{contact.href}"
+        },
+        "anchor_edit": {
+          "kind": "literal",
+          "file": "src/components/ContactRail.jsx",
+          "line": 75,
+          "col": 12
+        },
+        "method": "rendered",
+        "confidence": 0.9,
+        "status": 200
+      },
+      {
+        "href": "/Lakshay_Resume.pdf",
+        "resolved": "https://www.lakshaygoyal.in/Lakshay_Resume.pdf",
+        "anchor": "",
+        "aria_label": "Resume",
+        "rel": "noopener noreferrer",
+        "target": "_blank",
+        "section": "nav",
+        "in_main": false,
+        "kind": "internal",
+        "visible": true,
+        "img_alt": null,
+        "edit": {
+          "kind": "computed",
+          "file": "index.html",
+          "line": 1,
+          "via": "no source location matched the served value"
+        },
+        "anchor_edit": {
+          "kind": "computed",
+          "file": "index.html",
+          "line": 1,
+          "via": "no source location matched the served value"
+        },
+        "method": "rendered",
+        "confidence": 0.3,
+        "status": 200
+      },
+      {
+        "href": "https://cal.com/lakshay-goyal/30min?overlayCalendar=true",
+        "resolved": "https://cal.com/lakshay-goyal/30min?overlayCalendar=true",
+        "anchor": "Schedule",
+        "aria_label": "Schedule a 30-minute Google Meet",
+        "rel": "noopener noreferrer",
+        "target": "_blank",
+        "section": "main",
+        "in_main": true,
+        "kind": "absolute",
+        "visible": true,
+        "img_alt": null,
+        "edit": {
+          "kind": "computed",
+          "file": "src/components/ContactRail.jsx",
+          "line": 37,
+          "col": 4,
+          "via": "{bookingUrl}"
+        },
+        "anchor_edit": {
+          "kind": "literal",
+          "file": "src/components/ContactRail.jsx",
+          "line": 37,
+          "col": 4
+        },
+        "method": "rendered",
+        "confidence": 0.9,
+        "status": 200
+      }
+    ],
+    "in_count": 0,
+    "click_depth": 0,
+    "orphan_candidate": false
+  },
+  "images": [
+    {
+      "src": "/Image/UnlovableWeb.png",
+      "resolved": "https://www.lakshaygoyal.in/Image/UnlovableWeb.png",
+      "alt": "Unlovable - Application Builder. interface screenshot",
+      "alt_missing": false,
+      "width": null,
+      "height": null,
+      "loading": "lazy",
+      "fetchpriority": null,
+      "srcset": false,
+      "natural": [
+        1920,
+        1080
+      ],
+      "rendered": [
+        324,
+        209
+      ],
+      "above_fold": false,
+      "transfer_bytes": 531168,
+      "format": "png",
+      "section": "article",
+      "edit": {
+        "kind": "json",
+        "file": "src/store/data/majorProjects.json",
+        "line": 6,
+        "pointer": "/0/image"
+      },
+      "alt_edit": {
+        "kind": "json",
+        "file": "src/store/data/majorProjects.json",
+        "line": 3,
+        "pointer": "/0",
+        "composed_from": [
+          "/0/title"
+        ],
+        "template": {
+          "file": "src/App.jsx",
+          "line": 193,
+          "col": 14
+        }
+      },
+      "method": "rendered",
+      "oversized_ratio": 5.93
+    },
+    {
+      "src": "/Image/UnlovableMobile.png",
+      "resolved": "https://www.lakshaygoyal.in/Image/UnlovableMobile.png",
+      "alt": "Unlovable - Mobile Application. interface screenshot",
+      "alt_missing": false,
+      "width": null,
+      "height": null,
+      "loading": "lazy",
+      "fetchpriority": null,
+      "srcset": false,
+      "natural": [
+        1920,
+        1080
+      ],
+      "rendered": [
+        324,
+        209
+      ],
+      "above_fold": false,
+      "transfer_bytes": 373004,
+      "format": "png",
+      "section": "article",
+      "edit": {
+        "kind": "json",
+        "file": "src/store/data/majorProjects.json",
+        "line": 15,
+        "pointer": "/1/image"
+      },
+      "alt_edit": {
+        "kind": "json",
+        "file": "src/store/data/majorProjects.json",
+        "line": 12,
+        "pointer": "/1",
+        "composed_from": [
+          "/1/title"
+        ],
+        "template": {
+          "file": "src/App.jsx",
+          "line": 193,
+          "col": 14
+        }
+      },
+      "method": "rendered",
+      "oversized_ratio": 5.93
+    },
+    {
+      "src": "/Image/ExnessWeb.png",
+      "resolved": "https://www.lakshaygoyal.in/Image/ExnessWeb.png",
+      "alt": "Exness - CFD Application. interface screenshot",
+      "alt_missing": false,
+      "width": null,
+      "height": null,
+      "loading": "lazy",
+      "fetchpriority": null,
+      "srcset": false,
+      "natural": [
+        1920,
+        1080
+      ],
+      "rendered": [
+        324,
+        209
+      ],
+      "above_fold": false,
+      "transfer_bytes": 1253474,
+      "format": "png",
+      "section": "article",
+      "edit": {
+        "kind": "json",
+        "file": "src/store/data/majorProjects.json",
+        "line": 24,
+        "pointer": "/2/image"
+      },
+      "alt_edit": {
+        "kind": "json",
+        "file": "src/store/data/majorProjects.json",
+        "line": 21,
+        "pointer": "/2",
+        "composed_from": [
+          "/2/title"
+        ],
+        "template": {
+          "file": "src/App.jsx",
+          "line": 193,
+          "col": 14
+        }
+      },
+      "method": "rendered",
+      "oversized_ratio": 5.93
+    },
+    {
+      "src": "/Image/ExnessMobile.png",
+      "resolved": "https://www.lakshaygoyal.in/Image/ExnessMobile.png",
+      "alt": "Exness - Mobile Application. interface screenshot",
+      "alt_missing": false,
+      "width": null,
+      "height": null,
+      "loading": "lazy",
+      "fetchpriority": null,
+      "srcset": false,
+      "natural": [
+        1920,
+        1080
+      ],
+      "rendered": [
+        324,
+        209
+      ],
+      "above_fold": false,
+      "transfer_bytes": 1988907,
+      "format": "png",
+      "section": "article",
+      "edit": {
+        "kind": "json",
+        "file": "src/store/data/majorProjects.json",
+        "line": 33,
+        "pointer": "/3/image"
+      },
+      "alt_edit": {
+        "kind": "json",
+        "file": "src/store/data/majorProjects.json",
+        "line": 30,
+        "pointer": "/3",
+        "composed_from": [
+          "/3/title"
+        ],
+        "template": {
+          "file": "src/App.jsx",
+          "line": 193,
+          "col": 14
+        }
+      },
+      "method": "rendered",
+      "oversized_ratio": 5.93
+    }
+  ],
+  "structured_data": [],
+  "mobile_parity": {
+    "desktop_words": 209,
+    "mobile_words": 209,
+    "headings_missing_on_mobile": [],
+    "links_missing_on_mobile": [],
+    "viewport_meta": "width=device-width, initial-scale=1.0",
+    "title_differs": false
+  },
+  "performance": {
+    "mobile": {
+      "status": "failed",
+      "error": "CalledProcessError: Command '['lighthouse', 'https://lakshaygoyal.in/', '--output=json', '--output-path=/tmp/tmp612nvcsb.json', '--quiet', '--only-categories=performance,seo,accessibility,best-practices', '--chrome-flags",
+      "runs": 0
+    },
+    "desktop": {
+      "status": "failed",
+      "error": "CalledProcessError: Command '['lighthouse', 'https://lakshaygoyal.in/', '--output=json', '--output-path=/tmp/tmp_un673gg.json', '--quiet', '--only-categories=performance,seo,accessibility,best-practices', '--chrome-flags",
+      "runs": 0
+    }
+  },
+  "eeat": [
+    {
+      "signal": "authorship",
+      "status": "not_observed",
+      "method": "deterministic",
+      "evidence": []
+    },
+    {
+      "signal": "dates",
+      "status": "not_observed",
+      "method": "deterministic",
+      "evidence": []
+    },
+    {
+      "signal": "trust_pages",
+      "status": "observed",
+      "method": "deterministic",
+      "evidence": [
+        {
+          "href": "/about",
+          "anchor": "About"
+        }
+      ]
+    },
+    {
+      "signal": "citations",
+      "status": "observed",
+      "method": "deterministic",
+      "evidence": [
+        {
+          "href": "https://testsigma.com/",
+          "anchor": "Testsigma"
+        },
+        {
+          "href": "https://getfozo.in",
+          "anchor": "FOZO"
+        },
+        {
+          "href": "https://unlovable.lakshaygoyal.in/",
+          "anchor": "Unlovable - Application Builder."
+        },
+        {
+          "href": "https://github.com/lakshay-goyal/Unlovable",
+          "anchor": "Source code"
+        },
+        {
+          "href": "https://github.com/lakshay-goyal/Unlovable",
+          "anchor": "Unlovable - Mobile Application."
+        },
+        {
+          "href": "https://exness.lakshaygoyal.in/",
+          "anchor": "Exness - CFD Application."
+        },
+        {
+          "href": "https://github.com/lakshay-goyal/Exness",
+          "anchor": "Source code"
+        },
+        {
+          "href": "https://github.com/lakshay-goyal/Exness",
+          "anchor": "Exness - Mobile Application."
+        },
+        {
+          "href": "https://cal.com/lakshay-goyal/30min?overlayCalendar=true",
+          "anchor": "Schedule"
+        }
+      ]
+    },
+    {
+      "signal": "structured_identity",
+      "status": "not_observed",
+      "method": "deterministic",
+      "evidence": []
+    }
+  ],
+  "keywords": {
+    "top_terms": [
+      "application",
+      "mobile",
+      "mobile application",
+      "work",
+      "builder",
+      "play",
+      "demo",
+      "play demo",
+      "engineer",
+      "built",
+      "turborepo",
+      "expo"
+    ],
+    "method": "lexical uni/bi-grams over title, H1-H2 and main copy",
+    "topic": null,
+    "intent": null
+  },
+  "limitations": [
+    "Some components could not be resolved to source (external packages or dynamic imports)."
+  ],
+  "inputs_sha256": "35b28171188a3fa5"
+}
