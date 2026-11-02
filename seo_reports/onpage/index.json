@@ -1,0 +1,184 @@
+{
+  "schema": "seo-onpage/1.0",
+  "generated_at": "2026-11-02T08:03:23+00:00",
+  "source": {
+    "site_model_dir": "/private/tmp/claude-501/-Users-lakshay-goyal-Desktop-Learning-seo-agents/f105fe5e-248b-4ccc-a408-39091838b401/scratchpad/pr8/seo_reports/site_model",
+    "schema": "seo-site-model/1.0",
+    "snapshot_sha256": "5d82b35bedbea83e57943210982f580479e7dd8aa8fb602835fa1824a4a4a583",
+    "framework": {
+      "name": "react-spa",
+      "version": "18.3.1",
+      "router": "declared"
+    },
+    "origin": "https://www.lakshaygoyal.in"
+  },
+  "model": {
+    "tier": "mid",
+    "model": "anthropic/claude-sonnet-5.5",
+    "repair_model": "anthropic/claude-sonnet-5.5",
+    "usage": {
+      "calls": 12,
+      "input_tokens": 57401,
+      "output_tokens": 14725,
+      "cached_input_tokens": 0,
+      "cost_usd": 0.393078,
+      "by_model": {
+        "anthropic/claude-sonnet-5.5": {
+          "calls": 12,
+          "input_tokens": 57401,
+          "output_tokens": 14725
+        }
+      },
+      "cache_hit_rate": 0.0
+    }
+  },
+  "workflow": "LangGraph linear: load -> intent -> keyword_plan -> title -> meta_description -> headings -> content -> media -> internal_links -> eeat -> aeo_geo -> structured_data -> social_meta -> technical -> fact_check -> qa -> site -> write",
+  "checklist": [
+    {
+      "order": 1,
+      "check": "intent",
+      "skill": "search-intent",
+      "uses_llm": true,
+      "description": "Decide the page's primary query, search intent, user-journey stage, real user questions and topic-cluster role. Every later skill builds on this."
+    },
+    {
+      "order": 2,
+      "check": "keyword_plan",
+      "skill": "keyword-integration",
+      "uses_llm": false,
+      "description": "Build the page keyword map (primary, secondary, semantic variants, placements) and measure current keyword stuffing. Deterministic; its limits are enforced on every generated text."
+    },
+    {
+      "order": 3,
+      "check": "title",
+      "skill": "title-tag",
+      "uses_llm": true,
+      "description": "Write a unique, intent-matching <title> (30-60 chars) that leads with the primary query and ends with the brand."
+    },
+    {
+      "order": 4,
+      "check": "meta_description",
+      "skill": "meta-description",
+      "uses_llm": true,
+      "description": "Write a 120-160 character meta description that answers the query in one line and gives a reason to click."
+    },
+    {
+      "order": 5,
+      "check": "headings",
+      "skill": "headings",
+      "uses_llm": true,
+      "description": "Produce one H1 and a logical H2/H3 outline (question-shaped where users ask questions) that maps the page to the search intent."
+    },
+    {
+      "order": 6,
+      "check": "content",
+      "skill": "answer-first-content",
+      "uses_llm": true,
+      "description": "Rewrite the page body answer-first (direct answer -> details -> extras) as typed semantic blocks (p, ul, ol, table, dl, figure, blockquote) using the client's own images."
+    },
+    {
+      "order": 7,
+      "check": "media",
+      "skill": "media-images",
+      "uses_llm": true,
+      "description": "Write descriptive alt text and captions for every page image, and flag technical image issues (size, format, lazy loading, dimensions)."
+    },
+    {
+      "order": 8,
+      "check": "internal_links",
+      "skill": "internal-links",
+      "uses_llm": true,
+      "description": "Improve anchor text and add contextual internal links that connect the page to its topic cluster and the next step in the user journey."
+    },
+    {
+      "order": 9,
+      "check": "eeat",
+      "skill": "eeat",
+      "uses_llm": true,
+      "description": "Strengthen Experience, Expertise, Authoritativeness and Trust signals with packet-backed author info, credentials, dates, sources and trust elements."
+    },
+    {
+      "order": 10,
+      "check": "aeo_geo",
+      "skill": "aeo-geo",
+      "uses_llm": true,
+      "description": "Make the page easy for answer engines and generative AI to quote - summary/TL;DR, definition sentence, FAQ from real user questions, consistent entity statements."
+    },
+    {
+      "order": 11,
+      "check": "structured_data",
+      "skill": "structured-data",
+      "uses_llm": true,
+      "description": "Produce a JSON-LD @graph for the page (WebPage/ProfilePage, Person/Organization, WebSite, BreadcrumbList, FAQPage, ItemList, Article, HowTo when steps exist) that mirrors the expected visible content."
+    },
+    {
+      "order": 12,
+      "check": "social_meta",
+      "skill": "social-meta",
+      "uses_llm": false,
+      "description": "Derive Open Graph and Twitter/X card tags from the expected title, description and the best available image. Deterministic."
+    },
+    {
+      "order": 13,
+      "check": "technical",
+      "skill": "technical-onpage",
+      "uses_llm": false,
+      "description": "Page-level technical on-page checks from the exploration JSON - canonical, robots meta, lang, viewport, URL slug, hreflang, JS-only content, broken links, image weight. Deterministic."
+    },
+    {
+      "order": 14,
+      "check": "fact_check",
+      "skill": "fact-check-freshness",
+      "uses_llm": false,
+      "description": "Verify every number, date and named claim in the expected content against the exploration JSON, and flag stale years, versions and missing modified dates. Deterministic."
+    },
+    {
+      "order": 15,
+      "check": "qa",
+      "skill": "qa-consolidation",
+      "uses_llm": false,
+      "description": "Final pass - site-wide uniqueness of titles/descriptions/H1s, checklist scoring before vs after, priorities, rendered HTML preview of the expected page. Deterministic."
+    }
+  ],
+  "how_to_review": "Open pages/<id>.json: each change has current, expected and reference (file/line to edit). Approve, then apply manually. needs_verification = contains facts not found in the exploration JSON.",
+  "pages": [
+    {
+      "id": "p_42099b4af0",
+      "url": "/",
+      "file": "pages/p_42099b4af0.json",
+      "expected_html": "pages/p_42099b4af0.expected.html",
+      "primary_query": "lakshay goyal software engineer",
+      "changes": 86,
+      "by_status": {
+        "proposed": 84,
+        "needs_verification": 2
+      },
+      "by_priority": {
+        "high": 4,
+        "medium": 57,
+        "low": 25
+      },
+      "checks": {
+        "intent": "done",
+        "keyword_plan": "done",
+        "title": "done",
+        "meta_description": "done",
+        "headings": "done",
+        "content": "done",
+        "media": "done",
+        "internal_links": "done",
+        "eeat": "done",
+        "aeo_geo": "done",
+        "structured_data": "done",
+        "social_meta": "done",
+        "technical": "done",
+        "fact_check": "done",
+        "qa": "done"
+      },
+      "checklist_after_pass": 16,
+      "checklist_before_pass": 3,
+      "checklist_total": 16
+    }
+  ],
+  "site_file": "site.json"
+}
