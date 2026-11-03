@@ -1,0 +1,84 @@
+{
+  "schema": "seo-onpage/1.0",
+  "duplicates": {
+    "title": [],
+    "description": [],
+    "h1": []
+  },
+  "topic_clusters": [
+    {
+      "pillar": "/",
+      "pages": [
+        {
+          "url": "/",
+          "role": "pillar",
+          "primary_query": "lakshay goyal software engineer",
+          "intent": "navigational",
+          "journey_stage": "consideration",
+          "related_urls": [
+            "/about",
+            "/blog",
+            "/bookshelf"
+          ]
+        }
+      ]
+    }
+  ],
+  "changes": [
+    {
+      "id": "site_robots",
+      "field": "robots.txt",
+      "action": "add",
+      "current": null,
+      "priority": "medium",
+      "reference": {
+        "edit": {
+          "kind": "add",
+          "file": "public/robots.txt"
+        }
+      },
+      "expected": "User-agent: *\nAllow: /\n\nSitemap: https://www.lakshaygoyal.in/sitemap.xml\n",
+      "rationale": "robots.txt with sitemap location (none found in the repository or served)"
+    },
+    {
+      "id": "site_sitemap",
+      "field": "sitemap.xml",
+      "action": "add",
+      "current": null,
+      "priority": "medium",
+      "reference": {
+        "edit": {
+          "kind": "add",
+          "file": "public/sitemap.xml"
+        }
+      },
+      "expected": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<urlset xmlns=\"http://www.sitemaps.org/schemas/sitemap/0.9\">\n  <url><loc>https://www.lakshaygoyal.in/</loc><lastmod>2026-11-02</lastmod></url>\n  <url><loc>https://www.lakshaygoyal.in/about</loc><lastmod>2026-11-02</lastmod></url>\n  <url><loc>https://www.lakshaygoyal.in/blog</loc><lastmod>2026-11-02</lastmod></url>\n  <url><loc>https://www.lakshaygoyal.in/bookshelf</loc><lastmod>2026-11-02</lastmod></url>\n</urlset>\n",
+      "rationale": "XML sitemap listing every indexable URL (verify /about, /bookshelf, /blog are real pages, not SPA fallbacks)"
+    },
+    {
+      "id": "site_llms_txt",
+      "field": "llms.txt",
+      "action": "add",
+      "current": null,
+      "priority": "low",
+      "reference": {
+        "edit": {
+          "kind": "add",
+          "file": "public/llms.txt"
+        }
+      },
+      "expected": "# Lakshay Goyal\n\n> Lakshay Goyal is a Software Engineer in Bangalore, India, who builds mobile apps, backend systems and AI applications.\n\n## Pages\n\n- [Lakshay Goyal - Software Engineer | Testsigma, FOZO](https://www.lakshaygoyal.in/): Lakshay Goyal is a Software Engineer at Testsigma, formerly Founding Engineer at FOZO. See his Unlovable and Exness projects, skills and how to book a call.\n- [About](https://www.lakshaygoyal.in/about)\n- [Blog](https://www.lakshaygoyal.in/blog)\n- [Bookshelf](https://www.lakshaygoyal.in/bookshelf)\n",
+      "rationale": "GEO: concise, structured site map for LLM agents (llms.txt is a proposed convention, not a ranking factor)"
+    },
+    {
+      "id": "site_schema_note",
+      "field": "structured_data",
+      "action": "guidance",
+      "current": "no JSON-LD anywhere",
+      "expected": "Ship the per-page @graph from pages/*.json (WebSite + Person/Organization on the home page)",
+      "priority": "medium",
+      "reference": null,
+      "rationale": "No structured data detected site-wide"
+    }
+  ]
+}

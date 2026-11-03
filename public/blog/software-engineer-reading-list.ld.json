@@ -1,0 +1,179 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://lakshaygoyal.in/blog/software-engineer-reading-list#webpage",
+      "url": "https://lakshaygoyal.in/blog/software-engineer-reading-list",
+      "name": "Books for Software Engineers: 7 Ideas I Took From Them",
+      "description": "A working engineer's list of books for software engineers: the seven books Lakshay Goyal read, the idea he kept from each, and how to use them at work.",
+      "isPartOf": {
+        "@id": "https://lakshaygoyal.in/#website"
+      },
+      "inLanguage": "en",
+      "breadcrumb": {
+        "@id": "https://lakshaygoyal.in/blog/software-engineer-reading-list#breadcrumb"
+      },
+      "primaryImageOfPage": {
+        "@id": "https://lakshaygoyal.in/blog/software-engineer-reading-list#image-1"
+      },
+      "image": {
+        "@id": "https://lakshaygoyal.in/blog/software-engineer-reading-list#image-1"
+      },
+      "datePublished": "2026-11-03",
+      "dateModified": "2026-11-03",
+      "mainEntity": {
+        "@id": "https://lakshaygoyal.in/blog/software-engineer-reading-list#article"
+      }
+    },
+    {
+      "@type": "BlogPosting",
+      "@id": "https://lakshaygoyal.in/blog/software-engineer-reading-list#article",
+      "headline": "Books for Software Engineers: The Ideas I Took From My Reading",
+      "description": "A working engineer's list of books for software engineers: the seven books Lakshay Goyal read, the idea he kept from each, and how to use them at work.",
+      "url": "https://lakshaygoyal.in/blog/software-engineer-reading-list",
+      "mainEntityOfPage": {
+        "@id": "https://lakshaygoyal.in/blog/software-engineer-reading-list#webpage"
+      },
+      "isPartOf": {
+        "@id": "https://lakshaygoyal.in/blog/software-engineer-reading-list#webpage"
+      },
+      "author": {
+        "@id": "https://lakshaygoyal.in/#person"
+      },
+      "publisher": {
+        "@id": "https://lakshaygoyal.in/#person"
+      },
+      "image": [
+        {
+          "@id": "https://lakshaygoyal.in/blog/software-engineer-reading-list#image-1"
+        }
+      ],
+      "inLanguage": "en",
+      "datePublished": "2026-11-03",
+      "dateModified": "2026-11-03",
+      "wordCount": 2070,
+      "articleSection": "Books",
+      "keywords": "reading list, software engineering, books, developer growth, non-technical books"
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://lakshaygoyal.in/#website",
+      "url": "https://lakshaygoyal.in/",
+      "name": "Lakshay Goyal",
+      "publisher": {
+        "@id": "https://lakshaygoyal.in/#person"
+      },
+      "inLanguage": "en"
+    },
+    {
+      "@type": "Person",
+      "@id": "https://lakshaygoyal.in/#person",
+      "name": "Lakshay Goyal",
+      "url": "https://lakshaygoyal.in/"
+    },
+    {
+      "@type": "ImageObject",
+      "@id": "https://lakshaygoyal.in/blog/software-engineer-reading-list#image-1",
+      "url": "https://m.media-amazon.com/images/I/71ZMsYuwELL._SY466_.jpg",
+      "contentUrl": "https://m.media-amazon.com/images/I/71ZMsYuwELL._SY466_.jpg",
+      "caption": "Stack of books showing a suggested reading order for software engineers"
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://lakshaygoyal.in/blog/software-engineer-reading-list#faq",
+      "url": "https://lakshaygoyal.in/blog/software-engineer-reading-list",
+      "isPartOf": {
+        "@id": "https://lakshaygoyal.in/#website"
+      },
+      "inLanguage": "en",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Are non-technical books worth reading for engineers?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Lakshay Goyal's shelf is mostly non-technical, and the ideas on focus, planning and questioning assumptions apply to daily engineering work. Pair them with a technical classic for balance."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Which book is best for planning work?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The 12 Week Year. Lakshay says its idea of treating every 12 weeks like a full year stops procrastination. It is simple, and it works."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Which book helps most with questioning assumptions?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Freedom from the Known by J Krishnamurti. It argues that your thoughts are second-hand and asks you to look at life fresh, which helps when you review inherited code or habits."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "HowTo",
+      "@id": "https://lakshaygoyal.in/blog/software-engineer-reading-list#howto",
+      "name": "How do these compare with the usual technical lists?",
+      "url": "https://lakshaygoyal.in/blog/software-engineer-reading-list",
+      "inLanguage": "en",
+      "image": {
+        "@id": "https://lakshaygoyal.in/blog/software-engineer-reading-list#image-1"
+      },
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "text": "Start with a practical technical book such as The Pragmatic Programmer"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "text": "Add The 12 Week Year to plan your reading and your work"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "text": "Read Freedom from the Known to question your habits"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 4,
+          "text": "Move on to a deeper technical book like Designing Data-Intensive Applications"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 5,
+          "text": "Finish with a reflective title such as Why I Am an Atheist and Other Works"
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://lakshaygoyal.in/blog/software-engineer-reading-list#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://lakshaygoyal.in/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Blog",
+          "item": "https://lakshaygoyal.in/blog"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Books for Software Engineers: The Ideas I Took From My Reading",
+          "item": "https://lakshaygoyal.in/blog/software-engineer-reading-list"
+        }
+      ]
+    }
+  ]
+}

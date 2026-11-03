@@ -1,0 +1,306 @@
+{
+  "schema": "seo-site-model/1.0",
+  "framework": {
+    "schema": "framework-fingerprint/1.0",
+    "primary": "react-spa",
+    "family": "react",
+    "version": "18.3.1",
+    "router": "declared",
+    "renderer": "csr",
+    "needs_runtime": null,
+    "package_manager": "bun",
+    "package_json": "package.json",
+    "build": {
+      "command": [
+        "bun",
+        "run",
+        "build"
+      ],
+      "output_dirs": [
+        "dist",
+        "build"
+      ],
+      "scripts": [
+        "build",
+        "dev",
+        "lint",
+        "preview"
+      ],
+      "preview_script": "preview"
+    },
+    "candidates": [
+      {
+        "name": "react-spa",
+        "score": 2,
+        "family": "react",
+        "evidence": [
+          {
+            "kind": "dependency",
+            "name": "react-dom",
+            "file": "package.json"
+          }
+        ]
+      },
+      {
+        "name": "static-html",
+        "score": 1,
+        "family": "html",
+        "evidence": [
+          {
+            "kind": "file",
+            "file": "index.html",
+            "pattern": "(?:^|/)index\\.html?$"
+          }
+        ]
+      }
+    ],
+    "source_extensions": [
+      ".css",
+      ".html",
+      ".js",
+      ".json",
+      ".jsx",
+      ".md"
+    ],
+    "method": "dependency manifests + configuration files + directory layout; no code executed"
+  },
+  "snapshot_sha256": "5d82b35bedbea83e57943210982f580479e7dd8aa8fb602835fa1824a4a4a583",
+  "generated_at": "2026-11-02T07:37:07.490540+00:00",
+  "duration_seconds": 21.7,
+  "serve": {
+    "mode": "site_url",
+    "base_url": "https://lakshaygoyal.in",
+    "output_dir": null,
+    "log": [
+      "measuring user-supplied site_url"
+    ],
+    "limitations": []
+  },
+  "url_manifest": {
+    "adapter": "spa_routes",
+    "fallback_routes_skill": false,
+    "excluded": [],
+    "unmatched_urls": []
+  },
+  "i18n": {
+    "catalog_keys": 0,
+    "default_locale": null
+  },
+  "served": {
+    "home_headers": null,
+    "robots_txt": {
+      "status": 307,
+      "body": null
+    },
+    "soft_404": {
+      "status": 307,
+      "soft_404": false
+    },
+    "trailing_slash": {
+      "with_slash": 307,
+      "without_slash": 307,
+      "redirects": [
+        "https://www.lakshaygoyal.in/about/",
+        "https://www.lakshaygoyal.in/about"
+      ]
+    },
+    "http_to_https": {
+      "status": "redirect-out-of-scope",
+      "redirect_chain": [
+        {
+          "url": "http://lakshaygoyal.in/",
+          "http_status": 308,
+          "location": "https://lakshaygoyal.in/",
+          "target": "https://lakshaygoyal.in/"
+        }
+      ]
+    },
+    "security_headers": {
+      "strict-transport-security": null,
+      "content-security-policy": null,
+      "x-frame-options": null,
+      "x-content-type-options": null,
+      "referrer-policy": null,
+      "permissions-policy": null
+    }
+  },
+  "deterministic_signals": {
+    "sitemap_robots": {
+      "found_signals": [],
+      "gaps": [
+        "no-sitemap",
+        "no-robots"
+      ],
+      "robots_files": [],
+      "sitemap_files": []
+    },
+    "canonicals_redirects": {
+      "found_signals": [
+        "redirect-config",
+        "redirect-file"
+      ],
+      "gaps": [
+        "no-canonical",
+        "no-404"
+      ]
+    },
+    "https_security_headers": {
+      "found_signals": [],
+      "gaps": [
+        "no-hsts",
+        "no-csp",
+        "no-headers-config"
+      ]
+    },
+    "structured_data": {
+      "found_signals": [],
+      "gaps": [
+        "no-structured-data"
+      ]
+    },
+    "hreflang_i18n": {
+      "found_signals": [
+        "html-lang"
+      ],
+      "gaps": []
+    },
+    "performance_web_vitals": {
+      "found_signals": [
+        "code-splitting",
+        "font-display",
+        "font-loader",
+        "preconnect"
+      ],
+      "gaps": [
+        "no-vitals-measurement"
+      ]
+    },
+    "brand_entity_signals": {
+      "found_signals": [
+        "logo",
+        "social-profile"
+      ],
+      "gaps": [
+        "no-entity-schema",
+        "no-same-as"
+      ]
+    },
+    "local_business_presence": {
+      "found_signals": [
+        "contact-or-location-page"
+      ],
+      "gaps": []
+    },
+    "ai_search_readiness": {
+      "found_signals": [
+        "dates",
+        "list-table",
+        "semantic-landmark"
+      ],
+      "gaps": [
+        "no-llms-txt",
+        "no-ai-crawler-policy"
+      ]
+    },
+    "mobile_parity": {
+      "found_signals": [
+        "viewport"
+      ],
+      "gaps": []
+    }
+  },
+  "hreflang": {
+    "pages_with_hreflang": 0,
+    "issues": []
+  },
+  "duplicates": [],
+  "link_health": {
+    "internal_total": 0,
+    "internal_checked": 0,
+    "external_total": 15,
+    "external_checked": 15,
+    "method": "HEAD then GET; manual redirect chain; no cookies"
+  },
+  "broken_links": [
+    "https://www.linkedin.com/in/lakshay-goyal-9778a6246/"
+  ],
+  "blocked_links": [
+    "https://www.linkedin.com/in/lakshay-goyal-9778a6246/"
+  ],
+  "redirected_links": [
+    "https://www.linkedin.com/in/lakshay-goyal-9778a6246/"
+  ],
+  "click_depth": {
+    "max": 0,
+    "pages_deeper_than_3": 0
+  },
+  "orphan_candidates": [],
+  "gap_workers": {
+    "total": 0,
+    "attribution_gaps": 2,
+    "resolved": 0,
+    "applied": 0,
+    "by_outcome": {},
+    "escalated_to_mid": 0,
+    "status": "not-run",
+    "unresolved": []
+  },
+  "validation": {
+    "issue_count": 0,
+    "issues": [],
+    "checks": [
+      "schema (field shapes, enums)",
+      "grounding (literal near cited line)",
+      "lens agreement (attribution.py)",
+      "coverage ledger (url x category state)"
+    ]
+  },
+  "coverage": {
+    "urls_total": 1,
+    "templates_only": 0,
+    "measured": 1,
+    "source_only": 0,
+    "ledger": {
+      "p_42099b4af0": {
+        "head": "measured",
+        "headings": "measured",
+        "links": "measured",
+        "images": "measured",
+        "performance": "measured",
+        "rendering": "gap",
+        "attribution": "complete"
+      }
+    },
+    "element_index": {
+      "elements": 225,
+      "data_strings": 111,
+      "files": {
+        "indexed": 17,
+        "skipped": 3
+      }
+    }
+  },
+  "model_usage": {
+    "calls": 0,
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "cached_input_tokens": 0,
+    "cost_usd": 0.0,
+    "by_model": {},
+    "cache_hit_rate": null
+  },
+  "limitations": [
+    "Template directives are masked, not evaluated: loops, conditionals and filters keep their source text as expr parts.",
+    "Expressions inside Svelte/Astro braces are opaque; elements created inside them are not indexed.",
+    "YAML support covers scalar maps/lists/block scalars only (no anchors or flow collections).",
+    "Composition edges are literal references; runtime-selected templates/components remain unresolved."
+  ],
+  "crawl_errors": [
+    {
+      "url": "/",
+      "status": "redirect-out-of-scope",
+      "http_status": 307,
+      "linked_from": []
+    }
+  ]
+}

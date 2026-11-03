@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { createPortal, flushSync } from "react-dom";
 import experiences from "./store/data/experiences.json";
 import majorProjects from "./store/data/majorProjects.json";
@@ -7,6 +7,7 @@ import books from "./store/data/books.json";
 import PageRail from "./components/PageRail.jsx";
 import ContactRail from "./components/ContactRail.jsx";
 import ScrollReveal from "./components/ScrollReveal.jsx";
+import MarkdownArticle, { parseFrontmatter, tagSlug, useArticleHead } from "./components/MarkdownArticle.jsx";
 
 function ArrowIcon() {
   return (
@@ -288,6 +289,7 @@ function HomePage() {
 
       <ScrollReveal><Experience /></ScrollReveal>
       <ScrollReveal><FeaturedWork /></ScrollReveal>
+      <RelatedArticles path="/" />
       <ScrollReveal><MoreAbout /></ScrollReveal>
     </div>
   );
@@ -321,6 +323,7 @@ function AboutPage() {
           </p>
         </div>
       </Section>
+      <RelatedArticles path="/about" />
       <Section id="story" title="How I got here">
         {story.map(([period, title, copy]) => (
           <ScrollReveal key={period}>
@@ -358,46 +361,108 @@ function BookshelfPage() {
           </ScrollReveal>
         ))}
       </Section>
+      <RelatedArticles path="/bookshelf" />
     </div>
   );
 }
 
-function BlogsPage() {
+// blog.json: { "<category>": [{ title, link, date, description?, tags?, linkFrom?: [{ url, anchor }] }] }
+function usePosts() {
   const [posts, setPosts] = useState(null);
   const [error, setError] = useState(false);
-
   useEffect(() => {
     fetch("/blog/blog.json")
       .then((response) => { if (!response.ok) throw new Error("Could not load posts"); return response.json(); })
       .then((data) => setPosts(Object.entries(data).flatMap(([category, items]) => items.map((item) => ({ ...item, category })))))
       .catch(() => setError(true));
   }, []);
+  return [posts, error];
+}
 
+function TagLinks({ tags }) {
+  if (!tags?.length) return null;
+  return (
+    <p className={`mt-2 ${styles.meta}`}>
+      {tags.map((tag, index) => (
+        <span key={tag}>{index > 0 && " · "}<a className="text-zinc-400 no-underline hover:text-zinc-900" href={`/blog/tags/${tagSlug(tag)}`}>#{tag}</a></span>
+      ))}
+    </p>
+  );
+}
+
+function PostList({ posts, error }) {
+  return (
+    <>
+      {error && <p className={styles.body}>Could not load the posts right now.</p>}
+      {!error && !posts && <p className={styles.body}>Loading posts…</p>}
+      {posts?.length === 0 && <p className={styles.body}>No posts yet.</p>}
+      {posts?.map((post) => (
+        <ScrollReveal key={post.link}>
+          <article className={styles.row}>
+            <p className={styles.meta}>{post.date}</p>
+            <div>
+              <h3 className={styles.title}><TextLink href={post.link}>{post.title}</TextLink></h3>
+              {post.description && <p className={`mt-1 ${styles.body}`}>{post.description}</p>}
+              <p className={`mt-1 ${styles.meta}`}>{post.category}</p>
+              <TagLinks tags={post.tags} />
+            </div>
+          </article>
+        </ScrollReveal>
+      ))}
+    </>
+  );
+}
+
+function BlogsPage() {
+  const [posts, error] = usePosts();
   return (
     <div className={styles.page}>
       <PageHeading title="Blogs" description="Notes from building, deploying, and learning software." />
-      <Section id="posts" title="Posts">
-        {error && <p className={styles.body}>Could not load the posts right now.</p>}
-        {!error && !posts && <p className={styles.body}>Loading posts…</p>}
-        {posts?.length === 0 && <p className={styles.body}>No posts yet.</p>}
-        {posts?.map((post) => (
-          <ScrollReveal key={post.link}>
-            <article className={styles.row}>
-              <p className={styles.meta}>{post.date}</p>
-              <div>
-                <h3 className={styles.title}><TextLink href={post.link}>{post.title}</TextLink></h3>
-                <p className={`mt-1 ${styles.meta}`}>{post.category}</p>
-              </div>
-            </article>
-          </ScrollReveal>
-        ))}
-      </Section>
+      <Section id="posts" title="Posts"><PostList posts={posts} error={error} /></Section>
     </div>
+  );
+}
+
+function TagPage({ tag }) {
+  const [posts, error] = usePosts();
+  const tagged = posts?.filter((post) => (post.tags || []).some((t) => tagSlug(t) === tag));
+  const name = tagged?.[0]?.tags.find((t) => tagSlug(t) === tag) || tag.replace(/-/g, " ");
+  useArticleHead(useMemo(() => ({ title: `${name} articles — Lakshay Goyal`, description: `Articles about ${name} by Lakshay Goyal.`,
+    url: `/blog/tags/${tag}` }), [name, tag]));
+  return (
+    <div className={styles.page}>
+      <BackLink href="/blog">All blogs</BackLink>
+      <PageHeading title={`#${name}`} description={`Every article tagged ${name}.`} />
+      <Section id="tagged" title="Articles"><PostList posts={tagged} error={error} /></Section>
+    </div>
+  );
+}
+
+// Internal links from existing pages to the articles that list them in `linkFrom`.
+function RelatedArticles({ path }) {
+  const [posts] = usePosts();
+  const related = (posts || []).flatMap((post) => (post.linkFrom || []).filter((ref) => ref.url === path).map((ref) => ({ ...ref, post })));
+  if (!related.length) return null;
+  return (
+    <Section id="related" title="Related articles">
+      {related.map(({ anchor, post }) => (
+        <ScrollReveal key={post.link}>
+          <article className={styles.row}>
+            <p className={styles.meta}>{post.date}</p>
+            <div>
+              <h3 className={styles.title}><TextLink href={post.link}>{anchor.charAt(0).toUpperCase() + anchor.slice(1)}</TextLink></h3>
+              {post.description && <p className={`mt-1 ${styles.body}`}>{post.description}</p>}
+            </div>
+          </article>
+        </ScrollReveal>
+      ))}
+    </Section>
   );
 }
 
 function BlogPostPage({ slug }) {
   const [content, setContent] = useState(null);
+  const [jsonLd, setJsonLd] = useState(null);
   const [error, setError] = useState(false);
 
   useEffect(() => {
@@ -405,10 +470,14 @@ function BlogPostPage({ slug }) {
       .then((response) => { if (!response.ok) throw new Error("Post not found"); return response.text(); })
       .then(setContent)
       .catch(() => setError(true));
+    fetch(`/blog/${encodeURIComponent(slug)}.ld.json`)
+      .then((response) => (response.ok ? response.json() : null))
+      .then(setJsonLd)
+      .catch(() => setJsonLd(null));
   }, [slug]);
 
-  const body = content?.replace(/^---\s*\n[\s\S]*?\n---\s*\n/, "").trim();
-  const blocks = body?.split(/\n\s*\n/);
+  const { meta, body } = useMemo(() => parseFrontmatter(content || ""), [content]);
+  useArticleHead(content ? meta : null, jsonLd);
 
   return (
     <div className={styles.page}>
@@ -416,12 +485,7 @@ function BlogPostPage({ slug }) {
       <article>
         {error && <p className={styles.body}>This post could not be found.</p>}
         {!error && !content && <p className={styles.body}>Loading post…</p>}
-        {blocks?.map((block, index) => {
-          if (block.startsWith("# ")) return <h2 className="mb-6 text-2xl font-medium leading-9 tracking-[-.02em] text-zinc-900" key={index}>{block.slice(2)}</h2>;
-          if (block.startsWith("## ")) return <h3 className={`mt-10 mb-3 ${styles.title}`} key={index}>{block.slice(3)}</h3>;
-          if (/^\d+\. /m.test(block)) return <ol className={`mb-5 list-decimal pl-5 ${styles.body}`} key={index}>{block.split("\n").map((line) => <li key={line}>{line.replace(/^\d+\. /, "")}</li>)}</ol>;
-          return <p className={`mb-5 ${styles.body}`} key={index}>{block}</p>;
-        })}
+        {content && <MarkdownArticle body={body} />}
       </article>
     </div>
   );
@@ -433,6 +497,7 @@ function App() {
     : path === "/about" ? <AboutPage />
     : path === "/bookshelf" ? <BookshelfPage />
     : path === "/blog" ? <BlogsPage />
+    : path.startsWith("/blog/tags/") ? <TagPage tag={path.slice(11)} />
     : path.startsWith("/blog/") ? <BlogPostPage slug={path.slice(6)} />
     : <div className={styles.page}><BackLink href="/">Back home</BackLink><PageHeading title="Page not found" description="There’s nothing at this address." /></div>;
 
