@@ -10,7 +10,7 @@ primary_keyword: "books for software engineers"
 author: "Lakshay Goyal"
 date_published: "2026-11-03"
 date_modified: "2026-11-03"
-images: [{"src": "/images/software-engineer-reading-order-stack.svg", "alt": "Stack of books showing a suggested reading order for software engineers"}]
+images: [{"src": "https://m.media-amazon.com/images/I/71ZMsYuwELL._SY466_.jpg", "alt": "Book cover of The 12 Week Year by Brian P. Moran, Michael Lennington"}, {"src": "https://m.media-amazon.com/images/I/71tAHjMNWUL._SL1169_.jpg", "alt": "Book cover of Freedom from the Known by J Krishnamurti"}]
 ---
 
 # Books for Software Engineers: The Ideas I Took From My Reading
@@ -68,8 +68,11 @@ Each book left one clear idea. Krishnamurti says your thoughts are second-hand, 
 
 The right-hand column is my reading of how each idea carries into software work. The middle column is what Lakshay took from the book. The next sections go through them one at a time, and each gives a small, practical way to use the idea.
 
-![Stack of books showing a suggested reading order for software engineers](/images/software-engineer-reading-order-stack.svg "A suggested reading order: start with the practical book, then move to the reflective ones.")
-*A suggested reading order: start with the practical book, then move to the reflective ones.*
+![Book cover of The 12 Week Year by Brian P. Moran, Michael Lennington](https://m.media-amazon.com/images/I/71ZMsYuwELL._SY466_.jpg "Start here: The 12 Week Year, for planning in short cycles.")
+*Start here: The 12 Week Year, for planning in short cycles.*
+
+![Book cover of Freedom from the Known by J Krishnamurti](https://m.media-amazon.com/images/I/71tAHjMNWUL._SL1169_.jpg "Then: Freedom from the Known, for questioning inherited habits.")
+*Then: Freedom from the Known, for questioning inherited habits.*
 
 If you only have time for two, start with The 12 Week Year for planning and Freedom from the Known for thinking. Together they cover how you decide what to build and how you decide how to build it.
 

@@ -478,9 +478,15 @@
     "claims": [],
     "images": [
       {
-        "src": "/images/software-engineer-reading-order-stack.svg",
-        "alt": "Stack of books showing a suggested reading order for software engineers",
-        "caption": "A suggested reading order: start with the practical book, then move to the reflective ones.",
+        "src": "https://m.media-amazon.com/images/I/71ZMsYuwELL._SY466_.jpg",
+        "alt": "Book cover of The 12 Week Year by Brian P. Moran, Michael Lennington",
+        "caption": "Start here: The 12 Week Year, for planning in short cycles.",
+        "new": false
+      },
+      {
+        "src": "https://m.media-amazon.com/images/I/71tAHjMNWUL._SL1169_.jpg",
+        "alt": "Book cover of Freedom from the Known by J Krishnamurti",
+        "caption": "Then: Freedom from the Known, for questioning inherited habits.",
         "new": false
       }
     ],
@@ -762,8 +768,8 @@
       {
         "@type": "ImageObject",
         "@id": "https://lakshaygoyal.in/blog/software-engineer-reading-list#image-1",
-        "url": "https://lakshaygoyal.in/images/software-engineer-reading-order-stack.svg",
-        "contentUrl": "https://lakshaygoyal.in/images/software-engineer-reading-order-stack.svg",
+        "url": "https://m.media-amazon.com/images/I/71ZMsYuwELL._SY466_.jpg",
+        "contentUrl": "https://m.media-amazon.com/images/I/71ZMsYuwELL._SY466_.jpg",
         "caption": "Stack of books showing a suggested reading order for software engineers"
       },
       {

@@ -136,8 +136,8 @@ export default function MarkdownArticle({ body }) {
       case "quote": return <blockquote key={index} className={`border-l-2 border-zinc-200 pl-4 ${text.body}`}><Inline>{block.text}</Inline></blockquote>;
       case "image": return (
         <figure key={index} className="mb-6">
-          <img className="w-full rounded border border-zinc-200" src={block.src} alt={block.alt} loading="lazy" decoding="async" />
-          {block.caption && <figcaption className="mt-2 text-sm text-zinc-400"><Inline>{block.caption}</Inline></figcaption>}
+          <img className="mx-auto block h-auto max-h-[420px] w-auto max-w-full rounded border border-zinc-200" src={block.src} alt={block.alt} loading="lazy" decoding="async" />
+          {block.caption && <figcaption className="mt-2 text-center text-sm text-zinc-400"><Inline>{block.caption}</Inline></figcaption>}
         </figure>
       );
       case "mermaid": return (
