@@ -289,6 +289,7 @@ function HomePage() {
 
       <ScrollReveal><Experience /></ScrollReveal>
       <ScrollReveal><FeaturedWork /></ScrollReveal>
+      <RelatedArticles path="/" />
       <ScrollReveal><MoreAbout /></ScrollReveal>
     </div>
   );

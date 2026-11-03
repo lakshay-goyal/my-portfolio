@@ -1,0 +1,1357 @@
+{
+  "schema": "seo-onpage/2.0",
+  "status": "done",
+  "brief": {
+    "primary_keyword": "selected software projects",
+    "secondary_keywords": [
+      "software engineer project examples",
+      "mobile app projects",
+      "web app portfolio projects"
+    ],
+    "questions": [],
+    "topics": [
+      {
+        "id": "t8",
+        "text": "selected software projects",
+        "kind": "seed",
+        "page": null
+      }
+    ],
+    "search_intent": "informational",
+    "format": "listicle",
+    "angle": "Each project is shown with the problem, the stack choices, the trade-offs made and the result, so readers see how decisions were made.",
+    "audience": "Recruiters and peers evaluating a software engineer's work",
+    "working_title": "Selected Software Projects: What I Built and Why",
+    "slug": "selected-software-projects",
+    "url": "/blog/selected-software-projects",
+    "pillar_url": "/"
+  },
+  "article": {
+    "title": "Selected Software Projects: Problem, Stack, Result",
+    "h1": "Selected Software Projects: What I Built, Why and What Happened",
+    "meta_description": "Selected software projects by Lakshay Goyal, each with the problem, stack choices, trade-offs and result, so you can see how decisions were made.",
+    "intro": "Selected software projects are the best proof of how an engineer thinks, because each one shows a problem, a set of choices and an outcome. Lakshay Goyal, a Software Engineer, frames his mobile and web work around those four parts, so recruiters and peers can judge decisions, not just screenshots.",
+    "key_takeaways": [
+      "Each project is read through four parts: problem, stack, trade-offs and result.",
+      "Trade-offs matter more than tool names, because they show judgment.",
+      "Mobile and web versions of the same product show range.",
+      "Results are described honestly, with no invented metrics.",
+      "Open items are marked [VERIFY] until the exact details are confirmed."
+    ],
+    "sections": [
+      {
+        "heading": "What counts as a selected software project?",
+        "blocks": [
+          {
+            "tag": "p",
+            "text": "A selected software project is a piece of work chosen to represent an engineer's skill, not a full list of everything built. It is picked because it shows a clear problem, a reasoned technical path and a visible result. Quality of reasoning beats quantity of repositories."
+          },
+          {
+            "tag": "p",
+            "text": "Lakshay Goyal is a Software Engineer building thoughtful mobile and web products. The selected work on this site follows that idea. Each entry should answer a reader's quiet questions: what was broken, why this approach, what did it cost, and did it work?"
+          },
+          {
+            "tag": "p",
+            "text": "Project lists online often work as practice exercises, school assignments or portfolio pieces [S14]. That is a useful starting point. Real work adds a layer those lists skip: constraints, deadlines and teammates. The entries here keep that layer in view."
+          },
+          {
+            "tag": "ul",
+            "items": [
+              "Problem: who was hurt and what was slow, costly or confusing",
+              "Stack: the tools chosen and the ones rejected",
+              "Trade-offs: what was given up to ship",
+              "Result: what changed once it was live"
+            ]
+          },
+          {
+            "tag": "p",
+            "text": "If you want the person behind the work first, read the <a href=\"/about\">about page</a>. If you want the full picture, start from the <a href=\"/\">portfolio home</a>."
+          }
+        ]
+      },
+      {
+        "heading": "How each project is presented",
+        "blocks": [
+          {
+            "tag": "p",
+            "text": "Every project follows one repeatable template, so you can compare entries quickly. The template keeps the story short and puts decisions in the open. It also makes gaps obvious, which is why unconfirmed details are flagged instead of guessed."
+          },
+          {
+            "tag": "diagram",
+            "code": "flowchart LR\n  A[Problem] --> B[Stack choices]\n  B --> C[Trade-offs]\n  C --> D[Result]\n  D --> E[What I would change]",
+            "alt": "Flowchart of the project template from problem to stack choices, trade-offs, result and lessons",
+            "caption": "The five steps used to describe every selected project."
+          },
+          {
+            "tag": "p",
+            "text": "The last step, what Lakshay would change, is the one most portfolios leave out. It shows that the result was reviewed honestly. It also tells a hiring manager how he handles feedback and hindsight."
+          },
+          {
+            "tag": "h3",
+            "text": "Why show the stack as a choice"
+          },
+          {
+            "tag": "p",
+            "text": "Listing tools says little. Explaining why one tool beat another says a lot. A stack entry should name the need, the options considered and the reason one won. Typical areas include frontend, backend, databases, APIs and real-time communication [S11]."
+          },
+          {
+            "tag": "h3",
+            "text": "Why the problem comes first"
+          },
+          {
+            "tag": "p",
+            "text": "A project without a stated problem is just a demo. When the problem leads, the reader can judge every later choice against it. A heavy tool for a light problem looks wasteful. A light tool for a heavy problem looks risky. The problem is the ruler for everything else."
+          }
+        ]
+      },
+      {
+        "heading": "Project template at a glance",
+        "blocks": [
+          {
+            "tag": "p",
+            "text": "The table below shows what each project entry contains and the question it answers. It works as a quick reference for recruiters scanning several projects. Fields that depend on private project details are marked for confirmation."
+          },
+          {
+            "tag": "table",
+            "caption": "Fields used to describe each selected project",
+            "header": [
+              "Field",
+              "Question it answers",
+              "Status"
+            ],
+            "rows": [
+              [
+                "Problem",
+                "What needed solving, and for whom?",
+                "[VERIFY: problem statement per project]"
+              ],
+              [
+                "Stack",
+                "Which tools were used and why?",
+                "[VERIFY: stack per project]"
+              ],
+              [
+                "Trade-offs",
+                "What was given up to ship?",
+                "[VERIFY: trade-offs per project]"
+              ],
+              [
+                "Result",
+                "What changed after launch?",
+                "[VERIFY: outcomes and metrics]"
+              ],
+              [
+                "Platform",
+                "Was it web, mobile or both?",
+                "Web and mobile versions appear in the selected work"
+              ]
+            ]
+          },
+          {
+            "tag": "p",
+            "text": "Metrics are left out on purpose until they can be confirmed. A made-up number does more harm than a blank. Real figures will replace the placeholders as they are verified."
+          }
+        ]
+      },
+      {
+        "heading": "Web app portfolio projects and mobile app projects",
+        "blocks": [
+          {
+            "tag": "p",
+            "text": "Web app portfolio projects show how an engineer handles browsers, state and deployment, while mobile app projects show how the same thinking fits small screens and device limits. Showing both for one product proves range, not just a single platform habit."
+          },
+          {
+            "tag": "p",
+            "text": "The selected work includes web and mobile views for projects named Unlovable and Exness. [VERIFY: what each product does, Lakshay's role and the stack used]. Until then, the screenshots below show how each product looks across platforms."
+          },
+          {
+            "tag": "figure",
+            "src": "/Image/UnlovableWeb.png",
+            "alt": "Unlovable product interface laid out for a wide desktop browser window",
+            "caption": "Unlovable on the web. [VERIFY: feature shown]"
+          },
+          {
+            "tag": "figure",
+            "src": "/Image/UnlovableMobile.png",
+            "alt": "Unlovable product interface rearranged for a narrow phone screen",
+            "caption": "Unlovable on mobile. [VERIFY: feature shown]"
+          },
+          {
+            "tag": "h3",
+            "text": "What to look for across platforms"
+          },
+          {
+            "tag": "ul",
+            "items": [
+              "Does the mobile layout drop features or reorganise them",
+              "Is navigation rethought for touch, not just shrunk",
+              "Do both versions share the same visual language",
+              "Is there a clear reason for any difference"
+            ]
+          },
+          {
+            "tag": "p",
+            "text": "These questions matter because the two platforms pull in different directions. The web rewards flexible layouts and fast iteration. Mobile rewards tight, predictable flows and care with small screens. A strong engineer can explain where each platform forced a compromise."
+          }
+        ]
+      },
+      {
+        "heading": "Software engineer project examples: the Exness work",
+        "blocks": [
+          {
+            "tag": "p",
+            "text": "Software engineer project examples are most useful when the reader can see the same decision framework applied to a real product. The Exness entry in the selected work is shown in web and mobile form, so the template above can be applied to it directly."
+          },
+          {
+            "tag": "figure",
+            "src": "/Image/ExnessWeb.png",
+            "alt": "Exness product interface laid out for a wide desktop browser window",
+            "caption": "Exness on the web. [VERIFY: scope of Lakshay's contribution]"
+          },
+          {
+            "tag": "figure",
+            "src": "/Image/ExnessMobile.png",
+            "alt": "Exness product interface rearranged for a narrow phone screen",
+            "caption": "Exness on mobile. [VERIFY: scope of Lakshay's contribution]"
+          },
+          {
+            "tag": "p",
+            "text": "For this project the open questions are the problem it solved, the stack, the main trade-off and the result. [VERIFY: problem, stack, trade-off and result for the Exness project]. Once confirmed, each will be added under the matching template field."
+          },
+          {
+            "tag": "p",
+            "text": "Even before those details land, the pair of screens shows a useful habit: designing one product for two contexts. A reader can compare the two layouts and ask what was kept, what moved and what was removed. Those answers are the start of a trade-off story."
+          }
+        ]
+      },
+      {
+        "heading": "Common trade-offs behind a stack choice",
+        "blocks": [
+          {
+            "tag": "p",
+            "text": "Most stack decisions come down to a handful of recurring trade-offs, and naming them is how an engineer shows judgment. The table below lists the ones that appear again and again in web and mobile work, with the question a reader should ask of each."
+          },
+          {
+            "tag": "table",
+            "caption": "Recurring trade-offs in web and mobile projects",
+            "header": [
+              "Trade-off",
+              "What is gained",
+              "What is given up"
+            ],
+            "rows": [
+              [
+                "Speed to ship vs polish",
+                "A working product reaches users sooner",
+                "Edge cases and visual detail wait"
+              ],
+              [
+                "Familiar tool vs new tool",
+                "Fewer surprises and faster progress",
+                "Possible fit gap for the problem"
+              ],
+              [
+                "One codebase vs separate apps",
+                "Less duplicate work",
+                "Less native feel on each platform"
+              ],
+              [
+                "Simple backend vs flexible backend",
+                "Easier to run and debug",
+                "Harder to extend later"
+              ],
+              [
+                "Build it vs use a service",
+                "Time saved on solved problems",
+                "Less control and a new dependency"
+              ]
+            ]
+          },
+          {
+            "tag": "p",
+            "text": "None of these has a right answer in general. The right answer depends on the problem, the team and the deadline. That is why each project entry states its constraints first. A choice only looks good or bad once the constraint is known."
+          },
+          {
+            "tag": "h3",
+            "text": "How to read a trade-off honestly"
+          },
+          {
+            "tag": "p",
+            "text": "An honest trade-off names the cost. Phrases like best tool or perfect fit hide the cost and teach the reader nothing. A better sentence says what was chosen, what was lost and why the loss was acceptable. Recruiters trust that tone because it matches how real teams talk."
+          }
+        ]
+      },
+      {
+        "heading": "Current work and how it shapes project choices",
+        "blocks": [
+          {
+            "tag": "p",
+            "text": "Lakshay is currently a Software Engineer in Bangalore, India, from July 2026, after serving as a Founding Engineer from December 2025 to June 2026. His work focuses on making test automation a little less painful, moving between backend, frontend and infra."
+          },
+          {
+            "tag": "p",
+            "text": "That mix explains his project taste. He tends to favour work that crosses layers, because problems rarely stay inside one. A founding role also means owning decisions end to end, which is exactly what the trade-offs field is meant to show."
+          },
+          {
+            "tag": "p",
+            "text": "Test automation is a good lens for trade-offs. A tool that saves time but is painful to run gets abandoned. A tool that is easy to run but shallow gets ignored. Balancing those two pulls is the daily work of anyone building in that space."
+          },
+          {
+            "tag": "p",
+            "text": "For the career timeline in full, see the <a href=\"/about\">about page</a>. For notes from building and deploying, browse the <a href=\"/blog\">blog</a>."
+          },
+          {
+            "tag": "blockquote",
+            "text": "A project is only half the story. The reasoning behind its choices is the part worth reading."
+          }
+        ]
+      },
+      {
+        "heading": "How to describe a result without inflating it",
+        "blocks": [
+          {
+            "tag": "p",
+            "text": "A result is the observable change after a project ships, and it can be described honestly even without a metric. State what users can now do, what got faster or simpler, and what is still unsolved. Precision about limits builds more trust than a large, unproven number."
+          },
+          {
+            "tag": "ul",
+            "items": [
+              "Say what users can do now that they could not before",
+              "Say what got simpler for the team that maintains it",
+              "Say what is still rough or missing",
+              "Add a number only when it can be traced to a real source",
+              "Link a demo or screenshots as proof"
+            ]
+          },
+          {
+            "tag": "p",
+            "text": "This is the standard used across the selected work. Where a figure is not confirmed, a [VERIFY] marker stands in its place. A blank that is flagged is better than a figure that cannot be defended in an interview."
+          }
+        ]
+      },
+      {
+        "heading": "How to evaluate a software engineer's projects",
+        "blocks": [
+          {
+            "tag": "p",
+            "text": "To evaluate a software engineer's projects, check whether each one names a real problem, explains its choices and reports an honest result. These signals separate work that was thought through from work that was only assembled from tutorials."
+          },
+          {
+            "tag": "ol",
+            "items": [
+              "Read the problem first and confirm it is specific.",
+              "Check that stack choices have reasons, not just names.",
+              "Look for at least one admitted trade-off.",
+              "Ask whether the result is measurable or at least observable.",
+              "Look for a demo or screenshots that prove it ran."
+            ]
+          },
+          {
+            "tag": "p",
+            "text": "A short demo helps. One suggestion for portfolios is a one-to-two-minute video of the app working, embedded alongside the write-up [S10]. Projects also help connect theory with practice and show skills to others [S13]."
+          },
+          {
+            "tag": "h3",
+            "text": "Red flags worth noticing"
+          },
+          {
+            "tag": "ul",
+            "items": [
+              "A tool list with no reasons attached",
+              "Only success stories and no mention of cost",
+              "Screenshots with no explanation of the problem",
+              "Claims of impact with no way to check them"
+            ]
+          },
+          {
+            "tag": "p",
+            "text": "Reading habits shape engineers too. Lakshay shares ideas that stayed with him on the <a href=\"/bookshelf\">bookshelf</a>, which gives extra context on how he thinks about building."
+          }
+        ]
+      }
+    ],
+    "faq": [
+      {
+        "question": "What are selected software projects?",
+        "answer": "They are a curated set of software work chosen to show an engineer's skill. Each one is described by its problem, stack, trade-offs and result, so readers can judge the thinking behind the code, not just the finished screens."
+      },
+      {
+        "question": "Which platforms do these projects cover?",
+        "answer": "The selected work covers both web and mobile. The Unlovable and Exness projects each appear with web and mobile views, showing how one product adapts across platforms. Details of each build are marked [VERIFY] until confirmed."
+      }
+    ],
+    "tags": [
+      "software projects",
+      "portfolio",
+      "mobile apps",
+      "web apps",
+      "engineering"
+    ],
+    "category": "Portfolio",
+    "link_from": [
+      {
+        "url": "/",
+        "anchor": "selected software projects"
+      },
+      {
+        "url": "/blog",
+        "anchor": "selected software projects with problem, stack and result"
+      }
+    ],
+    "title_hooks": [
+      "colon"
+    ],
+    "questions_covered": {},
+    "slug": "selected-software-projects",
+    "url": "/blog/selected-software-projects",
+    "claims": [],
+    "images": [
+      {
+        "src": "/Image/UnlovableWeb.png",
+        "alt": "Unlovable product interface laid out for a wide desktop browser window",
+        "caption": "Unlovable on the web. [VERIFY: feature shown]",
+        "new": false
+      },
+      {
+        "src": "/Image/UnlovableMobile.png",
+        "alt": "Unlovable product interface rearranged for a narrow phone screen",
+        "caption": "Unlovable on mobile. [VERIFY: feature shown]",
+        "new": false
+      },
+      {
+        "src": "/Image/ExnessWeb.png",
+        "alt": "Exness product interface laid out for a wide desktop browser window",
+        "caption": "Exness on the web. [VERIFY: scope of Lakshay's contribution]",
+        "new": false
+      },
+      {
+        "src": "/Image/ExnessMobile.png",
+        "alt": "Exness product interface rearranged for a narrow phone screen",
+        "caption": "Exness on mobile. [VERIFY: scope of Lakshay's contribution]",
+        "new": false
+      }
+    ],
+    "word_count": 1739,
+    "internal_links": [
+      "/",
+      "/about",
+      "/blog",
+      "/bookshelf"
+    ],
+    "sources_cited": [
+      "S10",
+      "S11",
+      "S13",
+      "S14"
+    ],
+    "primary_keyword": "selected software projects",
+    "last_updated": "2026-11-03",
+    "tag_links": [
+      {
+        "tag": "software projects",
+        "url": "/blog/tags/software-projects"
+      },
+      {
+        "tag": "portfolio",
+        "url": "/blog/tags/portfolio"
+      },
+      {
+        "tag": "mobile apps",
+        "url": "/blog/tags/mobile-apps"
+      },
+      {
+        "tag": "web apps",
+        "url": "/blog/tags/web-apps"
+      },
+      {
+        "tag": "engineering",
+        "url": "/blog/tags/engineering"
+      }
+    ]
+  },
+  "fact_check": {
+    "verdict": "pass",
+    "numeric_claims": [],
+    "cited_sentences": [
+      {
+        "where": "sections[0].blocks[2]",
+        "sentence": "Project lists online often work as practice exercises, school assignments or portfolio pieces.",
+        "sources": [
+          "S14"
+        ],
+        "support": 0.64,
+        "numbers": []
+      },
+      {
+        "where": "sections[1].blocks[4]",
+        "sentence": "Typical areas include frontend, backend, databases, APIs and real-time communication.",
+        "sources": [
+          "S11"
+        ],
+        "support": 0.75,
+        "numbers": []
+      },
+      {
+        "where": "sections[8].blocks[2]",
+        "sentence": "One suggestion for portfolios is a one-to-two-minute video of the app working, embedded alongside the write-up.",
+        "sources": [
+          "S10"
+        ],
+        "support": 0.3,
+        "numbers": []
+      },
+      {
+        "where": "sections[8].blocks[2]",
+        "sentence": "Projects also help connect theory with practice and show skills to others.",
+        "sources": [
+          "S13"
+        ],
+        "support": 1.0,
+        "numbers": []
+      }
+    ],
+    "weak_support": [],
+    "sources": [
+      {
+        "id": "S10",
+        "url": "https://bestprojectideas.com/software-development-project-ideas/",
+        "title": "15 Software Development Project Ideas 2026-27 - Best Project Ideas",
+        "date": "2026-02-19",
+        "fresh": true
+      },
+      {
+        "id": "S11",
+        "url": "https://bestprojectideas.com/software-development-project-ideas/",
+        "title": "15 Software Development Project Ideas 2026-27 - Best Project Ideas",
+        "date": "2026-02-19",
+        "fresh": true
+      },
+      {
+        "id": "S13",
+        "url": "https://bestprojectideas.com/software-development-project-ideas/",
+        "title": "15 Software Development Project Ideas 2026-27 - Best Project Ideas",
+        "date": "2026-02-19",
+        "fresh": true
+      },
+      {
+        "id": "S14",
+        "url": "https://bestprojectideas.com/software-development-project-ideas/",
+        "title": "15 Software Development Project Ideas 2026-27 - Best Project Ideas",
+        "date": "2026-02-19",
+        "fresh": true
+      }
+    ],
+    "freshness": {
+      "run_date": "2026-11-03",
+      "last_updated": "2026-11-03",
+      "review_by": "2027-05-02",
+      "newest_source": "2026-02-19",
+      "oldest_source": "2026-02-19",
+      "undated_sources": [],
+      "stale_sources": []
+    },
+    "how_checked": "Every number must be the current year, a small count, in the client's own content, or cited [S#] to a source dated within 730 days whose passage contains it; cited sentences need >= 0.25 content-word support from the cited passage."
+  },
+  "json_ld": {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "@id": "https://lakshaygoyal.in/blog/selected-software-projects#webpage",
+        "url": "https://lakshaygoyal.in/blog/selected-software-projects",
+        "name": "Selected Software Projects: Problem, Stack, Result",
+        "description": "Selected software projects by Lakshay Goyal, each with the problem, stack choices, trade-offs and result, so you can see how decisions were made.",
+        "isPartOf": {
+          "@id": "https://lakshaygoyal.in/#website"
+        },
+        "inLanguage": "en",
+        "breadcrumb": {
+          "@id": "https://lakshaygoyal.in/blog/selected-software-projects#breadcrumb"
+        },
+        "primaryImageOfPage": {
+          "@id": "https://lakshaygoyal.in/blog/selected-software-projects#image-1"
+        },
+        "image": {
+          "@id": "https://lakshaygoyal.in/blog/selected-software-projects#image-1"
+        },
+        "datePublished": "2026-11-03",
+        "dateModified": "2026-11-03",
+        "mainEntity": {
+          "@id": "https://lakshaygoyal.in/blog/selected-software-projects#article"
+        }
+      },
+      {
+        "@type": "BlogPosting",
+        "@id": "https://lakshaygoyal.in/blog/selected-software-projects#article",
+        "headline": "Selected Software Projects: What I Built, Why and What Happened",
+        "description": "Selected software projects by Lakshay Goyal, each with the problem, stack choices, trade-offs and result, so you can see how decisions were made.",
+        "url": "https://lakshaygoyal.in/blog/selected-software-projects",
+        "mainEntityOfPage": {
+          "@id": "https://lakshaygoyal.in/blog/selected-software-projects#webpage"
+        },
+        "isPartOf": {
+          "@id": "https://lakshaygoyal.in/blog/selected-software-projects#webpage"
+        },
+        "author": {
+          "@id": "https://lakshaygoyal.in/#person"
+        },
+        "publisher": {
+          "@id": "https://lakshaygoyal.in/#person"
+        },
+        "image": [
+          {
+            "@id": "https://lakshaygoyal.in/blog/selected-software-projects#image-1"
+          },
+          {
+            "@id": "https://lakshaygoyal.in/blog/selected-software-projects#image-2"
+          },
+          {
+            "@id": "https://lakshaygoyal.in/blog/selected-software-projects#image-3"
+          },
+          {
+            "@id": "https://lakshaygoyal.in/blog/selected-software-projects#image-4"
+          }
+        ],
+        "inLanguage": "en",
+        "datePublished": "2026-11-03",
+        "dateModified": "2026-11-03",
+        "wordCount": 1739,
+        "articleSection": "Portfolio",
+        "keywords": "software projects, portfolio, mobile apps, web apps, engineering"
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://lakshaygoyal.in/#website",
+        "url": "https://lakshaygoyal.in/",
+        "name": "Lakshay Goyal",
+        "publisher": {
+          "@id": "https://lakshaygoyal.in/#person"
+        },
+        "inLanguage": "en"
+      },
+      {
+        "@type": "Person",
+        "@id": "https://lakshaygoyal.in/#person",
+        "name": "Lakshay Goyal",
+        "url": "https://lakshaygoyal.in/"
+      },
+      {
+        "@type": "ImageObject",
+        "@id": "https://lakshaygoyal.in/blog/selected-software-projects#image-1",
+        "url": "https://lakshaygoyal.in/Image/UnlovableWeb.png",
+        "contentUrl": "https://lakshaygoyal.in/Image/UnlovableWeb.png",
+        "caption": "Unlovable product interface laid out for a wide desktop browser window"
+      },
+      {
+        "@type": "ImageObject",
+        "@id": "https://lakshaygoyal.in/blog/selected-software-projects#image-2",
+        "url": "https://lakshaygoyal.in/Image/UnlovableMobile.png",
+        "contentUrl": "https://lakshaygoyal.in/Image/UnlovableMobile.png",
+        "caption": "Unlovable product interface rearranged for a narrow phone screen"
+      },
+      {
+        "@type": "ImageObject",
+        "@id": "https://lakshaygoyal.in/blog/selected-software-projects#image-3",
+        "url": "https://lakshaygoyal.in/Image/ExnessWeb.png",
+        "contentUrl": "https://lakshaygoyal.in/Image/ExnessWeb.png",
+        "caption": "Exness product interface laid out for a wide desktop browser window"
+      },
+      {
+        "@type": "ImageObject",
+        "@id": "https://lakshaygoyal.in/blog/selected-software-projects#image-4",
+        "url": "https://lakshaygoyal.in/Image/ExnessMobile.png",
+        "contentUrl": "https://lakshaygoyal.in/Image/ExnessMobile.png",
+        "caption": "Exness product interface rearranged for a narrow phone screen"
+      },
+      {
+        "@type": "HowTo",
+        "@id": "https://lakshaygoyal.in/blog/selected-software-projects#howto",
+        "name": "How to evaluate a software engineer's projects",
+        "url": "https://lakshaygoyal.in/blog/selected-software-projects",
+        "inLanguage": "en",
+        "image": {
+          "@id": "https://lakshaygoyal.in/blog/selected-software-projects#image-1"
+        },
+        "step": [
+          {
+            "@type": "HowToStep",
+            "position": 1,
+            "text": "Read the problem first and confirm it is specific."
+          },
+          {
+            "@type": "HowToStep",
+            "position": 2,
+            "text": "Check that stack choices have reasons, not just names."
+          },
+          {
+            "@type": "HowToStep",
+            "position": 3,
+            "text": "Look for at least one admitted trade-off."
+          },
+          {
+            "@type": "HowToStep",
+            "position": 4,
+            "text": "Ask whether the result is measurable or at least observable."
+          },
+          {
+            "@type": "HowToStep",
+            "position": 5,
+            "text": "Look for a demo or screenshots that prove it ran."
+          }
+        ]
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://lakshaygoyal.in/blog/selected-software-projects#breadcrumb",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://lakshaygoyal.in/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Blog",
+            "item": "https://lakshaygoyal.in/blog"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Selected Software Projects: What I Built, Why and What Happened",
+            "item": "https://lakshaygoyal.in/blog/selected-software-projects"
+          }
+        ]
+      }
+    ]
+  },
+  "link_from": [
+    {
+      "url": "/",
+      "anchor": "selected software projects"
+    },
+    {
+      "url": "/blog",
+      "anchor": "selected software projects with problem, stack and result"
+    }
+  ],
+  "meta": {
+    "skill": "article-writer",
+    "tier": "mid",
+    "attempts": 4,
+    "errors": [
+      "ValueError: intro uses a self reference (\"this page\", \"click here\", ...); write self-contained text",
+      "ValueError: sections[3].blocks[2].alt \"Screenshot of the Unlovable web app from the selected work\" is generic; describe what the image shows (no \"image of\", no file name)",
+      "ValueError: article body is 1135 words; competitors that rank average more, so write 1693-3500 words of real substance (examples, steps, specifics), not filler"
+    ]
+  },
+  "research": {
+    "keyword": "selected software projects",
+    "serp": {
+      "results": [
+        {
+          "position": 1,
+          "url": "https://www.geeksforgeeks.org/software-engineering/top-software-development-project-ideas/",
+          "domain": "geeksforgeeks.org",
+          "title": "Top 50 Software Development Project Ideas [Beginners]",
+          "aggregator": false
+        },
+        {
+          "position": 2,
+          "url": "https://www.geeksforgeeks.org/software-engineering/software-engineering-projects/",
+          "domain": "geeksforgeeks.org",
+          "title": "Top 15 Software Engineering Projects 2025 - GeeksforGeeks",
+          "aggregator": false
+        },
+        {
+          "position": 3,
+          "url": "https://www.indeed.com/career-advice/finding-a-job/software-development-project",
+          "domain": "indeed.com",
+          "title": "76 Software Development Projects (With How-to Guide) - Indeed",
+          "aggregator": false
+        },
+        {
+          "position": 4,
+          "url": "https://bestprojectideas.com/software-development-project-ideas/",
+          "domain": "bestprojectideas.com",
+          "title": "15 Software Development Project Ideas 2026-27",
+          "aggregator": false
+        },
+        {
+          "position": 5,
+          "url": "https://opensourceprojects.cc/blog/best-open-source-projects",
+          "domain": "opensourceprojects.cc",
+          "title": "Best Open Source Projects in 2026 (Most Popular on GitHub)",
+          "aggregator": false
+        },
+        {
+          "position": 6,
+          "url": "https://buildideas.co/projects/hackathon",
+          "domain": "buildideas.co",
+          "title": "30+ Hackathon Project Ideas That Actually Win",
+          "aggregator": false
+        },
+        {
+          "position": 7,
+          "url": "https://researchcomputing.princeton.edu/services/research-software-engineering/rse-projects",
+          "domain": "researchcomputing.princeton.edu",
+          "title": "Selected Research Software Engineering Projects",
+          "aggregator": false
+        },
+        {
+          "position": 8,
+          "url": "https://www.100projects.dev/",
+          "domain": "100projects.dev",
+          "title": "100Projects - Project Ideas for Developers",
+          "aggregator": false
+        }
+      ],
+      "people_also_ask": [],
+      "features": [],
+      "error": null
+    },
+    "pages": [
+      {
+        "url": "https://www.geeksforgeeks.org/software-engineering/top-software-development-project-ideas/",
+        "title": "Top 50 Software Development Project Ideas [Beginners] - GeeksforGeeks",
+        "h1": "Top 50 Software Development Project Ideas [Beginners]",
+        "description": "Your All-in-One Learning Portal: GeeksforGeeks is a comprehensive educational platform that empowers learners across domains-spanning computer science and programming, school education, upskilling, commerce, software tools, competitive exams, and more.",
+        "outline": [
+          "H2: Software Development Project Ideas & Topics",
+          "H3: 1. Portfolio Website:",
+          "H3: 2. Library Management System Project | Software Development",
+          "H3: 3. Weather forecasting system",
+          "H3: 4. Online Learning Management System",
+          "H3: 5. Inventory Management System for Small Businesses",
+          "H3: 6. Online Chat Application",
+          "H3: 7. Age Calculator Application",
+          "H3: 8. Expense Tracker App",
+          "H3: 9. Task Management System",
+          "H3: 10. Blog Website",
+          "H3: 11. Language Learning Platform",
+          "H3: 12. Smart Home Automation System",
+          "H3: 13. Gold Price Prediction",
+          "H3: 14. Face Detection System",
+          "H3: 15. Hospital Management System",
+          "H3: 16. Employee Management System",
+          "H3: 17. Chatbot Project",
+          "H3: 18. Online Code Compiler and Judging System",
+          "H3: 19. Personal Finance Dashboard"
+        ],
+        "word_count": 6074,
+        "published": "2024-01-29",
+        "modified": "2025-07-23",
+        "formats": {
+          "table": 0,
+          "ol": 1,
+          "ul": 68,
+          "images": 3,
+          "video": 0,
+          "code": 0
+        },
+        "faq": false,
+        "schema_types": [
+          "Article",
+          "Thing",
+          "Organization",
+          "ImageObject",
+          "WebPage",
+          "WebSite",
+          "SearchAction",
+          "Person",
+          "BreadcrumbList",
+          "ListItem"
+        ]
+      },
+      {
+        "url": "https://www.indeed.com/career-advice/finding-a-job/software-development-project",
+        "error": "HTTP 403"
+      },
+      {
+        "url": "https://bestprojectideas.com/software-development-project-ideas/",
+        "title": "15 Software Development Project Ideas 2026-27 - Best Project Ideas",
+        "h1": "15 Software Development Project Ideas 2026-27",
+        "description": "This article gives clear, simple guidance for students and presents 15 detailed software development project ideas you can start today. Each idea includes an",
+        "outline": [
+          "H2: Why build software projects?",
+          "H2: How to choose the right project",
+          "H2: Common tools and technologies students can use",
+          "H2: A simple project workflow",
+          "H2: 15 Software Development Project Ideas 2026-27",
+          "H3: 1. To-Do List App (Beginner)",
+          "H3: 2. Personal Portfolio Website (Beginner)",
+          "H3: 3. Quiz App with Score Tracking (Beginner → Intermediate)",
+          "H3: 4. Expense Tracker (Intermediate)",
+          "H3: 5. Library Management System (Intermediate)",
+          "H3: 6. Weather App Using Public API (Beginner → Intermediate)",
+          "H3: 7. Simple Chat Application (Intermediate)",
+          "H3: 8. Simple E-commerce Catalog (Intermediate)",
+          "H3: 9. Blogging Platform (Mini CMS) (Intermediate → Advanced)",
+          "H3: 10. Notes App with Search and Tags (Beginner → Intermediate)",
+          "H3: 11. School Attendance System (Intermediate)",
+          "H3: 12. Fitness Tracker (Intermediate)",
+          "H3: 13. Image Gallery with Upload (Intermediate)",
+          "H3: 14. Multiplayer Tic-Tac-Toe (Intermediate)",
+          "H3: 15. Task Scheduler with Reminders (Intermediate → Advanced)"
+        ],
+        "word_count": 2436,
+        "published": "2026-02-19",
+        "modified": "2026-02-19",
+        "formats": {
+          "table": 0,
+          "ol": 18,
+          "ul": 23,
+          "images": 0,
+          "video": 0,
+          "code": 0
+        },
+        "faq": false,
+        "schema_types": [
+          "BlogPosting",
+          "Person",
+          "ImageObject",
+          "WebPage",
+          "WebSite",
+          "Organization"
+        ]
+      },
+      {
+        "url": "https://opensourceprojects.cc/blog/best-open-source-projects",
+        "title": "Best Open Source Projects in 2026 (Most Popular on GitHub) | OpenSourceProjects.cc",
+        "h1": "Best Open Source Projects in 2026 (Most Popular on GitHub)",
+        "description": "The best open source projects in 2026 — the most popular, influential and actively developed tools on GitHub. Ranked by stars, with what each does and why it matters.",
+        "outline": [
+          "H2: TL;DR — the projects defining 2026",
+          "H2: Key takeaways",
+          "H2: What makes a project \"the best\"?",
+          "H2: Quick comparison",
+          "H2: The best open source projects, ranked",
+          "H3: 1. n8n — the automation platform",
+          "H3: 2. Ollama — local AI for everyone",
+          "H3: 3. yt-dlp — the universal media downloader",
+          "H3: 4. Dify — build AI apps and agents",
+          "H3: 5. Open WebUI — the self-hosted AI chat UI",
+          "H3: 6. Excalidraw — the virtual whiteboard",
+          "H3: 7. Supabase — the open source Firebase",
+          "H3: 8. Immich — the self-hosting favorite",
+          "H3: 9. Playwright — modern browser automation",
+          "H3: 10. Uptime Kuma — self-hosted monitoring",
+          "H3: 11. lazygit — a terminal UI for Git",
+          "H3: 12. Grafana — dashboards & observability",
+          "H2: How to use this list",
+          "H2: Frequently asked questions",
+          "H2: The bottom line"
+        ],
+        "word_count": 1797,
+        "published": "2026-07-07",
+        "modified": "2026-07-07",
+        "formats": {
+          "table": 2,
+          "ol": 1,
+          "ul": 16,
+          "images": 0,
+          "video": 0,
+          "code": 0
+        },
+        "faq": true,
+        "schema_types": [
+          "BreadcrumbList",
+          "ListItem",
+          "Article",
+          "Organization"
+        ]
+      },
+      {
+        "url": "https://buildideas.co/projects/hackathon",
+        "title": "30+ Hackathon Project Ideas That Actually Win",
+        "h1": "30+ Hackathon Project Ideas Built to Win",
+        "description": "30+ hackathon project ideas with innovation scores, complexity and team-size guidance. AI tools and social-impact apps that impress judges.",
+        "outline": [
+          "H2: All Project Ideas",
+          "H3: AI Mental Health Companion",
+          "H3: Fake News Detector Extension",
+          "H3: Emergency Resource Locator",
+          "H3: Carbon Footprint Tracker",
+          "H3: Micro-Lending Platform",
+          "H3: Real-time Sign Language Translator",
+          "H3: Food Waste Connector",
+          "H3: Mental Health Assessment Tool",
+          "H3: Skill Swap Marketplace",
+          "H3: Inclusive Job Board",
+          "H3: AI Disaster Response System",
+          "H3: Smart Medicine Reminder",
+          "H3: Crop Disease Detector",
+          "H3: Student Loan Optimizer",
+          "H3: Classroom Translator",
+          "H3: Community Safety Map",
+          "H3: AI Legal Aid Assistant",
+          "H3: Renewable Energy Monitor",
+          "H3: Accessible Tourism Guide"
+        ],
+        "word_count": 667,
+        "published": null,
+        "modified": null,
+        "formats": {
+          "table": 0,
+          "ol": 0,
+          "ul": 2,
+          "images": 0,
+          "video": 0,
+          "code": 0
+        },
+        "faq": true,
+        "schema_types": [
+          "FAQPage",
+          "Question",
+          "Answer"
+        ]
+      }
+    ],
+    "patterns": {
+      "pages": 4,
+      "word_count": {
+        "min": 667,
+        "median": 2116,
+        "max": 6074
+      },
+      "h2": {
+        "median": 7
+      },
+      "h3": {
+        "median": 26
+      },
+      "formats": {
+        "table": 0.25,
+        "ordered_list": 0.75,
+        "unordered_list": 1.0,
+        "images": 0.25,
+        "video": 0.0,
+        "faq": 0.5,
+        "howto": 0.0,
+        "code": 0.0,
+        "quote": 0.25
+      },
+      "images_median": 0,
+      "image_alt_coverage": 1.0,
+      "internal_links_median": 28,
+      "common_subtopics": [
+        {
+          "heading": "26. To Do List:",
+          "pages": 2,
+          "variants": [
+            "26. To Do List:",
+            "How to use this list"
+          ]
+        },
+        {
+          "heading": "8. Expense Tracker App",
+          "pages": 2,
+          "variants": [
+            "8. Expense Tracker App",
+            "4. Expense Tracker (Intermediate)"
+          ]
+        },
+        {
+          "heading": "Software Development Project Ideas & Topics",
+          "pages": 2,
+          "variants": [
+            "Software Development Project Ideas & Topics",
+            "What are Software Development Projects?",
+            "Why are Software Development Projects Important?",
+            "15 Software Development Project Ideas 2026-27"
+          ]
+        }
+      ],
+      "question_headings": [
+        "What are Software Development Projects?",
+        "Why are Software Development Projects Important?",
+        "Why build software projects?",
+        "What makes a project \"the best\"?",
+        "What makes a good hackathon project idea?",
+        "How do I build a complete project in 24 hours?",
+        "What tech stack should I use at a hackathon?",
+        "How do I pitch my hackathon project to judges?",
+        "What hackathon themes are trending in 2026?"
+      ],
+      "title_patterns": {
+        "number": 0.67,
+        "year": 0.42,
+        "brackets": 0.42,
+        "question": 0.0,
+        "colon": 0.5,
+        "how_to": 0.0,
+        "listicle": 0.5,
+        "guide": 0.08,
+        "length_median": 55,
+        "power_words": [
+          "beginner",
+          "best",
+          "guide"
+        ]
+      },
+      "slug": {
+        "words_median": 4,
+        "with_year": 0.0,
+        "with_digits_id": 0.0
+      },
+      "freshness": {
+        "dated": 0.75,
+        "newest": "2026-07-07",
+        "median_age_days": 257,
+        "stale_share": 0.0
+      },
+      "schema_types": {
+        "Organization": 3,
+        "Article": 2,
+        "ImageObject": 2,
+        "WebPage": 2,
+        "WebSite": 2,
+        "Person": 2,
+        "BreadcrumbList": 2,
+        "ListItem": 2,
+        "Thing": 1,
+        "SearchAction": 1,
+        "BlogPosting": 1,
+        "FAQPage": 1,
+        "Question": 1,
+        "Answer": 1
+      },
+      "benchmarks": {
+        "target_words": 2116,
+        "min_h2": 7,
+        "needs_table": false,
+        "needs_faq": true,
+        "needs_images": false
+      }
+    },
+    "titles": [
+      "Top 50 Software Development Project Ideas [Beginners] - GeeksforGeeks",
+      "15 Software Development Project Ideas 2026-27 - Best Project Ideas",
+      "Best Open Source Projects in 2026 (Most Popular on GitHub) | OpenSourceProjects.cc",
+      "30+ Hackathon Project Ideas That Actually Win",
+      "Top 50 Software Development Project Ideas [Beginners]",
+      "Top 15 Software Engineering Projects 2025 - GeeksforGeeks",
+      "76 Software Development Projects (With How-to Guide) - Indeed",
+      "15 Software Development Project Ideas 2026-27",
+      "Best Open Source Projects in 2026 (Most Popular on GitHub)",
+      "Selected Research Software Engineering Projects",
+      "100Projects - Project Ideas for Developers"
+    ],
+    "sources": [
+      {
+        "id": "S1",
+        "url": "https://www.geeksforgeeks.org/software-engineering/top-software-development-project-ideas/",
+        "title": "Top 50 Software Development Project Ideas [Beginners] - GeeksforGeeks",
+        "date": "2025-07-23",
+        "passage": "Software development project ideas are innovative and essential components of a Software Developer's career graph. Here's a list of 20 software development project ideas for students, along with their problem statements, types, areas of industry coverage, required software expertise, important use cases and outcomes, benefits, and estimated project duration."
+      },
+      {
+        "id": "S2",
+        "url": "https://www.geeksforgeeks.org/software-engineering/top-software-development-project-ideas/",
+        "title": "Top 50 Software Development Project Ideas [Beginners] - GeeksforGeeks",
+        "date": "2025-07-23",
+        "passage": "These project ideas cover a range of domains, technologies, and application areas, providing students with opportunities to learn and apply various software development skills. The suggested durations are approximate and may vary based on individual learning speeds and project complexity."
+      },
+      {
+        "id": "S3",
+        "url": "https://www.geeksforgeeks.org/software-engineering/top-software-development-project-ideas/",
+        "title": "Top 50 Software Development Project Ideas [Beginners] - GeeksforGeeks",
+        "date": "2025-07-23",
+        "passage": "Software development projects encompass the entire lifecycle of creating, enhancing, or modifying software applications."
+      },
+      {
+        "id": "S4",
+        "url": "https://www.geeksforgeeks.org/software-engineering/top-software-development-project-ideas/",
+        "title": "Top 50 Software Development Project Ideas [Beginners] - GeeksforGeeks",
+        "date": "2025-07-23",
+        "passage": "There are many other software projects you might consider building, whether you want to work on side projects with your team or improve your talents. The following list of software development project ideas can help you improve your abilities:"
+      },
+      {
+        "id": "S5",
+        "url": "https://www.geeksforgeeks.org/software-engineering/top-software-development-project-ideas/",
+        "title": "Top 50 Software Development Project Ideas [Beginners] - GeeksforGeeks",
+        "date": "2025-07-23",
+        "passage": "Problem Statement: Address the necessity for individuals and professionals to showcase their work and skills online by developing a personal Portfolio Website to create a strong online presence."
+      },
+      {
+        "id": "S6",
+        "url": "https://www.geeksforgeeks.org/software-engineering/top-software-development-project-ideas/",
+        "title": "Top 50 Software Development Project Ideas [Beginners] - GeeksforGeeks",
+        "date": "2025-07-23",
+        "passage": "Software Expertise: Web Development (e.g., React, HTML, CSS), Responsive Design, Content Management System (e.g., WordPress)."
+      },
+      {
+        "id": "S7",
+        "url": "https://www.geeksforgeeks.org/software-engineering/top-software-development-project-ideas/",
+        "title": "Top 50 Software Development Project Ideas [Beginners] - GeeksforGeeks",
+        "date": "2025-07-23",
+        "passage": "Use Cases: User Registration and Profile Creation, Project Showcase, Skill and Experience Display, Contact Information, Blog or News Section (optional)."
+      },
+      {
+        "id": "S8",
+        "url": "https://www.geeksforgeeks.org/software-engineering/top-software-development-project-ideas/",
+        "title": "Top 50 Software Development Project Ideas [Beginners] - GeeksforGeeks",
+        "date": "2025-07-23",
+        "passage": "Outcomes: Enhanced Online Presence, Professional Portfolio Showcase, Increased Visibility for Skills and Projects."
+      },
+      {
+        "id": "S9",
+        "url": "https://bestprojectideas.com/software-development-project-ideas/",
+        "title": "15 Software Development Project Ideas 2026-27 - Best Project Ideas",
+        "date": "2026-02-19",
+        "passage": "This article gives clear, simple guidance for students and presents 15 detailed software development project ideas you can start today. Each idea includes an overview, key features, suggested technologies, a step-by-step plan, difficulty level, and what you will learn by building it."
+      },
+      {
+        "id": "S10",
+        "url": "https://bestprojectideas.com/software-development-project-ideas/",
+        "title": "15 Software Development Project Ideas 2026-27 - Best Project Ideas",
+        "date": "2026-02-19",
+        "passage": "Show a demo: Record a short video (1–2 minutes) showing how the app works. Embed it in your portfolio."
+      },
+      {
+        "id": "S11",
+        "url": "https://bestprojectideas.com/software-development-project-ideas/",
+        "title": "15 Software Development Project Ideas 2026-27 - Best Project Ideas",
+        "date": "2026-02-19",
+        "passage": "Building software projects is one of the fastest ways to learn programming and become a confident developer. The 15 ideas above cover a range of skills: frontend, backend, databases, APIs, real-time communication, and simple data visualization."
+      },
+      {
+        "id": "S12",
+        "url": "https://bestprojectideas.com/software-development-project-ideas/",
+        "title": "15 Software Development Project Ideas 2026-27 - Best Project Ideas",
+        "date": "2026-02-19",
+        "passage": "I am a creative professional with over 5 years of experience in coming up with project ideas. I'm great at brainstorming, doing market research, and analyzing what’s possible to develop innovative and impactful projects. I also excel in collaborating with teams, managing project timelines, and ensuring that every idea turns into a successful outcome. Let's work together to make your next project a success!"
+      },
+      {
+        "id": "S13",
+        "url": "https://bestprojectideas.com/software-development-project-ideas/",
+        "title": "15 Software Development Project Ideas 2026-27 - Best Project Ideas",
+        "date": "2026-02-19",
+        "passage": "If you are a student who wants to learn software development, building real projects is one of the best ways to grow. Projects help you connect theory with practice, show your skills to others, and make learning more fun."
+      },
+      {
+        "id": "S14",
+        "url": "https://bestprojectideas.com/software-development-project-ideas/",
+        "title": "15 Software Development Project Ideas 2026-27 - Best Project Ideas",
+        "date": "2026-02-19",
+        "passage": "You can treat these projects as practice exercises, school assignments, or portfolio pieces."
+      },
+      {
+        "id": "S15",
+        "url": "https://bestprojectideas.com/software-development-project-ideas/",
+        "title": "15 Software Development Project Ideas 2026-27 - Best Project Ideas",
+        "date": "2026-02-19",
+        "passage": "Some are small (good for a first week), while others can be extended into larger apps (good for a semester project). You do not need to finish everything perfectly — the goal is to learn by building, testing, and improving. If you are new, start with beginner projects; if you already know basics, choose intermediate ideas and add extra features."
+      },
+      {
+        "id": "S16",
+        "url": "https://bestprojectideas.com/software-development-project-ideas/",
+        "title": "15 Software Development Project Ideas 2026-27 - Best Project Ideas",
+        "date": "2026-02-19",
+        "passage": "Before the list, read the short guides below about why projects matter, how to choose one that fits you, tools you might use, and a simple process to follow so you don’t get stuck."
+      },
+      {
+        "id": "S17",
+        "url": "https://opensourceprojects.cc/blog/best-open-source-projects",
+        "title": "Best Open Source Projects in 2026 (Most Popular on GitHub) | OpenSourceProjects.cc",
+        "date": "2026-07-07",
+        "passage": "Every year a handful of open source projects quietly reshape how software gets built and used. In 2026 that means AI you run on your own laptop, automation platforms replacing entire SaaS bills, and developer tools with tens of thousands of stars added in months."
+      },
+      {
+        "id": "S18",
+        "url": "https://opensourceprojects.cc/blog/best-open-source-projects",
+        "title": "Best Open Source Projects in 2026 (Most Popular on GitHub) | OpenSourceProjects.cc",
+        "date": "2026-07-07",
+        "passage": "The automation giant → n8n — 187K stars, replacing Zapier for a generation of builders."
+      },
+      {
+        "id": "S19",
+        "url": "https://opensourceprojects.cc/blog/best-open-source-projects",
+        "title": "Best Open Source Projects in 2026 (Most Popular on GitHub) | OpenSourceProjects.cc",
+        "date": "2026-07-07",
+        "passage": "The whiteboard everyone uses → Excalidraw — 122K stars of hand-drawn diagrams."
+      },
+      {
+        "id": "S20",
+        "url": "https://opensourceprojects.cc/blog/best-open-source-projects",
+        "title": "Best Open Source Projects in 2026 (Most Popular on GitHub) | OpenSourceProjects.cc",
+        "date": "2026-07-07",
+        "passage": "n8n is the most popular open source workflow automation tool — a visual, node-based platform with 400+ integrations, code nodes, and AI agent support. Self-host it and you get Zapier-class automation with no per-execution fees. Its explosive star growth reflects how many teams are cutting the automation-SaaS cord."
+      },
+      {
+        "id": "S21",
+        "url": "https://opensourceprojects.cc/blog/best-open-source-projects",
+        "title": "Best Open Source Projects in 2026 (Most Popular on GitHub) | OpenSourceProjects.cc",
+        "date": "2026-07-07",
+        "passage": "Uptime Kuma is the homelab community's favorite monitoring tool — a clean status page with 90+ notification integrations. Its popularity reflects the explosion of people self-hosting services who need to know when something breaks."
+      },
+      {
+        "id": "S22",
+        "url": "https://opensourceprojects.cc/blog/best-open-source-projects",
+        "title": "Best Open Source Projects in 2026 (Most Popular on GitHub) | OpenSourceProjects.cc",
+        "date": "2026-07-07",
+        "passage": "Grafana is the de-facto open source dashboarding and observability tool, connecting 100+ data sources into beautiful, alerting dashboards. It's foundational infrastructure across companies of every size."
+      },
+      {
+        "id": "S23",
+        "url": "https://opensourceprojects.cc/blog/best-open-source-projects",
+        "title": "Best Open Source Projects in 2026 (Most Popular on GitHub) | OpenSourceProjects.cc",
+        "date": "2026-07-07",
+        "passage": "What is the best open source project in 2026? By community size and impact, n8n (automation) and Ollama (local AI) lead the pack, with Dify and Open WebUI riding the AI wave close behind. \"Best\" depends on your goal — this list ranks by popularity so you can see where attention is concentrated."
+      },
+      {
+        "id": "S24",
+        "url": "https://opensourceprojects.cc/blog/best-open-source-projects",
+        "title": "Best Open Source Projects in 2026 (Most Popular on GitHub) | OpenSourceProjects.cc",
+        "date": "2026-07-07",
+        "passage": "What are the most popular open source projects on GitHub? Measured by stars in our directory: n8n, Ollama, yt-dlp, Dify, Open WebUI and Excalidraw are among the most-starred actively-developed projects in 2026."
+      },
+      {
+        "id": "S25",
+        "url": "https://buildideas.co/projects/hackathon",
+        "title": "30+ Hackathon Project Ideas That Actually Win",
+        "date": null,
+        "passage": "High-impact ideas across AI, health, fintech and social good — each with a 24-hour build plan and judge appeal breakdown."
+      },
+      {
+        "id": "S26",
+        "url": "https://buildideas.co/projects/hackathon",
+        "title": "30+ Hackathon Project Ideas That Actually Win",
+        "date": null,
+        "passage": "Feasibility in 24 hours is the silent killer. A great rule: the most impressive feature should be buildable in half the available time, leaving the rest for the boring connective tissue (auth, deployment, polish, slides). If the core flow needs custom ML training, a mobile app, hardware integration, AND a backend, cut something — judges reward one feature that works flawlessly over four that half-work."
+      },
+      {
+        "id": "S27",
+        "url": "https://buildideas.co/projects/hackathon",
+        "title": "30+ Hackathon Project Ideas That Actually Win",
+        "date": null,
+        "passage": "Demo-ability is the difference between 4th place and 1st. Pick problems whose solution can be seen and felt on stage in 60 seconds — a real-time translation, an AI detecting a fake on screen, a map lighting up with live data. Avoid problems that require explanation to appreciate. Pair that with a real problem (not \"Uber for X\" novelty) and a unique angle — a frontier model, an underused dataset,"
+      },
+      {
+        "id": "S28",
+        "url": "https://buildideas.co/projects/hackathon",
+        "title": "30+ Hackathon Project Ideas That Actually Win",
+        "date": null,
+        "passage": "Get a judge-ready project with a 24-hour build plan, tech stack, and demo script in under 60 seconds."
+      },
+      {
+        "id": "S29",
+        "url": "https://buildideas.co/projects/hackathon",
+        "title": "30+ Hackathon Project Ideas That Actually Win",
+        "date": null,
+        "passage": "Matches real-time disaster victims with donors and NGOs based on needs and location."
+      },
+      {
+        "id": "S30",
+        "url": "https://buildideas.co/projects/hackathon",
+        "title": "30+ Hackathon Project Ideas That Actually Win",
+        "date": null,
+        "passage": "Judges almost always score on the same four axes: problem clarity, technical execution, demo quality, and originality. Before you commit to an idea, write down — in one sentence each — who hurts, what your project does, and why this team is the one to build it. If any sentence is fuzzy, the idea will lose points no matter how clean the code is."
+      }
+    ],
+    "errors": [
+      "https://www.indeed.com/career-advice/finding-a-job/software-development-project: HTTP 403"
+    ]
+  }
+}

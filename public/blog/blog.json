@@ -47,5 +47,26 @@
         }
       ]
     }
+  ],
+  "Portfolio": [
+    {
+      "title": "Selected Software Projects: Problem, Stack, Result",
+      "link": "/blog/selected-software-projects",
+      "date": "November 3, 2026",
+      "description": "Selected software projects by Lakshay Goyal, each with the problem, stack choices, trade-offs and result, so you can see how decisions were made.",
+      "tags": [
+        "software projects",
+        "portfolio",
+        "mobile apps",
+        "web apps",
+        "engineering"
+      ],
+      "linkFrom": [
+        {
+          "url": "/",
+          "anchor": "selected software projects"
+        }
+      ]
+    }
   ]
 }
