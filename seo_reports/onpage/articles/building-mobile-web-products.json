@@ -1,0 +1,1963 @@
+{
+  "schema": "seo-onpage/2.0",
+  "status": "done",
+  "brief": {
+    "primary_keyword": "building mobile and web products",
+    "secondary_keywords": [
+      "mobile and web development skills",
+      "product engineering skills",
+      "software engineering skills"
+    ],
+    "questions": [],
+    "topics": [
+      {
+        "id": "t6",
+        "text": "building mobile and web products",
+        "kind": "seed",
+        "page": null
+      },
+      {
+        "id": "t9",
+        "text": "software engineering skills",
+        "kind": "seed",
+        "page": null
+      }
+    ],
+    "search_intent": "informational",
+    "format": "guide",
+    "angle": "A first-hand guide to the skills and decisions involved in shipping both mobile and web products, grounded in real project experience.",
+    "audience": "software engineers, recruiters and hiring managers interested in product development",
+    "working_title": "Building Mobile and Web Products: Skills That Matter in Practice",
+    "slug": "building-mobile-web-products",
+    "url": "/blog/building-mobile-web-products",
+    "pillar_url": "/about"
+  },
+  "article": {
+    "title": "Building Mobile and Web Products: Skills Guide 2026",
+    "h1": "Building Mobile and Web Products: The Skills That Matter in Practice",
+    "meta_description": "A practical guide to building mobile and web products: the skills, decisions and trade-offs that matter when you ship both, from architecture to launch.",
+    "intro": "Building mobile and web products takes more than writing code. You decide what to build, pick the right approach for each platform, and own the work from architecture to deployment. This guide covers the software engineering skills and decisions that matter most when you ship both, with practical steps and trade-offs.",
+    "key_takeaways": [
+      "Building mobile and web products is a product skill as much as a coding skill.",
+      "Mobile-first thinking improves both the app and the website.",
+      "Cross-platform frameworks save effort but come with trade-offs.",
+      "Owning work end to end, from architecture to deployment, builds the strongest engineers.",
+      "Backend, frontend and infrastructure skills work best together."
+    ],
+    "sections": [
+      {
+        "heading": "What does building mobile and web products involve?",
+        "blocks": [
+          {
+            "tag": "p",
+            "text": "Building mobile and web products means designing, coding, deploying and maintaining software that people use on phones and in browsers. It covers frontend, backend, data and infrastructure. Often one engineer or a small team has to connect all of these layers, and that is where the deepest learning happens."
+          },
+          {
+            "tag": "p",
+            "text": "Coding is only one part of the job. One guide puts it well: web and mobile development is about creating experiences that connect a business with its users, not just writing code [S4]. The code serves the product. If the product does not solve a real problem, clean code will not save it."
+          },
+          {
+            "tag": "p",
+            "text": "This guide comes from Lakshay Goyal, a Software Engineer building thoughtful mobile and web products. You can read more about his background on the <a href=\"/about\">about page</a>. Here, the focus is on the skills and decisions behind shipping work on both platforms."
+          },
+          {
+            "tag": "h3",
+            "text": "The layers of a product"
+          },
+          {
+            "tag": "p",
+            "text": "Every product has a few layers that must agree with each other. A mistake in one layer shows up in another, so it helps to know the whole stack, even if you specialise."
+          },
+          {
+            "tag": "ul",
+            "items": [
+              "The client layer: mobile apps and web interfaces that users touch",
+              "The API layer: the contract between clients and servers",
+              "The data layer: databases, storage and the rules around them",
+              "The infrastructure layer: servers, deployments and monitoring",
+              "The product layer: the problem, the users and the order of priorities"
+            ]
+          },
+          {
+            "tag": "h3",
+            "text": "Why both platforms matter"
+          },
+          {
+            "tag": "p",
+            "text": "Users do not think in platforms. They want the thing to work wherever they are. A person may discover a product in a browser, then install the app, then return on the web. Treating both as one product, with shared logic and consistent behaviour, is far less painful than treating them as two projects."
+          },
+          {
+            "tag": "p",
+            "text": "That mindset shapes every later decision: how you design the API, what you share between clients, and how you test. The next sections walk through those decisions in the order they usually come up."
+          }
+        ]
+      },
+      {
+        "heading": "Why mobile-first thinking shapes both platforms",
+        "blocks": [
+          {
+            "tag": "p",
+            "text": "Mobile-first thinking means designing for the smallest screen first, then expanding to larger ones. It matters because a large share of visits happen on phones. One source reports that about 60.5% of all web traffic came from mobile devices as of 2025 [S21]."
+          },
+          {
+            "tag": "p",
+            "text": "Starting from desktop often hurts the phone experience. Cramming a feature-rich desktop design onto a small screen tends to feel cluttered or broken [S23]. Starting small forces you to decide what really matters, and that discipline improves the large-screen version too."
+          },
+          {
+            "tag": "p",
+            "text": "Search engines care as well. Google began mobile-first indexing in 2018, which means it mainly uses the mobile version of a site for indexing and ranking [S21]. A weak mobile page can therefore hurt discoverability, not only usability."
+          },
+          {
+            "tag": "h3",
+            "text": "A practical mobile-first checklist"
+          },
+          {
+            "tag": "ul",
+            "items": [
+              "Set the viewport correctly so the page width matches the device width [S24]",
+              "Design the core user flow for the smallest screen first",
+              "Add layout changes at larger breakpoints instead of removing content",
+              "Keep touch targets large and navigation simple",
+              "Test on real devices, not only in a desktop browser",
+              "Check loading speed on slower connections"
+            ]
+          },
+          {
+            "tag": "p",
+            "text": "Without the viewport tag, mobile browsers often show a tiny, zoomed-out version of the desktop site, and a responsive design will not work [S24]. It is a small line that breaks everything when missing."
+          },
+          {
+            "tag": "h3",
+            "text": "What it means for apps"
+          },
+          {
+            "tag": "p",
+            "text": "Mobile-first is not only for websites. In a native or cross-platform app, it means you plan for limited screen space, interrupted sessions and unreliable networks from day one. Those constraints make the web version more resilient as well."
+          },
+          {
+            "tag": "figure",
+            "src": "/Image/ExnessMobile.png",
+            "alt": "Mobile screen of a trading product interface from selected work",
+            "caption": "A mobile view from selected work, designed with the small screen in mind."
+          },
+          {
+            "tag": "figure",
+            "src": "/Image/ExnessWeb.png",
+            "alt": "Web version of the same product interface on a wide screen",
+            "caption": "The matching web view, which expands the same core flow."
+          },
+          {
+            "tag": "p",
+            "text": "Responsive work pays off in business terms too. One source cites about an 11% higher conversion rate for responsive layouts [S17]. Another notes that up to 73% of visitors may leave a site that is not mobile friendly [S18]."
+          }
+        ]
+      },
+      {
+        "heading": "How do native, cross-platform and web approaches compare?",
+        "blocks": [
+          {
+            "tag": "p",
+            "text": "The right approach depends on the product, the team and the timeline. Native gives deep platform access, cross-platform shares one codebase, and web reaches everyone through a browser. Each option trades speed, performance and maintenance effort against the others, so there is no single best answer."
+          },
+          {
+            "tag": "table",
+            "caption": "Comparison of common approaches for mobile and web products",
+            "header": [
+              "Approach",
+              "Strength",
+              "Trade-off"
+            ],
+            "rows": [
+              [
+                "Native",
+                "Deep platform features, with a growing focus on security and compliance [S9]",
+                "Separate codebases for each platform"
+              ],
+              [
+                "Cross-platform",
+                "One codebase across platforms, using frameworks such as Flutter and React Native [S10]",
+                "React Native needs native code for advanced features [S27]"
+              ],
+              [
+                "Web app",
+                "Works across devices and updates instantly [S11]",
+                "Limited access to some device features"
+              ],
+              [
+                "Progressive web app",
+                "Avoids the friction of app store approval [S12]",
+                "Depends on browser support"
+              ]
+            ]
+          },
+          {
+            "tag": "h3",
+            "text": "Choosing a cross-platform framework"
+          },
+          {
+            "tag": "p",
+            "text": "Cross-platform tools differ in what they ask of you. React Native lets you build with JavaScript and React, and it is easy for React developers to pick up [S27]. Flutter uses the Dart language and is fast, but the learning curve is steeper [S28]."
+          },
+          {
+            "tag": "p",
+            "text": "Ionic builds on HTML, CSS and JavaScript, so it is easy for web developers to learn. The cost is that it does not match native performance in complex apps [S29]. Match the tool to the skills your team already has."
+          },
+          {
+            "tag": "h3",
+            "text": "When native is worth it"
+          },
+          {
+            "tag": "p",
+            "text": "Go native when the product depends on platform features, tight performance or strict security needs. Native work now carries more attention on data protection, secure authentication and performance as part of the lifecycle [S9]. If none of that applies, a shared codebase usually wins on speed."
+          },
+          {
+            "tag": "h3",
+            "text": "When the web is enough"
+          },
+          {
+            "tag": "p",
+            "text": "A web app is often the fastest way to test an idea. It needs no store review, it updates for everyone at once, and it is easier to maintain than traditional installed software [S11]. Many teams start there and add an app once the core flow proves itself."
+          },
+          {
+            "tag": "blockquote",
+            "text": "Pick the approach that fits the product and the team, not the one that is trending this year."
+          }
+        ]
+      },
+      {
+        "heading": "Which software engineering skills matter most?",
+        "blocks": [
+          {
+            "tag": "p",
+            "text": "The most useful software engineering skills are the ones that connect layers: frontend, backend and infrastructure. Engineers who can move between them ship faster and debug better, because they understand where a problem actually begins instead of guessing from the symptom."
+          },
+          {
+            "tag": "h3",
+            "text": "Frontend skills"
+          },
+          {
+            "tag": "p",
+            "text": "Frontend work still rests on HTML, CSS and JavaScript, with modern frameworks such as React, Angular and Vue on top [S14]. Frameworks change often. The lasting skills are layout, accessibility, state management and a feel for how an interface behaves on slow devices."
+          },
+          {
+            "tag": "h3",
+            "text": "Backend and API skills"
+          },
+          {
+            "tag": "p",
+            "text": "Backend development handles server logic, data processing and database work. Current practice leans toward serverless designs, microservices and API-first development, which make applications easier to scale and maintain [S15]. Clients and servers then talk through REST, GraphQL or WebSockets [S16]."
+          },
+          {
+            "tag": "p",
+            "text": "For product work, the API is a promise. Design it so both a mobile app and a web client can use it without special cases. Clear naming, stable responses and good error messages save many hours later."
+          },
+          {
+            "tag": "h3",
+            "text": "Infrastructure and deployment skills"
+          },
+          {
+            "tag": "p",
+            "text": "Servers, deployments and monitoring decide whether a product stays up. Knowing how to ship, roll back and watch a system turns a prototype into something people can rely on. This layer is easy to ignore until the first outage."
+          },
+          {
+            "tag": "h3",
+            "text": "Product and communication skills"
+          },
+          {
+            "tag": "p",
+            "text": "Technical range is not enough. Strong engineers ask what problem a feature solves, push back on scope that adds little, and explain trade-offs in plain language. These habits matter to hiring managers as much as framework knowledge."
+          },
+          {
+            "tag": "ul",
+            "items": [
+              "Frontend: layout, state, accessibility and performance",
+              "Backend: data modelling, APIs and reliability",
+              "Infrastructure: deployment, monitoring and recovery",
+              "Product sense: scoping, prioritising and testing assumptions",
+              "Communication: writing clearly and explaining trade-offs"
+            ]
+          }
+        ]
+      },
+      {
+        "heading": "How does a product move from idea to launch?",
+        "blocks": [
+          {
+            "tag": "p",
+            "text": "A product moves from idea to launch through a repeatable flow: define the problem, design the experience, build the backend and clients, deploy, then learn from real use. Skipping a step usually costs more later, because mistakes found after launch are the hardest to fix."
+          },
+          {
+            "tag": "diagram",
+            "code": "flowchart LR\n  A[Idea] --> B[Design]\n  B --> C[Backend and APIs]\n  C --> D[Mobile and web clients]\n  D --> E[Deploy]\n  E --> F[Learn and iterate]\n  F --> B",
+            "alt": "Flowchart of a product moving from idea through design, build and deployment back to iteration",
+            "caption": "A simple delivery loop for a mobile and web product."
+          },
+          {
+            "tag": "h3",
+            "text": "Step by step"
+          },
+          {
+            "tag": "ol",
+            "items": [
+              "Define who the product is for and the one job it must do well",
+              "Sketch the core flow on the smallest screen first",
+              "Model the data and design the API around that flow",
+              "Build the mobile and web clients against the same API",
+              "Set up deployment, logging and basic monitoring",
+              "Release to a small group and collect feedback",
+              "Fix what hurts most, then widen the release"
+            ]
+          },
+          {
+            "tag": "h3",
+            "text": "Keep the first version small"
+          },
+          {
+            "tag": "p",
+            "text": "The first release should prove one idea, not ten. A narrow scope lets you finish, learn and adjust. Extra features can wait until real users show you what they actually need."
+          },
+          {
+            "tag": "h3",
+            "text": "Plan for change"
+          },
+          {
+            "tag": "p",
+            "text": "Requirements will move. Keep modules small, keep the API versioned or at least backward compatible, and avoid decisions that are costly to reverse. Flexible design is cheaper than a rewrite."
+          },
+          {
+            "tag": "p",
+            "text": "For more notes from building, deploying and learning software, browse the <a href=\"/blog\">blog</a>."
+          }
+        ]
+      },
+      {
+        "heading": "What does owning a product end to end teach you?",
+        "blocks": [
+          {
+            "tag": "p",
+            "text": "Owning a product end to end teaches trade-offs that narrow roles tend to hide. As a Founding Engineer in Bangalore, Lakshay built a food delivery platform from scratch, handling architecture, mobile apps, servers and deployments, along with the chaos in between."
+          },
+          {
+            "tag": "p",
+            "text": "Working across the whole stack forces you to feel the cost of every decision. A rushed API choice hurts the app. A slow query hurts the screen. A missing deployment step hurts everyone. You stop seeing layers as separate."
+          },
+          {
+            "tag": "h3",
+            "text": "What changes in your thinking"
+          },
+          {
+            "tag": "ul",
+            "items": [
+              "You design APIs with the client developer in mind, because you are that developer",
+              "You treat deployment as part of the feature, not an afterthought",
+              "You notice performance problems earlier",
+              "You cut scope sooner, since you carry the maintenance cost",
+              "You learn to debug across the whole system"
+            ]
+          },
+          {
+            "tag": "h3",
+            "text": "Working across the stack today"
+          },
+          {
+            "tag": "p",
+            "text": "Today he works as a Software Engineer on tools that make test automation a little less painful, jumping between backend, frontend and infra. The same range helps there: a problem in a test tool might live in any of the three."
+          },
+          {
+            "tag": "p",
+            "text": "You can see the projects in selected work on the <a href=\"/\">portfolio home page</a>, and read the full story on the <a href=\"/about\">about page</a>."
+          },
+          {
+            "tag": "figure",
+            "src": "/Image/UnlovableMobile.png",
+            "alt": "Mobile interface of a project from selected work",
+            "caption": "Another mobile view from selected work."
+          },
+          {
+            "tag": "figure",
+            "src": "/Image/UnlovableWeb.png",
+            "alt": "Web interface of the same project on a larger screen",
+            "caption": "The web view of the same project."
+          },
+          {
+            "tag": "blockquote",
+            "text": "Learn the layer next to yours. It makes you better at your own."
+          }
+        ]
+      },
+      {
+        "heading": "Which decisions and trade-offs come up most often?",
+        "blocks": [
+          {
+            "tag": "p",
+            "text": "The decisions that matter most are about sharing, speed and scope: what to share between mobile and web, how fast to ship, and what to leave out. Each choice has a cost, and good engineers say the cost out loud before committing."
+          },
+          {
+            "tag": "h3",
+            "text": "Shared logic versus platform feel"
+          },
+          {
+            "tag": "p",
+            "text": "Sharing code saves time, but each platform has its own habits. Users expect navigation, gestures and loading behaviour that feel native to the device. Share the business rules and the API. Be careful about sharing the interface itself."
+          },
+          {
+            "tag": "h3",
+            "text": "Speed versus quality"
+          },
+          {
+            "tag": "p",
+            "text": "Shipping fast helps you learn, but unstable releases cost trust. A useful rule is to cut features before cutting tests on the core flow. A small product that works beats a large one that breaks."
+          },
+          {
+            "tag": "h3",
+            "text": "Build versus buy"
+          },
+          {
+            "tag": "p",
+            "text": "Not everything needs custom code. Authentication, payments and analytics often have mature options. Spend your effort where the product is unique, and be honest about the long-term cost of every dependency."
+          },
+          {
+            "tag": "h3",
+            "text": "Security and performance from the start"
+          },
+          {
+            "tag": "p",
+            "text": "Secure authentication, data protection and performance tuning are easier to plan early than to add later [S9]. Treat them as part of the definition of done for every feature."
+          },
+          {
+            "tag": "table",
+            "caption": "Common decisions and a practical default",
+            "header": [
+              "Decision",
+              "Practical default",
+              "Why"
+            ],
+            "rows": [
+              [
+                "Platform order",
+                "Web first to test, app when the flow is proven",
+                "Web needs no store review and updates for all users at once [S11]"
+              ],
+              [
+                "Layout strategy",
+                "Mobile first",
+                "Desktop-first designs often feel cramped on phones [S23]"
+              ],
+              [
+                "Backend style",
+                "API first",
+                "Makes the system easier to scale and maintain [S15]"
+              ],
+              [
+                "Client code",
+                "Share logic, tune the interface per platform",
+                "Keeps the feel native without duplicating rules"
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "heading": "Common mistakes when building for mobile and web",
+        "blocks": [
+          {
+            "tag": "p",
+            "text": "The most common mistakes come from skipping the user and the whole system: designing desktop first, picking tools by hype, and treating backend and frontend as separate worlds. Avoiding them costs little and saves a great deal of rework."
+          },
+          {
+            "tag": "ul",
+            "items": [
+              "Designing desktop first and shrinking it later",
+              "Choosing a framework because it is popular",
+              "Ignoring performance and secure authentication [S9]",
+              "Hiding content on mobile instead of redesigning it",
+              "Treating backend and frontend as separate worlds",
+              "Launching without a way to learn from users",
+              "Adding features before the core flow works"
+            ]
+          },
+          {
+            "tag": "h3",
+            "text": "Why these mistakes persist"
+          },
+          {
+            "tag": "p",
+            "text": "Many come from habit. Desktop-first thinking dates from when desktops carried almost all web traffic [S22]. Teams keep the habit long after the audience has moved. Nearly 96% of users have met sites on their phones that were clearly not optimised for mobile [S23]."
+          },
+          {
+            "tag": "h3",
+            "text": "A simple review before release"
+          },
+          {
+            "tag": "ol",
+            "items": [
+              "Open the product on a real phone and finish the main task",
+              "Check that no content disappears on small screens",
+              "Confirm login, errors and loading states behave well",
+              "Verify deployment and rollback work",
+              "Read the logs after a test session"
+            ]
+          },
+          {
+            "tag": "p",
+            "text": "The same lens helps when learning. Ideas from books often sharpen product thinking, so the <a href=\"/bookshelf\">bookshelf</a> collects some that shaped this approach."
+          }
+        ]
+      },
+      {
+        "heading": "How can you build these skills and show them?",
+        "blocks": [
+          {
+            "tag": "p",
+            "text": "You build these skills by shipping real projects across the stack and reflecting on what went wrong. Reading helps, but a finished product teaches more than any tutorial. For recruiters and hiring managers, a clear record of shipped work is the strongest signal."
+          },
+          {
+            "tag": "h3",
+            "text": "For engineers"
+          },
+          {
+            "tag": "ul",
+            "items": [
+              "Build one small product that has a backend, a web client and a mobile client",
+              "Deploy it yourself and watch it run",
+              "Write down the trade-offs you made and why",
+              "Learn the layer you use least",
+              "Stay curious and go deep into one topic at a time"
+            ]
+          },
+          {
+            "tag": "h3",
+            "text": "For recruiters and hiring managers"
+          },
+          {
+            "tag": "p",
+            "text": "Look for evidence of ownership: who made the decisions, what shipped, and what was learned. A portfolio that shows projects on both mobile and web, with honest notes on trade-offs, says more than a list of tools."
+          },
+          {
+            "tag": "p",
+            "text": "Lakshay's portfolio is built to show this: work experience, selected work, skills, books and posts in one place. Start with the <a href=\"/about\">about page</a>, then browse the projects on the <a href=\"/\">home page</a>."
+          },
+          {
+            "tag": "h3",
+            "text": "Keep learning as the tools change"
+          },
+          {
+            "tag": "p",
+            "text": "Frameworks and versions change quickly, so avoid tying your identity to one. The durable skills are problem framing, clear APIs, careful testing and honest communication. Tools come and go, but these carry across every stack."
+          }
+        ]
+      }
+    ],
+    "faq": [
+      {
+        "question": "Should I build mobile or web first?",
+        "answer": "Start where your users already are, and design mobile-first either way. A responsive web app is often the fastest way to test an idea, since it needs no store review. Add a native or cross-platform app once the core flow works."
+      },
+      {
+        "question": "Do I need to know both frontend and backend?",
+        "answer": "You do not need to master both, but knowing the basics of each helps a lot. Engineers who understand the full stack debug faster, make better trade-offs and communicate well with designers and teammates."
+      }
+    ],
+    "tags": [
+      "mobile development",
+      "web development",
+      "software engineering",
+      "product engineering",
+      "engineering skills"
+    ],
+    "category": "Software Engineering",
+    "link_from": [
+      {
+        "url": "/blog",
+        "anchor": "building mobile and web products guide"
+      },
+      {
+        "url": "/about",
+        "anchor": "skills for building mobile and web products"
+      }
+    ],
+    "title_hooks": [
+      "year",
+      "colon",
+      "power:guide"
+    ],
+    "questions_covered": {},
+    "slug": "building-mobile-web-products",
+    "url": "/blog/building-mobile-web-products",
+    "claims": [
+      {
+        "number": "60.5%",
+        "source": "S21"
+      },
+      {
+        "number": "2018,",
+        "source": "S21"
+      },
+      {
+        "number": "11%",
+        "source": "S17"
+      },
+      {
+        "number": "73%",
+        "source": "S18"
+      },
+      {
+        "number": "96%",
+        "source": "S23"
+      }
+    ],
+    "images": [
+      {
+        "src": "/Image/ExnessMobile.png",
+        "alt": "Mobile screen of a trading product interface from selected work",
+        "caption": "A mobile view from selected work, designed with the small screen in mind.",
+        "new": false
+      },
+      {
+        "src": "/Image/ExnessWeb.png",
+        "alt": "Web version of the same product interface on a wide screen",
+        "caption": "The matching web view, which expands the same core flow.",
+        "new": false
+      },
+      {
+        "src": "/Image/UnlovableMobile.png",
+        "alt": "Mobile interface of a project from selected work",
+        "caption": "Another mobile view from selected work.",
+        "new": false
+      },
+      {
+        "src": "/Image/UnlovableWeb.png",
+        "alt": "Web interface of the same project on a larger screen",
+        "caption": "The web view of the same project.",
+        "new": false
+      }
+    ],
+    "word_count": 2587,
+    "internal_links": [
+      "/",
+      "/about",
+      "/blog",
+      "/bookshelf"
+    ],
+    "sources_cited": [
+      "S4",
+      "S9",
+      "S10",
+      "S11",
+      "S12",
+      "S14",
+      "S15",
+      "S16",
+      "S17",
+      "S18",
+      "S21",
+      "S22",
+      "S23",
+      "S24",
+      "S27",
+      "S28",
+      "S29"
+    ],
+    "primary_keyword": "building mobile and web products",
+    "last_updated": "2026-11-03",
+    "tag_links": [
+      {
+        "tag": "mobile development",
+        "url": "/blog/tags/mobile-development"
+      },
+      {
+        "tag": "web development",
+        "url": "/blog/tags/web-development"
+      },
+      {
+        "tag": "software engineering",
+        "url": "/blog/tags/software-engineering"
+      },
+      {
+        "tag": "product engineering",
+        "url": "/blog/tags/product-engineering"
+      },
+      {
+        "tag": "engineering skills",
+        "url": "/blog/tags/engineering-skills"
+      }
+    ]
+  },
+  "fact_check": {
+    "verdict": "pass",
+    "numeric_claims": [
+      {
+        "number": "60.5%",
+        "source": "S21"
+      },
+      {
+        "number": "2018,",
+        "source": "S21"
+      },
+      {
+        "number": "11%",
+        "source": "S17"
+      },
+      {
+        "number": "73%",
+        "source": "S18"
+      },
+      {
+        "number": "96%",
+        "source": "S23"
+      }
+    ],
+    "cited_sentences": [
+      {
+        "where": "sections[0].blocks[1]",
+        "sentence": "One guide puts it well: web and mobile development is about creating experiences that connect a business with its users, not just writing code.",
+        "sources": [
+          "S4"
+        ],
+        "support": 0.54,
+        "numbers": []
+      },
+      {
+        "where": "sections[1].blocks[0]",
+        "sentence": "One source reports that about 60.5% of all web traffic came from mobile devices as of 2025.",
+        "sources": [
+          "S21"
+        ],
+        "support": 0.6,
+        "numbers": [
+          "60.5%",
+          "2025"
+        ]
+      },
+      {
+        "where": "sections[1].blocks[1]",
+        "sentence": "Cramming a feature-rich desktop design onto a small screen tends to feel cluttered or broken.",
+        "sources": [
+          "S23"
+        ],
+        "support": 0.64,
+        "numbers": []
+      },
+      {
+        "where": "sections[1].blocks[2]",
+        "sentence": "Google began mobile-first indexing in 2018, which means it mainly uses the mobile version of a site for indexing and ranking.",
+        "sources": [
+          "S21"
+        ],
+        "support": 0.64,
+        "numbers": [
+          "2018,"
+        ]
+      },
+      {
+        "where": "sections[1].blocks[4]",
+        "sentence": "Set the viewport correctly so the page width matches the device width",
+        "sources": [
+          "S24"
+        ],
+        "support": 0.67,
+        "numbers": []
+      },
+      {
+        "where": "sections[1].blocks[5]",
+        "sentence": "Without the viewport tag, mobile browsers often show a tiny, zoomed-out version of the desktop site, and a responsive design will not work.",
+        "sources": [
+          "S24"
+        ],
+        "support": 0.93,
+        "numbers": []
+      },
+      {
+        "where": "sections[1].blocks[10]",
+        "sentence": "One source cites about an 11% higher conversion rate for responsive layouts.",
+        "sources": [
+          "S17"
+        ],
+        "support": 0.62,
+        "numbers": [
+          "11%"
+        ]
+      },
+      {
+        "where": "sections[1].blocks[10]",
+        "sentence": "Another notes that up to 73% of visitors may leave a site that is not mobile friendly.",
+        "sources": [
+          "S18"
+        ],
+        "support": 0.57,
+        "numbers": [
+          "73%"
+        ]
+      },
+      {
+        "where": "sections[2].blocks[1]",
+        "sentence": "Deep platform features, with a growing focus on security and compliance",
+        "sources": [
+          "S9"
+        ],
+        "support": 0.43,
+        "numbers": []
+      },
+      {
+        "where": "sections[2].blocks[1]",
+        "sentence": "One codebase across platforms, using frameworks such as Flutter and React Native",
+        "sources": [
+          "S10"
+        ],
+        "support": 0.88,
+        "numbers": []
+      },
+      {
+        "where": "sections[2].blocks[1]",
+        "sentence": "React Native needs native code for advanced features",
+        "sources": [
+          "S27"
+        ],
+        "support": 0.83,
+        "numbers": []
+      },
+      {
+        "where": "sections[2].blocks[1]",
+        "sentence": "Works across devices and updates instantly",
+        "sources": [
+          "S11"
+        ],
+        "support": 1.0,
+        "numbers": []
+      },
+      {
+        "where": "sections[2].blocks[1]",
+        "sentence": "Avoids the friction of app store approval",
+        "sources": [
+          "S12"
+        ],
+        "support": 0.8,
+        "numbers": []
+      },
+      {
+        "where": "sections[2].blocks[3]",
+        "sentence": "React Native lets you build with JavaScript and React, and it is easy for React developers to pick up.",
+        "sources": [
+          "S27"
+        ],
+        "support": 0.88,
+        "numbers": []
+      },
+      {
+        "where": "sections[2].blocks[3]",
+        "sentence": "Flutter uses the Dart language and is fast, but the learning curve is steeper.",
+        "sources": [
+          "S28"
+        ],
+        "support": 1.0,
+        "numbers": []
+      },
+      {
+        "where": "sections[2].blocks[4]",
+        "sentence": "The cost is that it does not match native performance in complex apps.",
+        "sources": [
+          "S29"
+        ],
+        "support": 0.83,
+        "numbers": []
+      },
+      {
+        "where": "sections[2].blocks[6]",
+        "sentence": "Native work now carries more attention on data protection, secure authentication and performance as part of the lifecycle.",
+        "sources": [
+          "S9"
+        ],
+        "support": 0.75,
+        "numbers": []
+      },
+      {
+        "where": "sections[2].blocks[8]",
+        "sentence": "It needs no store review, it updates for everyone at once, and it is easier to maintain than traditional installed software.",
+        "sources": [
+          "S11"
+        ],
+        "support": 0.5,
+        "numbers": []
+      },
+      {
+        "where": "sections[3].blocks[2]",
+        "sentence": "Frontend work still rests on HTML, CSS and JavaScript, with modern frameworks such as React, Angular and Vue on top.",
+        "sources": [
+          "S14"
+        ],
+        "support": 0.62,
+        "numbers": []
+      },
+      {
+        "where": "sections[3].blocks[4]",
+        "sentence": "Current practice leans toward serverless designs, microservices and API-first development, which make applications easier to scale and maintain.",
+        "sources": [
+          "S15"
+        ],
+        "support": 0.64,
+        "numbers": []
+      },
+      {
+        "where": "sections[3].blocks[4]",
+        "sentence": "Clients and servers then talk through REST, GraphQL or WebSockets.",
+        "sources": [
+          "S16"
+        ],
+        "support": 0.5,
+        "numbers": []
+      },
+      {
+        "where": "sections[6].blocks[8]",
+        "sentence": "Secure authentication, data protection and performance tuning are easier to plan early than to add later.",
+        "sources": [
+          "S9"
+        ],
+        "support": 0.45,
+        "numbers": []
+      },
+      {
+        "where": "sections[6].blocks[9]",
+        "sentence": "Web needs no store review and updates for all users at once",
+        "sources": [
+          "S11"
+        ],
+        "support": 0.33,
+        "numbers": []
+      },
+      {
+        "where": "sections[6].blocks[9]",
+        "sentence": "Desktop-first designs often feel cramped on phones",
+        "sources": [
+          "S23"
+        ],
+        "support": 0.5,
+        "numbers": []
+      },
+      {
+        "where": "sections[6].blocks[9]",
+        "sentence": "Makes the system easier to scale and maintain",
+        "sources": [
+          "S15"
+        ],
+        "support": 0.6,
+        "numbers": []
+      },
+      {
+        "where": "sections[7].blocks[1]",
+        "sentence": "Ignoring performance and secure authentication",
+        "sources": [
+          "S9"
+        ],
+        "support": 0.75,
+        "numbers": []
+      },
+      {
+        "where": "sections[7].blocks[3]",
+        "sentence": "Desktop-first thinking dates from when desktops carried almost all web traffic.",
+        "sources": [
+          "S22"
+        ],
+        "support": 0.38,
+        "numbers": []
+      },
+      {
+        "where": "sections[7].blocks[3]",
+        "sentence": "Nearly 96% of users have met sites on their phones that were clearly not optimised for mobile.",
+        "sources": [
+          "S23"
+        ],
+        "support": 0.62,
+        "numbers": [
+          "96%"
+        ]
+      }
+    ],
+    "weak_support": [],
+    "sources": [
+      {
+        "id": "S4",
+        "url": "https://devspheretechnologies.com/web-and-mobile-application-development",
+        "title": "Web and Mobile Application Development: 2026 Guide + Costs",
+        "date": "2025-09-09",
+        "fresh": true
+      },
+      {
+        "id": "S9",
+        "url": "https://blog.intimetec.com/a-guide-to-mobile-and-web-app-development",
+        "title": "A Guide to Mobile & Web App Development (Updated for 2026)",
+        "date": "2026-07-30",
+        "fresh": true
+      },
+      {
+        "id": "S10",
+        "url": "https://blog.intimetec.com/a-guide-to-mobile-and-web-app-development",
+        "title": "A Guide to Mobile & Web App Development (Updated for 2026)",
+        "date": "2026-07-30",
+        "fresh": true
+      },
+      {
+        "id": "S11",
+        "url": "https://blog.intimetec.com/a-guide-to-mobile-and-web-app-development",
+        "title": "A Guide to Mobile & Web App Development (Updated for 2026)",
+        "date": "2026-07-30",
+        "fresh": true
+      },
+      {
+        "id": "S12",
+        "url": "https://blog.intimetec.com/a-guide-to-mobile-and-web-app-development",
+        "title": "A Guide to Mobile & Web App Development (Updated for 2026)",
+        "date": "2026-07-30",
+        "fresh": true
+      },
+      {
+        "id": "S14",
+        "url": "https://blog.intimetec.com/a-guide-to-mobile-and-web-app-development",
+        "title": "A Guide to Mobile & Web App Development (Updated for 2026)",
+        "date": "2026-07-30",
+        "fresh": true
+      },
+      {
+        "id": "S15",
+        "url": "https://blog.intimetec.com/a-guide-to-mobile-and-web-app-development",
+        "title": "A Guide to Mobile & Web App Development (Updated for 2026)",
+        "date": "2026-07-30",
+        "fresh": true
+      },
+      {
+        "id": "S16",
+        "url": "https://blog.intimetec.com/a-guide-to-mobile-and-web-app-development",
+        "title": "A Guide to Mobile & Web App Development (Updated for 2026)",
+        "date": "2026-07-30",
+        "fresh": true
+      },
+      {
+        "id": "S17",
+        "url": "https://www.weweb.io/blog/how-to-build-a-mobile-responsive-web-app",
+        "title": "How to Build a Mobile Responsive Web App: 2026 Complete Guide",
+        "date": "2026-11-02",
+        "fresh": true
+      },
+      {
+        "id": "S18",
+        "url": "https://www.weweb.io/blog/how-to-build-a-mobile-responsive-web-app",
+        "title": "How to Build a Mobile Responsive Web App: 2026 Complete Guide",
+        "date": "2026-11-02",
+        "fresh": true
+      },
+      {
+        "id": "S21",
+        "url": "https://www.weweb.io/blog/how-to-build-a-mobile-responsive-web-app",
+        "title": "How to Build a Mobile Responsive Web App: 2026 Complete Guide",
+        "date": "2026-11-02",
+        "fresh": true
+      },
+      {
+        "id": "S22",
+        "url": "https://www.weweb.io/blog/how-to-build-a-mobile-responsive-web-app",
+        "title": "How to Build a Mobile Responsive Web App: 2026 Complete Guide",
+        "date": "2026-11-02",
+        "fresh": true
+      },
+      {
+        "id": "S23",
+        "url": "https://www.weweb.io/blog/how-to-build-a-mobile-responsive-web-app",
+        "title": "How to Build a Mobile Responsive Web App: 2026 Complete Guide",
+        "date": "2026-11-02",
+        "fresh": true
+      },
+      {
+        "id": "S24",
+        "url": "https://www.weweb.io/blog/how-to-build-a-mobile-responsive-web-app",
+        "title": "How to Build a Mobile Responsive Web App: 2026 Complete Guide",
+        "date": "2026-11-02",
+        "fresh": true
+      },
+      {
+        "id": "S27",
+        "url": "https://www.intelivita.com/blog/mobile-web-development/",
+        "title": "Mobile Web Development: Definition, Frameworks, Programming Languages, Process",
+        "date": "2025-10-22",
+        "fresh": true
+      },
+      {
+        "id": "S28",
+        "url": "https://www.intelivita.com/blog/mobile-web-development/",
+        "title": "Mobile Web Development: Definition, Frameworks, Programming Languages, Process",
+        "date": "2025-10-22",
+        "fresh": true
+      },
+      {
+        "id": "S29",
+        "url": "https://www.intelivita.com/blog/mobile-web-development/",
+        "title": "Mobile Web Development: Definition, Frameworks, Programming Languages, Process",
+        "date": "2025-10-22",
+        "fresh": true
+      }
+    ],
+    "freshness": {
+      "run_date": "2026-11-03",
+      "last_updated": "2026-11-03",
+      "review_by": "2027-05-02",
+      "newest_source": "2026-11-02",
+      "oldest_source": "2025-09-09",
+      "undated_sources": [],
+      "stale_sources": []
+    },
+    "how_checked": "Every number must be the current year, a small count, in the client's own content, or cited [S#] to a source dated within 730 days whose passage contains it; cited sentences need >= 0.25 content-word support from the cited passage."
+  },
+  "json_ld": {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "@id": "https://lakshaygoyal.in/blog/building-mobile-web-products#webpage",
+        "url": "https://lakshaygoyal.in/blog/building-mobile-web-products",
+        "name": "Building Mobile and Web Products: Skills Guide 2026",
+        "description": "A practical guide to building mobile and web products: the skills, decisions and trade-offs that matter when you ship both, from architecture to launch.",
+        "isPartOf": {
+          "@id": "https://lakshaygoyal.in/#website"
+        },
+        "inLanguage": "en",
+        "breadcrumb": {
+          "@id": "https://lakshaygoyal.in/blog/building-mobile-web-products#breadcrumb"
+        },
+        "primaryImageOfPage": {
+          "@id": "https://lakshaygoyal.in/blog/building-mobile-web-products#image-1"
+        },
+        "image": {
+          "@id": "https://lakshaygoyal.in/blog/building-mobile-web-products#image-1"
+        },
+        "datePublished": "2026-11-03",
+        "dateModified": "2026-11-03",
+        "mainEntity": {
+          "@id": "https://lakshaygoyal.in/blog/building-mobile-web-products#article"
+        }
+      },
+      {
+        "@type": "BlogPosting",
+        "@id": "https://lakshaygoyal.in/blog/building-mobile-web-products#article",
+        "headline": "Building Mobile and Web Products: The Skills That Matter in Practice",
+        "description": "A practical guide to building mobile and web products: the skills, decisions and trade-offs that matter when you ship both, from architecture to launch.",
+        "url": "https://lakshaygoyal.in/blog/building-mobile-web-products",
+        "mainEntityOfPage": {
+          "@id": "https://lakshaygoyal.in/blog/building-mobile-web-products#webpage"
+        },
+        "isPartOf": {
+          "@id": "https://lakshaygoyal.in/blog/building-mobile-web-products#webpage"
+        },
+        "author": {
+          "@id": "https://lakshaygoyal.in/#person"
+        },
+        "publisher": {
+          "@id": "https://lakshaygoyal.in/#person"
+        },
+        "image": [
+          {
+            "@id": "https://lakshaygoyal.in/blog/building-mobile-web-products#image-1"
+          },
+          {
+            "@id": "https://lakshaygoyal.in/blog/building-mobile-web-products#image-2"
+          },
+          {
+            "@id": "https://lakshaygoyal.in/blog/building-mobile-web-products#image-3"
+          },
+          {
+            "@id": "https://lakshaygoyal.in/blog/building-mobile-web-products#image-4"
+          }
+        ],
+        "inLanguage": "en",
+        "datePublished": "2026-11-03",
+        "dateModified": "2026-11-03",
+        "wordCount": 2587,
+        "articleSection": "Software Engineering",
+        "keywords": "mobile development, web development, software engineering, product engineering, engineering skills"
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://lakshaygoyal.in/#website",
+        "url": "https://lakshaygoyal.in/",
+        "name": "Lakshay Goyal",
+        "publisher": {
+          "@id": "https://lakshaygoyal.in/#person"
+        },
+        "inLanguage": "en"
+      },
+      {
+        "@type": "Person",
+        "@id": "https://lakshaygoyal.in/#person",
+        "name": "Lakshay Goyal",
+        "url": "https://lakshaygoyal.in/"
+      },
+      {
+        "@type": "ImageObject",
+        "@id": "https://lakshaygoyal.in/blog/building-mobile-web-products#image-1",
+        "url": "https://lakshaygoyal.in/Image/ExnessMobile.png",
+        "contentUrl": "https://lakshaygoyal.in/Image/ExnessMobile.png",
+        "caption": "Mobile screen of a trading product interface from selected work"
+      },
+      {
+        "@type": "ImageObject",
+        "@id": "https://lakshaygoyal.in/blog/building-mobile-web-products#image-2",
+        "url": "https://lakshaygoyal.in/Image/ExnessWeb.png",
+        "contentUrl": "https://lakshaygoyal.in/Image/ExnessWeb.png",
+        "caption": "Web version of the same product interface on a wide screen"
+      },
+      {
+        "@type": "ImageObject",
+        "@id": "https://lakshaygoyal.in/blog/building-mobile-web-products#image-3",
+        "url": "https://lakshaygoyal.in/Image/UnlovableMobile.png",
+        "contentUrl": "https://lakshaygoyal.in/Image/UnlovableMobile.png",
+        "caption": "Mobile interface of a project from selected work"
+      },
+      {
+        "@type": "ImageObject",
+        "@id": "https://lakshaygoyal.in/blog/building-mobile-web-products#image-4",
+        "url": "https://lakshaygoyal.in/Image/UnlovableWeb.png",
+        "contentUrl": "https://lakshaygoyal.in/Image/UnlovableWeb.png",
+        "caption": "Web interface of the same project on a larger screen"
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://lakshaygoyal.in/blog/building-mobile-web-products#faq",
+        "url": "https://lakshaygoyal.in/blog/building-mobile-web-products",
+        "isPartOf": {
+          "@id": "https://lakshaygoyal.in/#website"
+        },
+        "inLanguage": "en",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Should I build mobile or web first?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Start where your users already are, and design mobile-first either way. A responsive web app is often the fastest way to test an idea, since it needs no store review. Add a native or cross-platform app once the core flow works."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do I need to know both frontend and backend?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "You do not need to master both, but knowing the basics of each helps a lot. Engineers who understand the full stack debug faster, make better trade-offs and communicate well with designers and teammates."
+            }
+          }
+        ]
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://lakshaygoyal.in/blog/building-mobile-web-products#breadcrumb",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://lakshaygoyal.in/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Blog",
+            "item": "https://lakshaygoyal.in/blog"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Building Mobile and Web Products: The Skills That Matter in Practice",
+            "item": "https://lakshaygoyal.in/blog/building-mobile-web-products"
+          }
+        ]
+      }
+    ]
+  },
+  "link_from": [
+    {
+      "url": "/blog",
+      "anchor": "building mobile and web products guide"
+    },
+    {
+      "url": "/about",
+      "anchor": "skills for building mobile and web products"
+    }
+  ],
+  "meta": {
+    "skill": "article-writer",
+    "tier": "mid",
+    "attempts": 2,
+    "errors": [
+      "ValueError: article body is 973 words; competitors that rank average more, so write 2382-3500 words of real substance (examples, steps, specifics), not filler"
+    ]
+  },
+  "research": {
+    "keyword": "building mobile and web products",
+    "serp": {
+      "results": [
+        {
+          "position": 1,
+          "url": "https://devspheretechnologies.com/web-and-mobile-application-development",
+          "domain": "devspheretechnologies.com",
+          "title": "Web and Mobile Application Development: Best Guide for 2026",
+          "aggregator": false
+        },
+        {
+          "position": 2,
+          "url": "https://blog.intimetec.com/a-guide-to-mobile-and-web-app-development",
+          "domain": "blog.intimetec.com",
+          "title": "A Guide to Mobile & Web App Development (Updated for 2026)",
+          "aggregator": false
+        },
+        {
+          "position": 3,
+          "url": "https://www.siteground.com/academy/mobile-web-design",
+          "domain": "siteground.com",
+          "title": "Mobile Web Design: Best Practices, Tips, and Examples - SiteGround",
+          "aggregator": false
+        },
+        {
+          "position": 4,
+          "url": "https://www.weweb.io/blog/how-to-build-a-mobile-responsive-web-app",
+          "domain": "weweb.io",
+          "title": "How to Build a Mobile Responsive Web App: 2026 Complete Guide",
+          "aggregator": false
+        },
+        {
+          "position": 5,
+          "url": "https://www.intelivita.com/blog/mobile-web-development/",
+          "domain": "intelivita.com",
+          "title": "Mobile Web Development: Definition, Frameworks, Programming Languages ...",
+          "aggregator": false
+        },
+        {
+          "position": 6,
+          "url": "https://engineerbabu.com/blog/website-and-mobile-application-development/",
+          "domain": "engineerbabu.com",
+          "title": "5 Key Strategies for Website and Mobile Application Development",
+          "aggregator": false
+        },
+        {
+          "position": 7,
+          "url": "https://www.businessofapps.com/app-developers/mobile-web/",
+          "domain": "businessofapps.com",
+          "title": "Mobile Web App Developers (2026) - Business of Apps",
+          "aggregator": false
+        },
+        {
+          "position": 8,
+          "url": "https://bubble.io/blog/mobile-vs-web-development/",
+          "domain": "bubble.io",
+          "title": "Mobile App Development vs. Web App Development | Bubble",
+          "aggregator": false
+        }
+      ],
+      "people_also_ask": [],
+      "features": [],
+      "error": null
+    },
+    "pages": [
+      {
+        "url": "https://devspheretechnologies.com/web-and-mobile-application-development",
+        "title": "Web and Mobile Application Development: 2026 Guide + Costs",
+        "h1": null,
+        "description": "Learn how web and mobile app development works, which approach fits your business, and what it costs in 2026. Get a free quote from DevSphere",
+        "outline": [
+          "H2: What Is Web and Mobile Application Development?",
+          "H2: Why Businesses Need Web and Mobile Applications",
+          "H2: Key Differences Between Web Apps and Mobile Apps",
+          "H2: Approaches to Mobile Web App Development",
+          "H2: Mobile Website Development vs. Mobile Apps Development",
+          "H2: The Mobile App Development Process",
+          "H2: Tools and Technologies for Web and Mobile Application Development",
+          "H2: Real-World Examples of Web and Mobile Application Development",
+          "H2: Choosing a Web and Mobile Application Development Company",
+          "H2: Best Practices for Web and Mobile App Development",
+          "H2: Future of Web and Mobile Application Development in 2026",
+          "H2: Partner with Devsphere Technologies",
+          "H2: Conclusion",
+          "H2: FAQs",
+          "H3: 1. What is the difference between web apps and mobile apps?",
+          "H3: 2. How much does web and mobile application development cost?",
+          "H3: 3. What is mobile web app development?",
+          "H3: 4. Which is better: native app development or hybrid app development?",
+          "H3: 5. How do I choose a web and mobile app development company?",
+          "H3: DevSphere Technologies"
+        ],
+        "word_count": 1408,
+        "published": "2025-09-09",
+        "modified": null,
+        "formats": {
+          "table": 1,
+          "ol": 2,
+          "ul": 11,
+          "images": 9,
+          "video": 0,
+          "code": 0
+        },
+        "faq": true,
+        "schema_types": [
+          "WebSite",
+          "SearchAction",
+          "EntryPoint",
+          "Organization",
+          "ImageObject"
+        ]
+      },
+      {
+        "url": "https://blog.intimetec.com/a-guide-to-mobile-and-web-app-development",
+        "title": "A Guide to Mobile & Web App Development (Updated for 2026)",
+        "h1": "Mobile and Web App Development Guide for Modern Businesses in 2026",
+        "description": "Explore the future of web and mobile app development in 2026. Learn about custom solutions, full stack approaches, costs, and how to hire the right developer.",
+        "outline": [
+          "H2: Mobile App Development",
+          "H3: Native App Development",
+          "H3: Cross-Platform App Development",
+          "H2: Web App Development",
+          "H3: Progressive Web Apps (PWAs)",
+          "H3: Responsive Web Apps",
+          "H2: Full Stack Web and Mobile Development",
+          "H3: What’s trending in 2026",
+          "H2: Core Development Components",
+          "H3: 1. Front-End Development",
+          "H3: 2. Back-End Development",
+          "H3: 3. Database Management",
+          "H3: Frameworks and Tools",
+          "H2: Cost Factors in 2026",
+          "H2: How to Choose the Right Development Partner",
+          "H2: The Future of Web and Mobile App Development",
+          "H2: Final Words",
+          "H2: FAQs",
+          "H3: Feel like you could use a hand?",
+          "H2: Insights and growth tools"
+        ],
+        "word_count": 3163,
+        "published": "2024-03-13",
+        "modified": "2026-07-30",
+        "formats": {
+          "table": 0,
+          "ol": 0,
+          "ul": 58,
+          "images": 15,
+          "video": 0,
+          "code": 0
+        },
+        "faq": true,
+        "schema_types": [
+          "BlogPosting",
+          "Organization",
+          "ImageObject",
+          "Person",
+          "WebPage",
+          "BreadcrumbList",
+          "ListItem",
+          "FAQPage",
+          "Question",
+          "Answer"
+        ]
+      },
+      {
+        "url": "https://www.siteground.com/academy/mobile-web-design",
+        "error": "HTTP 403"
+      },
+      {
+        "url": "https://www.weweb.io/blog/how-to-build-a-mobile-responsive-web-app",
+        "title": "How to Build a Mobile Responsive Web App: 2026 Complete Guide",
+        "h1": "How to Build a Mobile Responsive Web App: 2026 Complete Guide",
+        "description": "Step-by-step guide to building a mobile-responsive web app in 2026. Covers mobile-first strategy, grids, media queries, testing, and no-code tools.",
+        "outline": [
+          "H2: What is a Mobile Responsive Web App?",
+          "H2: Foundational Strategies: Mobile First vs Desktop First",
+          "H3: Mobile First Design",
+          "H3: Desktop First Design",
+          "H2: The Building Blocks of a Mobile Responsive Web App",
+          "H3: Setting the Stage: Viewport and Media Queries",
+          "H3: Structuring the Layout: Grids and Layouts",
+          "H3: Defining the Changes: Breakpoint Strategy",
+          "H2: Responsive vs. Adaptive: What’s the Difference?",
+          "H2: Making Content Truly Responsive",
+          "H3: Responsive Images for Speed and Clarity",
+          "H3: Responsive Typography and Readability",
+          "H3: Sizing Content to the Viewport",
+          "H2: Advanced Techniques and Best Practices",
+          "H3: Beyond Screen Size: Device Capability Media Queries",
+          "H3: The Golden Rule: Avoid Hiding Content",
+          "H2: How to Test Your Mobile Responsive Web App",
+          "H2: How to Build a Responsive Web App in WeWeb",
+          "H3: Start with AI or a responsive template",
+          "H3: Customize your desktop, tablet, and mobile layouts"
+        ],
+        "word_count": 2794,
+        "published": null,
+        "modified": "2026-11-02",
+        "formats": {
+          "table": 0,
+          "ol": 0,
+          "ul": 13,
+          "images": 9,
+          "video": 1,
+          "code": 0
+        },
+        "faq": true,
+        "schema_types": []
+      },
+      {
+        "url": "https://www.intelivita.com/blog/mobile-web-development/",
+        "title": "Mobile Web Development: Definition, Frameworks, Programming Languages, Process",
+        "h1": null,
+        "description": "What is mobile web development and how does it work? Learn the best frameworks and tools, programming languages, how to create mobile-friendly websites, differences from mobile app development, how to choose the right company, and development costs.",
+        "outline": [
+          "H2: What Is Mobile Web Development?",
+          "H2: What Are the Best Frameworks and Tools for Mobile Web Development?",
+          "H3: Frontend Mobile Web Development Frameworks",
+          "H3: Frontend Mobile Web Development Tools",
+          "H3: Back-end and API Mobile Web Development Tools",
+          "H3: Progressive Web App (PWA) Tools",
+          "H2: What Programming Languages are Used for Mobile Web Development?",
+          "H3: Frontend Mobile Web Development Programming Languages",
+          "H3: Backend Mobile Web Development Programming Languages",
+          "H2: How to Create a Mobile-Friendly Website?",
+          "H3: 1. Use a Mobile-First Design Approach",
+          "H3: 2. Implement Responsive Layouts",
+          "H3: 3. Optimize Images and Assets",
+          "H3: 4. Simplify Navigation and Content",
+          "H3: 5. Test and Validate Mobile Performance",
+          "H3: What are Progressive Web Apps?",
+          "H3: What Is the Difference Between Mobile Web Development and Mobile App Development?",
+          "H3: What Is the Difference Between Mobile Web Development and Native App Development?",
+          "H3: What Is the Difference Between Mobile Web Development and Web Development?",
+          "H3: How To Optimize Mobile Web Performance?"
+        ],
+        "word_count": 4044,
+        "published": "2025-07-18",
+        "modified": "2025-10-22",
+        "formats": {
+          "table": 0,
+          "ol": 0,
+          "ul": 19,
+          "images": 18,
+          "video": 0,
+          "code": 0
+        },
+        "faq": false,
+        "schema_types": [
+          "BreadcrumbList",
+          "ListItem",
+          "BlogPosting",
+          "Person",
+          "ImageObject",
+          "WebPage",
+          "WebSite",
+          "Organization"
+        ]
+      }
+    ],
+    "patterns": {
+      "pages": 4,
+      "word_count": {
+        "min": 1408,
+        "median": 2978,
+        "max": 4044
+      },
+      "h2": {
+        "median": 10
+      },
+      "h3": {
+        "median": 16
+      },
+      "formats": {
+        "table": 0.25,
+        "ordered_list": 0.25,
+        "unordered_list": 1.0,
+        "images": 1.0,
+        "video": 0.25,
+        "faq": 0.75,
+        "howto": 0.0,
+        "code": 0.0,
+        "quote": 0.25
+      },
+      "images_median": 12,
+      "image_alt_coverage": 0.81,
+      "internal_links_median": 14,
+      "common_subtopics": [
+        {
+          "heading": "Key Differences Between Web Apps and Mobile Apps",
+          "pages": 3,
+          "variants": [
+            "Key Differences Between Web Apps and Mobile Apps",
+            "1. What is the difference between web apps and mobile apps?",
+            "What is the difference between a mobile app and a mobile responsive web app?",
+            "What Is the Difference Between Mobile Web Development and Mobile App Development?"
+          ]
+        },
+        {
+          "heading": "What Is Web and Mobile Application Development?",
+          "pages": 3,
+          "variants": [
+            "What Is Web and Mobile Application Development?",
+            "Why Businesses Need Web and Mobile Applications",
+            "Approaches to Mobile Web App Development",
+            "Tools and Technologies for Web and Mobile Application Development"
+          ]
+        },
+        {
+          "heading": "4. Which is better: native app development or hybrid app development?",
+          "pages": 2,
+          "variants": [
+            "4. Which is better: native app development or hybrid app development?",
+            "Native App Development"
+          ]
+        },
+        {
+          "heading": "Conclusion",
+          "pages": 2,
+          "variants": [
+            "Conclusion"
+          ]
+        },
+        {
+          "heading": "FAQs",
+          "pages": 2,
+          "variants": [
+            "FAQs"
+          ]
+        },
+        {
+          "heading": "Mobile Website Development vs. Mobile Apps Development",
+          "pages": 2,
+          "variants": [
+            "Mobile Website Development vs. Mobile Apps Development",
+            "The Mobile App Development Process",
+            "Best Practices for Web and Mobile App Development",
+            "3. What is mobile web app development?"
+          ]
+        },
+        {
+          "heading": "Progressive Web Apps (PWAs)",
+          "pages": 2,
+          "variants": [
+            "Progressive Web Apps (PWAs)",
+            "Progressive Web App (PWA) Tools",
+            "What are Progressive Web Apps?"
+          ]
+        },
+        {
+          "heading": "Related articles",
+          "pages": 2,
+          "variants": [
+            "Related articles",
+            "Related Articles"
+          ]
+        },
+        {
+          "heading": "Responsive Web Apps",
+          "pages": 2,
+          "variants": [
+            "Responsive Web Apps",
+            "What is a Mobile Responsive Web App?",
+            "The Building Blocks of a Mobile Responsive Web App",
+            "How to Test Your Mobile Responsive Web App"
+          ]
+        }
+      ],
+      "question_headings": [
+        "What Is Web and Mobile Application Development?",
+        "1. What is the difference between web apps and mobile apps?",
+        "2. How much does web and mobile application development cost?",
+        "3. What is mobile web app development?",
+        "4. Which is better: native app development or hybrid app development?",
+        "5. How do I choose a web and mobile app development company?",
+        "Ready to get the hard stuff right?",
+        "Feel like you could use a hand?",
+        "Custom Software Development What Challenges Can an App Developer Face in App Development?",
+        "UX/UI What is the Importance of User Experience (UX) in Mobile App Development?",
+        "What is a Mobile Responsive Web App?",
+        "Responsive vs. Adaptive: What’s the Difference?",
+        "What makes a web app mobile responsive?",
+        "Why is a mobile responsive web app important for SEO?",
+        "What is the difference between a mobile app and a mobile responsive web app?",
+        "How do I make my existing web app responsive?",
+        "Is mobile first always the best approach?",
+        "What Is Mobile Web Development?",
+        "What Are the Best Frameworks and Tools for Mobile Web Development?",
+        "What Programming Languages are Used for Mobile Web Development?"
+      ],
+      "title_patterns": {
+        "number": 0.08,
+        "year": 0.58,
+        "brackets": 0.25,
+        "question": 0.0,
+        "colon": 0.75,
+        "how_to": 0.17,
+        "listicle": 0.08,
+        "guide": 0.5,
+        "length_median": 60,
+        "power_words": [
+          "best",
+          "complete",
+          "examples",
+          "guide",
+          "how to",
+          "strategies",
+          "tips"
+        ]
+      },
+      "slug": {
+        "words_median": 6,
+        "with_year": 0.0,
+        "with_digits_id": 0.0
+      },
+      "freshness": {
+        "dated": 1.0,
+        "newest": "2026-11-02",
+        "median_age_days": 236,
+        "stale_share": 0.0
+      },
+      "schema_types": {
+        "Organization": 3,
+        "ImageObject": 3,
+        "WebSite": 2,
+        "BlogPosting": 2,
+        "Person": 2,
+        "WebPage": 2,
+        "BreadcrumbList": 2,
+        "ListItem": 2,
+        "SearchAction": 1,
+        "EntryPoint": 1,
+        "FAQPage": 1,
+        "Question": 1,
+        "Answer": 1
+      },
+      "benchmarks": {
+        "target_words": 2978,
+        "min_h2": 10,
+        "needs_table": false,
+        "needs_faq": true,
+        "needs_images": true
+      }
+    },
+    "titles": [
+      "Web and Mobile Application Development: 2026 Guide + Costs",
+      "A Guide to Mobile & Web App Development (Updated for 2026)",
+      "How to Build a Mobile Responsive Web App: 2026 Complete Guide",
+      "Mobile Web Development: Definition, Frameworks, Programming Languages, Process",
+      "Web and Mobile Application Development: Best Guide for 2026",
+      "Mobile Web Design: Best Practices, Tips, and Examples - SiteGround",
+      "Mobile Web Development: Definition, Frameworks, Programming Languages ...",
+      "5 Key Strategies for Website and Mobile Application Development",
+      "Mobile Web App Developers (2026) - Business of Apps",
+      "Mobile App Development vs. Web App Development | Bubble"
+    ],
+    "sources": [
+      {
+        "id": "S1",
+        "url": "https://devspheretechnologies.com/web-and-mobile-application-development",
+        "title": "Web and Mobile Application Development: 2026 Guide + Costs",
+        "date": "2025-09-09",
+        "passage": "This guide will explain web and mobile application development in detail, covering methods, tools, benefits, and best practices. By the end, you will have clear insights into how businesses and developers are shaping the future of apps in 2026. Planning to build an app for your business? Our team handles web and mobile app development from idea to launch. Get a free quote within 24 hours."
+      },
+      {
+        "id": "S2",
+        "url": "https://devspheretechnologies.com/web-and-mobile-application-development",
+        "title": "Web and Mobile Application Development: 2026 Guide + Costs",
+        "date": "2025-09-09",
+        "passage": "A strong example is choosing experts who also provide android mobile app development to expand reach.At DevSphere Technologies, we have built web and mobile apps for 200+ businesses since 2018. You get one team for design, development, and support after launch. See our app development services or view our portfolio."
+      },
+      {
+        "id": "S3",
+        "url": "https://devspheretechnologies.com/web-and-mobile-application-development",
+        "title": "Web and Mobile Application Development: 2026 Guide + Costs",
+        "date": "2025-09-09",
+        "passage": "Need a web app, a mobile app, or both? We plan, design, build, and support your app from start to finish. We work with startups and growing businesses in the US, UK, and beyond.Tell us about your idea, and we will send you a clear plan and price estimate within 24 hours.Get a free app quote | Explore our mobile app development services"
+      },
+      {
+        "id": "S4",
+        "url": "https://devspheretechnologies.com/web-and-mobile-application-development",
+        "title": "Web and Mobile Application Development: 2026 Guide + Costs",
+        "date": "2025-09-09",
+        "passage": "Web and mobile application development is not just about coding. It is about creating experiences that connect businesses with users effectively. From mobile-friendly websites to advanced mobile apps, the opportunities are endless. Companies that adopt modern tools, prioritize user experience, and work with the right development teams are more likely to succeed in 2026 and beyond."
+      },
+      {
+        "id": "S5",
+        "url": "https://devspheretechnologies.com/web-and-mobile-application-development",
+        "title": "Web and Mobile Application Development: 2026 Guide + Costs",
+        "date": "2025-09-09",
+        "passage": "Costs vary based on complexity. A simple app may cost $10,000–$30,000, while complex enterprise apps can exceed $150,000."
+      },
+      {
+        "id": "S6",
+        "url": "https://devspheretechnologies.com/web-and-mobile-application-development",
+        "title": "Web and Mobile Application Development: 2026 Guide + Costs",
+        "date": "2025-09-09",
+        "passage": "At Devsphere Technologies, we are the designers of digital success. Since 2018, our agency has been making outstanding solutions that help brands turn into market leaders. Just like a light house that leads ships away from the stormy waters and uncertainty of the deep sea, Devsphere Technologies helps businesses in the USA and around the world, find growth, creativity, and endless opportunities."
+      },
+      {
+        "id": "S7",
+        "url": "https://devspheretechnologies.com/web-and-mobile-application-development",
+        "title": "Web and Mobile Application Development: 2026 Guide + Costs",
+        "date": "2025-09-09",
+        "passage": "If you are wondering how much does it cost to build an app in 2026, an honest answer would be, “It costs between $15,000 and $500,000…"
+      },
+      {
+        "id": "S8",
+        "url": "https://devspheretechnologies.com/web-and-mobile-application-development",
+        "title": "Web and Mobile Application Development: 2026 Guide + Costs",
+        "date": "2025-09-09",
+        "passage": "The software development landscape has reached a historic turning point. In early 2026, the transition from “AI-assisted coding” to “agentic software engineering” is complete. For modern…"
+      },
+      {
+        "id": "S9",
+        "url": "https://blog.intimetec.com/a-guide-to-mobile-and-web-app-development",
+        "title": "A Guide to Mobile & Web App Development (Updated for 2026)",
+        "date": "2026-07-30",
+        "passage": "From a 2026 perspective, native development is also evolving with a stronger focus on security and compliance. Businesses now need to consider data protection regulations, secure authentication, and performance optimization as part of the development lifecycle."
+      },
+      {
+        "id": "S10",
+        "url": "https://blog.intimetec.com/a-guide-to-mobile-and-web-app-development",
+        "title": "A Guide to Mobile & Web App Development (Updated for 2026)",
+        "date": "2026-07-30",
+        "passage": "Cross-platform app development allows developers to create apps using a single codebase that works across multiple platforms. Frameworks like Flutter 3 and React Native 2026 have made this approach more powerful than ever."
+      },
+      {
+        "id": "S11",
+        "url": "https://blog.intimetec.com/a-guide-to-mobile-and-web-app-development",
+        "title": "A Guide to Mobile & Web App Development (Updated for 2026)",
+        "date": "2026-07-30",
+        "passage": "What makes web apps powerful today is their flexibility. They work across devices, update instantly, and are easier to maintain compared to traditional software. As we move into 2026, web apps are becoming smarter, faster, and more app-like than ever before."
+      },
+      {
+        "id": "S12",
+        "url": "https://blog.intimetec.com/a-guide-to-mobile-and-web-app-development",
+        "title": "A Guide to Mobile & Web App Development (Updated for 2026)",
+        "date": "2026-07-30",
+        "passage": "In 2026, enterprise adoption of PWAs has grown significantly. Businesses are using progressive web app development to deliver fast, reliable, and engaging user experiences without the friction of app store approvals."
+      },
+      {
+        "id": "S13",
+        "url": "https://blog.intimetec.com/a-guide-to-mobile-and-web-app-development",
+        "title": "A Guide to Mobile & Web App Development (Updated for 2026)",
+        "date": "2026-07-30",
+        "passage": "Responsive apps automatically adjust their layout based on the device, whether it is a desktop, tablet, or smartphone. In 2026, this approach has evolved further with AI-driven design systems that adapt layouts dynamically based on user behavior and device context."
+      },
+      {
+        "id": "S14",
+        "url": "https://blog.intimetec.com/a-guide-to-mobile-and-web-app-development",
+        "title": "A Guide to Mobile & Web App Development (Updated for 2026)",
+        "date": "2026-07-30",
+        "passage": "At its core, front-end still relies on HTML, CSS, and JavaScript. But in 2026, things have evolved significantly. Developers now use advanced frameworks like React 19, Angular 16, and Vue 5 to build faster and more dynamic interfaces."
+      },
+      {
+        "id": "S15",
+        "url": "https://blog.intimetec.com/a-guide-to-mobile-and-web-app-development",
+        "title": "A Guide to Mobile & Web App Development (Updated for 2026)",
+        "date": "2026-07-30",
+        "passage": "Back-end development handles server logic, data processing, and database interactions. In 2026, the approach has shifted toward serverless architectures, microservices, and API-first development. These methods make applications more scalable and easier to maintain."
+      },
+      {
+        "id": "S16",
+        "url": "https://blog.intimetec.com/a-guide-to-mobile-and-web-app-development",
+        "title": "A Guide to Mobile & Web App Development (Updated for 2026)",
+        "date": "2026-07-30",
+        "passage": "Traditionally, this was done using REST APIs. In 2026, technologies like GraphQL, WebSockets, and AI-driven middleware have made this communication faster and more efficient."
+      },
+      {
+        "id": "S17",
+        "url": "https://www.weweb.io/blog/how-to-build-a-mobile-responsive-web-app",
+        "title": "How to Build a Mobile Responsive Web App: 2026 Complete Guide",
+        "date": "2026-11-02",
+        "passage": "Studies show that responsive layouts lead to about an 11% higher conversion rate on average."
+      },
+      {
+        "id": "S18",
+        "url": "https://www.weweb.io/blog/how-to-build-a-mobile-responsive-web-app",
+        "title": "How to Build a Mobile Responsive Web App: 2026 Complete Guide",
+        "date": "2026-11-02",
+        "passage": "On the flip side, up to 73% of visitors will leave a site within seconds if it’s not mobile friendly."
+      },
+      {
+        "id": "S19",
+        "url": "https://www.weweb.io/blog/how-to-build-a-mobile-responsive-web-app",
+        "title": "How to Build a Mobile Responsive Web App: 2026 Complete Guide",
+        "date": "2026-11-02",
+        "passage": "The business impact is direct, with 62% of companies reporting increased sales after switching to a responsive website design."
+      },
+      {
+        "id": "S20",
+        "url": "https://www.weweb.io/blog/how-to-build-a-mobile-responsive-web-app",
+        "title": "How to Build a Mobile Responsive Web App: 2026 Complete Guide",
+        "date": "2026-11-02",
+        "passage": "This strategy became the gold standard for a reason. Global mobile web traffic overtook desktop for the first time in October 2016 and the gap has only widened since."
+      },
+      {
+        "id": "S21",
+        "url": "https://www.weweb.io/blog/how-to-build-a-mobile-responsive-web-app",
+        "title": "How to Build a Mobile Responsive Web App: 2026 Complete Guide",
+        "date": "2026-11-02",
+        "passage": "As of 2025, about 60.5% of all web traffic comes from mobile devices. Search engines have taken notice too. In 2018, Google officially rolled out mobile first indexing, meaning it primarily uses the mobile version of a website for indexing and ranking."
+      },
+      {
+        "id": "S22",
+        "url": "https://www.weweb.io/blog/how-to-build-a-mobile-responsive-web-app",
+        "title": "How to Build a Mobile Responsive Web App: 2026 Complete Guide",
+        "date": "2026-11-02",
+        "passage": "This was the default approach when desktop computers accounted for over 99% of web traffic back in 2009."
+      },
+      {
+        "id": "S23",
+        "url": "https://www.weweb.io/blog/how-to-build-a-mobile-responsive-web-app",
+        "title": "How to Build a Mobile Responsive Web App: 2026 Complete Guide",
+        "date": "2026-11-02",
+        "passage": "Today, this strategy often leads to a compromised mobile experience. It can be difficult to cram a feature rich desktop design onto a small screen without it feeling cluttered or broken. In fact, nearly 96% of users have run into websites on their phones that were clearly not optimized for mobile, a common result of a desktop first mindset."
+      },
+      {
+        "id": "S24",
+        "url": "https://www.weweb.io/blog/how-to-build-a-mobile-responsive-web-app",
+        "title": "How to Build a Mobile Responsive Web App: 2026 Complete Guide",
+        "date": "2026-11-02",
+        "passage": "Viewport Meta Tag: This is a tiny but mighty line of HTML code: <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">. It tells the mobile browser to set the page width to the device’s actual screen width and to load the page at a 100% zoom level. Without it, your responsive design won’t work, and mobile browsers will often show a zoomed out, tiny version of the desktop site."
+      },
+      {
+        "id": "S25",
+        "url": "https://www.intelivita.com/blog/mobile-web-development/",
+        "title": "Mobile Web Development: Definition, Frameworks, Programming Languages, Process",
+        "date": "2025-10-22",
+        "passage": "According to Statista, mobile devices accounted for 58.67% of global website traffic as of 2024, and Google’s mobile-first indexing makes mobile usability critical for visibility."
+      },
+      {
+        "id": "S26",
+        "url": "https://www.intelivita.com/blog/mobile-web-development/",
+        "title": "Mobile Web Development: Definition, Frameworks, Programming Languages, Process",
+        "date": "2025-10-22",
+        "passage": "Mobile web development is important because over 55% of global web traffic now comes from mobile devices, and U.S. users alone spend an average of 4 hours per day on mobile internet, according to Statista. If your site isn’t mobile-friendly, you risk losing visibility, engagement, and revenue, especially since Google’s algorithm now prioritizes mobile usability in its search rankings."
+      },
+      {
+        "id": "S27",
+        "url": "https://www.intelivita.com/blog/mobile-web-development/",
+        "title": "Mobile Web Development: Definition, Frameworks, Programming Languages, Process",
+        "date": "2025-10-22",
+        "passage": "React Native: Developed by Facebook in 2015, React Native allows you to build mobile apps using JavaScript and React. It’s widely adopted, easy for React developers to pick up, and integrates with tools like Expo and VSCode. React native provides near-native performance but requires native code for advanced features."
+      },
+      {
+        "id": "S28",
+        "url": "https://www.intelivita.com/blog/mobile-web-development/",
+        "title": "Mobile Web Development: Definition, Frameworks, Programming Languages, Process",
+        "date": "2025-10-22",
+        "passage": "Flutter: Released by Google in 2017, Flutter uses the Dart programming language to build high-performance, cross-platform mobile apps. It comes with its rich widget library and works well with tools like Android Studio and Visual Studio Code. Flutter is powerful and fast, but has a steeper learning curve due to Dart."
+      },
+      {
+        "id": "S29",
+        "url": "https://www.intelivita.com/blog/mobile-web-development/",
+        "title": "Mobile Web Development: Definition, Frameworks, Programming Languages, Process",
+        "date": "2025-10-22",
+        "passage": "Ionic: Launched in 2013, Ionic is built on top of web technologies like HTML, CSS, and JavaScript and works well with Angular, React, or Vue. It uses a Capacitor for native functionality and pairs well with any modern code editor. It’s easy to learn for web developers, but it does not match native performance in complex apps."
+      },
+      {
+        "id": "S30",
+        "url": "https://www.intelivita.com/blog/mobile-web-development/",
+        "title": "Mobile Web Development: Definition, Frameworks, Programming Languages, Process",
+        "date": "2025-10-22",
+        "passage": "Xamarin: Owned by Microsoft and released in 2011, Xamarin allows developers to create apps using C# and .NET. It’s integrated with Visual Studio and offers native-like performance, especially on Windows platforms. It’s powerful but more suited to teams already working in the Microsoft ecosystem."
+      }
+    ],
+    "errors": [
+      "https://www.siteground.com/academy/mobile-web-design: HTTP 403"
+    ]
+  }
+}

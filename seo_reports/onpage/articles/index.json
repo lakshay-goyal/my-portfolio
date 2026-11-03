@@ -1,0 +1,466 @@
+{
+  "schema": "seo-onpage/2.0",
+  "status": "done",
+  "reason": null,
+  "stage": null,
+  "errors": null,
+  "plan": {
+    "meta": {
+      "skill": "article-planner",
+      "tier": "mid",
+      "attempts": 1,
+      "errors": []
+    },
+    "url_prefix": "/blog",
+    "briefs": [
+      {
+        "primary_keyword": "books for software engineers",
+        "secondary_keywords": [
+          "best books for developers",
+          "books every software engineer should read",
+          "non-technical books for engineers"
+        ],
+        "questions": [
+          "What ideas did Lakshay Goyal take from these books?",
+          "What books has Lakshay Goyal read?"
+        ],
+        "topics": [
+          {
+            "id": "t10",
+            "text": "books for software engineers",
+            "kind": "seed",
+            "page": null
+          },
+          {
+            "id": "t5",
+            "text": "What ideas did Lakshay Goyal take from these books?",
+            "kind": "question",
+            "page": "/bookshelf"
+          }
+        ],
+        "search_intent": "informational",
+        "format": "listicle",
+        "angle": "A first-hand reading list from a working engineer, with the specific ideas taken from each book and how they changed day-to-day engineering work.",
+        "audience": "Software engineers and developers looking for books worth reading beyond technical manuals",
+        "working_title": "Books for Software Engineers: Ideas I Took From My Reading",
+        "slug": "software-engineer-reading-list",
+        "url": "/blog/software-engineer-reading-list",
+        "pillar_url": "/bookshelf"
+      },
+      {
+        "primary_keyword": "12 week year review",
+        "secondary_keywords": [
+          "the 12 week year takeaways",
+          "12 week year for engineers",
+          "12 week year planning"
+        ],
+        "questions": [
+          "What is Lakshay Goyal's take on The 12 Week Year?"
+        ],
+        "topics": [
+          {
+            "id": "t3",
+            "text": "What is Lakshay Goyal's take on The 12 Week Year?",
+            "kind": "question",
+            "page": "/bookshelf"
+          }
+        ],
+        "search_intent": "informational",
+        "format": "explainer",
+        "angle": "A review of The 12 Week Year through the lens of an engineer planning product work, showing which ideas worked in practice and which did not.",
+        "audience": "Software engineers and professionals interested in goal setting and productivity systems",
+        "working_title": "The 12 Week Year Review: Lessons for Software Engineers",
+        "slug": "twelve-week-year-review",
+        "url": "/blog/twelve-week-year-review",
+        "pillar_url": "/bookshelf"
+      },
+      {
+        "primary_keyword": "building mobile and web products",
+        "secondary_keywords": [
+          "mobile and web product development",
+          "software engineer product experience",
+          "how to build web products"
+        ],
+        "questions": [],
+        "topics": [
+          {
+            "id": "t6",
+            "text": "building mobile and web products",
+            "kind": "seed",
+            "page": null
+          },
+          {
+            "id": "t7",
+            "text": "software engineer work experience",
+            "kind": "seed",
+            "page": null
+          }
+        ],
+        "search_intent": "informational",
+        "format": "guide",
+        "angle": "Practical lessons from real work experience building both mobile and web products, covering decisions, trade-offs and what to do differently.",
+        "audience": "Software engineers, recruiters and people interested in mobile and web product development",
+        "working_title": "Building Mobile and Web Products: Lessons From Real Work",
+        "slug": "building-mobile-web-products-lessons",
+        "url": "/blog/building-mobile-web-products-lessons",
+        "pillar_url": "/about"
+      }
+    ]
+  },
+  "pool": [
+    {
+      "id": "t1",
+      "text": "What books has Lakshay Goyal read?",
+      "kind": "question",
+      "page": "/bookshelf"
+    },
+    {
+      "id": "t2",
+      "text": "What does Lakshay Goyal think of Freedom from the Known?",
+      "kind": "question",
+      "page": "/bookshelf"
+    },
+    {
+      "id": "t3",
+      "text": "What is Lakshay Goyal's take on The 12 Week Year?",
+      "kind": "question",
+      "page": "/bookshelf"
+    },
+    {
+      "id": "t4",
+      "text": "Which Osho books does Lakshay Goyal recommend?",
+      "kind": "question",
+      "page": "/bookshelf"
+    },
+    {
+      "id": "t5",
+      "text": "What ideas did Lakshay Goyal take from these books?",
+      "kind": "question",
+      "page": "/bookshelf"
+    },
+    {
+      "id": "t6",
+      "text": "building mobile and web products",
+      "kind": "seed",
+      "page": null
+    },
+    {
+      "id": "t7",
+      "text": "software engineer work experience",
+      "kind": "seed",
+      "page": null
+    },
+    {
+      "id": "t8",
+      "text": "selected software projects",
+      "kind": "seed",
+      "page": null
+    },
+    {
+      "id": "t9",
+      "text": "software engineering skills",
+      "kind": "seed",
+      "page": null
+    },
+    {
+      "id": "t10",
+      "text": "books for software engineers",
+      "kind": "seed",
+      "page": null
+    }
+  ],
+  "articles": [
+    {
+      "slug": "software-engineer-reading-list",
+      "url": "/blog/software-engineer-reading-list",
+      "primary_keyword": "books for software engineers",
+      "status": "done",
+      "title": "Books for Software Engineers: 2026 Reading List",
+      "h1": "Books for Software Engineers: What I Read and What I Took From Each",
+      "words": 1857,
+      "tags": [
+        "books",
+        "reading list",
+        "software engineering",
+        "developer growth",
+        "non-technical books"
+      ],
+      "fact_check": "pass",
+      "markdown": "articles/software-engineer-reading-list.md",
+      "file": "articles/software-engineer-reading-list.json"
+    },
+    {
+      "slug": "twelve-week-year-review",
+      "url": "/blog/twelve-week-year-review",
+      "primary_keyword": "12 week year review",
+      "status": "failed",
+      "errors": [
+        "ValueError: add an image (figure from assets or image_brief for a new one) to make the article visual and scannable",
+        "ValueError: faq[0].answer copies a competitor phrase (\"12 week year get more done in 12 weeks than others do\"); write it in your own words"
+      ],
+      "file": "articles/twelve-week-year-review.json"
+    },
+    {
+      "slug": "building-mobile-web-products-lessons",
+      "url": "/blog/building-mobile-web-products-lessons",
+      "primary_keyword": "building mobile and web products",
+      "status": "done",
+      "title": "Building Mobile and Web Products: Lessons From Work",
+      "h1": "Building Mobile and Web Products: Practical Lessons From Real Work",
+      "words": 1961,
+      "tags": [
+        "mobile development",
+        "web development",
+        "software engineering",
+        "product building",
+        "lessons learned"
+      ],
+      "fact_check": "pass",
+      "markdown": "articles/building-mobile-web-products-lessons.md",
+      "file": "articles/building-mobile-web-products-lessons.json"
+    }
+  ],
+  "tags": {
+    "books": {
+      "url": "/blog/tags/books",
+      "articles": [
+        "/blog/software-engineer-reading-list"
+      ]
+    },
+    "reading list": {
+      "url": "/blog/tags/reading-list",
+      "articles": [
+        "/blog/software-engineer-reading-list"
+      ]
+    },
+    "software engineering": {
+      "url": "/blog/tags/software-engineering",
+      "articles": [
+        "/blog/software-engineer-reading-list",
+        "/blog/building-mobile-web-products-lessons"
+      ]
+    },
+    "developer growth": {
+      "url": "/blog/tags/developer-growth",
+      "articles": [
+        "/blog/software-engineer-reading-list"
+      ]
+    },
+    "non-technical books": {
+      "url": "/blog/tags/non-technical-books",
+      "articles": [
+        "/blog/software-engineer-reading-list"
+      ]
+    },
+    "mobile development": {
+      "url": "/blog/tags/mobile-development",
+      "articles": [
+        "/blog/building-mobile-web-products-lessons"
+      ]
+    },
+    "web development": {
+      "url": "/blog/tags/web-development",
+      "articles": [
+        "/blog/building-mobile-web-products-lessons"
+      ]
+    },
+    "product building": {
+      "url": "/blog/tags/product-building",
+      "articles": [
+        "/blog/building-mobile-web-products-lessons"
+      ]
+    },
+    "lessons learned": {
+      "url": "/blog/tags/lessons-learned",
+      "articles": [
+        "/blog/building-mobile-web-products-lessons"
+      ]
+    }
+  },
+  "site_changes": [
+    {
+      "id": "art_50ff95917a",
+      "type": "links.new",
+      "page": "/bookshelf",
+      "href": "/blog/software-engineer-reading-list",
+      "anchor": "books for software engineers reading list",
+      "html": "<a href=\"/blog/software-engineer-reading-list\">books for software engineers reading list</a>",
+      "status": "proposed",
+      "placement": "inside the paragraph about this topic, or a \"Related articles\" list at the end",
+      "rationale": "Internal link from an existing page so crawlers and readers reach the new article"
+    },
+    {
+      "id": "art_7b20a849c9",
+      "type": "links.new",
+      "page": "/blog",
+      "href": "/blog/software-engineer-reading-list",
+      "anchor": "software engineer reading list",
+      "html": "<a href=\"/blog/software-engineer-reading-list\">software engineer reading list</a>",
+      "status": "proposed",
+      "placement": "inside the paragraph about this topic, or a \"Related articles\" list at the end",
+      "rationale": "Internal link from an existing page so crawlers and readers reach the new article"
+    },
+    {
+      "id": "art_7c70d7af08",
+      "type": "links.new",
+      "page": "/blog",
+      "href": "/blog/software-engineer-reading-list",
+      "anchor": "Books for Software Engineers: What I Read and What I Took From Each",
+      "status": "proposed",
+      "html": "<a href=\"/blog/software-engineer-reading-list\">Books for Software Engineers: What I Read and What I Took From Each</a>",
+      "placement": "blog index list (newest first, with the meta description as the excerpt)",
+      "rationale": "List the new article on the blog index page"
+    },
+    {
+      "id": "art_5d21203be9",
+      "type": "links.new",
+      "page": "/blog",
+      "href": "/blog/building-mobile-web-products-lessons",
+      "anchor": "building mobile and web products: lessons from real work",
+      "html": "<a href=\"/blog/building-mobile-web-products-lessons\">building mobile and web products: lessons from real work</a>",
+      "status": "proposed",
+      "placement": "inside the paragraph about this topic, or a \"Related articles\" list at the end",
+      "rationale": "Internal link from an existing page so crawlers and readers reach the new article"
+    },
+    {
+      "id": "art_299568a3ca",
+      "type": "links.new",
+      "page": "/about",
+      "href": "/blog/building-mobile-web-products-lessons",
+      "anchor": "lessons on building mobile and web products",
+      "html": "<a href=\"/blog/building-mobile-web-products-lessons\">lessons on building mobile and web products</a>",
+      "status": "proposed",
+      "placement": "inside the paragraph about this topic, or a \"Related articles\" list at the end",
+      "rationale": "Internal link from an existing page so crawlers and readers reach the new article"
+    },
+    {
+      "id": "art_ca845fa04d",
+      "type": "links.new",
+      "page": "/blog",
+      "href": "/blog/building-mobile-web-products-lessons",
+      "anchor": "Building Mobile and Web Products: Practical Lessons From Real Work",
+      "status": "proposed",
+      "html": "<a href=\"/blog/building-mobile-web-products-lessons\">Building Mobile and Web Products: Practical Lessons From Real Work</a>",
+      "placement": "blog index list (newest first, with the meta description as the excerpt)",
+      "rationale": "List the new article on the blog index page"
+    },
+    {
+      "id": "tag_2aed5404c8",
+      "type": "site.tag_page",
+      "page": "/blog/tags/books",
+      "tag": "books",
+      "articles": [
+        "/blog/software-engineer-reading-list"
+      ],
+      "status": "proposed",
+      "title": "Books articles",
+      "placement": "new route listing every article with this tag",
+      "rationale": "Tag page: internal hub that links related articles (topic cluster, crawl depth)"
+    },
+    {
+      "id": "tag_8e04ed90b8",
+      "type": "site.tag_page",
+      "page": "/blog/tags/developer-growth",
+      "tag": "developer growth",
+      "articles": [
+        "/blog/software-engineer-reading-list"
+      ],
+      "status": "proposed",
+      "title": "Developer Growth articles",
+      "placement": "new route listing every article with this tag",
+      "rationale": "Tag page: internal hub that links related articles (topic cluster, crawl depth)"
+    },
+    {
+      "id": "tag_96fe15f66a",
+      "type": "site.tag_page",
+      "page": "/blog/tags/lessons-learned",
+      "tag": "lessons learned",
+      "articles": [
+        "/blog/building-mobile-web-products-lessons"
+      ],
+      "status": "proposed",
+      "title": "Lessons Learned articles",
+      "placement": "new route listing every article with this tag",
+      "rationale": "Tag page: internal hub that links related articles (topic cluster, crawl depth)"
+    },
+    {
+      "id": "tag_729365cd92",
+      "type": "site.tag_page",
+      "page": "/blog/tags/mobile-development",
+      "tag": "mobile development",
+      "articles": [
+        "/blog/building-mobile-web-products-lessons"
+      ],
+      "status": "proposed",
+      "title": "Mobile Development articles",
+      "placement": "new route listing every article with this tag",
+      "rationale": "Tag page: internal hub that links related articles (topic cluster, crawl depth)"
+    },
+    {
+      "id": "tag_5377119187",
+      "type": "site.tag_page",
+      "page": "/blog/tags/non-technical-books",
+      "tag": "non-technical books",
+      "articles": [
+        "/blog/software-engineer-reading-list"
+      ],
+      "status": "proposed",
+      "title": "Non-Technical Books articles",
+      "placement": "new route listing every article with this tag",
+      "rationale": "Tag page: internal hub that links related articles (topic cluster, crawl depth)"
+    },
+    {
+      "id": "tag_ffdec8f6ab",
+      "type": "site.tag_page",
+      "page": "/blog/tags/product-building",
+      "tag": "product building",
+      "articles": [
+        "/blog/building-mobile-web-products-lessons"
+      ],
+      "status": "proposed",
+      "title": "Product Building articles",
+      "placement": "new route listing every article with this tag",
+      "rationale": "Tag page: internal hub that links related articles (topic cluster, crawl depth)"
+    },
+    {
+      "id": "tag_ae3a7532c5",
+      "type": "site.tag_page",
+      "page": "/blog/tags/reading-list",
+      "tag": "reading list",
+      "articles": [
+        "/blog/software-engineer-reading-list"
+      ],
+      "status": "proposed",
+      "title": "Reading List articles",
+      "placement": "new route listing every article with this tag",
+      "rationale": "Tag page: internal hub that links related articles (topic cluster, crawl depth)"
+    },
+    {
+      "id": "tag_8c89461ac6",
+      "type": "site.tag_page",
+      "page": "/blog/tags/software-engineering",
+      "tag": "software engineering",
+      "articles": [
+        "/blog/software-engineer-reading-list",
+        "/blog/building-mobile-web-products-lessons"
+      ],
+      "status": "proposed",
+      "title": "Software Engineering articles",
+      "placement": "new route listing every article with this tag",
+      "rationale": "Tag page: internal hub that links related articles (topic cluster, crawl depth)"
+    },
+    {
+      "id": "tag_8de279568d",
+      "type": "site.tag_page",
+      "page": "/blog/tags/web-development",
+      "tag": "web development",
+      "articles": [
+        "/blog/building-mobile-web-products-lessons"
+      ],
+      "status": "proposed",
+      "title": "Web Development articles",
+      "placement": "new route listing every article with this tag",
+      "rationale": "Tag page: internal hub that links related articles (topic cluster, crawl depth)"
+    }
+  ]
+}

@@ -1,0 +1,164 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://lakshaygoyal.in/blog/building-mobile-web-products#webpage",
+      "url": "https://lakshaygoyal.in/blog/building-mobile-web-products",
+      "name": "Building Mobile and Web Products: Skills Guide 2026",
+      "description": "A practical guide to building mobile and web products: the skills, decisions and trade-offs that matter when you ship both, from architecture to launch.",
+      "isPartOf": {
+        "@id": "https://lakshaygoyal.in/#website"
+      },
+      "inLanguage": "en",
+      "breadcrumb": {
+        "@id": "https://lakshaygoyal.in/blog/building-mobile-web-products#breadcrumb"
+      },
+      "primaryImageOfPage": {
+        "@id": "https://lakshaygoyal.in/blog/building-mobile-web-products#image-1"
+      },
+      "image": {
+        "@id": "https://lakshaygoyal.in/blog/building-mobile-web-products#image-1"
+      },
+      "datePublished": "2026-11-03",
+      "dateModified": "2026-11-03",
+      "mainEntity": {
+        "@id": "https://lakshaygoyal.in/blog/building-mobile-web-products#article"
+      }
+    },
+    {
+      "@type": "BlogPosting",
+      "@id": "https://lakshaygoyal.in/blog/building-mobile-web-products#article",
+      "headline": "Building Mobile and Web Products: The Skills That Matter in Practice",
+      "description": "A practical guide to building mobile and web products: the skills, decisions and trade-offs that matter when you ship both, from architecture to launch.",
+      "url": "https://lakshaygoyal.in/blog/building-mobile-web-products",
+      "mainEntityOfPage": {
+        "@id": "https://lakshaygoyal.in/blog/building-mobile-web-products#webpage"
+      },
+      "isPartOf": {
+        "@id": "https://lakshaygoyal.in/blog/building-mobile-web-products#webpage"
+      },
+      "author": {
+        "@id": "https://lakshaygoyal.in/#person"
+      },
+      "publisher": {
+        "@id": "https://lakshaygoyal.in/#person"
+      },
+      "image": [
+        {
+          "@id": "https://lakshaygoyal.in/blog/building-mobile-web-products#image-1"
+        },
+        {
+          "@id": "https://lakshaygoyal.in/blog/building-mobile-web-products#image-2"
+        },
+        {
+          "@id": "https://lakshaygoyal.in/blog/building-mobile-web-products#image-3"
+        },
+        {
+          "@id": "https://lakshaygoyal.in/blog/building-mobile-web-products#image-4"
+        }
+      ],
+      "inLanguage": "en",
+      "datePublished": "2026-11-03",
+      "dateModified": "2026-11-03",
+      "wordCount": 2587,
+      "articleSection": "Software Engineering",
+      "keywords": "mobile development, web development, software engineering, product engineering, engineering skills"
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://lakshaygoyal.in/#website",
+      "url": "https://lakshaygoyal.in/",
+      "name": "Lakshay Goyal",
+      "publisher": {
+        "@id": "https://lakshaygoyal.in/#person"
+      },
+      "inLanguage": "en"
+    },
+    {
+      "@type": "Person",
+      "@id": "https://lakshaygoyal.in/#person",
+      "name": "Lakshay Goyal",
+      "url": "https://lakshaygoyal.in/"
+    },
+    {
+      "@type": "ImageObject",
+      "@id": "https://lakshaygoyal.in/blog/building-mobile-web-products#image-1",
+      "url": "https://lakshaygoyal.in/Image/ExnessMobile.png",
+      "contentUrl": "https://lakshaygoyal.in/Image/ExnessMobile.png",
+      "caption": "Mobile screen of a trading product interface from selected work"
+    },
+    {
+      "@type": "ImageObject",
+      "@id": "https://lakshaygoyal.in/blog/building-mobile-web-products#image-2",
+      "url": "https://lakshaygoyal.in/Image/ExnessWeb.png",
+      "contentUrl": "https://lakshaygoyal.in/Image/ExnessWeb.png",
+      "caption": "Web version of the same product interface on a wide screen"
+    },
+    {
+      "@type": "ImageObject",
+      "@id": "https://lakshaygoyal.in/blog/building-mobile-web-products#image-3",
+      "url": "https://lakshaygoyal.in/Image/UnlovableMobile.png",
+      "contentUrl": "https://lakshaygoyal.in/Image/UnlovableMobile.png",
+      "caption": "Mobile interface of a project from selected work"
+    },
+    {
+      "@type": "ImageObject",
+      "@id": "https://lakshaygoyal.in/blog/building-mobile-web-products#image-4",
+      "url": "https://lakshaygoyal.in/Image/UnlovableWeb.png",
+      "contentUrl": "https://lakshaygoyal.in/Image/UnlovableWeb.png",
+      "caption": "Web interface of the same project on a larger screen"
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://lakshaygoyal.in/blog/building-mobile-web-products#faq",
+      "url": "https://lakshaygoyal.in/blog/building-mobile-web-products",
+      "isPartOf": {
+        "@id": "https://lakshaygoyal.in/#website"
+      },
+      "inLanguage": "en",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Should I build mobile or web first?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Start where your users already are, and design mobile-first either way. A responsive web app is often the fastest way to test an idea, since it needs no store review. Add a native or cross-platform app once the core flow works."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do I need to know both frontend and backend?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "You do not need to master both, but knowing the basics of each helps a lot. Engineers who understand the full stack debug faster, make better trade-offs and communicate well with designers and teammates."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://lakshaygoyal.in/blog/building-mobile-web-products#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://lakshaygoyal.in/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Blog",
+          "item": "https://lakshaygoyal.in/blog"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Building Mobile and Web Products: The Skills That Matter in Practice",
+          "item": "https://lakshaygoyal.in/blog/building-mobile-web-products"
+        }
+      ]
+    }
+  ]
+}
