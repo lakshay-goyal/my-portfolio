@@ -1,8 +1,9 @@
 const pages = [
   { label: "Home", href: "/" },
   { label: "About", href: "/about" },
+  { label: "Projects", href: "/projects" },
   { label: "Bookshelf", href: "/bookshelf" },
-  { label: "Blogs", href: "/blog" },
+  // { label: "Blogs", href: "/blog" }, // parked until the blog section is rebuilt
 ];
 
 export default function PageRail({ path }) {
@@ -12,7 +13,7 @@ export default function PageRail({ path }) {
         <div className="flex flex-col max-[1150px]:flex-row max-[1150px]:flex-wrap max-[1150px]:gap-x-7 max-[1150px]:gap-y-2">
           {pages.map((page) => (
             <a
-              className="relative flex min-h-[52px] items-center text-[15px] text-zinc-500 no-underline transition-[color,transform] duration-200 hover:translate-x-1 hover:text-zinc-900 max-[1150px]:min-h-7 aria-[current=page]:font-medium aria-[current=page]:text-zinc-900 max-[1150px]:aria-[current=page]:underline max-[1150px]:aria-[current=page]:decoration-zinc-300 max-[1150px]:aria-[current=page]:underline-offset-[5px]"
+              className="relative flex min-h-[52px] items-center text-base text-zinc-600 no-underline transition-[color,transform] duration-200 hover:translate-x-1 hover:text-zinc-900 max-[1150px]:min-h-7 aria-[current=page]:font-medium aria-[current=page]:text-zinc-900 max-[1150px]:aria-[current=page]:underline max-[1150px]:aria-[current=page]:decoration-zinc-300 max-[1150px]:aria-[current=page]:underline-offset-[5px]"
               href={page.href}
               key={page.href}
               aria-current={(page.href === "/blog" ? path.startsWith("/blog") : path === page.href) ? "page" : undefined}

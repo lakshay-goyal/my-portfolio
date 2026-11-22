@@ -1,8 +1,15 @@
+import defaultTheme from "tailwindcss/defaultTheme";
+
 /** @type {import('tailwindcss').Config} */
 export default {
   content: ["./index.html", "./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        sans: ["Geist", ...defaultTheme.fontFamily.sans],
+        hand: ["Caveat", "cursive"],
+      },
+    },
   },
   plugins: [],
 };

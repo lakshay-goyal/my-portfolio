@@ -65,15 +65,36 @@ function ScheduleButton() {
   );
 }
 
-export default function ContactRail() {
+// Hand-drawn "Let's connect" note with an arrow that draws itself toward the rail.
+// Rail = 5 icons x 44px, centred on the viewport, so its middle icon sits at exactly 50%.
+// The arrowhead (y=98 in the SVG) is lined up with that icon; the label sits above it. Wide screens only, where
+// the rail floats beside the content; below that the icons sit in the page flow.
+function ConnectHint() {
+  return (
+    <div
+      className="pointer-events-none fixed right-[54px] top-[calc(50%-98px)] z-10 hidden h-[120px] w-[170px] text-zinc-600 min-[1240px]:block [@media(max-height:520px)]:!hidden"
+      aria-hidden="true"
+    >
+      <span className="connect-hint-label absolute left-0 top-0 -rotate-[5deg] whitespace-nowrap font-hand text-[26px] font-medium leading-none">
+        Let’s connect
+      </span>
+      <svg className="absolute inset-0" width="170" height="120" viewBox="0 0 170 120" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
+        <path className="connect-hint-line" pathLength="1" d="M62 36C58 66 80 88 106 82C130 76 132 44 108 42C84 40 82 74 102 87C118 98 142 100 160 98" />
+        <path className="connect-hint-head" pathLength="1" d="M151 91.5l9.5 6.5-9 7" />
+      </svg>
+    </div>
+  );
+}
+
+export default function ContactRail({ showHint = false }) {
   return (
     <>
-      <aside className="fixed right-0 top-1/2 z-10 max-h-[calc(100dvh-36px)] w-14 -translate-y-1/2 overflow-y-auto rounded-l-md border border-zinc-200 bg-white max-[1150px]:sticky max-[1150px]:top-12 max-[1150px]:col-start-2 max-[1150px]:max-h-none max-[1150px]:overflow-visible max-[1150px]:translate-y-0 max-[640px]:static max-[640px]:col-start-1 max-[640px]:w-fit max-[640px]:justify-self-start max-[640px]:translate-y-0 max-[640px]:rounded-md" aria-label="Contact links">
+      <aside className="fixed right-0 top-1/2 z-10 max-h-[calc(100dvh-36px)] w-14 -translate-y-1/2 overflow-y-auto max-[1150px]:sticky max-[1150px]:top-12 max-[1150px]:col-start-2 max-[1150px]:max-h-none max-[1150px]:overflow-visible max-[1150px]:translate-y-0 max-[640px]:static max-[640px]:col-start-1 max-[640px]:w-fit max-[640px]:justify-self-start max-[640px]:-ml-3 max-[640px]:translate-y-0" aria-label="Contact links">
       <nav aria-label="Contact links">
         <div className="flex flex-col max-[640px]:flex-row">
           {contacts.map((contact) => (
             <a
-              className="grid h-11 w-full shrink-0 place-items-center text-zinc-600 transition-colors duration-200 hover:bg-zinc-50 hover:text-zinc-900 max-[640px]:w-11 max-[640px]:border-r max-[640px]:last:border-r-0"
+              className="grid h-11 w-full shrink-0 place-items-center rounded-md text-zinc-600 transition-colors duration-200 hover:bg-zinc-50 hover:text-zinc-900 max-[640px]:w-11"
               href={contact.href}
               key={contact.label}
               aria-label={contact.label}
@@ -87,6 +108,7 @@ export default function ContactRail() {
         </div>
       </nav>
       </aside>
+      {showHint && <ConnectHint />}
       <ScheduleButton />
     </>
   );

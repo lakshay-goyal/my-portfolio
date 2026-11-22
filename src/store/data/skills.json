@@ -1,14 +1,17 @@
 [
   {
     "title": "Web Development",
-    "skills": "MERN Stack, Next.js, Remix, Turborepo, PostgreSQL (Prisma), API Development"
+    "tools": ["MongoDB", "Express", "React", "Node.js", "Next.js", "Remix", "Turborepo", "PostgreSQL", "Prisma"],
+    "also": ["API Development"]
   },
   {
     "title": "Mobile Development",
-    "skills": "React Native, API Connectivity"
+    "tools": ["React Native", "Expo"],
+    "also": ["API Connectivity"]
   },
   {
     "title": "AI",
-    "skills": "Python, FastAPI, Machine Learning, Deep Learning, NLP, Computer Vision, AI Applications, GenAI, AI Agents"
+    "tools": ["Python", "FastAPI", "LangChain", "LangGraph"],
+    "also": ["Machine Learning", "Deep Learning", "NLP", "Computer Vision", "GenAI", "AI Agents", "AI Applications"]
   }
 ]

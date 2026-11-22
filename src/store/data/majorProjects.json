@@ -1,35 +1,62 @@
 [
   {
-    "title": "Unlovable - Application Builder.",
-    "description": "Built an application builder, where anyone can able to generate an web application using a prompt and creativity.",
-    "tech": ["Turborepo", "Expo", "E2B sandbox", "Redis", "Websocket", "PostgreSQL", "Langchain", "Langgraph", "RAG"],
+    "title": "Unlovable — App Builder",
+    "description": "An AI app builder that turns a prompt into a working web application, generated and run in a live sandbox.",
+    "tech": [
+      "Turborepo",
+      "Expo",
+      "E2B Sandbox",
+      "Redis",
+      "WebSocket",
+      "PostgreSQL",
+      "LangChain",
+      "LangGraph",
+      "RAG"
+    ],
     "image": "/Image/UnlovableWeb.png",
     "github": "https://github.com/lakshay-goyal/Unlovable",
     "live": "https://unlovable.lakshaygoyal.in/",
     "videoLink": "/video/UnlovableWeb.mp4"
   },
   {
-    "title": "Unlovable - Mobile Application.",
-    "description": "Built an Mobile application builder, where anyone can able to generate an mobile application using a prompt and creativity.",
-    "tech": ["React Native", "Expo", "Nativewind", "EAS"],
+    "title": "Unlovable — Mobile",
+    "description": "The mobile companion to Unlovable: describe an app in a prompt and get a generated mobile application.",
+    "tech": [
+      "React Native",
+      "Expo",
+      "NativeWind",
+      "EAS"
+    ],
     "image": "/Image/UnlovableMobile.png",
     "github": "https://github.com/lakshay-goyal/Unlovable",
     "live": "",
     "videoLink": "/video/UnlovableMobile.mp4"
   },
   {
-    "title": "Exness - CFD Application.",
-    "description": "A CFD application for trade on crypto currencies.",
-    "tech": ["Turborepo", "Redis", "Pub-Sub", "TimescaleDB", "Websocket", "PostgreSQL"],
+    "title": "Exness — CFD Trading",
+    "description": "A CFD trading platform for crypto with real-time prices streamed over WebSockets.",
+    "tech": [
+      "Turborepo",
+      "Redis",
+      "Pub/Sub",
+      "TimescaleDB",
+      "WebSocket",
+      "PostgreSQL"
+    ],
     "image": "/Image/ExnessWeb.png",
     "github": "https://github.com/lakshay-goyal/Exness",
     "live": "https://exness.lakshaygoyal.in/",
     "videoLink": "/video/ExnessWeb.mp4"
   },
   {
-    "title": "Exness - Mobile Application.",
-    "description": "A CFD Mobile application for trade on crypto currencies.",
-    "tech": ["React Native", "Expo", "Nativewind", "EAS"],
+    "title": "Exness — Mobile",
+    "description": "The mobile app for the Exness CFD platform, for trading crypto on the go.",
+    "tech": [
+      "React Native",
+      "Expo",
+      "NativeWind",
+      "EAS"
+    ],
     "image": "/Image/ExnessMobile.png",
     "github": "https://github.com/lakshay-goyal/Exness",
     "live": "",
