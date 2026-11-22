@@ -451,7 +451,7 @@ function App() {
         <SiteHeader />
         {page}
       </div>
-      <ContactRail />
+      <ContactRail showHint={path === "/"} />
     </main>
   );
 }

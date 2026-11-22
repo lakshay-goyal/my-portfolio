@@ -86,7 +86,7 @@ function ConnectHint() {
   );
 }
 
-export default function ContactRail() {
+export default function ContactRail({ showHint = false }) {
   return (
     <>
       <aside className="fixed right-0 top-1/2 z-10 max-h-[calc(100dvh-36px)] w-14 -translate-y-1/2 overflow-y-auto max-[1150px]:sticky max-[1150px]:top-12 max-[1150px]:col-start-2 max-[1150px]:max-h-none max-[1150px]:overflow-visible max-[1150px]:translate-y-0 max-[640px]:static max-[640px]:col-start-1 max-[640px]:w-fit max-[640px]:justify-self-start max-[640px]:-ml-3 max-[640px]:translate-y-0" aria-label="Contact links">
@@ -108,7 +108,7 @@ export default function ContactRail() {
         </div>
       </nav>
       </aside>
-      <ConnectHint />
+      {showHint && <ConnectHint />}
       <ScheduleButton />
     </>
   );
