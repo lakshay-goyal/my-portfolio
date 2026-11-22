@@ -68,12 +68,12 @@ function ScheduleButton() {
 export default function ContactRail() {
   return (
     <>
-      <aside className="fixed right-0 top-1/2 z-10 max-h-[calc(100dvh-36px)] w-14 -translate-y-1/2 overflow-y-auto rounded-l-md border border-zinc-200 bg-white max-[1150px]:sticky max-[1150px]:top-12 max-[1150px]:col-start-2 max-[1150px]:max-h-none max-[1150px]:overflow-visible max-[1150px]:translate-y-0 max-[640px]:static max-[640px]:col-start-1 max-[640px]:w-fit max-[640px]:justify-self-start max-[640px]:translate-y-0 max-[640px]:rounded-md" aria-label="Contact links">
+      <aside className="fixed right-0 top-1/2 z-10 max-h-[calc(100dvh-36px)] w-14 -translate-y-1/2 overflow-y-auto max-[1150px]:sticky max-[1150px]:top-12 max-[1150px]:col-start-2 max-[1150px]:max-h-none max-[1150px]:overflow-visible max-[1150px]:translate-y-0 max-[640px]:static max-[640px]:col-start-1 max-[640px]:w-fit max-[640px]:justify-self-start max-[640px]:-ml-3 max-[640px]:translate-y-0" aria-label="Contact links">
       <nav aria-label="Contact links">
         <div className="flex flex-col max-[640px]:flex-row">
           {contacts.map((contact) => (
             <a
-              className="grid h-11 w-full shrink-0 place-items-center text-zinc-600 transition-colors duration-200 hover:bg-zinc-50 hover:text-zinc-900 max-[640px]:w-11 max-[640px]:border-r max-[640px]:last:border-r-0"
+              className="grid h-11 w-full shrink-0 place-items-center rounded-md text-zinc-600 transition-colors duration-200 hover:bg-zinc-50 hover:text-zinc-900 max-[640px]:w-11"
               href={contact.href}
               key={contact.label}
               aria-label={contact.label}

@@ -98,18 +98,6 @@
     text-decoration-color: #71717a !important;
   }
 
-  .monogram {
-    background: #18181b;
-    color: #fafafa;
-    box-shadow: inset 0 1px 0 rgb(255 255 255 / 14%), 0 1px 2px rgb(24 24 27 / 16%), 0 4px 12px rgb(24 24 27 / 10%);
-  }
-
-  .dark .monogram {
-    background: #fafafa;
-    color: #18181b;
-    box-shadow: inset 0 -1px 0 rgb(24 24 27 / 10%), 0 4px 14px rgb(0 0 0 / 40%);
-  }
-
   .schedule-cta {
     box-shadow: 0 3px 12px rgb(24 24 27 / 18%), 0 0 18px rgb(24 24 27 / 7%);
   }

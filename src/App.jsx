@@ -71,7 +71,7 @@ function ThemeToggle() {
     <button
       ref={ref}
       type="button"
-      className="fixed right-4 top-4 z-20 grid h-11 w-11 place-items-center rounded-full border border-zinc-200 bg-white text-zinc-600 shadow-sm transition-[color,background,border-color,box-shadow,transform] duration-200 hover:-translate-y-0.5 hover:bg-zinc-50 hover:text-zinc-900 hover:shadow-md focus-visible:outline-offset-4"
+      className="fixed right-4 top-4 z-20 grid h-11 w-11 cursor-pointer place-items-center rounded-full border-0 bg-white text-zinc-600 transition-colors duration-200 hover:bg-zinc-50 hover:text-zinc-900 focus-visible:outline-offset-2"
       aria-label={isDarkMode ? "Switch to light mode" : "Switch to dark mode"}
       aria-pressed={isDarkMode}
       title={isDarkMode ? "Switch to light mode" : "Switch to dark mode"}
@@ -97,25 +97,26 @@ const styles = {
   page: "flex flex-col gap-16 pt-14 max-[640px]:gap-12 max-[640px]:pt-10",
   // Contrast on white: zinc-900 ~17:1, zinc-700 ~10:1, zinc-600 ~7.7:1, zinc-500 ~4.8:1 (all pass WCAG AA).
   sectionTitle: "mb-5 text-xl font-medium leading-8 tracking-[-.015em] text-zinc-900",
-  meta: "m-0 font-mono text-sm leading-6 text-zinc-500",
+  meta: "m-0 text-sm leading-6 tabular-nums text-zinc-500",
   title: "m-0 text-[17px] font-medium leading-7 tracking-[-.01em] text-zinc-900",
   lead: "text-lg leading-[1.75] text-zinc-700 [&_p]:m-0 [&_p+p]:mt-5",
   body: "m-0 text-base leading-[1.7] text-zinc-600",
-  row: "grid grid-cols-[168px_minmax(0,1fr)] gap-x-6 border-t border-dashed border-zinc-200 py-6 max-[640px]:grid-cols-1 max-[640px]:gap-y-1.5",
+  link: "underline decoration-zinc-300 decoration-1 underline-offset-4 transition-colors hover:decoration-zinc-500",
+  row: "grid grid-cols-[168px_minmax(0,1fr)] gap-x-6 border-t border-zinc-200 py-6 max-[640px]:grid-cols-1 max-[640px]:gap-y-1.5",
 };
 
-function TextLink({ href, children, className = "", muted = false }) {
+// One link style everywhere. `arrow` marks standalone links that leave the site.
+function TextLink({ href, children, className = "", arrow = false }) {
   const external = href.startsWith("http") || href.endsWith(".pdf");
-  const tone = muted ? "font-normal text-zinc-500 hover:text-zinc-900" : "font-medium text-zinc-900";
 
   return (
     <a
-      className={`group underline decoration-zinc-400 decoration-dotted decoration-[1.5px] underline-offset-[5px] transition-colors hover:decoration-zinc-500 [&_svg]:ml-0.5 [&_svg]:inline-block [&_svg]:text-black/30 [&_svg]:transition-colors [&_svg]:duration-200 group-hover:[&_svg]:text-black/80 ${tone} ${className}`}
+      className={`font-medium text-zinc-900 ${styles.link} [&_svg]:ml-0.5 [&_svg]:inline-block [&_svg]:text-zinc-500 ${className}`}
       href={href}
       target={external ? "_blank" : undefined}
       rel={external ? "noopener noreferrer" : undefined}
     >
-      {children} <ArrowIcon />
+      {children}{arrow && external && <ArrowIcon />}
     </a>
   );
 }
@@ -196,30 +197,30 @@ function FeaturedWork() {
 
   return (
     <Section id="work" title="Selected Work">
-      <div className="grid grid-cols-2 gap-5 max-[640px]:grid-cols-1">
-        {majorProjects.map((project, index) => (
-          <article data-reveal className="flex min-w-0 flex-col overflow-hidden rounded-xl border border-zinc-200 bg-white" key={project.title}>
+      <div className="grid grid-cols-2 gap-x-6 gap-y-12 max-[640px]:grid-cols-1 max-[640px]:gap-y-10">
+        {majorProjects.map((project) => (
+          <article data-reveal className="min-w-0" key={project.title}>
             <button
               type="button"
-              className="group relative block aspect-[1.55] w-full cursor-pointer overflow-hidden border-0 border-b border-solid border-zinc-200 bg-zinc-100 p-0 text-left"
+              className="group relative block aspect-[1.6] w-full cursor-pointer overflow-hidden rounded-lg border border-zinc-200 bg-zinc-100 p-0"
               onClick={() => setActiveProject(project)}
               aria-label={`Play ${project.title} demo`}
             >
-              <img className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-[1.025]" src={project.image} alt={`${project.title} interface screenshot`} loading="lazy" />
+              <img className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-[1.02]" src={project.image} alt="" loading="lazy" />
               <span className="absolute inset-0 grid place-items-center bg-zinc-950/0 transition-colors group-hover:bg-zinc-950/20">
-                <span className="grid h-12 w-12 translate-y-1 place-items-center rounded-full bg-white/95 text-zinc-900 opacity-0 shadow-lg transition duration-200 group-hover:translate-y-0 group-hover:opacity-100" aria-hidden="true">
-                  <svg width="18" height="18" viewBox="0 0 18 18" fill="currentColor"><path d="M6 3.9c0-.6.65-.96 1.15-.63l7.1 4.6a1.35 1.35 0 0 1 0 2.26l-7.1 4.6A.75.75 0 0 1 6 14.1V3.9Z" /></svg>
+                <span className="grid h-11 w-11 place-items-center rounded-full bg-white text-zinc-900 opacity-0 transition-opacity duration-200 group-hover:opacity-100 group-focus-visible:opacity-100" aria-hidden="true">
+                  <svg width="16" height="16" viewBox="0 0 18 18" fill="currentColor"><path d="M6 3.9c0-.6.65-.96 1.15-.63l7.1 4.6a1.35 1.35 0 0 1 0 2.26l-7.1 4.6A.75.75 0 0 1 6 14.1V3.9Z" /></svg>
                 </span>
               </span>
-              <span className="absolute bottom-3 right-3 rounded-full bg-zinc-950/75 px-2.5 py-1 font-mono text-xs text-white">Play demo</span>
             </button>
-            <div className="flex flex-1 flex-col p-5">
-              <p className={`mb-1 ${styles.meta}`}>{String(index + 1).padStart(2, "0")}</p>
-              <h3 className={styles.title}><TextLink href={project.live || project.github}>{project.title}</TextLink></h3>
-              <p className={`mt-2 ${styles.body}`}>{project.description}</p>
-              <p className={`mt-3 ${styles.meta}`}>{joinTags(project.tech.slice(0, 4))}</p>
-              {project.live && <TextLink muted className="mt-2 self-start" href={project.github}>Source code</TextLink>}
-            </div>
+            <h3 className={`mt-4 ${styles.title}`}>{project.title}</h3>
+            <p className={`mt-1 ${styles.body}`}>{project.description}</p>
+            <p className={`mt-2 ${styles.meta}`}>{joinTags(project.tech.slice(0, 4))}</p>
+            <p className="m-0 mt-3 flex flex-wrap gap-x-5 gap-y-1 text-[15px] leading-6">
+              <button type="button" className={`cursor-pointer border-0 bg-transparent p-0 font-medium text-zinc-900 ${styles.link}`} onClick={() => setActiveProject(project)}>Demo</button>
+              {project.live && <TextLink arrow href={project.live}>Live</TextLink>}
+              <TextLink arrow href={project.github}>Source</TextLink>
+            </p>
           </article>
         ))}
       </div>
@@ -258,7 +259,7 @@ function Skills() {
   return (
     <Section id="skills" title="Skills">
       {skills.map((item) => (
-        <div data-reveal className="border-t border-dashed border-zinc-200 py-6" key={item.title}>
+        <div data-reveal className="border-t border-zinc-200 py-6" key={item.title}>
           <h3 className={styles.title}>{item.title}</h3>
           <ul className="m-0 mt-4 grid list-none grid-cols-3 gap-x-6 gap-y-3.5 p-0 max-[640px]:grid-cols-2">
             {item.tools.map((tool) => (
@@ -342,7 +343,7 @@ function BookshelfPage() {
               <h3 className={styles.title}>{book.title}</h3>
               <p className={`mt-0.5 ${styles.body}`}>by {book.author}</p>
               <p className={`mt-2 mb-4 ${styles.body}`}>{book.description}</p>
-              <TextLink href={book.amazonLink}>View book</TextLink>
+              <TextLink arrow href={book.amazonLink}>View book</TextLink>
             </div>
           </article>
         ))}
@@ -418,17 +419,14 @@ function SiteHeader() {
   const current = experiences[0];
 
   return (
-    <header data-reveal className="flex items-center gap-4">
-      <a className="monogram grid h-14 w-14 shrink-0 place-items-center rounded-2xl font-mono text-lg font-medium tracking-[-.04em] no-underline" href="/" aria-label="Lakshay Goyal, home">
-        LG
-      </a>
-      <div className="min-w-0">
-        <h1 className="m-0 text-[28px] font-medium leading-9 tracking-[-.035em] text-zinc-900">Lakshay Goyal</h1>
-        <p className="m-0 text-base leading-6 text-zinc-600">
-          {current.role} at <TextLink href={current.url}>{current.company}</TextLink>
-          <span className="text-zinc-500 max-[640px]:hidden"> · {current.location}</span>
-        </p>
-      </div>
+    <header data-reveal>
+      <h1 className="m-0 text-[28px] font-medium leading-9 tracking-[-.035em] text-zinc-900">
+        <a className="no-underline" href="/">Lakshay Goyal</a>
+      </h1>
+      <p className="m-0 mt-1 text-base leading-6 text-zinc-600">
+        {current.role} at <TextLink href={current.url}>{current.company}</TextLink>
+        <span className="text-zinc-500 max-[640px]:hidden"> · {current.location}</span>
+      </p>
     </header>
   );
 }
