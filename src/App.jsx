@@ -6,7 +6,8 @@ import skills from "./store/data/skills.json";
 import books from "./store/data/books.json";
 import PageRail from "./components/PageRail.jsx";
 import ContactRail from "./components/ContactRail.jsx";
-import ScrollReveal from "./components/ScrollReveal.jsx";
+import useStreamReveal from "./components/useStreamReveal.js";
+import brandIcons from "./components/brandIcons.js";
 
 function ArrowIcon() {
   return (
@@ -93,21 +94,23 @@ function ThemeToggle() {
 // Shared type scale and layout so every page reads the same.
 // Kept as literal Tailwind classes because dark mode overrides target them in index.css.
 const styles = {
-  page: "flex flex-col gap-16 pt-12 max-[640px]:gap-12 max-[640px]:pt-8",
-  sectionTitle: "mb-6 text-base font-medium leading-6 text-zinc-900",
-  meta: "m-0 font-mono text-sm leading-6 text-zinc-400",
-  title: "m-0 text-lg font-medium leading-7 text-zinc-900",
-  lead: "text-lg leading-[1.7] text-zinc-600 [&_p]:m-0 [&_p+p]:mt-5",
-  body: "m-0 text-base leading-[1.7] text-zinc-500",
-  row: "grid grid-cols-[160px_minmax(0,1fr)] gap-x-6 border-t border-zinc-200 py-6 max-[640px]:grid-cols-1 max-[640px]:gap-y-2",
+  page: "flex flex-col gap-16 pt-14 max-[640px]:gap-12 max-[640px]:pt-10",
+  // Contrast on white: zinc-900 ~17:1, zinc-700 ~10:1, zinc-600 ~7.7:1, zinc-500 ~4.8:1 (all pass WCAG AA).
+  sectionTitle: "mb-5 text-xl font-semibold leading-8 tracking-[-.02em] text-zinc-900",
+  meta: "m-0 font-mono text-sm leading-6 text-zinc-500",
+  title: "m-0 text-[17px] font-medium leading-7 tracking-[-.01em] text-zinc-900",
+  lead: "text-lg leading-[1.75] text-zinc-700 [&_p]:m-0 [&_p+p]:mt-5",
+  body: "m-0 text-base leading-[1.7] text-zinc-600",
+  row: "grid grid-cols-[168px_minmax(0,1fr)] gap-x-6 border-t border-dashed border-zinc-200 py-6 max-[640px]:grid-cols-1 max-[640px]:gap-y-1.5",
 };
 
-function TextLink({ href, children, className = "" }) {
+function TextLink({ href, children, className = "", muted = false }) {
   const external = href.startsWith("http") || href.endsWith(".pdf");
+  const tone = muted ? "font-normal text-zinc-500 hover:text-zinc-900" : "font-medium text-zinc-900";
 
   return (
     <a
-      className={`group font-medium text-zinc-900 underline decoration-zinc-300 underline-offset-2 transition-colors hover:decoration-zinc-500 [&_svg]:ml-0.5 [&_svg]:inline-block [&_svg]:text-black/30 [&_svg]:transition-colors [&_svg]:duration-200 group-hover:[&_svg]:text-black/80 ${className}`}
+      className={`group underline decoration-zinc-400 decoration-dotted decoration-[1.5px] underline-offset-[5px] transition-colors hover:decoration-zinc-500 [&_svg]:ml-0.5 [&_svg]:inline-block [&_svg]:text-black/30 [&_svg]:transition-colors [&_svg]:duration-200 group-hover:[&_svg]:text-black/80 ${tone} ${className}`}
       href={href}
       target={external ? "_blank" : undefined}
       rel={external ? "noopener noreferrer" : undefined}
@@ -117,28 +120,40 @@ function TextLink({ href, children, className = "" }) {
   );
 }
 
+// "A · B · C" that never starts a wrapped line with "·" or splits a multi-word tag.
+function joinTags(tags) {
+  return tags.map((tag) => tag.replaceAll(" ", "\u00a0")).join("\u00a0· ");
+}
+
 function BackLink({ href, children }) {
-  return <a className="inline-block text-[15px] text-zinc-500 no-underline hover:text-zinc-900" href={href}>← {children}</a>;
+  return <a data-reveal className="inline-block self-start text-base text-zinc-600 no-underline transition-colors hover:text-zinc-900" href={href}>← {children}</a>;
 }
 
 function Section({ id, title, children }) {
   return (
     <section id={id} className="scroll-mt-8" aria-labelledby={`${id}-heading`}>
-      <h2 id={`${id}-heading`} className={styles.sectionTitle}>{title}</h2>
+      <h2 data-reveal id={`${id}-heading`} className={styles.sectionTitle}>{title}</h2>
       {children}
     </section>
   );
 }
 
-// Opens every page the same way Home opens: small heading + lead paragraph.
-function PageHeading({ title, description }) {
+// Each paragraph streams in on its own, top to bottom.
+function Lead({ paragraphs }) {
   return (
-    <ScrollReveal>
-      <header>
-        <h2 className={styles.sectionTitle}>{title}</h2>
-        <p className={`m-0 ${styles.lead}`}>{description}</p>
-      </header>
-    </ScrollReveal>
+    <div className={styles.lead}>
+      {paragraphs.map((paragraph) => <p data-reveal key={paragraph}>{paragraph}</p>)}
+    </div>
+  );
+}
+
+// Opens every page the same way: heading + lead paragraph(s).
+function PageHeading({ title, paragraphs }) {
+  return (
+    <header>
+      <h2 data-reveal className={styles.sectionTitle}>{title}</h2>
+      <Lead paragraphs={paragraphs} />
+    </header>
   );
 }
 
@@ -146,13 +161,13 @@ function Experience() {
   return (
     <Section id="experience" title="Work Experience">
       {experiences.map((experience) => (
-        <article className={styles.row} key={`${experience.company}-${experience.period}`}>
+        <article data-reveal className={styles.row} key={`${experience.company}-${experience.period}`}>
           <p className={styles.meta}>{experience.period}</p>
           <div className="min-w-0">
             <h3 className={styles.title}>
               {experience.role} at <TextLink href={experience.url}>{experience.company}</TextLink>
             </h3>
-            <p className={`mt-1 ${styles.body}`}>{experience.location} · Full-time</p>
+            <p className={`mt-0.5 ${styles.meta}`}>{experience.location} · Full-time</p>
             <p className={`mt-2 ${styles.body}`}>{experience.summary}</p>
           </div>
         </article>
@@ -183,10 +198,10 @@ function FeaturedWork() {
     <Section id="work" title="Selected Work">
       <div className="grid grid-cols-2 gap-5 max-[640px]:grid-cols-1">
         {majorProjects.map((project, index) => (
-          <article className="min-w-0 overflow-hidden rounded-lg border border-zinc-200 bg-white" key={project.title}>
+          <article data-reveal className="flex min-w-0 flex-col overflow-hidden rounded-xl border border-zinc-200 bg-white" key={project.title}>
             <button
               type="button"
-              className="group relative block aspect-[1.55] w-full cursor-pointer overflow-hidden border-0 bg-zinc-100 p-0 text-left"
+              className="group relative block aspect-[1.55] w-full cursor-pointer overflow-hidden border-0 border-b border-solid border-zinc-200 bg-zinc-100 p-0 text-left"
               onClick={() => setActiveProject(project)}
               aria-label={`Play ${project.title} demo`}
             >
@@ -198,12 +213,12 @@ function FeaturedWork() {
               </span>
               <span className="absolute bottom-3 right-3 rounded-full bg-zinc-950/75 px-2.5 py-1 font-mono text-xs text-white">Play demo</span>
             </button>
-            <div className="p-5">
+            <div className="flex flex-1 flex-col p-5">
               <p className={`mb-1 ${styles.meta}`}>{String(index + 1).padStart(2, "0")}</p>
               <h3 className={styles.title}><TextLink href={project.live || project.github}>{project.title}</TextLink></h3>
               <p className={`mt-2 ${styles.body}`}>{project.description}</p>
-              <p className={`mt-3 ${styles.meta}`}>{project.tech.slice(0, 4).join(" · ")}</p>
-              {project.live && <TextLink className="mt-2 inline-block text-base font-normal text-zinc-500" href={project.github}>Source code</TextLink>}
+              <p className={`mt-3 ${styles.meta}`}>{joinTags(project.tech.slice(0, 4))}</p>
+              {project.live && <TextLink muted className="mt-2 self-start" href={project.github}>Source code</TextLink>}
             </div>
           </article>
         ))}
@@ -231,42 +246,34 @@ function FeaturedWork() {
   );
 }
 
-const skillIcons = {
-  "Web Development": (
-    <>
-      <path d="m16 18 6-6-6-6" />
-      <path d="m8 6-6 6 6 6" />
-    </>
-  ),
-  "Mobile Development": (
-    <>
-      <rect width="14" height="20" x="5" y="2" rx="2" ry="2" />
-      <path d="M12 18h.01" />
-    </>
-  ),
-  AI: (
-    <path d="M12 3l1.9 5.7a2 2 0 0 0 1.3 1.3L21 12l-5.8 1.9a2 2 0 0 0-1.3 1.3L12 21l-1.9-5.8a2 2 0 0 0-1.3-1.3L3 12l5.8-1.9a2 2 0 0 0 1.3-1.3L12 3Z" />
-  ),
-};
-
-function SkillIcon({ title }) {
+function BrandIcon({ name }) {
   return (
-    <svg className="shrink-0" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
-      {skillIcons[title]}
+    <svg className="shrink-0 text-zinc-900" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+      <path d={brandIcons[name]} />
     </svg>
   );
 }
 
-function MoreAbout() {
+function Skills() {
   return (
     <Section id="skills" title="Skills">
       {skills.map((item) => (
-        <div className={`${styles.row} hover:[&_.skill-detail]:text-zinc-900`} key={item.title}>
-          <span className={`flex items-center gap-2 ${styles.meta}`}>
-            <SkillIcon title={item.title} />
-            {item.title}
-          </span>
-          <p className={`skill-detail transition-colors ${styles.body}`}>{item.skills.split(",").map((skill) => skill.trim()).join(" · ")}</p>
+        <div data-reveal className="border-t border-dashed border-zinc-200 py-6" key={item.title}>
+          <h3 className={styles.title}>{item.title}</h3>
+          <ul className="m-0 mt-4 grid list-none grid-cols-3 gap-x-6 gap-y-3.5 p-0 max-[640px]:grid-cols-2">
+            {item.tools.map((tool) => (
+              <li className="flex min-w-0 items-center gap-2.5 text-base leading-6 text-zinc-700" key={tool}>
+                <BrandIcon name={tool} />
+                {tool}
+              </li>
+            ))}
+          </ul>
+          {item.also.length > 0 && (
+            <p className={`mt-4 ${styles.body}`}>
+              <span className="font-medium text-zinc-900">Also: </span>
+              {joinTags(item.also)}
+            </p>
+          )}
         </div>
       ))}
     </Section>
@@ -276,19 +283,13 @@ function MoreAbout() {
 function HomePage() {
   return (
     <div className={styles.page}>
-      <ScrollReveal>
-        <Section id="about" title="About">
-          <div className={styles.lead}>
-            <p>
-              Just a curious builder with a bad habit of going down every damn rabbit hole, building random shit, and figuring out life beyond code.
-            </p>
-          </div>
-        </Section>
-      </ScrollReveal>
-
-      <ScrollReveal><Experience /></ScrollReveal>
-      <ScrollReveal><FeaturedWork /></ScrollReveal>
-      <ScrollReveal><MoreAbout /></ScrollReveal>
+      <PageHeading
+        title="About"
+        paragraphs={["Just a curious builder with a bad habit of going down every damn rabbit hole, building random shit, and figuring out life beyond code."]}
+      />
+      <Experience />
+      <FeaturedWork />
+      <Skills />
     </div>
   );
 }
@@ -303,35 +304,25 @@ const story = [
 function AboutPage() {
   return (
     <div className={styles.page}>
-      <PageHeading title="About" description="A little about me. The curiosity that pulled me into software, and the interests that keep me exploring beyond it." />
+      <PageHeading title="About" paragraphs={["A little about me. The curiosity that pulled me into software, and the interests that keep me exploring beyond it."]} />
       <Section id="curious" title="What keeps me curious">
-        <div className={styles.lead}>
-          <p>
-            Just a developer who loves building random shit, experimenting with everything,
-            messing things up, and learning along the way.
-          </p>
-          <p>
-            I have a bad habit of wanting to become a polymath — from code, AI, and design
-            to philosophy, psychology, politics, and every other shitty thing life has to
-            offer. Don’t mistake me for a generalist, though. I love going deep into every
-            rabbit hole.
-          </p>
-          <p>
-            I love being a developer, but hell no, I'm not spending my entire life just coding. Wanna be that 60-year-old grandpa still trying to figure out some new shit while living every bit of life.
-          </p>
-        </div>
+        <Lead
+          paragraphs={[
+            "Just a developer who loves building random shit, experimenting with everything, messing things up, and learning along the way.",
+            "I have a bad habit of wanting to become a polymath — from code, AI, and design to philosophy, psychology, politics, and every other shitty thing life has to offer. Don’t mistake me for a generalist, though. I love going deep into every rabbit hole.",
+            "I love being a developer, but hell no, I'm not spending my entire life just coding. Wanna be that 60-year-old grandpa still trying to figure out some new shit while living every bit of life.",
+          ]}
+        />
       </Section>
       <Section id="story" title="How I got here">
         {story.map(([period, title, copy]) => (
-          <ScrollReveal key={period}>
-            <article className={styles.row}>
-              <span className={styles.meta}>{period}</span>
-              <div>
-                <h3 className={styles.title}>{title}</h3>
-                <p className={`mt-2 ${styles.body}`}>{copy}</p>
-              </div>
-            </article>
-          </ScrollReveal>
+          <article data-reveal className={styles.row} key={period}>
+            <span className={styles.meta}>{period}</span>
+            <div>
+              <h3 className={styles.title}>{title}</h3>
+              <p className={`mt-2 ${styles.body}`}>{copy}</p>
+            </div>
+          </article>
         ))}
       </Section>
     </div>
@@ -341,21 +332,19 @@ function AboutPage() {
 function BookshelfPage() {
   return (
     <div className={styles.page}>
-      <PageHeading title="Bookshelf" description="Ideas I keep close. A small collection of books I’ve read and the ideas I took from them." />
+      <PageHeading title="Bookshelf" paragraphs={["Ideas I keep close. A small collection of books I’ve read and the ideas I took from them."]} />
       <Section id="books" title="Books">
         {books.map((book) => (
-          <ScrollReveal key={book.id}>
-            <article className="grid grid-cols-[160px_minmax(0,1fr)] gap-x-6 border-t border-zinc-200 py-6 max-[640px]:grid-cols-[80px_minmax(0,1fr)] max-[640px]:gap-x-5">
-              <img className="block w-28 max-h-[170px] object-contain object-top max-[640px]:w-20 max-[640px]:max-h-[120px]" src={book.cover} alt={`Cover of ${book.title}`} loading="lazy" />
-              <div>
-                <p className={`mb-1 ${styles.meta}`}>{book.category === "Phylosohy" ? "Philosophy" : book.category}</p>
-                <h3 className={styles.title}>{book.title}</h3>
-                <p className={`mt-1 ${styles.body}`}>by {book.author}</p>
-                <p className={`mt-2 mb-4 ${styles.body}`}>{book.description}</p>
-                <TextLink href={book.amazonLink}>View book</TextLink>
-              </div>
-            </article>
-          </ScrollReveal>
+          <article data-reveal className={`${styles.row} max-[640px]:grid-cols-[80px_minmax(0,1fr)] max-[640px]:gap-x-5`} key={book.id}>
+            <img className="block w-28 max-h-[170px] object-contain object-top max-[640px]:w-20 max-[640px]:max-h-[120px]" src={book.cover} alt={`Cover of ${book.title}`} loading="lazy" />
+            <div>
+              <p className={`mb-1 ${styles.meta}`}>{book.category === "Phylosohy" ? "Philosophy" : book.category}</p>
+              <h3 className={styles.title}>{book.title}</h3>
+              <p className={`mt-0.5 ${styles.body}`}>by {book.author}</p>
+              <p className={`mt-2 mb-4 ${styles.body}`}>{book.description}</p>
+              <TextLink href={book.amazonLink}>View book</TextLink>
+            </div>
+          </article>
         ))}
       </Section>
     </div>
@@ -375,21 +364,19 @@ function BlogsPage() {
 
   return (
     <div className={styles.page}>
-      <PageHeading title="Blogs" description="Notes from building, deploying, and learning software." />
+      <PageHeading title="Blogs" paragraphs={["Notes from building, deploying, and learning software."]} />
       <Section id="posts" title="Posts">
-        {error && <p className={styles.body}>Could not load the posts right now.</p>}
+        {error && <p data-reveal className={styles.body}>Could not load the posts right now.</p>}
         {!error && !posts && <p className={styles.body}>Loading posts…</p>}
-        {posts?.length === 0 && <p className={styles.body}>No posts yet.</p>}
+        {posts?.length === 0 && <p data-reveal className={styles.body}>No posts yet.</p>}
         {posts?.map((post) => (
-          <ScrollReveal key={post.link}>
-            <article className={styles.row}>
-              <p className={styles.meta}>{post.date}</p>
-              <div>
-                <h3 className={styles.title}><TextLink href={post.link}>{post.title}</TextLink></h3>
-                <p className={`mt-1 ${styles.meta}`}>{post.category}</p>
-              </div>
-            </article>
-          </ScrollReveal>
+          <article data-reveal className={styles.row} key={post.link}>
+            <p className={styles.meta}>{post.date}</p>
+            <div>
+              <h3 className={styles.title}><TextLink href={post.link}>{post.title}</TextLink></h3>
+              <p className={`mt-1 ${styles.meta}`}>{post.category}</p>
+            </div>
+          </article>
         ))}
       </Section>
     </div>
@@ -414,13 +401,13 @@ function BlogPostPage({ slug }) {
     <div className={styles.page}>
       <BackLink href="/blog">All blogs</BackLink>
       <article>
-        {error && <p className={styles.body}>This post could not be found.</p>}
+        {error && <p data-reveal className={styles.body}>This post could not be found.</p>}
         {!error && !content && <p className={styles.body}>Loading post…</p>}
         {blocks?.map((block, index) => {
-          if (block.startsWith("# ")) return <h2 className="mb-6 text-2xl font-medium leading-9 tracking-[-.02em] text-zinc-900" key={index}>{block.slice(2)}</h2>;
-          if (block.startsWith("## ")) return <h3 className={`mt-10 mb-3 ${styles.title}`} key={index}>{block.slice(3)}</h3>;
-          if (/^\d+\. /m.test(block)) return <ol className={`mb-5 list-decimal pl-5 ${styles.body}`} key={index}>{block.split("\n").map((line) => <li key={line}>{line.replace(/^\d+\. /, "")}</li>)}</ol>;
-          return <p className={`mb-5 ${styles.body}`} key={index}>{block}</p>;
+          if (block.startsWith("# ")) return <h1 data-reveal className="mb-6 text-[28px] font-medium leading-9 tracking-[-.025em] text-zinc-900" key={index}>{block.slice(2)}</h1>;
+          if (block.startsWith("## ")) return <h2 data-reveal className={`mt-10 mb-3 ${styles.title}`} key={index}>{block.slice(3)}</h2>;
+          if (/^\d+\. /m.test(block)) return <ol data-reveal className={`mb-5 list-decimal pl-5 ${styles.lead}`} key={index}>{block.split("\n").map((line) => <li key={line}>{line.replace(/^\d+\. /, "")}</li>)}</ol>;
+          return <p data-reveal className={`mb-5 ${styles.lead}`} key={index}>{block}</p>;
         })}
       </article>
     </div>
@@ -428,22 +415,25 @@ function BlogPostPage({ slug }) {
 }
 
 function App() {
+  const contentRef = useRef(null);
+  useStreamReveal(contentRef);
+
   const path = window.location.pathname.replace(/\/$/, "") || "/";
   const page = path === "/" ? <HomePage />
     : path === "/about" ? <AboutPage />
     : path === "/bookshelf" ? <BookshelfPage />
     : path === "/blog" ? <BlogsPage />
     : path.startsWith("/blog/") ? <BlogPostPage slug={path.slice(6)} />
-    : <div className={styles.page}><BackLink href="/">Back home</BackLink><PageHeading title="Page not found" description="There’s nothing at this address." /></div>;
+    : <div className={styles.page}><BackLink href="/">Back home</BackLink><PageHeading title="Page not found" paragraphs={["There’s nothing at this address."]} /></div>;
 
   return (
     <main className="mx-auto grid w-full grid-cols-[minmax(152px,1fr)_minmax(0,672px)_minmax(64px,1fr)] gap-8 px-[clamp(24px,3vw,64px)] py-24 max-[1150px]:grid-cols-[minmax(0,672px)_48px] max-[1150px]:justify-center max-[1150px]:gap-6 max-[1150px]:px-6 max-[1150px]:py-12 max-[640px]:grid-cols-[minmax(0,1fr)] max-[640px]:gap-12">
       <ThemeToggle />
       <PageRail path={path} />
-      <div className="col-start-2 min-w-0 max-[1150px]:col-start-1">
-        <header >
-          <a className="inline-block text-xl font-medium leading-7 tracking-[-.025em] text-zinc-900 no-underline hover:underline hover:decoration-zinc-300 hover:underline-offset-[3px]" href="/">Lakshay Goyal</a>
-          <p className="m-0 text-lg font-normal leading-7 text-zinc-500">Software Engineer</p>
+      <div ref={contentRef} className="col-start-2 min-w-0 max-[1150px]:col-start-1">
+        <header>
+          <a data-reveal className="inline-block text-2xl font-medium leading-8 tracking-[-.03em] text-zinc-900 no-underline" href="/">Lakshay Goyal</a>
+          <p data-reveal className="m-0 mt-0.5 text-lg leading-7 text-zinc-600">Software Engineer</p>
         </header>
         {page}
       </div>
