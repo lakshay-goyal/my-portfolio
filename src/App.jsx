@@ -177,7 +177,9 @@ function Experience() {
   );
 }
 
-function FeaturedWork() {
+// Project list + demo video player, shared by Home ("Selected Work") and /projects.
+// `detailed` = one column, bigger previews and the full tech stack.
+function ProjectGallery({ detailed = false }) {
   const [activeProject, setActiveProject] = useState(null);
 
   useEffect(() => {
@@ -195,14 +197,18 @@ function FeaturedWork() {
     };
   }, [activeProject]);
 
+  const layout = detailed
+    ? "grid grid-cols-1 gap-y-14 max-[640px]:gap-y-10"
+    : "grid grid-cols-2 gap-x-6 gap-y-12 max-[640px]:grid-cols-1 max-[640px]:gap-y-10";
+
   return (
-    <Section id="work" title="Selected Work">
-      <div className="grid grid-cols-2 gap-x-6 gap-y-12 max-[640px]:grid-cols-1 max-[640px]:gap-y-10">
+    <>
+      <div className={layout}>
         {majorProjects.map((project) => (
           <article data-reveal className="min-w-0" key={project.title}>
             <button
               type="button"
-              className="group relative block aspect-[1.6] w-full cursor-pointer overflow-hidden rounded-lg border border-zinc-200 bg-zinc-100 p-0"
+              className={`group relative block w-full cursor-pointer overflow-hidden rounded-lg border border-zinc-200 bg-zinc-100 p-0 ${detailed ? "aspect-[1.8]" : "aspect-[1.6]"}`}
               onClick={() => setActiveProject(project)}
               aria-label={`Play ${project.title} demo`}
             >
@@ -215,7 +221,7 @@ function FeaturedWork() {
             </button>
             <h3 className={`mt-4 ${styles.title}`}>{project.title}</h3>
             <p className={`mt-1 ${styles.body}`}>{project.description}</p>
-            <p className={`mt-2 ${styles.meta}`}>{joinTags(project.tech.slice(0, 4))}</p>
+            <p className={`mt-2 ${styles.meta}`}>{joinTags(detailed ? project.tech : project.tech.slice(0, 4))}</p>
             <p className="m-0 mt-3 flex flex-wrap gap-x-5 gap-y-1 text-[15px] leading-6">
               <button type="button" className={`cursor-pointer border-0 bg-transparent p-0 font-medium text-zinc-900 ${styles.link}`} onClick={() => setActiveProject(project)}>Demo</button>
               {project.live && <TextLink arrow href={project.live}>Live</TextLink>}
@@ -243,7 +249,29 @@ function FeaturedWork() {
           document.body,
         )
       )}
+    </>
+  );
+}
+
+function FeaturedWork() {
+  return (
+    <Section id="work" title="Selected Work">
+      <ProjectGallery />
+      <p data-reveal className="m-0 mt-10 text-[15px] leading-6">
+        <a className={`font-medium text-zinc-900 ${styles.link}`} href="/projects">All projects →</a>
+      </p>
     </Section>
+  );
+}
+
+function ProjectsPage() {
+  return (
+    <div className={styles.page}>
+      <PageHeading title="Projects" paragraphs={["Products I’ve built end to end, from an AI app builder to a real-time trading platform, each with a web and a mobile app."]} />
+      <Section id="major-projects" title="Major Projects">
+        <ProjectGallery detailed />
+      </Section>
+    </div>
   );
 }
 
@@ -352,6 +380,13 @@ function BookshelfPage() {
   );
 }
 
+/*
+ * Blog — parked until the blog section is rebuilt. To bring it back:
+ *   1. uncomment BlogsPage and BlogPostPage below,
+ *   2. restore the "/blog" routes in App(),
+ *   3. re-add { label: "Blogs", href: "/blog" } to pages in PageRail.jsx.
+ * Posts still live in public/blog/.
+
 function BlogsPage() {
   const [posts, setPosts] = useState(null);
   const [error, setError] = useState(false);
@@ -414,6 +449,7 @@ function BlogPostPage({ slug }) {
     </div>
   );
 }
+*/
 
 function SiteHeader() {
   const current = experiences[0];
@@ -439,8 +475,10 @@ function App() {
   const page = path === "/" ? <HomePage />
     : path === "/about" ? <AboutPage />
     : path === "/bookshelf" ? <BookshelfPage />
-    : path === "/blog" ? <BlogsPage />
-    : path.startsWith("/blog/") ? <BlogPostPage slug={path.slice(6)} />
+    : path === "/projects" ? <ProjectsPage />
+    // Blog parked for now (see the commented-out BlogsPage above):
+    // : path === "/blog" ? <BlogsPage />
+    // : path.startsWith("/blog/") ? <BlogPostPage slug={path.slice(6)} />
     : <div className={styles.page}><BackLink href="/">Back home</BackLink><PageHeading title="Page not found" paragraphs={["There’s nothing at this address."]} /></div>;
 
   return (

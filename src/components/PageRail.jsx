@@ -1,8 +1,9 @@
 const pages = [
   { label: "Home", href: "/" },
   { label: "About", href: "/about" },
+  { label: "Projects", href: "/projects" },
   { label: "Bookshelf", href: "/bookshelf" },
-  { label: "Blogs", href: "/blog" },
+  // { label: "Blogs", href: "/blog" }, // parked until the blog section is rebuilt
 ];
 
 export default function PageRail({ path }) {
