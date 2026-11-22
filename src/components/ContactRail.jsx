@@ -66,13 +66,13 @@ function ScheduleButton() {
 }
 
 // Hand-drawn "Let's connect" note with an arrow that draws itself toward the rail.
-// Rail = 5 icons x 44px, centred on the viewport, so its first icon sits at 50% - 88px.
-// The arrowhead (y=98 in the SVG) is lined up with that icon. Wide screens only, where
+// Rail = 5 icons x 44px, centred on the viewport, so its middle icon sits at exactly 50%.
+// The arrowhead (y=98 in the SVG) is lined up with that icon; the label sits above it. Wide screens only, where
 // the rail floats beside the content; below that the icons sit in the page flow.
 function ConnectHint() {
   return (
     <div
-      className="pointer-events-none fixed right-[54px] top-[calc(50%-186px)] z-10 hidden h-[120px] w-[170px] text-zinc-600 min-[1240px]:block [@media(max-height:520px)]:!hidden"
+      className="pointer-events-none fixed right-[54px] top-[calc(50%-98px)] z-10 hidden h-[120px] w-[170px] text-zinc-600 min-[1240px]:block [@media(max-height:520px)]:!hidden"
       aria-hidden="true"
     >
       <span className="connect-hint-label absolute left-0 top-0 -rotate-[5deg] whitespace-nowrap font-hand text-[26px] font-medium leading-none">
