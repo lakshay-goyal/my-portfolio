@@ -96,7 +96,7 @@ function ThemeToggle() {
 const styles = {
   page: "flex flex-col gap-16 pt-14 max-[640px]:gap-12 max-[640px]:pt-10",
   // Contrast on white: zinc-900 ~17:1, zinc-700 ~10:1, zinc-600 ~7.7:1, zinc-500 ~4.8:1 (all pass WCAG AA).
-  sectionTitle: "mb-5 text-xl font-semibold leading-8 tracking-[-.02em] text-zinc-900",
+  sectionTitle: "mb-5 text-xl font-medium leading-8 tracking-[-.015em] text-zinc-900",
   meta: "m-0 font-mono text-sm leading-6 text-zinc-500",
   title: "m-0 text-[17px] font-medium leading-7 tracking-[-.01em] text-zinc-900",
   lead: "text-lg leading-[1.75] text-zinc-700 [&_p]:m-0 [&_p+p]:mt-5",
@@ -414,6 +414,25 @@ function BlogPostPage({ slug }) {
   );
 }
 
+function SiteHeader() {
+  const current = experiences[0];
+
+  return (
+    <header data-reveal className="flex items-center gap-4">
+      <a className="monogram grid h-14 w-14 shrink-0 place-items-center rounded-2xl font-mono text-lg font-medium tracking-[-.04em] no-underline" href="/" aria-label="Lakshay Goyal, home">
+        LG
+      </a>
+      <div className="min-w-0">
+        <h1 className="m-0 text-[28px] font-medium leading-9 tracking-[-.035em] text-zinc-900">Lakshay Goyal</h1>
+        <p className="m-0 text-base leading-6 text-zinc-600">
+          {current.role} at <TextLink href={current.url}>{current.company}</TextLink>
+          <span className="text-zinc-500 max-[640px]:hidden"> · {current.location}</span>
+        </p>
+      </div>
+    </header>
+  );
+}
+
 function App() {
   const contentRef = useRef(null);
   useStreamReveal(contentRef);
@@ -431,10 +450,7 @@ function App() {
       <ThemeToggle />
       <PageRail path={path} />
       <div ref={contentRef} className="col-start-2 min-w-0 max-[1150px]:col-start-1">
-        <header>
-          <a data-reveal className="inline-block text-2xl font-medium leading-8 tracking-[-.03em] text-zinc-900 no-underline" href="/">Lakshay Goyal</a>
-          <p data-reveal className="m-0 mt-0.5 text-lg leading-7 text-zinc-600">Software Engineer</p>
-        </header>
+        <SiteHeader />
         {page}
       </div>
       <ContactRail />
