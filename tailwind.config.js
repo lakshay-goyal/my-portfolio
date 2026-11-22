@@ -7,6 +7,7 @@ export default {
     extend: {
       fontFamily: {
         sans: ["Geist", ...defaultTheme.fontFamily.sans],
+        hand: ["Caveat", "cursive"],
       },
     },
   },

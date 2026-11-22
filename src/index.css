@@ -153,6 +153,51 @@
   }
 }
 
+/* "Let's connect" note: writes in, then the arrow draws toward the contact rail. */
+.connect-hint-label {
+  clip-path: inset(-20% 100% -20% 0);
+  animation: connect-write 700ms cubic-bezier(0.4, 0, 0.2, 1) 1100ms forwards;
+}
+
+.connect-hint-line,
+.connect-hint-head {
+  stroke-dasharray: 1;
+  stroke-dashoffset: 1;
+}
+
+.connect-hint-line {
+  animation: connect-draw 900ms cubic-bezier(0.45, 0, 0.25, 1) 1750ms forwards;
+}
+
+.connect-hint-head {
+  animation: connect-draw 220ms ease-out 2650ms forwards;
+}
+
+@keyframes connect-write {
+  to {
+    clip-path: inset(-20% -10% -20% 0);
+  }
+}
+
+@keyframes connect-draw {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .connect-hint-label {
+    clip-path: none;
+    animation: none;
+  }
+
+  .connect-hint-line,
+  .connect-hint-head {
+    stroke-dashoffset: 0;
+    animation: none;
+  }
+}
+
 ::view-transition-old(root),
 ::view-transition-new(root) {
   animation: none;

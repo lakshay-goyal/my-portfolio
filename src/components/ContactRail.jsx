@@ -65,6 +65,27 @@ function ScheduleButton() {
   );
 }
 
+// Hand-drawn "Let's connect" note with an arrow that draws itself toward the rail.
+// Rail = 5 icons x 44px, centred on the viewport, so its first icon sits at 50% - 88px.
+// The arrowhead (y=98 in the SVG) is lined up with that icon. Wide screens only, where
+// the rail floats beside the content; below that the icons sit in the page flow.
+function ConnectHint() {
+  return (
+    <div
+      className="pointer-events-none fixed right-[54px] top-[calc(50%-186px)] z-10 hidden h-[120px] w-[170px] text-zinc-600 min-[1240px]:block [@media(max-height:520px)]:!hidden"
+      aria-hidden="true"
+    >
+      <span className="connect-hint-label absolute left-0 top-0 -rotate-[5deg] whitespace-nowrap font-hand text-[26px] font-medium leading-none">
+        Let’s connect
+      </span>
+      <svg className="absolute inset-0" width="170" height="120" viewBox="0 0 170 120" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
+        <path className="connect-hint-line" pathLength="1" d="M62 36C58 66 80 88 106 82C130 76 132 44 108 42C84 40 82 74 102 87C118 98 142 100 160 98" />
+        <path className="connect-hint-head" pathLength="1" d="M151 91.5l9.5 6.5-9 7" />
+      </svg>
+    </div>
+  );
+}
+
 export default function ContactRail() {
   return (
     <>
@@ -87,6 +108,7 @@ export default function ContactRail() {
         </div>
       </nav>
       </aside>
+      <ConnectHint />
       <ScheduleButton />
     </>
   );
